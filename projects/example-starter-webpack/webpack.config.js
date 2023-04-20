@@ -14,18 +14,11 @@
  *  from Adobe.
  ***************************************************************************/
 
-'use strict';
-
-import { join, resolve } from 'path';
-
+import { resolve } from 'path';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
-import path from 'path';
-import { fileURLToPath } from 'url';
-
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 const ENV = process.argv.find((arg) => arg.includes('NODE_ENV=production'))
     ? 'production'
@@ -68,10 +61,6 @@ const plugins = [
     new CopyWebpackPlugin(copyStatics),
     new MiniCssExtractPlugin({ filename: '[name].bundle.css' }),
 ];
-
-function srcPath(subdir) {
-    return join(__dirname, 'src', subdir);
-}
 
 const shared = (env) => {
     if (!IS_DEV_SERVER) {
@@ -124,11 +113,6 @@ const shared = (env) => {
             path: OUTPUT_PATH,
             filename: '[name].bundle.js',
         },
-        // output: {
-        //     path: path.resolve(__dirname, 'dist'),
-        //     publicPath: '/dist/',
-        //     filename: 'bundle.js'
-        // },
         module: {
             rules: [
                 {

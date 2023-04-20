@@ -27,19 +27,11 @@
       "dependencies": [],
       "files": [
         "packages/**/*.ts",
-        "tools/**/*.ts",
-        "!packages/**/*.d.ts",
-        "!tools/**/*.d.ts"
+        "!packages/**/*.d.ts"
       ],
       "output": [
         "packages/**/*.js",
-        "projects/**/*.js",
-        "packages/**/*.js.map",
-        "projects/**/*.js.map",
-        "!projects/templates",
-        "tools/**/*.js",
-        "tools/**/*.js.map",
-        "!**/build.js"
+        "packages/**/*.js.map"
       ],
       "clean": "if-file-deleted"
     },
