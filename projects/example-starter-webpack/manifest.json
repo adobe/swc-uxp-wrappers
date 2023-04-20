@@ -1,0 +1,55 @@
+{
+    "name": "SWC-UXP",
+    "id": "com.adobe.swcuxp.test",
+    "version": "1.0.0",
+    "main": "index.html",
+    "manifestVersion": 4,
+    "featureFlags":{
+        "enableSWCSupport": true
+    },
+    "entrypoints": [
+        {
+            "type": "panel",
+            "id": "vanilla",
+            "label": {
+                "default": "SWC-UXP"
+            },
+            "minimumSize": {
+                "width": 1200,
+                "height": 1200
+            },
+            "maximumSize": {
+                "width": 1200,
+                "height": 1200
+            },
+            "preferredDockedSize": {
+                "width": 1200,
+                "height": 1200
+            },
+            "preferredFloatingSize": {
+                "width": 1200,
+                "height": 1200
+            },
+            "commands": [
+                {
+                    "id": "reloadPanel",
+                    "label": "Reload Panel"
+                }
+            ]
+        }
+    ],
+    "host": [
+        {
+            "app": "PS",
+            "minVersion": "22.0.0"
+        },
+        {
+            "app": "UXPS",
+            "minVersion": "1.0.0"
+        },
+        {
+            "app": "XD",
+            "minVersion": "1.0.0"
+        }
+    ]
+}
