@@ -1,0 +1,52 @@
+{
+  "name": "@torq/swc-wrappers",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "projects/*"
+  ],
+  "engines": {
+    "node": ">=18.15.11",
+    "yarn": ">=1.22.4"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "esbuild": "^0.17.17",
+    "fast-glob": "^3.2.12",
+    "lerna": "^6.6.1",
+    "typescript": "^5.0.4",
+    "wireit": "^0.9.5"
+  },
+  "scripts": {
+    "build": "wireit"
+  },
+  "wireit": {
+    "build:ts": {
+      "command": "node ./scripts/esbuild-packages.js",
+      "dependencies": [],
+      "files": [
+        "packages/**/*.ts",
+        "tools/**/*.ts",
+        "!packages/**/*.d.ts",
+        "!tools/**/*.d.ts"
+      ],
+      "output": [
+        "packages/**/*.js",
+        "projects/**/*.js",
+        "packages/**/*.js.map",
+        "projects/**/*.js.map",
+        "!projects/templates",
+        "tools/**/*.js",
+        "tools/**/*.js.map",
+        "!**/build.js"
+      ],
+      "clean": "if-file-deleted"
+    },
+    "build": {
+      "dependencies": [
+        "build:ts"
+      ]
+    }
+  }
+}
