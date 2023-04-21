@@ -124,7 +124,7 @@ const shared = (env) => {
         resolve: {
             extensions: ['.js', '.json'],
             alias: {
-                '@spectrum-components/banner' : '@swc-wrappers/banner'
+                '@spectrum-web-components/banner' : '@swc-wrappers/banner'
             }
         },
         plugins,

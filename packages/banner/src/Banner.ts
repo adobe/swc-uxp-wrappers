@@ -1,4 +1,4 @@
-import { Banner } from '@spectrum-web-components/banner';
+import { Banner } from '@swc-core/banner';
 
 class UxpBanner extends Banner { }
 

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
 
-    <title>Example</title>
+    <title>Spectrum Web Components</title>
     <link rel="stylesheet" type="text/css" href="main.bundle.css" />
     <style type="text/css">
         body {
@@ -17,9 +17,14 @@
     <script src="main.bundle.js"></script>
     <sp-theme scale="large" color="dark">
         <sp-banner>
-            <div slot="header">Header text</div>
-            <div slot="content">Content of the banner</div>
+            <div slot="header">This is an info banner</div>
+            <div slot="content">Description here</div>
         </sp-banner>
+        <hr/>
+        <my-banner>
+            <div slot="header">This is a custom info banner</div>
+            <div slot="content">Description here</div>
+        </my-banner>
     </sp-theme>
 </body>
 
