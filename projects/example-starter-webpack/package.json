@@ -13,7 +13,7 @@
         "serve": "webpack-dev-server"
     },
     "dependencies": {
-        "@swc-wrappers/banner": "^1.0.0",
+        "@swc-wrappers/banner": "^0.0.1",
         "@spectrum-web-components/theme": "0.14.9",
         "lit": "^2.0.0"
     },

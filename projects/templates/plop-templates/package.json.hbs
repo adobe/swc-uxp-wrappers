@@ -1,0 +1,34 @@
+{
+  "name": "@swc-wrappers/{{ name }}",
+  "version": "0.0.1",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "UXP wrappers for Web Component implementation of a Spectrum design {{className name}}",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://git.corp.adobe.com/torq/swc-wrappers.git",
+    "directory": "packages/{{ name }}"
+  },
+  "author": "Adobe Inc",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js",
+    "./sp-{{ name }}.js": "./sp-{{ name }}.js"
+  },
+  "dependencies": {
+    "@swc-core/{{ name }}": "npm:@spectrum-web-components/{{ name }}@{{ version }}"
+  },
+  "files": [
+    "**/*.d.ts",
+    "**/*.js",
+    "**/*.js.map"
+  ],
+  "keywords": [
+    "web components",
+    "spectrum uxp"
+  ]
+}

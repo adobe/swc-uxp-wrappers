@@ -1,0 +1,14 @@
+{{> headerPartial }}
+
+import { CSSResultArray } from '@spectrum-web-components/base';
+import { {{className name}} } from '@swc-core/{{name}}';
+
+import styles from './{{ name }}.css.js';
+
+class {{> uxpClassNamePartial}} extends {{className name}} {
+    public static override get styles(): CSSResultArray {
+        return [{{className name}}.styles, styles];
+    }
+}
+
+export { {{> uxpClassNamePartial}} as {{className name}} };
