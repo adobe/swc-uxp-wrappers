@@ -102,5 +102,30 @@ dist
 
 # TernJS port file
 .tern-port
-.wireit
+
+# logging / private config
+.DS_STORE
 .DS_Store
+.tsbuildinfo
+.gitconfig
+.wireit
+
+# dependency folders
+coverage
+lib
+
+# build artifacts
+packages/*/src/**/*.css.js
+packages/**/*.js
+packages/**/*.js.map
+packages/**/*.d.ts
+
+
+# typescript assets
+*.tsbuildinfo
+
+# built css assets
+packages/**/*.css.ts
+
+# npm assets
+package-lock.json
