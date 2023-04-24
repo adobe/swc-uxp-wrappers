@@ -26,7 +26,7 @@ try {
 header = header.replace('<%= YEAR %>', new Date().getFullYear());
 
 module.exports = function (plop) {
-  plop.setPartial("headerPartial", header);
+  plop.setPartial("copyrightPartial", header);
   // name of custom element tag
   plop.setPartial("tagnamePartial", "sp-{{name}}");
   plop.setPartial("uxpClassNamePartial", "Uxp{{className name}}");
