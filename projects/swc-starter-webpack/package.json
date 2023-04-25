@@ -1,8 +1,8 @@
 {
-    "name": "example-starter-webpack",
+    "name": "swc-starter-webpack",
     "version": "1.0.0",
     "private": true,
-    "description": "An example project that uses the spectrum web components and gives an example of how to bundle them minimally with webpack.",
+    "description": "An example project that uses the spectrum web components in UXP and gives an example of how to bundle them minimally with webpack.",
     "license": "Apache-2.0",
     "author": "adobe",
     "main": "index.js",

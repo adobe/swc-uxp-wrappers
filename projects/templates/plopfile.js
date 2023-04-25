@@ -13,17 +13,17 @@ governing permissions and limitations under the License.
 const { execSync } = require("child_process");
 const { kebabCase } = require("lodash");
 
-const path = require('path');
-const fs = require('fs');
-const configPath = path.resolve(path.join(__dirname, '..', '..', 'config'));
+const path = require("path");
+const fs = require("fs");
+const configPath = path.resolve(path.join(__dirname, "..", "..", "config"));
 let header;
 try {
-    header = fs.readFileSync(path.join(configPath, 'license.js'), 'utf8');
+  header = fs.readFileSync(path.join(configPath, "license.js"), "utf8");
 } catch (error) {
-    throw new Error(error);
+  throw new Error(error);
 }
 
-header = header.replace('<%= YEAR %>', new Date().getFullYear());
+header = header.replace("<%= YEAR %>", new Date().getFullYear());
 
 module.exports = function (plop) {
   plop.setPartial("copyrightPartial", header);

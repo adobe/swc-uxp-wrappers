@@ -1,10 +1,10 @@
 {
-    "name": "SWC-UXP",
-    "id": "com.adobe.swcuxp.test",
+    "name": "SWC Starter",
+    "id": "swc-starter-webpack",
     "version": "1.0.0",
     "main": "index.html",
     "manifestVersion": 4,
-    "featureFlags":{
+    "featureFlags": {
         "enableSWCSupport": true
     },
     "entrypoints": [
@@ -12,7 +12,7 @@
             "type": "panel",
             "id": "vanilla",
             "label": {
-                "default": "SWC-UXP"
+                "default": "SWC Starter"
             },
             "minimumSize": {
                 "width": 1200,

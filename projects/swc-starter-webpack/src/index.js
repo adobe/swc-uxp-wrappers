@@ -10,18 +10,10 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { Banner } from "@spectrum-web-components/banner";
-import { css } from "lit";
+// import our stylesheets
+import "./styles.css";
 
-class MyBanner extends Banner {
-  static styles = [
-    Banner.styles,
-    css`
-      :host([type="info"]) {
-        background-color: rgb(103, 58, 183);
-      }
-    `,
-  ];
-}
+import "@spectrum-web-components/theme/sp-theme.js";
+import "@spectrum-web-components/banner/sp-banner.js";
 
-customElements.define('my-banner', MyBanner);
+import "./my-elements.js";

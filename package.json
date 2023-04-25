@@ -47,13 +47,13 @@
     "build:css": {
       "command": "node ./scripts/build-css.js",
       "files": [
-          "packages/**/*.css"
+        "packages/**/*.css"
       ],
       "output": [
-          "packages/**/*.css.ts"
+        "packages/**/*.css.ts"
       ],
       "clean": "if-file-deleted"
-  },
+    },
     "build": {
       "dependencies": [
         "build:css",

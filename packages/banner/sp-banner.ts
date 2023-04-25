@@ -10,12 +10,12 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { Banner } from './src/Banner.js';
+import { Banner } from "./src/Banner.js";
 
-customElements.define('sp-banner', Banner);
+customElements.define("sp-banner", Banner);
 
 declare global {
-    interface HTMLElementTagNameMap {
-        'sp-banner': Banner;
-    }
+  interface HTMLElementTagNameMap {
+    "sp-banner": Banner;
+  }
 }

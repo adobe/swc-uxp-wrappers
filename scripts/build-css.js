@@ -11,16 +11,14 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import fg from 'fast-glob';
-import { processCSS } from './css-tools.js';
+import fg from "fast-glob";
+import { processCSS } from "./css-tools.js";
 
 const buildCSS = async () => {
-    for (const cssPath of await fg([
-        './packages/*/src/**/*.css',
-    ])) {
-        await processCSS(cssPath);
-    }
-    process.exit(0);
+  for (const cssPath of await fg(["./packages/*/src/**/*.css"])) {
+    await processCSS(cssPath);
+  }
+  process.exit(0);
 };
 
 buildCSS();

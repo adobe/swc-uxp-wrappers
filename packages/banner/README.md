@@ -2,9 +2,7 @@
 
 This is UXP wrapper for `@spectrum-web-components/banner` package
 
-
 ### Usage
-
 
 ```
 yarn add @swc-wrappers/banner

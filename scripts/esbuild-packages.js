@@ -12,6 +12,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { buildTSFiles } from './ts-tools.js';
+import { buildTSFiles } from "./ts-tools.js";
 
 buildTSFiles();
