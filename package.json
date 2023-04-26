@@ -33,7 +33,9 @@
   "wireit": {
     "build:ts": {
       "command": "node ./scripts/esbuild-packages.js",
-      "dependencies": [],
+      "dependencies": [
+        "build:css"
+      ],
       "files": [
         "packages/**/*.ts",
         "!packages/**/*.d.ts"
@@ -56,7 +58,6 @@
     },
     "build": {
       "dependencies": [
-        "build:css",
         "build:ts"
       ]
     }
