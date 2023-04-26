@@ -893,7 +893,7 @@
     "@spectrum-web-components/base" "^0.7.3"
     "@spectrum-web-components/styles" "^0.22.1"
 
-"@swc-core/banner@npm:@spectrum-web-components/banner@0.9.2":
+"@swc-uxp-internal/banner@npm:@spectrum-web-components/banner@0.9.2":
   version "0.9.2"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/banner/-/banner-0.9.2.tgz#5487aa555e7edb8caf02650c48d3719f473c0190"
   integrity sha512-SBkrZg6fi6oIiPpst9BI/J8P37XL62UFUiZeE3/y/Z8+JAeIcW9DfLAtezKlkOtJPJ1VBCljzfX2cIrJDkzDbw==

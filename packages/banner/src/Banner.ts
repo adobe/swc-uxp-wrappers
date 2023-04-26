@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 */
 
 import { CSSResultArray } from '@spectrum-web-components/base';
-import { Banner } from '@swc-core/banner';
+import { Banner } from '@swc-uxp-internal/banner';
 
 import styles from './banner.css.js';
 
