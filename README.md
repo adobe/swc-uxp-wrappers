@@ -4,23 +4,23 @@ For supporting [Spectrum Web Components(SWC)](https://github.com/adobe/spectrum-
 
 This approach allows us to
 
-- override the css styles to make the component work properly in UXP
-- lock the underlying component to a UXP compatible version
+-   override the css styles to make the component work properly in UXP
+-   lock the underlying component to a UXP compatible version
 
 # Getting started
 
 ## Software Requirements
 
-- `node >= 18.15.11`
-- `yarn >= 1.22.4`
+-   `node >= 18.15.11`
+-   `yarn >= 1.22.4`
 
 ## Build Steps
 
 1. Clone the repository:
 
 ```
-$ git clone git@git.corp.adobe.com:torq/swc-wrappers.git
-$ cd swc-wrappers
+$ git clone git@git.corp.adobe.com:torq/swc-uxp-wrappers.git
+$ cd swc-uxp-wrappers
 ```
 
 2. Install the required dependencies using below command:

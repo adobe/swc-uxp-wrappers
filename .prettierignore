@@ -1,0 +1,50 @@
+*.hbs
+
+# Diagnostic reports
+report
+
+# Dependency directories
+node_modules/
+
+# TypeScript cache
+*.tsbuildinfo
+
+# Optional npm cache directory
+.npm
+
+# Output of 'npm pack'
+*.tgz
+
+# dotenv environment variables file
+.env
+.env.test
+
+# parcel-bundler cache (https://parceljs.org/)
+.cache
+
+# build / generate output
+dist
+
+# Gatsby files
+.cache/
+
+# logging / private config
+.DS_STORE
+.DS_Store
+.gitconfig
+.wireit
+
+# dependency folders
+coverage
+
+# build artifacts
+packages/*/src/**/*.css.js
+packages/**/*.js
+packages/**/*.js.map
+packages/**/*.d.ts
+
+# built css assets
+packages/**/*.css.ts
+
+# npm assets
+package-lock.json

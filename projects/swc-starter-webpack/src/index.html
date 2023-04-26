@@ -12,32 +12,30 @@ governing permissions and limitations under the License.
 
 <!DOCTYPE html>
 <html lang="en">
+    <head>
+        <meta charset="utf-8" />
 
-<head>
-    <meta charset="utf-8" />
+        <title>Spectrum Web Components in UXP</title>
+        <link rel="stylesheet" type="text/css" href="main.bundle.css" />
+        <style type="text/css">
+            body {
+                margin: 20px;
+            }
+        </style>
+    </head>
 
-    <title>Spectrum Web Components in UXP</title>
-    <link rel="stylesheet" type="text/css" href="main.bundle.css" />
-    <style type="text/css">
-        body {
-            margin: 20px;
-        }
-    </style>
-</head>
-
-<body>
-    <script src="main.bundle.js"></script>
-    <sp-theme scale="large" color="dark">
-        <sp-banner>
-            <div slot="header">This is an info banner</div>
-            <div slot="content">Description here</div>
-        </sp-banner>
-        <hr />
-        <my-banner id="box">
-            <div slot="header">This is a custom info banner</div>
-            <div slot="content">Description here</div>
-        </my-banner>
-    </sp-theme>
-</body>
-
+    <body>
+        <script src="main.bundle.js"></script>
+        <sp-theme scale="large" color="dark">
+            <sp-banner>
+                <div slot="header">This is an info banner</div>
+                <div slot="content">Description here</div>
+            </sp-banner>
+            <hr />
+            <my-banner>
+                <div slot="header">This is a custom info banner</div>
+                <div slot="content">Description here</div>
+            </my-banner>
+        </sp-theme>
+    </body>
 </html>

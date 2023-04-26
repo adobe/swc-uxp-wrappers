@@ -1,65 +1,68 @@
 {
-  "name": "@torq/swc-wrappers",
-  "private": true,
-  "workspaces": [
-    "packages/*",
-    "projects/*"
-  ],
-  "engines": {
-    "node": ">=18.15.11",
-    "yarn": ">=1.22.4"
-  },
-  "type": "module",
-  "devDependencies": {
-    "@types/node": "^18.15.11",
-    "esbuild": "^0.17.17",
-    "fast-glob": "^3.2.12",
-    "lerna": "^6.6.1",
-    "typescript": "^5.0.4",
-    "wireit": "^0.9.5",
-    "postcss": "^8.4.14",
-    "@types/common-tags": "^1.4.0",
-    "common-tags": "^1.8.0",
-    "cssnano": "^5.0.15"
-  },
-  "peerDependencies": {
-    "common-tags": "^1.8.0"
-  },
-  "scripts": {
-    "build": "wireit",
-    "build:css": "wireit",
-    "new-package": "cd projects/templates && plop"
-  },
-  "wireit": {
-    "build:ts": {
-      "command": "node ./scripts/esbuild-packages.js",
-      "dependencies": [
-        "build:css"
-      ],
-      "files": [
-        "packages/**/*.ts",
-        "!packages/**/*.d.ts"
-      ],
-      "output": [
-        "packages/**/*.js",
-        "packages/**/*.js.map"
-      ],
-      "clean": "if-file-deleted"
+    "name": "@torq/swc-uxp-wrappers",
+    "private": true,
+    "workspaces": [
+        "packages/*",
+        "projects/*"
+    ],
+    "engines": {
+        "node": ">=18.15.11",
+        "yarn": ">=1.22.4"
     },
-    "build:css": {
-      "command": "node ./scripts/build-css.js",
-      "files": [
-        "packages/**/*.css"
-      ],
-      "output": [
-        "packages/**/*.css.ts"
-      ],
-      "clean": "if-file-deleted"
+    "type": "module",
+    "devDependencies": {
+        "@types/common-tags": "^1.4.0",
+        "@types/node": "^18.15.11",
+        "common-tags": "^1.8.0",
+        "cssnano": "^5.0.15",
+        "esbuild": "^0.17.17",
+        "fast-glob": "^3.2.12",
+        "lerna": "^6.6.1",
+        "postcss": "^8.4.14",
+        "prettier": "^2.8.8",
+        "typescript": "^5.0.4",
+        "wireit": "^0.9.5"
     },
-    "build": {
-      "dependencies": [
-        "build:ts"
-      ]
+    "peerDependencies": {
+        "common-tags": "^1.8.0"
+    },
+    "scripts": {
+        "build": "wireit",
+        "build:css": "wireit",
+        "new-package": "cd projects/templates && plop",
+        "format": "prettier --check .",
+        "format:fix": "prettier --write ."
+    },
+    "wireit": {
+        "build:ts": {
+            "command": "node ./scripts/esbuild-packages.js",
+            "dependencies": [
+                "build:css"
+            ],
+            "files": [
+                "packages/**/*.ts",
+                "!packages/**/*.d.ts"
+            ],
+            "output": [
+                "packages/**/*.js",
+                "packages/**/*.js.map"
+            ],
+            "clean": "if-file-deleted"
+        },
+        "build:css": {
+            "command": "node ./scripts/build-css.js",
+            "files": [
+                "packages/**/*.css"
+            ],
+            "output": [
+                "packages/**/*.css.ts"
+            ],
+            "clean": "if-file-deleted"
+        },
+        "build": {
+            "dependencies": [
+                "build:ts"
+            ]
+        }
     }
-  }
 }

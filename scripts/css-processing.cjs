@@ -9,24 +9,24 @@ the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTA
 OF ANY KIND, either express or implied. See the License for the specific language
 governing permissions and limitations under the License.
 */
-const stripIndent = require("common-tags").stripIndents;
+const stripIndent = require('common-tags').stripIndents;
 
 const postCSSPlugins = (resourcePath, toTS) => {
-  return [
-    // minify the css with cssnano presets
-    require("cssnano")({
-      preset: [
-        "default",
-        {
-          discardComments: !!toTS,
-        },
-      ],
-    }),
-  ];
+    return [
+        // minify the css with cssnano presets
+        require('cssnano')({
+            preset: [
+                'default',
+                {
+                    discardComments: !!toTS,
+                },
+            ],
+        }),
+    ];
 };
 
 const wrapCSSResult = (content) => {
-  return stripIndent`
+    return stripIndent`
         import { css } from '@spectrum-web-components/base';
         const styles = css\`
             ${content}

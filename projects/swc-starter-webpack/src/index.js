@@ -11,9 +11,9 @@ governing permissions and limitations under the License.
 */
 
 // import our stylesheets
-import "./styles.css";
+import './styles.css';
 
-import "@spectrum-web-components/theme/sp-theme.js";
-import "@spectrum-web-components/banner/sp-banner.js";
+import '@spectrum-web-components/theme/sp-theme.js';
+import '@spectrum-web-components/banner/sp-banner.js';
 
-import "./my-elements.js";
+import './my-elements.js';

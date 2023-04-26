@@ -1,14 +1,14 @@
 {
-  "name": "swc-wrapper-templates",
-  "version": "0.9.0",
-  "private": true,
-  "description": "Templates for generating a UXP wrapper package for Spectrum Web Components",
-  "license": "Apache-2.0",
-  "main": "index.js",
-  "scripts": {
-    "plop": "plop"
-  },
-  "devDependencies": {
-    "plop": "^3.1.0"
-  }
+    "name": "swc-wrapper-templates",
+    "version": "0.9.0",
+    "private": true,
+    "description": "Templates for generating a UXP wrapper package for Spectrum Web Components",
+    "license": "Apache-2.0",
+    "main": "index.js",
+    "scripts": {
+        "plop": "plop"
+    },
+    "devDependencies": {
+        "plop": "^3.1.0"
+    }
 }
