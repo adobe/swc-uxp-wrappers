@@ -58,8 +58,22 @@
         },
         "build": {
             "dependencies": [
-                "build:ts"
+                "build:ts",
+                "build:types"
             ]
+        },
+        "build:types": {
+            "command": "tsc --build tsconfig-all.json",
+            "dependencies": [
+                "build:css"
+            ],
+            "files": [
+                "packages/**/*.ts"
+            ],
+            "output": [
+                "packages/**/*.d.ts"
+            ],
+            "clean": "if-file-deleted"
         }
     }
 }
