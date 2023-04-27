@@ -7,7 +7,7 @@ import styles from './{{ name }}.css.js';
 
 class {{> uxpClassNamePartial}} extends {{className name}} {
     public static override get styles(): CSSResultArray {
-        return [{{className name}}.styles, styles];
+        return [super.styles, styles];
     }
 }
 

@@ -5,7 +5,7 @@ For supporting [Spectrum Web Components(SWC)](https://github.com/adobe/spectrum-
 This approach allows us to
 
 -   override the css styles to make the component work properly in UXP
--   lock the underlying component to a UXP compatible version
+-   lock the underlying spectrum web component version to be compatible with UXP
 
 # Getting started
 

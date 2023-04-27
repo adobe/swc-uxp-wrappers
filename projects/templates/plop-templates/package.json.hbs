@@ -1,10 +1,10 @@
 {
     "name": "@swc-uxp-wrappers/{{ name }}",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "publishConfig": {
         "access": "public"
     },
-    "description": "UXP wrappers for Web Component implementation of a Spectrum design {{className name}}",
+    "description": "UXP wrapper of the @spectrum-web-components/{{ name }} component",
     "license": "Apache-2.0",
     "repository": {
         "type": "git",
@@ -17,6 +17,8 @@
     "type": "module",
     "exports": {
         ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/Banner.js": "./src/Banner.js",
         "./sp-{{ name }}.js": "./sp-{{ name }}.js"
     },
     "dependencies": {
@@ -28,8 +30,8 @@
         "**/*.js.map"
     ],
     "keywords": [
-        "web components",
-        "spectrum",
-        "uxp"
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/{{ name }}"
     ]
 }

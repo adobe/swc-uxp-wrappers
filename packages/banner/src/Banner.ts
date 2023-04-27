@@ -17,7 +17,7 @@ import styles from './banner.css.js';
 
 class UxpBanner extends Banner {
     public static override get styles(): CSSResultArray {
-        return [Banner.styles, styles];
+        return [super.styles, styles];
     }
 }
 

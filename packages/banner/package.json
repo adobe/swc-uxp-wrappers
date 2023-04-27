@@ -4,7 +4,7 @@
     "publishConfig": {
         "access": "public"
     },
-    "description": "UXP wrappers for Web Component implementation of a Spectrum design Banner",
+    "description": "UXP wrapper of the @spectrum-web-components/banner component",
     "license": "Apache-2.0",
     "repository": {
         "type": "git",
@@ -17,6 +17,8 @@
     "type": "module",
     "exports": {
         ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/Banner.js": "./src/Banner.js",
         "./sp-banner.js": "./sp-banner.js"
     },
     "dependencies": {
@@ -28,8 +30,8 @@
         "**/*.js.map"
     ],
     "keywords": [
-        "web components",
-        "spectrum",
-        "uxp"
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/banner"
     ]
 }

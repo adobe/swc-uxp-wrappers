@@ -31,7 +31,7 @@ header = header.replace('<%= YEAR %>', new Date().getFullYear());
 export const processCSS = async (cssPath) => {
     let wrappedCSS = header;
     const originCSS = fs.readFileSync(cssPath, 'utf8');
-    const processedCSS = await postcss(postCSSPlugins(cssPath, true))
+    const processedCSS = await postcss(postCSSPlugins(true))
         .process(originCSS, {
             from: cssPath,
         })
