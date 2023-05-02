@@ -13,7 +13,7 @@ governing permissions and limitations under the License.
 import { CSSResultArray } from '@spectrum-web-components/base';
 import { Banner } from '@swc-uxp-internal/banner';
 
-import styles from './banner.css.js';
+import styles from './uxp-banner.css.js';
 
 class UxpBanner extends Banner {
     public static override get styles(): CSSResultArray {

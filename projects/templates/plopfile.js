@@ -93,8 +93,8 @@ module.exports = function (plop) {
             },
             {
                 type: 'add',
-                path: '../../packages/{{name}}/src/{{name}}.css',
-                templateFile: 'plop-templates/component.css.hbs',
+                path: '../../packages/{{name}}/src/uxp-{{name}}.css',
+                templateFile: 'plop-templates/uxp-component.css.hbs',
             },
             {
                 type: 'add',
