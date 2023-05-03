@@ -11,69 +11,18 @@
     },
     "type": "module",
     "devDependencies": {
-        "@types/common-tags": "^1.4.0",
-        "@types/node": "^18.15.11",
         "common-tags": "^1.8.0",
         "cssnano": "^5.0.15",
-        "esbuild": "^0.17.17",
         "fast-glob": "^3.2.12",
         "lerna": "^6.6.1",
         "postcss": "^8.4.14",
-        "prettier": "^2.8.8",
-        "typescript": "^5.0.4",
-        "wireit": "^0.9.5"
+        "prettier": "^2.8.8"
     },
     "scripts": {
-        "build": "wireit",
-        "build:css": "wireit",
+        "build": "yarn build:css",
+        "build:css": "node ./scripts/build-css.js",
         "new-package": "cd projects/templates && plop",
         "format": "prettier --check .",
         "format:fix": "prettier --write ."
-    },
-    "wireit": {
-        "build:ts": {
-            "command": "node ./scripts/esbuild-packages.js",
-            "dependencies": [
-                "build:css"
-            ],
-            "files": [
-                "packages/**/*.ts",
-                "!packages/**/*.d.ts"
-            ],
-            "output": [
-                "packages/**/*.js",
-                "packages/**/*.js.map"
-            ],
-            "clean": "if-file-deleted"
-        },
-        "build:css": {
-            "command": "node ./scripts/build-css.js",
-            "files": [
-                "packages/**/*.css"
-            ],
-            "output": [
-                "packages/**/*.css.ts"
-            ],
-            "clean": "if-file-deleted"
-        },
-        "build": {
-            "dependencies": [
-                "build:ts",
-                "build:types"
-            ]
-        },
-        "build:types": {
-            "command": "tsc --build tsconfig-all.json",
-            "dependencies": [
-                "build:css"
-            ],
-            "files": [
-                "packages/**/*.ts"
-            ],
-            "output": [
-                "packages/**/*.d.ts"
-            ],
-            "clean": "if-file-deleted"
-        }
     }
 }

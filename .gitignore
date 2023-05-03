@@ -117,16 +117,6 @@ lib
 
 # build artifacts
 packages/*/src/**/*.css.js
-packages/**/*.js
-packages/**/*.js.map
-packages/**/*.d.ts
-
-
-# typescript assets
-*.tsbuildinfo
-
-# built css assets
-packages/**/*.css.ts
 
 # npm assets
 package-lock.json

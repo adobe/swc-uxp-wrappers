@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 /*
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
@@ -12,6 +10,14 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { buildTSFiles } from './ts-tools.js';
+import { Banner } from '@swc-uxp-internal/banner';
 
-buildTSFiles();
+import styles from './uxp-banner.css.js';
+
+class UxpBanner extends Banner {
+    static get styles() {
+        return [super.styles, styles];
+    }
+}
+
+export { UxpBanner as Banner };

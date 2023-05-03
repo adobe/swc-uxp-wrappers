@@ -78,18 +78,18 @@ module.exports = function (plop) {
         actions: [
             {
                 type: 'add',
-                path: '../../packages/{{name}}/src/index.ts',
-                templateFile: 'plop-templates/index.ts.hbs',
+                path: '../../packages/{{name}}/src/index.js',
+                templateFile: 'plop-templates/index.js.hbs',
             },
             {
                 type: 'add',
-                path: '../../packages/{{name}}/src/{{className name}}.ts',
-                templateFile: 'plop-templates/component.ts.hbs',
+                path: '../../packages/{{name}}/src/{{className name}}.js',
+                templateFile: 'plop-templates/component.js.hbs',
             },
             {
                 type: 'add',
-                path: '../../packages/{{name}}/{{> tagnamePartial }}.ts',
-                templateFile: 'plop-templates/component-registration.ts.hbs',
+                path: '../../packages/{{name}}/{{> tagnamePartial }}.js',
+                templateFile: 'plop-templates/component-registration.js.hbs',
             },
             {
                 type: 'add',
@@ -100,11 +100,6 @@ module.exports = function (plop) {
                 type: 'add',
                 path: '../../packages/{{name}}/README.md',
                 templateFile: 'plop-templates/README.md.hbs',
-            },
-            {
-                type: 'add',
-                path: '../../packages/{{name}}/tsconfig.json',
-                templateFile: 'plop-templates/tsconfig.json.hbs',
             },
             {
                 type: 'add',

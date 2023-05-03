@@ -39,12 +39,6 @@ coverage
 
 # build artifacts
 packages/*/src/**/*.css.js
-packages/**/*.js
-packages/**/*.js.map
-packages/**/*.d.ts
-
-# built css assets
-packages/**/*.css.ts
 
 # npm assets
 package-lock.json

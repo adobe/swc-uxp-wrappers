@@ -11,16 +11,11 @@ governing permissions and limitations under the License.
 */
 const stripIndent = require('common-tags').stripIndents;
 
-const postCSSPlugins = (toTS) => {
+const postCSSPlugins = () => {
     return [
         // minify the css with cssnano presets
         require('cssnano')({
-            preset: [
-                'default',
-                {
-                    discardComments: !!toTS,
-                },
-            ],
+            preset: ['default'],
         }),
     ];
 };

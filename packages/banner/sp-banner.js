@@ -13,9 +13,3 @@ governing permissions and limitations under the License.
 import { Banner } from './src/Banner.js';
 
 customElements.define('sp-banner', Banner);
-
-declare global {
-    interface HTMLElementTagNameMap {
-        'sp-banner': Banner;
-    }
-}
