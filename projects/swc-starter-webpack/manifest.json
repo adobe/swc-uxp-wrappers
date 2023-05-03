@@ -41,14 +41,10 @@
     "host": [
         {
             "app": "PS",
-            "minVersion": "22.0.0"
+            "minVersion": "24.4.0"
         },
         {
             "app": "UXPS",
-            "minVersion": "1.0.0"
-        },
-        {
-            "app": "XD",
             "minVersion": "1.0.0"
         }
     ]
