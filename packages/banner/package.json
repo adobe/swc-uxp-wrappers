@@ -24,6 +24,9 @@
     "dependencies": {
         "@swc-uxp-internal/banner": "npm:@spectrum-web-components/banner@0.9.2"
     },
+    "resolutions": {
+        "@spectrum-web-components/base": "0.7.2"
+    },
     "files": [
         "**/*.js"
     ],
