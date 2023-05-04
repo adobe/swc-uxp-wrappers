@@ -761,7 +761,7 @@
   resolved "https://registry.yarnpkg.com/@sinclair/typebox/-/typebox-0.25.24.tgz#8c7688559979f7079aacaf31aa881c3aa410b718"
   integrity sha512-XJfwUVUKDHF5ugKwIcxEgc9k8b7HbznCp6eUfWgu710hMPNIO4aw4/zB5RogDQz8nd6gyCDpU9O/m6qYEWY6yQ==
 
-"@spectrum-web-components/base@^0.7.2", "@spectrum-web-components/base@^0.7.3", "@spectrum-web-components/base@^0.7.4":
+"@spectrum-web-components/base@0.7.5", "@spectrum-web-components/base@^0.7.2", "@spectrum-web-components/base@^0.7.3", "@spectrum-web-components/base@^0.7.4":
   version "0.7.5"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/base/-/base-0.7.5.tgz#64686e456a1334a199bdcd2af2927f2397e09ffe"
   integrity sha512-LCUg1mDYwg8rh2tETbAjcg0LGYqOLJc6PVWR0YZKjnIl2htRy2gr0ftEyx7Jx5MWAkPQgA662DYVilIno6ryAw==
