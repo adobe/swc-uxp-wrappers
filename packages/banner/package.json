@@ -1,0 +1,35 @@
+{
+    "name": "@swc-uxp-wrappers/banner",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/banner component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/banner"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/Banner.js": "./src/Banner.js",
+        "./sp-banner.js": "./sp-banner.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/banner": "npm:@spectrum-web-components/banner@0.9.2"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/banner"
+    ]
+}

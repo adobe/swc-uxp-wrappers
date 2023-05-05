@@ -1,0 +1,45 @@
+{
+    "name": "SWC Starter",
+    "id": "swc-starter-webpack",
+    "version": "1.0.0",
+    "main": "index.html",
+    "manifestVersion": 4,
+    "featureFlags": {
+        "enableSWCSupport": true
+    },
+    "entrypoints": [
+        {
+            "type": "panel",
+            "id": "vanilla",
+            "label": {
+                "default": "SWC Starter"
+            },
+            "minimumSize": {
+                "width": 1200,
+                "height": 1200
+            },
+            "maximumSize": {
+                "width": 1200,
+                "height": 1200
+            },
+            "preferredDockedSize": {
+                "width": 1200,
+                "height": 1200
+            },
+            "preferredFloatingSize": {
+                "width": 1200,
+                "height": 1200
+            }
+        }
+    ],
+    "host": [
+        {
+            "app": "PS",
+            "minVersion": "24.4.0"
+        },
+        {
+            "app": "UXPS",
+            "minVersion": "1.0.0"
+        }
+    ]
+}

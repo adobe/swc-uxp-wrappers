@@ -1,0 +1,13 @@
+{{> copyrightPartial }}
+
+import { {{className name}} } from '@swc-uxp-internal/{{name}}';
+
+import styles from './uxp-{{ name }}.css.js';
+
+class {{> uxpClassNamePartial}} extends {{className name}} {
+    static get styles() {
+        return [super.styles, styles];
+    }
+}
+
+export { {{> uxpClassNamePartial}} as {{className name}} };

@@ -1,0 +1,32 @@
+*.hbs
+
+# Diagnostic reports
+report
+
+# Dependency directories
+node_modules/
+
+# Optional npm cache directory
+.npm
+
+# Output of 'npm pack'
+*.tgz
+
+# dotenv environment variables file
+.env
+.env.test
+
+# build / generate output
+dist
+.cache
+
+# logging / private config
+.DS_STORE
+.DS_Store
+.gitconfig
+
+# build artifacts
+packages/*/src/**/*.css.js
+
+# npm assets
+package-lock.json

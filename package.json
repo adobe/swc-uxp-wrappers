@@ -1,0 +1,31 @@
+{
+    "name": "@torq/swc-uxp-wrappers",
+    "private": true,
+    "workspaces": [
+        "packages/*",
+        "projects/*"
+    ],
+    "engines": {
+        "node": ">=18.15.11",
+        "yarn": ">=1.22.4"
+    },
+    "type": "module",
+    "devDependencies": {
+        "common-tags": "^1.8.0",
+        "cssnano": "^5.0.15",
+        "fast-glob": "^3.2.12",
+        "lerna": "^6.6.1",
+        "postcss": "^8.4.14",
+        "prettier": "^2.8.8"
+    },
+    "resolutions": {
+        "@spectrum-web-components/base": "0.7.5"
+    },
+    "scripts": {
+        "build": "yarn build:css",
+        "build:css": "node ./scripts/build-css.js",
+        "new-package": "cd projects/templates && plop",
+        "format": "prettier --check .",
+        "format:fix": "prettier --write ."
+    }
+}
