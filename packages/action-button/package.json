@@ -1,0 +1,36 @@
+{
+    "name": "@swc-uxp-wrappers/action-button",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/action-button component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/action-button"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/ActionButton.js": "./src/ActionButton.js",
+        "./sp-action-button.js": "./sp-action-button.js",
+        "./src/uxp-action-button.css.js": "./src/uxp-action-button.css.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/action-button": "npm:@spectrum-web-components/action-button@0.8.7"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/action-button"
+    ]
+}

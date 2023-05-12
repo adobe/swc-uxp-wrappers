@@ -1,0 +1,36 @@
+{
+    "name": "@swc-uxp-wrappers/card",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/card component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/card"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/Card.js": "./src/Card.js",
+        "./sp-card.js": "./sp-card.js",
+        "./src/uxp-card.css.js": "./src/uxp-card.css.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/card": "npm:@spectrum-web-components/card@0.13.4"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/card"
+    ]
+}

@@ -1,0 +1,36 @@
+{
+    "name": "@swc-uxp-wrappers/action-group",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/action-group component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/action-group"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/ActionGroup.js": "./src/ActionGroup.js",
+        "./sp-action-group.js": "./sp-action-group.js",
+        "./src/uxp-action-group.css.js": "./src/uxp-action-group.css.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/action-group": "npm:@spectrum-web-components/action-group@0.12.4"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/action-group"
+    ]
+}

@@ -1,0 +1,43 @@
+{
+    "name": "@swc-uxp-wrappers/button",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/button component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/button"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/Button.js": "./src/Button.js",
+        "./sp-button.js": "./sp-button.js",
+        "./src/CloseButton.js": "./src/CloseButton.js",
+        "./sp-close-button.js": "./sp-close-button.js",
+        "./src/ClearButton.js": "./src/ClearButton.js",
+        "./sp-clear-button.js": "./sp-clear-button.js",
+        "./src/uxp-button.css.js": "./src/uxp-button.css.js",
+        "./src/uxp-button-base.css.js": "./src/uxp-button-base.css.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/button": "npm:@spectrum-web-components/button@0.19.8"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/button",
+        "@spectrum-web-components/close-button",
+        "@spectrum-web-components/clear-button"
+    ]
+}

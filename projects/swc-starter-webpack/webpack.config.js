@@ -122,6 +122,22 @@ const shared = (env) => {
             // This is required for the spectrum web component to properly work in UXP
             alias: {
                 '@spectrum-web-components/banner': '@swc-uxp-wrappers/banner',
+                '@spectrum-web-components/divider': '@swc-uxp-wrappers/divider',
+                '@spectrum-web-components/illustrated-message':
+                    '@swc-uxp-wrappers/illustrated-message',
+                '@spectrum-web-components/link': '@swc-uxp-wrappers/link',
+                '@spectrum-web-components/avatar': '@swc-uxp-wrappers/avatar',
+                '@spectrum-web-components/field-label':
+                    '@swc-uxp-wrappers/field-label',
+                '@spectrum-web-components/card': '@swc-uxp-wrappers/card',
+                '@spectrum-web-components/button': '@swc-uxp-wrappers/button',
+                '@spectrum-web-components/action-button':
+                    '@swc-uxp-wrappers/action-button',
+                '@spectrum-web-components/checkbox':
+                    '@swc-uxp-wrappers/checkbox',
+                '@spectrum-web-components/menu': '@swc-uxp-wrappers/menu',
+                '@spectrum-web-components/action-group':
+                    '@swc-uxp-wrappers/action-group',
             },
         },
         plugins,

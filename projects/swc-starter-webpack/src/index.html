@@ -11,35 +11,412 @@ governing permissions and limitations under the License.
 -->
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
         <meta charset="utf-8" />
-
         <title>Spectrum Web Components in UXP</title>
         <link rel="stylesheet" type="text/css" href="main.bundle.css" />
-        <style type="text/css">
-            body {
-                margin: 20px;
+        <script>
+            function openTab(evt, tabName) {
+                var i, tabcontent, tablinks;
+                tabcontent = document.getElementsByClassName('tabcontent');
+                for (i = 0; i < tabcontent.length; i++) {
+                    tabcontent[i].style.display = 'none';
+                }
+                tablinks = document.getElementsByClassName('tablinks');
+                for (i = 0; i < tablinks.length; i++) {
+                    tablinks[i].className = tablinks[i].className.replace(
+                        ' active',
+                        ''
+                    );
+                }
+                document.getElementById(tabName).style.display = 'block';
+                evt.currentTarget.className += ' active';
             }
-            hr {
-                max-width: 300px;
-                margin-left: 0;
-            }
-        </style>
+        </script>
     </head>
 
     <body>
         <script src="main.bundle.js"></script>
-        <sp-theme scale="large" color="light">
-            <sp-banner>
-                <div slot="header">This is an info banner</div>
-                <div slot="content">Description here</div>
-            </sp-banner>
-            <hr />
-            <my-banner>
-                <div slot="header">This is a custom info banner</div>
-                <div slot="content">Description here</div>
-            </my-banner>
+
+        <sp-theme scale="medium" color="light">
+            <div class="tab">
+                <button class="tablinks" onclick="openTab(event, 'sp-banner')">
+                    sp-banner
+                </button>
+                <button
+                    class="tablinks"
+                    onclick="openTab(event, 'sp-illustrated-message')"
+                >
+                    sp-illustrated-message
+                </button>
+                <button class="tablinks" onclick="openTab(event, 'sp-divider')">
+                    sp-divider
+                </button>
+                <button class="tablinks" onclick="openTab(event, 'sp-avatar')">
+                    sp-avatar
+                </button>
+                <button class="tablinks" onclick="openTab(event, 'sp-button')">
+                    sp-button
+                </button>
+                <button
+                    class="tablinks"
+                    onclick="openTab(event, 'sp-action-button')"
+                >
+                    sp-action-button
+                </button>
+                <button
+                    class="tablinks"
+                    onclick="openTab(event, 'sp-action-group')"
+                >
+                    sp-action-group
+                </button>
+                <button class="tablinks" onclick="openTab(event, 'sp-link')">
+                    sp-link
+                </button>
+                <button
+                    class="tablinks"
+                    onclick="openTab(event, 'sp-field-label')"
+                >
+                    sp-fieldlabel
+                </button>
+                <button
+                    class="tablinks"
+                    onclick="openTab(event, 'sp-checkbox')"
+                >
+                    sp-checkbox
+                </button>
+                <button class="tablinks" onclick="openTab(event, 'sp-card')">
+                    sp-card
+                </button>
+            </div>
+
+            <div id="sp-banner" class="tabcontent">
+                <h3>sp-banner</h3>
+                <div>
+                    <sp-banner>
+                        <div slot="header">This is an info banner</div>
+                        <div slot="content">Description here, sp-banner</div>
+                    </sp-banner>
+                    <my-banner>
+                        <div slot="header">This is a custom info banner</div>
+                        <div slot="content">Description here, my-banner</div>
+                    </my-banner>
+                    <div
+                        style="
+                            width: 300px;
+                            margin: 50px 0px 50px;
+                            max-width: 75%;
+                            height: 100px;
+                            background-color: #ba598b;
+                            position: relative;
+                        "
+                    >
+                        <sp-banner corner type="error">
+                            <div slot="header">This banner is in a corner</div>
+                            <div slot="content">Neat!</div>
+                        </sp-banner>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sp-illustrated-message" class="tabcontent">
+                <h3>sp-illustrated-message</h3>
+                <div>
+                    <sp-illustrated-message
+                        heading="Drag and Drop Your File"
+                        description="Additional descriptive text"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 150 103"
+                            width="150"
+                            height="103"
+                            viewBox="0 0 150 103"
+                        >
+                            <path
+                                d="M133.7,8.5h-118c-1.9,0-3.5,1.6-3.5,3.5v27c0,0.8,0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5V23.5h119V92c0,0.3-0.2,0.5-0.5,0.5h-118c-0.3,0-0.5-0.2-0.5-0.5V69c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5v23c0,1.9,1.6,3.5,3.5,3.5h118c1.9,0,3.5-1.6,3.5-3.5V12C137.2,10.1,135.6,8.5,133.7,8.5z M15.2,21.5V12c0-0.3,0.2-0.5,0.5-0.5h118c0.3,0,0.5,0.2,0.5,0.5v9.5H15.2z M32.6,16.5c0,0.6-0.4,1-1,1h-10c-0.6,0-1-0.4-1-1s0.4-1,1-1h10C32.2,15.5,32.6,15.9,32.6,16.5z M13.6,56.1l-8.6,8.5C4.8,65,4.4,65.1,4,65.1c-0.4,0-0.8-0.1-1.1-0.4c-0.6-0.6-0.6-1.5,0-2.1l8.6-8.5l-8.6-8.5c-0.6-0.6-0.6-1.5,0-2.1c0.6-0.6,1.5-0.6,2.1,0l8.6,8.5l8.6-8.5c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2.1L15.8,54l8.6,8.5c0.6,0.6,0.6,1.5,0,2.1c-0.3,0.3-0.7,0.4-1.1,0.4c-0.4,0-0.8-0.1-1.1-0.4L13.6,56.1z"
+                            ></path>
+                        </svg>
+                    </sp-illustrated-message>
+
+                    <my-illustrated-message
+                        class="my-illustrated-message"
+                        heading="Drag and Drop Your File"
+                        description="Additional descriptive text"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 150 103"
+                            width="150"
+                            height="103"
+                            viewBox="0 0 150 103"
+                        >
+                            <path
+                                d="M133.7,8.5h-118c-1.9,0-3.5,1.6-3.5,3.5v27c0,0.8,0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5V23.5h119V92c0,0.3-0.2,0.5-0.5,0.5h-118c-0.3,0-0.5-0.2-0.5-0.5V69c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5v23c0,1.9,1.6,3.5,3.5,3.5h118c1.9,0,3.5-1.6,3.5-3.5V12C137.2,10.1,135.6,8.5,133.7,8.5z M15.2,21.5V12c0-0.3,0.2-0.5,0.5-0.5h118c0.3,0,0.5,0.2,0.5,0.5v9.5H15.2z M32.6,16.5c0,0.6-0.4,1-1,1h-10c-0.6,0-1-0.4-1-1s0.4-1,1-1h10C32.2,15.5,32.6,15.9,32.6,16.5z M13.6,56.1l-8.6,8.5C4.8,65,4.4,65.1,4,65.1c-0.4,0-0.8-0.1-1.1-0.4c-0.6-0.6-0.6-1.5,0-2.1l8.6-8.5l-8.6-8.5c-0.6-0.6-0.6-1.5,0-2.1c0.6-0.6,1.5-0.6,2.1,0l8.6,8.5l8.6-8.5c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2.1L15.8,54l8.6,8.5c0.6,0.6,0.6,1.5,0,2.1c-0.3,0.3-0.7,0.4-1.1,0.4c-0.4,0-0.8-0.1-1.1-0.4L13.6,56.1z"
+                            ></path>
+                        </svg>
+                    </my-illustrated-message>
+                </div>
+            </div>
+
+            <div id="sp-divider" class="tabcontent">
+                <h3>sp-divider</h3>
+                <div style="width: 600px">
+                    <b>sp-divider</b>
+                    <sp-divider size="l"></sp-divider>
+                    <p>
+                        Dividers bring clarity to a layout by grouping and
+                        dividing content in close proximity. They can also be
+                        used to establish rhythm and hierarchy.
+                    </p>
+                    <b>my-divider</b>
+                    <my-divider size="l" class="my-divider"></my-divider>
+                </div>
+            </div>
+
+            <div id="sp-avatar" class="tabcontent">
+                <h3>sp-avatar</h3>
+                <div>
+                    <sp-avatar
+                        size="700"
+                        label="Dog the User"
+                        src="https://place.dog/500/500"
+                    ></sp-avatar>
+                    <my-avatar
+                        class="my-avatar"
+                        size="700"
+                        label="Dog the User"
+                        src="https://place.dog/700/700"
+                    ></my-avatar>
+                </div>
+            </div>
+
+            <div id="sp-button" class="tabcontent">
+                <h3>sp-button</h3>
+                <div>
+                    <sp-button>Spectrum Web Components</sp-button>
+                    <sp-button variant="primary">
+                        <svg
+                            slot="icon"
+                            viewBox="0 0 36 36"
+                            focusable="false"
+                            aria-hidden="true"
+                            role="img"
+                        >
+                            <path
+                                d="M16 36a4.407 4.407 0 0 0 4-4h-8a4.407 4.407 0 0 0 4 4zm9.143-24.615c0-3.437-3.206-4.891-7.143-5.268V3a1.079 1.079 0 0 0-1.143-1h-1.714A1.079 1.079 0 0 0 14 3v3.117c-3.937.377-7.143 1.831-7.143 5.268C6.857 26.8 2 26.111 2 28.154V30h28v-1.846C30 26 25.143 26.8 25.143 11.385z"
+                            ></path>
+                        </svg>
+                        SVG Icon + Label
+                    </sp-button>
+                    <my-button class="my-button">My Button</my-button>
+                </div>
+            </div>
+
+            <div id="sp-action-button" class="tabcontent">
+                <h3>sp-action-button</h3>
+                <div>
+                    <sp-action-button>Spectrum Action Button</sp-action-button>
+
+                    <sp-action-button disabled>
+                        Spectrum Action Button
+                    </sp-action-button>
+
+                    <sp-action-button class="my-action-button">
+                        My Spectrum Action Button
+                    </sp-action-button>
+                </div>
+            </div>
+
+            <div id="sp-action-group" class="tabcontent">
+                <h3>sp-action-group</h3>
+                <div>
+                    <sp-action-group size="m">
+                        <sp-action-button>Action 1</sp-action-button>
+                        <sp-action-button>Action 2</sp-action-button>
+                        <sp-action-button>Action 3</sp-action-button>
+                    </sp-action-group>
+                </div>
+                <div style="display: flex; justify-content: space-around">
+                    <sp-action-group vertical>
+                        <sp-action-button>Button 1</sp-action-button>
+                        <sp-action-button>Longer Button 2</sp-action-button>
+                        <sp-action-button>Short 3</sp-action-button>
+                    </sp-action-group>
+                    <sp-action-group vertical quiet>
+                        <sp-action-button>Button 1</sp-action-button>
+                        <sp-action-button>Longer Button 2</sp-action-button>
+                        <sp-action-button>Short 3</sp-action-button>
+                    </sp-action-group>
+                    <sp-action-group vertical compact>
+                        <sp-action-button>Button 1</sp-action-button>
+                        <sp-action-button>Longer Button 2</sp-action-button>
+                        <sp-action-button>Short 3</sp-action-button>
+                    </sp-action-group>
+                    <sp-action-group vertical compact quiet>
+                        <sp-action-button>Button 1</sp-action-button>
+                        <sp-action-button>Longer Button 2</sp-action-button>
+                        <sp-action-button>Short 3</sp-action-button>
+                    </sp-action-group>
+                </div>
+            </div>
+
+            <div id="sp-link" class="tabcontent">
+                <h3>sp-link</h3>
+                <div>
+                    This is a
+                    <sp-link id="lifestory-1" href="http://www.adobe.com">
+                        standard link
+                    </sp-link>
+                    . This is a
+                    <my-link class="my-link" href="http://www.adobe.com">
+                        standard my link
+                    </my-link>
+                    .
+                </div>
+            </div>
+
+            <div id="sp-field-label" class="tabcontent">
+                <h3>sp-field-label</h3>
+                <div>
+                    <sp-field-label for="lifestory-1" style="width: 100px">
+                        Life Story
+                    </sp-field-label>
+                    <sp-textfield
+                        placeholder="Enter your life story"
+                        id="lifestory-1"
+                    ></sp-textfield>
+
+                    <sp-field-label
+                        for="lifestory-2"
+                        side-aligned="start"
+                        style="width: 100px"
+                    >
+                        Life Story
+                    </sp-field-label>
+                    <sp-textfield
+                        placeholder="Enter your life story"
+                        id="lifestory-2"
+                    ></sp-textfield>
+
+                    <sp-field-label
+                        required
+                        for="lifestory-3"
+                        side-aligned="end"
+                        style="width: 100px"
+                    >
+                        Life Story
+                    </sp-field-label>
+                    <sp-textfield
+                        placeholder="Enter your life story"
+                        id="lifestory-3"
+                    ></sp-textfield>
+
+                    <sp-field-label
+                        required
+                        disabled
+                        for="lifestory-4"
+                        side-aligned="end"
+                        style="width: 100px"
+                    >
+                        Life Story
+                    </sp-field-label>
+                    <sp-textfield
+                        placeholder="Enter your life story"
+                        id="lifestory-4"
+                    ></sp-textfield>
+
+                    <my-field-label
+                        class="my-field-label"
+                        for="lifestory-5"
+                        style="width: 100px"
+                    >
+                        My Field Label
+                    </my-field-label>
+                    <sp-textfield
+                        placeholder="Enter your life story"
+                        id="lifestory-5"
+                    ></sp-textfield>
+                </div>
+            </div>
+
+            <div id="sp-checkbox" class="tabcontent">
+                <h3>sp-checkbox</h3>
+                <div>
+                    <div
+                        style="
+                            display: flex;
+                            justify-content: space-between;
+                            width: 600px;
+                        "
+                    >
+                        <div style="display: flex; flex-direction: column">
+                            <h4 class="spectrum-Heading--subtitle1">Default</h4>
+                            <sp-checkbox>Web component</sp-checkbox>
+                            <sp-checkbox checked>Web component</sp-checkbox>
+                            <sp-checkbox indeterminate>
+                                Web component
+                            </sp-checkbox>
+                        </div>
+
+                        <div style="display: flex; flex-direction: column">
+                            <h4 class="spectrum-Heading--subtitle1">Invalid</h4>
+                            <sp-checkbox invalid>Web component</sp-checkbox>
+                            <sp-checkbox checked invalid>
+                                Web component
+                            </sp-checkbox>
+                            <sp-checkbox indeterminate invalid>
+                                Web component
+                            </sp-checkbox>
+                        </div>
+
+                        <div style="display: flex; flex-direction: column">
+                            <h4 class="spectrum-Heading--subtitle1">
+                                Disabled
+                            </h4>
+                            <sp-checkbox disabled>Web component</sp-checkbox>
+                            <sp-checkbox checked disabled>
+                                Web component
+                            </sp-checkbox>
+                            <sp-checkbox indeterminate disabled>
+                                Web component
+                            </sp-checkbox>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sp-card" class="tabcontent">
+                <h3>sp-card</h3>
+                <div>
+                    <sp-card
+                        heading="Card Heading"
+                        subheading="JPG Photo"
+                        toggles
+                    >
+                        <img
+                            slot="cover-photo"
+                            src="https://picsum.photos/200/300"
+                            alt="Demo Image"
+                        />
+                        <div slot="footer">Footer</div>
+                    </sp-card>
+
+                    <my-card
+                        class="my-card"
+                        heading="My Card"
+                        subheading="Font size 30px"
+                    >
+                        <img
+                            slot="cover-photo"
+                            src="https://picsum.photos/200/300"
+                            alt="Demo Image"
+                        />
+                        <div slot="footer">Footer</div>
+                    </my-card>
+                </div>
+            </div>
         </sp-theme>
     </body>
 </html>

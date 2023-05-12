@@ -1,0 +1,36 @@
+/*
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* write uxp style overrides */
+
+:host([side-aligned='end']) {
+    display: inline-flex;
+    justify-content: flex-end;
+}
+
+:host([side-aligned]) {
+    margin-top: var(
+        --mod-fieldlabel-side-padding-top,
+        var(--spectrum-fieldlabel-side-padding-top)
+    );
+    margin-right: var(
+        --mod-fieldlabel-side-padding-right,
+        var(--spectrum-fieldlabel-side-padding-right)
+    );
+}
+
+.required-icon {
+    margin-left: var(
+        --mod-fieldlabel-asterisk-gap,
+        var(--spectrum-fieldlabel-asterisk-gap)
+    );
+}

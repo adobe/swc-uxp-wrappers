@@ -17,5 +17,17 @@ import '@spectrum-web-components/theme/sp-theme.js';
 import '@spectrum-web-components/theme/src/themes.js';
 
 import '@spectrum-web-components/banner/sp-banner.js';
+import '@spectrum-web-components/divider/sp-divider.js';
+import '@spectrum-web-components/illustrated-message/sp-illustrated-message.js';
+import '@spectrum-web-components/link/sp-link.js';
+import '@spectrum-web-components/avatar/sp-avatar.js';
+import '@spectrum-web-components/field-label/sp-field-label.js';
+import '@spectrum-web-components/button/sp-button.js';
+import '@spectrum-web-components/action-button/sp-action-button.js';
+import '@spectrum-web-components/card/sp-card.js';
+import '@spectrum-web-components/checkbox/sp-checkbox.js';
+import '@spectrum-web-components/action-group/sp-action-group.js';
+
+import '@spectrum-web-components/textfield/sp-textfield.js';
 
 import './my-elements.js';

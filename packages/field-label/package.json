@@ -1,0 +1,36 @@
+{
+    "name": "@swc-uxp-wrappers/field-label",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/field-label component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/field-label"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/FieldLabel.js": "./src/FieldLabel.js",
+        "./sp-field-label.js": "./sp-field-label.js",
+        "./src/uxp-field-label.css.js": "./src/uxp-field-label.css.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/field-label": "npm:@spectrum-web-components/field-label@0.10.3"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/field-label"
+    ]
+}

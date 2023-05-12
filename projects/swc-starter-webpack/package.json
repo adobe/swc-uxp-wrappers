@@ -14,7 +14,18 @@
     },
     "dependencies": {
         "@swc-uxp-wrappers/banner": "*",
+        "@swc-uxp-wrappers/divider": "*",
+        "@swc-uxp-wrappers/link": "*",
+        "@swc-uxp-wrappers/illustrated-message": "*",
+        "@swc-uxp-wrappers/avatar": "*",
+        "@swc-uxp-wrappers/button": "*",
+        "@swc-uxp-wrappers/action-button": "*",
+        "@swc-uxp-wrappers/action-group": "*",
+        "@swc-uxp-wrappers/field-label": "*",
+        "@swc-uxp-wrappers/card": "*",
+        "@swc-uxp-wrappers/checkbox": "*",
         "@spectrum-web-components/theme": "0.14.9",
+        "@spectrum-web-components/textfield": "0.13.8",
         "lit": "^2.0.0"
     },
     "devDependencies": {
