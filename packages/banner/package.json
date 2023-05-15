@@ -19,8 +19,8 @@
         ".": "./src/index.js",
         "./package.json": "./package.json",
         "./src/Banner.js": "./src/Banner.js",
-        "./sp-banner.js": "./sp-banner.js",
-        "./src/uxp-banner.css.js": "./src/uxp-banner.css.js"
+        "./src/banner.css.js": "./src/banner.css.js",
+        "./sp-banner.js": "./sp-banner.js"
     },
     "dependencies": {
         "@swc-uxp-internal/banner": "npm:@spectrum-web-components/banner@0.9.2"

@@ -88,6 +88,11 @@ module.exports = function (plop) {
             },
             {
                 type: 'add',
+                path: '../../packages/{{name}}/src/{{name}}.css.js',
+                templateFile: 'plop-templates/component.css.js.hbs',
+            },
+            {
+                type: 'add',
                 path: '../../packages/{{name}}/{{> tagnamePartial }}.js',
                 templateFile: 'plop-templates/component-registration.js.hbs',
             },
