@@ -1,8 +1,10 @@
+{{> copyrightPartial }}
+
 import { unsafeCSS } from '@spectrum-web-components/base';
-import styles from '@swc-uxp-internal/{{ name }}/src/{{ name }}.css.js';
+import swc{{className name}}Styles from '@swc-uxp-internal/{{ name }}/src/{{ name }}.css.js';
 
-import uxpStyles from './uxp-{{ name }}.css.js';
+import uxp{{className name}}Styles from './uxp-{{ name }}.css.js';
 
-const finalStyles = unsafeCSS(styles.toString(), uxpStyles.toString());
+const combined{{className name}}Styles = unsafeCSS(swc{{className name}}Styles.toString(), uxp{{className name}}Styles.toString());
 
-export default finalStyles;
+export default combined{{className name}}Styles;

@@ -20,7 +20,7 @@
         "./package.json": "./package.json",
         "./src/IllustratedMessage.js": "./src/IllustratedMessage.js",
         "./sp-illustrated-message.js": "./sp-illustrated-message.js",
-        "./src/uxp-illustrated-message.css.js": "./src/uxp-illustrated-message.css.js"
+        "./src/illustrated-message.css.js": "./src/illustrated-message.css.js"
     },
     "dependencies": {
         "@swc-uxp-internal/illustrated-message": "npm:@spectrum-web-components/illustrated-message@0.9.8"

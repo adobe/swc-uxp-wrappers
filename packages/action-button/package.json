@@ -20,7 +20,7 @@
         "./package.json": "./package.json",
         "./src/ActionButton.js": "./src/ActionButton.js",
         "./sp-action-button.js": "./sp-action-button.js",
-        "./src/uxp-action-button.css.js": "./src/uxp-action-button.css.js"
+        "./src/action-button.css.js": "./src/action-button.css.js"
     },
     "dependencies": {
         "@swc-uxp-internal/action-button": "npm:@spectrum-web-components/action-button@0.8.7"

@@ -20,7 +20,7 @@
         "./package.json": "./package.json",
         "./src/Divider.js": "./src/Divider.js",
         "./sp-divider.js": "./sp-divider.js",
-        "./src/uxp-divider.css.js": "./src/uxp-divider.css.js"
+        "./src/divider.css.js": "./src/divider.css.js"
     },
     "dependencies": {
         "@swc-uxp-internal/divider": "npm:@spectrum-web-components/divider@0.5.0"

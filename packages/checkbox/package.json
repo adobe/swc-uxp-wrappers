@@ -20,7 +20,7 @@
         "./package.json": "./package.json",
         "./src/Checkbox.js": "./src/Checkbox.js",
         "./sp-checkbox.js": "./sp-checkbox.js",
-        "./src/uxp-checkbox.css.js": "./src/uxp-checkbox.css.js"
+        "./src/checkbox.css.js": "./src/checkbox.css.js"
     },
     "dependencies": {
         "@swc-uxp-internal/checkbox": "npm:@spectrum-web-components/checkbox@0.14.0"

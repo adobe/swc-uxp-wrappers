@@ -11,13 +11,13 @@ governing permissions and limitations under the License.
 */
 
 import { unsafeCSS } from '@spectrum-web-components/base';
-import swcBannerStyles from '@swc-uxp-internal/banner/src/banner.css.js';
+import swcAvatarStyles from '@swc-uxp-internal/avatar/src/avatar.css.js';
 
-import uxpBannerStyles from './uxp-banner.css.js';
+import uxpAvatarStyles from './uxp-avatar.css.js';
 
-const combinedBannerStyles = unsafeCSS(
-    swcBannerStyles.toString(),
-    uxpBannerStyles.toString()
+const combinedAvatarStyles = unsafeCSS(
+    swcAvatarStyles.toString(),
+    uxpAvatarStyles.toString()
 );
 
-export default combinedBannerStyles;
+export default combinedAvatarStyles;

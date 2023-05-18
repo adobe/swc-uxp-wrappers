@@ -24,8 +24,8 @@
         "./sp-close-button.js": "./sp-close-button.js",
         "./src/ClearButton.js": "./src/ClearButton.js",
         "./sp-clear-button.js": "./sp-clear-button.js",
-        "./src/uxp-button.css.js": "./src/uxp-button.css.js",
-        "./src/uxp-button-base.css.js": "./src/uxp-button-base.css.js"
+        "./src/button.css.js": "./src/button.css.js",
+        "./src/button-base.css.js": "./src/button-base.css.js"
     },
     "dependencies": {
         "@swc-uxp-internal/button": "npm:@spectrum-web-components/button@0.19.8"

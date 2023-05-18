@@ -20,7 +20,7 @@
         "./package.json": "./package.json",
         "./src/Link.js": "./src/Link.js",
         "./sp-link.js": "./sp-link.js",
-        "./src/uxp-link.css.js": "./src/uxp-link.css.js"
+        "./src/link.css.js": "./src/link.css.js"
     },
     "dependencies": {
         "@swc-uxp-internal/link": "npm:@spectrum-web-components/link@0.14.1"

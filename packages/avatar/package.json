@@ -20,7 +20,7 @@
         "./package.json": "./package.json",
         "./src/Avatar.js": "./src/Avatar.js",
         "./sp-avatar.js": "./sp-avatar.js",
-        "./src/uxp-avatar.css.js": "./src/uxp-avatar.css.js"
+        "./src/avatar.css.js": "./src/avatar.css.js"
     },
     "dependencies": {
         "@swc-uxp-internal/avatar": "npm:@spectrum-web-components/avatar@0.10.3"

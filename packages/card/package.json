@@ -20,7 +20,7 @@
         "./package.json": "./package.json",
         "./src/Card.js": "./src/Card.js",
         "./sp-card.js": "./sp-card.js",
-        "./src/uxp-card.css.js": "./src/uxp-card.css.js"
+        "./src/card.css.js": "./src/card.css.js"
     },
     "dependencies": {
         "@swc-uxp-internal/card": "npm:@spectrum-web-components/card@0.13.4"
