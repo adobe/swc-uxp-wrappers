@@ -37,7 +37,7 @@ governing permissions and limitations under the License.
     </head>
 
     <body>
-        <script src="main.bundle.js"></script>
+        <script defer src="main.bundle.js"></script>
 
         <sp-theme scale="medium" color="light">
             <div class="tab">
@@ -91,8 +91,59 @@ governing permissions and limitations under the License.
                 </button>
                 <button
                     class="tablinks"
-                    onclick="openTab(event, 'sp-button-group')"
+                    onclick="openTab(event, 'sp-action-bar')"
                 >
+                    sp-action-bar
+                </button>
+                <button class="tablinks" onclick="openTab(event, 'sp-popover')">
+                    sp-popover
+                </button>
+                <button class="tablinks" onclick="openTab(event, 'sp-tooltip')">
+                    sp-tooltip
+                </button>
+                <button
+                    class="tablinks"
+                    onclick="openTab(event, 'sp-picker-button')"
+                >
+                    sp-picker-button
+                </button>
+                <button class="tablinks" onclick="openTab(event, 'sp-menu')">
+                    sp-menu
+                </button>
+                <button
+                    class="tablinks"
+                    onclick="openTab(event, 'sp-menu-item')"
+                >
+                    sp-menu-item
+                </button>
+                <button
+                    class="tablinks"
+                    onclick="openTab(event, 'sp-menu-divider')"
+                >
+                    sp-menu-divider
+                </button>
+                <button
+                    class="tablinks"
+                    onclick="openTab(event, 'sp-menu-group')"
+                >
+                    sp-menu-group
+                </button>
+                <button class="tablinks" onclick="openTab(event, 'sp-table')">
+                    sp-table
+                </button>
+                <button
+                    class="tablinks"
+                    onclick="openTab(event, 'sp-textfield')"
+                >
+                    sp-textfield
+                </button>
+                <button
+                    class="tablinks"
+                    onclick="openTab(event, 'sp-help-text')"
+                >
+                    sp-help-text
+                </button>
+                <button onclick="openTab(event, 'sp-button-group')">
                     sp-button-group
                 </button>
                 <button class="tablinks" onclick="openTab(event, 'sp-dialog')">
@@ -102,328 +153,1806 @@ governing permissions and limitations under the License.
 
             <div id="sp-banner" class="tabcontent">
                 <h3>sp-banner</h3>
-                <div>
-                    <sp-banner>
-                        <div slot="header">This is an info banner</div>
-                        <div slot="content">Description here, sp-banner</div>
-                    </sp-banner>
-                    <my-banner>
-                        <div slot="header">This is a custom info banner</div>
-                        <div slot="content">Description here, my-banner</div>
-                    </my-banner>
-                    <div
-                        style="
-                            width: 300px;
-                            margin: 50px 0px 50px;
-                            max-width: 75%;
-                            height: 100px;
-                            background-color: #ba598b;
-                            position: relative;
-                        "
-                    >
-                        <sp-banner corner type="error">
-                            <div slot="header">This banner is in a corner</div>
-                            <div slot="content">Neat!</div>
+                <div id="content">
+                    <div id="left">
+                        <div id="subtitle">sp-banner</div>
+                        <sp-banner>
+                            <div slot="header">This is an info banner</div>
+                            <div slot="content">
+                                Description here, sp-banner
+                            </div>
                         </sp-banner>
+
+                        <div
+                            style="
+                                width: 300px;
+                                margin: 50px 0px 50px;
+                                max-width: 75%;
+                                height: 100px;
+                                background-color: #ba598b;
+                                position: relative;
+                            "
+                        >
+                            <sp-banner corner type="error">
+                                <div slot="header">
+                                    This banner is in a corner
+                                </div>
+                                <div slot="content">Neat!</div>
+                            </sp-banner>
+                        </div>
+                    </div>
+
+                    <div id="right">
+                        <div id="subtitle">sp-banner</div>
+                        <my-banner>
+                            <div slot="header">
+                                This is a custom info banner
+                            </div>
+                            <div slot="content">
+                                Description here, my-banner
+                            </div>
+                        </my-banner>
                     </div>
                 </div>
             </div>
 
             <div id="sp-illustrated-message" class="tabcontent">
                 <h3>sp-illustrated-message</h3>
-                <div>
-                    <sp-illustrated-message
-                        heading="Drag and Drop Your File"
-                        description="Additional descriptive text"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 150 103"
-                            width="150"
-                            height="103"
-                            viewBox="0 0 150 103"
-                        >
-                            <path
-                                d="M133.7,8.5h-118c-1.9,0-3.5,1.6-3.5,3.5v27c0,0.8,0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5V23.5h119V92c0,0.3-0.2,0.5-0.5,0.5h-118c-0.3,0-0.5-0.2-0.5-0.5V69c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5v23c0,1.9,1.6,3.5,3.5,3.5h118c1.9,0,3.5-1.6,3.5-3.5V12C137.2,10.1,135.6,8.5,133.7,8.5z M15.2,21.5V12c0-0.3,0.2-0.5,0.5-0.5h118c0.3,0,0.5,0.2,0.5,0.5v9.5H15.2z M32.6,16.5c0,0.6-0.4,1-1,1h-10c-0.6,0-1-0.4-1-1s0.4-1,1-1h10C32.2,15.5,32.6,15.9,32.6,16.5z M13.6,56.1l-8.6,8.5C4.8,65,4.4,65.1,4,65.1c-0.4,0-0.8-0.1-1.1-0.4c-0.6-0.6-0.6-1.5,0-2.1l8.6-8.5l-8.6-8.5c-0.6-0.6-0.6-1.5,0-2.1c0.6-0.6,1.5-0.6,2.1,0l8.6,8.5l8.6-8.5c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2.1L15.8,54l8.6,8.5c0.6,0.6,0.6,1.5,0,2.1c-0.3,0.3-0.7,0.4-1.1,0.4c-0.4,0-0.8-0.1-1.1-0.4L13.6,56.1z"
-                            ></path>
-                        </svg>
-                    </sp-illustrated-message>
 
-                    <my-illustrated-message
-                        class="my-illustrated-message"
-                        heading="Drag and Drop Your File"
-                        description="Additional descriptive text"
-                    >
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 150 103"
-                            width="150"
-                            height="103"
-                            viewBox="0 0 150 103"
+                <div id="content">
+                    <div id="left">
+                        <div id="subtitle">sp-illustrated-message</div>
+                        <sp-illustrated-message
+                            heading="Drag and Drop Your File"
+                            description="Additional descriptive text"
                         >
-                            <path
-                                d="M133.7,8.5h-118c-1.9,0-3.5,1.6-3.5,3.5v27c0,0.8,0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5V23.5h119V92c0,0.3-0.2,0.5-0.5,0.5h-118c-0.3,0-0.5-0.2-0.5-0.5V69c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5v23c0,1.9,1.6,3.5,3.5,3.5h118c1.9,0,3.5-1.6,3.5-3.5V12C137.2,10.1,135.6,8.5,133.7,8.5z M15.2,21.5V12c0-0.3,0.2-0.5,0.5-0.5h118c0.3,0,0.5,0.2,0.5,0.5v9.5H15.2z M32.6,16.5c0,0.6-0.4,1-1,1h-10c-0.6,0-1-0.4-1-1s0.4-1,1-1h10C32.2,15.5,32.6,15.9,32.6,16.5z M13.6,56.1l-8.6,8.5C4.8,65,4.4,65.1,4,65.1c-0.4,0-0.8-0.1-1.1-0.4c-0.6-0.6-0.6-1.5,0-2.1l8.6-8.5l-8.6-8.5c-0.6-0.6-0.6-1.5,0-2.1c0.6-0.6,1.5-0.6,2.1,0l8.6,8.5l8.6-8.5c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2.1L15.8,54l8.6,8.5c0.6,0.6,0.6,1.5,0,2.1c-0.3,0.3-0.7,0.4-1.1,0.4c-0.4,0-0.8-0.1-1.1-0.4L13.6,56.1z"
-                            ></path>
-                        </svg>
-                    </my-illustrated-message>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 150 103"
+                                width="150"
+                                height="103"
+                                viewBox="0 0 150 103"
+                            >
+                                <path
+                                    d="M133.7,8.5h-118c-1.9,0-3.5,1.6-3.5,3.5v27c0,0.8,0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5V23.5h119V92c0,0.3-0.2,0.5-0.5,0.5h-118c-0.3,0-0.5-0.2-0.5-0.5V69c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5v23c0,1.9,1.6,3.5,3.5,3.5h118c1.9,0,3.5-1.6,3.5-3.5V12C137.2,10.1,135.6,8.5,133.7,8.5z M15.2,21.5V12c0-0.3,0.2-0.5,0.5-0.5h118c0.3,0,0.5,0.2,0.5,0.5v9.5H15.2z M32.6,16.5c0,0.6-0.4,1-1,1h-10c-0.6,0-1-0.4-1-1s0.4-1,1-1h10C32.2,15.5,32.6,15.9,32.6,16.5z M13.6,56.1l-8.6,8.5C4.8,65,4.4,65.1,4,65.1c-0.4,0-0.8-0.1-1.1-0.4c-0.6-0.6-0.6-1.5,0-2.1l8.6-8.5l-8.6-8.5c-0.6-0.6-0.6-1.5,0-2.1c0.6-0.6,1.5-0.6,2.1,0l8.6,8.5l8.6-8.5c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2.1L15.8,54l8.6,8.5c0.6,0.6,0.6,1.5,0,2.1c-0.3,0.3-0.7,0.4-1.1,0.4c-0.4,0-0.8-0.1-1.1-0.4L13.6,56.1z"
+                                ></path>
+                            </svg>
+                        </sp-illustrated-message>
+                    </div>
+
+                    <div id="right">
+                        <div id="subtitle">my-illustrated-message</div>
+                        <my-illustrated-message
+                            class="my-illustrated-message"
+                            heading="Drag and Drop Your File"
+                            description="Additional descriptive text"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 150 103"
+                                width="150"
+                                height="103"
+                                viewBox="0 0 150 103"
+                            >
+                                <path
+                                    d="M133.7,8.5h-118c-1.9,0-3.5,1.6-3.5,3.5v27c0,0.8,0.7,1.5,1.5,1.5s1.5-0.7,1.5-1.5V23.5h119V92c0,0.3-0.2,0.5-0.5,0.5h-118c-0.3,0-0.5-0.2-0.5-0.5V69c0-0.8-0.7-1.5-1.5-1.5s-1.5,0.7-1.5,1.5v23c0,1.9,1.6,3.5,3.5,3.5h118c1.9,0,3.5-1.6,3.5-3.5V12C137.2,10.1,135.6,8.5,133.7,8.5z M15.2,21.5V12c0-0.3,0.2-0.5,0.5-0.5h118c0.3,0,0.5,0.2,0.5,0.5v9.5H15.2z M32.6,16.5c0,0.6-0.4,1-1,1h-10c-0.6,0-1-0.4-1-1s0.4-1,1-1h10C32.2,15.5,32.6,15.9,32.6,16.5z M13.6,56.1l-8.6,8.5C4.8,65,4.4,65.1,4,65.1c-0.4,0-0.8-0.1-1.1-0.4c-0.6-0.6-0.6-1.5,0-2.1l8.6-8.5l-8.6-8.5c-0.6-0.6-0.6-1.5,0-2.1c0.6-0.6,1.5-0.6,2.1,0l8.6,8.5l8.6-8.5c0.6-0.6,1.5-0.6,2.1,0c0.6,0.6,0.6,1.5,0,2.1L15.8,54l8.6,8.5c0.6,0.6,0.6,1.5,0,2.1c-0.3,0.3-0.7,0.4-1.1,0.4c-0.4,0-0.8-0.1-1.1-0.4L13.6,56.1z"
+                                ></path>
+                            </svg>
+                        </my-illustrated-message>
+                    </div>
                 </div>
             </div>
 
             <div id="sp-divider" class="tabcontent">
                 <h3>sp-divider</h3>
-                <div style="width: 600px">
-                    <b>sp-divider</b>
-                    <sp-divider size="l"></sp-divider>
-                    <p>
-                        Dividers bring clarity to a layout by grouping and
-                        dividing content in close proximity. They can also be
-                        used to establish rhythm and hierarchy.
-                    </p>
-                    <b>my-divider</b>
-                    <my-divider size="l" class="my-divider"></my-divider>
+
+                <div id="content">
+                    <div id="left">
+                        <div id="subtitle">sp-divider</div>
+                        <p>
+                            Dividers (medium or large) can be used in
+                            combination with a header text to create a section
+                            or a page title. In such cases, place the divider
+                            below the header.
+                        </p>
+                        <sp-divider size="l"></sp-divider>
+                        <p>
+                            Dividers bring clarity to a layout by grouping and
+                            dividing content in close proximity. They can also
+                            be used to establish rhythm and hierarchy.
+                        </p>
+                    </div>
+
+                    <div id="right">
+                        <div id="subtitle">my-divider</div>
+                        <p>
+                            Dividers (medium or large) can be used in
+                            combination with a header text to create a section
+                            or a page title. In such cases, place the divider
+                            below the header.
+                        </p>
+                        <my-divider size="m" class="my-divider"></my-divider>
+                        <p>
+                            Dividers bring clarity to a layout by grouping and
+                            dividing content in close proximity. They can also
+                            be used to establish rhythm and hierarchy.
+                        </p>
+                    </div>
                 </div>
             </div>
 
             <div id="sp-avatar" class="tabcontent">
                 <h3>sp-avatar</h3>
-                <div>
-                    <sp-avatar
-                        size="700"
-                        label="Dog the User"
-                        src="https://place.dog/500/500"
-                    ></sp-avatar>
-                    <my-avatar
-                        class="my-avatar"
-                        size="700"
-                        label="Dog the User"
-                        src="https://place.dog/700/700"
-                    ></my-avatar>
+
+                <div id="content">
+                    <div id="left">
+                        <div id="subtitle">sp-avatar</div>
+                        <p>
+                            An avatar is a thumbnail representation of an
+                            entity, such as a user or an organization.
+                        </p>
+                        <sp-avatar
+                            size="700"
+                            label="Dog the User"
+                            src="https://picsum.photos/500/500"
+                        ></sp-avatar>
+                    </div>
+
+                    <div id="right">
+                        <div id="subtitle">my-avatar</div>
+                        <p>
+                            An avatar is a thumbnail representation of an
+                            entity, such as a user or an organization.
+                        </p>
+                        <my-avatar
+                            class="my-avatar"
+                            size="700"
+                            label="Dog the User"
+                            src="https://picsum.photos/700/700"
+                        ></my-avatar>
+                    </div>
                 </div>
             </div>
 
             <div id="sp-button" class="tabcontent">
                 <h3>sp-button</h3>
-                <div>
-                    <sp-button>Spectrum Web Components</sp-button>
-                    <sp-button variant="primary">
-                        <svg
-                            slot="icon"
-                            viewBox="0 0 36 36"
-                            focusable="false"
-                            aria-hidden="true"
-                            role="img"
-                        >
-                            <path
-                                d="M16 36a4.407 4.407 0 0 0 4-4h-8a4.407 4.407 0 0 0 4 4zm9.143-24.615c0-3.437-3.206-4.891-7.143-5.268V3a1.079 1.079 0 0 0-1.143-1h-1.714A1.079 1.079 0 0 0 14 3v3.117c-3.937.377-7.143 1.831-7.143 5.268C6.857 26.8 2 26.111 2 28.154V30h28v-1.846C30 26 25.143 26.8 25.143 11.385z"
-                            ></path>
-                        </svg>
-                        SVG Icon + Label
-                    </sp-button>
-                    <my-button class="my-button">My Button</my-button>
+
+                <div id="content">
+                    <div id="left">
+                        <div id="subtitle">sp-button</div>
+                        <div>
+                            <sp-button
+                                treatment="fill"
+                                variant="primary"
+                                style="margin: 10px; margin-left: 0px"
+                            >
+                                Primary, Fill
+                            </sp-button>
+                            <sp-button
+                                treatment="fill"
+                                variant="secondary"
+                                style="margin: 10px"
+                            >
+                                Secondary, Fill
+                            </sp-button>
+                            <sp-button
+                                treatment="fill"
+                                variant="negative"
+                                style="margin: 10px"
+                            >
+                                Negative, Fill
+                            </sp-button>
+                        </div>
+                        <div>
+                            <sp-button
+                                variant="primary"
+                                style="margin: 10px; margin-left: 0px"
+                            >
+                                <svg
+                                    slot="icon"
+                                    viewBox="0 0 36 36"
+                                    focusable="false"
+                                    aria-hidden="true"
+                                    role="img"
+                                >
+                                    <path
+                                        d="M16 36a4.407 4.407 0 0 0 4-4h-8a4.407 4.407 0 0 0 4 4zm9.143-24.615c0-3.437-3.206-4.891-7.143-5.268V3a1.079 1.079 0 0 0-1.143-1h-1.714A1.079 1.079 0 0 0 14 3v3.117c-3.937.377-7.143 1.831-7.143 5.268C6.857 26.8 2 26.111 2 28.154V30h28v-1.846C30 26 25.143 26.8 25.143 11.385z"
+                                    ></path>
+                                </svg>
+                                SVG Icon + Label
+                            </sp-button>
+                            <sp-button variant="accent" style="margin: 10px">
+                                Accent
+                            </sp-button>
+                            <sp-button
+                                variant="primary"
+                                disabled
+                                style="margin: 10px"
+                            >
+                                Disabled
+                            </sp-button>
+                            <sp-button variant="accent" style="margin: 10px">
+                                <sp-icon-display-advert
+                                    slot="icon"
+                                ></sp-icon-display-advert>
+                                Accent
+                            </sp-button>
+                            <sp-button variant="negative" style="margin: 10px">
+                                <sp-icon-add-to-selection
+                                    slot="icon"
+                                ></sp-icon-add-to-selection>
+                            </sp-button>
+                        </div>
+                        <div>
+                            <sp-button
+                                style="margin: 10px; margin-left: 0px"
+                                onclick="alert(this, 'clicked!')"
+                            >
+                                Click me, onClick listener added
+                            </sp-button>
+                        </div>
+                    </div>
+
+                    <div id="right">
+                        <div id="subtitle">my-button</div>
+                        <my-button class="my-button">My Button</my-button>
+                    </div>
                 </div>
             </div>
 
             <div id="sp-action-button" class="tabcontent">
                 <h3>sp-action-button</h3>
-                <div>
-                    <sp-action-button>Spectrum Action Button</sp-action-button>
 
-                    <sp-action-button disabled>
-                        Spectrum Action Button
-                    </sp-action-button>
+                <div id="content">
+                    <div id="left">
+                        <div id="subtitle">sp-action-button</div>
+                        <div>
+                            <sp-action-button>
+                                Spectrum Action Button
+                            </sp-action-button>
+                            <sp-action-button disabled>
+                                Spectrum Action Button
+                            </sp-action-button>
+                        </div>
 
-                    <sp-action-button class="my-action-button">
-                        My Spectrum Action Button
-                    </sp-action-button>
+                        <div>
+                            <sp-action-button quiet>
+                                Quiet Action Button
+                            </sp-action-button>
+                            <sp-action-button quiet>
+                                <sp-icon-edit slot="icon"></sp-icon-edit>
+                                Quiet Action Button
+                            </sp-action-button>
+                            <sp-action-button quiet>
+                                <sp-icon-edit slot="icon"></sp-icon-edit>
+                            </sp-action-button>
+                            <sp-action-button quiet hold-affordance>
+                                <sp-icon-edit slot="icon"></sp-icon-edit>
+                            </sp-action-button>
+                        </div>
+
+                        <div>
+                            <sp-action-button emphasized>
+                                Emphasized Action Button
+                            </sp-action-button>
+                            <sp-action-button emphasized>
+                                <sp-icon-edit slot="icon"></sp-icon-edit>
+                                Emphasized Action Button
+                            </sp-action-button>
+                            <sp-action-button emphasized>
+                                <sp-icon-edit slot="icon"></sp-icon-edit>
+                            </sp-action-button>
+                            <sp-action-button emphasized hold-affordance>
+                                <sp-icon-edit slot="icon"></sp-icon-edit>
+                            </sp-action-button>
+                        </div>
+
+                        <div>
+                            <sp-action-button emphasized quiet selected>
+                                Emphasized Quiet selected
+                            </sp-action-button>
+                            <sp-action-button emphasized quiet selected>
+                                <sp-icon-edit slot="icon"></sp-icon-edit>
+                                Emphasized Quiet selected
+                            </sp-action-button>
+                            <sp-action-button emphasized quiet selected>
+                                <sp-icon-edit slot="icon"></sp-icon-edit>
+                            </sp-action-button>
+                            <sp-action-button
+                                emphasized
+                                quiet
+                                selected
+                                hold-affordance
+                            >
+                                <sp-icon-edit slot="icon"></sp-icon-edit>
+                            </sp-action-button>
+                        </div>
+                    </div>
+                    <div id="right">
+                        <div id="subtitle">my-action-button</div>
+                        <my-action-button class="my-action-button">
+                            My Action Button
+                        </my-action-button>
+                    </div>
                 </div>
             </div>
 
             <div id="sp-action-group" class="tabcontent">
                 <h3>sp-action-group</h3>
-                <div>
-                    <sp-action-group size="m">
-                        <sp-action-button>Action 1</sp-action-button>
-                        <sp-action-button>Action 2</sp-action-button>
-                        <sp-action-button>Action 3</sp-action-button>
-                    </sp-action-group>
-                </div>
-                <div style="display: flex; justify-content: space-around">
-                    <sp-action-group vertical>
-                        <sp-action-button>Button 1</sp-action-button>
-                        <sp-action-button>Longer Button 2</sp-action-button>
-                        <sp-action-button>Short 3</sp-action-button>
-                    </sp-action-group>
-                    <sp-action-group vertical quiet>
-                        <sp-action-button>Button 1</sp-action-button>
-                        <sp-action-button>Longer Button 2</sp-action-button>
-                        <sp-action-button>Short 3</sp-action-button>
-                    </sp-action-group>
-                    <sp-action-group vertical compact>
-                        <sp-action-button>Button 1</sp-action-button>
-                        <sp-action-button>Longer Button 2</sp-action-button>
-                        <sp-action-button>Short 3</sp-action-button>
-                    </sp-action-group>
-                    <sp-action-group vertical compact quiet>
-                        <sp-action-button>Button 1</sp-action-button>
-                        <sp-action-button>Longer Button 2</sp-action-button>
-                        <sp-action-button>Short 3</sp-action-button>
-                    </sp-action-group>
+
+                <div id="content">
+                    <div id="left">
+                        <div id="subtitle">sp-action-group</div>
+                        <div>
+                            <sp-action-group size="m">
+                                <sp-action-button>Action 1</sp-action-button>
+                                <sp-action-button>Action 2</sp-action-button>
+                                <sp-action-button>Action 3</sp-action-button>
+                            </sp-action-group>
+                        </div>
+                        <div
+                            style="
+                                display: flex;
+                                justify-content: space-around;
+                                margin-top: 20px;
+                                margin-left: -10px;
+                            "
+                        >
+                            <sp-action-group vertical>
+                                <sp-action-button>Button 1</sp-action-button>
+                                <sp-action-button>
+                                    Longer Button 2
+                                </sp-action-button>
+                                <sp-action-button>Short 3</sp-action-button>
+                            </sp-action-group>
+                            <sp-action-group vertical quiet>
+                                <sp-action-button>Button 1</sp-action-button>
+                                <sp-action-button>
+                                    Longer Button 2
+                                </sp-action-button>
+                                <sp-action-button>Short 3</sp-action-button>
+                            </sp-action-group>
+                            <sp-action-group vertical compact>
+                                <sp-action-button>Button 1</sp-action-button>
+                                <sp-action-button>
+                                    Longer Button 2
+                                </sp-action-button>
+                                <sp-action-button>Short 3</sp-action-button>
+                            </sp-action-group>
+                            <sp-action-group vertical compact quiet>
+                                <sp-action-button>Button 1</sp-action-button>
+                                <sp-action-button>
+                                    Longer Button 2
+                                </sp-action-button>
+                                <sp-action-button>Short 3</sp-action-button>
+                            </sp-action-group>
+                        </div>
+                    </div>
+
+                    <div id="right">
+                        <div id="subtitle">my-action-group</div>
+                        <my-action-group class="my-action-group">
+                            <sp-action-button>Button 1</sp-action-button>
+                            <sp-action-button>Longer Button 2</sp-action-button>
+                            <sp-action-button>Short 3</sp-action-button>
+                        </my-action-group>
+                    </div>
                 </div>
             </div>
 
             <div id="sp-link" class="tabcontent">
                 <h3>sp-link</h3>
-                <div>
-                    This is a
-                    <sp-link id="lifestory-1" href="http://www.adobe.com">
-                        standard link
-                    </sp-link>
-                    . This is a
-                    <my-link class="my-link" href="http://www.adobe.com">
-                        standard my link
-                    </my-link>
-                    .
+
+                <div id="content">
+                    <div id="left">
+                        <div id="subtitle">sp-link</div>
+                        This is a
+                        <sp-link id="lifestory-1" href="http://www.adobe.com">
+                            standard link
+                        </sp-link>
+                        This is a
+                        <sp-link href="#" variant="secondary">
+                            secondary link
+                        </sp-link>
+                        <p>
+                            This is a
+                            <sp-link quiet href="#">
+                                quiet standard link
+                            </sp-link>
+                            .
+                        </p>
+                        <p>
+                            This is a
+                            <sp-link quiet variant="secondary" href="#">
+                                quiet secondary link
+                            </sp-link>
+                            .
+                        </p>
+                        <div
+                            style="
+                                background-color: #0f797d;
+                                padding: 15px 20px;
+                                display: inline-block;
+                            "
+                        >
+                            <p style="color: rgb(240, 240, 240)">
+                                This is a
+                                <sp-link static="white" quiet href="#">
+                                    quiet link
+                                </sp-link>
+                                over a background.
+                            </p>
+                        </div>
+                        <div
+                            style="
+                                background-color: #0f797d;
+                                padding: 15px 20px;
+                                display: inline-block;
+                            "
+                        >
+                            <p style="color: rgb(240, 240, 240)">
+                                This
+                                <sp-link static="white" href="#">link</sp-link>
+                                is over a background.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div id="right">
+                        <div id="subtitle">my-link</div>
+                        This is a
+                        <my-link class="my-link" href="http://www.adobe.com">
+                            my link
+                        </my-link>
+                    </div>
                 </div>
             </div>
 
             <div id="sp-field-label" class="tabcontent">
                 <h3>sp-field-label</h3>
-                <div>
-                    <sp-field-label for="lifestory-1" style="width: 100px">
-                        Life Story
-                    </sp-field-label>
-                    <sp-textfield
-                        placeholder="Enter your life story"
-                        id="lifestory-1"
-                    ></sp-textfield>
 
-                    <sp-field-label
-                        for="lifestory-2"
-                        side-aligned="start"
-                        style="width: 100px"
-                    >
-                        Life Story
-                    </sp-field-label>
-                    <sp-textfield
-                        placeholder="Enter your life story"
-                        id="lifestory-2"
-                    ></sp-textfield>
+                <div id="content">
+                    <div id="left">
+                        <div id="subtitle">sp-field-label</div>
+                        <div>
+                            <sp-field-label
+                                for="lifestory-1"
+                                style="width: 100px"
+                            >
+                                Life Story
+                            </sp-field-label>
+                            <sp-textfield
+                                placeholder="Enter your life story"
+                                id="lifestory-1"
+                            ></sp-textfield>
+                            <br />
+                            <sp-field-label
+                                for="lifestory-2"
+                                side-aligned="start"
+                                style="width: 100px"
+                            >
+                                Life Story
+                            </sp-field-label>
+                            <sp-textfield
+                                placeholder="Enter your life story"
+                                id="lifestory-2"
+                            ></sp-textfield>
+                            <br />
+                            <sp-field-label
+                                required
+                                for="lifestory-3"
+                                side-aligned="end"
+                                style="width: 100px"
+                            >
+                                Life Story
+                            </sp-field-label>
+                            <sp-textfield
+                                placeholder="Enter your life story"
+                                id="lifestory-3"
+                            ></sp-textfield>
+                            <br />
+                            <sp-field-label
+                                required
+                                disabled
+                                for="lifestory-4"
+                                side-aligned="end"
+                                style="width: 100px"
+                            >
+                                Life Story
+                            </sp-field-label>
+                            <sp-textfield
+                                placeholder="Enter your life story"
+                                id="lifestory-4"
+                            ></sp-textfield>
+                        </div>
+                    </div>
 
-                    <sp-field-label
-                        required
-                        for="lifestory-3"
-                        side-aligned="end"
-                        style="width: 100px"
-                    >
-                        Life Story
-                    </sp-field-label>
-                    <sp-textfield
-                        placeholder="Enter your life story"
-                        id="lifestory-3"
-                    ></sp-textfield>
-
-                    <sp-field-label
-                        required
-                        disabled
-                        for="lifestory-4"
-                        side-aligned="end"
-                        style="width: 100px"
-                    >
-                        Life Story
-                    </sp-field-label>
-                    <sp-textfield
-                        placeholder="Enter your life story"
-                        id="lifestory-4"
-                    ></sp-textfield>
-
-                    <my-field-label
-                        class="my-field-label"
-                        for="lifestory-5"
-                        style="width: 100px"
-                    >
-                        My Field Label
-                    </my-field-label>
-                    <sp-textfield
-                        placeholder="Enter your life story"
-                        id="lifestory-5"
-                    ></sp-textfield>
+                    <div id="right">
+                        <div id="subtitle">my-field-label</div>
+                        <my-field-label
+                            class="my-field-label"
+                            for="lifestory-5"
+                        >
+                            my-field-label is italic
+                        </my-field-label>
+                        <sp-textfield
+                            placeholder="Enter your life story"
+                            id="lifestory-5"
+                        ></sp-textfield>
+                    </div>
                 </div>
             </div>
 
             <div id="sp-checkbox" class="tabcontent">
                 <h3>sp-checkbox</h3>
-                <div>
-                    <div
-                        style="
-                            display: flex;
-                            justify-content: space-between;
-                            width: 600px;
-                        "
-                    >
-                        <div style="display: flex; flex-direction: column">
-                            <h4 class="spectrum-Heading--subtitle1">Default</h4>
-                            <sp-checkbox>Web component</sp-checkbox>
-                            <sp-checkbox checked>Web component</sp-checkbox>
-                            <sp-checkbox indeterminate>
-                                Web component
-                            </sp-checkbox>
-                        </div>
 
-                        <div style="display: flex; flex-direction: column">
-                            <h4 class="spectrum-Heading--subtitle1">Invalid</h4>
-                            <sp-checkbox invalid>Web component</sp-checkbox>
-                            <sp-checkbox checked invalid>
-                                Web component
-                            </sp-checkbox>
-                            <sp-checkbox indeterminate invalid>
-                                Web component
-                            </sp-checkbox>
-                        </div>
+                <div id="content">
+                    <div id="left">
+                        <div id="subtitle">sp-checkbox</div>
+                        <div
+                            style="
+                                display: flex;
+                                justify-content: space-between;
+                                width: 500px;
+                            "
+                        >
+                            <div style="display: flex; flex-direction: column">
+                                <h4 class="spectrum-Heading--subtitle1">
+                                    Default
+                                </h4>
+                                <sp-checkbox>Web component</sp-checkbox>
+                                <sp-checkbox checked>Web component</sp-checkbox>
+                                <sp-checkbox indeterminate>
+                                    Web component
+                                </sp-checkbox>
+                            </div>
 
-                        <div style="display: flex; flex-direction: column">
-                            <h4 class="spectrum-Heading--subtitle1">
-                                Disabled
-                            </h4>
-                            <sp-checkbox disabled>Web component</sp-checkbox>
-                            <sp-checkbox checked disabled>
-                                Web component
-                            </sp-checkbox>
-                            <sp-checkbox indeterminate disabled>
-                                Web component
-                            </sp-checkbox>
+                            <div style="display: flex; flex-direction: column">
+                                <h4 class="spectrum-Heading--subtitle1">
+                                    Invalid
+                                </h4>
+                                <sp-checkbox invalid>Web component</sp-checkbox>
+                                <sp-checkbox checked invalid>
+                                    Web component
+                                </sp-checkbox>
+                                <sp-checkbox indeterminate invalid>
+                                    Web component
+                                </sp-checkbox>
+                            </div>
+
+                            <div style="display: flex; flex-direction: column">
+                                <h4 class="spectrum-Heading--subtitle1">
+                                    Disabled
+                                </h4>
+                                <sp-checkbox disabled>
+                                    Web component
+                                </sp-checkbox>
+                                <sp-checkbox checked disabled>
+                                    Web component
+                                </sp-checkbox>
+                                <sp-checkbox indeterminate disabled>
+                                    Web component
+                                </sp-checkbox>
+                            </div>
                         </div>
+                    </div>
+
+                    <div id="right">
+                        <div id="subtitle">my-checkbox</div>
+                        <my-checkbox checked invalid>my-checkbox</my-checkbox>
                     </div>
                 </div>
             </div>
 
             <div id="sp-card" class="tabcontent">
                 <h3>sp-card</h3>
-                <div>
-                    <sp-card
-                        heading="Card Heading"
-                        subheading="JPG Photo"
-                        toggles
-                    >
-                        <img
-                            slot="cover-photo"
-                            src="https://picsum.photos/200/300"
-                            alt="Demo Image"
-                        />
-                        <div slot="footer">Footer</div>
-                    </sp-card>
 
-                    <my-card
-                        class="my-card"
-                        heading="My Card"
-                        subheading="Font size 30px"
+                <div id="content">
+                    <div id="left">
+                        <div id="subtitle">sp-card</div>
+                        <sp-card
+                            heading="Card Heading"
+                            subheading="JPG Photo"
+                            toggles
+                        >
+                            <img
+                                slot="cover-photo"
+                                src="https://picsum.photos/200/300"
+                                alt="Demo Image"
+                            />
+                            <div slot="footer">Footer</div>
+                        </sp-card>
+                    </div>
+
+                    <div id="right">
+                        <div id="subtitle">my-card</div>
+                        <my-card
+                            class="my-card"
+                            heading="My Card"
+                            subheading="Font size 30px"
+                        >
+                            <img
+                                slot="cover-photo"
+                                src="https://picsum.photos/200/300"
+                                alt="Demo Image"
+                            />
+                            <div slot="footer">Footer</div>
+                        </my-card>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sp-action-bar" class="tabcontent">
+                <h3>sp-action-bar</h3>
+                <div>
+                    <sp-action-bar open>
+                        <sp-checkbox indeterminate>swc action-bar</sp-checkbox>
+                        <sp-action-group quiet>
+                            <sp-action-button label="Edit">
+                                <sp-icon size="s" slot="icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 22 22"
+                                        role="img"
+                                        fill="currentColor"
+                                        height="18"
+                                        width="18"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M19.75,10.04h-15l5.97-5.97a.483.483,0,0,0,0-.7l-.35-.36a.513.513,0,0,0-.71,0L2.24,10.44a.513.513,0,0,0,0,.71l7.39,7.84a.513.513,0,0,0,.71,0l.35-.35a.513.513,0,0,0,0-.71L4.76,11.5H19.75a.25.25,0,0,0,.25-.25v-.96A.25.25,0,0,0,19.75,10.04Z"
+                                        ></path>
+                                    </svg>
+                                </sp-icon>
+                            </sp-action-button>
+                            <sp-action-button label="More">
+                                <svg
+                                    slot="icon"
+                                    viewBox="0 0 36 36"
+                                    focusable="false"
+                                    aria-hidden="true"
+                                    role="img"
+                                >
+                                    <path
+                                        d="M16 36a4.407 4.407 0 0 0 4-4h-8a4.407 4.407 0 0 0 4 4zm9.143-24.615c0-3.437-3.206-4.891-7.143-5.268V3a1.079 1.079 0 0 0-1.143-1h-1.714A1.079 1.079 0 0 0 14 3v3.117c-3.937.377-7.143 1.831-7.143 5.268C6.857 26.8 2 26.111 2 28.154V30h28v-1.846C30 26 25.143 26.8 25.143 11.385z"
+                                    ></path>
+                                </svg>
+                            </sp-action-button>
+                        </sp-action-group>
+                    </sp-action-bar>
+
+                    <my-action-bar open>
+                        <sp-checkbox indeterminate>my-action-bar</sp-checkbox>
+                        <sp-action-group quiet>
+                            <sp-action-button label="Edit">
+                                <sp-icon size="s" slot="icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 22 22"
+                                        role="img"
+                                        fill="currentColor"
+                                        height="18"
+                                        width="18"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M19.75,10.04h-15l5.97-5.97a.483.483,0,0,0,0-.7l-.35-.36a.513.513,0,0,0-.71,0L2.24,10.44a.513.513,0,0,0,0,.71l7.39,7.84a.513.513,0,0,0,.71,0l.35-.35a.513.513,0,0,0,0-.71L4.76,11.5H19.75a.25.25,0,0,0,.25-.25v-.96A.25.25,0,0,0,19.75,10.04Z"
+                                        ></path>
+                                    </svg>
+                                </sp-icon>
+                            </sp-action-button>
+                            <sp-action-button label="More">
+                                <svg
+                                    slot="icon"
+                                    viewBox="0 0 36 36"
+                                    focusable="false"
+                                    aria-hidden="true"
+                                    role="img"
+                                >
+                                    <path
+                                        d="M16 36a4.407 4.407 0 0 0 4-4h-8a4.407 4.407 0 0 0 4 4zm9.143-24.615c0-3.437-3.206-4.891-7.143-5.268V3a1.079 1.079 0 0 0-1.143-1h-1.714A1.079 1.079 0 0 0 14 3v3.117c-3.937.377-7.143 1.831-7.143 5.268C6.857 26.8 2 26.111 2 28.154V30h28v-1.846C30 26 25.143 26.8 25.143 11.385z"
+                                    ></path>
+                                </svg>
+                            </sp-action-button>
+                        </sp-action-group>
+                    </my-action-bar>
+
+                    <div style="margin-top: 50px">
+                        <h4>Look down and to the left when toggling.</h4>
+                        <sp-action-bar variant="fixed">
+                            <sp-checkbox indeterminate>
+                                228 Selected
+                            </sp-checkbox>
+                        </sp-action-bar>
+                        <sp-button
+                            onclick="javascript:this.previousElementSibling.open = !this.previousElementSibling.open;"
+                        >
+                            Toggle fixed action bar
+                        </sp-button>
+                    </div>
+
+                    <section
+                        style="
+                            position: relative;
+                            max-height: 6em;
+                            overflow: auto;
+                        "
                     >
-                        <img
-                            slot="cover-photo"
-                            src="https://picsum.photos/200/300"
-                            alt="Demo Image"
-                        />
-                        <div slot="footer">Footer</div>
-                    </my-card>
+                        <h4>Scroll down for toggle button</h4>
+                        <sp-action-bar variant="sticky" style="top: 0">
+                            <sp-checkbox indeterminate>
+                                228 Selected
+                            </sp-checkbox>
+                        </sp-action-bar>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua. Ut enim ad minim veniam, quis
+                            nostrud exercitation ullamco laboris nisi ut aliquip
+                            ex ea commodo consequat. Duis aute irure dolor in
+                            reprehenderit in voluptate velit esse cillum dolore
+                            eu fugiat nulla pariatur. Excepteur sint occaecat
+                            cupidatat non proident, sunt in culpa qui officia
+                            deserunt mollit anim id est laborum.
+                        </p>
+                        <sp-button
+                            onclick="javascript:this.previousElementSibling.previousElementSibling.open = !this.previousElementSibling.previousElementSibling.open;"
+                        >
+                            Toggle sticky action bar
+                        </sp-button>
+                    </section>
+                </div>
+            </div>
+
+            <div id="sp-popover" class="tabcontent">
+                <h3>sp-popover</h3>
+
+                <div id="content">
+                    <div id="left">
+                        <div id="subtitle">sp-popover</div>
+                        <div
+                            style="
+                                color: var(--spectrum-gray-800);
+                                height: 200px;
+                                position: relative;
+                                width: 320px;
+                                max-width: 100%;
+                                margin: 30px 30px 30px 20px;
+                            "
+                        >
+                            <sp-popover
+                                dialog
+                                placement="bottom"
+                                tip
+                                open
+                                style="--spectrum-popover-dialog-min-width: 0"
+                            >
+                                <div
+                                    style="
+                                        font-size: 18px;
+                                        font-weight: 700;
+                                        padding-bottom: 30px;
+                                    "
+                                >
+                                    Popover title
+                                </div>
+                                <div style="font-size: 14px">
+                                    Popovers are containers used to display
+                                    transient content such as menus, options,
+                                    additional actions, and more. They visually
+                                    stand out through stroke and drop shadow and
+                                    float on top of the interface.
+                                </div>
+                            </sp-popover>
+                        </div>
+
+                        <div
+                            style="
+                                color: var(--spectrum-gray-800);
+                                height: 200px;
+                                position: relative;
+                                width: 320px;
+                                max-width: 100%;
+                                margin: 30px 30px 30px 20px;
+                            "
+                        >
+                            <sp-popover
+                                dialog
+                                placement="top"
+                                tip
+                                open
+                                style="--spectrum-popover-dialog-min-width: 0"
+                            >
+                                <div
+                                    style="
+                                        font-size: 18px;
+                                        font-weight: 700;
+                                        padding-bottom: 30px;
+                                    "
+                                >
+                                    Popover title
+                                </div>
+                                <div style="font-size: 14px">
+                                    Popovers are containers used to display
+                                    transient content such as menus, options,
+                                    additional actions, and more. They visually
+                                    stand out through stroke and drop shadow and
+                                    float on top of the interface.
+                                </div>
+                            </sp-popover>
+                        </div>
+
+                        <div
+                            style="
+                                color: var(--spectrum-gray-800);
+                                height: 200px;
+                                position: relative;
+                                width: 320px;
+                                max-width: 100%;
+                                margin: 30px 30px 30px 20px;
+                            "
+                        >
+                            <sp-popover
+                                dialog
+                                placement="left"
+                                tip
+                                open
+                                style="--spectrum-popover-dialog-min-width: 0"
+                            >
+                                <div
+                                    style="
+                                        font-size: 18px;
+                                        font-weight: 700;
+                                        padding-bottom: 30px;
+                                    "
+                                >
+                                    Popover title
+                                </div>
+                                <div style="font-size: 14px">
+                                    Popovers are containers used to display
+                                    transient content such as menus, options,
+                                    additional actions, and more. They visually
+                                    stand out through stroke and drop shadow and
+                                    float on top of the interface.
+                                </div>
+                            </sp-popover>
+                        </div>
+
+                        <div
+                            style="
+                                color: var(--spectrum-gray-800);
+                                height: 200px;
+                                position: relative;
+                                width: 320px;
+                                max-width: 100%;
+                                margin: 30px 30px 30px 20px;
+                            "
+                        >
+                            <sp-popover
+                                dialog
+                                placement="right"
+                                tip
+                                open
+                                style="--spectrum-popover-dialog-min-width: 0"
+                            >
+                                <div
+                                    style="
+                                        font-size: 18px;
+                                        font-weight: 700;
+                                        padding-bottom: 30px;
+                                    "
+                                >
+                                    Popover title
+                                </div>
+                                <div style="font-size: 14px">
+                                    Popovers are containers used to display
+                                    transient content such as menus, options,
+                                    additional actions, and more. They visually
+                                    stand out through stroke and drop shadow and
+                                    float on top of the interface.
+                                </div>
+                            </sp-popover>
+                        </div>
+
+                        <div
+                            style="
+                                color: var(--spectrum-gray-800);
+                                height: 200px;
+                                position: relative;
+                                width: 320px;
+                                max-width: 100%;
+                                margin: 20px;
+                            "
+                        >
+                            <sp-popover
+                                dialog
+                                open
+                                style="--spectrum-popover-dialog-min-width: 0"
+                            >
+                                <div
+                                    style="
+                                        font-size: 18px;
+                                        font-weight: 700;
+                                        padding-bottom: 30px;
+                                    "
+                                >
+                                    Popover title
+                                </div>
+                                <div style="font-size: 14px">
+                                    Cupcake ipsum dolor sit amet jelly beans.
+                                    Chocolate jelly caramels. Icing soufflé
+                                    chupa chups donut cheesecake. Jelly-o
+                                    chocolate cake sweet roll cake danish candy
+                                    biscuit halvah
+                                </div>
+                            </sp-popover>
+                        </div>
+                    </div>
+
+                    <div id="right">
+                        <div id="subtitle">my-popover</div>
+                        <div
+                            style="
+                                color: var(--spectrum-gray-800);
+                                height: 200px;
+                                position: relative;
+                                width: 320px;
+                                max-width: 100%;
+                                margin: 20px;
+                            "
+                        >
+                            <my-popover
+                                class="my-popover"
+                                dialog
+                                open
+                                style="--spectrum-popover-dialog-min-width: 0"
+                            >
+                                <div
+                                    style="
+                                        font-size: 18px;
+                                        font-weight: 700;
+                                        padding-bottom: 30px;
+                                    "
+                                >
+                                    My Popover title
+                                </div>
+                                <div style="font-size: 14px">
+                                    Popovers are containers used to display
+                                    transient content such as menus, options,
+                                    additional actions, and more. They visually
+                                    stand out through stroke and drop shadow and
+                                    float on top of the interface.
+                                </div>
+                            </my-popover>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sp-tooltip" class="tabcontent">
+                <h3>sp-tooltip</h3>
+
+                <div id="content">
+                    <div id="left">
+                        <div id="subtitle">sp-tooltip</div>
+                        <div style="margin-top: 20px">
+                            <sp-tooltip open placement="top">Label</sp-tooltip>
+                            <br />
+                            <sp-tooltip
+                                open
+                                placement="left"
+                                variant="negative"
+                            >
+                                Lorem ipsum dolor sit amet, consectetur
+                                adipiscing elit
+                            </sp-tooltip>
+                            <br />
+                            <br />
+                            <sp-tooltip open placement="right" variant="info">
+                                <sp-icon-display-advert
+                                    slot="icon"
+                                ></sp-icon-display-advert>
+                                Lorem ipsum
+                            </sp-tooltip>
+                            <br />
+                            <br />
+                            <sp-tooltip
+                                open
+                                placement="bottom"
+                                variant="positive"
+                            >
+                                <sp-icon size="s" slot="icon">
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        viewBox="0 0 22 22"
+                                        role="img"
+                                        fill="currentColor"
+                                        height="18"
+                                        width="18"
+                                        aria-hidden="true"
+                                    >
+                                        <path
+                                            d="M19.75,10.04h-15l5.97-5.97a.483.483,0,0,0,0-.7l-.35-.36a.513.513,0,0,0-.71,0L2.24,10.44a.513.513,0,0,0,0,.71l7.39,7.84a.513.513,0,0,0,.71,0l.35-.35a.513.513,0,0,0,0-.71L4.76,11.5H19.75a.25.25,0,0,0,.25-.25v-.96A.25.25,0,0,0,19.75,10.04Z"
+                                        ></path>
+                                    </svg>
+                                </sp-icon>
+                                Label
+                            </sp-tooltip>
+                            <br />
+                        </div>
+                        <div style="margin: 20px">
+                            <sp-tooltip open placement="top">
+                                <sp-icon-alert slot="icon"></sp-icon-alert>
+                                Tooltips show contextual help or information
+                                about specific components when a user hovers or
+                                focuses on them.
+                            </sp-tooltip>
+                            <br />
+                            <br />
+                            <sp-tooltip open placement="bottom">
+                                Tooltips show contextual help or information
+                                about specific components when a user hovers or
+                                focuses on them.
+                            </sp-tooltip>
+                            <br />
+                            <br />
+                            <sp-tooltip open placement="left">
+                                Tooltips show contextual help or information
+                                about specific components when a user hovers or
+                                focuses on them.
+                            </sp-tooltip>
+                            <br />
+                            <br />
+                            <sp-tooltip open placement="right">
+                                Tooltips show contextual help or information
+                                about specific components when a user hovers or
+                                focuses on them.
+                            </sp-tooltip>
+                        </div>
+                    </div>
+
+                    <div id="right">
+                        <div id="subtitle">my-tooltip</div>
+                        <div style="margin-top: 20px">
+                            <my-tooltip
+                                class="my-tooltip"
+                                open
+                                placement="right"
+                            >
+                                Tooltips show contextual help or information
+                                about specific components when a user hovers or
+                                focuses on them.
+                            </my-tooltip>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sp-picker-button" class="tabcontent">
+                <h3>sp-picker-button</h3>
+
+                <div id="content">
+                    <div id="left">
+                        <div id="subtitle">sp-picker-button</div>
+                        <div class="demo-example">
+                            <sp-picker-button size="m"></sp-picker-button>
+                            <br />
+                            <sp-picker-button size="m">
+                                <span slot="label">All</span>
+                            </sp-picker-button>
+                        </div>
+
+                        <div class="demo-example">
+                            <sp-picker-button open></sp-picker-button>
+                            <br />
+                            <sp-picker-button open>
+                                <span slot="label">All</span>
+                            </sp-picker-button>
+                        </div>
+
+                        <div class="demo-example">
+                            <sp-picker-button disabled></sp-picker-button>
+                            <br />
+                            <sp-picker-button disabled>
+                                <span slot="label">All</span>
+                            </sp-picker-button>
+                        </div>
+
+                        <div class="demo-example">
+                            <sp-picker-button invalid></sp-picker-button>
+                            <br />
+                            <sp-picker-button invalid>
+                                <span slot="label">All</span>
+                            </sp-picker-button>
+                        </div>
+                    </div>
+
+                    <div id="right">
+                        <div id="subtitle">my-picker-button</div>
+                        <div class="demo-example">
+                            <my-picker-button
+                                class="my-picker-button"
+                            ></my-picker-button>
+                            <br />
+                            <my-picker-button class="my-picker-button">
+                                <span slot="label">All</span>
+                            </my-picker-button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sp-menu" class="tabcontent">
+                <h3>sp-menu</h3>
+
+                <div id="content">
+                    <div id="left">
+                        <div id="subtitle">sp-menu</div>
+                        <div>
+                            <sp-menu selects="multiple" style="margin: 20px">
+                                <sp-menu-item selected>Deselect</sp-menu-item>
+                                <sp-menu-item selected>
+                                    Select inverse
+                                </sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-menu>
+                        </div>
+                        <div>
+                            <sp-menu selects="single" style="margin: 20px">
+                                <sp-menu-item>Active Menu Item</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Disabled Menu Item
+                                </sp-menu-item>
+                                <sp-menu-item selected>
+                                    Selected Menu Item
+                                </sp-menu-item>
+                            </sp-menu>
+                        </div>
+                        <div>
+                            <sp-menu style="margin: 20px; width: 200px">
+                                <sp-menu-item>
+                                    <sp-icon size="s" slot="icon">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 22 22"
+                                            role="img"
+                                            fill="currentColor"
+                                            height="18"
+                                            width="18"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M19.75,10.04h-15l5.97-5.97a.483.483,0,0,0,0-.7l-.35-.36a.513.513,0,0,0-.71,0L2.24,10.44a.513.513,0,0,0,0,.71l7.39,7.84a.513.513,0,0,0,.71,0l.35-.35a.513.513,0,0,0,0-.71L4.76,11.5H19.75a.25.25,0,0,0,.25-.25v-.96A.25.25,0,0,0,19.75,10.04Z"
+                                            ></path>
+                                        </svg>
+                                    </sp-icon>
+                                    Save
+                                </sp-menu-item>
+                                <sp-menu-item>
+                                    <sp-icon size="s" slot="icon">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 22 22"
+                                            role="img"
+                                            fill="currentColor"
+                                            height="18"
+                                            width="18"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M19.75,10.04h-15l5.97-5.97a.483.483,0,0,0,0-.7l-.35-.36a.513.513,0,0,0-.71,0L2.24,10.44a.513.513,0,0,0,0,.71l7.39,7.84a.513.513,0,0,0,.71,0l.35-.35a.513.513,0,0,0,0-.71L4.76,11.5H19.75a.25.25,0,0,0,.25-.25v-.96A.25.25,0,0,0,19.75,10.04Z"
+                                            ></path>
+                                        </svg>
+                                    </sp-icon>
+                                    Finish
+                                </sp-menu-item>
+                                <sp-menu-item>
+                                    <sp-icon size="s" slot="icon">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 22 22"
+                                            role="img"
+                                            fill="currentColor"
+                                            height="18"
+                                            width="18"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M19.75,10.04h-15l5.97-5.97a.483.483,0,0,0,0-.7l-.35-.36a.513.513,0,0,0-.71,0L2.24,10.44a.513.513,0,0,0,0,.71l7.39,7.84a.513.513,0,0,0,.71,0l.35-.35a.513.513,0,0,0,0-.71L4.76,11.5H19.75a.25.25,0,0,0,.25-.25v-.96A.25.25,0,0,0,19.75,10.04Z"
+                                            ></path>
+                                        </svg>
+                                    </sp-icon>
+                                    Review
+                                </sp-menu-item>
+                            </sp-menu>
+                        </div>
+                    </div>
+
+                    <div id="right">
+                        <div id="subtitle">my-menu</div>
+                        <my-menu
+                            selects="single"
+                            class="my-menu"
+                            style="margin: 20px; width: 200px"
+                        >
+                            <sp-menu-item selected>
+                                <sp-icon-edit slot="icon"></sp-icon-edit>
+                                Save
+                            </sp-menu-item>
+                            <sp-menu-item>
+                                <sp-icon-alert slot="icon"></sp-icon-alert>
+                                Finish
+                            </sp-menu-item>
+                            <sp-menu-item>
+                                <sp-icon-display-advert
+                                    slot="icon"
+                                ></sp-icon-display-advert>
+                                Review
+                            </sp-menu-item>
+                        </my-menu>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sp-menu-divider" class="tabcontent">
+                <h3>sp-menu-divider</h3>
+
+                <div id="content">
+                    <div id="left">
+                        <div id="subtitle">sp-menu-divider</div>
+                        <div>
+                            <sp-menu style="margin: 20px">
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-menu>
+                        </div>
+                        <div>
+                            <sp-menu
+                                selectable
+                                style="background-color: beige; margin: 20px"
+                            >
+                                <sp-menu-item>Active Menu Item</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Disabled Menu Item
+                                </sp-menu-item>
+                                <sp-menu-item selected>
+                                    Selected Menu Item
+                                </sp-menu-item>
+                            </sp-menu>
+                        </div>
+                        <div>
+                            <sp-menu
+                                style="
+                                    background-color: beige;
+                                    margin: 20px;
+                                    width: 200px;
+                                "
+                            >
+                                <sp-menu-item>
+                                    <sp-icon size="s" slot="icon">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 22 22"
+                                            role="img"
+                                            fill="currentColor"
+                                            height="18"
+                                            width="18"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M19.75,10.04h-15l5.97-5.97a.483.483,0,0,0,0-.7l-.35-.36a.513.513,0,0,0-.71,0L2.24,10.44a.513.513,0,0,0,0,.71l7.39,7.84a.513.513,0,0,0,.71,0l.35-.35a.513.513,0,0,0,0-.71L4.76,11.5H19.75a.25.25,0,0,0,.25-.25v-.96A.25.25,0,0,0,19.75,10.04Z"
+                                            ></path>
+                                        </svg>
+                                    </sp-icon>
+                                    Save
+                                </sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>
+                                    <sp-icon size="s" slot="icon">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 22 22"
+                                            role="img"
+                                            fill="currentColor"
+                                            height="18"
+                                            width="18"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M19.75,10.04h-15l5.97-5.97a.483.483,0,0,0,0-.7l-.35-.36a.513.513,0,0,0-.71,0L2.24,10.44a.513.513,0,0,0,0,.71l7.39,7.84a.513.513,0,0,0,.71,0l.35-.35a.513.513,0,0,0,0-.71L4.76,11.5H19.75a.25.25,0,0,0,.25-.25v-.96A.25.25,0,0,0,19.75,10.04Z"
+                                            ></path>
+                                        </svg>
+                                    </sp-icon>
+                                    Finish
+                                </sp-menu-item>
+                                <sp-menu-item>
+                                    <sp-icon size="s" slot="icon">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 22 22"
+                                            role="img"
+                                            fill="currentColor"
+                                            height="18"
+                                            width="18"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M19.75,10.04h-15l5.97-5.97a.483.483,0,0,0,0-.7l-.35-.36a.513.513,0,0,0-.71,0L2.24,10.44a.513.513,0,0,0,0,.71l7.39,7.84a.513.513,0,0,0,.71,0l.35-.35a.513.513,0,0,0,0-.71L4.76,11.5H19.75a.25.25,0,0,0,.25-.25v-.96A.25.25,0,0,0,19.75,10.04Z"
+                                            ></path>
+                                        </svg>
+                                    </sp-icon>
+                                    Review
+                                </sp-menu-item>
+                            </sp-menu>
+                        </div>
+                    </div>
+
+                    <div id="right">
+                        <div id="subtitle">my-menu-divider</div>
+                        <sp-menu style="margin: 20px">
+                            <sp-menu-item>Deselect</sp-menu-item>
+                            <my-menu-divider
+                                class="my-menu-divider"
+                            ></my-menu-divider>
+                            <sp-menu-item>Select inverse</sp-menu-item>
+                            <sp-menu-item>Feather...</sp-menu-item>
+                            <sp-menu-item>Select and mask...</sp-menu-item>
+                            <sp-menu-divider></sp-menu-divider>
+                            <sp-menu-item>Save selection</sp-menu-item>
+                            <sp-menu-item disabled>Make work path</sp-menu-item>
+                        </sp-menu>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sp-menu-item" class="tabcontent">
+                <h3>sp-menu-item</h3>
+
+                <div id="content">
+                    <div id="left">
+                        <div id="subtitle">sp-menu-item</div>
+                        <div>
+                            <sp-menu selects="multiple" style="margin: 20px">
+                                <sp-menu-item selected>Deselect</sp-menu-item>
+                                <sp-menu-item selected>
+                                    Select inverse
+                                </sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-menu>
+                        </div>
+                        <div>
+                            <sp-menu selects="single" style="margin: 20px">
+                                <sp-menu-item>Active Menu Item</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Disabled Menu Item
+                                </sp-menu-item>
+                                <sp-menu-item selected>
+                                    Selected Menu Item
+                                </sp-menu-item>
+                            </sp-menu>
+                        </div>
+                        <div>
+                            <sp-menu style="margin: 20px; width: 200px">
+                                <sp-menu-item>
+                                    <sp-icon size="s" slot="icon">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 22 22"
+                                            role="img"
+                                            fill="currentColor"
+                                            height="18"
+                                            width="18"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M19.75,10.04h-15l5.97-5.97a.483.483,0,0,0,0-.7l-.35-.36a.513.513,0,0,0-.71,0L2.24,10.44a.513.513,0,0,0,0,.71l7.39,7.84a.513.513,0,0,0,.71,0l.35-.35a.513.513,0,0,0,0-.71L4.76,11.5H19.75a.25.25,0,0,0,.25-.25v-.96A.25.25,0,0,0,19.75,10.04Z"
+                                            ></path>
+                                        </svg>
+                                    </sp-icon>
+                                    Save
+                                </sp-menu-item>
+                                <sp-menu-item>
+                                    <sp-icon size="s" slot="icon">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 22 22"
+                                            role="img"
+                                            fill="currentColor"
+                                            height="18"
+                                            width="18"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M19.75,10.04h-15l5.97-5.97a.483.483,0,0,0,0-.7l-.35-.36a.513.513,0,0,0-.71,0L2.24,10.44a.513.513,0,0,0,0,.71l7.39,7.84a.513.513,0,0,0,.71,0l.35-.35a.513.513,0,0,0,0-.71L4.76,11.5H19.75a.25.25,0,0,0,.25-.25v-.96A.25.25,0,0,0,19.75,10.04Z"
+                                            ></path>
+                                        </svg>
+                                    </sp-icon>
+                                    Finish
+                                </sp-menu-item>
+                                <sp-menu-item>
+                                    <sp-icon size="s" slot="icon">
+                                        <svg
+                                            xmlns="http://www.w3.org/2000/svg"
+                                            viewBox="0 0 22 22"
+                                            role="img"
+                                            fill="currentColor"
+                                            height="18"
+                                            width="18"
+                                            aria-hidden="true"
+                                        >
+                                            <path
+                                                d="M19.75,10.04h-15l5.97-5.97a.483.483,0,0,0,0-.7l-.35-.36a.513.513,0,0,0-.71,0L2.24,10.44a.513.513,0,0,0,0,.71l7.39,7.84a.513.513,0,0,0,.71,0l.35-.35a.513.513,0,0,0,0-.71L4.76,11.5H19.75a.25.25,0,0,0,.25-.25v-.96A.25.25,0,0,0,19.75,10.04Z"
+                                            ></path>
+                                        </svg>
+                                    </sp-icon>
+                                    Review
+                                </sp-menu-item>
+                            </sp-menu>
+                        </div>
+                    </div>
+
+                    <div id="right">
+                        <div id="subtitle">my-menu-item</div>
+                        <sp-menu style="margin: 20px; width: 200px">
+                            <my-menu-item class="my-menu-item">
+                                <sp-icon-edit slot="icon"></sp-icon-edit>
+                                Save
+                            </my-menu-item>
+                            <sp-menu-item>
+                                <sp-icon-alert slot="icon"></sp-icon-alert>
+                                Finish
+                            </sp-menu-item>
+                            <sp-menu-item>
+                                <sp-icon-display-advert
+                                    slot="icon"
+                                ></sp-icon-display-advert>
+                                Review
+                            </sp-menu-item>
+                        </sp-menu>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sp-menu-group" class="tabcontent">
+                <h3>sp-menu-group</h3>
+
+                <div id="content">
+                    <div id="left">
+                        <div id="subtitle">sp-menu-group</div>
+                        <div>
+                            <p>
+                                Your favorite park in New York is:
+                                <span id="group-1-value"></span>
+                                <br />
+                                <br />
+                                Your favorite park in San Fransisco is:
+                                <span id="group-2-value"></span>
+                            </p>
+                            <sp-popover open style="position: relative">
+                                <sp-menu
+                                    label="What are your favorite parks?"
+                                    style="width: 200px"
+                                    onchange="this.parentElement
+                                                .previousElementSibling
+                                                .querySelector(`#${arguments[0].target.id}-value`)
+                                                .textContent = arguments[0].target.value"
+                                >
+                                    <sp-menu-group
+                                        id="group-1"
+                                        selects="single"
+                                    >
+                                        <span slot="header">New York</span>
+                                        <sp-menu-item>
+                                            Central Park
+                                        </sp-menu-item>
+                                        <sp-menu-item>
+                                            Flushing Meadows Corona Park
+                                        </sp-menu-item>
+                                        <sp-menu-item>
+                                            Prospect Park
+                                        </sp-menu-item>
+                                    </sp-menu-group>
+                                    <sp-menu-group
+                                        id="group-2"
+                                        selects="single"
+                                    >
+                                        <span slot="header">San Fransisco</span>
+                                        <sp-menu-item>
+                                            Golden Gate Park
+                                        </sp-menu-item>
+                                        <sp-menu-item>
+                                            John McLaren Park
+                                        </sp-menu-item>
+                                        <sp-menu-item>
+                                            Lake Merced Park
+                                        </sp-menu-item>
+                                    </sp-menu-group>
+                                </sp-menu>
+                            </sp-popover>
+                        </div>
+                    </div>
+
+                    <div id="right">
+                        <div id="subtitle">my-menu-group</div>
+                        <div>
+                            <p>
+                                Your favorite park in New York is:
+                                <span id="group-1-value"></span>
+                                <br />
+                                <br />
+                                Your favorite park in San Fransisco is:
+                                <span id="group-2-value"></span>
+                            </p>
+                            <sp-popover open style="position: relative">
+                                <sp-menu
+                                    label="What are your favorite parks?"
+                                    style="width: 200px"
+                                    onchange="this.parentElement
+                                                .previousElementSibling
+                                                .querySelector(`#${arguments[0].target.id}-value`)
+                                                .textContent = arguments[0].target.value"
+                                >
+                                    <my-menu-group
+                                        class="my-menu-group"
+                                        id="group-1"
+                                        selects="single"
+                                    >
+                                        <span slot="header">New York</span>
+                                        <sp-menu-item>
+                                            Central Park
+                                        </sp-menu-item>
+                                        <sp-menu-item>
+                                            Flushing Meadows Corona Park
+                                        </sp-menu-item>
+                                        <sp-menu-item>
+                                            Prospect Park
+                                        </sp-menu-item>
+                                    </my-menu-group>
+                                    <my-menu-group
+                                        class="my-menu-group"
+                                        id="group-2"
+                                        selects="single"
+                                    >
+                                        <span slot="header">San Fransisco</span>
+                                        <sp-menu-item>
+                                            Golden Gate Park
+                                        </sp-menu-item>
+                                        <sp-menu-item>
+                                            John McLaren Park
+                                        </sp-menu-item>
+                                        <sp-menu-item>
+                                            Lake Merced Park
+                                        </sp-menu-item>
+                                    </my-menu-group>
+                                </sp-menu>
+                            </sp-popover>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sp-table" class="tabcontent">
+                <h3>sp-table</h3>
+
+                <div id="content">
+                    <div id="left">
+                        <div id="subtitle">sp-table</div>
+                        <div>
+                            <sp-table size="m">
+                                <sp-table-head>
+                                    <sp-table-head-cell>
+                                        Column Title
+                                    </sp-table-head-cell>
+                                    <sp-table-head-cell>
+                                        Column Title
+                                    </sp-table-head-cell>
+                                    <sp-table-head-cell>
+                                        Column Title
+                                    </sp-table-head-cell>
+                                </sp-table-head>
+                                <sp-table-body>
+                                    <sp-table-row>
+                                        <sp-table-cell>
+                                            Row Item Alpha
+                                        </sp-table-cell>
+                                        <sp-table-cell>
+                                            Row Item Alpha
+                                        </sp-table-cell>
+                                        <sp-table-cell>
+                                            Row Item Alpha
+                                        </sp-table-cell>
+                                    </sp-table-row>
+                                    <sp-table-row>
+                                        <sp-table-cell>
+                                            Row Item Bravo
+                                        </sp-table-cell>
+                                        <sp-table-cell>
+                                            Row Item Bravo
+                                        </sp-table-cell>
+                                        <sp-table-cell>
+                                            Row Item Bravo
+                                        </sp-table-cell>
+                                    </sp-table-row>
+                                    <sp-table-row>
+                                        <sp-table-cell>
+                                            Row Item Charlie
+                                        </sp-table-cell>
+                                        <sp-table-cell>
+                                            Row Item Charlie
+                                        </sp-table-cell>
+                                        <sp-table-cell>
+                                            Row Item Charlie
+                                        </sp-table-cell>
+                                    </sp-table-row>
+                                    <sp-table-row>
+                                        <sp-table-cell>
+                                            Row Item Delta
+                                        </sp-table-cell>
+                                        <sp-table-cell>
+                                            Row Item Delta
+                                        </sp-table-cell>
+                                        <sp-table-cell>
+                                            Row Item Delta
+                                        </sp-table-cell>
+                                    </sp-table-row>
+                                    <sp-table-row>
+                                        <sp-table-cell>
+                                            Row Item Echo
+                                        </sp-table-cell>
+                                        <sp-table-cell>
+                                            Row Item Echo
+                                        </sp-table-cell>
+                                        <sp-table-cell>
+                                            Row Item Echo
+                                        </sp-table-cell>
+                                    </sp-table-row>
+                                </sp-table-body>
+                            </sp-table>
+                        </div>
+                    </div>
+
+                    <div id="right">
+                        <div id="subtitle">my-table</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sp-textfield" class="tabcontent">
+                <h3>sp-textfield</h3>
+
+                <div id="content">
+                    <div id="left">
+                        <div id="subtitle">sp-textfield</div>
+                        <sp-field-label for="name-0">Name</sp-field-label>
+                        <sp-textfield
+                            id="name-0"
+                            placeholder="Enter your name"
+                        ></sp-textfield>
+
+                        <sp-textfield
+                            disabled
+                            placeholder="Enter your name"
+                        ></sp-textfield>
+
+                        <sp-field-label for="name-1" required>
+                            Name
+                        </sp-field-label>
+                        <sp-textfield
+                            id="name-1"
+                            placeholder="Enter your name"
+                            valid
+                            value="My Name"
+                        ></sp-textfield>
+
+                        <sp-field-label for="name-2" required>
+                            Name
+                        </sp-field-label>
+                        <sp-textfield
+                            id="name-2"
+                            invalid
+                            placeholder="Enter your name"
+                        ></sp-textfield>
+
+                        <sp-field-label for="name-3">
+                            Name (quietly)
+                        </sp-field-label>
+                        <sp-textfield
+                            id="name-3"
+                            placeholder="Enter your name"
+                            quiet
+                        ></sp-textfield>
+
+                        <sp-textfield
+                            id="self"
+                            pattern="[P][o][s][i][t][i][v][e]"
+                            value="Positive"
+                        >
+                            <sp-help-text slot="help-text">
+                                Please be "Positive".
+                            </sp-help-text>
+                        </sp-textfield>
+
+                        <sp-field-label for="password-1">
+                            Password
+                        </sp-field-label>
+                        <sp-textfield id="password-1" type="password">
+                            <sp-help-text
+                                slot="help-text"
+                                variant="negative"
+                                icon
+                            >
+                                Create a password with at least 8 characters.
+                            </sp-help-text>
+                        </sp-textfield>
+                    </div>
+
+                    <div id="right">
+                        <div id="subtitle">my-textfield</div>
+                        <sp-field-label for="name-0">Name</sp-field-label>
+                        <my-textfield
+                            id="name-0"
+                            placeholder="Enter your name"
+                            value="This is my-textfield"
+                        ></my-textfield>
+                    </div>
+                </div>
+            </div>
+
+            <div id="sp-help-text" class="tabcontent">
+                <h3>sp-help-text</h3>
+
+                <div id="content">
+                    <div id="left">
+                        <div id="subtitle">sp-help-text</div>
+                        <sp-help-text size="s">
+                            Passwords must be at least 8 characters.
+                        </sp-help-text>
+                        <sp-help-text size="m">
+                            Passwords must be at least 8 characters.
+                        </sp-help-text>
+                        <sp-help-text size="l">
+                            Passwords must be at least 8 characters.
+                        </sp-help-text>
+                        <sp-help-text size="xl">
+                            Passwords must be at least 8 characters.
+                        </sp-help-text>
+                        <sp-help-text variant="negative">
+                            Create a password with at least 8 characters.
+                        </sp-help-text>
+                        <sp-help-text variant="negative" icon>
+                            Create a password with at least 8 characters.
+                        </sp-help-text>
+                        <sp-help-text disabled>
+                            Passwords must be at least 8 characters.
+                        </sp-help-text>
+                    </div>
+
+                    <div id="right">
+                        <div id="subtitle">my-help-text</div>
+                        <my-help-text class="my-help-text" size="xl">
+                            It provides either an informative description or an
+                            error message that gives more context about what a
+                            user needs to input. It's commonly used in forms.
+                        </my-help-text>
+                    </div>
                 </div>
             </div>
 

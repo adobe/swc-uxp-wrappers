@@ -19,6 +19,7 @@
         ".": "./src/index.js",
         "./package.json": "./package.json",
         "./src/Button.js": "./src/Button.js",
+        "./src/ButtonBase.js": "./src/ButtonBase.js",
         "./sp-button.js": "./sp-button.js",
         "./src/CloseButton.js": "./src/CloseButton.js",
         "./sp-close-button.js": "./sp-close-button.js",

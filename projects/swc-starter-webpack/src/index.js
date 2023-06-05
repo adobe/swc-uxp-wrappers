@@ -27,8 +27,37 @@ import '@spectrum-web-components/action-button/sp-action-button.js';
 import '@spectrum-web-components/card/sp-card.js';
 import '@spectrum-web-components/checkbox/sp-checkbox.js';
 import '@spectrum-web-components/action-group/sp-action-group.js';
+import '@spectrum-web-components/action-bar/sp-action-bar.js';
+import '@spectrum-web-components/popover/sp-popover.js';
+import '@spectrum-web-components/tooltip/sp-tooltip.js';
+import '@spectrum-web-components/picker-button/sp-picker-button.js';
+import '@spectrum-web-components/help-text/sp-help-text.js';
+import '@spectrum-web-components/menu/sp-menu.js';
+import '@spectrum-web-components/menu/sp-menu-item.js';
+import '@spectrum-web-components/menu/sp-menu-group.js';
+import '@spectrum-web-components/menu/sp-menu-divider.js';
+
+import '@spectrum-web-components/table/sp-table.js';
+import '@spectrum-web-components/table/sp-table-body.js';
+import '@spectrum-web-components/table/sp-table-cell.js';
+import '@spectrum-web-components/table/sp-table-checkbox-cell.js';
+import '@spectrum-web-components/table/sp-table-head.js';
+import '@spectrum-web-components/table/sp-table-head-cell.js';
+import '@spectrum-web-components/table/sp-table-row.js';
 
 import '@spectrum-web-components/textfield/sp-textfield.js';
+import '@spectrum-web-components/icons/sp-icons-medium.js';
+import '@spectrum-web-components/icons/sp-icons-large.js';
+import '@spectrum-web-components/icon/sp-icon.js';
+import '@spectrum-web-components/icons-ui/icons/sp-icon-arrow75.js';
+import '@spectrum-web-components/icons-workflow/icons/sp-icon-abc.js';
+import '@spectrum-web-components/icons-workflow/icons/sp-icon-actions.js';
+import '@spectrum-web-components/icons-workflow/icons/sp-icon-add.js';
+import '@spectrum-web-components/icons-workflow/icons/sp-icon-add-circle.js';
+import '@spectrum-web-components/icons-workflow/icons/sp-icon-display-advert.js';
+import '@spectrum-web-components/icons-workflow/icons/sp-icon-add-to.js';
+import '@spectrum-web-components/icons-workflow/icons/sp-icon-add-to-selection.js';
+import '@spectrum-web-components/icons-workflow/icons/sp-icon-edit.js';
 import '@spectrum-web-components/dialog/sp-dialog.js';
 import '@spectrum-web-components/button-group/sp-button-group.js';
 

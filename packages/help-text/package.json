@@ -1,0 +1,40 @@
+{
+    "name": "@swc-uxp-wrappers/help-text",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/help-text component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/help-text"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/HelpText.js": "./src/HelpText.js",
+        "./src/help-text.css.js": "./src/help-text.css.js",
+        "./sp-help-text.js": "./sp-help-text.js",
+        "./src/HelpTextManagedElement.js": "./src/HelpTextManagedElement.js",
+        "./src/HelpTextManager.js": "./src/HelpTextManager.js",
+        "./src/manage-help-text.js": "./src/manage-help-text.js",
+        "./HelpTextManager.js": "./src/HelpTextManager.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/help-text": "npm:@spectrum-web-components/help-text@0.2.7"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/help-text"
+    ]
+}

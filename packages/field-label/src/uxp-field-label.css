@@ -12,6 +12,7 @@ governing permissions and limitations under the License.
 
 /* write uxp style overrides */
 
+/* Workaround for - https://jira.corp.adobe.com/browse/UXP-20846 */
 :host([side-aligned='end']) {
     display: inline-flex;
     justify-content: flex-end;
@@ -28,6 +29,7 @@ governing permissions and limitations under the License.
     );
 }
 
+/* Workaround for - https://jira.corp.adobe.com/browse/UXP-21327 */
 .required-icon {
     margin-left: var(
         --mod-fieldlabel-asterisk-gap,

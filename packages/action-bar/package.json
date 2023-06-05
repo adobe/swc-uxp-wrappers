@@ -1,0 +1,36 @@
+{
+    "name": "@swc-uxp-wrappers/action-bar",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/action-bar component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/action-bar"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/ActionBar.js": "./src/ActionBar.js",
+        "./src/action-bar.css.js": "./src/action-bar.css.js",
+        "./sp-action-bar.js": "./sp-action-bar.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/action-bar": "npm:@spectrum-web-components/action-bar@0.5.9"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/action-bar"
+    ]
+}

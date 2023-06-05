@@ -1,0 +1,45 @@
+{
+    "name": "@swc-uxp-wrappers/menu",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/menu component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/menu"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/Menu.js": "./src/Menu.js",
+        "./src/menu.css.js": "./src/menu.css.js",
+        "./sp-menu.js": "./sp-menu.js",
+        "./src/MenuGroup.js": "./src/MenuGroup.js",
+        "./sp-menu-group.js": "./sp-menu-group.js",
+        "./src/MenuDivider.js": "./src/MenuDivider.js",
+        "./sp-menu-divider.js": "./sp-menu-divider.js",
+        "./src/MenuItem.js": "./src/MenuItem.js",
+        "./sp-menu-item.js": "./sp-menu-item.js",
+        "./src/menu-group.css.js": "./src/menu-group.css.js",
+        "./src/menu-divider.css.js": "./src/menu-divider.css.js",
+        "./src/menu-item.css.js": "./src/uxp-menu-item.css.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/menu": "npm:@spectrum-web-components/menu@0.16.9"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/menu"
+    ]
+}

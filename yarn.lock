@@ -134,6 +134,18 @@
   resolved "https://registry.npmjs.org/@discoveryjs/json-ext/-/json-ext-0.5.7.tgz"
   integrity sha512-dBVuXR082gk3jsFp7Rd/JI4kytwGHecnCoTtXFb7DB6CNHp4rg5k1bhg0nWdLGLnOV71lmDzGQaLMy8iPLY0pw==
 
+"@floating-ui/core@^1.2.6":
+  version "1.2.6"
+  resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-1.2.6.tgz#d21ace437cc919cdd8f1640302fa8851e65e75c0"
+  integrity sha512-EvYTiXet5XqweYGClEmpu3BoxmsQ4hkj3QaYA6qEnigCWffTP3vNRwBReTdrwDwo7OoJ3wM8Uoe9Uk4n+d4hfg==
+
+"@floating-ui/dom@^1.1.0":
+  version "1.2.9"
+  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.2.9.tgz#b9ed1c15d30963419a6736f1b7feb350dd49c603"
+  integrity sha512-sosQxsqgxMNkV3C+3UqTS6LxP7isRLwX8WMepp843Rb3/b0Wz8+MdUkxJksByip3C2WwLugLHN1b4ibn//zKwQ==
+  dependencies:
+    "@floating-ui/core" "^1.2.6"
+
 "@gar/promisify@^1.1.3":
   version "1.1.3"
   resolved "https://registry.npmjs.org/@gar/promisify/-/promisify-1.1.3.tgz"
@@ -143,13 +155,6 @@
   version "3.0.2"
   resolved "https://registry.npmjs.org/@hutson/parse-repository-url/-/parse-repository-url-3.0.2.tgz"
   integrity sha512-H9XAx3hc0BQHY6l+IFSWHDySypcXsvsuLhgYLUGywmJ5pswRVQJUHpOsobnLYp2ZUaUlKiKDrgWWhosOwAEM8Q==
-
-"@internationalized/number@^3.1.0":
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/@internationalized/number/-/number-3.2.0.tgz#dffb661cacd61a87b814c47b7d5240a286249066"
-  integrity sha512-GUXkhXSX1Ee2RURnzl+47uvbOxnlMnvP9Er+QePTjDjOPWuunmLKlEkYkEcLiiJp7y4l9QxGDLOlVr8m69LS5w==
-  dependencies:
-    "@swc/helpers" "^0.4.14"
 
 "@isaacs/cliui@^8.0.2":
   version "8.0.2"
@@ -327,6 +332,15 @@
   version "1.1.1"
   resolved "https://registry.npmjs.org/@lit-labs/ssr-dom-shim/-/ssr-dom-shim-1.1.1.tgz"
   integrity sha512-kXOeFbfCm4fFf2A3WwVEeQj55tMZa8c8/f9AKHMobQMkzNUfUj+antR3fRPaZJawsa1aZiP/Da3ndpZrwEe4rQ==
+
+"@lit-labs/virtualizer@^1.0.1":
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/@lit-labs/virtualizer/-/virtualizer-1.0.1.tgz#10c5c849b062ca808dc4dadae8f58632445ee79d"
+  integrity sha512-olFX5cVVj0HeVpiEMjylX+sOXFsDpE/SCDrgw63/lBMrrnyP9PIFH0zcZrG0DvuAmCCPaanPybK59Iu7cOe/VA==
+  dependencies:
+    event-target-shim "^6.0.2"
+    lit "^2.5.0"
+    tslib "^2.0.3"
 
 "@lit/reactive-element@^1.1.0", "@lit/reactive-element@^1.3.0", "@lit/reactive-element@^1.6.0":
   version "1.6.1"
@@ -643,10 +657,10 @@
   resolved "https://registry.npmjs.org/@octokit/openapi-types/-/openapi-types-14.0.0.tgz"
   integrity sha512-HNWisMYlR8VCnNurDU6os2ikx0s0VyEjDYHNS/h4cgb8DeOxQ0n72HyinUtdDVxJhFy3FWLGl0DJhfEWk3P5Iw==
 
-"@octokit/openapi-types@^17.1.1":
-  version "17.1.1"
-  resolved "https://registry.npmjs.org/@octokit/openapi-types/-/openapi-types-17.1.1.tgz"
-  integrity sha512-/X7Gh/qWiWaooJmUnYD48SYy72fyrk2ceisOSe89JojK7r0j8YrTwYpDi76kI+c6QiqX1KSgdoBTMJvktsDkYw==
+"@octokit/openapi-types@^17.2.0":
+  version "17.2.0"
+  resolved "https://registry.yarnpkg.com/@octokit/openapi-types/-/openapi-types-17.2.0.tgz#f1800b5f9652b8e1b85cc6dfb1e0dc888810bdb5"
+  integrity sha512-MazrFNx4plbLsGl+LFesMo96eIXkFgEtaKbnNpdh4aQ0VM10aoylFsTYP1AEjkeoRNZiiPe3T6Gl2Hr8dJWdlQ==
 
 "@octokit/plugin-enterprise-rest@6.0.1":
   version "6.0.1"
@@ -753,7 +767,15 @@
   resolved "https://registry.npmjs.org/@sinclair/typebox/-/typebox-0.25.24.tgz"
   integrity sha512-XJfwUVUKDHF5ugKwIcxEgc9k8b7HbznCp6eUfWgu710hMPNIO4aw4/zB5RogDQz8nd6gyCDpU9O/m6qYEWY6yQ==
 
-"@spectrum-web-components/action-button@0.8.7", "@spectrum-web-components/action-button@^0.10.13", "@spectrum-web-components/action-button@^0.10.8":
+"@spectrum-web-components/action-bar@0.5.9", "@swc-uxp-internal/action-bar@npm:@spectrum-web-components/action-bar@0.5.9":
+  version "0.5.9"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/action-bar/-/action-bar-0.5.9.tgz#cc97da1420706cd7fad3bc1d8b187be579960c94"
+  integrity sha512-8x00r1F4AqpxDRlcFq0PYvq4w+fmr6Sj/Zf0KNe7phkk+Eb4yyxsfJTNCZfm9HjGDnZtbcHLgk/u7CRIY+bjCg==
+  dependencies:
+    "@spectrum-web-components/base" "^0.7.2"
+    "@spectrum-web-components/popover" "^0.12.9"
+
+"@spectrum-web-components/action-button@0.8.7", "@spectrum-web-components/action-button@^0.10.10", "@spectrum-web-components/action-button@^0.10.8":
   version "0.8.7"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/action-button/-/action-button-0.8.7.tgz#241ab8e3647a652c98e7d0f08fb6d1195201d2a8"
   integrity sha512-x5gMgh874ZAPWJAK9AUsOCXLkf20jOjCO+HavFtUiEY/wxOQGer8bniKwAOXZGEoGxNbQ9D/La3vTlNXrBaZQw==
@@ -835,7 +857,7 @@
     "@spectrum-web-components/shared" "^0.15.3"
     "@spectrum-web-components/styles" "^0.22.0"
 
-"@spectrum-web-components/checkbox@0.14.0", "@spectrum-web-components/checkbox@^0.14.6":
+"@spectrum-web-components/checkbox@0.14.0", "@spectrum-web-components/checkbox@^0.14.6", "@spectrum-web-components/checkbox@^0.14.7":
   version "0.14.0"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/checkbox/-/checkbox-0.14.0.tgz#1973b61e4aac6a01063e32be52b4ab4680348711"
   integrity sha512-7Iecyj6TLDeyRH2WIx2695q4e6LmKqkUszfjOTL/cLjKO3uqw8XEbFXvHo7M6d+imdXWeHsOnjxe94TeWChqzA==
@@ -874,7 +896,7 @@
     "@spectrum-web-components/shared" "^0.15.5"
     "@spectrum-web-components/underlay" "^0.9.6"
 
-"@spectrum-web-components/divider@0.5.0", "@spectrum-web-components/divider@^0.6.6":
+"@spectrum-web-components/divider@0.5.0", "@spectrum-web-components/divider@^0.6.3", "@spectrum-web-components/divider@^0.6.6":
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/divider/-/divider-0.5.0.tgz#0e541284ca5aab4db284414bc22a5c10da2233f1"
   integrity sha512-gRL8bYtGEIyYpmWKy/xIo9t7HL1Jb1j/oE0rn4vQldlnvA36F0PTZEBO+vcBBfT1Kmv0y3JsSl97Dc75K/+Fqw==
@@ -882,7 +904,7 @@
     "@spectrum-web-components/base" "^0.7.0"
     tslib "^2.0.0"
 
-"@spectrum-web-components/field-label@0.10.3", "@spectrum-web-components/field-label@^0.10.4":
+"@spectrum-web-components/field-label@0.10.3":
   version "0.10.3"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/field-label/-/field-label-0.10.3.tgz#b3b5f0c6899b9154d778d31a8f8c0261b5acff3f"
   integrity sha512-IteOv/jbhoGO7G7+kzAq3aSiwAVe7goqAQd9js81tlq7kNa7nGgcqUBm9uKXVYvhbEBDv9qzDzUnsVQf328LSQ==
@@ -893,13 +915,21 @@
     "@spectrum-web-components/reactive-controllers" "^0.3.4"
     "@spectrum-web-components/shared" "^0.15.3"
 
-"@spectrum-web-components/help-text@^0.2.14", "@spectrum-web-components/help-text@^0.2.7":
-  version "0.2.14"
-  resolved "https://registry.npmjs.org/@spectrum-web-components/help-text/-/help-text-0.2.14.tgz"
-  integrity sha512-V7ZmvzXy7XkDowUAGIjQ6zzYFqv1k8R7X1qelkbUnAaM2xHvMGtCa2koyaYOfk7QLWGgJv3tg9srGosZznsPug==
+"@spectrum-web-components/help-text@0.2.7", "@spectrum-web-components/help-text@^0.2.7", "@swc-uxp-internal/help-text@npm:@spectrum-web-components/help-text@0.2.7":
+  version "0.2.7"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/help-text/-/help-text-0.2.7.tgz#2b54c117467b661f5da6bdb7d83cf7c13fc47fde"
+  integrity sha512-cw7cONYAK0OfvrTckShkVHfBaGx7LSdFisoLhb8sR4Tnmw/vDJfMs/9qHT9JbOHDpnHcKqb0PxqnuoR0/fNW8g==
   dependencies:
-    "@spectrum-web-components/base" "^0.7.5"
-    "@spectrum-web-components/icons-workflow" "^0.9.12"
+    "@spectrum-web-components/base" "^0.7.2"
+    "@spectrum-web-components/icons-workflow" "^0.9.5"
+
+"@spectrum-web-components/icon@0.12.5":
+  version "0.12.5"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/icon/-/icon-0.12.5.tgz#16d8e2958cb6c01992cb870acd4bb1d0b258f5db"
+  integrity sha512-vSlQjnl7B6cYBLn6WFRuGoYn0njnEvf9N9eeoM4epf6Sa76l5bmaDs0jG6DFQcbrJBJr7oUNykO+SW4rRJnN5A==
+  dependencies:
+    "@spectrum-web-components/base" "^0.7.2"
+    "@spectrum-web-components/iconset" "^0.7.4"
 
 "@spectrum-web-components/icon@^0.11.10", "@spectrum-web-components/icon@^0.11.12":
   version "0.11.12"
@@ -910,13 +940,22 @@
     "@spectrum-web-components/iconset" "^0.6.9"
     tslib "^2.0.0"
 
-"@spectrum-web-components/icon@^0.12.0", "@spectrum-web-components/icon@^0.12.11", "@spectrum-web-components/icon@^0.12.5", "@spectrum-web-components/icon@^0.12.8":
+"@spectrum-web-components/icon@^0.12.0", "@spectrum-web-components/icon@^0.12.11", "@spectrum-web-components/icon@^0.12.5", "@spectrum-web-components/icon@^0.12.6":
   version "0.12.11"
   resolved "https://registry.npmjs.org/@spectrum-web-components/icon/-/icon-0.12.11.tgz"
   integrity sha512-1VfzBa62pPIWLcfdZtkJkmTqbRsDNJ4a10CtsIPlgwSqRBY6TivLmH4r6ppU/Dyr5+E8NaNzSlzjiy521/OWIQ==
   dependencies:
     "@spectrum-web-components/base" "^0.7.5"
     "@spectrum-web-components/iconset" "^0.7.7"
+
+"@spectrum-web-components/icons-ui@0.9.5":
+  version "0.9.5"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/icons-ui/-/icons-ui-0.9.5.tgz#622eace569ce125bce30e088e387bd0fb404a42d"
+  integrity sha512-/DqXNsJrAbKTCN3drS9jvVRUck8nVKHzsXRFTYO/smGlG6VRJWLhFAzNfg1th9rSfHsnaVes4ndk32VyKed2aw==
+  dependencies:
+    "@spectrum-web-components/base" "^0.7.2"
+    "@spectrum-web-components/icon" "^0.12.5"
+    "@spectrum-web-components/iconset" "^0.7.4"
 
 "@spectrum-web-components/icons-ui@^0.8.10":
   version "0.8.12"
@@ -928,7 +967,7 @@
     "@spectrum-web-components/iconset" "^0.6.9"
     tslib "^2.0.0"
 
-"@spectrum-web-components/icons-ui@^0.9.0", "@spectrum-web-components/icons-ui@^0.9.12", "@spectrum-web-components/icons-ui@^0.9.5", "@spectrum-web-components/icons-ui@^0.9.9":
+"@spectrum-web-components/icons-ui@^0.9.0", "@spectrum-web-components/icons-ui@^0.9.5", "@spectrum-web-components/icons-ui@^0.9.6":
   version "0.9.12"
   resolved "https://registry.npmjs.org/@spectrum-web-components/icons-ui/-/icons-ui-0.9.12.tgz"
   integrity sha512-992WomeyckC1AaEErKRaHJPhjc0Wns28oc5X2+GnRFwGHYoFI+yboEqxm3M9oHECtZBL+iWYUH44yDJgqhwQXQ==
@@ -937,13 +976,29 @@
     "@spectrum-web-components/icon" "^0.12.11"
     "@spectrum-web-components/iconset" "^0.7.7"
 
-"@spectrum-web-components/icons-workflow@^0.9.12", "@spectrum-web-components/icons-workflow@^0.9.5", "@spectrum-web-components/icons-workflow@^0.9.8":
+"@spectrum-web-components/icons-workflow@0.9.5":
+  version "0.9.5"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/icons-workflow/-/icons-workflow-0.9.5.tgz#287403a9cc2abf64c6f7837b8671d5ed26238711"
+  integrity sha512-Cy74Xr81gVXXj+QGvif6TPP0/Xb29K5wQH/c6Eszq+twtty0V+JeCVY4rklpY2yyXYDDlDqqYlP9LTdva5YUzQ==
+  dependencies:
+    "@spectrum-web-components/base" "^0.7.2"
+    "@spectrum-web-components/icon" "^0.12.5"
+
+"@spectrum-web-components/icons-workflow@^0.9.5", "@spectrum-web-components/icons-workflow@^0.9.8":
   version "0.9.12"
   resolved "https://registry.npmjs.org/@spectrum-web-components/icons-workflow/-/icons-workflow-0.9.12.tgz"
   integrity sha512-JZ1kvbNIOoH+zNB7F3+slTXCH980Qd/GVFZ5GJgH30msKmc9VrbH6GhofWrVkk4xQRqhBukajlIlOfVqxMCGyQ==
   dependencies:
     "@spectrum-web-components/base" "^0.7.5"
     "@spectrum-web-components/icon" "^0.12.11"
+
+"@spectrum-web-components/icons@0.9.5":
+  version "0.9.5"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/icons/-/icons-0.9.5.tgz#938b28b055b0c0873cf21b116e6ad7c67455c0b2"
+  integrity sha512-tGSqyHJfJANYloB8pCO1D5Rl1qjDoFpP9RvjlP4tC/RmuOWsWy7IWkgwrM0U03u9/9VfroaQ5qnZADvLpfaF+A==
+  dependencies:
+    "@spectrum-web-components/base" "^0.7.3"
+    "@spectrum-web-components/iconset" "^0.7.5"
 
 "@spectrum-web-components/iconset@^0.6.9":
   version "0.6.9"
@@ -953,7 +1008,7 @@
     "@spectrum-web-components/base" "^0.6.0"
     tslib "^2.0.0"
 
-"@spectrum-web-components/iconset@^0.7.7":
+"@spectrum-web-components/iconset@^0.7.4", "@spectrum-web-components/iconset@^0.7.5", "@spectrum-web-components/iconset@^0.7.7":
   version "0.7.7"
   resolved "https://registry.npmjs.org/@spectrum-web-components/iconset/-/iconset-0.7.7.tgz"
   integrity sha512-Eh/d02ak2YMwVBm1QKu1U0WTuf1UaLVzQ4TEHXOozpnJX9Rt0eDnYrOQpXoz+lnhxnbhFbLy12GviPCVjlMFHA==
@@ -976,6 +1031,20 @@
     "@spectrum-web-components/base" "^0.7.2"
     "@spectrum-web-components/shared" "^0.15.3"
 
+"@spectrum-web-components/menu@0.16.9", "@swc-uxp-internal/menu@npm:@spectrum-web-components/menu@0.16.9":
+  version "0.16.9"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/menu/-/menu-0.16.9.tgz#cd41f5f231204598b0fef3153532e623a441a44f"
+  integrity sha512-kRqr/mtex757/BJpqJPZio1CzJkRDOrwxeO24o+nbHvYPk124jGsrR73WgWCNvJqLVAS2XXdJbhbm84Fm2ptNg==
+  dependencies:
+    "@lit-labs/observers" "^1.0.1"
+    "@spectrum-web-components/action-button" "^0.10.8"
+    "@spectrum-web-components/base" "^0.7.2"
+    "@spectrum-web-components/divider" "^0.6.3"
+    "@spectrum-web-components/icon" "^0.12.5"
+    "@spectrum-web-components/icons-ui" "^0.9.5"
+    "@spectrum-web-components/overlay" "^0.18.9"
+    "@spectrum-web-components/shared" "^0.15.3"
+
 "@spectrum-web-components/modal@^0.7.7":
   version "0.7.10"
   resolved "https://registry.npmjs.org/@spectrum-web-components/modal/-/modal-0.7.10.tgz"
@@ -983,19 +1052,33 @@
   dependencies:
     "@spectrum-web-components/base" "^0.7.5"
 
-"@spectrum-web-components/number-field@^0.5.9":
-  version "0.5.13"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/number-field/-/number-field-0.5.13.tgz#d515224648b6607b453afe08d3f07e220d9788f1"
-  integrity sha512-pTOl6v08KCwKfGY+NBwkWCQem6K1KBa0BYob6/+hIb40GdndyOZvGz4r1Upn6OtW0OURnL9KEekWc+FLih7R2Q==
+"@spectrum-web-components/overlay@^0.18.4", "@spectrum-web-components/overlay@^0.18.9":
+  version "0.18.11"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/overlay/-/overlay-0.18.11.tgz#78b63db4f2ba0bee2d3fe667050bf4622768be15"
+  integrity sha512-7bywUXrlIM6SBjNGs7XcGtoCZZVAkFE7icECfMd3ZfxeLNbBnXCIL2FtiAHm2SNqkwjhBrQDcLy7ud3SOaTpOw==
   dependencies:
-    "@internationalized/number" "^3.1.0"
-    "@spectrum-web-components/action-button" "^0.10.13"
+    "@floating-ui/dom" "^1.1.0"
+    "@spectrum-web-components/action-button" "^0.10.10"
     "@spectrum-web-components/base" "^0.7.4"
-    "@spectrum-web-components/icon" "^0.12.8"
-    "@spectrum-web-components/icons-ui" "^0.9.9"
-    "@spectrum-web-components/reactive-controllers" "^0.3.5"
     "@spectrum-web-components/shared" "^0.15.5"
-    "@spectrum-web-components/textfield" "^0.13.12"
+    "@spectrum-web-components/theme" "^0.14.10"
+
+"@spectrum-web-components/picker-button@0.1.4", "@swc-uxp-internal/picker-button@npm:@spectrum-web-components/picker-button@0.1.4":
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/picker-button/-/picker-button-0.1.4.tgz#19c3811d614dafb4693d84417f492704c1527e74"
+  integrity sha512-uBu7fwFZGKjVGyKa54WOpohB7QiETlH+nGuaa9eWDXEaXdHEOaXQ1ScTE0GNllRojjAco/Yz8YpdFlIOWlA7aw==
+  dependencies:
+    "@spectrum-web-components/base" "^0.7.2"
+    "@spectrum-web-components/icons-ui" "^0.9.5"
+
+"@spectrum-web-components/popover@0.12.4", "@spectrum-web-components/popover@^0.12.9", "@swc-uxp-internal/popover@npm:@spectrum-web-components/popover@0.12.4":
+  version "0.12.4"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/popover/-/popover-0.12.4.tgz#acfa27a478f16908f4cc710c905dbd536e2e9a9a"
+  integrity sha512-LG26w13+kTq/y16KmObA5i7Q9zdH8jGTIjqtAr3sNbrZcmQ+zftJBtTAaplwtUhDUUPT5A4XYZD9dRTaTB4xqg==
+  dependencies:
+    "@spectrum-web-components/base" "^0.7.0"
+    "@spectrum-web-components/overlay" "^0.18.4"
+    tslib "^2.0.0"
 
 "@spectrum-web-components/quick-actions@^0.7.3":
   version "0.7.9"
@@ -1004,14 +1087,14 @@
   dependencies:
     "@spectrum-web-components/base" "^0.7.5"
 
-"@spectrum-web-components/reactive-controllers@^0.3.4", "@spectrum-web-components/reactive-controllers@^0.3.5":
+"@spectrum-web-components/reactive-controllers@^0.3.4":
   version "0.3.5"
   resolved "https://registry.npmjs.org/@spectrum-web-components/reactive-controllers/-/reactive-controllers-0.3.5.tgz"
   integrity sha512-/EhHe5CVgnOn4YZTBw+CMzgi8DQ0A7uXnMwXqLwqZEqTMCNA7/9RXWcLPftmt4KTgxNOFD0cpdtEnfpbOpH/KQ==
   dependencies:
     lit "^2.5.0"
 
-"@spectrum-web-components/shared@^0.15.0", "@spectrum-web-components/shared@^0.15.3", "@spectrum-web-components/shared@^0.15.4", "@spectrum-web-components/shared@^0.15.5", "@spectrum-web-components/shared@^0.15.7":
+"@spectrum-web-components/shared@^0.15.0", "@spectrum-web-components/shared@^0.15.3", "@spectrum-web-components/shared@^0.15.5":
   version "0.15.7"
   resolved "https://registry.npmjs.org/@spectrum-web-components/shared/-/shared-0.15.7.tgz"
   integrity sha512-sTSI902fAnf2YRgUNzq6sJwcZRVJVgfwkf35DXayD0LOnDGzql8tDp0gd2o33UQrwdDyJ3QUCsuIsX8DXaiAgA==
@@ -1027,7 +1110,18 @@
   dependencies:
     "@spectrum-web-components/base" "^0.7.4"
 
-"@spectrum-web-components/textfield@0.13.8":
+"@spectrum-web-components/table@0.1.7", "@swc-uxp-internal/table@npm:@spectrum-web-components/table@0.1.7":
+  version "0.1.7"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/table/-/table-0.1.7.tgz#80150f4e8f04b2e67005c1506037b0fb116ecc0b"
+  integrity sha512-R9ybg+YMIH2DqdqZLoKYyKksd+e+ZGQ0lr9B3VK2fGSWjiQxtG5Cm7ox/gCMBq2Lbdq7GLjjFriG9QUP+BZMow==
+  dependencies:
+    "@lit-labs/virtualizer" "^1.0.1"
+    "@spectrum-web-components/base" "^0.7.3"
+    "@spectrum-web-components/checkbox" "^0.14.7"
+    "@spectrum-web-components/icon" "^0.12.6"
+    "@spectrum-web-components/icons-ui" "^0.9.6"
+
+"@spectrum-web-components/textfield@0.13.8", "@swc-uxp-internal/textfield@npm:@spectrum-web-components/textfield@0.13.8":
   version "0.13.8"
   resolved "https://registry.npmjs.org/@spectrum-web-components/textfield/-/textfield-0.13.8.tgz"
   integrity sha512-IEDXT81uUVeVw9nfjfvncaNxFWFnSyIO4Xz6Yi4hpG25Ll08rC0zGqyNEE99Bt0S2NoM8LgjVDBIXFENQ/YRQg==
@@ -1039,25 +1133,21 @@
     "@spectrum-web-components/icons-workflow" "^0.9.5"
     "@spectrum-web-components/shared" "^0.15.3"
 
-"@spectrum-web-components/textfield@^0.13.12":
-  version "0.13.15"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/textfield/-/textfield-0.13.15.tgz#5189819a17e28aa61da3557866c029f56637b1b8"
-  integrity sha512-Krm5vqA/3GTKG9P9x4RkBkAxtZalxwnN0ENIfVgOfaRQbCMqXNotRXfMQSPW7IOFjIOycrFLn86sDAfDfScsQg==
-  dependencies:
-    "@spectrum-web-components/base" "^0.7.5"
-    "@spectrum-web-components/help-text" "^0.2.14"
-    "@spectrum-web-components/icon" "^0.12.11"
-    "@spectrum-web-components/icons-ui" "^0.9.12"
-    "@spectrum-web-components/icons-workflow" "^0.9.12"
-    "@spectrum-web-components/shared" "^0.15.7"
-
-"@spectrum-web-components/theme@0.14.8", "@spectrum-web-components/theme@0.14.9", "@spectrum-web-components/theme@^0.14.9":
+"@spectrum-web-components/theme@0.14.8", "@spectrum-web-components/theme@0.14.9", "@spectrum-web-components/theme@^0.14.10":
   version "0.14.8"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/theme/-/theme-0.14.8.tgz#fabad993b9f8c672baaf64af1f24978ec3d71cb9"
   integrity sha512-Q6aKwzooe5jyT/sfMr6MD9Qk6I8W6E2cAmOPVow2YHACWWhpi1ucZvRzkMj1xT8bnLdBIVAtXbMj/FbfWhROPw==
   dependencies:
     "@spectrum-web-components/base" "^0.7.2"
     "@spectrum-web-components/styles" "^0.22.0"
+
+"@spectrum-web-components/tooltip@0.11.9", "@swc-uxp-internal/tooltip@npm:@spectrum-web-components/tooltip@0.11.9":
+  version "0.11.9"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/tooltip/-/tooltip-0.11.9.tgz#c9001079229313aabd7316b24589c4ef0bb2b86a"
+  integrity sha512-2l0d4bVpU4UHlD97trGADE0IP58S2ZqvL9qHnAY9H84IAhmE1BGEgmECKXiRMtY56+CnwDOn3h2ERIexrEUmbQ==
+  dependencies:
+    "@spectrum-web-components/base" "^0.7.2"
+    "@spectrum-web-components/overlay" "^0.18.9"
 
 "@spectrum-web-components/underlay@^0.9.6":
   version "0.9.9"
@@ -1185,27 +1275,6 @@
   dependencies:
     "@spectrum-web-components/base" "^0.7.2"
     "@spectrum-web-components/shared" "^0.15.3"
-
-"@swc-uxp-internal/slider@npm:@spectrum-web-components/slider@0.15.4":
-  version "0.15.4"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/slider/-/slider-0.15.4.tgz#0415915e936896fb7003db8413ae210ccb821cea"
-  integrity sha512-Ci2fAJBdIGuwg4jRjyGjzaUOnoKEQ7osGCJjfx+kOzzGq5znOQkV/qPfSjLkRpNTP1O+PRWhCnGvruDK0xjS3w==
-  dependencies:
-    "@internationalized/number" "^3.1.0"
-    "@lit-labs/observers" "^1.0.1"
-    "@spectrum-web-components/base" "^0.7.3"
-    "@spectrum-web-components/field-label" "^0.10.4"
-    "@spectrum-web-components/number-field" "^0.5.9"
-    "@spectrum-web-components/reactive-controllers" "^0.3.5"
-    "@spectrum-web-components/shared" "^0.15.4"
-    "@spectrum-web-components/theme" "^0.14.9"
-
-"@swc/helpers@^0.4.14":
-  version "0.4.14"
-  resolved "https://registry.yarnpkg.com/@swc/helpers/-/helpers-0.4.14.tgz#1352ac6d95e3617ccb7c1498ff019654f1e12a74"
-  integrity sha512-4C7nX/dvpzB7za4Ql9K81xK3HPxCpHMgwTZVyf+9JQ6VUbn9jjZVN7/Nkdz/Ugzs2CSjqnL/UPXroiVBVHUWUw==
-  dependencies:
-    tslib "^2.4.0"
 
 "@tootallnate/once@2":
   version "2.0.0"
@@ -1444,34 +1513,57 @@
     "@webassemblyjs/helper-numbers" "1.11.5"
     "@webassemblyjs/helper-wasm-bytecode" "1.11.5"
 
-"@webassemblyjs/floating-point-hex-parser@1.11.5":
-  version "1.11.5"
-  resolved "https://registry.npmjs.org/@webassemblyjs/floating-point-hex-parser/-/floating-point-hex-parser-1.11.5.tgz"
-  integrity sha512-1j1zTIC5EZOtCplMBG/IEwLtUojtwFVwdyVMbL/hwWqbzlQoJsWCOavrdnLkemwNoC/EOwtUFch3fuo+cbcXYQ==
+"@webassemblyjs/ast@1.11.6":
+  version "1.11.6"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/ast/-/ast-1.11.6.tgz#db046555d3c413f8966ca50a95176a0e2c642e24"
+  integrity sha512-IN1xI7PwOvLPgjcf180gC1bqn3q/QaOCwYUahIOhbYUu8KA/3tw2RT/T0Gidi1l7Hhj5D/INhJxiICObqpMu4Q==
+  dependencies:
+    "@webassemblyjs/helper-numbers" "1.11.6"
+    "@webassemblyjs/helper-wasm-bytecode" "1.11.6"
+
+"@webassemblyjs/floating-point-hex-parser@1.11.6":
+  version "1.11.6"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/floating-point-hex-parser/-/floating-point-hex-parser-1.11.6.tgz#dacbcb95aff135c8260f77fa3b4c5fea600a6431"
+  integrity sha512-ejAj9hfRJ2XMsNHk/v6Fu2dGS+i4UaXBXGemOfQ/JfQ6mdQg/WXtwleQRLLS4OvfDhv8rYnVwH27YJLMyYsxhw==
 
 "@webassemblyjs/helper-api-error@1.11.5":
   version "1.11.5"
   resolved "https://registry.npmjs.org/@webassemblyjs/helper-api-error/-/helper-api-error-1.11.5.tgz"
   integrity sha512-L65bDPmfpY0+yFrsgz8b6LhXmbbs38OnwDCf6NpnMUYqa+ENfE5Dq9E42ny0qz/PdR0LJyq/T5YijPnU8AXEpA==
 
+"@webassemblyjs/helper-api-error@1.11.6":
+  version "1.11.6"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-api-error/-/helper-api-error-1.11.6.tgz#6132f68c4acd59dcd141c44b18cbebbd9f2fa768"
+  integrity sha512-o0YkoP4pVu4rN8aTJgAyj9hC2Sv5UlkzCHhxqWj8butaLvnpdc2jOwh4ewE6CX0txSfLn/UYaV/pheS2Txg//Q==
+
 "@webassemblyjs/helper-buffer@1.11.5":
   version "1.11.5"
   resolved "https://registry.npmjs.org/@webassemblyjs/helper-buffer/-/helper-buffer-1.11.5.tgz"
   integrity sha512-fDKo1gstwFFSfacIeH5KfwzjykIE6ldh1iH9Y/8YkAZrhmu4TctqYjSh7t0K2VyDSXOZJ1MLhht/k9IvYGcIxg==
 
-"@webassemblyjs/helper-numbers@1.11.5":
-  version "1.11.5"
-  resolved "https://registry.npmjs.org/@webassemblyjs/helper-numbers/-/helper-numbers-1.11.5.tgz"
-  integrity sha512-DhykHXM0ZABqfIGYNv93A5KKDw/+ywBFnuWybZZWcuzWHfbp21wUfRkbtz7dMGwGgT4iXjWuhRMA2Mzod6W4WA==
+"@webassemblyjs/helper-buffer@1.11.6":
+  version "1.11.6"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-buffer/-/helper-buffer-1.11.6.tgz#b66d73c43e296fd5e88006f18524feb0f2c7c093"
+  integrity sha512-z3nFzdcp1mb8nEOFFk8DrYLpHvhKC3grJD2ardfKOzmbmJvEf/tPIqCY+sNcwZIY8ZD7IkB2l7/pqhUhqm7hLA==
+
+"@webassemblyjs/helper-numbers@1.11.6":
+  version "1.11.6"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-numbers/-/helper-numbers-1.11.6.tgz#cbce5e7e0c1bd32cf4905ae444ef64cea919f1b5"
+  integrity sha512-vUIhZ8LZoIWHBohiEObxVm6hwP034jwmc9kuq5GdHZH0wiLVLIPcMCdpJzG4C11cHoQ25TFIQj9kaVADVX7N3g==
   dependencies:
-    "@webassemblyjs/floating-point-hex-parser" "1.11.5"
-    "@webassemblyjs/helper-api-error" "1.11.5"
+    "@webassemblyjs/floating-point-hex-parser" "1.11.6"
+    "@webassemblyjs/helper-api-error" "1.11.6"
     "@xtuc/long" "4.2.2"
 
 "@webassemblyjs/helper-wasm-bytecode@1.11.5":
   version "1.11.5"
   resolved "https://registry.npmjs.org/@webassemblyjs/helper-wasm-bytecode/-/helper-wasm-bytecode-1.11.5.tgz"
   integrity sha512-oC4Qa0bNcqnjAowFn7MPCETQgDYytpsfvz4ujZz63Zu/a/v71HeCAAmZsgZ3YVKec3zSPYytG3/PrRCqbtcAvA==
+
+"@webassemblyjs/helper-wasm-bytecode@1.11.6":
+  version "1.11.6"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/helper-wasm-bytecode/-/helper-wasm-bytecode-1.11.6.tgz#bb2ebdb3b83aa26d9baad4c46d4315283acd51e9"
+  integrity sha512-sFFHKwcmBprO9e7Icf0+gddyWYDViL8bpPjJJl0WHxCdETktXdmtWLGVzoHbqUcY4Be1LkNfwTmXOJUFZYSJdA==
 
 "@webassemblyjs/helper-wasm-section@1.11.5":
   version "1.11.5"
@@ -1490,6 +1582,13 @@
   dependencies:
     "@xtuc/ieee754" "^1.2.0"
 
+"@webassemblyjs/ieee754@1.11.6":
+  version "1.11.6"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/ieee754/-/ieee754-1.11.6.tgz#bb665c91d0b14fffceb0e38298c329af043c6e3a"
+  integrity sha512-LM4p2csPNvbij6U1f19v6WR56QZ8JcHg3QIJTlSwzFcmx6WSORicYj6I63f9yU1kEUtrpG+kjkiIAkevHpDXrg==
+  dependencies:
+    "@xtuc/ieee754" "^1.2.0"
+
 "@webassemblyjs/leb128@1.11.5":
   version "1.11.5"
   resolved "https://registry.npmjs.org/@webassemblyjs/leb128/-/leb128-1.11.5.tgz"
@@ -1497,10 +1596,22 @@
   dependencies:
     "@xtuc/long" "4.2.2"
 
+"@webassemblyjs/leb128@1.11.6":
+  version "1.11.6"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/leb128/-/leb128-1.11.6.tgz#70e60e5e82f9ac81118bc25381a0b283893240d7"
+  integrity sha512-m7a0FhE67DQXgouf1tbN5XQcdWoNgaAuoULHIfGFIEVKA6tu/edls6XnIlkmS6FrXAquJRPni3ZZKjw6FSPjPQ==
+  dependencies:
+    "@xtuc/long" "4.2.2"
+
 "@webassemblyjs/utf8@1.11.5":
   version "1.11.5"
   resolved "https://registry.npmjs.org/@webassemblyjs/utf8/-/utf8-1.11.5.tgz"
   integrity sha512-WiOhulHKTZU5UPlRl53gHR8OxdGsSOxqfpqWeA2FmcwBMaoEdz6b2x2si3IwC9/fSPLfe8pBMRTHVMk5nlwnFQ==
+
+"@webassemblyjs/utf8@1.11.6":
+  version "1.11.6"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/utf8/-/utf8-1.11.6.tgz#90f8bc34c561595fe156603be7253cdbcd0fab5a"
+  integrity sha512-vtXf2wTQ3+up9Zsg8sa2yWiQpzSsMyXj0qViVP6xKGCUT8p8YJ6HqI7l5eCnWx1T/FYdsv07HQs2wTFbbof/RA==
 
 "@webassemblyjs/wasm-edit@^1.11.5":
   version "1.11.5"
@@ -1526,6 +1637,17 @@
     "@webassemblyjs/ieee754" "1.11.5"
     "@webassemblyjs/leb128" "1.11.5"
     "@webassemblyjs/utf8" "1.11.5"
+
+"@webassemblyjs/wasm-gen@1.11.6":
+  version "1.11.6"
+  resolved "https://registry.yarnpkg.com/@webassemblyjs/wasm-gen/-/wasm-gen-1.11.6.tgz#fb5283e0e8b4551cc4e9c3c0d7184a65faf7c268"
+  integrity sha512-3XOqkZP/y6B4F0PBAXvI1/bky7GryoogUtfwExeP/v7Nzwo1QLcq5oQmpKlftZLbT+ERUOAZVQjuNVak6UXjPA==
+  dependencies:
+    "@webassemblyjs/ast" "1.11.6"
+    "@webassemblyjs/helper-wasm-bytecode" "1.11.6"
+    "@webassemblyjs/ieee754" "1.11.6"
+    "@webassemblyjs/leb128" "1.11.6"
+    "@webassemblyjs/utf8" "1.11.6"
 
 "@webassemblyjs/wasm-opt@1.11.5":
   version "1.11.5"
@@ -1637,10 +1759,10 @@ accepts@~1.3.4, accepts@~1.3.5, accepts@~1.3.8:
     mime-types "~2.1.34"
     negotiator "0.6.3"
 
-acorn-import-assertions@^1.7.6:
-  version "1.8.0"
-  resolved "https://registry.npmjs.org/acorn-import-assertions/-/acorn-import-assertions-1.8.0.tgz"
-  integrity sha512-m7VZ3jwz4eK6A4Vtt8Ew1/mNbP24u0FhdyfA7fSvnJR6LMdfOYnmuIrrJAgrYfYJ10F/otaHTtrtrtmHdMNzEw==
+acorn-import-assertions@^1.9.0:
+  version "1.9.0"
+  resolved "https://registry.yarnpkg.com/acorn-import-assertions/-/acorn-import-assertions-1.9.0.tgz#507276249d684797c84e0734ef84860334cfb1ac"
+  integrity sha512-cmMwop9x+8KFhxvKrKfPYmN6/pKTYYHBqLa0DfvVZcKMJWNyWLnaqND7dx/qn66R7ewM1UX5XMaDVP5wlVTaVA==
 
 acorn-walk@^8.0.0:
   version "8.2.0"
@@ -2172,10 +2294,15 @@ caniuse-api@^3.0.0:
     lodash.memoize "^4.1.2"
     lodash.uniq "^4.5.0"
 
-caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001449, caniuse-lite@^1.0.30001464:
+caniuse-lite@^1.0.0, caniuse-lite@^1.0.30001464:
   version "1.0.30001486"
   resolved "https://registry.npmjs.org/caniuse-lite/-/caniuse-lite-1.0.30001486.tgz"
   integrity sha512-uv7/gXuHi10Whlj0pp5q/tsK/32J2QSqVRKQhs2j8VsDCjgyruAh/eEXHF822VqO9yT6iZKw3nRwZRSPBE9OQg==
+
+caniuse-lite@^1.0.30001489:
+  version "1.0.30001489"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001489.tgz#ca82ee2d4e4dbf2bd2589c9360d3fcc2c7ba3bd8"
+  integrity sha512-x1mgZEXK8jHIfAxm+xgdpHpk50IN3z3q3zP261/WS+uvePxW8izXuCu6AHz0lkuYTlATDehiZ/tNyYBdSQsOUQ==
 
 capital-case@^1.0.4:
   version "1.0.4"
@@ -2794,7 +2921,7 @@ debug@2.6.9:
   dependencies:
     ms "2.0.0"
 
-debug@4, debug@^4.1.0, debug@^4.3.3:
+debug@4, debug@^4.1.0, debug@^4.3.3, debug@^4.3.4:
   version "4.3.4"
   resolved "https://registry.npmjs.org/debug/-/debug-4.3.4.tgz"
   integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
@@ -3015,10 +3142,10 @@ ejs@^3.1.7:
   dependencies:
     jake "^10.8.5"
 
-electron-to-chromium@^1.4.284:
-  version "1.4.385"
-  resolved "https://registry.npmjs.org/electron-to-chromium/-/electron-to-chromium-1.4.385.tgz"
-  integrity sha512-L9zlje9bIw0h+CwPQumiuVlfMcV4boxRjFIWDcLfFqTZNbkwOExBzfmswytHawObQX4OUhtNv8gIiB21kOurIg==
+electron-to-chromium@^1.4.411:
+  version "1.4.411"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.411.tgz#8cb7787f0442fcb4209590e9951bdb482caa93b2"
+  integrity sha512-5VXLW4Qw89vM2WTICHua/y8v7fKGDRVa2VPOtBB9IpLvW316B+xd8yD1wTmLPY2ot/00P/qt87xdolj4aG/Lzg==
 
 emoji-regex@^8.0.0:
   version "8.0.0"
@@ -3150,6 +3277,11 @@ event-target-shim@^5.0.0:
   version "5.0.1"
   resolved "https://registry.npmjs.org/event-target-shim/-/event-target-shim-5.0.1.tgz"
   integrity sha512-i/2XbnSz/uxRCU6+NdVJgKWDTM427+MqYbkQzD321DuCQJUqOuJKIA0IM2+W2xtYHdKOmZ4dR6fExsd4SXL+WQ==
+
+event-target-shim@^6.0.2:
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/event-target-shim/-/event-target-shim-6.0.2.tgz#ea5348c3618ee8b62ff1d344f01908ee2b8a2b71"
+  integrity sha512-8q3LsZjRezbFZ2PN+uP+Q7pnHUMmAOziU2vA2OwoFaKIXxlxl38IylhSSgUorWu/rf4er67w0ikBqjBFk/pomA==
 
 eventemitter3@^4.0.0, eventemitter3@^4.0.4:
   version "4.0.7"
@@ -3297,7 +3429,7 @@ file-url@3.0.0:
   resolved "https://registry.npmjs.org/file-url/-/file-url-3.0.0.tgz"
   integrity sha512-g872QGsHexznxkIAdK8UiZRe7SkE6kvylShU4Nsj8NvfvZag7S0QuQ4IgvPDkk75HxgjIVDwycFTDAgIiO4nDA==
 
-filelist@^1.0.1:
+filelist@^1.0.4:
   version "1.0.4"
   resolved "https://registry.npmjs.org/filelist/-/filelist-1.0.4.tgz"
   integrity sha512-w1cEuf3S+DrLCQL7ET6kz+gmlJdbq9J7yXCSjK/OZCPA+qEN1WyF4ZAf0YYJa4/shHJra2t/d/r8SV4Ji+x+8Q==
@@ -3773,6 +3905,11 @@ has-flag@^4.0.0:
   version "4.0.0"
   resolved "https://registry.npmjs.org/has-flag/-/has-flag-4.0.0.tgz"
   integrity sha512-EykJT/Q1KjTWctppgIAgfSO0tKVuZUjhgMr17kqTumMl6Afv3EISleU7qZUzoXDFTAHTDC4NOoG/ZxU3EvlMPQ==
+
+has-proto@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/has-proto/-/has-proto-1.0.1.tgz#1885c1305538958aff469fef37937c22795408e0"
+  integrity sha512-7qE+iP+O+bgF9clE5+UoBFzE65mlBiVj3tKCrlNQ0Ogwm0BjpT/gK4SlLYDMybDh5I3TCTKnPPa0oMG7JDYrhg==
 
 has-symbols@^1.0.3:
   version "1.0.3"
@@ -4746,7 +4883,7 @@ lru-cache@^7.4.4, lru-cache@^7.5.1, lru-cache@^7.7.1:
   resolved "https://registry.npmjs.org/lru-cache/-/lru-cache-7.18.3.tgz"
   integrity sha512-jumlc0BIUrS3qJGgIkWZsyfAM7NCWiBcCDhnd+3NNM5KbBmLTgHVfWBcg6W+rLUsIpzpERPsvwUP7CckAQSOoA==
 
-lru-cache@^9.0.0:
+lru-cache@^9.1.1:
   version "9.1.1"
   resolved "https://registry.npmjs.org/lru-cache/-/lru-cache-9.1.1.tgz"
   integrity sha512-65/Jky17UwSb0BuB9V+MyDpsOtXKmYwzhyl+cOa9XUiI4uV2Ouy/2voFP3+al0BjZbJgMBD8FojMpAf+Z+qn4A==
@@ -4939,7 +5076,7 @@ minimatch@3.0.5, minimatch@^3.0.4:
   dependencies:
     brace-expansion "^1.1.7"
 
-minimatch@^3.1.1:
+minimatch@^3.1.1, minimatch@^3.1.2:
   version "3.1.2"
   resolved "https://registry.npmjs.org/minimatch/-/minimatch-3.1.2.tgz"
   integrity sha512-J7p63hRiAjw1NDEww1W7i37+ByIrOWO5XQQAzZ3VOcL0PNybwpfmV/N05zFAzwQ9USyEcX6t3UO+K5aqBQOIHw==
@@ -4971,6 +5108,13 @@ minimatch@^9.0.0:
   version "9.0.0"
   resolved "https://registry.npmjs.org/minimatch/-/minimatch-9.0.0.tgz"
   integrity sha512-0jJj8AvgKqWN05mrwuqi8QYKx1WmYSUoKSxu5Qhs9prezTz10sxAHGNZe9J9cqIJzta8DWsleh2KaVaLl6Ru2w==
+  dependencies:
+    brace-expansion "^2.0.1"
+
+minimatch@^9.0.1:
+  version "9.0.1"
+  resolved "https://registry.yarnpkg.com/minimatch/-/minimatch-9.0.1.tgz#8a555f541cf976c622daf078bb28f29fb927c253"
+  integrity sha512-0jWhJpD/MdhPXwPuiRkCbfYfSKp2qnn2eOc279qI7f+osl/l+prKSrvhg157zSYvx/1nmgn2NqdT6k2Z7zSH9w==
   dependencies:
     brace-expansion "^2.0.1"
 
@@ -5062,6 +5206,11 @@ minipass@^5.0.0:
   version "5.0.0"
   resolved "https://registry.npmjs.org/minipass/-/minipass-5.0.0.tgz"
   integrity sha512-3FnjYuehv9k6ovOEbyOswadCDPX1piCfhV8ncmYtHOjuPwylVWsghTLo7rabjC3Rx5xD4HDx8Wm1xnMF7S5qFQ==
+
+"minipass@^5.0.0 || ^6.0.2":
+  version "6.0.2"
+  resolved "https://registry.yarnpkg.com/minipass/-/minipass-6.0.2.tgz#542844b6c4ce95b202c0995b0a471f1229de4c81"
+  integrity sha512-MzWSV5nYVT7mVyWCwn2o7JH13w2TBRmmSqSRCKzTw+lmft9X4z+3wjvs06Tzijo5z4W/kahUCDpRXTF+ZrmF/w==
 
 minizlib@^2.1.1, minizlib@^2.1.2:
   version "2.1.2"
@@ -5221,10 +5370,10 @@ node-plop@^0.31.1:
     title-case "^3.0.3"
     upper-case "^2.0.2"
 
-node-releases@^2.0.8:
-  version "2.0.10"
-  resolved "https://registry.npmjs.org/node-releases/-/node-releases-2.0.10.tgz"
-  integrity sha512-5GFldHPXVG/YZmFzJvKK2zDSzPKhEp0+ZR5SVaoSag9fsL5YgHbUHDfnG5494ISANDcK4KwPXAx2xqVEydmd7w==
+node-releases@^2.0.12:
+  version "2.0.12"
+  resolved "https://registry.yarnpkg.com/node-releases/-/node-releases-2.0.12.tgz#35627cc224a23bfb06fb3380f2b3afaaa7eb1039"
+  integrity sha512-QzsYKWhXTWx8h1kIvqfnC++o0pEmpRQA/aenALsL2F4pqNVr7YzcdMlDij5WBnwftRbJCNJL/O7zdKaxKPHqgQ==
 
 nopt@^6.0.0:
   version "6.0.0"
@@ -5321,7 +5470,7 @@ npm-normalize-package-bin@^1.0.1:
   resolved "https://registry.npmjs.org/npm-normalize-package-bin/-/npm-normalize-package-bin-1.0.1.tgz"
   integrity sha512-EPfafl6JL5/rU+ot6P3gRSCpPDW5VmIzX959Ob1+ySFUuuYHWHekXpwdUZcKP5C+DS4GEtdJluwBjnsNDl+fSA==
 
-npm-normalize-package-bin@^3.0.0:
+npm-normalize-package-bin@^3.0.0, npm-normalize-package-bin@^3.0.1:
   version "3.0.1"
   resolved "https://registry.npmjs.org/npm-normalize-package-bin/-/npm-normalize-package-bin-3.0.1.tgz"
   integrity sha512-dMxCf+zZ+3zeQZXKxmyuCKlIDPGuv8EF940xbkC4kQVDTtqoh6rJFO+JTKSA6/Rwi0getWmtuy4Itup0AMcaDQ==
@@ -6240,10 +6389,10 @@ postcss-modules-extract-imports@^3.0.0:
   resolved "https://registry.npmjs.org/postcss-modules-extract-imports/-/postcss-modules-extract-imports-3.0.0.tgz"
   integrity sha512-bdHleFnP3kZ4NYDhuGlVK+CMrQ/pqUm8bx/oGL93K6gVwiclvX5x0n76fYMKuIGKzlABOy13zsvqjb0f92TEXw==
 
-postcss-modules-local-by-default@^4.0.0:
-  version "4.0.0"
-  resolved "https://registry.npmjs.org/postcss-modules-local-by-default/-/postcss-modules-local-by-default-4.0.0.tgz"
-  integrity sha512-sT7ihtmGSF9yhm6ggikHdV0hlziDTX7oFoXtuVWeDd3hHObNkcHRo9V3yg7vCAY7cONyxJC/XXCmmiHHcvX7bQ==
+postcss-modules-local-by-default@^4.0.3:
+  version "4.0.3"
+  resolved "https://registry.yarnpkg.com/postcss-modules-local-by-default/-/postcss-modules-local-by-default-4.0.3.tgz#b08eb4f083050708998ba2c6061b50c2870ca524"
+  integrity sha512-2/u2zraspoACtrbFRnTijMiQtb4GW4BvatjaG/bCjYQo8kLTdevCUlwuBHx2sCnSyrI3x3qj4ZK1j5LQBgzmwA==
   dependencies:
     icss-utils "^5.0.0"
     postcss-selector-parser "^6.0.2"
@@ -6483,10 +6632,19 @@ postcss-value-parser@^4.0.0, postcss-value-parser@^4.1.0, postcss-value-parser@^
   resolved "https://registry.npmjs.org/postcss-value-parser/-/postcss-value-parser-4.2.0.tgz"
   integrity sha512-1NNCs6uurfkVbeXG4S8JFT9t19m45ICnif8zWLd5oPSZ50QnwMfK+H3jv408d4jw/7Bttv5axS5IiHoLaVNHeQ==
 
-postcss@^8.4.14, postcss@^8.4.19:
+postcss@^8.4.14:
   version "8.4.23"
   resolved "https://registry.npmjs.org/postcss/-/postcss-8.4.23.tgz"
   integrity sha512-bQ3qMcpF6A/YjR55xtoTr0jGOlnPOKAIMdOWiv0EIT6HVPEaJiJB4NLljSbiHoC2RX7DN5Uvjtpbg1NPdwv1oA==
+  dependencies:
+    nanoid "^3.3.6"
+    picocolors "^1.0.0"
+    source-map-js "^1.0.2"
+
+postcss@^8.4.21:
+  version "8.4.24"
+  resolved "https://registry.yarnpkg.com/postcss/-/postcss-8.4.24.tgz#f714dba9b2284be3cc07dbd2fc57ee4dc972d2df"
+  integrity sha512-M0RzbcI0sO/XJNucsGjvWU9ERWxb/ytp1w6dKtxTKgixdtQDq4rmx/g8W1hnaheq9jgwL/oyEdH5Bc4WwJKMqg==
   dependencies:
     nanoid "^3.3.6"
     picocolors "^1.0.0"
@@ -7735,7 +7893,7 @@ upath@2.0.1, upath@^2.0.1:
   resolved "https://registry.npmjs.org/upath/-/upath-2.0.1.tgz"
   integrity sha512-1uEe95xksV1O0CYKXo8vQvN1JEbtJp7lb7C5U9HMsIp6IVwntkH/oNUzyVNQSd4S1sYk2FpSSW44FqMc8qee5w==
 
-update-browserslist-db@^1.0.10:
+update-browserslist-db@^1.0.11:
   version "1.0.11"
   resolved "https://registry.npmjs.org/update-browserslist-db/-/update-browserslist-db-1.0.11.tgz"
   integrity sha512-dCwEFf0/oT85M1fHBg4F0jtLwJrutGoHSQXCh7u4o2t1drG+c0a9Flnqww6XUKSfQMPpJBRjU8d4RXB09qtvaA==

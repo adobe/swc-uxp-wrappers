@@ -12,6 +12,7 @@ governing permissions and limitations under the License.
 
 /* write uxp style overrides */
 
+/* Workaround for - https://jira.corp.adobe.com/browse/UXP-20869 */
 :host([dir='ltr']:not([vertical]):not([compact])) ::slotted(:not(:last-child)) {
     margin-right: var(
         --mod-actiongroup-horizontal-spacing-regular,

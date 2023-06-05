@@ -1,0 +1,54 @@
+{
+    "name": "@swc-uxp-wrappers/table",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/table component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/table"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/Table.js": "./src/Table.js",
+        "./src/table.css.js": "./src/table.css.js",
+        "./src/table-body.css.js": "./src/table-body.css.js",
+        "./src/table-cell.css.js": "./src/table-cell.css.js",
+        "./src/table-checkbox-cell.css.js": "./src/table-checkbox-cell.css.js",
+        "./src/table-head.css.js": "./src/table-head.css.js",
+        "./src/table-head-cell.css.js": "./src/table-head-cell.css.js",
+        "./src/table-row.css.js": "./src/table-row.css.js",
+        "./src/TableBody.js": "./src/TableBody.js",
+        "./src/TableCell.js": "./src/TableCell.js",
+        "./src/TableCheckboxCell.js": "./src/TableCheckboxCell.js",
+        "./src/TableHead.js": "./src/TableHead.js",
+        "./src/TableHeadCell.js": "./src/TableHeadCell.js",
+        "./src/TableRow.js": "./src/TableRow.js",
+        "./sp-table.js": "./sp-table.js",
+        "./sp-table-body.js": "./sp-table-body.js",
+        "./sp-table-cell.js": "./sp-table-cell.js",
+        "./sp-table-checkbox-cell.js": "./sp-table-checkbox-cell.js",
+        "./sp-table-head.js": "./sp-table-head.js",
+        "./sp-table-head-cell.js": "./sp-table-head-cell.js",
+        "./sp-table-row.js": "./sp-table-row.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/table": "npm:@spectrum-web-components/table@0.1.7"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/table"
+    ]
+}

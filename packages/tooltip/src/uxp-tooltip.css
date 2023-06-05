@@ -1,0 +1,74 @@
+/*
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* write uxp style overrides */
+
+/* Workaround for - https://jira.corp.adobe.com/browse/UXP-21333 */
+#label {
+    margin-bottom: var(
+        --spectrum-tooltip-neutral-text-margin-top,
+        var(--spectrum-global-dimension-static-size-50)
+    );
+}
+
+/* Workarounds for - https://jira.corp.adobe.com/browse/UXP-21118 */
+#tip:after {
+    border-width: calc(0.6 * var(--spectrum-tooltip-tip-height));
+}
+
+:host([placement*='top']) #tip:after {
+    transform: rotate(45deg);
+    margin-top: calc(-0.6 * var(--spectrum-tooltip-tip-height));
+}
+
+:host([placement*='left']) #tip:after {
+    transform: rotate(45deg);
+    margin-left: calc(-0.6 * var(--spectrum-tooltip-tip-height));
+}
+
+:host([placement*='right']) #tip:after {
+    transform: rotate(45deg);
+    margin-right: calc(-0.6 * var(--spectrum-tooltip-tip-height));
+}
+
+:host([placement*='bottom']) #tip:after {
+    margin-bottom: calc(-0.6 * var(--spectrum-tooltip-tip-height));
+    transform: rotate(45deg);
+}
+
+:host([variant='negative']) #tip:after {
+    border-top-color: var(
+        --spectrum-tooltip-negative-background-color,
+        var(--spectrum-semantic-negative-background-color)
+    );
+}
+
+:host([variant='info']) #tip:after {
+    border-top-color: var(
+        --spectrum-tooltip-info-background-color,
+        var(--spectrum-semantic-informative-background-color)
+    );
+}
+
+:host([variant='positive']) #tip:after {
+    border-top-color: var(
+        --spectrum-tooltip-positive-background-color,
+        var(--spectrum-semantic-positive-background-color)
+    );
+}
+
+:host([variant='neutral']) #tip:after {
+    border-top-color: var(
+        --spectrum-tooltip-neutral-background-color,
+        var(--spectrum-semantic-neutral-background-color-default)
+    );
+}

@@ -1,0 +1,36 @@
+{
+    "name": "@swc-uxp-wrappers/tooltip",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/tooltip component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/tooltip"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/Tooltip.js": "./src/Tooltip.js",
+        "./src/tooltip.css.js": "./src/tooltip.css.js",
+        "./sp-tooltip.js": "./sp-tooltip.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/tooltip": "npm:@spectrum-web-components/tooltip@0.11.9"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/tooltip"
+    ]
+}
