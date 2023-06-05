@@ -1,0 +1,149 @@
+/*
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* write uxp style overrides */
+
+/* Workaround for - https://jira.corp.adobe.com/browse/UXP-21311 */
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: var(--spectrum-dialog-confirm-padding);
+    padding-top: var(--spectrum-dialog-confirm-padding);
+    width: fit-content;
+    align-items: flex-start;
+}
+
+:host([dismissable]) .grid {
+    padding-top: calc(-1 * var(--spectrum-dialog-confirm-padding));
+}
+
+.close-button {
+    order: -1;
+
+    --width-close-button: 100%;
+
+    margin-left: calc(
+        var(--width-close-button) -
+            var(--spectrum-dialog-confirm-close-button-size) -
+            var(--spectrum-dialog-confirm-close-button-padding)
+    );
+    min-width: 0;
+    max-width: auto;
+    align-items: center;
+}
+
+::slotted([slot='hero']) {
+    flex-basis: 100%;
+    order: -2;
+}
+
+::slotted([slot='heading']) {
+    flex-basis: 75%;
+    margin-left: var(--spectrum-dialog-confirm-padding);
+}
+
+.type-icon {
+    margin-left: auto;
+    margin-right: var(--spectrum-dialog-confirm-padding);
+}
+
+.header {
+    flex-basis: auto;
+    margin-left: var(--spectrum-dialog-confirm-padding);
+    margin-right: var(--spectrum-dialog-confirm-padding);
+}
+
+.content {
+    flex-basis: 100%;
+    margin-left: calc(
+        var(--spectrum-dialog-confirm-padding) +
+            var(--spectrum-dialog-confirm-description-margin)
+    );
+    margin-right: calc(
+        var(--spectrum-dialog-confirm-padding) +
+            var(--spectrum-dialog-confirm-description-margin)
+    );
+    overflow: auto;
+    max-height: inherit;
+    /* max-height: calc(100% - calc(3 * var(--spectrum-dialog-confirm-padding))); */
+    /* Keeping this style this here, will be used in wrapper */
+}
+
+.divider {
+    flex-basis: 100%;
+    margin-left: var(--spectrum-dialog-confirm-padding);
+    margin-right: var(--spectrum-dialog-confirm-padding);
+}
+
+.footer {
+    margin-left: var(--spectrum-dialog-confirm-padding);
+    justify-content: flex-start;
+}
+
+.button-group {
+    margin-left: auto;
+    margin-right: var(--spectrum-dialog-confirm-padding);
+}
+
+:host([mode='fullscreenTakeover']) .grid,
+:host([mode='fullscreen']) .grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+:host([mode='fullscreenTakeover']) ::slotted([slot='heading']),
+:host([mode='fullscreen']) ::slotted([slot='heading']) {
+    flex-basis: 60%;
+    order: -2;
+}
+:host([mode='fullscreenTakeover']) .content,
+:host([mode='fullscreen']) .content {
+    max-height: none;
+    flex-grow: 1;
+    flex-basis: 100%;
+}
+:host([mode='fullscreenTakeover']) .button-group,
+:host([mode='fullscreenTakeover']) .footer,
+:host([mode='fullscreen']) .button-group,
+:host([mode='fullscreen']) .footer {
+    padding-top: 0;
+    flex-basis: 100%;
+}
+:host([mode='fullscreenTakeover']) .footer,
+:host([mode='fullscreen']) .footer {
+    display: none;
+}
+:host([mode='fullscreenTakeover']) .button-group,
+:host([mode='fullscreen']) .button-group {
+    margin-top: auto;
+    flex-basis: auto;
+    order: -1;
+}
+
+/* swc-uxp-wrapper do not parse the media query, https://jira.corp.adobe.com/browse/UXP-21368*/
+/* @media screen and (max-width: 700px) {
+    :host([mode='fullscreen']) .grid {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        height: 100%;
+    }
+    :host([mode='fullscreenTakeover']) .button-group,
+    :host([mode='fullscreen']) .button-group {
+        order: 1;
+        padding-top: var(--spectrum-dialog-confirm-buttongroup-padding-top);
+    }
+    :host([mode='fullscreen']) ::slotted([slot='heading']) {
+        font-size: var(--spectrum-dialog-confirm-title-text-size);
+    } 
+}*/

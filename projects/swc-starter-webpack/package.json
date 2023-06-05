@@ -24,6 +24,8 @@
         "@swc-uxp-wrappers/field-label": "*",
         "@swc-uxp-wrappers/card": "*",
         "@swc-uxp-wrappers/checkbox": "*",
+        "@swc-uxp-wrappers/dialog": "*",
+        "@swc-uxp-wrappers/button-group": "*",
         "@spectrum-web-components/theme": "0.14.9",
         "@spectrum-web-components/textfield": "0.13.8",
         "lit": "^2.0.0"

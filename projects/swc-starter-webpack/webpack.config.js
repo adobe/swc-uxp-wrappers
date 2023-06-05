@@ -123,8 +123,6 @@ const shared = (env) => {
             alias: {
                 '@spectrum-web-components/banner': '@swc-uxp-wrappers/banner',
                 '@spectrum-web-components/divider': '@swc-uxp-wrappers/divider',
-                '@spectrum-web-components/illustrated-message':
-                    '@swc-uxp-wrappers/illustrated-message',
                 '@spectrum-web-components/link': '@swc-uxp-wrappers/link',
                 '@spectrum-web-components/avatar': '@swc-uxp-wrappers/avatar',
                 '@spectrum-web-components/field-label':
@@ -135,9 +133,13 @@ const shared = (env) => {
                     '@swc-uxp-wrappers/action-button',
                 '@spectrum-web-components/checkbox':
                     '@swc-uxp-wrappers/checkbox',
-                '@spectrum-web-components/menu': '@swc-uxp-wrappers/menu',
                 '@spectrum-web-components/action-group':
                     '@swc-uxp-wrappers/action-group',
+                '@spectrum-web-components/illustrated-message':
+                    '@swc-uxp-wrappers/illustrated-message',
+                '@spectrum-web-components/dialog': '@swc-uxp-wrappers/dialog',
+                '@spectrum-web-components/button-group':
+                    '@swc-uxp-wrappers/button-group',
             },
         },
         plugins,

@@ -1,0 +1,40 @@
+{
+    "name": "@swc-uxp-wrappers/dialog",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/dialog component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/dialog"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/Dialog.js": "./src/Dialog.js",
+        "./src/DialogBase.js": "./src/DialogBase.js",
+        "./src/DialogWrapper.js": "./src/DialogWrapper.js",
+        "./sp-dialog.js": "./sp-dialog.js",
+        "./sp-dialog-base.js": "./sp-dialog-base.js",
+        "./sp-dialog-wrapper.js": "./sp-dialog-wrapper.js",
+        "./src/dialog.css.js": "./src/dialog.css.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/dialog": "npm:@spectrum-web-components/dialog@0.11.12"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/dialog"
+    ]
+}

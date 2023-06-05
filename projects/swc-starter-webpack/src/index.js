@@ -29,5 +29,7 @@ import '@spectrum-web-components/checkbox/sp-checkbox.js';
 import '@spectrum-web-components/action-group/sp-action-group.js';
 
 import '@spectrum-web-components/textfield/sp-textfield.js';
+import '@spectrum-web-components/dialog/sp-dialog.js';
+import '@spectrum-web-components/button-group/sp-button-group.js';
 
 import './my-elements.js';

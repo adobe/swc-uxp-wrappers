@@ -21,6 +21,8 @@ import { ActionButton } from '@spectrum-web-components/action-button';
 import { ActionGroup } from '@spectrum-web-components/action-group';
 import { Card } from '@spectrum-web-components/card';
 import { Checkbox } from '@spectrum-web-components/checkbox';
+import { Dialog } from '@spectrum-web-components/dialog';
+import { ButtonGroup } from '@spectrum-web-components/button-group';
 
 import { css } from 'lit';
 
@@ -145,6 +147,28 @@ class MyActionGroup extends ActionGroup {
     ];
 }
 
+class MyDialog extends Dialog {
+    static styles = [
+        Dialog.styles,
+        css`
+            :host {
+                background-color: green;
+            }
+        `,
+    ];
+}
+
+class MyButtonGroup extends ButtonGroup {
+    static styles = [
+        ButtonGroup.styles,
+        css`
+            :host {
+                background-color: green;
+            }
+        `,
+    ];
+}
+
 customElements.define('my-banner', MyBanner);
 customElements.define('my-action-group', MyActionGroup);
 customElements.define('my-checkbox', MyCheckbox);
@@ -156,3 +180,5 @@ customElements.define('my-avatar', MyAvatar);
 customElements.define('my-divider', MyDivider);
 customElements.define('my-illustrated-message', MyIllustratedMessage);
 customElements.define('my-link', MyLink);
+customElements.define('my-dialog', MyDialog);
+customElements.define('my-button-group', MyButtonGroup);

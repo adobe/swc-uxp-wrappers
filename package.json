@@ -31,7 +31,9 @@
         "@spectrum-web-components/field-label": "0.10.3",
         "@spectrum-web-components/illustrated-message": "0.9.8",
         "@spectrum-web-components/checkbox": "0.14.0",
-        "@spectrum-web-components/theme": "0.14.8"
+        "@spectrum-web-components/theme": "0.14.8",
+        "@spectrum-web-components/button-group": "0.10.8",
+        "@spectrum-web-components/dialog": "0.11.12"
     },
     "scripts": {
         "build": "yarn build:css",
