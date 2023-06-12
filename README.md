@@ -1,4 +1,4 @@
-# Overview
+# Spectrum Web Components UXP Wrappers
 
 For supporting [Spectrum Web Components(SWC)](https://github.com/adobe/spectrum-web-components) in UXP, we are creating wrappers over each spectrum web component.
 
@@ -54,3 +54,11 @@ Name of spectrum web component package for which wrapper is required
 Version of the above spectrum web component which is compatible with UXP.
 
 You can find this information in the wiki - [Support for Spectrum Web Components in UXP](https://wiki.corp.adobe.com/display/UXP/Support+for+Spectrum+Web+Components+in+UXP)
+
+## Contributing
+
+We'd be very grateful if you contributed to the project! Check out our [contribution guidelines](./CONTRIBUTING.md) for more information.
+
+## Licensing
+
+This project is licensed under the Apache V2 License. See [LICENSE](./LICENSE.txt) for more information.
