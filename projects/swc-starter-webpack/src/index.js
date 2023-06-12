@@ -36,6 +36,15 @@ import '@spectrum-web-components/menu/sp-menu.js';
 import '@spectrum-web-components/menu/sp-menu-item.js';
 import '@spectrum-web-components/menu/sp-menu-group.js';
 import '@spectrum-web-components/menu/sp-menu-divider.js';
+import '@spectrum-web-components/toast/sp-toast.js';
+import '@spectrum-web-components/switch/sp-switch.js';
+import '@spectrum-web-components/sidenav/sp-sidenav.js';
+import '@spectrum-web-components/sidenav/sp-sidenav-heading.js';
+import '@spectrum-web-components/sidenav/sp-sidenav-item.js';
+import '@spectrum-web-components/radio/sp-radio.js';
+import '@spectrum-web-components/radio/sp-radio-group.js';
+import '@spectrum-web-components/tags/sp-tags.js';
+import '@spectrum-web-components/tags/sp-tag.js';
 
 import '@spectrum-web-components/table/sp-table.js';
 import '@spectrum-web-components/table/sp-table-body.js';
@@ -56,9 +65,9 @@ import '@spectrum-web-components/icons-workflow/icons/sp-icon-add.js';
 import '@spectrum-web-components/icons-workflow/icons/sp-icon-add-circle.js';
 import '@spectrum-web-components/icons-workflow/icons/sp-icon-display-advert.js';
 import '@spectrum-web-components/icons-workflow/icons/sp-icon-add-to.js';
+import '@spectrum-web-components/icons-workflow/icons/sp-icon-star.js';
 import '@spectrum-web-components/icons-workflow/icons/sp-icon-add-to-selection.js';
 import '@spectrum-web-components/icons-workflow/icons/sp-icon-edit.js';
-import '@spectrum-web-components/dialog/sp-dialog.js';
-import '@spectrum-web-components/button-group/sp-button-group.js';
+import '@spectrum-web-components/icons-workflow/icons/sp-icon-magnify.js';
 
 import './my-elements.js';

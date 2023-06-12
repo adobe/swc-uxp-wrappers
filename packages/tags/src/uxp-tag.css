@@ -1,0 +1,72 @@
+/*
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* write uxp style overrides */
+
+/* Workaround for - https://jira.corp.adobe.com/browse/UXP-21401 */
+:host {
+    height: var(--mod-tag-height, var(--spectrum-tag-height));
+    padding-right: 0;
+    padding-left: calc(
+        var(
+                --mod-tag-spacing-inline-start,
+                var(--spectrum-tag-spacing-inline-start)
+            ) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+    );
+}
+
+.label {
+    margin-right: calc(
+        var(
+                --mod-tag-label-spacing-inline-end,
+                var(--spectrum-tag-label-spacing-inline-end)
+            ) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+    );
+    padding-left: calc(
+        var(
+                --mod-tag-label-spacing-block,
+                var(--spectrum-tag-label-spacing-block)
+            ) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+    );
+}
+
+.clear-button {
+    color: inherit; /* Workaround for - https://jira.corp.adobe.com/browse/UXP-21402 */
+    margin-right: calc(
+        var(
+                --mod-tag-clear-button-spacing-inline-end,
+                var(--spectrum-tag-clear-button-spacing-inline-end)
+            ) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+    );
+    margin-left: calc(
+        var(
+                --mod-tag-clear-button-spacing-inline-start,
+                var(--spectrum-tag-clear-button-spacing-inline-start)
+            ) +
+            var(
+                --mod-tag-label-spacing-inline-end,
+                var(--spectrum-tag-label-spacing-inline-end)
+            ) * -1
+    );
+    padding-bottom: calc(
+        var(
+                --mod-tag-clear-button-spacing-block,
+                var(--spectrum-tag-clear-button-spacing-block)
+            ) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+    );
+    padding-top: calc(
+        var(
+                --mod-tag-clear-button-spacing-block,
+                var(--spectrum-tag-clear-button-spacing-block)
+            ) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+    );
+}

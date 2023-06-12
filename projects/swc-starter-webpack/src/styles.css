@@ -109,6 +109,10 @@ sp-textfield {
     margin-bottom: 20px;
 }
 
+sp-toast {
+    margin: 20px;
+}
+
 h3 {
     color: black;
     font-family: 'Lato', sans-serif;
@@ -128,8 +132,8 @@ h3 {
 }
 p {
     color: grey;
-    font-family: 'Lucida Sans', Arial, sans-serif;
-    font-size: 14px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 12px;
     text-indent: 30px;
     margin: 10px 0px 10px 0px;
 }

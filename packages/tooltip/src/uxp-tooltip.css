@@ -26,26 +26,36 @@ governing permissions and limitations under the License.
 
 /* Workarounds for - https://jira.corp.adobe.com/browse/UXP-21118 */
 #tip:after {
-    border-width: calc(-1 * var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height));
+    border-width: calc(
+        -1 * var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height)
+    );
 }
 
 :host([placement*='top']) #tip:after {
     transform: rotate(45deg);
-    margin-top: calc(var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height));
+    margin-top: calc(
+        var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height)
+    );
 }
 
 :host([placement*='left']) #tip:after {
     transform: rotate(45deg);
-    margin-left: calc(var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height));
+    margin-left: calc(
+        var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height)
+    );
 }
 
 :host([placement*='right']) #tip:after {
     transform: rotate(45deg);
-    margin-right: calc(var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height));
+    margin-right: calc(
+        var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height)
+    );
 }
 
 :host([placement*='bottom']) #tip:after {
-    margin-bottom: calc(var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height));
+    margin-bottom: calc(
+        var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height)
+    );
     transform: rotate(45deg);
 }
 
@@ -77,10 +87,22 @@ governing permissions and limitations under the License.
     );
 }
 
-:host([placement*="left"]) #tip, :host([placement*="right"]) #tip {
-    margin-top: calc(var( --spectrum-tooltip-neutral-tip-width, var(--spectrum-global-dimension-size-100) ) * var(--uxp-swc-tooltip-factor));
+:host([placement*='left']) #tip,
+:host([placement*='right']) #tip {
+    margin-top: calc(
+        var(
+                --spectrum-tooltip-neutral-tip-width,
+                var(--spectrum-global-dimension-size-100)
+            ) * var(--uxp-swc-tooltip-factor)
+    );
 }
 
-:host([placement*="top"]) #tip, :host([placement*="bottom"]) #tip {
-    margin-left: calc(var( --spectrum-tooltip-neutral-tip-width, var(--spectrum-global-dimension-size-100) ) * var(--uxp-swc-tooltip-factor));
+:host([placement*='top']) #tip,
+:host([placement*='bottom']) #tip {
+    margin-left: calc(
+        var(
+                --spectrum-tooltip-neutral-tip-width,
+                var(--spectrum-global-dimension-size-100)
+            ) * var(--uxp-swc-tooltip-factor)
+    );
 }

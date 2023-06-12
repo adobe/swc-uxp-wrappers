@@ -1,15 +1,15 @@
 {
-    "name": "@swc-uxp-wrappers/checkbox",
+    "name": "@swc-uxp-wrappers/radio",
     "version": "1.0.0",
     "publishConfig": {
         "access": "public"
     },
-    "description": "UXP wrapper of the @spectrum-web-components/checkbox component",
+    "description": "UXP wrapper of the @spectrum-web-components/radio component",
     "license": "Apache-2.0",
     "repository": {
         "type": "git",
         "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
-        "directory": "packages/checkbox"
+        "directory": "packages/radio"
     },
     "author": "Adobe Inc",
     "main": "src/index.js",
@@ -18,13 +18,14 @@
     "exports": {
         ".": "./src/index.js",
         "./package.json": "./package.json",
-        "./src/Checkbox.js": "./src/Checkbox.js",
-        "./src/CheckboxBase.js": "./src/CheckboxBase.js",
-        "./sp-checkbox.js": "./sp-checkbox.js",
-        "./src/checkbox.css.js": "./src/checkbox.css.js"
+        "./src/Radio.js": "./src/Radio.js",
+        "./src/RadioGroup.js": "./src/RadioGroup.js",
+        "./src/radio.css.js": "./src/radio.css.js",
+        "./sp-radio.js": "./sp-radio.js",
+        "./sp-radio-group.js": "./sp-radio-group.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/checkbox": "npm:@spectrum-web-components/checkbox@0.14.0"
+        "@swc-uxp-internal/radio": "npm:@spectrum-web-components/radio@0.10.0"
     },
     "files": [
         "**/*.js"
@@ -32,6 +33,6 @@
     "keywords": [
         "UXP",
         "Spectrum Web Components",
-        "@spectrum-web-components/checkbox"
+        "@spectrum-web-components/radio"
     ]
 }

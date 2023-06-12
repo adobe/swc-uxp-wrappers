@@ -1,15 +1,15 @@
 {
-    "name": "@swc-uxp-wrappers/checkbox",
+    "name": "@swc-uxp-wrappers/tags",
     "version": "1.0.0",
     "publishConfig": {
         "access": "public"
     },
-    "description": "UXP wrapper of the @spectrum-web-components/checkbox component",
+    "description": "UXP wrapper of the @spectrum-web-components/tags component",
     "license": "Apache-2.0",
     "repository": {
         "type": "git",
         "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
-        "directory": "packages/checkbox"
+        "directory": "packages/tags"
     },
     "author": "Adobe Inc",
     "main": "src/index.js",
@@ -18,13 +18,15 @@
     "exports": {
         ".": "./src/index.js",
         "./package.json": "./package.json",
-        "./src/Checkbox.js": "./src/Checkbox.js",
-        "./src/CheckboxBase.js": "./src/CheckboxBase.js",
-        "./sp-checkbox.js": "./sp-checkbox.js",
-        "./src/checkbox.css.js": "./src/checkbox.css.js"
+        "./src/Tags.js": "./src/Tags.js",
+        "./src/Tag.js": "./src/Tag.js",
+        "./src/tags.css.js": "./src/tags.css.js",
+        "./src/tag.css.js": "./src/tag.css.js",
+        "./sp-tags.js": "./sp-tags.js",
+        "./sp-tag.js": "./sp-tag.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/checkbox": "npm:@spectrum-web-components/checkbox@0.14.0"
+        "@swc-uxp-internal/tags": "npm:@spectrum-web-components/tags@0.10.1"
     },
     "files": [
         "**/*.js"
@@ -32,6 +34,6 @@
     "keywords": [
         "UXP",
         "Spectrum Web Components",
-        "@spectrum-web-components/checkbox"
+        "@spectrum-web-components/tags"
     ]
 }

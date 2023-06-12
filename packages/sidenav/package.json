@@ -1,0 +1,42 @@
+{
+    "name": "@swc-uxp-wrappers/sidenav",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/sidenav component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/sidenav"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/Sidenav.js": "./src/Sidenav.js",
+        "./src/SidenavHeading.js": "./src/SidenavHeading.js",
+        "./src/SidenavItem.js": "./src/SidenavItem.js",
+        "./src/sidenav.css.js": "./src/sidenav.css.js",
+        "./src/sidenav-heading.css.js": "./src/sidenav-heading.css.js",
+        "./src/sidenav-item.css.js": "./src/sidenav-item.css.js",
+        "./sp-sidenav.js": "./sp-sidenav.js",
+        "./sp-sidenav-item.js": "./sp-sidenav-item.js",
+        "./sp-sidenav-heading.js": "./sp-sidenav-heading.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/sidenav": "npm:@spectrum-web-components/sidenav@0.13.7"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/sidenav"
+    ]
+}

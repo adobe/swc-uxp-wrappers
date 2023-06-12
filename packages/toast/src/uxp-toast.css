@@ -1,0 +1,112 @@
+/*
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* write uxp style overrides */
+
+/* Workarounds for - https://jira.corp.adobe.com/browse/UXP-21295 */
+:host {
+    --uxp-swc-toast-button-border-left-width: 1px;
+    --uxp-swc-toast-button-border-left-style: solid;
+}
+
+:host {
+    padding-left: var(
+        --mod-toast-spacing-start-edge-to-text-and-icon,
+        var(--spectrum-toast-spacing-start-edge-to-text-and-icon)
+    );
+}
+
+.body {
+    padding-bottom: var(
+        --mod-toast-spacing-block-end,
+        var(--spectrum-toast-spacing-block-end)
+    );
+    padding-top: var(
+        --mod-toast-spacing-block-start,
+        var(--spectrum-toast-spacing-block-start)
+    );
+}
+
+.body + .buttons {
+    border-left-style: var(--uxp-swc-toast-button-border-left-style);
+    border-left-width: var(--uxp-swc-toast-button-border-left-width);
+    padding-left: var(
+        --mod-toast-spacing-close-button,
+        var(--spectrum-toast-spacing-close-button)
+    );
+}
+
+.buttons {
+    border-left-color: var(
+        --mod-toast-divider-color,
+        var(--spectrum-toast-divider-color)
+    );
+    margin-bottom: var(
+        --mod-toast-spacing-bottom-edge-to-divider,
+        var(--spectrum-toast-spacing-bottom-edge-to-divider)
+    );
+    margin-top: var(
+        --mod-toast-spacing-top-edge-to-divider,
+        var(--spectrum-toast-spacing-top-edge-to-divider)
+    );
+    padding-right: var(
+        --mod-toast-spacing-close-button,
+        var(--spectrum-toast-spacing-close-button)
+    );
+}
+
+.type {
+    margin-top: var(
+        --mod-toast-spacing-top-edge-to-icon,
+        var(--spectrum-toast-spacing-top-edge-to-icon)
+    );
+    margin-right: var(
+        --mod-toast-spacing-icon-to-text,
+        var(--spectrum-toast-spacing-icon-to-text)
+    );
+    margin-left: 0px;
+}
+
+.content {
+    padding-bottom: calc(
+        var(
+                --mod-toast-spacing-bottom-edge-to-text,
+                var(--spectrum-toast-spacing-bottom-edge-to-text)
+            ) -
+            var(
+                --mod-toast-spacing-block-end,
+                var(--spectrum-toast-spacing-block-end)
+            )
+    );
+    padding-top: calc(
+        var(
+                --mod-toast-spacing-top-edge-to-text,
+                var(--spectrum-toast-spacing-top-edge-to-text)
+            ) -
+            var(
+                --mod-toast-spacing-block-start,
+                var(--spectrum-toast-spacing-block-start)
+            )
+    );
+    padding-right: var(
+        --mod-toast-spacing-text-to-action-button-horizontal,
+        var(--spectrum-toast-spacing-text-to-action-button-horizontal)
+    );
+    padding-left: 0;
+}
+
+.body ::slotted([slot='action']) {
+    margin-right: var(
+        --mod-toast-spacing-text-and-action-button-to-divider,
+        var(--spectrum-toast-spacing-text-and-action-button-to-divider)
+    );
+}

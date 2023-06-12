@@ -35,6 +35,15 @@ import { HelpText } from '@spectrum-web-components/help-text';
 import { Textfield } from '@spectrum-web-components/textfield';
 import { Dialog } from '@spectrum-web-components/dialog';
 import { ButtonGroup } from '@spectrum-web-components/button-group';
+import { Toast } from '@spectrum-web-components/toast';
+import { Switch } from '@spectrum-web-components/switch';
+import {
+    SideNav,
+    SideNavItem,
+    SideNavHeading,
+} from '@spectrum-web-components/sidenav';
+import { Radio, RadioGroup } from '@spectrum-web-components/radio';
+import { Tags, Tag } from '@spectrum-web-components/tags';
 
 import { css } from 'lit';
 
@@ -306,6 +315,111 @@ class MyButtonGroup extends ButtonGroup {
     ];
 }
 
+class MyToast extends Toast {
+    static styles = [
+        Toast.styles,
+        css`
+            :host {
+                background-color: lightcoral;
+                border-radius: 15px;
+            }
+        `,
+    ];
+}
+
+class MySwitch extends Switch {
+    static styles = [
+        Switch.styles,
+        css`
+            :host {
+                background-color: lightcoral;
+                border-radius: 10px;
+                font-style: italic;
+            }
+        `,
+    ];
+}
+
+class MySideNav extends SideNav {
+    static styles = [
+        SideNav.styles,
+        css`
+            :host {
+                background-color: aquamarine;
+            }
+        `,
+    ];
+}
+
+class MySideNavItem extends SideNavItem {
+    static styles = [
+        SideNavItem.styles,
+        css`
+            :host {
+                border-bottom: 1px solid black;
+            }
+        `,
+    ];
+}
+
+class MySideNavHeading extends SideNavHeading {
+    static styles = [
+        SideNavHeading.styles,
+        css`
+            :host {
+                background-color: lightcoral;
+            }
+        `,
+    ];
+}
+
+class MyRadio extends Radio {
+    static styles = [
+        Radio.styles,
+        css`
+            :host([dir='ltr']) #label {
+                font-style: italic;
+            }
+        `,
+    ];
+}
+
+class MyRadioGroup extends RadioGroup {
+    static styles = [
+        RadioGroup.styles,
+        css`
+            :host {
+                background-color: mediumaquamarine;
+            }
+        `,
+    ];
+}
+
+class MyTags extends Tags {
+    static styles = [
+        Tags.styles,
+        css`
+            :host {
+                border-bottom: 3px solid black;
+            }
+            ::slotted(*) {
+                font-style: italic;
+            }
+        `,
+    ];
+}
+
+class MyTag extends Tag {
+    static styles = [
+        Tag.styles,
+        css`
+            :host {
+                background-color: mediumaquamarine;
+            }
+        `,
+    ];
+}
+
 customElements.define('my-banner', MyBanner);
 customElements.define('my-action-group', MyActionGroup);
 customElements.define('my-checkbox', MyCheckbox);
@@ -329,3 +443,12 @@ customElements.define('my-help-text', MyHelpText);
 customElements.define('my-textfield', MyTextfield);
 customElements.define('my-dialog', MyDialog);
 customElements.define('my-button-group', MyButtonGroup);
+customElements.define('my-toast', MyToast);
+customElements.define('my-switch', MySwitch);
+customElements.define('my-sidenav', MySideNav);
+customElements.define('my-sidenav-item', MySideNavItem);
+customElements.define('my-sidenav-heading', MySideNavHeading);
+customElements.define('my-radio', MyRadio);
+customElements.define('my-radio-group', MyRadioGroup);
+customElements.define('my-tags', MyTags);
+customElements.define('my-tag', MyTag);
