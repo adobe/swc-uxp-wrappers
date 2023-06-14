@@ -38,6 +38,7 @@ export const aliases = {
     '@spectrum-web-components/dialog': '@swc-uxp-wrappers/dialog',
     '@spectrum-web-components/button-group': '@swc-uxp-wrappers/button-group',
     '@spectrum-web-components/toast': '@swc-uxp-wrappers/toast',
+    '@spectrum-web-components/field-group': '@swc-uxp-wrappers/field-group',
     '@spectrum-web-components/switch': '@swc-uxp-wrappers/switch',
     '@spectrum-web-components/radio': '@swc-uxp-wrappers/radio',
     '@spectrum-web-components/tags': '@swc-uxp-wrappers/tags',

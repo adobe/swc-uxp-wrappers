@@ -38,6 +38,7 @@
         "@swc-uxp-wrappers/help-text": "*",
         "@swc-uxp-wrappers/picker-button": "*",
         "@swc-uxp-wrappers/dialog": "*",
+        "@swc-uxp-wrappers/field-group": "*",
         "@swc-uxp-wrappers/button-group": "*",
         "@spectrum-web-components/theme": "0.14.9",
         "@spectrum-web-components/textfield": "0.13.8",

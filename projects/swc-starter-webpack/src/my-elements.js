@@ -44,6 +44,7 @@ import {
 } from '@spectrum-web-components/sidenav';
 import { Radio, RadioGroup } from '@spectrum-web-components/radio';
 import { Tags, Tag } from '@spectrum-web-components/tags';
+import { FieldGroup } from '@spectrum-web-components/field-group';
 
 import { css } from 'lit';
 
@@ -420,6 +421,19 @@ class MyTag extends Tag {
     ];
 }
 
+class MyFieldGroup extends FieldGroup {
+    static styles = [
+        FieldGroup.styles,
+        css`
+            .group {
+                background-color: aquamarine;
+                border: 1px solid black;
+                padding: 0px 10px;
+            }
+        `,
+    ];
+}
+
 customElements.define('my-banner', MyBanner);
 customElements.define('my-action-group', MyActionGroup);
 customElements.define('my-checkbox', MyCheckbox);
@@ -452,3 +466,4 @@ customElements.define('my-radio', MyRadio);
 customElements.define('my-radio-group', MyRadioGroup);
 customElements.define('my-tags', MyTags);
 customElements.define('my-tag', MyTag);
+customElements.define('my-field-group', MyFieldGroup);

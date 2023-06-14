@@ -904,14 +904,13 @@
     "@spectrum-web-components/base" "^0.7.0"
     tslib "^2.0.0"
 
-"@spectrum-web-components/field-group@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/field-group/-/field-group-0.6.0.tgz#1ce339ba0bbf5f79b38c1bb96a1444921e023ec2"
-  integrity sha512-zH8eJcwI9zZhcy3543oHNEcuLeEal7ZrvUdTAekUBFPwxvs9b3NOk80BSNzRtG8n3ZASYH56JaBoTdRc8Nh00g==
+"@spectrum-web-components/field-group@0.8.2", "@spectrum-web-components/field-group@^0.6.0", "@swc-uxp-internal/field-group@npm:@spectrum-web-components/field-group@0.8.2":
+  version "0.8.2"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/field-group/-/field-group-0.8.2.tgz#a7ed9ea66cad771076eb8c18fa1e8bd239e4fff0"
+  integrity sha512-GjToE052bHnPY3v1UX6FQt8lyayxp4pW8s3b800h24RoakMgicYzUGJZ1qwjbgDMYkysJQq0DoNinaaAX0XdTA==
   dependencies:
-    "@spectrum-web-components/base" "^0.7.0"
-    "@spectrum-web-components/help-text" "^0.2.0"
-    tslib "^2.0.0"
+    "@spectrum-web-components/base" "^0.7.4"
+    "@spectrum-web-components/help-text" "^0.2.9"
 
 "@spectrum-web-components/field-label@0.10.3":
   version "0.10.3"
@@ -924,7 +923,7 @@
     "@spectrum-web-components/reactive-controllers" "^0.3.4"
     "@spectrum-web-components/shared" "^0.15.3"
 
-"@spectrum-web-components/help-text@0.2.7", "@spectrum-web-components/help-text@^0.2.0", "@spectrum-web-components/help-text@^0.2.7", "@swc-uxp-internal/help-text@npm:@spectrum-web-components/help-text@0.2.7":
+"@spectrum-web-components/help-text@0.2.7", "@spectrum-web-components/help-text@^0.2.0", "@spectrum-web-components/help-text@^0.2.7", "@spectrum-web-components/help-text@^0.2.9", "@swc-uxp-internal/help-text@npm:@spectrum-web-components/help-text@0.2.7":
   version "0.2.7"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/help-text/-/help-text-0.2.7.tgz#2b54c117467b661f5da6bdb7d83cf7c13fc47fde"
   integrity sha512-cw7cONYAK0OfvrTckShkVHfBaGx7LSdFisoLhb8sR4Tnmw/vDJfMs/9qHT9JbOHDpnHcKqb0PxqnuoR0/fNW8g==
