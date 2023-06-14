@@ -16,7 +16,7 @@ import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
 import { BundleAnalyzerPlugin } from 'webpack-bundle-analyzer';
 
-import { aliases } from './alias.js';
+import { aliases } from '@swc-uxp-wrappers/utils';
 
 const ENV = process.argv.find((arg) => arg.includes('NODE_ENV=production'))
     ? 'production'

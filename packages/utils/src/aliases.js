@@ -10,6 +10,10 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+/** This file handles aliasing of spectrum-web-components to corresponding swc-uxp-wrappers
+ *  also we have handled few aliasing for transitive dependencies (menu and table components)
+ *  integrator have to import these aliases list in the bundler/package manager and pass on to aliasing module.
+ */
 export const aliases = {
     '@spectrum-web-components/banner': '@swc-uxp-wrappers/banner',
     '@spectrum-web-components/divider': '@swc-uxp-wrappers/divider',
