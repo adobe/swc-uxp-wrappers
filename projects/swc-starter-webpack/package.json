@@ -26,6 +26,7 @@
         "@swc-uxp-wrappers/action-bar": "*",
         "@swc-uxp-wrappers/popover": "*",
         "@swc-uxp-wrappers/menu": "*",
+        "@swc-uxp-wrappers/utils": "*",
         "@swc-uxp-wrappers/table": "*",
         "@swc-uxp-wrappers/textfield": "*",
         "@swc-uxp-wrappers/checkbox": "*",

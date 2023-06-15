@@ -43,15 +43,15 @@ export const aliases = {
     '@spectrum-web-components/radio': '@swc-uxp-wrappers/radio',
     '@spectrum-web-components/tags': '@swc-uxp-wrappers/tags',
     '@spectrum-web-components/sidenav': '@swc-uxp-wrappers/sidenav',
-    '../sp-menu.dev.js': '@spectrum-web-components/menu/sp-menu.js',
-    '../sp-menu.js': '@spectrum-web-components/menu/sp-menu.js',
-    '../sp-table-row.dev.js': '@spectrum-web-components/table/sp-table-row.js',
-    '../sp-table-row.js': '@spectrum-web-components/table/sp-table-row.js',
+    '../sp-menu.dev.js': '@swc-uxp-wrappers/menu/sp-menu.js',
+    '../sp-menu.js': '@swc-uxp-wrappers/menu/sp-menu.js',
+    '../sp-table-row.dev.js': '@swc-uxp-wrappers/table/sp-table-row.js',
+    '../sp-table-row.js': '@swc-uxp-wrappers/table/sp-table-row.js',
     '../sp-table-checkbox-cell.dev.js':
-        '@spectrum-web-components/table/sp-table-checkbox-cell.js',
+        '@swc-uxp-wrappers/table/sp-table-checkbox-cell.js',
     '../sp-table-checkbox-cell.js':
-        '@spectrum-web-components/table/sp-table-checkbox-cell.js',
+        '@swc-uxp-wrappers/table/sp-table-checkbox-cell.js',
     '../sp-table-body.dev.js':
-        '@spectrum-web-components/table/sp-table-body.js',
-    '../sp-table-body.js': '@spectrum-web-components/table/sp-table-body.js',
+        '@swc-uxp-wrappers/table/sp-table-body.js',
+    '../sp-table-body.js': '@swc-uxp-wrappers/table/sp-table-body.js',
 };

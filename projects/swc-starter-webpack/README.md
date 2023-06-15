@@ -10,6 +10,8 @@ To generate dist output folder run `yarn build`
 # Config
 
 You need to add `@swc-uxp-wrappers/<component-name>` in the package dependencies and add it as alias for `@spectrum-web-components/<component-name>` in webpack config file.
+or
+Add `@swc-uxp-wrappers/utils` which exports a defined set of aliases used in the library serving as an abstraction for the need of aliasing by integrators.
 
 For example:
 
@@ -24,7 +26,11 @@ For example:
 -   `webpack.config.js`
 
 ```js
-alias: {
-    '@spectrum-web-components/banner' : '@swc-uxp-wrappers/banner'
+import { aliases } from '@swc-uxp-wrappers/utils';
+
+resolve: {
+    extensions: ['.js', '.json'],
+    // This is required for the spectrum web component to properly work in UXP
+    alias: aliases,
 }
 ```

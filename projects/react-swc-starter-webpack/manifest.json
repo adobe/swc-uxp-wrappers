@@ -1,0 +1,45 @@
+{
+    "name": "react-swc-starter-webpack",
+    "id": "react-swc-starter-webpack",
+    "version": "1.0.0",
+    "main": "index.html",
+    "manifestVersion": 4,
+    "featureFlags": {
+        "enableSWCSupport": true
+    },
+    "entrypoints": [
+        {
+            "type": "panel",
+            "id": "vanilla",
+            "label": {
+                "default": "SWC Starter"
+            },
+            "minimumSize": {
+                "width": 1200,
+                "height": 800
+            },
+            "maximumSize": {
+                "width": 1200,
+                "height": 800
+            },
+            "preferredDockedSize": {
+                "width": 1200,
+                "height": 800
+            },
+            "preferredFloatingSize": {
+                "width": 1200,
+                "height": 800
+            }
+        }
+    ],
+    "host": [
+        {
+            "app": "PS",
+            "minVersion": "24.4.0"
+        },
+        {
+            "app": "UXPS",
+            "minVersion": "1.0.0"
+        }
+    ]
+}
