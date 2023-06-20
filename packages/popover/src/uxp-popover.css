@@ -14,7 +14,13 @@ governing permissions and limitations under the License.
 
 /* Workaround for - https://jira.corp.adobe.com/browse/UXP-21331 */
 :host {
-    box-shadow: 0 2px 6px
+    --uxp-swc-horizontal-offset: 0px;
+    --uxp-swc-vertical-offset: 2px;
+    --uxp-swc-blur: 6px;
+    --uxp-swc-placement-left-margin-left: -6px;
+    --uxp-swc-placement-right-margin-left: -18px;
+    box-shadow: var(--uxp-swc-horizontal-offset) var(--uxp-swc-vertical-offset)
+        var(--uxp-swc-blur)
         var(
             --spectrum-popover-shadow-color,
             var(--spectrum-alias-dropshadow-color)
@@ -28,12 +34,12 @@ governing permissions and limitations under the License.
 /* Workaround for - https://jira.corp.adobe.com/browse/UXP-21332 */
 :host([placement*='left']) .tip {
     transform: rotate(-90deg);
-    height: 22px;
-    margin-left: -6px;
+    height: var(--sp-popover-tip-size);
+    margin-left: var(--uxp-swc-placement-left-margin-left);
 }
 
 :host([placement*='right']) .tip {
     transform: rotate(90deg);
-    height: 22px;
-    margin-left: -18px;
+    height: var(--sp-popover-tip-size);
+    margin-left: var(--uxp-swc-placement-right-margin-left);
 }

@@ -37,6 +37,7 @@ import '@spectrum-web-components/menu/sp-menu-item.js';
 import '@spectrum-web-components/menu/sp-menu-group.js';
 import '@spectrum-web-components/menu/sp-menu-divider.js';
 import '@spectrum-web-components/toast/sp-toast.js';
+import '@spectrum-web-components/dialog/sp-dialog.js';
 import '@spectrum-web-components/switch/sp-switch.js';
 import '@spectrum-web-components/sidenav/sp-sidenav.js';
 import '@spectrum-web-components/sidenav/sp-sidenav-heading.js';

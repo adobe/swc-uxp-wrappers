@@ -51,7 +51,6 @@ export const aliases = {
         '@swc-uxp-wrappers/table/sp-table-checkbox-cell.js',
     '../sp-table-checkbox-cell.js':
         '@swc-uxp-wrappers/table/sp-table-checkbox-cell.js',
-    '../sp-table-body.dev.js':
-        '@swc-uxp-wrappers/table/sp-table-body.js',
+    '../sp-table-body.dev.js': '@swc-uxp-wrappers/table/sp-table-body.js',
     '../sp-table-body.js': '@swc-uxp-wrappers/table/sp-table-body.js',
 };
