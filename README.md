@@ -1,11 +1,21 @@
 # Spectrum Web Components UXP Wrappers
 
-For supporting [Spectrum Web Components(SWC)](https://github.com/adobe/spectrum-web-components) in UXP, we are creating wrappers over each spectrum web component.
+## What is this effort?
 
-This approach allows us to
+The opensource [Spectrum Web Components(SWC)](https://github.com/adobe/spectrum-web-components) UI library (hereafter referred to as SWC) targets the modern browser as a platform, replete with support for almost all CSS properties, layout models and Web APIs conforming to the latest standards. UXP never intends to be an all-encompassing browser and thus doesn't support a considerable section of these aforementioned APIs and properties. To bridge this chasm, the UXP team has decided to supplant some of the CSS properties and layout models with other UXP-supported properties in an attempt to achieve UI parity with that of SWC on web. This wrapper is an implementation of this approach.
+
+## What does this repository contain?
+
+This repository contains, as the name implies, wrappers over the opensource SWC components so that these components can be used in a UXP context, utilizing CSS properties etc. that are compatible with the UXP library.
+
+## How does this approach work?
+
+UXP doesn't _re-create_ the entire SWC repository but rather _extends_ from the existing components and (currently) only _overrides_ the CSS styles to address the gaps between UXP and that of a modern web browser. An example to illustrate this is wherein the `display: grid` property which indicates the usage of a Grid layout is replaced with `display: flex` (Flex layout model) and other appurtenant changes in CSS styles to achieve parity with Grid layout. 
+
+### This approach allows us to
 
 -   override the css styles to make the component work properly in UXP
--   lock the underlying spectrum web component version to be compatible with UXP
+-   lock the underlying spectrum web component version to be compatible with UXP, insulating UXP wrappers from frequent changes in the SWC library
 
 # Getting started
 
