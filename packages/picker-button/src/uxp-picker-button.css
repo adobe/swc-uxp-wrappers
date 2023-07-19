@@ -16,3 +16,15 @@ governing permissions and limitations under the License.
 .spectrum-PickerButton-label {
     padding-right: var(--spectrum-global-dimension-size-50);
 }
+
+:host(:not([invalid]):not([disabled]).focus-visible) .root .spectrum-PickerButton-fill {
+    border-color: var(--spectrum-alias-infieldbutton-fill-border-color-key-focus, var(--spectrum-alias-input-border-color-key-focus))
+}
+
+:host([invalid]:not([disabled]).focus-visible) .root .spectrum-PickerButton-fill {
+    border-color: var(--spectrum-alias-input-border-color-invalid-key-focus, var(--spectrum-alias-border-color-key-focus))
+}
+
+:host(:not([invalid]):not([disabled]).focus-visible) .root.spectrum-PickerButton--quiet .spectrum-PickerButton-fill {
+    border-color: transparent
+}
