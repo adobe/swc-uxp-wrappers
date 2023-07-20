@@ -11,3 +11,11 @@ governing permissions and limitations under the License.
 */
 
 /* write uxp style overrides */
+
+/* Workaround for missing inset property: https://jira.corp.adobe.com/browse/UXP-20649 */
+:host:after {
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+}
