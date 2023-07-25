@@ -73,10 +73,10 @@ governing permissions and limitations under the License.
         var(--spectrum-dialog-confirm-padding) +
             var(--spectrum-dialog-confirm-description-margin)
     );
-    overflow: auto;
-    max-height: inherit;
-    /* max-height: calc(100% - calc(3 * var(--spectrum-dialog-confirm-padding))); */
-    /* Keeping this style this here, will be used in wrapper */
+    /* Keeping this style here, will be used in dialog-wrapper once overlay is supported */
+    /* overflow: auto;
+    max-height: inherit; 
+    max-height: calc(100% - calc(3 * var(--spectrum-dialog-confirm-padding))); */
 }
 
 .divider {
