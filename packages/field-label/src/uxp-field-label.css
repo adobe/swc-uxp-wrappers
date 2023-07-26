@@ -36,3 +36,9 @@ governing permissions and limitations under the License.
         var(--spectrum-fieldlabel-asterisk-gap)
     );
 }
+
+/* Workaround for - https://jira.corp.adobe.com/browse/UXP-21381 */
+:host {
+    padding-top: var(--spectrum-fieldlabel-top-to-text);
+    padding-bottom: var(--spectrum-fieldlabel-bottom-to-text);
+}
