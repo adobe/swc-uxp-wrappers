@@ -23,7 +23,8 @@
         "./sp-field-group.js": "./sp-field-group.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/field-group": "npm:@spectrum-web-components/field-group@0.8.2"
+        "@swc-uxp-internal/field-group": "npm:@spectrum-web-components/field-group@0.8.2",
+        "@swc-uxp-wrappers/help-text": "1.0.0"
     },
     "files": [
         "**/*.js"

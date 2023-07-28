@@ -32,7 +32,9 @@
         "./src/menu-item.css.js": "./src/uxp-menu-item.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/menu": "npm:@spectrum-web-components/menu@0.16.9"
+        "@swc-uxp-internal/menu": "npm:@spectrum-web-components/menu@0.16.9",
+        "@swc-uxp-wrappers/divider": "1.0.0",
+        "@swc-uxp-wrappers/action-button": "1.0.0"
     },
     "files": [
         "**/*.js"

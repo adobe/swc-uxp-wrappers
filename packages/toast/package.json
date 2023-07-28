@@ -23,7 +23,8 @@
         "./sp-toast.js": "./sp-toast.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/toast": "npm:@spectrum-web-components/toast@0.11.9"
+        "@swc-uxp-internal/toast": "npm:@spectrum-web-components/toast@0.11.9",
+        "@swc-uxp-wrappers/button": "1.0.0"
     },
     "files": [
         "**/*.js"

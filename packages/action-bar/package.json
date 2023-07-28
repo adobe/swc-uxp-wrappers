@@ -23,7 +23,8 @@
         "./sp-action-bar.js": "./sp-action-bar.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/action-bar": "npm:@spectrum-web-components/action-bar@0.5.9"
+        "@swc-uxp-internal/action-bar": "npm:@spectrum-web-components/action-bar@0.5.9",
+        "@swc-uxp-wrappers/popover": "1.0.0"
     },
     "files": [
         "**/*.js"

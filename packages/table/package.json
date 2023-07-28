@@ -41,7 +41,8 @@
         "./sp-table-row.js": "./sp-table-row.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/table": "npm:@spectrum-web-components/table@0.1.7"
+        "@swc-uxp-internal/table": "npm:@spectrum-web-components/table@0.1.7",
+        "@swc-uxp-wrappers/checkbox": "1.0.0"
     },
     "files": [
         "**/*.js"

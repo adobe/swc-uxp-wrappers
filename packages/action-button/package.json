@@ -23,7 +23,8 @@
         "./src/action-button.css.js": "./src/action-button.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/action-button": "npm:@spectrum-web-components/action-button@0.8.7"
+        "@swc-uxp-internal/action-button": "npm:@spectrum-web-components/action-button@0.8.7",
+        "@swc-uxp-wrappers/button": "1.0.0"
     },
     "files": [
         "**/*.js"

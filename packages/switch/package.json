@@ -23,7 +23,8 @@
         "./sp-switch.js": "./sp-switch.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/switch": "npm:@spectrum-web-components/switch@0.10.0"
+        "@swc-uxp-internal/switch": "npm:@spectrum-web-components/switch@0.10.0",
+        "@swc-uxp-wrappers/checkbox": "1.0.0"
     },
     "files": [
         "**/*.js"

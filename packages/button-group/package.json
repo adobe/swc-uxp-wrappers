@@ -23,7 +23,8 @@
         "./sp-button-group.js": "./sp-button-group.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/button-group": "npm:@spectrum-web-components/button-group@0.10.8"
+        "@swc-uxp-internal/button-group": "npm:@spectrum-web-components/button-group@0.10.8",
+        "@swc-uxp-wrappers/button": "1.0.0"
     },
     "files": [
         "**/*.js"

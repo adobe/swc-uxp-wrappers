@@ -26,7 +26,8 @@
         "./sp-tag.js": "./sp-tag.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/tags": "npm:@spectrum-web-components/tags@0.10.1"
+        "@swc-uxp-internal/tags": "npm:@spectrum-web-components/tags@0.10.1",
+        "@swc-uxp-wrappers/button": "1.0.0"
     },
     "files": [
         "**/*.js"

@@ -23,7 +23,8 @@
         "./sp-textfield.js": "./sp-textfield.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/textfield": "npm:@spectrum-web-components/textfield@0.13.8"
+        "@swc-uxp-internal/textfield": "npm:@spectrum-web-components/textfield@0.13.8",
+        "@swc-uxp-wrappers/help-text": "1.0.0"
     },
     "files": [
         "**/*.js"

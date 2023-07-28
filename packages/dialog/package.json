@@ -27,7 +27,10 @@
         "./src/dialog.css.js": "./src/dialog.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/dialog": "npm:@spectrum-web-components/dialog@0.11.12"
+        "@swc-uxp-internal/dialog": "npm:@spectrum-web-components/dialog@0.11.12",
+        "@swc-uxp-wrappers/button": "1.0.0",
+        "@swc-uxp-wrappers/button-group": "1.0.0",
+        "@swc-uxp-wrappers/divider": "1.0.0"
     },
     "files": [
         "**/*.js"

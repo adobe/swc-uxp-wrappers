@@ -23,7 +23,8 @@
         "./src/action-group.css.js": "./src/action-group.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/action-group": "npm:@spectrum-web-components/action-group@0.12.4"
+        "@swc-uxp-internal/action-group": "npm:@spectrum-web-components/action-group@0.12.4",
+        "@swc-uxp-wrappers/action-button": "1.0.0"
     },
     "files": [
         "**/*.js"
