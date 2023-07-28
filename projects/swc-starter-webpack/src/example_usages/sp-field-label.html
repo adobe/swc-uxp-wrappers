@@ -1,0 +1,78 @@
+<!-- 
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License. 
+-->
+
+<h3>sp-field-label</h3>
+
+<div id="content">
+    <div id="left">
+        <div id="subtitle">sp-field-label</div>
+        <div>
+            <sp-field-label for="lifestory-1" style="width: 100px">
+                Life Story
+            </sp-field-label>
+            <sp-textfield
+                placeholder="Enter your life story"
+                id="lifestory-1"
+            ></sp-textfield>
+            <br />
+            <sp-field-label
+                for="lifestory-2"
+                side-aligned="start"
+                style="width: 100px"
+            >
+                Life Story
+            </sp-field-label>
+            <sp-textfield
+                placeholder="Enter your life story"
+                id="lifestory-2"
+            ></sp-textfield>
+            <br />
+            <sp-field-label
+                required
+                for="lifestory-3"
+                side-aligned="end"
+                style="width: 100px"
+            >
+                Life Story
+            </sp-field-label>
+            <sp-textfield
+                placeholder="Enter your life story"
+                id="lifestory-3"
+            ></sp-textfield>
+            <br />
+            <sp-field-label
+                required
+                disabled
+                for="lifestory-4"
+                side-aligned="end"
+                style="width: 100px"
+            >
+                Life Story
+            </sp-field-label>
+            <sp-textfield
+                placeholder="Enter your life story"
+                id="lifestory-4"
+            ></sp-textfield>
+        </div>
+    </div>
+
+    <div id="right">
+        <div id="subtitle">my-field-label</div>
+        <my-field-label class="my-field-label" for="lifestory-5">
+            my-field-label is italic
+        </my-field-label>
+        <sp-textfield
+            placeholder="Enter your life story"
+            id="lifestory-5"
+        ></sp-textfield>
+    </div>
+</div>

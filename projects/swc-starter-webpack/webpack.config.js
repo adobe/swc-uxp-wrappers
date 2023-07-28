@@ -39,6 +39,16 @@ const copyStatics = {
             to: OUTPUT_PATH,
         },
         {
+            from: '*helper.js',
+            context: resolve('./src'),
+            to: OUTPUT_PATH,
+        },
+        {
+            from: '*.html',
+            context: resolve('./src/example_usages'),
+            to: resolve(OUTPUT_PATH, 'example_usages'),
+        },
+        {
             from: 'debug.json',
             context: resolve('./'),
             to: OUTPUT_PATH,

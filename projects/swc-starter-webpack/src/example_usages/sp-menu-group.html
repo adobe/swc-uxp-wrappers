@@ -1,0 +1,101 @@
+<!-- 
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License. 
+-->
+
+<h3>sp-menu-group</h3>
+
+<div id="content">
+    <div id="left">
+        <div id="subtitle">sp-menu-group</div>
+        <div>
+            <p>
+                Your favorite park in New York is:
+                <span id="group-1-value"></span>
+                <br />
+                <br />
+                Your favorite park in San Fransisco is:
+                <span id="group-2-value"></span>
+            </p>
+            <sp-popover open style="position: relative">
+                <sp-menu
+                    label="What are your favorite parks?"
+                    style="width: 200px"
+                    onchange="this.parentElement
+                                                .previousElementSibling
+                                                .querySelector(`#${arguments[0].target.id}-value`)
+                                                .textContent = arguments[0].target.value"
+                >
+                    <sp-menu-group id="group-1" selects="single">
+                        <span slot="header">New York</span>
+                        <sp-menu-item>Central Park</sp-menu-item>
+                        <sp-menu-item>
+                            Flushing Meadows Corona Park
+                        </sp-menu-item>
+                        <sp-menu-item>Prospect Park</sp-menu-item>
+                    </sp-menu-group>
+                    <sp-menu-group id="group-2" selects="single">
+                        <span slot="header">San Fransisco</span>
+                        <sp-menu-item>Golden Gate Park</sp-menu-item>
+                        <sp-menu-item>John McLaren Park</sp-menu-item>
+                        <sp-menu-item>Lake Merced Park</sp-menu-item>
+                    </sp-menu-group>
+                </sp-menu>
+            </sp-popover>
+        </div>
+    </div>
+
+    <div id="right">
+        <div id="subtitle">my-menu-group</div>
+        <div>
+            <p>
+                Your favorite park in New York is:
+                <span id="group-1-value"></span>
+                <br />
+                <br />
+                Your favorite park in San Fransisco is:
+                <span id="group-2-value"></span>
+            </p>
+            <sp-popover open style="position: relative">
+                <sp-menu
+                    label="What are your favorite parks?"
+                    style="width: 200px"
+                    onchange="this.parentElement
+                                                .previousElementSibling
+                                                .querySelector(`#${arguments[0].target.id}-value`)
+                                                .textContent = arguments[0].target.value"
+                >
+                    <my-menu-group
+                        class="my-menu-group"
+                        id="group-1"
+                        selects="single"
+                    >
+                        <span slot="header">New York</span>
+                        <sp-menu-item>Central Park</sp-menu-item>
+                        <sp-menu-item>
+                            Flushing Meadows Corona Park
+                        </sp-menu-item>
+                        <sp-menu-item>Prospect Park</sp-menu-item>
+                    </my-menu-group>
+                    <my-menu-group
+                        class="my-menu-group"
+                        id="group-2"
+                        selects="single"
+                    >
+                        <span slot="header">San Fransisco</span>
+                        <sp-menu-item>Golden Gate Park</sp-menu-item>
+                        <sp-menu-item>John McLaren Park</sp-menu-item>
+                        <sp-menu-item>Lake Merced Park</sp-menu-item>
+                    </my-menu-group>
+                </sp-menu>
+            </sp-popover>
+        </div>
+    </div>
+</div>

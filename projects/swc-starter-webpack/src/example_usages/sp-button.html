@@ -1,0 +1,72 @@
+<!-- 
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License. 
+-->
+
+<h3>sp-button</h3>
+
+<div id="content">
+    <div id="left">
+        <div id="subtitle">sp-button</div>
+        <div>
+            <sp-button
+                treatment="fill"
+                variant="primary"
+                style="margin: 10px; margin-left: 0px"
+            >
+                Primary, Fill
+            </sp-button>
+            <sp-button
+                treatment="fill"
+                variant="secondary"
+                style="margin: 10px"
+            >
+                Secondary, Fill
+            </sp-button>
+            <sp-button treatment="fill" variant="negative" style="margin: 10px">
+                Negative, Fill
+            </sp-button>
+        </div>
+        <div>
+            <sp-button variant="primary" style="margin: 10px; margin-left: 0px">
+                <svg
+                    slot="icon"
+                    viewBox="0 0 36 36"
+                    focusable="false"
+                    aria-hidden="true"
+                    role="img"
+                >
+                    <path
+                        d="M16 36a4.407 4.407 0 0 0 4-4h-8a4.407 4.407 0 0 0 4 4zm9.143-24.615c0-3.437-3.206-4.891-7.143-5.268V3a1.079 1.079 0 0 0-1.143-1h-1.714A1.079 1.079 0 0 0 14 3v3.117c-3.937.377-7.143 1.831-7.143 5.268C6.857 26.8 2 26.111 2 28.154V30h28v-1.846C30 26 25.143 26.8 25.143 11.385z"
+                    ></path>
+                </svg>
+                SVG Icon + Label
+            </sp-button>
+            <sp-button variant="accent" style="margin: 10px">Accent</sp-button>
+            <sp-button variant="primary" disabled style="margin: 10px">
+                Disabled
+            </sp-button>
+            <sp-button variant="accent" style="margin: 10px">
+                <sp-icon-display-advert slot="icon"></sp-icon-display-advert>
+                Accent
+            </sp-button>
+            <sp-button variant="negative" style="margin: 10px">
+                <sp-icon-add-to-selection
+                    slot="icon"
+                ></sp-icon-add-to-selection>
+            </sp-button>
+        </div>
+    </div>
+
+    <div id="right">
+        <div id="subtitle">my-button</div>
+        <my-button class="my-button">My Button</my-button>
+    </div>
+</div>

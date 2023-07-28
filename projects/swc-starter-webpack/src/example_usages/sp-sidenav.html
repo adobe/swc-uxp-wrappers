@@ -1,0 +1,216 @@
+<!-- 
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License. 
+-->
+
+<h3>sp-sidenav</h3>
+
+<div id="content">
+    <div id="left">
+        <div id="subtitle">sp-sidenav</div>
+
+        <div
+            style="
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+            "
+        >
+            <div style="display: flex; flex-direction: column">
+                <h4 class="spectrum-Heading--subtitle1">Standard</h4>
+                <sp-sidenav defaultValue="Docs">
+                    <sp-sidenav-item value="Docs" href="/components/SideNav">
+                        Docs
+                    </sp-sidenav-item>
+                    <sp-sidenav-item
+                        value="Guides"
+                        href="/guides/getting_started"
+                    >
+                        Guides
+                    </sp-sidenav-item>
+                    <sp-sidenav-item value="Community" href="/community">
+                        Community
+                    </sp-sidenav-item>
+                    <sp-sidenav-item
+                        value="Storybook"
+                        href="/storybook"
+                        target="_blank"
+                    >
+                        Storybook
+                    </sp-sidenav-item>
+                    <sp-sidenav-item
+                        value="Releases"
+                        href="http://git.corp.adobe.com/React/react-spectrum/releases"
+                        target="_blank"
+                        disabled
+                    >
+                        Releases
+                    </sp-sidenav-item>
+                    <sp-sidenav-item
+                        value="GitHub"
+                        href="http://git.corp.adobe.com/React/react-spectrum"
+                        target="_blank"
+                    >
+                        GitHub
+                    </sp-sidenav-item>
+                </sp-sidenav>
+            </div>
+
+            <div style="display: flex; flex-direction: column">
+                <h4 class="spectrum-Heading--subtitle1">Multilevel</h4>
+                <sp-sidenav variant="multilevel" defaultValue="Layout">
+                    <sp-sidenav-item
+                        value="Guidelines"
+                        label="Guidelines"
+                    ></sp-sidenav-item>
+                    <sp-sidenav-item value="Styles" label="Styles" expanded>
+                        <sp-sidenav-item
+                            value="Color"
+                            label="Color"
+                        ></sp-sidenav-item>
+                        <sp-sidenav-item value="Grid" label="Grid" expanded>
+                            <sp-sidenav-item
+                                value="Layout"
+                                label="Layout"
+                            ></sp-sidenav-item>
+                            <sp-sidenav-item
+                                value="Responsive"
+                                label="Responsive"
+                            ></sp-sidenav-item>
+                        </sp-sidenav-item>
+                        <sp-sidenav-item
+                            value="Typography"
+                            label="Typography"
+                        ></sp-sidenav-item>
+                    </sp-sidenav-item>
+                    <sp-sidenav-item
+                        value="Elements"
+                        label="Elements"
+                    ></sp-sidenav-item>
+                    <sp-sidenav-item
+                        value="Patterns"
+                        label="Patterns"
+                    ></sp-sidenav-item>
+                </sp-sidenav>
+            </div>
+        </div>
+
+        <div
+            style="
+                display: flex;
+                justify-content: space-between;
+                margin-top: 20px;
+            "
+        >
+            <div style="display: flex; flex-direction: column">
+                <h4 class="spectrum-Heading--subtitle1">With Icon</h4>
+                <sp-sidenav>
+                    <sp-sidenav-item
+                        value="Section Title 1"
+                        label="Section Title 1"
+                    >
+                        <sp-icon-star slot="icon"></sp-icon-star>
+                    </sp-sidenav-item>
+                    <sp-sidenav-item
+                        value="Section Title 2"
+                        label="Section Title 2"
+                    >
+                        <sp-icon-star slot="icon"></sp-icon-star>
+                    </sp-sidenav-item>
+                    <sp-sidenav-item
+                        value="Section Title 3"
+                        label="Section Title 3"
+                    >
+                        <sp-icon-star slot="icon"></sp-icon-star>
+                    </sp-sidenav-item>
+                </sp-sidenav>
+            </div>
+
+            <div style="display: flex; flex-direction: column">
+                <h4 class="spectrum-Heading--subtitle1">With Heading</h4>
+                <sp-sidenav variant="multilevel">
+                    <sp-sidenav-item
+                        value="Section 1"
+                        label="Section 1"
+                    ></sp-sidenav-item>
+                    <sp-sidenav-item
+                        value="Section 2"
+                        label="Section 2"
+                    ></sp-sidenav-item>
+                    <sp-sidenav-heading label="Category 1">
+                        <sp-sidenav-item
+                            value="Section 3"
+                            label="Section 3"
+                        ></sp-sidenav-item>
+                        <sp-sidenav-item
+                            value="Section 4"
+                            label="Section 4"
+                        ></sp-sidenav-item>
+                    </sp-sidenav-heading>
+                    <sp-sidenav-heading label="Category 2">
+                        <sp-sidenav-item
+                            value="Section 5"
+                            label="Section 5"
+                        ></sp-sidenav-item>
+                        <sp-sidenav-item
+                            value="Section 6"
+                            label="Section 6"
+                        ></sp-sidenav-item>
+                    </sp-sidenav-heading>
+                </sp-sidenav>
+            </div>
+        </div>
+    </div>
+
+    <div id="right">
+        <div id="subtitle">my-sidenav</div>
+        <my-sidenav defaultValue="Docs">
+            <my-sidenav-item value="Docs" href="/components/SideNav">
+                Docs
+            </my-sidenav-item>
+            <my-sidenav-item value="Guides" href="/guides/getting_started">
+                Guides
+            </my-sidenav-item>
+            <my-sidenav-item value="Community" href="/community">
+                Community
+            </my-sidenav-item>
+            <my-sidenav-item
+                value="Storybook"
+                href="/storybook"
+                target="_blank"
+            >
+                Storybook
+            </my-sidenav-item>
+            <my-sidenav-item
+                value="Releases"
+                href="http://git.corp.adobe.com/React/react-spectrum/releases"
+                target="_blank"
+                disabled
+            >
+                Releases
+            </my-sidenav-item>
+            <my-sidenav-item
+                value="GitHub"
+                href="http://git.corp.adobe.com/React/react-spectrum"
+                target="_blank"
+            >
+                GitHub
+            </my-sidenav-item>
+            <my-sidenav-heading label="Heading SideNav">
+                <my-sidenav-item value="Section 5" label="Section 5">
+                    <sp-icon-star slot="icon"></sp-icon-star>
+                </my-sidenav-item>
+                <my-sidenav-item value="Section 6" label="Section 6">
+                    <sp-icon-star slot="icon"></sp-icon-star>
+                </my-sidenav-item>
+            </my-sidenav-heading>
+        </my-sidenav>
+    </div>
+</div>

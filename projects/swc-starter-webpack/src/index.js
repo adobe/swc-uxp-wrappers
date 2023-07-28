@@ -72,4 +72,34 @@ import '@spectrum-web-components/icons-workflow/icons/sp-icon-add-to-selection.j
 import '@spectrum-web-components/icons-workflow/icons/sp-icon-edit.js';
 import '@spectrum-web-components/icons-workflow/icons/sp-icon-magnify.js';
 
-import './my-elements.js';
+// Importing custom elements (my-*) extended from the respective Spectrum Web Components
+import './extended_swc_samples/my-banner.js';
+import './extended_swc_samples/my-divider.js';
+import './extended_swc_samples/my-avatar.js';
+import './extended_swc_samples/my-illustrated-message.js';
+import './extended_swc_samples/my-checkbox.js';
+import './extended_swc_samples/my-button.js';
+import './extended_swc_samples/my-action-button.js';
+import './extended_swc_samples/my-action-group.js';
+import './extended_swc_samples/my-field-label.js';
+import './extended_swc_samples/my-link.js';
+import './extended_swc_samples/my-card.js';
+import './extended_swc_samples/my-popover.js';
+import './extended_swc_samples/my-tooltip.js';
+import './extended_swc_samples/my-action-bar.js';
+import './extended_swc_samples/my-menu.js';
+import './extended_swc_samples/my-menu-item.js';
+import './extended_swc_samples/my-menu-divider.js';
+import './extended_swc_samples/my-menu-group.js';
+import './extended_swc_samples/my-picker-button.js';
+import './extended_swc_samples/my-help-text.js';
+import './extended_swc_samples/my-textfield.js';
+import './extended_swc_samples/my-dialog.js';
+import './extended_swc_samples/my-button-group.js';
+import './extended_swc_samples/my-toast.js';
+import './extended_swc_samples/my-switch.js';
+import './extended_swc_samples/my-radio.js';
+import './extended_swc_samples/my-radio-group.js';
+import './extended_swc_samples/my-field-group.js';
+import './extended_swc_samples/my-tags.js';
+import './extended_swc_samples/my-sidenav.js';
