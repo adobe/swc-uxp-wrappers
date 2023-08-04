@@ -10,7 +10,7 @@ This repository contains, as the name implies, wrappers over the opensource SWC 
 
 ## How does this approach work?
 
-UXP doesn't _re-create_ the entire SWC repository but rather _extends_ from the existing components and (currently) only _overrides_ the CSS styles to address the gaps between UXP and that of a modern web browser. An example to illustrate this is wherein the `display: grid` property which indicates the usage of a Grid layout is replaced with `display: flex` (Flex layout model) and other appurtenant changes in CSS styles to achieve parity with Grid layout. 
+UXP doesn't _re-create_ the entire SWC repository but rather _extends_ from the existing components and (currently) only _overrides_ the CSS styles to address the gaps between UXP and that of a modern web browser. An example to illustrate this is wherein the `display: grid` property which indicates the usage of a Grid layout is replaced with `display: flex` (Flex layout model) and other appurtenant changes in CSS styles to achieve parity with Grid layout.
 
 ### This approach allows us to
 
