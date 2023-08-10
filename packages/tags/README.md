@@ -1,8 +1,20 @@
 ## Description
 
-This is UXP wrapper for `@spectrum-web-components/tags` package
+---
 
-### Usage
+<br />
+This is UXP wrapper for `@spectrum-web-components/tags` package 
+<br />
+
+-   For detailed README regarding `@spectrum-web-components/tags` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/tags/v/0.10.1)
+
+-   Detailed specification regarding `@spectrum-web-components/tags` support in UXP through `@swc-uxp-wrappers/tags` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
+
+## Usage
+
+---
+
+<br />
 
 ```
 yarn add @swc-uxp-wrappers/tags
@@ -20,7 +32,13 @@ When looking to leverage the `Tags` base class as a type and/or for extension pu
 import { Tags } from '@swc-uxp-wrappers/tags';
 ```
 
+<br />
+
 ## Example
+
+---
+
+<br />
 
 ```html
 <sp-tags></sp-tags>

@@ -1,8 +1,20 @@
 ## Description
 
-This is UXP wrapper for `@spectrum-web-components/checkbox` package
+---
 
-### Usage
+<br />
+This is UXP wrapper for `@spectrum-web-components/checkbox` package 
+<br />
+
+-   For detailed README regarding `@spectrum-web-components/checkbox` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/checkbox/v/0.14.0)
+
+-   Detailed specification regarding `@spectrum-web-components/checkbox` support in UXP through `@swc-uxp-wrappers/checkbox` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
+
+## Usage
+
+---
+
+<br />
 
 ```
 yarn add @swc-uxp-wrappers/checkbox
@@ -20,7 +32,13 @@ When looking to leverage the `Checkbox` base class as a type and/or for extensio
 import { Checkbox } from '@swc-uxp-wrappers/checkbox';
 ```
 
+<br />
+
 ## Example
+
+---
+
+<br />
 
 ```html
 <sp-checkbox></sp-checkbox>

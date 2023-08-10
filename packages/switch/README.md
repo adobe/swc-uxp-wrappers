@@ -1,8 +1,20 @@
 ## Description
 
-This is UXP wrapper for `@spectrum-web-components/switch` package
+---
 
-### Usage
+<br />
+This is UXP wrapper for `@spectrum-web-components/switch` package 
+<br />
+
+-   For detailed README regarding `@spectrum-web-components/switch` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/switch/v/0.10.0)
+
+-   Detailed specification regarding `@spectrum-web-components/switch` support in UXP through `@swc-uxp-wrappers/switch` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
+
+## Usage
+
+---
+
+<br />
 
 ```
 yarn add @swc-uxp-wrappers/switch
@@ -20,7 +32,13 @@ When looking to leverage the `Switch` base class as a type and/or for extension 
 import { Switch } from '@swc-uxp-wrappers/switch';
 ```
 
+<br />
+
 ## Example
+
+---
+
+<br />
 
 ```html
 <sp-switch></sp-switch>

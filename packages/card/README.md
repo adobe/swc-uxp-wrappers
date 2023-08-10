@@ -1,8 +1,20 @@
 ## Description
 
-This is UXP wrapper for `@spectrum-web-components/card` package
+---
 
-### Usage
+<br />
+This is UXP wrapper for `@spectrum-web-components/card` package 
+<br />
+
+-   For detailed README regarding `@spectrum-web-components/card` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/card/v/0.13.4)
+
+-   Detailed specification regarding `@spectrum-web-components/card` support in UXP through `@swc-uxp-wrappers/card` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
+
+## Usage
+
+---
+
+<br />
 
 ```
 yarn add @swc-uxp-wrappers/card
@@ -20,7 +32,13 @@ When looking to leverage the `Card` base class as a type and/or for extension pu
 import { Card } from '@swc-uxp-wrappers/card';
 ```
 
+<br />
+
 ## Example
+
+---
+
+<br />
 
 ```html
 <sp-card></sp-card>

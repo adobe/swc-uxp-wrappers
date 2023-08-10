@@ -1,8 +1,20 @@
 ## Description
 
-This is UXP wrapper for `@spectrum-web-components/picker-button` package
+---
 
-### Usage
+<br />
+This is UXP wrapper for `@spectrum-web-components/picker-button` package 
+<br />
+
+-   For detailed README regarding `@spectrum-web-components/picker-button` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/picker-button/v/0.1.4)
+
+-   Detailed specification regarding `@spectrum-web-components/picker-button` support in UXP through `@swc-uxp-wrappers/picker-button` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
+
+## Usage
+
+---
+
+<br />
 
 ```
 yarn add @swc-uxp-wrappers/picker-button
@@ -20,7 +32,13 @@ When looking to leverage the `PickerButton` base class as a type and/or for exte
 import { PickerButton } from '@swc-uxp-wrappers/picker-button';
 ```
 
+<br />
+
 ## Example
+
+---
+
+<br />
 
 ```html
 <sp-picker-button></sp-picker-button>

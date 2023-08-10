@@ -1,8 +1,20 @@
 ## Description
 
-This is UXP wrapper for `@spectrum-web-components/popover` package
+---
 
-### Usage
+<br />
+This is UXP wrapper for `@spectrum-web-components/popover` package 
+<br />
+
+-   For detailed README regarding `@spectrum-web-components/popover` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/popover/v/0.12.4)
+
+-   Detailed specification regarding `@spectrum-web-components/popover` support in UXP through `@swc-uxp-wrappers/popover` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
+
+## Usage
+
+---
+
+<br />
 
 ```
 yarn add @swc-uxp-wrappers/popover
@@ -20,7 +32,13 @@ When looking to leverage the `Popover` base class as a type and/or for extension
 import { Popover } from '@swc-uxp-wrappers/popover';
 ```
 
+<br />
+
 ## Example
+
+---
+
+<br />
 
 ```html
 <sp-popover></sp-popover>

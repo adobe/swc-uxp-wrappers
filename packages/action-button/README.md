@@ -1,8 +1,20 @@
 ## Description
 
-This is UXP wrapper for `@spectrum-web-components/action-button` package
+---
 
-### Usage
+<br />
+This is UXP wrapper for `@spectrum-web-components/action-button` package 
+<br />
+
+-   For detailed README regarding `@spectrum-web-components/action-button` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/action-button/v/0.8.7)
+
+-   Detailed specification regarding `@spectrum-web-components/action-button` support in UXP through `@swc-uxp-wrappers/action-button` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
+
+## Usage
+
+---
+
+<br />
 
 ```
 yarn add @swc-uxp-wrappers/action-button
@@ -20,7 +32,13 @@ When looking to leverage the `ActionButton` base class as a type and/or for exte
 import { ActionButton } from '@swc-uxp-wrappers/action-button';
 ```
 
+<br />
+
 ## Example
+
+---
+
+<br />
 
 ```html
 <sp-action-button></sp-action-button>

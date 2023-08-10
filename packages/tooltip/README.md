@@ -1,8 +1,20 @@
 ## Description
 
-This is UXP wrapper for `@spectrum-web-components/tooltip` package
+---
 
-### Usage
+<br />
+This is UXP wrapper for `@spectrum-web-components/tooltip` package 
+<br />
+
+-   For detailed README regarding `@spectrum-web-components/tooltip` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/tooltip/v/0.11.9)
+
+-   Detailed specification regarding `@spectrum-web-components/tooltip` support in UXP through `@swc-uxp-wrappers/tooltip` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
+
+## Usage
+
+---
+
+<br />
 
 ```
 yarn add @swc-uxp-wrappers/tooltip
@@ -20,7 +32,13 @@ When looking to leverage the `Tooltip` base class as a type and/or for extension
 import { Tooltip } from '@swc-uxp-wrappers/tooltip';
 ```
 
+<br />
+
 ## Example
+
+---
+
+<br />
 
 ```html
 <sp-tooltip></sp-tooltip>

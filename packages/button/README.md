@@ -1,8 +1,20 @@
 ## Description
 
-This is UXP wrapper for `@spectrum-web-components/button` package
+---
 
-### Usage
+<br />
+This is UXP wrapper for `@spectrum-web-components/button` package 
+<br />
+
+-   For detailed README regarding `@spectrum-web-components/button` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/button/v/0.19.8)
+
+-   Detailed specification regarding `@spectrum-web-components/button` support in UXP through `@swc-uxp-wrappers/button` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
+
+## Usage
+
+---
+
+<br />
 
 ```
 yarn add @swc-uxp-wrappers/button
@@ -20,7 +32,13 @@ When looking to leverage the `Button` base class as a type and/or for extension 
 import { Button } from '@swc-uxp-wrappers/button';
 ```
 
+<br />
+
 ## Example
+
+---
+
+<br />
 
 ```html
 <sp-button></sp-button>

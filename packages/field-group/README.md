@@ -1,8 +1,20 @@
 ## Description
 
-This is UXP wrapper for `@spectrum-web-components/field-group` package
+---
 
-### Usage
+<br />
+This is UXP wrapper for `@spectrum-web-components/field-group` package 
+<br />
+
+-   For detailed README regarding `@spectrum-web-components/field-group` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/field-group/v/0.8.2)
+
+-   Detailed specification regarding `@spectrum-web-components/field-group` support in UXP through `@swc-uxp-wrappers/field-group` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
+
+## Usage
+
+---
+
+<br />
 
 ```
 yarn add @swc-uxp-wrappers/field-group
@@ -20,7 +32,13 @@ When looking to leverage the `FieldGroup` base class as a type and/or for extens
 import { FieldGroup } from '@swc-uxp-wrappers/field-group';
 ```
 
+<br />
+
 ## Example
+
+---
+
+<br />
 
 ```html
 <sp-field-group></sp-field-group>
