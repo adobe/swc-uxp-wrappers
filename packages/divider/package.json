@@ -23,7 +23,7 @@
         "./src/divider.css.js": "./src/divider.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/divider": "npm:@spectrum-web-components/divider@0.5.0"
+        "@swc-uxp-internal/divider": "npm:@spectrum-web-components/divider@0.35.0"
     },
     "files": [
         "**/*.js"

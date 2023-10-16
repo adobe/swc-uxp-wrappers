@@ -125,11 +125,23 @@ h3 {
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: rgb(202, 199, 199);
-    font-size: 18px;
+    font-size: 20px;
     margin: 0px 0px 30px 0px;
     padding: 8px;
     border-radius: 3px;
 }
+
+#variantLabel {
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(193, 196, 197);
+    font-size: 11px;
+    margin: 0px 0px 20px 0px;
+    padding: 6px;
+    border-radius: 2px;
+    width: fit-content;
+}
+
 p {
     color: grey;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
