@@ -23,7 +23,7 @@
         "./src/illustrated-message.css.js": "./src/illustrated-message.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/illustrated-message": "npm:@spectrum-web-components/illustrated-message@0.35.0"
+        "@swc-uxp-internal/illustrated-message": "npm:@spectrum-web-components/illustrated-message@0.9.8"
     },
     "files": [
         "**/*.js"

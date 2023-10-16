@@ -23,7 +23,7 @@
         "./sp-banner.js": "./sp-banner.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/banner": "npm:@spectrum-web-components/banner@0.35.0"
+        "@swc-uxp-internal/banner": "npm:@spectrum-web-components/banner@0.9.2"
     },
     "files": [
         "**/*.js"

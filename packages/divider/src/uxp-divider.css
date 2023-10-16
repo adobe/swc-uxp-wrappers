@@ -11,14 +11,3 @@ governing permissions and limitations under the License.
 */
 
 /* write uxp style overrides */
-
-/* Workaround for missing `block-size` and `inline-size` property support in UXP */
-:host {
-    height: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-    width: 100%;
-}
-
-:host([vertical]) {
-    width: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-    height: 100%;
-}
