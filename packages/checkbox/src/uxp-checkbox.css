@@ -19,4 +19,12 @@ governing permissions and limitations under the License.
 
 #input {
     opacity: 0;
+    width: 100%;
+    height: 100%;
 }
+
+#label {
+    margin-top: var(--mod-checkbox-top-to-text,var(--spectrum-checkbox-top-to-text) );
+    margin-left: var(--mod-checkbox-text-to-control,var(--spectrum-checkbox-text-to-control) );
+}
+
