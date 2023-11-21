@@ -11,3 +11,39 @@ governing permissions and limitations under the License.
 */
 
 /* write uxp style overrides */
+
+:host {
+    margin-right: var(--mod-button-margin-right);
+    margin-left: var(--mod-button-margin-left);
+    min-height: var(--mod-button-height, var(--spectrum-button-height));
+    min-width: var(--mod-button-min-width, var(--spectrum-button-min-width));
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-left: var(
+        --mod-button-edge-to-text,
+        var(--spectrum-button-edge-to-text)
+    );
+    padding-right: var(
+        --mod-button-edge-to-text,
+        var(--spectrum-button-edge-to-text)
+    );
+}
+
+#label {
+    margin-top: var(
+        --mod-checkbox-top-to-text,
+        var(--spectrum-checkbox-top-to-text)
+    );
+    margin-left: var(
+        --mod-checkbox-text-to-control,
+        var(--spectrum-checkbox-text-to-control)
+    );
+    padding-bottom: calc(
+        var(--mod-button-bottom-to-text, var(--spectrum-button-bottom-to-text)) -
+            var(--mod-button-border-width, var(--spectrum-button-border-width))
+    );
+    padding-top: calc(
+        var(--mod-button-top-to-text, var(--spectrum-button-top-to-text)) -
+            var(--mod-button-border-width, var(--spectrum-button-border-width))
+    );
+}
