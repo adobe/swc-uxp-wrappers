@@ -11,3 +11,18 @@ governing permissions and limitations under the License.
 */
 
 /* write uxp style overrides */
+
+:host {
+    padding-left: var(
+        --mod-actionbutton-edge-to-text,
+        var(--spectrum-actionbutton-edge-to-text)
+    );
+    padding-right: var(
+        --mod-actionbutton-edge-to-text,
+        var(--spectrum-actionbutton-edge-to-text)
+    );
+    min-width: var(
+        --mod-actionbutton-min-width,
+        var(--spectrum-actionbutton-min-width)
+    );
+}
