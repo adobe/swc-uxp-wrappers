@@ -10,10 +10,14 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* write uxp style overrides */
+import { unsafeCSS } from '@spectrum-web-components/base';
+import swcAssetStyles from '@swc-uxp-internal/asset/src/asset.css.js';
 
-/* Workaround for missing `block-size` and `inline-size` property support in UXP */
-.image {
-    height: var(--mod-avatar-block-size, var(--spectrum-avatar-block-size));
-    width: var(--mod-avatar-inline-size, var(--spectrum-avatar-inline-size));
-}
+import uxpAssetStyles from './uxp-asset.css.js';
+
+const combinedAssetStyles = unsafeCSS(
+    swcAssetStyles.toString(),
+    uxpAssetStyles.toString()
+);
+
+export default combinedAssetStyles;

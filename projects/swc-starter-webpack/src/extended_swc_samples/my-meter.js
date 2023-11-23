@@ -10,10 +10,25 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* write uxp style overrides */
+import { css } from 'lit';
+import { Meter } from '@spectrum-web-components/meter';
 
-/* Workaround for missing `block-size` and `inline-size` property support in UXP */
-.image {
-    height: var(--mod-avatar-block-size, var(--spectrum-avatar-block-size));
-    width: var(--mod-avatar-inline-size, var(--spectrum-avatar-inline-size));
+class MyMeter extends Meter {
+    static styles = [
+        Meter.styles,
+        css`
+            :host {
+                background: aquamarine;
+                padding: 20px;
+                border-top-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+            .label,
+            .percentage {
+                font-style: italic;
+            }
+        `,
+    ];
 }
+
+customElements.define('my-meter', MyMeter);

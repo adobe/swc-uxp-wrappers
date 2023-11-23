@@ -10,10 +10,15 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* write uxp style overrides */
+import { Asset } from '@swc-uxp-internal/asset/src/Asset.js';
 
-/* Workaround for missing `block-size` and `inline-size` property support in UXP */
-.image {
-    height: var(--mod-avatar-block-size, var(--spectrum-avatar-block-size));
-    width: var(--mod-avatar-inline-size, var(--spectrum-avatar-inline-size));
+import styles from './uxp-asset.css.js';
+
+class UxpAsset extends Asset {
+    static get styles() {
+        // We are combining our styles to make all super class styles available along with the transitive dependent classes styles.
+        return [super.styles, styles];
+    }
 }
+
+export { UxpAsset as Asset };

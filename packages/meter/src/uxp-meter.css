@@ -1,0 +1,88 @@
+/*
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* write uxp style overrides */
+
+/*
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* write uxp style overrides */
+
+:host {
+    max-width: var(
+        --mod-progressbar-max-size,
+        var(--spectrum-progressbar-max-size)
+    );
+    min-width: var(
+        --mod-progressbar-min-size,
+        var(--spectrum-progressbar-min-size)
+    );
+}
+
+.label,
+.percentage {
+    margin-bottom: var(
+        --mod-progressbar-spacing-label-to-progressbar,
+        var(--spectrum-progressbar-spacing-label-to-progressbar)
+    );
+    margin-top: var(
+        --mod-progressbar-spacing-top-to-text,
+        var(--spectrum-progressbar-spacing-top-to-text)
+    );
+}
+
+.percentage {
+    margin-left: var(
+        --mod-progressbar-spacing-label-to-text,
+        var(--spectrum-progressbar-spacing-label-to-text)
+    );
+}
+
+.track {
+    height: var(
+        --mod-progressbar-thickness,
+        var(--spectrum-progressbar-thickness)
+    );
+    width: 100%;
+}
+
+.fill {
+    height: var(
+        --mod-progressbar-thickness,
+        var(--spectrum-progressbar-thickness)
+    );
+}
+
+:host([side-label]) .label {
+    margin-bottom: 0;
+    margin-right: var(
+        --mod-progressbar-spacing-label-to-text,
+        var(--spectrum-progressbar-spacing-label-to-text)
+    );
+}
+
+:host([side-label]) .percentage {
+    margin-bottom: 0;
+    margin-left: var(
+        --mod-spacing-progressbar-label-to-text,
+        var(--spectrum-progressbar-spacing-label-to-text)
+    );
+}

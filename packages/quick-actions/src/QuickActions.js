@@ -10,10 +10,15 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* write uxp style overrides */
+import { QuickActions } from '@swc-uxp-internal/quick-actions/src/QuickActions.js';
 
-/* Workaround for missing `block-size` and `inline-size` property support in UXP */
-.image {
-    height: var(--mod-avatar-block-size, var(--spectrum-avatar-block-size));
-    width: var(--mod-avatar-inline-size, var(--spectrum-avatar-inline-size));
+import styles from './uxp-quick-actions.css.js';
+
+class UxpQuickActions extends QuickActions {
+    static get styles() {
+        // We are combining our styles to make all super class styles available along with the transitive dependent classes styles.
+        return [super.styles, styles];
+    }
 }
+
+export { UxpQuickActions as QuickActions };

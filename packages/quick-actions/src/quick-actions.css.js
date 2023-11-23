@@ -10,10 +10,14 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* write uxp style overrides */
+import { unsafeCSS } from '@spectrum-web-components/base';
+import swcQuickActionsStyles from '@swc-uxp-internal/quick-actions/src/quick-actions.css.js';
 
-/* Workaround for missing `block-size` and `inline-size` property support in UXP */
-.image {
-    height: var(--mod-avatar-block-size, var(--spectrum-avatar-block-size));
-    width: var(--mod-avatar-inline-size, var(--spectrum-avatar-inline-size));
-}
+import uxpQuickActionsStyles from './uxp-quick-actions.css.js';
+
+const combinedQuickActionsStyles = unsafeCSS(
+    swcQuickActionsStyles.toString(),
+    uxpQuickActionsStyles.toString()
+);
+
+export default combinedQuickActionsStyles;

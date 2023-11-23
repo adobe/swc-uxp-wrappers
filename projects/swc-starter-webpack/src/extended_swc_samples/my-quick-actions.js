@@ -10,10 +10,19 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* write uxp style overrides */
+import { css } from 'lit';
+import { QuickActions } from '@spectrum-web-components/quick-actions';
 
-/* Workaround for missing `block-size` and `inline-size` property support in UXP */
-.image {
-    height: var(--mod-avatar-block-size, var(--spectrum-avatar-block-size));
-    width: var(--mod-avatar-inline-size, var(--spectrum-avatar-inline-size));
+class MyQuickActions extends QuickActions {
+    static styles = [
+        QuickActions.styles,
+        css`
+            :host {
+                border: solid 2px grey;
+                border-radius: 5px;
+            }
+        `,
+    ];
 }
+
+customElements.define('my-quick-actions', MyQuickActions);
