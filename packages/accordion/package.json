@@ -1,0 +1,39 @@
+{
+    "name": "@swc-uxp-wrappers/accordion",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/accordion component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/accordion"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/Accordion.js": "./src/Accordion.js",
+        "./src/AccordionItem.js": "./src/AccordionItem.js",
+        "./src/accordion.css.js": "./src/accordion.css.js",
+        "./src/accordion-item.css.js": "./src/accordion-item.css.js",
+        "./sp-accordion.js": "./sp-accordion.js",
+        "./sp-accordion-item.js": "./sp-accordion-item.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/accordion": "npm:@spectrum-web-components/accordion@0.37.0"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/accordion"
+    ]
+}

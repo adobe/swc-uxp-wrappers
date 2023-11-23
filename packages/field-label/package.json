@@ -23,7 +23,7 @@
         "./src/field-label.css.js": "./src/field-label.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/field-label": "npm:@spectrum-web-components/field-label@0.10.3"
+        "@swc-uxp-internal/field-label": "npm:@spectrum-web-components/field-label@0.37.0"
     },
     "files": [
         "**/*.js"

@@ -2335,6 +2335,7 @@
     "@spectrum-web-components/shared" "^0.15.7"
 
 "@spectrum-web-components/asset@^0.37.0", "@swc-uxp-internal/asset@npm:@spectrum-web-components/asset@0.37.0":
+  name "@swc-uxp-internal/asset"
   version "0.37.0"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/asset/-/asset-0.37.0.tgz#92f17644b039f467b28f0e81cdee89b5283d1913"
   integrity sha512-nFZ4/TCHbUcNUay5NI1fLhLejtx7QJ3H+diCNsZXOvmUI+0atcNPid6j5/4CyvSd8PQooEvCgHpbHf39AM57Cg==
@@ -2486,7 +2487,8 @@
     "@spectrum-web-components/help-text" "^0.2.0"
     tslib "^2.0.0"
 
-"@spectrum-web-components/field-label@^0.37.0":
+"@spectrum-web-components/field-label@^0.37.0", "@swc-uxp-internal/field-label@npm:@spectrum-web-components/field-label@0.37.0":
+  name "@swc-uxp-internal/field-label"
   version "0.37.0"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/field-label/-/field-label-0.37.0.tgz#e9c30ebde9201f0dd994079474bff11964365f87"
   integrity sha512-QTk0IwONj1P8jnsIwr3xyxkNs2fMHBs2nNoHMrmEiW1/6a5TIjIIntmeOj1BUcP2wRbUB5CD3mnh44OWSbmbHQ==
@@ -2497,13 +2499,22 @@
     "@spectrum-web-components/reactive-controllers" "^0.37.0"
     "@spectrum-web-components/shared" "^0.37.0"
 
-"@spectrum-web-components/help-text@^0.2.0", "@spectrum-web-components/help-text@^0.2.7", "@spectrum-web-components/help-text@^0.2.9":
+"@spectrum-web-components/help-text@^0.2.0", "@spectrum-web-components/help-text@^0.2.7":
   version "0.2.14"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/help-text/-/help-text-0.2.14.tgz#8ea186990316b89fe38b546a8c13cc6397870d27"
   integrity sha512-V7ZmvzXy7XkDowUAGIjQ6zzYFqv1k8R7X1qelkbUnAaM2xHvMGtCa2koyaYOfk7QLWGgJv3tg9srGosZznsPug==
   dependencies:
     "@spectrum-web-components/base" "^0.7.5"
     "@spectrum-web-components/icons-workflow" "^0.9.12"
+
+"@spectrum-web-components/help-text@^0.37.0", "@swc-uxp-internal/help-text@npm:@spectrum-web-components/help-text@0.37.0":
+  name "@swc-uxp-internal/help-text"
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/help-text/-/help-text-0.37.0.tgz#fc8e792ec46bac9c878c196bda1f8cda45c26ead"
+  integrity sha512-MsBD9I/mVOKRrnTqFxzbtmcLvgIGrA6y7kPwldKSQeFBHmm1oey2dnrlu7NK4OtWUdJJ3dQDKi/REJX35USOcw==
+  dependencies:
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/icons-workflow" "^0.37.0"
 
 "@spectrum-web-components/icon@0.37.0", "@spectrum-web-components/icon@^0.11.10", "@spectrum-web-components/icon@^0.12.0", "@spectrum-web-components/icon@^0.12.11", "@spectrum-web-components/icon@^0.12.5", "@spectrum-web-components/icon@^0.12.6", "@spectrum-web-components/icon@^0.12.7", "@spectrum-web-components/icon@^0.37.0":
   version "0.37.0"
@@ -2597,6 +2608,7 @@
     "@spectrum-web-components/overlay" "^0.19.5"
 
 "@spectrum-web-components/quick-actions@^0.37.0", "@swc-uxp-internal/quick-actions@npm:@spectrum-web-components/quick-actions@0.37.0":
+  name "@swc-uxp-internal/quick-actions"
   version "0.37.0"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/quick-actions/-/quick-actions-0.37.0.tgz#fdf6c4d875fa86e45e69a0b9f86907445610a6cd"
   integrity sha512-h9KRwowJ4AQh6UpDcC+iuijm1wPxf/ZhmQgwH4CeYXXl2HU9NuW67QwVkVz7axjNdY5dDh6I2bdwFD/IcZW/ug==
@@ -2610,14 +2622,7 @@
   dependencies:
     "@spectrum-web-components/base" "^0.7.5"
 
-"@spectrum-web-components/reactive-controllers@^0.3.0", "@spectrum-web-components/reactive-controllers@^0.3.4", "@spectrum-web-components/reactive-controllers@^0.3.5":
-  version "0.3.5"
-  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/reactive-controllers/-/reactive-controllers-0.3.5.tgz#16a70e6f85a9045b344ac1596cc06721e7cdb4e1"
-  integrity sha512-/EhHe5CVgnOn4YZTBw+CMzgi8DQ0A7uXnMwXqLwqZEqTMCNA7/9RXWcLPftmt4KTgxNOFD0cpdtEnfpbOpH/KQ==
-  dependencies:
-    lit "^2.5.0"
-
-"@spectrum-web-components/reactive-controllers@^0.37.0":
+"@spectrum-web-components/reactive-controllers@0.37.0", "@spectrum-web-components/reactive-controllers@^0.3.0", "@spectrum-web-components/reactive-controllers@^0.3.4", "@spectrum-web-components/reactive-controllers@^0.3.5", "@spectrum-web-components/reactive-controllers@^0.37.0":
   version "0.37.0"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/reactive-controllers/-/reactive-controllers-0.37.0.tgz#70117433495758217a83105f5bbd0bfb53ca58b1"
   integrity sha512-1wnWLt88iyTPrElxZqPpyWWzScSkXY3zxi+QxIV0cFGmhRlPsH+XXqs/kGkfzRyNtE4s2AWuRZ2wtbcao6MzJQ==
@@ -2641,6 +2646,7 @@
     "@spectrum-web-components/base" "^0.37.0"
 
 "@spectrum-web-components/textfield@0.13.8", "@swc-uxp-internal/textfield@npm:@spectrum-web-components/textfield@0.13.8":
+  name "@swc-uxp-internal/textfield"
   version "0.13.8"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/textfield/-/textfield-0.13.8.tgz#9d6dbd7212df51e44f43b29ca06a768dcfcee029"
   integrity sha512-IEDXT81uUVeVw9nfjfvncaNxFWFnSyIO4Xz6Yi4hpG25Ll08rC0zGqyNEE99Bt0S2NoM8LgjVDBIXFENQ/YRQg==
@@ -2828,6 +2834,17 @@
     "@lit-labs/react" "^1.1.0"
     "@spectrum-web-components/theme" "^0.14.7"
 
+"@swc-uxp-internal/accordion@npm:@spectrum-web-components/accordion@0.37.0":
+  version "0.37.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/accordion/-/accordion-0.37.0.tgz#42bb56213304e30bb3868b0c11831dac4a8290c1"
+  integrity sha512-64cGyQ13i6vWNym3bP12nMirJMRY+rfrwF6p7/uYw2jtTTZ+QJTJAWxDvAi6+xQKrzdTc27v84tyWZ3i3FzrSQ==
+  dependencies:
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/icon" "^0.37.0"
+    "@spectrum-web-components/icons-ui" "^0.37.0"
+    "@spectrum-web-components/reactive-controllers" "^0.37.0"
+    "@spectrum-web-components/shared" "^0.37.0"
+
 "@swc-uxp-internal/action-bar@npm:@spectrum-web-components/action-bar@0.5.9":
   version "0.5.9"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/action-bar/-/action-bar-0.5.9.tgz#cc97da1420706cd7fad3bc1d8b187be579960c94"
@@ -2938,32 +2955,13 @@
     "@spectrum-web-components/base" "^0.7.0"
     tslib "^2.0.0"
 
-"@swc-uxp-internal/field-group@npm:@spectrum-web-components/field-group@0.8.2":
-  version "0.8.2"
-  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/field-group/-/field-group-0.8.2.tgz#a7ed9ea66cad771076eb8c18fa1e8bd239e4fff0"
-  integrity sha512-GjToE052bHnPY3v1UX6FQt8lyayxp4pW8s3b800h24RoakMgicYzUGJZ1qwjbgDMYkysJQq0DoNinaaAX0XdTA==
+"@swc-uxp-internal/field-group@npm:@spectrum-web-components/field-group@0.37.0":
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/field-group/-/field-group-0.37.0.tgz#f127bf8227faea54122adb646c2bfc2961bc9b0b"
+  integrity sha512-dZu8h/As8GKaTsk1ceAg55VIQhIhucnzzag4u16R1F2dCVqBdL4TV88dK8lqgD9UUB5P7Mq4JeqlQw3XRVuCag==
   dependencies:
-    "@spectrum-web-components/base" "^0.7.4"
-    "@spectrum-web-components/help-text" "^0.2.9"
-
-"@swc-uxp-internal/field-label@npm:@spectrum-web-components/field-label@0.10.3":
-  version "0.10.3"
-  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/field-label/-/field-label-0.10.3.tgz#b3b5f0c6899b9154d778d31a8f8c0261b5acff3f"
-  integrity sha512-IteOv/jbhoGO7G7+kzAq3aSiwAVe7goqAQd9js81tlq7kNa7nGgcqUBm9uKXVYvhbEBDv9qzDzUnsVQf328LSQ==
-  dependencies:
-    "@spectrum-web-components/base" "^0.7.2"
-    "@spectrum-web-components/icon" "^0.12.5"
-    "@spectrum-web-components/icons-ui" "^0.9.5"
-    "@spectrum-web-components/reactive-controllers" "^0.3.4"
-    "@spectrum-web-components/shared" "^0.15.3"
-
-"@swc-uxp-internal/help-text@npm:@spectrum-web-components/help-text@0.2.7":
-  version "0.2.7"
-  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/help-text/-/help-text-0.2.7.tgz#2b54c117467b661f5da6bdb7d83cf7c13fc47fde"
-  integrity sha512-cw7cONYAK0OfvrTckShkVHfBaGx7LSdFisoLhb8sR4Tnmw/vDJfMs/9qHT9JbOHDpnHcKqb0PxqnuoR0/fNW8g==
-  dependencies:
-    "@spectrum-web-components/base" "^0.7.2"
-    "@spectrum-web-components/icons-workflow" "^0.9.5"
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/help-text" "^0.37.0"
 
 "@swc-uxp-internal/illustrated-message@npm:@spectrum-web-components/illustrated-message@0.37.0":
   version "0.37.0"
