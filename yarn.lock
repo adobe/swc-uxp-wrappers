@@ -1772,6 +1772,11 @@
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@lit-labs/ssr-dom-shim/-/ssr-dom-shim-1.1.2.tgz#d693d972974a354034454ec1317eb6afd0b00312"
   integrity sha512-jnOD+/+dSrfTWYfSXBXlo5l5f0q1UuJo3tkbMDCYA2lKUYq79jaxqtGEvnRoh049nt1vdo1+45RinipU6FGY2g==
 
+"@lit-labs/ssr-dom-shim@^1.1.2":
+  version "1.1.2"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@lit-labs/ssr-dom-shim/-/ssr-dom-shim-1.1.2.tgz#d693d972974a354034454ec1317eb6afd0b00312"
+  integrity sha512-jnOD+/+dSrfTWYfSXBXlo5l5f0q1UuJo3tkbMDCYA2lKUYq79jaxqtGEvnRoh049nt1vdo1+45RinipU6FGY2g==
+
 "@lit-labs/virtualizer@^1.0.1":
   version "1.0.1"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@lit-labs/virtualizer/-/virtualizer-1.0.1.tgz#10c5c849b062ca808dc4dadae8f58632445ee79d"
@@ -2641,6 +2646,7 @@
     "@spectrum-web-components/base" "^0.37.0"
 
 "@spectrum-web-components/textfield@0.13.8", "@swc-uxp-internal/textfield@npm:@spectrum-web-components/textfield@0.13.8":
+  name "@swc-uxp-internal/textfield"
   version "0.13.8"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/textfield/-/textfield-0.13.8.tgz#9d6dbd7212df51e44f43b29ca06a768dcfcee029"
   integrity sha512-IEDXT81uUVeVw9nfjfvncaNxFWFnSyIO4Xz6Yi4hpG25Ll08rC0zGqyNEE99Bt0S2NoM8LgjVDBIXFENQ/YRQg==
