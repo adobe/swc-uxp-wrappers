@@ -42,7 +42,6 @@
         "@swc-uxp-wrappers/field-group": "*",
         "@swc-uxp-wrappers/button-group": "*",
         "@spectrum-web-components/theme": "0.37.0",
-        "@spectrum-web-components/textfield": "0.13.8",
         "@spectrum-web-components/icon": "0.37.0",
         "@spectrum-web-components/icons": "0.37.0",
         "@spectrum-web-components/icons-ui": "0.37.0",
