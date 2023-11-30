@@ -13,6 +13,8 @@ governing permissions and limitations under the License.
 /* write uxp style overrides */
 
 :host {
+    margin-top: var(--mod-button-margin-block);
+    margin-bottom: var(--mod-button-margin-block);
     margin-right: var(--mod-button-margin-right);
     margin-left: var(--mod-button-margin-left);
     min-height: var(--mod-button-height, var(--spectrum-button-height));
@@ -30,14 +32,6 @@ governing permissions and limitations under the License.
 }
 
 #label {
-    margin-top: var(
-        --mod-checkbox-top-to-text,
-        var(--spectrum-checkbox-top-to-text)
-    );
-    margin-left: var(
-        --mod-checkbox-text-to-control,
-        var(--spectrum-checkbox-text-to-control)
-    );
     padding-bottom: calc(
         var(--mod-button-bottom-to-text, var(--spectrum-button-bottom-to-text)) -
             var(--mod-button-border-width, var(--spectrum-button-border-width))
@@ -45,5 +39,20 @@ governing permissions and limitations under the License.
     padding-top: calc(
         var(--mod-button-top-to-text, var(--spectrum-button-top-to-text)) -
             var(--mod-button-border-width, var(--spectrum-button-border-width))
+    );
+    margin: auto;
+}
+
+::slotted([slot='icon']) {
+    margin-left: calc(
+        var(--mod-button-edge-to-visual, var(--spectrum-button-edge-to-visual)) -
+            var(--mod-button-edge-to-text, var(--spectrum-button-edge-to-text))
+    );
+}
+
+:not(slot[icon-only])::slotted([slot='icon']) {
+    margin-right: var(
+        --mod-button-padding-label-to-icon,
+        var(--spectrum-button-padding-label-to-icon)
     );
 }
