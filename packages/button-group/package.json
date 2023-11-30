@@ -24,7 +24,7 @@
     },
     "dependencies": {
         "@swc-uxp-internal/button-group": "npm:@spectrum-web-components/button-group@0.37.0",
-        "@swc-uxp-wrappers/button": "2.0.0"
+        "@swc-uxp-wrappers/button": "1.0.0"
     },
     "files": [
         "**/*.js"
