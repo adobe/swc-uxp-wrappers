@@ -1752,6 +1752,13 @@
   dependencies:
     "@lit/reactive-element" "^1.1.0"
 
+"@lit-labs/observers@^2.0.0":
+  version "2.0.2"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@lit-labs/observers/-/observers-2.0.2.tgz#3f655a86e3dccc3a174f4f0149e8b318beb72025"
+  integrity sha512-eZb5+W9Cb0e/Y5m1DNxBSGTvGB2TAVTGMnTxL/IzFhPQEcZIAHewW1eVBhN8W07A5tirRaAmmF6fGL1V20p3gQ==
+  dependencies:
+    "@lit/reactive-element" "^1.0.0 || ^2.0.0"
+
 "@lit-labs/react@1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@lit-labs/react/-/react-1.1.0.tgz#665cf27cc83c5d0c6782ead5b906bd250619442b"
@@ -1767,6 +1774,11 @@
   resolved "https://registry.yarnpkg.com/@lit-labs/ssr-dom-shim/-/ssr-dom-shim-1.1.1.tgz#64df34e2f12e68e78ac57e571d25ec07fa460ca9"
   integrity sha512-kXOeFbfCm4fFf2A3WwVEeQj55tMZa8c8/f9AKHMobQMkzNUfUj+antR3fRPaZJawsa1aZiP/Da3ndpZrwEe4rQ==
 
+"@lit-labs/ssr-dom-shim@^1.1.2":
+  version "1.1.2"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@lit-labs/ssr-dom-shim/-/ssr-dom-shim-1.1.2.tgz#d693d972974a354034454ec1317eb6afd0b00312"
+  integrity sha512-jnOD+/+dSrfTWYfSXBXlo5l5f0q1UuJo3tkbMDCYA2lKUYq79jaxqtGEvnRoh049nt1vdo1+45RinipU6FGY2g==
+
 "@lit-labs/virtualizer@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@lit-labs/virtualizer/-/virtualizer-1.0.1.tgz#10c5c849b062ca808dc4dadae8f58632445ee79d"
@@ -1775,6 +1787,13 @@
     event-target-shim "^6.0.2"
     lit "^2.5.0"
     tslib "^2.0.3"
+
+"@lit/reactive-element@^1.0.0 || ^2.0.0":
+  version "2.0.2"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@lit/reactive-element/-/reactive-element-2.0.2.tgz#779ae9d265407daaf7737cb892df5ec2a86e22a0"
+  integrity sha512-SVOwLAWUQg3Ji1egtOt1UiFe4zdDpnWHyc5qctSceJ5XIu0Uc76YmGpIjZgx9YJ0XtdW0Jm507sDvjOu+HnB8w==
+  dependencies:
+    "@lit-labs/ssr-dom-shim" "^1.1.2"
 
 "@lit/reactive-element@^1.1.0", "@lit/reactive-element@^1.3.0", "@lit/reactive-element@^1.6.0":
   version "1.6.2"
@@ -2321,26 +2340,10 @@
   dependencies:
     "@spectrum-web-components/base" "^0.7.5"
 
-"@spectrum-web-components/base@^0.5.8":
-  version "0.5.8"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/base/-/base-0.5.8.tgz#bbb07721b66d76bee6e7571fda60452f442cedeb"
-  integrity sha512-dlx887I4tHyqHjsEAfysNu+zrxSEleZR14tVcJM5c6Dw0K1BjcjiqpNRxbjnabJqOuJ5a91E87DgBwgrOBYrug==
-  dependencies:
-    lit "^2.1.2"
-    tslib "^2.0.0"
-
-"@spectrum-web-components/base@^0.6.0":
-  version "0.6.0"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/base/-/base-0.6.0.tgz#4a345697983370d3adcdee90313e571c151150d1"
-  integrity sha512-y0p9asMfoHUybpz9UiX60w11RE7bZgKpaVemoS+4LZGwOov5I7n8kJ3ynvfiGmATo24y63X9MyfyXkzZXQ/kGg==
-  dependencies:
-    lit "^2.2.0"
-    tslib "^2.0.0"
-
-"@spectrum-web-components/base@^0.7.0", "@spectrum-web-components/base@^0.7.2", "@spectrum-web-components/base@^0.7.3", "@spectrum-web-components/base@^0.7.4", "@spectrum-web-components/base@^0.7.5":
-  version "0.7.5"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/base/-/base-0.7.5.tgz#64686e456a1334a199bdcd2af2927f2397e09ffe"
-  integrity sha512-LCUg1mDYwg8rh2tETbAjcg0LGYqOLJc6PVWR0YZKjnIl2htRy2gr0ftEyx7Jx5MWAkPQgA662DYVilIno6ryAw==
+"@spectrum-web-components/base@0.37.0", "@spectrum-web-components/base@^0.37.0", "@spectrum-web-components/base@^0.5.8", "@spectrum-web-components/base@^0.6.0", "@spectrum-web-components/base@^0.7.0", "@spectrum-web-components/base@^0.7.2", "@spectrum-web-components/base@^0.7.3", "@spectrum-web-components/base@^0.7.4", "@spectrum-web-components/base@^0.7.5":
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/base/-/base-0.37.0.tgz#d0fccbbc066c270773bcd7ece827128098edb897"
+  integrity sha512-3JOI36CemlFzXKAuennOBZ2k99ayd6yooG8eX24z58r0nT6I+3q6jYbytBRJuj48Y7vxwxqMIKX4V118A1dmMQ==
   dependencies:
     lit "^2.5.0"
 
@@ -2466,97 +2469,45 @@
     "@spectrum-web-components/base" "^0.7.5"
     "@spectrum-web-components/icons-workflow" "^0.9.12"
 
-"@spectrum-web-components/icon@0.12.5":
-  version "0.12.5"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/icon/-/icon-0.12.5.tgz#16d8e2958cb6c01992cb870acd4bb1d0b258f5db"
-  integrity sha512-vSlQjnl7B6cYBLn6WFRuGoYn0njnEvf9N9eeoM4epf6Sa76l5bmaDs0jG6DFQcbrJBJr7oUNykO+SW4rRJnN5A==
+"@spectrum-web-components/icon@0.37.0", "@spectrum-web-components/icon@^0.11.10", "@spectrum-web-components/icon@^0.12.0", "@spectrum-web-components/icon@^0.12.11", "@spectrum-web-components/icon@^0.12.5", "@spectrum-web-components/icon@^0.12.6", "@spectrum-web-components/icon@^0.12.7", "@spectrum-web-components/icon@^0.37.0":
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/icon/-/icon-0.37.0.tgz#b955d01b096308c9b6563d6fd1d6082a84862ea9"
+  integrity sha512-DZ1yOKHxNQygzIJ7u9akYComDnMmxuTzfmYxxt9sHdUXmc1NbMkCJqEaAG/LYsdb+hc4xWaDTT9SzArLKZ/btA==
   dependencies:
-    "@spectrum-web-components/base" "^0.7.2"
-    "@spectrum-web-components/iconset" "^0.7.4"
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/iconset" "^0.37.0"
 
-"@spectrum-web-components/icon@^0.11.10", "@spectrum-web-components/icon@^0.11.12":
-  version "0.11.12"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/icon/-/icon-0.11.12.tgz#dfab700f2b28035fea60dbedd1631b7fea448572"
-  integrity sha512-dyffaqXv3Ykcu/xwfGeizv/iBsMKDu+2ehmYDBjm2ZafWufMz850x3JWF4t4qhl9+beGOWBkg83cbgX7er+CGQ==
+"@spectrum-web-components/icons-ui@0.37.0", "@spectrum-web-components/icons-ui@^0.8.10", "@spectrum-web-components/icons-ui@^0.9.0", "@spectrum-web-components/icons-ui@^0.9.12", "@spectrum-web-components/icons-ui@^0.9.5", "@spectrum-web-components/icons-ui@^0.9.6", "@spectrum-web-components/icons-ui@^0.9.7":
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/icons-ui/-/icons-ui-0.37.0.tgz#919e94cadb74a4cd2d2abaa9c1bdf873903e53f1"
+  integrity sha512-DmaK+NDIgYhtYW19Y4lZoGYLfnFWPBjLNcLWGTQtc41yccEmgWrJbaf9n+nP4TADVJMT5dKNgE2vHnmDABtydg==
   dependencies:
-    "@spectrum-web-components/base" "^0.6.0"
-    "@spectrum-web-components/iconset" "^0.6.9"
-    tslib "^2.0.0"
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/icon" "^0.37.0"
+    "@spectrum-web-components/iconset" "^0.37.0"
 
-"@spectrum-web-components/icon@^0.12.0", "@spectrum-web-components/icon@^0.12.11", "@spectrum-web-components/icon@^0.12.5", "@spectrum-web-components/icon@^0.12.6", "@spectrum-web-components/icon@^0.12.7":
-  version "0.12.11"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/icon/-/icon-0.12.11.tgz#854120a22cd1708ab09b036aaaa45c70d4e3cab5"
-  integrity sha512-1VfzBa62pPIWLcfdZtkJkmTqbRsDNJ4a10CtsIPlgwSqRBY6TivLmH4r6ppU/Dyr5+E8NaNzSlzjiy521/OWIQ==
+"@spectrum-web-components/icons-workflow@0.37.0", "@spectrum-web-components/icons-workflow@^0.9.12", "@spectrum-web-components/icons-workflow@^0.9.4", "@spectrum-web-components/icons-workflow@^0.9.5", "@spectrum-web-components/icons-workflow@^0.9.6", "@spectrum-web-components/icons-workflow@^0.9.8", "@spectrum-web-components/icons-workflow@^0.9.9":
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/icons-workflow/-/icons-workflow-0.37.0.tgz#bf086915698fbc8948fd8ae24a0299b022139a9e"
+  integrity sha512-D1Dg+ZjlqbaU/2uKYhmMtZXQMVUw9J9LevHSKSzMFL+Y++JMqRROQuzwAOFW7tttCw1w0+3kIuv2ohkeE+8fNQ==
   dependencies:
-    "@spectrum-web-components/base" "^0.7.5"
-    "@spectrum-web-components/iconset" "^0.7.7"
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/icon" "^0.37.0"
 
-"@spectrum-web-components/icons-ui@0.9.5":
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/icons-ui/-/icons-ui-0.9.5.tgz#622eace569ce125bce30e088e387bd0fb404a42d"
-  integrity sha512-/DqXNsJrAbKTCN3drS9jvVRUck8nVKHzsXRFTYO/smGlG6VRJWLhFAzNfg1th9rSfHsnaVes4ndk32VyKed2aw==
+"@spectrum-web-components/icons@0.37.0":
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/icons/-/icons-0.37.0.tgz#513261357afd9ac17b9d088764e4dc8299013d24"
+  integrity sha512-OH8+I2vpE+73XQKWBUBPbR36m/RYRDkuotK7DvhgJd4TjM3q2jBq4zQCxEe4vFC/eeADdgWy2CmAiK/5wrXASw==
   dependencies:
-    "@spectrum-web-components/base" "^0.7.2"
-    "@spectrum-web-components/icon" "^0.12.5"
-    "@spectrum-web-components/iconset" "^0.7.4"
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/iconset" "^0.37.0"
 
-"@spectrum-web-components/icons-ui@^0.8.10":
-  version "0.8.12"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/icons-ui/-/icons-ui-0.8.12.tgz#5f2e072ae27362c6df88d1af7f002e794d7af3aa"
-  integrity sha512-tO11hdmCQCq3btftdE7NcUWUITKGqJjrINCQ2LiIInVpD90xvtfW0F8gnZAR+CyNGG286fisEw80vo7Cc3SbXw==
+"@spectrum-web-components/iconset@^0.37.0":
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/iconset/-/iconset-0.37.0.tgz#03a72d461b08197c8faebb2cfaa7abaf034441f5"
+  integrity sha512-s1TBjWeQtGdGf6n+r+aG2glv77IgR0pNs0HLusGyYt6jzWFkP276fE7Neqq/2XvG9a9zvAwngffnWS3td/Gtmg==
   dependencies:
-    "@spectrum-web-components/base" "^0.6.0"
-    "@spectrum-web-components/icon" "^0.11.12"
-    "@spectrum-web-components/iconset" "^0.6.9"
-    tslib "^2.0.0"
-
-"@spectrum-web-components/icons-ui@^0.9.0", "@spectrum-web-components/icons-ui@^0.9.12", "@spectrum-web-components/icons-ui@^0.9.5", "@spectrum-web-components/icons-ui@^0.9.6", "@spectrum-web-components/icons-ui@^0.9.7":
-  version "0.9.12"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/icons-ui/-/icons-ui-0.9.12.tgz#2fedf7a326652f5f8eb8c37742a5f7e432d05f0e"
-  integrity sha512-992WomeyckC1AaEErKRaHJPhjc0Wns28oc5X2+GnRFwGHYoFI+yboEqxm3M9oHECtZBL+iWYUH44yDJgqhwQXQ==
-  dependencies:
-    "@spectrum-web-components/base" "^0.7.5"
-    "@spectrum-web-components/icon" "^0.12.11"
-    "@spectrum-web-components/iconset" "^0.7.7"
-
-"@spectrum-web-components/icons-workflow@0.9.5":
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/icons-workflow/-/icons-workflow-0.9.5.tgz#287403a9cc2abf64c6f7837b8671d5ed26238711"
-  integrity sha512-Cy74Xr81gVXXj+QGvif6TPP0/Xb29K5wQH/c6Eszq+twtty0V+JeCVY4rklpY2yyXYDDlDqqYlP9LTdva5YUzQ==
-  dependencies:
-    "@spectrum-web-components/base" "^0.7.2"
-    "@spectrum-web-components/icon" "^0.12.5"
-
-"@spectrum-web-components/icons-workflow@^0.9.12", "@spectrum-web-components/icons-workflow@^0.9.4", "@spectrum-web-components/icons-workflow@^0.9.5", "@spectrum-web-components/icons-workflow@^0.9.6", "@spectrum-web-components/icons-workflow@^0.9.8", "@spectrum-web-components/icons-workflow@^0.9.9":
-  version "0.9.12"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/icons-workflow/-/icons-workflow-0.9.12.tgz#6cd8b9634abcf9e01df2a8c3ae9d6c0ecc40fdbf"
-  integrity sha512-JZ1kvbNIOoH+zNB7F3+slTXCH980Qd/GVFZ5GJgH30msKmc9VrbH6GhofWrVkk4xQRqhBukajlIlOfVqxMCGyQ==
-  dependencies:
-    "@spectrum-web-components/base" "^0.7.5"
-    "@spectrum-web-components/icon" "^0.12.11"
-
-"@spectrum-web-components/icons@0.9.5":
-  version "0.9.5"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/icons/-/icons-0.9.5.tgz#938b28b055b0c0873cf21b116e6ad7c67455c0b2"
-  integrity sha512-tGSqyHJfJANYloB8pCO1D5Rl1qjDoFpP9RvjlP4tC/RmuOWsWy7IWkgwrM0U03u9/9VfroaQ5qnZADvLpfaF+A==
-  dependencies:
-    "@spectrum-web-components/base" "^0.7.3"
-    "@spectrum-web-components/iconset" "^0.7.5"
-
-"@spectrum-web-components/iconset@^0.6.9":
-  version "0.6.9"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/iconset/-/iconset-0.6.9.tgz#bfc94ed7a3f0fbe19ab14067181018b6f84c5dd8"
-  integrity sha512-7rGx2U3/nxpZX6PYp/QhDzByr88oclues/sPyFLAwTk6cgBnAxLRoxu3gcjVhftf4wAYo4AoOSCjYF7+j7ec7Q==
-  dependencies:
-    "@spectrum-web-components/base" "^0.6.0"
-    tslib "^2.0.0"
-
-"@spectrum-web-components/iconset@^0.7.4", "@spectrum-web-components/iconset@^0.7.5", "@spectrum-web-components/iconset@^0.7.7":
-  version "0.7.7"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/iconset/-/iconset-0.7.7.tgz#fe4f852af7a94bb974a0786ac57fe9e7e7cda301"
-  integrity sha512-Eh/d02ak2YMwVBm1QKu1U0WTuf1UaLVzQ4TEHXOozpnJX9Rt0eDnYrOQpXoz+lnhxnbhFbLy12GviPCVjlMFHA==
-  dependencies:
-    "@spectrum-web-components/base" "^0.7.5"
+    "@spectrum-web-components/base" "^0.37.0"
 
 "@spectrum-web-components/menu@^0.16.9-react.54+c59ca07be":
   version "0.16.17"
@@ -2623,47 +2574,24 @@
   dependencies:
     lit "^2.5.0"
 
-"@spectrum-web-components/shared@^0.14.3":
-  version "0.14.5"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/shared/-/shared-0.14.5.tgz#ec1405b7100fac5b4db604cdb5b06c49c2de315e"
-  integrity sha512-6fKcuKY2pnF0zAcKaKXhouYRBKTiw7tdfMnUU+tjtYquNd1rX/jTuJpRbqcesomxupZGyWnMmRi3fsBSc9x/0Q==
+"@spectrum-web-components/shared@0.37.0", "@spectrum-web-components/shared@^0.14.3", "@spectrum-web-components/shared@^0.15.0", "@spectrum-web-components/shared@^0.15.3", "@spectrum-web-components/shared@^0.15.4", "@spectrum-web-components/shared@^0.15.5", "@spectrum-web-components/shared@^0.15.7", "@spectrum-web-components/shared@^0.37.0":
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/shared/-/shared-0.37.0.tgz#c30ed716c7c72614f6e19254c038f6bf4f2188ae"
+  integrity sha512-i2yJ1tpQxUffP0xcx9QfusxKlRS3eOBZXjCnxhiicHIIlQtK+mPENbUTe2mRmVLT3WPwIt6mNzoO8w/p5h0Pxw==
   dependencies:
-    "@lit-labs/observers" "^1.0.1"
-    "@spectrum-web-components/base" "^0.6.0"
-    focus-visible "^5.1.0"
-    tslib "^2.0.0"
-
-"@spectrum-web-components/shared@^0.15.0", "@spectrum-web-components/shared@^0.15.3", "@spectrum-web-components/shared@^0.15.4", "@spectrum-web-components/shared@^0.15.5", "@spectrum-web-components/shared@^0.15.7":
-  version "0.15.7"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/shared/-/shared-0.15.7.tgz#55fbfcdf87ce1bf738dcfd3c5ba4e769c4debc6c"
-  integrity sha512-sTSI902fAnf2YRgUNzq6sJwcZRVJVgfwkf35DXayD0LOnDGzql8tDp0gd2o33UQrwdDyJ3QUCsuIsX8DXaiAgA==
-  dependencies:
-    "@lit-labs/observers" "^1.0.1"
-    "@spectrum-web-components/base" "^0.7.5"
+    "@lit-labs/observers" "^2.0.0"
+    "@spectrum-web-components/base" "^0.37.0"
     focus-visible "^5.1.0"
 
-"@spectrum-web-components/styles@^0.22.0", "@spectrum-web-components/styles@^0.22.1":
-  version "0.22.2"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/styles/-/styles-0.22.2.tgz#ae1bc53565b33bb4df84f8eacf4e649f9159f034"
-  integrity sha512-zTy3D4MnTQKaX/0KXvOuDRnZ4quttoxG99miX4UNjeT8QUon161E695E6edfXFM/ua+xlHygoZMhCkYx2/UvsQ==
+"@spectrum-web-components/styles@0.37.0", "@spectrum-web-components/styles@^0.22.0", "@spectrum-web-components/styles@^0.23.1", "@spectrum-web-components/styles@^0.37.0":
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/styles/-/styles-0.37.0.tgz#e14b754cd9ebffe780e327f9f8d96832f24da438"
+  integrity sha512-OGG7KSoKG7Ut/idWHUicNBQdk6Wsi/ZZASj5+UgjMGv8qivZ2XOgqms+Zg4mamnYH2aE80CG/GMxKZ3VB/iAPg==
   dependencies:
-    "@spectrum-web-components/base" "^0.7.4"
-
-"@spectrum-web-components/styles@^0.23.1", "@spectrum-web-components/styles@^0.23.3":
-  version "0.23.3"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/styles/-/styles-0.23.3.tgz#dd32bd9620dc494a318cec06b976b15ed2e59f62"
-  integrity sha512-qGGqIHaPsiSYkXd6zKMkPHH9ZTlEUmcPbzd+asm3SaNvQAJdftoqb+OT9mLRqGIIhS+dU+9JN+1Rgf0TzMgK6Q==
-  dependencies:
-    "@spectrum-web-components/base" "^0.7.5"
-
-"@spectrum-web-components/styles@^0.24.0":
-  version "0.24.0"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/styles/-/styles-0.24.0.tgz#3e418a1cd80376b7615256d167232847aa96c49e"
-  integrity sha512-PrI8igjnWcs1R3/pKB/GZQbNhM7X2RVMguyzqKBxbgzT1K1Bf6l2ISHXgr31kSwGQfGWMgEmLd+jNrZJYkjX2A==
-  dependencies:
-    "@spectrum-web-components/base" "^0.7.5"
+    "@spectrum-web-components/base" "^0.37.0"
 
 "@spectrum-web-components/textfield@0.13.8", "@swc-uxp-internal/textfield@npm:@spectrum-web-components/textfield@0.13.8":
+  name "@swc-uxp-internal/textfield"
   version "0.13.8"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/textfield/-/textfield-0.13.8.tgz#9d6dbd7212df51e44f43b29ca06a768dcfcee029"
   integrity sha512-IEDXT81uUVeVw9nfjfvncaNxFWFnSyIO4Xz6Yi4hpG25Ll08rC0zGqyNEE99Bt0S2NoM8LgjVDBIXFENQ/YRQg==
@@ -2675,29 +2603,13 @@
     "@spectrum-web-components/icons-workflow" "^0.9.5"
     "@spectrum-web-components/shared" "^0.15.3"
 
-"@spectrum-web-components/theme@0.14.9":
-  version "0.14.9"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/theme/-/theme-0.14.9.tgz#4a124fa26d526f20004a80051785c4ec25c26562"
-  integrity sha512-lwSai/qFOfaczaImIUtRSScjtsLTMRoYrxFT9u9EYz97mxLK3sDd2UTx5YwVFueKe8akw8fGT9OymQSmNIkTHg==
+"@spectrum-web-components/theme@0.37.0", "@spectrum-web-components/theme@^0.14.10", "@spectrum-web-components/theme@^0.14.7", "@spectrum-web-components/theme@^0.15.0":
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/theme/-/theme-0.37.0.tgz#6e119ffd92a8572e9ad0a215630cc0d004d95651"
+  integrity sha512-xfKnzwWmjD6zN1T7Jo+3yLRdjh7qx8CX2FCL/PrUu8sE2Jo4cO3/vKYLAt27bbeHF5+zxKx2hOZdPOgEpZG9Hg==
   dependencies:
-    "@spectrum-web-components/base" "^0.7.3"
-    "@spectrum-web-components/styles" "^0.22.1"
-
-"@spectrum-web-components/theme@^0.14.10", "@spectrum-web-components/theme@^0.14.7":
-  version "0.14.14"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/theme/-/theme-0.14.14.tgz#5115e1f3c66ef773ca015d073087ac0343eaab3e"
-  integrity sha512-k0z0ndYA7RxF57/hGsWM49lfFYNw2C2RqiEzJHv+ReWzfMSSYv8IIMxovwF7Qv6KFszPrIB9PgYuh2loWKlRoQ==
-  dependencies:
-    "@spectrum-web-components/base" "^0.7.5"
-    "@spectrum-web-components/styles" "^0.23.3"
-
-"@spectrum-web-components/theme@^0.15.0":
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/theme/-/theme-0.15.0.tgz#e117f91c936fcc1bbe512f84898b3e0bbb2353f3"
-  integrity sha512-wtJrWPeZfCP5HfHQdiNU9Ss4rraOrHWVUyCff/++EqcpyJ4ueGBpl+y6EN71XcwD0j2wtWM5t6sBEkiAI17Q4A==
-  dependencies:
-    "@spectrum-web-components/base" "^0.7.5"
-    "@spectrum-web-components/styles" "^0.24.0"
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/styles" "^0.37.0"
 
 "@spectrum-web-components/underlay@^0.9.6":
   version "0.9.9"
@@ -2896,19 +2808,20 @@
     "@spectrum-web-components/base" "^0.7.2"
     "@spectrum-web-components/reactive-controllers" "^0.3.4"
 
-"@swc-uxp-internal/avatar@npm:@spectrum-web-components/avatar@0.10.3":
-  version "0.10.3"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/avatar/-/avatar-0.10.3.tgz#9b438eeb3b8133bce569569c223fa74bf265e7f6"
-  integrity sha512-4LLNIV/etpmlfqwYi42+MVKXvNGxK6E/F+97oulKwJubICJJpztnYhqSdWu1Wa6hGzpQex4bIpCDfxPYmuc8EA==
+"@swc-uxp-internal/avatar@npm:@spectrum-web-components/avatar@0.37.0":
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/avatar/-/avatar-0.37.0.tgz#ecd6950855313c54b96b9a5db5fb8b2e014e1fa9"
+  integrity sha512-VU9qHpdQZcZ4IlatAvehBwasXZgA3sSDv+awiN3EZqXw+DyYFD1w6cKaAgtnvMH2YsXqoZnTZc1aOGvnoz6WYQ==
   dependencies:
-    "@spectrum-web-components/base" "^0.7.2"
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/shared" "^0.37.0"
 
-"@swc-uxp-internal/banner@npm:@spectrum-web-components/banner@0.9.2":
-  version "0.9.2"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/banner/-/banner-0.9.2.tgz#5487aa555e7edb8caf02650c48d3719f473c0190"
-  integrity sha512-SBkrZg6fi6oIiPpst9BI/J8P37XL62UFUiZeE3/y/Z8+JAeIcW9DfLAtezKlkOtJPJ1VBCljzfX2cIrJDkzDbw==
+"@swc-uxp-internal/banner@npm:@spectrum-web-components/banner@0.37.0":
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/banner/-/banner-0.37.0.tgz#c7cc12049e96248e453e7694902ee69e4bcd6751"
+  integrity sha512-+aSC4vBNXY9KGfIR9HNVVUdHcLc5cgA6yI+1VtxwrXXuaylS3TQ7BNzT07R8w9REXf1YPQmGFYXPomEttTDZhw==
   dependencies:
-    "@spectrum-web-components/base" "^0.7.2"
+    "@spectrum-web-components/base" "^0.37.0"
 
 "@swc-uxp-internal/button-group@npm:@spectrum-web-components/button-group@0.10.8":
   version "0.10.8"
@@ -3003,21 +2916,21 @@
     "@spectrum-web-components/base" "^0.7.2"
     "@spectrum-web-components/icons-workflow" "^0.9.5"
 
-"@swc-uxp-internal/illustrated-message@npm:@spectrum-web-components/illustrated-message@0.9.8":
-  version "0.9.8"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/illustrated-message/-/illustrated-message-0.9.8.tgz#bdf74524a59fa76b23230575251322e194fa6673"
-  integrity sha512-mPavnKTErJX5EYpD1ySJRpI7Jr+lTuUHmO0RmGlB1Y+bebpyOCqsFjni5lfMMFW4fQtw9V0PXdM8N4hGzlUdVw==
+"@swc-uxp-internal/illustrated-message@npm:@spectrum-web-components/illustrated-message@0.37.0":
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/illustrated-message/-/illustrated-message-0.37.0.tgz#107aea2dcd048f8c346505598c584c23a69888de"
+  integrity sha512-JUop4B2MgkQpYR6PrEifHOFNNKhVwqoBy1xS1HUKLidlOovagY1Wa769ajeXUBGoL1HLKif3O+CmWTBCwAaa5A==
   dependencies:
-    "@spectrum-web-components/base" "^0.7.2"
-    "@spectrum-web-components/styles" "^0.22.0"
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/styles" "^0.37.0"
 
-"@swc-uxp-internal/link@npm:@spectrum-web-components/link@0.14.1":
-  version "0.14.1"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/link/-/link-0.14.1.tgz#63062c552a6215e3a949aeb155cb09e16e903a6c"
-  integrity sha512-kMytS4IKThDYw3VN51OYMHPRMrtFGTCjzrMc1PuHxnzixYKjRGZx1cF13fKX3v2XprquvifEGwo+nYwanuSOSQ==
+"@swc-uxp-internal/link@npm:@spectrum-web-components/link@0.37.0":
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/link/-/link-0.37.0.tgz#5e78355f523366ff550012f8ad1b7b9165f1af6a"
+  integrity sha512-0LkKNrDokyuguIS40reuRudiIV4ZWxL3cr6mjdAzXhfotAxM313JN1QALBsSkzsJuwbh65EFdEFAilHo11hcdA==
   dependencies:
-    "@spectrum-web-components/base" "^0.7.2"
-    "@spectrum-web-components/shared" "^0.15.3"
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/shared" "^0.37.0"
 
 "@swc-uxp-internal/menu@npm:@spectrum-web-components/menu@0.16.9":
   version "0.16.9"
@@ -8932,7 +8845,7 @@ lit-html@^2.7.0:
   dependencies:
     "@types/trusted-types" "^2.0.2"
 
-lit@^2.0.0, lit@^2.1.2, lit@^2.2.0, lit@^2.5.0:
+lit@^2.0.0, lit@^2.5.0:
   version "2.7.5"
   resolved "https://registry.yarnpkg.com/lit/-/lit-2.7.5.tgz#60bc82990cfad169d42cd786999356dcf79b035f"
   integrity sha512-i/cH7Ye6nBDUASMnfwcictBnsTN91+aBjXoTHF2xARghXScKxpD4F4WYI+VLXg9lqbMinDfvoI7VnZXjyHgdfQ==
