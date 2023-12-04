@@ -14,9 +14,38 @@ governing permissions and limitations under the License.
 
 /* Workaround for -
     https://jira.corp.adobe.com/browse/UXP-20845
-    https://jira.corp.adobe.com/browse/UXP-20650 
+    https://jira.corp.adobe.com/browse/UXP-20650
 */
+
+:host {
+    max-width: 100%;
+    min-height: var(--mod-checkbox-height, var(--spectrum-checkbox-height));
+}
 
 #input {
     opacity: 0;
+    width: 100%;
+    height: 100%;
+}
+
+#label {
+    margin-top: var(
+        --mod-checkbox-top-to-text,
+        var(--spectrum-checkbox-top-to-text)
+    );
+    margin-left: var(
+        --mod-checkbox-text-to-control,
+        var(--spectrum-checkbox-text-to-control)
+    );
+}
+
+#box {
+    height: var(
+        --mod-checkbox-control-size,
+        var(--spectrum-checkbox-control-size)
+    );
+    width: var(
+        --mod-checkbox-control-size,
+        var(--spectrum-checkbox-control-size)
+    );
 }
