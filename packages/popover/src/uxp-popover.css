@@ -32,14 +32,16 @@ governing permissions and limitations under the License.
 }
 
 /* Workaround for - https://jira.corp.adobe.com/browse/UXP-21332 */
-:host([placement*='left']) .tip {
-    transform: rotate(-90deg);
-    height: var(--sp-popover-tip-size);
-    margin-left: var(--uxp-swc-placement-left-margin-left);
+:host([placement*='right']) .tip {
+    transform: rotate(180deg);
 }
 
-:host([placement*='right']) .tip {
-    transform: rotate(90deg);
-    height: var(--sp-popover-tip-size);
-    margin-left: var(--uxp-swc-placement-right-margin-left);
+.block {
+    height: 10px;
+    width: 100%;
+}
+
+.inline {
+    height: 100%;
+    width: 10px;
 }
