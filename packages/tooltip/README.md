@@ -6,7 +6,7 @@
 This is UXP wrapper for `@spectrum-web-components/tooltip` package 
 <br />
 
--   For detailed README regarding `@spectrum-web-components/tooltip` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/tooltip/v/0.11.9)
+-   For detailed README regarding `@spectrum-web-components/tooltip` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/tooltip/v/0.37.0)
 
 -   Detailed specification regarding `@spectrum-web-components/tooltip` support in UXP through `@swc-uxp-wrappers/tooltip` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
 
