@@ -74,8 +74,15 @@ governing permissions and limitations under the License.
     max-height: 100%;
 }
 
-
-
 :not(slot[icon-only])::slotted([slot='icon']) {
-    margin-right: calc(var(--mod-actionbutton-text-to-visual, var(--spectrum-actionbutton-text-to-visual) ) + var(--mod-actionbutton-edge-to-text, var(--spectrum-actionbutton-edge-to-text) ) - var(--mod-actionbutton-edge-to-visual-only, var(--spectrum-actionbutton-edge-to-visual-only) ));
+    margin-right: calc(
+        var(
+                --mod-actionbutton-edge-to-text,
+                var(--spectrum-actionbutton-edge-to-text)
+            ) -
+            var(
+                --mod-actionbutton-edge-to-visual-only,
+                var(--spectrum-actionbutton-edge-to-visual-only)
+            )
+    );
 }
