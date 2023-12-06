@@ -1,15 +1,15 @@
 {
-    "name": "@swc-uxp-wrappers/card",
+    "name": "@swc-uxp-wrappers/quick-actions",
     "version": "1.0.0",
     "publishConfig": {
         "access": "public"
     },
-    "description": "UXP wrapper of the @spectrum-web-components/card component",
+    "description": "UXP wrapper of the @spectrum-web-components/quick-actions component",
     "license": "Apache-2.0",
     "repository": {
         "type": "git",
         "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
-        "directory": "packages/card"
+        "directory": "packages/quick-actions"
     },
     "author": "Adobe Inc",
     "main": "src/index.js",
@@ -18,15 +18,12 @@
     "exports": {
         ".": "./src/index.js",
         "./package.json": "./package.json",
-        "./src/Card.js": "./src/Card.js",
-        "./sp-card.js": "./sp-card.js",
-        "./src/card.css.js": "./src/card.css.js"
+        "./src/QuickActions.js": "./src/QuickActions.js",
+        "./src/quick-actions.css.js": "./src/quick-actions.css.js",
+        "./sp-quick-actions.js": "./sp-quick-actions.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/card": "npm:@spectrum-web-components/card@0.37.0",
-        "@swc-uxp-wrappers/checkbox": "1.0.0",
-        "@swc-uxp-wrappers/asset": "1.0.0",
-        "@swc-uxp-wrappers/quick-actions": "1.0.0"
+        "@swc-uxp-internal/quick-actions": "npm:@spectrum-web-components/quick-actions@0.37.0"
     },
     "files": [
         "**/*.js"
@@ -34,6 +31,6 @@
     "keywords": [
         "UXP",
         "Spectrum Web Components",
-        "@spectrum-web-components/card"
+        "@spectrum-web-components/quick-actions"
     ]
 }
