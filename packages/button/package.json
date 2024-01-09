@@ -29,7 +29,7 @@
         "./src/button-base.css.js": "./src/button-base.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/button": "npm:@spectrum-web-components/button@0.19.8"
+        "@swc-uxp-internal/button": "npm:@spectrum-web-components/button@0.37.0"
     },
     "files": [
         "**/*.js"
