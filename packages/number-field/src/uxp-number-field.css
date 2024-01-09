@@ -1,0 +1,116 @@
+/*
+Copyright 2024 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* write uxp style overrides */
+
+:host {
+    width: var(--mod-stepper-width, var(--spectrum-stepper-width));
+}
+
+.input {
+    border-bottom-right-radius: 0px;
+    border-right-width: 0px;
+    border-top-right-radius: 0px;
+    min-width: 0px;
+}
+
+.buttons {
+    height: var(--mod-textfield-height, var(--spectrum-textfield-height));
+    width: calc(
+        var(--mod-textfield-height, var(--spectrum-textfield-height)) * 3 / 4
+    );
+    padding-top: var(--spectrum-stepper-button-gap);
+    padding-bottom: var(--spectrum-stepper-button-gap);
+}
+
+.buttons {
+    height: var(
+        --mod-stepper-buttons-height,
+        var(--spectrum-stepper-buttons-height)
+    );
+    border-bottom-right-radius: var(
+        --mod-stepper-border-radius,
+        var(--spectrum-stepper-border-radius)
+    );
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: var(
+        --mod-stepper-border-radius,
+        var(--spectrum-stepper-border-radius)
+    );
+    border-top-left-radius: 0px;
+    width: calc(
+        var(--mod-stepper-button-width, var(--spectrum-stepper-button-width)) +
+            var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap)) *
+            2
+    );
+    padding-right: var(--spectrum-stepper-button-gap);
+    row-gap: var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap));
+}
+
+.step-up {
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-top-right-radius: var(--spectrum-stepper-button-border-radius-reset);
+    border-top-left-radius: var(--spectrum-stepper-button-border-radius-reset);
+    padding-bottom: 0px;
+    padding-top: var(
+        --mod-stepper-icon-nudge-start,
+        var(--spectrum-stepper-icon-nudge-start)
+    );
+}
+
+.step-down {
+    border-top-color: var(
+        --highcontrast-stepper-border-color,
+        var(--mod-stepper-border-color, var(--spectrum-stepper-border-color))
+    );
+    border-top-width: var(--spectrum-stepper-button-border-width-reset);
+    border-bottom-right-radius: var(
+        --spectrum-stepper-button-border-radius-reset
+    );
+    border-bottom-left-radius: var(
+        --spectrum-stepper-button-border-radius-reset
+    );
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    padding-top: 0px;
+}
+
+.step-down,
+.step-up {
+    height: calc(
+        var(
+                --mod-stepper-buttons-height,
+                var(--spectrum-stepper-buttons-height)
+            ) / 2 -
+            var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap)) *
+            2.5
+    );
+    width: var(
+        --mod-stepper-button-width,
+        var(--spectrum-stepper-button-width)
+    );
+    min-width: 0px;
+    padding-right: var(
+        --mod-stepper-button-padding,
+        var(--spectrum-stepper-button-padding)
+    );
+    padding-left: var(
+        --mod-stepper-button-padding,
+        var(--spectrum-stepper-button-padding)
+    );
+}
+
+.step-down .stepper-icon,
+.step-up .stepper-icon {
+    margin-left: 0px;
+}

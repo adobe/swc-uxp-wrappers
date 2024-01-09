@@ -1,5 +1,5 @@
 <!-- 
-Copyright 2023 Adobe. All rights reserved.
+Copyright 2024 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,86 +10,81 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License. 
 -->
 
-<h3>sp-textfield</h3>
+<h3>sp-textfield(multiline)</h3>
 
 <div id="content">
     <div id="left">
-        <div id="subtitle">sp-textfield</div>
-        <sp-field-label for="textarea">Background</sp-field-label>
+        <div id="subtitle">sp-textfield(multiline)</div>
+        <sp-field-label size="s" for="story-0-s">Background</sp-field-label>
         <sp-textfield
-            id="textarea"
+            size="s"
+            id="story-0-s"
             multiline
             placeholder="Enter your life story"
         ></sp-textfield>
-        <sp-field-label size="s" for="name-0-s">Name</sp-field-label>
+        <sp-field-label size="l" for="story-0-l">Background</sp-field-label>
         <sp-textfield
-            size="s"
-            id="name-0-s"
-            placeholder="Enter your name"
+            size="l"
+            id="story-0-l"
+            multiline
+            placeholder="Enter your life story"
         ></sp-textfield>
-        <sp-field-label for="name-0">Name</sp-field-label>
-        <sp-textfield id="name-0" placeholder="Enter your name"></sp-textfield>
-
-        <sp-textfield disabled placeholder="Enter your name"></sp-textfield>
-
-        <sp-field-label for="name-1" required>Name</sp-field-label>
+        <sp-field-label for="story-0-m">Background</sp-field-label>
         <sp-textfield
-            id="name-1"
+            id="story-0-m"
+            multiline
+            placeholder="Enter your life story"
+        ></sp-textfield>
+        <sp-field-label for="story-1" required>Background</sp-field-label>
+        <sp-textfield
+            id="story-1"
+            multiline
             placeholder="Enter your name"
             valid
-            value="My Name"
         ></sp-textfield>
-
-        <sp-field-label for="name-2" required>Name</sp-field-label>
+        <sp-field-label for="story-2" required>Background</sp-field-label>
         <sp-textfield
-            id="name-2"
+            id="story-2"
+            invalid
+            multiline
+            placeholder="Enter your name"
+        ></sp-textfield>
+        <sp-field-label for="story-3">Background (quietly)</sp-field-label>
+        <sp-textfield
+            id="story-3"
+            multiline
+            placeholder="Enter your name"
+            quiet
+        ></sp-textfield>
+        <sp-field-label for="story-31">Background (quietly)</sp-field-label>
+        <sp-textfield
+            id="story-31"
+            multiline
             invalid
             placeholder="Enter your name"
-        ></sp-textfield>
-
-        <sp-field-label for="name-3">Name (quiet)</sp-field-label>
-        <sp-textfield
-            id="name-3"
-            placeholder="Enter your name"
             quiet
         ></sp-textfield>
-
-        <sp-field-label for="name-3">Name (quiet valid)</sp-field-label>
+        <sp-field-label for="story-32">Background (quietly)</sp-field-label>
         <sp-textfield
-            id="name-3"
-            placeholder="Enter your name"
-            quiet
+            id="story-32"
+            multiline
             valid
-        ></sp-textfield>
-
-        <sp-field-label for="name-3">Name (quiet invalid)</sp-field-label>
-        <sp-textfield
-            id="name-3"
             placeholder="Enter your name"
             quiet
-            invalid
         ></sp-textfield>
-
-        <sp-field-label for="name-3">Name (quiet disabled)</sp-field-label>
+        <sp-field-label for="self">Stay "Positive"</sp-field-label>
         <sp-textfield
-            id="name-3"
-            placeholder="Enter your name"
-            disabled
-        ></sp-textfield>
-
-        <sp-field-label for="password-1">Password</sp-field-label>
-        <sp-textfield id="password-1" type="password">
-            <sp-help-text slot="help-text" variant="negative" icon>
-                Password with at least 8 characters.
-            </sp-help-text>
-        </sp-textfield>
-
-        <sp-textfield
+            multiline
             id="self"
             pattern="[P][o][s][i][t][i][v][e]"
             value="Positive"
         >
-            <sp-help-text slot="help-text">Please be "Positive".</sp-help-text>
+            <sp-help-text slot="help-text">
+                Tell us how you are feeling today.
+            </sp-help-text>
+            <sp-help-text slot="negative-help-text">
+                Please be "Positive".
+            </sp-help-text>
         </sp-textfield>
     </div>
 
