@@ -23,7 +23,9 @@
         "./sp-search.js": "./sp-search.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/search": "npm:@spectrum-web-components/search@0.37.0"
+        "@swc-uxp-internal/search": "npm:@spectrum-web-components/search@0.37.0",
+        "@swc-uxp-wrappers/button": "1.0.0",
+        "@swc-uxp-wrappers/textfield": "1.0.0"
     },
     "files": [
         "**/*.js"
