@@ -1772,11 +1772,6 @@
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@lit-labs/ssr-dom-shim/-/ssr-dom-shim-1.1.2.tgz#d693d972974a354034454ec1317eb6afd0b00312"
   integrity sha512-jnOD+/+dSrfTWYfSXBXlo5l5f0q1UuJo3tkbMDCYA2lKUYq79jaxqtGEvnRoh049nt1vdo1+45RinipU6FGY2g==
 
-"@lit-labs/ssr-dom-shim@^1.1.2":
-  version "1.1.2"
-  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@lit-labs/ssr-dom-shim/-/ssr-dom-shim-1.1.2.tgz#d693d972974a354034454ec1317eb6afd0b00312"
-  integrity sha512-jnOD+/+dSrfTWYfSXBXlo5l5f0q1UuJo3tkbMDCYA2lKUYq79jaxqtGEvnRoh049nt1vdo1+45RinipU6FGY2g==
-
 "@lit-labs/virtualizer@^1.0.1":
   version "1.0.1"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@lit-labs/virtualizer/-/virtualizer-1.0.1.tgz#10c5c849b062ca808dc4dadae8f58632445ee79d"
@@ -2339,7 +2334,20 @@
     "@spectrum-web-components/icons-ui" "^0.9.12"
     "@spectrum-web-components/shared" "^0.15.7"
 
+"@spectrum-web-components/action-button@^0.37.0", "@swc-uxp-internal/action-button@npm:@spectrum-web-components/action-button@0.37.0":
+  name "@swc-uxp-internal/action-button"
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/action-button/-/action-button-0.37.0.tgz#45a5578b60b3ddf95206f4ae4f5048f4da9faa2c"
+  integrity sha512-cU/5sHpRSA823sHUH6jZccmizkTxWr/LJHTDJ4jj0LxCLh15OHfxKM+hu/vcc5fXYrAPma5Hp54xTBc/l/frDA==
+  dependencies:
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/button" "^0.37.0"
+    "@spectrum-web-components/icon" "^0.37.0"
+    "@spectrum-web-components/icons-ui" "^0.37.0"
+    "@spectrum-web-components/shared" "^0.37.0"
+
 "@spectrum-web-components/asset@^0.37.0", "@swc-uxp-internal/asset@npm:@spectrum-web-components/asset@0.37.0":
+  name "@swc-uxp-internal/asset"
   version "0.37.0"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/asset/-/asset-0.37.0.tgz#92f17644b039f467b28f0e81cdee89b5283d1913"
   integrity sha512-nFZ4/TCHbUcNUay5NI1fLhLejtx7QJ3H+diCNsZXOvmUI+0atcNPid6j5/4CyvSd8PQooEvCgHpbHf39AM57Cg==
@@ -2360,7 +2368,7 @@
   dependencies:
     "@spectrum-web-components/base" "^0.7.5"
 
-"@spectrum-web-components/base@0.37.0", "@spectrum-web-components/base@^0.37.0", "@spectrum-web-components/base@^0.5.8", "@spectrum-web-components/base@^0.6.0", "@spectrum-web-components/base@^0.7.0", "@spectrum-web-components/base@^0.7.2", "@spectrum-web-components/base@^0.7.3", "@spectrum-web-components/base@^0.7.4", "@spectrum-web-components/base@^0.7.5":
+"@spectrum-web-components/base@0.37.0", "@spectrum-web-components/base@^0.37.0", "@spectrum-web-components/base@^0.7.0", "@spectrum-web-components/base@^0.7.2", "@spectrum-web-components/base@^0.7.3", "@spectrum-web-components/base@^0.7.4", "@spectrum-web-components/base@^0.7.5":
   version "0.37.0"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/base/-/base-0.37.0.tgz#d0fccbbc066c270773bcd7ece827128098edb897"
   integrity sha512-3JOI36CemlFzXKAuennOBZ2k99ayd6yooG8eX24z58r0nT6I+3q6jYbytBRJuj48Y7vxwxqMIKX4V118A1dmMQ==
@@ -2375,19 +2383,6 @@
     "@spectrum-web-components/base" "^0.7.5"
     "@spectrum-web-components/button" "^0.20.5"
 
-"@spectrum-web-components/button@^0.17.7":
-  version "0.17.7"
-  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/button/-/button-0.17.7.tgz#114f9432852e7fb93ec0596df639fb0ebf754999"
-  integrity sha512-Qppatw9fQzS8DadggccIQTIn7gxfY/gmNfPA5LRKPrKSMQsHMWUj/C6DIR2+rOSgvVB8FwsNHOLPk1vVF/O32A==
-  dependencies:
-    "@spectrum-web-components/base" "^0.5.8"
-    "@spectrum-web-components/clear-button" "^0.1.6"
-    "@spectrum-web-components/close-button" "^0.1.6"
-    "@spectrum-web-components/icon" "^0.11.10"
-    "@spectrum-web-components/icons-ui" "^0.8.10"
-    "@spectrum-web-components/shared" "^0.14.3"
-    tslib "^2.0.0"
-
 "@spectrum-web-components/button@^0.19.8-react.54+c59ca07be", "@spectrum-web-components/button@^0.19.9":
   version "0.19.10"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/button/-/button-0.19.10.tgz#b6af405ae64fcdd2def7856a339c4fc29754715c"
@@ -2400,7 +2395,7 @@
     "@spectrum-web-components/icons-ui" "^0.9.7"
     "@spectrum-web-components/shared" "^0.15.5"
 
-"@spectrum-web-components/button@^0.20.1", "@spectrum-web-components/button@^0.20.2", "@spectrum-web-components/button@^0.20.5":
+"@spectrum-web-components/button@^0.20.1", "@spectrum-web-components/button@^0.20.5":
   version "0.20.5"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/button/-/button-0.20.5.tgz#ad77a4346be9282cf6f051754714bf5c1b51ef11"
   integrity sha512-RRO9qnIcJIHCn+Tv5k9zSoFhxQ869pytYJXDMs/pgeedsA4qpWjoswYVQWvzpqJMvVJ24pQ27kHbMGS0aG4OzQ==
@@ -2411,6 +2406,19 @@
     "@spectrum-web-components/icon" "^0.12.11"
     "@spectrum-web-components/icons-ui" "^0.9.12"
     "@spectrum-web-components/shared" "^0.15.7"
+
+"@spectrum-web-components/button@^0.37.0", "@swc-uxp-internal/button@npm:@spectrum-web-components/button@0.37.0":
+  name "@swc-uxp-internal/button"
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/button/-/button-0.37.0.tgz#ea20f663b05f6ca8ddb56e8206c56c051c5153f6"
+  integrity sha512-Cz69UtdNDqNVAMUjz2i1RjZ4LetR+bTnUvaDlj8heQHYR/ZHKdnMWaxS1DnZjlu7+osFo57XJPLyhlEEgYT1Ig==
+  dependencies:
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/clear-button" "^0.37.0"
+    "@spectrum-web-components/close-button" "^0.37.0"
+    "@spectrum-web-components/icon" "^0.37.0"
+    "@spectrum-web-components/icons-ui" "^0.37.0"
+    "@spectrum-web-components/shared" "^0.37.0"
 
 "@spectrum-web-components/card@^0.13.3":
   version "0.13.9"
@@ -2435,7 +2443,8 @@
     "@spectrum-web-components/icons-ui" "^0.9.12"
     "@spectrum-web-components/shared" "^0.15.7"
 
-"@spectrum-web-components/checkbox@^0.37.0":
+"@spectrum-web-components/checkbox@^0.37.0", "@swc-uxp-internal/checkbox@npm:@spectrum-web-components/checkbox@0.37.0":
+  name "@swc-uxp-internal/checkbox"
   version "0.37.0"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/checkbox/-/checkbox-0.37.0.tgz#1d662bc779b4ce6f63565ac4551d183f20b1f247"
   integrity sha512-5DV4/aTZUkKyb6U3AHn/zxqbCeb+P1dWibp4Zjvr1FcRbMKdmY782pzRSOOXygLPkLJMKPCN4r6py32gBZY+eg==
@@ -2445,35 +2454,33 @@
     "@spectrum-web-components/icons-ui" "^0.37.0"
     "@spectrum-web-components/shared" "^0.37.0"
 
-"@spectrum-web-components/clear-button@^0.1.6":
-  version "0.1.8"
-  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/clear-button/-/clear-button-0.1.8.tgz#671c939bb30bd3eb93d66a67c4d7071077c60c72"
-  integrity sha512-tznFmX3jtKd684gBzi3vlMklcX1ibGfmXO67u6nS/FPA5a45MnuHKmOZjVyPX9CeC+CAxcug0KKzxd7I5WFGAw==
-  dependencies:
-    "@spectrum-web-components/base" "^0.6.0"
-    tslib "^2.0.0"
-
-"@spectrum-web-components/clear-button@^0.2.3", "@spectrum-web-components/clear-button@^0.2.5", "@spectrum-web-components/clear-button@^0.2.9":
+"@spectrum-web-components/clear-button@^0.2.5", "@spectrum-web-components/clear-button@^0.2.9":
   version "0.2.9"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/clear-button/-/clear-button-0.2.9.tgz#b45c19daba6b3dc37e8ef84a7a5b53a1b9e0d18c"
   integrity sha512-S2JX0JovYVnp0e9w8IbXfyHv98IbbNd/YYSNYx7bHgWeFdty/j1ncaGxdoor0ErfeSimiTgOgy1CG3VGdacUew==
   dependencies:
     "@spectrum-web-components/base" "^0.7.5"
 
-"@spectrum-web-components/close-button@^0.1.6":
-  version "0.1.7"
-  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/close-button/-/close-button-0.1.7.tgz#b9f0e5c4b525dc432ae9fa78ef93ac5e5a6223ab"
-  integrity sha512-pbMvJmLrgjfCzliUxqgAOs1vNjZn1JWLoiEWyxXFo2whPXlCQjMxJuS2JpkQEWLq8qDPI6oBehovHQohx+mKdQ==
+"@spectrum-web-components/clear-button@^0.37.0":
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/clear-button/-/clear-button-0.37.0.tgz#8b2efda8d93219f3db7ba9791750f124c64c6c1f"
+  integrity sha512-8NGvpHogC/pWGgKnVD1ZN0t+WWtuKrW6muNRI9fPJW0rGzVTTNzsTvL/QNrGusBES8/aiT08L35ayV3QfnAU7g==
   dependencies:
-    "@spectrum-web-components/base" "^0.5.8"
-    tslib "^2.0.0"
+    "@spectrum-web-components/base" "^0.37.0"
 
-"@spectrum-web-components/close-button@^0.3.12", "@spectrum-web-components/close-button@^0.3.6", "@spectrum-web-components/close-button@^0.3.8":
+"@spectrum-web-components/close-button@^0.3.12", "@spectrum-web-components/close-button@^0.3.8":
   version "0.3.12"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/close-button/-/close-button-0.3.12.tgz#b1ba4d42018816b8139037b3db9ea8be08dacac2"
   integrity sha512-HlU6eU2HjH7R+5fMXrITfM1FdcO7hqa9VLujXizihYzuj480rm+3ZYY8IR6gWhjri5BxgMi+kBJmeTZQVPXK0w==
   dependencies:
     "@spectrum-web-components/base" "^0.7.5"
+
+"@spectrum-web-components/close-button@^0.37.0":
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/close-button/-/close-button-0.37.0.tgz#2094dd88c9b4380f121cb6edb79c271a79cf11d1"
+  integrity sha512-sqqDyi725V3/3oy2J+IbUTlcHpZKEY7m+wXifanQ5mDOjP/8zX17DDZgSX2X7HI4IFevBSVYZxCV2MUhG5Zp1w==
+  dependencies:
+    "@spectrum-web-components/base" "^0.37.0"
 
 "@spectrum-web-components/divider@^0.6.3", "@spectrum-web-components/divider@^0.6.6", "@spectrum-web-components/divider@^0.6.9":
   version "0.6.9"
@@ -2510,7 +2517,7 @@
     "@spectrum-web-components/base" "^0.7.5"
     "@spectrum-web-components/icons-workflow" "^0.9.12"
 
-"@spectrum-web-components/icon@0.37.0", "@spectrum-web-components/icon@^0.11.10", "@spectrum-web-components/icon@^0.12.0", "@spectrum-web-components/icon@^0.12.11", "@spectrum-web-components/icon@^0.12.5", "@spectrum-web-components/icon@^0.12.6", "@spectrum-web-components/icon@^0.12.7", "@spectrum-web-components/icon@^0.37.0":
+"@spectrum-web-components/icon@0.37.0", "@spectrum-web-components/icon@^0.12.11", "@spectrum-web-components/icon@^0.12.5", "@spectrum-web-components/icon@^0.12.6", "@spectrum-web-components/icon@^0.12.7", "@spectrum-web-components/icon@^0.37.0":
   version "0.37.0"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/icon/-/icon-0.37.0.tgz#b955d01b096308c9b6563d6fd1d6082a84862ea9"
   integrity sha512-DZ1yOKHxNQygzIJ7u9akYComDnMmxuTzfmYxxt9sHdUXmc1NbMkCJqEaAG/LYsdb+hc4xWaDTT9SzArLKZ/btA==
@@ -2518,7 +2525,7 @@
     "@spectrum-web-components/base" "^0.37.0"
     "@spectrum-web-components/iconset" "^0.37.0"
 
-"@spectrum-web-components/icons-ui@0.37.0", "@spectrum-web-components/icons-ui@^0.37.0", "@spectrum-web-components/icons-ui@^0.8.10", "@spectrum-web-components/icons-ui@^0.9.0", "@spectrum-web-components/icons-ui@^0.9.12", "@spectrum-web-components/icons-ui@^0.9.5", "@spectrum-web-components/icons-ui@^0.9.6", "@spectrum-web-components/icons-ui@^0.9.7":
+"@spectrum-web-components/icons-ui@0.37.0", "@spectrum-web-components/icons-ui@^0.37.0", "@spectrum-web-components/icons-ui@^0.9.12", "@spectrum-web-components/icons-ui@^0.9.5", "@spectrum-web-components/icons-ui@^0.9.6", "@spectrum-web-components/icons-ui@^0.9.7":
   version "0.37.0"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/icons-ui/-/icons-ui-0.37.0.tgz#919e94cadb74a4cd2d2abaa9c1bdf873903e53f1"
   integrity sha512-DmaK+NDIgYhtYW19Y4lZoGYLfnFWPBjLNcLWGTQtc41yccEmgWrJbaf9n+nP4TADVJMT5dKNgE2vHnmDABtydg==
@@ -2602,6 +2609,7 @@
     "@spectrum-web-components/overlay" "^0.19.5"
 
 "@spectrum-web-components/quick-actions@^0.37.0", "@swc-uxp-internal/quick-actions@npm:@spectrum-web-components/quick-actions@0.37.0":
+  name "@swc-uxp-internal/quick-actions"
   version "0.37.0"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/quick-actions/-/quick-actions-0.37.0.tgz#fdf6c4d875fa86e45e69a0b9f86907445610a6cd"
   integrity sha512-h9KRwowJ4AQh6UpDcC+iuijm1wPxf/ZhmQgwH4CeYXXl2HU9NuW67QwVkVz7axjNdY5dDh6I2bdwFD/IcZW/ug==
@@ -2629,7 +2637,7 @@
   dependencies:
     lit "^2.5.0"
 
-"@spectrum-web-components/shared@0.37.0", "@spectrum-web-components/shared@^0.14.3", "@spectrum-web-components/shared@^0.15.0", "@spectrum-web-components/shared@^0.15.3", "@spectrum-web-components/shared@^0.15.4", "@spectrum-web-components/shared@^0.15.5", "@spectrum-web-components/shared@^0.15.7", "@spectrum-web-components/shared@^0.37.0":
+"@spectrum-web-components/shared@0.37.0", "@spectrum-web-components/shared@^0.15.0", "@spectrum-web-components/shared@^0.15.3", "@spectrum-web-components/shared@^0.15.4", "@spectrum-web-components/shared@^0.15.5", "@spectrum-web-components/shared@^0.15.7", "@spectrum-web-components/shared@^0.37.0":
   version "0.37.0"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/shared/-/shared-0.37.0.tgz#c30ed716c7c72614f6e19254c038f6bf4f2188ae"
   integrity sha512-i2yJ1tpQxUffP0xcx9QfusxKlRS3eOBZXjCnxhiicHIIlQtK+mPENbUTe2mRmVLT3WPwIt6mNzoO8w/p5h0Pxw==
@@ -2842,26 +2850,16 @@
     "@spectrum-web-components/base" "^0.7.2"
     "@spectrum-web-components/popover" "^0.12.9"
 
-"@swc-uxp-internal/action-button@npm:@spectrum-web-components/action-button@0.8.7":
-  version "0.8.7"
-  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/action-button/-/action-button-0.8.7.tgz#241ab8e3647a652c98e7d0f08fb6d1195201d2a8"
-  integrity sha512-x5gMgh874ZAPWJAK9AUsOCXLkf20jOjCO+HavFtUiEY/wxOQGer8bniKwAOXZGEoGxNbQ9D/La3vTlNXrBaZQw==
+"@swc-uxp-internal/action-group@npm:@spectrum-web-components/action-group@0.37.0":
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/action-group/-/action-group-0.37.0.tgz#7d8586f2fd57f782ae8ae887cff042768b260d6e"
+  integrity sha512-unC1SMjhWI080lfHeAMxBL1y2Vyk6fIhKdukWzqQnzMpPdogh+tvKF9kUgPLZ3rq0hFFCquT0ZZezyywvjTWZA==
   dependencies:
-    "@spectrum-web-components/base" "^0.5.8"
-    "@spectrum-web-components/button" "^0.17.7"
-    "@spectrum-web-components/icon" "^0.11.10"
-    "@spectrum-web-components/icons-ui" "^0.8.10"
-    tslib "^2.0.0"
-
-"@swc-uxp-internal/action-group@npm:@spectrum-web-components/action-group@0.12.4":
-  version "0.12.4"
-  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/action-group/-/action-group-0.12.4.tgz#79fee549fb577ce35ea11130d87ee8bd6c44d051"
-  integrity sha512-SHQY46+hB6wrjTJA/9nUwZXdIFS9uONGR5tyuq0WuOyDl1lpfPXcNOelXLFOsQ3WhBjiLr/xCSX/tQ9t9qHvAA==
-  dependencies:
-    "@lit-labs/observers" "^1.0.1"
-    "@spectrum-web-components/action-button" "^0.10.8"
-    "@spectrum-web-components/base" "^0.7.2"
-    "@spectrum-web-components/reactive-controllers" "^0.3.4"
+    "@lit-labs/observers" "^2.0.0"
+    "@spectrum-web-components/action-button" "^0.37.0"
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/icons-workflow" "^0.37.0"
+    "@spectrum-web-components/reactive-controllers" "^0.37.0"
 
 "@swc-uxp-internal/avatar@npm:@spectrum-web-components/avatar@0.37.0":
   version "0.37.0"
@@ -2878,25 +2876,13 @@
   dependencies:
     "@spectrum-web-components/base" "^0.37.0"
 
-"@swc-uxp-internal/button-group@npm:@spectrum-web-components/button-group@0.10.8":
-  version "0.10.8"
-  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/button-group/-/button-group-0.10.8.tgz#f61014f7aca4735c23863c6490b3981b51e207d9"
-  integrity sha512-GHOuA+zTJFhCW43JOKZaKZaorVk7FeN1RMS2TAvjOinFpnQGFT8M8VmsidN6ivLM9GeDqi2uW6Q/ihZVnun59g==
+"@swc-uxp-internal/button-group@npm:@spectrum-web-components/button-group@0.37.0":
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/button-group/-/button-group-0.37.0.tgz#3f5c52d35eccc1d33c9799a0a3d645ccccce4f68"
+  integrity sha512-GpFU7LftPsfSMifWbE5u4XKVOLCCGlotnuaBfiC+SIb/pRGMQvmysK+hzgDXHDl+KiFGimgNk8bxBpHODyE9ug==
   dependencies:
-    "@spectrum-web-components/base" "^0.7.4"
-    "@spectrum-web-components/button" "^0.20.2"
-
-"@swc-uxp-internal/button@npm:@spectrum-web-components/button@0.19.8":
-  version "0.19.8"
-  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/button/-/button-0.19.8.tgz#4502e4db7aa24977e6b42715704833a5f8fc5d57"
-  integrity sha512-VSzfbmoXZ3c8esRNSTQPyGTo/iu2vuQOE4GAWzBVJxnJ/3vD9TjQSsUSpMpFbqUh4U1tprob/Oij/kd8NMiqnA==
-  dependencies:
-    "@spectrum-web-components/base" "^0.7.2"
-    "@spectrum-web-components/clear-button" "^0.2.3"
-    "@spectrum-web-components/close-button" "^0.3.6"
-    "@spectrum-web-components/icon" "^0.12.5"
-    "@spectrum-web-components/icons-ui" "^0.9.5"
-    "@spectrum-web-components/shared" "^0.15.3"
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/button" "^0.37.0"
 
 "@swc-uxp-internal/card@npm:@spectrum-web-components/card@0.37.0":
   version "0.37.0"
@@ -2910,17 +2896,6 @@
     "@spectrum-web-components/quick-actions" "^0.37.0"
     "@spectrum-web-components/shared" "^0.37.0"
     "@spectrum-web-components/styles" "^0.37.0"
-
-"@swc-uxp-internal/checkbox@npm:@spectrum-web-components/checkbox@0.14.0":
-  version "0.14.0"
-  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/checkbox/-/checkbox-0.14.0.tgz#1973b61e4aac6a01063e32be52b4ab4680348711"
-  integrity sha512-7Iecyj6TLDeyRH2WIx2695q4e6LmKqkUszfjOTL/cLjKO3uqw8XEbFXvHo7M6d+imdXWeHsOnjxe94TeWChqzA==
-  dependencies:
-    "@spectrum-web-components/base" "^0.7.0"
-    "@spectrum-web-components/icon" "^0.12.0"
-    "@spectrum-web-components/icons-ui" "^0.9.0"
-    "@spectrum-web-components/shared" "^0.15.0"
-    tslib "^2.0.0"
 
 "@swc-uxp-internal/dialog@npm:@spectrum-web-components/dialog@0.11.12":
   version "0.11.12"
@@ -2936,13 +2911,12 @@
     "@spectrum-web-components/shared" "^0.15.5"
     "@spectrum-web-components/underlay" "^0.9.6"
 
-"@swc-uxp-internal/divider@npm:@spectrum-web-components/divider@0.5.0":
-  version "0.5.0"
-  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/divider/-/divider-0.5.0.tgz#0e541284ca5aab4db284414bc22a5c10da2233f1"
-  integrity sha512-gRL8bYtGEIyYpmWKy/xIo9t7HL1Jb1j/oE0rn4vQldlnvA36F0PTZEBO+vcBBfT1Kmv0y3JsSl97Dc75K/+Fqw==
+"@swc-uxp-internal/divider@npm:@spectrum-web-components/divider@0.37.0":
+  version "0.37.0"
+  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/divider/-/divider-0.37.0.tgz#d16762fc2808c2123bfa05602a531545b52f6a93"
+  integrity sha512-f08h0pQ4srKw9R1fT+jKHUF3s1GfV2UPpcKrrfXFclXRRlu4AuQBO8Wo6nYUj/yYCz+hRWhlmtxL/BDKmREu9w==
   dependencies:
-    "@spectrum-web-components/base" "^0.7.0"
-    tslib "^2.0.0"
+    "@spectrum-web-components/base" "^0.37.0"
 
 "@swc-uxp-internal/field-group@npm:@spectrum-web-components/field-group@0.8.2":
   version "0.8.2"

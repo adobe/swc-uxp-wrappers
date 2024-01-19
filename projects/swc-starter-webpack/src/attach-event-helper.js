@@ -42,3 +42,23 @@ function attachEvents(tabName) {
         eval(eventListener3);
     }
 }
+
+function handleThemeColor(selectObject) {
+    var value = selectObject.value;
+    document.querySelector('#theme-block').setAttribute('color', value);
+    var globalDiv = document.getElementById('global');
+    if (
+        value == 'dark' ||
+        value == 'darkest' ||
+        value == 'light' ||
+        value == 'lightest'
+    ) {
+        globalDiv.style.backgroundColor =
+            'var(--spectrum-global-color-gray-50)';
+    }
+}
+
+function handleThemeScale(selectObject) {
+    var value = selectObject.value;
+    document.querySelector('#theme-block').setAttribute('scale', value);
+}
