@@ -43,3 +43,11 @@ import { Tags } from '@swc-uxp-wrappers/tags';
 ```html
 <sp-tags></sp-tags>
 ```
+
+## Known issues
+- Tag shapes do not display correctly when switching the theme to 'Spectrum Express.
+- Icons do not disable upon clicking the 'Disabled' checkbox.
+- The tags' shape undergoes changes when unchecking the 'Medium' checkbox.
+- Unchecking 'deletable' in the tags component fails to apply expected default styles to the content within the box.
+- Resizing window distorts and causes avatars to disappear unexpectedly. 
+

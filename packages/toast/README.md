@@ -43,3 +43,6 @@ import { Toast } from '@swc-uxp-wrappers/toast';
 ```html
 <sp-toast></sp-toast>
 ```
+
+## Known issues
+- Tab focus does not reach the 'Crossmark' on all toasts when using 'Shift + Tab'.

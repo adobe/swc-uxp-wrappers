@@ -43,3 +43,6 @@ import { Card } from '@swc-uxp-wrappers/card';
 ```html
 <sp-card></sp-card>
 ```
+
+## Known issues
+- The action variant tied to the overlay trigger is not functioning.
