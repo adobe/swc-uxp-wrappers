@@ -43,3 +43,12 @@ import { Checkbox } from '@swc-uxp-wrappers/checkbox';
 ```html
 <sp-checkbox></sp-checkbox>
 ```
+
+## Known issues
+- Checkbox sizes adjust only upon hovering when switching between medium and large scales.
+- Tab-navigation not working for sp-checkbox.
+
+## Fixed issues
+ - Duplicate checkboxes are being shown.
+ - Readonly attribute isn't working.
+ - The label is not aligned with the large checkbox.
