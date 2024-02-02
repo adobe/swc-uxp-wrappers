@@ -6,7 +6,7 @@
 This is UXP wrapper for `@spectrum-web-components/field-group` package 
 <br />
 
--   For detailed README regarding `@spectrum-web-components/field-group` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/field-group/v/0.8.2)
+-   For detailed README regarding `@spectrum-web-components/field-group` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/field-group/v/0.37.0)
 
 -   Detailed specification regarding `@spectrum-web-components/field-group` support in UXP through `@swc-uxp-wrappers/field-group` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
 
