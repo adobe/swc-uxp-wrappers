@@ -11,3 +11,45 @@ governing permissions and limitations under the License.
 */
 
 /* write uxp style overrides */
+
+:host {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#item-link {
+    width: var(--mod-sidenav-width, var(--spectrum-sidenav-width));
+    margin-bottom: var(--mod-sidenav-gap, var(--spectrum-sidenav-gap));
+    max-width: var(--mod-sidenav-max-width, var(--spectrum-sidenav-max-width));
+    min-height: var(
+        --mod-sidenav-min-height,
+        var(--spectrum-sidenav-min-height)
+    );
+    min-width: var(--mod-sidenav-min-width, var(--spectrum-sidenav-min-width));
+    padding-left: var(
+        --mod-sidenav-inline-padding,
+        var(--spectrum-sidenav-inline-padding)
+    );
+    padding-right: var(
+        --mod-sidenav-inline-padding,
+        var(--spectrum-sidenav-inline-padding)
+    );
+}
+
+#item-link #link-text {
+    margin-bottom: var(
+        --mod-sidenav-bottom-to-label,
+        var(--spectrum-sidenav-bottom-to-label)
+    );
+    margin-top: var(
+        --mod-sidenav-top-to-label,
+        var(--spectrum-sidenav-top-to-label)
+    );
+}
+
+#item-link ::slotted([slot='icon']) {
+    height: var(--spectrum-sidenav-icon-size);
+    width: var(--spectrum-sidenav-icon-size);
+    margin-top: var(--spectrum-sidenav-top-to-icon);
+    margin-right: var(--spectrum-sidenav-icon-spacing);
+}

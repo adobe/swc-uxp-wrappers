@@ -6,7 +6,7 @@
 This is UXP wrapper for `@spectrum-web-components/switch` package 
 <br />
 
--   For detailed README regarding `@spectrum-web-components/switch` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/switch/v/0.10.0)
+-   For detailed README regarding `@spectrum-web-components/switch` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/switch/v/0.37.0)
 
 -   Detailed specification regarding `@spectrum-web-components/switch` support in UXP through `@swc-uxp-wrappers/switch` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
 

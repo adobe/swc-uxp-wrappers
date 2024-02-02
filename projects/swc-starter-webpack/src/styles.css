@@ -105,7 +105,8 @@ body {
     background-color: #f5f5f5;
 }
 
-sp-textfield {
+sp-textfield,
+sp-tags {
     margin-bottom: 20px;
 }
 
