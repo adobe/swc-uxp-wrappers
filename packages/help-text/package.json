@@ -27,7 +27,7 @@
         "./HelpTextManager.js": "./src/HelpTextManager.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/help-text": "npm:@spectrum-web-components/help-text@0.2.7"
+        "@swc-uxp-internal/help-text": "npm:@spectrum-web-components/help-text@0.37.0"
     },
     "files": [
         "**/*.js"
