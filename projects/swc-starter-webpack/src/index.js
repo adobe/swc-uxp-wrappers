@@ -59,6 +59,8 @@ import '@spectrum-web-components/table/sp-table-head.js';
 import '@spectrum-web-components/table/sp-table-head-cell.js';
 import '@spectrum-web-components/table/sp-table-row.js';
 
+import '@spectrum-web-components/number-field/sp-number-field.js';
+import '@spectrum-web-components/search/sp-search.js';
 import '@spectrum-web-components/textfield/sp-textfield.js';
 import '@spectrum-web-components/icons/sp-icons-medium.js';
 import '@spectrum-web-components/icons/sp-icons-large.js';
@@ -97,6 +99,8 @@ import './extended_swc_samples/my-menu-group.js';
 import './extended_swc_samples/my-picker-button.js';
 import './extended_swc_samples/my-help-text.js';
 import './extended_swc_samples/my-textfield.js';
+import './extended_swc_samples/my-numberfield.js';
+import './extended_swc_samples/my-search.js';
 import './extended_swc_samples/my-dialog.js';
 import './extended_swc_samples/my-button-group.js';
 import './extended_swc_samples/my-toast.js';
