@@ -10,14 +10,25 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* write uxp style overrides */
+import { css } from 'lit';
+import { Meter } from '@spectrum-web-components/meter';
 
-:host {
-    height: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-    width: 100%;
+class MyMeter extends Meter {
+    static styles = [
+        Meter.styles,
+        css`
+            :host {
+                background: aquamarine;
+                padding: 20px;
+                border-top-left-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
+            .label,
+            .percentage {
+                font-style: italic;
+            }
+        `,
+    ];
 }
 
-:host([vertical]) {
-    width: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-    height: 100%;
-}
+customElements.define('my-meter', MyMeter);

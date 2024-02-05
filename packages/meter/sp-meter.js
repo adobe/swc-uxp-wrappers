@@ -10,14 +10,6 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* write uxp style overrides */
+import { Meter } from './src/Meter.js';
 
-:host {
-    height: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-    width: 100%;
-}
-
-:host([vertical]) {
-    width: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-    height: 100%;
-}
+customElements.define('sp-meter', Meter);

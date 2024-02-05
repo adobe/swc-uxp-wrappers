@@ -10,14 +10,19 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* write uxp style overrides */
+import { css } from 'lit';
+import { Asset } from '@spectrum-web-components/asset';
 
-:host {
-    height: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-    width: 100%;
+class MyAsset extends Asset {
+    static styles = [
+        Asset.styles,
+        css`
+            .file,
+            .folder {
+                transform: rotate(45deg);
+            }
+        `,
+    ];
 }
 
-:host([vertical]) {
-    width: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-    height: 100%;
-}
+customElements.define('my-asset', MyAsset);

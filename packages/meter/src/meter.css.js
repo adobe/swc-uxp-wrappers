@@ -10,14 +10,14 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* write uxp style overrides */
+import { unsafeCSS } from '@spectrum-web-components/base';
+import swcMeterStyles from '@swc-uxp-internal/meter/src/meter.css.js';
 
-:host {
-    height: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-    width: 100%;
-}
+import uxpMeterStyles from './uxp-meter.css.js';
 
-:host([vertical]) {
-    width: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-    height: 100%;
-}
+const combinedMeterStyles = unsafeCSS(
+    swcMeterStyles.toString(),
+    uxpMeterStyles.toString()
+);
+
+export default combinedMeterStyles;

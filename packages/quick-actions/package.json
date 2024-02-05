@@ -1,15 +1,15 @@
 {
-    "name": "@swc-uxp-wrappers/divider",
+    "name": "@swc-uxp-wrappers/quick-actions",
     "version": "1.0.0",
     "publishConfig": {
         "access": "public"
     },
-    "description": "UXP wrapper of the @spectrum-web-components/divider component",
+    "description": "UXP wrapper of the @spectrum-web-components/quick-actions component",
     "license": "Apache-2.0",
     "repository": {
         "type": "git",
         "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
-        "directory": "packages/divider"
+        "directory": "packages/quick-actions"
     },
     "author": "Adobe Inc",
     "main": "src/index.js",
@@ -18,12 +18,12 @@
     "exports": {
         ".": "./src/index.js",
         "./package.json": "./package.json",
-        "./src/Divider.js": "./src/Divider.js",
-        "./sp-divider.js": "./sp-divider.js",
-        "./src/divider.css.js": "./src/divider.css.js"
+        "./src/QuickActions.js": "./src/QuickActions.js",
+        "./src/quick-actions.css.js": "./src/quick-actions.css.js",
+        "./sp-quick-actions.js": "./sp-quick-actions.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/divider": "npm:@spectrum-web-components/divider@0.37.0"
+        "@swc-uxp-internal/quick-actions": "npm:@spectrum-web-components/quick-actions@0.37.0"
     },
     "files": [
         "**/*.js"
@@ -31,6 +31,6 @@
     "keywords": [
         "UXP",
         "Spectrum Web Components",
-        "@spectrum-web-components/divider"
+        "@spectrum-web-components/quick-actions"
     ]
 }

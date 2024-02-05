@@ -10,14 +10,15 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* write uxp style overrides */
+import { Meter } from '@swc-uxp-internal/meter/src/Meter.js';
 
-:host {
-    height: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-    width: 100%;
+import styles from './uxp-meter.css.js';
+
+class UxpMeter extends Meter {
+    static get styles() {
+        // We are combining our styles to make all super class styles available along with the transitive dependent classes styles.
+        return [super.styles, styles];
+    }
 }
 
-:host([vertical]) {
-    width: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-    height: 100%;
-}
+export { UxpMeter as Meter };
