@@ -16,7 +16,243 @@ governing permissions and limitations under the License.
     https://jira.corp.adobe.com/browse/UXP-20703
     https://jira.corp.adobe.com/browse/UXP-21323 
 */
+
+:host {
+    width: var(--mod-textfield-width, var(--spectrum-textfield-width));
+    display: inline-flex;
+    flex-direction: column;
+}
+
+:host([invalid]) .input {
+    padding-right: calc(
+        var(
+                --mod-textfield-icon-spacing-inline-start-invalid,
+                var(--spectrum-textfield-icon-spacing-inline-start-invalid)
+            ) +
+            var(
+                --mod-textfield-icon-size-invalid,
+                var(--spectrum-textfield-icon-size-invalid)
+            ) +
+            var(
+                --mod-textfield-icon-spacing-inline-end-invalid,
+                var(--spectrum-textfield-icon-spacing-inline-end-invalid)
+            ) -
+            var(
+                --mod-textfield-border-width,
+                var(--spectrum-textfield-border-width)
+            )
+    );
+}
+
+:host([valid]) .input {
+    padding-right: calc(
+        var(
+                --mod-textfield-icon-spacing-inline-start-invalid,
+                var(--spectrum-textfield-icon-spacing-inline-start-invalid)
+            ) +
+            var(
+                --mod-textfield-icon-size-invalid,
+                var(--spectrum-textfield-icon-size-invalid)
+            ) +
+            var(
+                --mod-textfield-icon-spacing-inline-end-invalid,
+                var(--spectrum-textfield-icon-spacing-inline-end-invalid)
+            ) -
+            var(
+                --mod-textfield-border-width,
+                var(--spectrum-textfield-border-width)
+            )
+    );
+}
+
+:host([quiet][invalid]) .input {
+    padding-right: calc(
+        var(
+                --mod-textfield-icon-spacing-inline-start-invalid,
+                var(--spectrum-textfield-icon-spacing-inline-start-invalid)
+            ) +
+            var(
+                --mod-textfield-icon-size-invalid,
+                var(--spectrum-textfield-icon-size-invalid)
+            ) +
+            var(
+                --mod-textfield-icon-spacing-inline-end-invalid,
+                var(--spectrum-textfield-icon-spacing-inline-end-invalid)
+            ) -
+            var(
+                --mod-textfield-border-width,
+                var(--spectrum-textfield-border-width)
+            )
+    );
+}
+
+:host([quiet][valid]) .input {
+    padding-right: calc(
+        var(
+                --mod-textfield-icon-spacing-inline-start-invalid,
+                var(--spectrum-textfield-icon-spacing-inline-start-invalid)
+            ) +
+            var(
+                --mod-textfield-icon-size-invalid,
+                var(--spectrum-textfield-icon-size-invalid)
+            ) +
+            var(
+                --mod-textfield-icon-spacing-inline-end-invalid,
+                var(--spectrum-textfield-icon-spacing-inline-end-invalid)
+            ) -
+            var(
+                --mod-textfield-border-width,
+                var(--spectrum-textfield-border-width)
+            )
+    );
+}
 .input {
-    padding-left: var(--spectrum-textarea-padding-left);
+    width: 100%;
     appearance: none;
+    padding-left: var(--spectrum-textarea-padding-left);
+    height: var(--mod-textfield-height, var(--spectrum-textfield-height));
+    min-width: var(
+        --mod-textfield-min-width,
+        var(--spectrum-textfield-min-width)
+    );
+    padding-bottom: calc(
+        var(
+                --mod-textfield-spacing-block-end,
+                var(--spectrum-textfield-spacing-block-end)
+            ) -
+            var(
+                --mod-textfield-border-width,
+                var(--spectrum-textfield-border-width)
+            )
+    );
+    padding-top: calc(
+        var(
+                --mod-textfield-spacing-block-start,
+                var(--spectrum-textfield-spacing-block-start)
+            ) -
+            var(
+                --mod-textfield-border-width,
+                var(--spectrum-textfield-border-width)
+            )
+    );
+    padding-left: calc(
+        var(
+                --mod-textfield-spacing-inline,
+                var(--spectrum-textfield-spacing-inline)
+            ) -
+            var(
+                --mod-textfield-border-width,
+                var(--spectrum-textfield-border-width)
+            )
+    );
+
+    padding-right: calc(
+        var(
+                --mod-textfield-spacing-inline,
+                var(--spectrum-textfield-spacing-inline)
+            ) -
+            var(
+                --mod-textfield-border-width,
+                var(--spectrum-textfield-border-width)
+            )
+    );
+}
+
+:host([valid]) #textfield .icon {
+    height: var(
+        --mod-textfield-icon-size-valid,
+        var(--spectrum-textfield-icon-size-valid)
+    );
+    width: var(
+        --mod-textfield-icon-size-valid,
+        var(--spectrum-textfield-icon-size-valid)
+    );
+    bottom: var(
+        --mod-textfield-icon-spacing-block-valid,
+        var(--spectrum-textfield-icon-spacing-block-valid)
+    );
+    top: var(
+        --mod-textfield-icon-spacing-block-valid,
+        var(--spectrum-textfield-icon-spacing-block-valid)
+    );
+    right: var(
+        --mod-textfield-icon-spacing-inline-end-valid,
+        var(--spectrum-textfield-icon-spacing-inline-end-valid)
+    );
+}
+
+:host([invalid]) #textfield .icon {
+    height: var(
+        --mod-textfield-icon-size-invalid,
+        var(--spectrum-textfield-icon-size-invalid)
+    );
+    width: var(
+        --mod-textfield-icon-size-invalid,
+        var(--spectrum-textfield-icon-size-invalid)
+    );
+    bottom: var(
+        --mod-textfield-icon-spacing-block-invalid,
+        var(--spectrum-textfield-icon-spacing-block-invalid)
+    );
+    top: var(
+        --mod-textfield-icon-spacing-block-invalid,
+        var(--spectrum-textfield-icon-spacing-block-invalid)
+    );
+    right: var(
+        --mod-textfield-icon-spacing-inline-end-invalid,
+        var(--spectrum-textfield-icon-spacing-inline-end-invalid)
+    );
+}
+
+#textfield {
+    display: inline-flex;
+    min-width: var(--spectrum-textfield-texticon-min-width);
+    width: 100%;
+}
+
+:host([quiet]) .input {
+    border-top-width: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    margin-bottom: var(
+        --mod-textfield-spacing-block-quiet,
+        var(--spectrum-textfield-spacing-block-quiet)
+    );
+    padding-top: var(
+        --mod-textfield-spacing-block-start,
+        var(--spectrum-textfield-spacing-block-start)
+    );
+    padding-left: var(
+        --mod-textfield-spacing-inline-quiet,
+        var(--spectrum-textfield-spacing-inline-quiet)
+    );
+    padding-right: var(
+        --mod-textfield-spacing-inline-quiet,
+        var(--spectrum-textfield-spacing-inline-quiet)
+    );
+}
+
+:host([quiet][invalid]) #textfield .icon,
+:host([quiet][valid]) #textfield .icon {
+    margin-right: calc(
+        var(
+                --mod-textfield-icon-spacing-inline-start-invalid,
+                var(--spectrum-textfield-icon-spacing-inline-start-invalid)
+            ) * (-1)
+    );
+}
+
+:host([multiline]) #textfield {
+    display: inline-flex;
+}
+
+:host([multiline]) .input {
+    min-height: var(
+        --mod-text-area-min-block-size,
+        var(--spectrum-text-area-min-block-size)
+    );
+    min-width: var(
+        --mod-text-area-min-inline-size,
+        var(--spectrum-text-area-min-inline-size)
+    );
 }

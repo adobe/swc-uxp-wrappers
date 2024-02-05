@@ -167,6 +167,12 @@ governing permissions and limitations under the License.
                 </button>
                 <button
                     class="tablinks"
+                    onclick="openTab(event, 'sp-textarea')"
+                >
+                    sp-textfield(multiline)
+                </button>
+                <button
+                    class="tablinks"
                     onclick="openTab(event, 'sp-help-text')"
                 >
                     sp-help-text
@@ -203,6 +209,15 @@ governing permissions and limitations under the License.
                     onclick="openTab(event, 'sp-field-group')"
                 >
                     sp-field-group
+                </button>
+                <button
+                    class="tablinks"
+                    onclick="openTab(event, 'sp-number-field')"
+                >
+                    sp-number-field
+                </button>
+                <button class="tablinks" onclick="openTab(event, 'sp-search')">
+                    sp-search
                 </button>
                 <button class="tablinks" onclick="openTab(event, 'sp-asset')">
                     sp-asset
@@ -302,6 +317,10 @@ governing permissions and limitations under the License.
                 <!--#include sp-textfield.html -->
             </div>
 
+            <div id="sp-textarea" class="tabcontent">
+                <!--#include sp-textarea.html -->
+            </div>
+
             <div id="sp-help-text" class="tabcontent">
                 <!--#include sp-help-text.html -->
             </div>
@@ -342,6 +361,14 @@ governing permissions and limitations under the License.
                 <!--#include sp-field-group.html -->
             </div>
 
+            <div id="sp-search" class="tabcontent">
+                <!--#include sp-search.html -->
+            </div>
+
+            <div id="sp-number-field" class="tabcontent">
+                <!--#include sp-number-field.html -->
+            </div>
+            
             <div id="sp-asset" class="tabcontent">
                 <!--#include sp-asset.html -->
             </div>
