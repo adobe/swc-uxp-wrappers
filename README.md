@@ -1,5 +1,5 @@
 # Spectrum Web Components UXP Wrappers
-
+ 
 ## What is this effort?
 
 The opensource [Spectrum Web Components(SWC)](https://github.com/adobe/spectrum-web-components) UI library (hereafter referred to as SWC) targets the modern browser as a platform, replete with support for almost all CSS properties, layout models and Web APIs conforming to the latest standards. UXP never intends to be an all-encompassing browser and thus doesn't support a considerable section of these aforementioned APIs and properties. To bridge this chasm, the UXP team has decided to supplant some of the CSS properties and layout models with other UXP-supported properties in an attempt to achieve UI parity with that of SWC on web. This wrapper is an implementation of this approach.
