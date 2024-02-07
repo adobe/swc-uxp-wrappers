@@ -94,9 +94,14 @@ body {
     background: var(--spectrum-global-color-gray-100);
 }
 
-sp-textfield,
 sp-action-group {
     margin-bottom: 10px;
+}
+
+sp-textfield,
+sp-number-field,
+sp-search {
+    margin-bottom: 20px;
 }
 
 sp-toast {

@@ -230,6 +230,12 @@ governing permissions and limitations under the License.
                     </button>
                     <button
                         class="tablinks"
+                        onclick="openTab(event, 'sp-textarea')"
+                    >
+                        sp-textfield(multiline)
+                    </button>
+                    <button
+                        class="tablinks"
                         onclick="openTab(event, 'sp-help-text')"
                     >
                         sp-help-text
@@ -302,6 +308,18 @@ governing permissions and limitations under the License.
                         onclick="openTab(event, 'sp-meter')"
                     >
                         sp-meter
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-number-field')"
+                    >
+                        sp-number-field
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-search')"
+                    >
+                        sp-search
                     </button>
                 </div>
 
@@ -405,6 +423,10 @@ governing permissions and limitations under the License.
                     <!--#include sp-toast.html -->
                 </div>
 
+                <div id="sp-textarea" class="tabcontent">
+                    <!--#include sp-textarea.html -->
+                </div>
+
                 <div id="sp-switch" class="tabcontent">
                     <!--#include sp-switch.html -->
                 </div>
@@ -427,6 +449,14 @@ governing permissions and limitations under the License.
 
                 <div id="sp-field-group" class="tabcontent">
                     <!--#include sp-field-group.html -->
+                </div>
+
+                <div id="sp-search" class="tabcontent">
+                    <!--#include sp-search.html -->
+                </div>
+
+                <div id="sp-number-field" class="tabcontent">
+                    <!--#include sp-number-field.html -->
                 </div>
 
                 <div id="sp-asset" class="tabcontent">
