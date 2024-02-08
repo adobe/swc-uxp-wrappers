@@ -1,0 +1,124 @@
+<!-- 
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License. 
+-->
+
+<h3>sp-swatch</h3>
+
+<div id="content">
+    <div id="left">
+        <div id="subtitle">sp-swatch</div>
+        <div style="margin: 20px 20px">
+            <sp-swatch size="xs" color="rgb(255 0 0 / 0.7)"></sp-swatch>
+            <sp-swatch size="s" color="rgb(255 0 0 / 0.7)"></sp-swatch>
+            <sp-swatch color="rgb(255 0 0 / 0.7)"></sp-swatch>
+            <sp-swatch size="l" color="rgb(255 0 0 / 0.7)"></sp-swatch>
+        </div>
+        <div style="margin: 20px 20px">
+            <sp-swatch rounding="none" size="xs" color="rgb(255 0 0 / 0.7)"></sp-swatch>
+            <sp-swatch rounding="none" size="s" color="rgb(255 0 0 / 0.7)"></sp-swatch>
+            <sp-swatch rounding="none" color="rgb(255 0 0 / 0.7)"></sp-swatch>
+            <sp-swatch rounding="none" size="l" color="rgb(255 0 0 / 0.7)"></sp-swatch>
+        </div>
+        <div style="margin: 20px 20px">
+            <sp-swatch rounding="full" size="xs" color="rgb(255 0 0 / 0.7)"></sp-swatch>
+            <sp-swatch rounding="full" size="s" color="rgb(255 0 0 / 0.7)"></sp-swatch>
+            <sp-swatch rounding="full" color="rgb(255 0 0 / 0.7)"></sp-swatch>
+            <sp-swatch rounding="full" size="l" color="rgb(255 0 0 / 0.7)"></sp-swatch>
+        </div>
+
+        <div style="margin: 20px 20px">
+            <sp-swatch border="none" size="xs" color="rgb(255 0 0 / 0.7)"></sp-swatch>
+            <sp-swatch border="none" size="s" color="rgb(255 0 0 / 0.7)"></sp-swatch>
+            <sp-swatch border="none" color="rgb(255 0 0 / 0.7)"></sp-swatch>
+            <sp-swatch border="none" size="l" color="rgb(255 0 0 / 0.7)"></sp-swatch>
+        </div>
+        <div style="margin: 20px 20px">
+            <sp-swatch nothing size="xs" color="rgb(255 0 0 / 0.7)"></sp-swatch>
+            <sp-swatch nothing size="s" color="rgb(255 0 0 / 0.7)"></sp-swatch>
+            <sp-swatch nothing color="rgb(255 0 0 / 0.7)"></sp-swatch>
+            <sp-swatch nothing size="l" color="rgb(255 0 0 / 0.7)"></sp-swatch>
+        </div>
+
+        <div style="margin: 20px 20px">
+            <sp-swatch shape="rectangle" color="rgb(255 0 0 / 0.7)" size="m"></sp-swatch>
+            <sp-swatch shape="rectangle" disabled color="rgb(255 0 0 / 0.7)" size="m"></sp-swatch>
+            <sp-swatch rounding="full" shape="rectangle" mixed-value size="m" color="rgb(255 0 0 / 0.7)"></sp-swatch>
+        </div>
+
+        <div style="margin: 20px 20px">
+            <sp-swatch color="rgb(255 0 0 / 0.7)"></sp-swatch>
+            <sp-swatch color="orange"></sp-swatch>
+            <sp-swatch color="var(--spectrum-magenta-500)"></sp-swatch>
+        </div>
+
+        <div style="margin: 20px 20px">
+            <sp-swatch-group size="m">
+                <sp-swatch></sp-swatch>
+                <sp-swatch nothing></sp-swatch>
+                <sp-swatch disabled></sp-swatch>
+                <sp-swatch shape="rectangle" mixed-value></sp-swatch>
+            </sp-swatch-group>
+        </div>
+
+        <div style="margin: 20px 20px">
+            <sp-swatch-group size="m" density="compact">
+                <sp-swatch></sp-swatch>
+                <sp-swatch nothing></sp-swatch>
+                <sp-swatch disabled></sp-swatch>
+                <sp-swatch shape="rectangle" mixed-value></sp-swatch>
+            </sp-swatch-group>
+        </div>
+
+        <div style="margin: 20px 20px">
+            <sp-swatch-group size="m" density="spacious">
+                <sp-swatch></sp-swatch>
+                <sp-swatch nothing></sp-swatch>
+                <sp-swatch disabled></sp-swatch>
+                <sp-swatch shape="rectangle" mixed-value></sp-swatch>
+            </sp-swatch-group>
+        </div>
+
+        <div style="margin: 20px 20px">
+            <sp-swatch-group id="swatch-group-single-select" selects="single">
+                <sp-swatch color="var(--spectrum-blue-500)"></sp-swatch>
+                <sp-swatch color="var(--spectrum-indigo-500)"></sp-swatch>
+                <sp-swatch color="var(--spectrum-purple-500)" selected></sp-swatch>
+                <sp-swatch color="var(--spectrum-fuchsia-500)"></sp-swatch>
+                <sp-swatch color="var(--spectrum-magenta-500)" selected></sp-swatch>
+            </sp-swatch-group>
+        </div>
+
+        <div style="margin: 20px 20px">
+            <sp-swatch-group selects="multiple">
+                <sp-swatch color="var(--spectrum-blue-500)"></sp-swatch>
+                <sp-swatch color="var(--spectrum-indigo-500)"></sp-swatch>
+                <sp-swatch color="var(--spectrum-purple-500)"></sp-swatch>
+                <sp-swatch color="var(--spectrum-fuchsia-500)"></sp-swatch>
+                <sp-swatch color="var(--spectrum-magenta-500)"></sp-swatch>
+            </sp-swatch-group>
+        </div>
+
+        <div style="margin: 20px 20px">
+            <sp-swatch-group selects="multiple" selected='["color-2"]'>
+                <sp-swatch color="var(--spectrum-blue-500)" value="color-0"></sp-swatch>
+                <sp-swatch color="var(--spectrum-indigo-500)" value="color-1" selected></sp-swatch>
+                <sp-swatch color="var(--spectrum-purple-500)" value="color-2"></sp-swatch>
+                <sp-swatch color="var(--spectrum-fuchsia-500)" value="color-3" selected></sp-swatch>
+                <sp-swatch color="var(--spectrum-magenta-500)" value="color-4"></sp-swatch>
+            </sp-swatch-group>
+        </div>
+    </div>
+</div>
+
+<div id="right">
+    <div id="subtitle">my-swatch</div>
+</div>
+</div>
