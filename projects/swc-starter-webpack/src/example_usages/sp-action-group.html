@@ -15,40 +15,304 @@ governing permissions and limitations under the License.
 <div id="content">
     <div id="left">
         <div id="subtitle">sp-action-group</div>
-        <div>
-            <sp-action-group size="m">
-                <sp-action-button>Action 1</sp-action-button>
-                <sp-action-button>Action 2</sp-action-button>
-                <sp-action-button>Action 3</sp-action-button>
+        <div id="variantLabel">Sizes</div>
+        <div class="demo-example">
+            <sp-action-group size="xs">
+                <sp-action-button>Extra Small 1</sp-action-button>
+                <sp-action-button>Extra Small 2</sp-action-button>
+            </sp-action-group>
+            <sp-action-group size="xl">
+                <sp-action-button>Extra Large 1</sp-action-button>
+                <sp-action-button>Extra Large 2</sp-action-button>
             </sp-action-group>
         </div>
-        <div
-            style="
-                display: flex;
-                justify-content: space-around;
-                margin-top: 20px;
-                margin-left: -10px;
-            "
-        >
-            <sp-action-group vertical>
-                <sp-action-button>Button 1</sp-action-button>
-                <sp-action-button>Longer Button 2</sp-action-button>
-                <sp-action-button>Short 3</sp-action-button>
+
+        <div id="variantLabel">Single Selects</div>
+        <div class="demo-example">
+            <sp-action-group
+                selects="single"
+                emphasized
+                label="Single Selection Demo Group"
+            >
+                <sp-action-button>
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    Button 1
+                </sp-action-button>
+                <sp-action-button selected>
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    Longer Button 2
+                </sp-action-button>
+                <sp-action-button>
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    Short 3
+                </sp-action-button>
             </sp-action-group>
-            <sp-action-group vertical quiet>
-                <sp-action-button>Button 1</sp-action-button>
-                <sp-action-button>Longer Button 2</sp-action-button>
-                <sp-action-button>Short 3</sp-action-button>
+        </div>
+
+        <div id="variantLabel">Multiple Selects</div>
+        <div class="demo-example">
+            <sp-action-group
+                selects="multiple"
+                emphasized
+                label="Multiple Selection Demo Group"
+            >
+                <sp-action-button selected>
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    Button 1
+                </sp-action-button>
+                <sp-action-button>
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    Longer Button 2
+                </sp-action-button>
+                <sp-action-button selected>
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    Short 3
+                </sp-action-button>
             </sp-action-group>
-            <sp-action-group vertical compact>
-                <sp-action-button>Button 1</sp-action-button>
-                <sp-action-button>Longer Button 2</sp-action-button>
-                <sp-action-button>Short 3</sp-action-button>
+        </div>
+
+        <div id="variantLabel">Selected</div>
+        <div class="demo-example">
+            <sp-action-group selects="single" selected='["first"]'>
+                <sp-action-button value="first">First</sp-action-button>
+                <sp-action-button value="second">Second</sp-action-button>
             </sp-action-group>
-            <sp-action-group vertical compact quiet>
-                <sp-action-button>Button 1</sp-action-button>
-                <sp-action-button>Longer Button 2</sp-action-button>
-                <sp-action-button>Short 3</sp-action-button>
+            <sp-action-group selected='["first", "second"]'>
+                <sp-action-button value="first">First</sp-action-button>
+                <sp-action-button value="second">Second</sp-action-button>
+                <sp-action-button value="third">Third</sp-action-button>
+            </sp-action-group>
+            <sp-action-group selects="single" selected='["first", "second"]'>
+                <sp-action-button value="first">First</sp-action-button>
+                <sp-action-button value="second">Second</sp-action-button>
+                <sp-action-button value="third">Third</sp-action-button>
+            </sp-action-group>
+        </div>
+
+        <div id="variantLabel">Horizontal</div>
+        <div class="demo-example">
+            <sp-action-group>
+                <sp-action-button>
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    Button 1
+                </sp-action-button>
+                <sp-action-button>
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    Longer Button 2
+                </sp-action-button>
+                <sp-action-button>
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    Short 3
+                </sp-action-button>
+            </sp-action-group>
+        </div>
+
+        <div id="variantLabel">Compact Horizontal</div>
+        <div class="demo-example">
+            <sp-action-group compact>
+                <sp-action-button>
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    Button 1
+                </sp-action-button>
+                <sp-action-button>
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    Longer Button 2
+                </sp-action-button>
+                <sp-action-button>
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    Short 3
+                </sp-action-button>
+            </sp-action-group>
+        </div>
+
+        <div id="variantLabel">Quiet Horizontal</div>
+        <div class="demo-example">
+            <sp-action-group quiet>
+                <sp-action-button label="Zoom in">
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                </sp-action-button>
+                <sp-action-button label="Zoom in">
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                </sp-action-button>
+                <sp-action-button label="Zoom in">
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                </sp-action-button>
+            </sp-action-group>
+        </div>
+
+        <div id="variantLabel">Quiet Compact Horizontal</div>
+        <div class="demo-example">
+            <sp-action-group quiet compact>
+                <sp-action-button label="Zoom in">
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                </sp-action-button>
+                <sp-action-button label="Zoom in">
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                </sp-action-button>
+                <sp-action-button label="Zoom in">
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                </sp-action-button>
+            </sp-action-group>
+        </div>
+
+        <div id="variantLabel">Compact Emphasized</div>
+        <div class="demo-example">
+            <sp-action-group compact emphasized>
+                <sp-action-button label="Zoom in">
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                </sp-action-button>
+                <sp-action-button label="Zoom in">
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                </sp-action-button>
+                <sp-action-button label="Zoom in">
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                </sp-action-button>
+            </sp-action-group>
+        </div>
+
+        <div id="variantLabel">Vertical</div>
+        <div class="demo-example">
+            <div style="display: flex; justify-content: space-around">
+                <sp-action-group vertical>
+                    <sp-action-button>
+                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                        Button 1
+                    </sp-action-button>
+                    <sp-action-button>
+                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                        Longer Button 2
+                    </sp-action-button>
+                    <sp-action-button>
+                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                        Short 3
+                    </sp-action-button>
+                </sp-action-group>
+            </div>
+        </div>
+
+        <div id="variantLabel">Vertical Compact</div>
+        <div class="demo-example">
+            <div style="display: flex; justify-content: space-around">
+                <sp-action-group vertical compact>
+                    <sp-action-button>
+                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                        Button 1
+                    </sp-action-button>
+                    <sp-action-button>
+                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                        Longer Button 2
+                    </sp-action-button>
+                    <sp-action-button>
+                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                        Short 3
+                    </sp-action-button>
+                    <sp-action-button>
+                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                        Longer Button 4
+                    </sp-action-button>
+                </sp-action-group>
+            </div>
+        </div>
+
+        <div id="variantLabel">Vertical Quiet</div>
+        <div class="demo-example">
+            <div style="display: flex; justify-content: space-around">
+                <sp-action-group vertical quiet>
+                    <sp-action-button label="Zoom in">
+                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    </sp-action-button>
+                    <sp-action-button label="Zoom in">
+                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    </sp-action-button>
+                    <sp-action-button label="Zoom in">
+                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    </sp-action-button>
+                </sp-action-group>
+            </div>
+        </div>
+
+        <div id="variantLabel">Vertical Quiet Compact</div>
+        <div class="demo-example">
+            <div style="display: flex; justify-content: space-around">
+                <sp-action-group compact vertical quiet>
+                    <sp-action-button label="Zoom in">
+                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    </sp-action-button>
+                    <sp-action-button label="Zoom in">
+                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    </sp-action-button>
+                    <sp-action-button label="Zoom in">
+                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    </sp-action-button>
+                </sp-action-group>
+            </div>
+        </div>
+
+        <div id="variantLabel">Compact Vertical</div>
+        <div class="demo-example">
+            <div style="display: flex; justify-content: space-around">
+                <sp-action-group compact vertical>
+                    <sp-action-button label="Zoom in">
+                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    </sp-action-button>
+                    <sp-action-button label="Zoom in">
+                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    </sp-action-button>
+                    <sp-action-button label="Zoom in">
+                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    </sp-action-button>
+                </sp-action-group>
+            </div>
+        </div>
+
+        <div id="variantLabel">Justified</div>
+        <div class="demo-example">
+            <sp-action-group justified>
+                <sp-action-button>
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    Button 1
+                </sp-action-button>
+                <sp-action-button>
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    Longer Button 2
+                </sp-action-button>
+                <sp-action-button>
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    Short 3
+                </sp-action-button>
+            </sp-action-group>
+        </div>
+
+        <div id="variantLabel">Justified Compact</div>
+        <div class="demo-example">
+            <sp-action-group justified compact>
+                <sp-action-button>
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    Button 1
+                </sp-action-button>
+                <sp-action-button>
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    Longer Button 2
+                </sp-action-button>
+                <sp-action-button>
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    Short 3
+                </sp-action-button>
+            </sp-action-group>
+        </div>
+
+        <div id="variantLabel">Justified Quiet</div>
+        <div class="demo-example">
+            <sp-action-group justified quiet>
+                <sp-action-button label="Zoom in">
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                </sp-action-button>
+                <sp-action-button label="Zoom in">
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                </sp-action-button>
+                <sp-action-button label="Zoom in">
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                </sp-action-button>
             </sp-action-group>
         </div>
     </div>

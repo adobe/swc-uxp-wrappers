@@ -42,3 +42,13 @@ function attachEvents(tabName) {
         eval(eventListener3);
     }
 }
+
+function handleThemeColor(selectObject) {
+    var value = selectObject.value;
+    document.querySelector('#theme-block').setAttribute('color', value);
+}
+
+function handleThemeScale(selectObject) {
+    var value = selectObject.value;
+    document.querySelector('#theme-block').setAttribute('scale', value);
+}
