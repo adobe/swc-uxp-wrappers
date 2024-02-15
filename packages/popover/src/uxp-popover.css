@@ -27,15 +27,6 @@ governing permissions and limitations under the License.
         );
 }
 
-:host([placement*='bottom']) .tip {
-    transform: rotate(180deg);
-}
-
-/* Workaround for - https://jira.corp.adobe.com/browse/UXP-21332 */
-:host([placement*='right']) .tip {
-    transform: rotate(180deg);
-}
-
 .block {
     height: 10px;
     width: 100%;
