@@ -23,8 +23,10 @@
         "./src/card.css.js": "./src/card.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/card": "npm:@spectrum-web-components/card@0.13.4",
-        "@swc-uxp-wrappers/checkbox": "1.0.0"
+        "@swc-uxp-internal/card": "npm:@spectrum-web-components/card@0.37.0",
+        "@swc-uxp-wrappers/checkbox": "1.0.0",
+        "@swc-uxp-wrappers/asset": "1.0.0",
+        "@swc-uxp-wrappers/quick-actions": "1.0.0"
     },
     "files": [
         "**/*.js"

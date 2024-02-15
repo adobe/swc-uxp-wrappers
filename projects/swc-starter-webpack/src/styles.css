@@ -15,7 +15,6 @@ governing permissions and limitations under the License.
 
 body {
     font-family: Arial;
-    overflow-y: scroll;
     max-height: 100vh;
 }
 
@@ -30,61 +29,51 @@ body {
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-    width: fit-content;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    padding: 30px;
-    margin: 30px;
-    overflow-y: auto;
+    background: var(--spectrum-global-color-gray-50);
+    padding: 30px 20px 30px 30px;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
     display: block;
-    background-color: inherit;
-    color: black;
-    padding: 22px 16px;
+    padding: 22px 36px;
     width: 100%;
     border: none;
     outline: none;
     text-align: left;
     cursor: pointer;
     transition: 0.3s;
-    font-size: 17px;
+    margin: 2px;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-    background-color: #ddd;
+    outline: 2px solid var(--spectrum-global-color-gray-500);
+    outline-offset: 1px;
+    width: 115%; /* Adjust the width as needed */
+    height: 115%; /* Adjust the height as needed */
+    background-color: var(--spectrum-global-color-gray-300);
 }
 
 /* Create an active/current "tab button" class */
 .tab button.active {
-    background-color: #ccc;
+    background-color: var(--spectrum-global-color-gray-200);
+    border-radius: 6px;
+    width: 120%; /* Adjust the width as needed */
+    height: 120%; /* Adjust the height as needed */
 }
 
 /* Style the tab content */
 .tabcontent {
     position: absolute;
     top: 0;
-    left: 300px;
-    background: white;
+    left: 285px;
+    background: var(--spectrum-global-color-gray-50);
     right: 0;
     bottom: 0;
     padding: 20px;
-    border: 1px solid #ccc;
+    border-left: 2px solid var(--spectrum-global-color-gray-700);
     overflow-y: auto;
-}
-
-.demo-example {
-    flex: 1 1 0%;
-    max-width: 100%;
-    overflow: auto;
-    margin: 10px;
-    padding: 10px;
 }
 
 #content {
@@ -102,10 +91,16 @@ body {
     overflow: auto;
     margin: 20px;
     padding: 20px;
-    background-color: #f5f5f5;
+    background: var(--spectrum-global-color-gray-100);
 }
 
-sp-textfield {
+sp-action-group {
+    margin-bottom: 10px;
+}
+
+sp-textfield,
+sp-number-field,
+sp-search {
     margin-bottom: 20px;
 }
 
@@ -114,7 +109,7 @@ sp-toast {
 }
 
 h3 {
-    color: black;
+    color: var(--spectrum-global-color-gray-500);
     font-family: 'Lato', sans-serif;
     font-size: 54px;
     font-weight: 300;
@@ -122,24 +117,26 @@ h3 {
     margin: 0 0 58px;
 }
 #subtitle {
-    color: white;
+    color: var(--spectrum-global-color-gray-500);
+    background: var(--spectrum-global-color-gray-200);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(202, 199, 199);
     font-size: 18px;
     margin: 0px 0px 30px 0px;
     padding: 8px;
     border-radius: 3px;
 }
+
 #variantLabel {
-    color: white;
+    color: var(--spectrum-global-color-gray-500);
+    background: var(--spectrum-global-color-gray-200);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(193, 196, 197);
-    font-size: 11px;
-    margin: 0px 0px 20px 0px;
+    font-size: 12px;
+    margin: 20px 0px 20px 0px;
     padding: 6px;
     border-radius: 2px;
     width: fit-content;
 }
+
 p {
     color: grey;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -148,9 +145,34 @@ p {
     margin: 10px 0px 10px 0px;
 }
 .sub-heading {
-    color: black;
+    color: var(--spectrum-global-color-gray-100);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 13px;
     margin-top: 30px;
     font-weight: bold;
+}
+
+.demo-example {
+    background: var(--spectrum-global-color-gray-200);
+    flex: 1 1 0%;
+    max-width: 100%;
+    overflow: auto;
+    padding: 10px 10px 0px 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.control-bar {
+    position: relative;
+    padding: 30px 30px 0px 50px;
+    width: fit-content;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+#global {
+    overflow-y: auto;
+    height: 100vh;
+    background: var(--spectrum-global-color-gray-50);
 }

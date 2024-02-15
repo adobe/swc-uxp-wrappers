@@ -41,16 +41,13 @@ export const aliases = {
     '@spectrum-web-components/field-group': '@swc-uxp-wrappers/field-group',
     '@spectrum-web-components/switch': '@swc-uxp-wrappers/switch',
     '@spectrum-web-components/radio': '@swc-uxp-wrappers/radio',
+    '@spectrum-web-components/number-field': '@swc-uxp-wrappers/number-field',
+    '@spectrum-web-components/search': '@swc-uxp-wrappers/search',
     '@spectrum-web-components/tags': '@swc-uxp-wrappers/tags',
+    '@spectrum-web-components/asset': '@swc-uxp-wrappers/asset',
+    '@spectrum-web-components/quick-actions': '@swc-uxp-wrappers/quick-actions',
+    '@spectrum-web-components/meter': '@swc-uxp-wrappers/meter',
     '@spectrum-web-components/sidenav': '@swc-uxp-wrappers/sidenav',
     '../sp-menu.dev.js': '@swc-uxp-wrappers/menu/sp-menu.js',
     '../sp-menu.js': '@swc-uxp-wrappers/menu/sp-menu.js',
-    '../sp-table-row.dev.js': '@swc-uxp-wrappers/table/sp-table-row.js',
-    '../sp-table-row.js': '@swc-uxp-wrappers/table/sp-table-row.js',
-    '../sp-table-checkbox-cell.dev.js':
-        '@swc-uxp-wrappers/table/sp-table-checkbox-cell.js',
-    '../sp-table-checkbox-cell.js':
-        '@swc-uxp-wrappers/table/sp-table-checkbox-cell.js',
-    '../sp-table-body.dev.js': '@swc-uxp-wrappers/table/sp-table-body.js',
-    '../sp-table-body.js': '@swc-uxp-wrappers/table/sp-table-body.js',
 };
