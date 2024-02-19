@@ -17,8 +17,6 @@ governing permissions and limitations under the License.
     --uxp-swc-horizontal-offset: 0px;
     --uxp-swc-vertical-offset: 2px;
     --uxp-swc-blur: 6px;
-    --uxp-swc-placement-left-margin-left: -6px;
-    --uxp-swc-placement-right-margin-left: -18px;
     box-shadow: var(--uxp-swc-horizontal-offset) var(--uxp-swc-vertical-offset)
         var(--uxp-swc-blur)
         var(
