@@ -16,17 +16,65 @@ governing permissions and limitations under the License.
     <div id="left">
         <div id="subtitle">sp-tags</div>
         <sp-tags>
-            <sp-tag>Tag 1</sp-tag>
-            <sp-tag invalid>Tag 2</sp-tag>
-            <sp-tag disabled>Tag 3</sp-tag>
+            <sp-tag size="s">Tag 1, Size-S</sp-tag>
+            <sp-tag invalid size="s">Tag 2, Size-S</sp-tag>
+            <sp-tag disabled size="s">Tag 3, Size-S</sp-tag>
         </sp-tags>
-
         <sp-tags>
-            <sp-tag deletable>Tag 1</sp-tag>
-            <sp-tag invalid deletable>Tag 2</sp-tag>
-            <sp-tag disabled deletable>Tag 3</sp-tag>
+            <sp-tag size="l">Tag 1, Size-L</sp-tag>
+            <sp-tag invalid size="l">Tag 2, Size-L</sp-tag>
+            <sp-tag disabled size="l">Tag 3, Size-L</sp-tag>
         </sp-tags>
-
+        <sp-tags>
+            <sp-tag>Tag 1, Size-M</sp-tag>
+            <sp-tag invalid>Tag 2, Size-M</sp-tag>
+            <sp-tag disabled>Tag 3, Size-M</sp-tag>
+        </sp-tags>
+        <sp-tags>
+            <sp-tag deletable>Tag 1, Deletable</sp-tag>
+            <sp-tag invalid deletable>Tag 2, Deletable</sp-tag>
+            <sp-tag disabled deletable>Tag 3, Deletable</sp-tag>
+        </sp-tags>
+        <sp-tags>
+            <sp-tag deletable>
+                Tag 1, Deletable
+                <sp-icon-magnify slot="icon" size="s"></sp-icon-magnify>
+            </sp-tag>
+            <sp-tag deletable invalid>
+                Tag 2, Deletable
+                <sp-icon-magnify slot="icon" size="s"></sp-icon-magnify>
+            </sp-tag>
+            <sp-tag deletable disabled>
+                Tag 3, Deletable
+                <sp-icon-magnify slot="icon" size="s"></sp-icon-magnify>
+            </sp-tag>
+        </sp-tags>
+        <sp-tags>
+            <sp-tag deletable>
+                Tag 1, Deletable
+                <sp-avatar
+                    slot="avatar"
+                    label="Tag 1"
+                    src="https://picsum.photos/500/500"
+                ></sp-avatar>
+            </sp-tag>
+            <sp-tag deletable invalid>
+                Tag 2, Deletable
+                <sp-avatar
+                    slot="avatar"
+                    label="Tag 2"
+                    src="https://picsum.photos/500/500"
+                ></sp-avatar>
+            </sp-tag>
+            <sp-tag deletable disabled>
+                Tag 3, Deletable
+                <sp-avatar
+                    slot="avatar"
+                    label="Tag 3"
+                    src="https://picsum.photos/500/500"
+                ></sp-avatar>
+            </sp-tag>
+        </sp-tags>
         <sp-tags>
             <sp-tag>
                 Tag 1
@@ -41,7 +89,6 @@ governing permissions and limitations under the License.
                 <sp-icon-magnify slot="icon" size="s"></sp-icon-magnify>
             </sp-tag>
         </sp-tags>
-
         <sp-tags>
             <sp-tag>
                 Tag 1
@@ -66,6 +113,21 @@ governing permissions and limitations under the License.
                     label="Tag 3"
                     src="https://picsum.photos/500/500"
                 ></sp-avatar>
+            </sp-tag>
+        </sp-tags>
+
+        <sp-tags>
+            <sp-tag deletable readonly>
+                Tag 1, Readonly
+                <sp-icon-magnify slot="icon" size="s"></sp-icon-magnify>
+            </sp-tag>
+            <sp-tag deletable invalid readonly>
+                Tag 2, Readonly
+                <sp-icon-magnify slot="icon" size="s"></sp-icon-magnify>
+            </sp-tag>
+            <sp-tag deletable disabled readonly>
+                Tag 3, Readonly
+                <sp-icon-magnify slot="icon" size="s"></sp-icon-magnify>
             </sp-tag>
         </sp-tags>
     </div>

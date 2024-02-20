@@ -29,7 +29,7 @@
         "./sp-sidenav-heading.js": "./sp-sidenav-heading.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/sidenav": "npm:@spectrum-web-components/sidenav@0.13.7"
+        "@swc-uxp-internal/sidenav": "npm:@spectrum-web-components/sidenav@0.37.0"
     },
     "files": [
         "**/*.js"

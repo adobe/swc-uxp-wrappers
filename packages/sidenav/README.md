@@ -6,7 +6,7 @@
 This is UXP wrapper for `@spectrum-web-components/sidenav` package 
 <br />
 
--   For detailed README regarding `@spectrum-web-components/sidenav` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/sidenav/v/0.13.7)
+-   For detailed README regarding `@spectrum-web-components/sidenav` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/sidenav/v/0.37.0)
 
 -   Detailed specification regarding `@spectrum-web-components/sidenav` support in UXP through `@swc-uxp-wrappers/sidenav` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
 

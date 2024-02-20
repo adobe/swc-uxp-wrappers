@@ -99,6 +99,7 @@ sp-action-group {
 }
 
 sp-textfield,
+sp-tags,
 sp-number-field,
 sp-search {
     margin-bottom: 20px;
