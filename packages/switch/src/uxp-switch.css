@@ -11,3 +11,88 @@ governing permissions and limitations under the License.
 */
 
 /* write uxp style overrides */
+
+:host {
+    max-width: 100%;
+    min-height: var(--mod-switch-height, var(--spectrum-switch-min-height));
+}
+
+#input {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+#switch {
+    height: var(
+        --mod-switch-control-height,
+        var(--spectrum-switch-control-height)
+    );
+    width: var(
+        --mod-switch-control-width,
+        var(--spectrum-switch-control-width)
+    );
+    left: 0;
+    right: 0;
+    margin-top: calc(
+        var(--mod-switch-height, var(--spectrum-switch-min-height)) -
+            var(
+                --mod-switch-control-height,
+                var(--spectrum-switch-control-height)
+            ) -
+            var(
+                --mod-switch-spacing-top-to-control,
+                var(--spectrum-switch-spacing-top-to-control)
+            )
+    );
+    margin-bottom: calc(
+        var(--mod-switch-height, var(--spectrum-switch-min-height)) -
+            var(
+                --mod-switch-control-height,
+                var(--spectrum-switch-control-height)
+            ) -
+            var(
+                --mod-switch-spacing-top-to-control,
+                var(--spectrum-switch-spacing-top-to-control)
+            )
+    );
+    margin-left: 0;
+    margin-right: 0;
+}
+
+#switch:after {
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+#switch:before {
+    height: var(
+        --mod-switch-control-height,
+        var(--spectrum-switch-control-height)
+    );
+    width: var(
+        --mod-switch-control-height,
+        var(--spectrum-switch-control-height)
+    );
+    top: 0;
+    left: 0;
+}
+
+#label {
+    margin-bottom: 0;
+    margin-top: var(
+        --mod-switch-spacing-top-to-label,
+        var(--spectrum-switch-spacing-top-to-label)
+    );
+    margin-left: var(
+        --mod-switch-control-label-spacing,
+        var(--spectrum-switch-control-label-spacing)
+    );
+    margin-right: var(
+        --mod-switch-control-label-spacing,
+        var(--spectrum-switch-control-label-spacing)
+    );
+}

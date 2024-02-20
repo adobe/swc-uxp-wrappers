@@ -26,40 +26,41 @@ governing permissions and limitations under the License.
             <div style="display: flex; flex-direction: column">
                 <h4 class="spectrum-Heading--subtitle1">Standard</h4>
                 <sp-sidenav defaultValue="Docs">
-                    <sp-sidenav-item value="Docs" href="/components/SideNav">
-                        Docs
-                    </sp-sidenav-item>
+                    <sp-sidenav-item
+                        value="Docs"
+                        href="/components/SideNav"
+                        label="Docs"
+                        selected
+                    ></sp-sidenav-item>
                     <sp-sidenav-item
                         value="Guides"
                         href="/guides/getting_started"
-                    >
-                        Guides
-                    </sp-sidenav-item>
-                    <sp-sidenav-item value="Community" href="/community">
-                        Community
-                    </sp-sidenav-item>
+                        label="Guides"
+                    ></sp-sidenav-item>
+                    <sp-sidenav-item
+                        value="Community"
+                        href="/community"
+                        label="Community"
+                    ></sp-sidenav-item>
                     <sp-sidenav-item
                         value="Storybook"
                         href="/storybook"
                         target="_blank"
-                    >
-                        Storybook
-                    </sp-sidenav-item>
+                        label="Storybook"
+                    ></sp-sidenav-item>
                     <sp-sidenav-item
                         value="Releases"
                         href="http://git.corp.adobe.com/React/react-spectrum/releases"
                         target="_blank"
+                        label="Releases"
                         disabled
-                    >
-                        Releases
-                    </sp-sidenav-item>
+                    ></sp-sidenav-item>
                     <sp-sidenav-item
                         value="GitHub"
                         href="http://git.corp.adobe.com/React/react-spectrum"
                         target="_blank"
-                    >
-                        GitHub
-                    </sp-sidenav-item>
+                        label="Github"
+                    ></sp-sidenav-item>
                 </sp-sidenav>
             </div>
 
@@ -172,45 +173,41 @@ governing permissions and limitations under the License.
     <div id="right">
         <div id="subtitle">my-sidenav</div>
         <my-sidenav defaultValue="Docs">
-            <my-sidenav-item value="Docs" href="/components/SideNav">
-                Docs
-            </my-sidenav-item>
-            <my-sidenav-item value="Guides" href="/guides/getting_started">
-                Guides
-            </my-sidenav-item>
-            <my-sidenav-item value="Community" href="/community">
-                Community
-            </my-sidenav-item>
-            <my-sidenav-item
+            <sp-sidenav-item
+                value="Docs"
+                href="/components/SideNav"
+                label="Docs"
+                selected
+            ></sp-sidenav-item>
+            <sp-sidenav-item
+                value="Guides"
+                href="/guides/getting_started"
+                label="Guides"
+            ></sp-sidenav-item>
+            <sp-sidenav-item
+                value="Community"
+                href="/community"
+                label="Community"
+            ></sp-sidenav-item>
+            <sp-sidenav-item
                 value="Storybook"
                 href="/storybook"
                 target="_blank"
-            >
-                Storybook
-            </my-sidenav-item>
-            <my-sidenav-item
+                label="Storybook"
+            ></sp-sidenav-item>
+            <sp-sidenav-item
                 value="Releases"
                 href="http://git.corp.adobe.com/React/react-spectrum/releases"
                 target="_blank"
+                label="Releases"
                 disabled
-            >
-                Releases
-            </my-sidenav-item>
-            <my-sidenav-item
+            ></sp-sidenav-item>
+            <sp-sidenav-item
                 value="GitHub"
                 href="http://git.corp.adobe.com/React/react-spectrum"
                 target="_blank"
-            >
-                GitHub
-            </my-sidenav-item>
-            <my-sidenav-heading label="Heading SideNav">
-                <my-sidenav-item value="Section 5" label="Section 5">
-                    <sp-icon-star slot="icon"></sp-icon-star>
-                </my-sidenav-item>
-                <my-sidenav-item value="Section 6" label="Section 6">
-                    <sp-icon-star slot="icon"></sp-icon-star>
-                </my-sidenav-item>
-            </my-sidenav-heading>
+                label="Github"
+            ></sp-sidenav-item>
         </my-sidenav>
     </div>
 </div>
