@@ -1326,7 +1326,7 @@
   dependencies:
     "@floating-ui/utils" "^0.2.1"
 
-"@floating-ui/dom@^1.1.0", "@floating-ui/dom@^1.2.0":
+"@floating-ui/dom@^1.2.0":
   version "1.5.4"
   resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.5.4.tgz#28df1e1cb373884224a463235c218dcbd81a16bb"
   integrity sha512-jByEsHIY+eEdCjnTVu+E3ephzTOzkQ8hgUfGwos+bg7NlH33Zc5uO+QHz1mrQUOgIKKDD1RtS201P9NvAfq3XQ==
@@ -2370,7 +2370,7 @@
   dependencies:
     "@sinonjs/commons" "^1.7.0"
 
-"@spectrum-web-components/action-button@^0.10.10", "@spectrum-web-components/action-button@^0.10.16":
+"@spectrum-web-components/action-button@^0.10.16":
   version "0.10.16"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/action-button/-/action-button-0.10.16.tgz#7efa5fd806e15bd2d0e21a71c75d3d7780dbc8be"
   integrity sha512-6JRJwZT+/JfzOpHVFSagjfAQ7D2S+c/hT1jp5BUyrlPbChbCTr1gtt+Ghja9SlrcUo5/pwnq6OVqFN/IwngTAg==
@@ -2643,17 +2643,6 @@
   dependencies:
     "@spectrum-web-components/base" "^0.7.5"
 
-"@spectrum-web-components/overlay@^0.18.4", "@spectrum-web-components/overlay@^0.18.9":
-  version "0.18.11"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/overlay/-/overlay-0.18.11.tgz#78b63db4f2ba0bee2d3fe667050bf4622768be15"
-  integrity sha512-7bywUXrlIM6SBjNGs7XcGtoCZZVAkFE7icECfMd3ZfxeLNbBnXCIL2FtiAHm2SNqkwjhBrQDcLy7ud3SOaTpOw==
-  dependencies:
-    "@floating-ui/dom" "^1.1.0"
-    "@spectrum-web-components/action-button" "^0.10.10"
-    "@spectrum-web-components/base" "^0.7.4"
-    "@spectrum-web-components/shared" "^0.15.5"
-    "@spectrum-web-components/theme" "^0.14.10"
-
 "@spectrum-web-components/overlay@^0.19.5":
   version "0.19.5"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/overlay/-/overlay-0.19.5.tgz#a92fe99937643665ff3002c945751325ebe83fda"
@@ -2737,7 +2726,7 @@
     "@spectrum-web-components/icons-workflow" "^0.37.0"
     "@spectrum-web-components/shared" "^0.37.0"
 
-"@spectrum-web-components/theme@0.37.0", "@spectrum-web-components/theme@^0.14.10", "@spectrum-web-components/theme@^0.14.7", "@spectrum-web-components/theme@^0.15.0", "@spectrum-web-components/theme@^0.37.0":
+"@spectrum-web-components/theme@0.37.0", "@spectrum-web-components/theme@^0.14.7", "@spectrum-web-components/theme@^0.15.0", "@spectrum-web-components/theme@^0.37.0":
   version "0.37.0"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/theme/-/theme-0.37.0.tgz#6e119ffd92a8572e9ad0a215630cc0d004d95651"
   integrity sha512-xfKnzwWmjD6zN1T7Jo+3yLRdjh7qx8CX2FCL/PrUu8sE2Jo4cO3/vKYLAt27bbeHF5+zxKx2hOZdPOgEpZG9Hg==
@@ -3051,14 +3040,13 @@
     "@spectrum-web-components/base" "^0.7.2"
     "@spectrum-web-components/icons-ui" "^0.9.5"
 
-"@swc-uxp-internal/popover@npm:@spectrum-web-components/popover@0.12.4":
-  version "0.12.4"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/popover/-/popover-0.12.4.tgz#acfa27a478f16908f4cc710c905dbd536e2e9a9a"
-  integrity sha512-LG26w13+kTq/y16KmObA5i7Q9zdH8jGTIjqtAr3sNbrZcmQ+zftJBtTAaplwtUhDUUPT5A4XYZD9dRTaTB4xqg==
+"@swc-uxp-internal/popover@npm:@spectrum-web-components/popover@0.37.0":
+  version "0.37.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/popover/-/popover-0.37.0.tgz#0a37d0886994f9b24e70a6d6ff6da543a775a324"
+  integrity sha512-UilQj4W2HgDMopON2RG7wEYxnGViAWBJYFaTuO7dCLgEHuQMbIN6h30JvSwfz5Z0Vr/eJgSd3I7xj0K9Bl2c6Q==
   dependencies:
-    "@spectrum-web-components/base" "^0.7.0"
-    "@spectrum-web-components/overlay" "^0.18.4"
-    tslib "^2.0.0"
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/overlay" "^0.37.0"
 
 "@swc-uxp-internal/radio@npm:@spectrum-web-components/radio@0.10.0":
   version "0.10.0"
@@ -3133,13 +3121,14 @@
     "@spectrum-web-components/icon" "^0.12.6"
     "@spectrum-web-components/icons-workflow" "^0.9.6"
 
-"@swc-uxp-internal/tooltip@npm:@spectrum-web-components/tooltip@0.11.9":
-  version "0.11.9"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/tooltip/-/tooltip-0.11.9.tgz#c9001079229313aabd7316b24589c4ef0bb2b86a"
-  integrity sha512-2l0d4bVpU4UHlD97trGADE0IP58S2ZqvL9qHnAY9H84IAhmE1BGEgmECKXiRMtY56+CnwDOn3h2ERIexrEUmbQ==
+"@swc-uxp-internal/tooltip@npm:@spectrum-web-components/tooltip@0.37.0":
+  version "0.37.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/tooltip/-/tooltip-0.37.0.tgz#06dd1d3657d39e103d645e4e19a87458980beeef"
+  integrity sha512-xW48gNYZciP3mhevKEzK6hVxIm/nLgj+ci4EMlzP5AwU5cQGNne5O2Y3OIbUOZHO3/ROhJxG4aLx3m3XROYzwQ==
   dependencies:
-    "@spectrum-web-components/base" "^0.7.2"
-    "@spectrum-web-components/overlay" "^0.18.9"
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/overlay" "^0.37.0"
+    "@spectrum-web-components/shared" "^0.37.0"
 
 "@swc/helpers@^0.5.0":
   version "0.5.3"
