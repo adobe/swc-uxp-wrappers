@@ -1,15 +1,15 @@
 {
-    "name": "@swc-uxp-wrappers/popover",
+    "name": "@swc-uxp-wrappers/search",
     "version": "1.0.0",
     "publishConfig": {
         "access": "public"
     },
-    "description": "UXP wrapper of the @spectrum-web-components/popover component",
+    "description": "UXP wrapper of the @spectrum-web-components/search component",
     "license": "Apache-2.0",
     "repository": {
         "type": "git",
         "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
-        "directory": "packages/popover"
+        "directory": "packages/search"
     },
     "author": "Adobe Inc",
     "main": "src/index.js",
@@ -18,12 +18,14 @@
     "exports": {
         ".": "./src/index.js",
         "./package.json": "./package.json",
-        "./src/Popover.js": "./src/Popover.js",
-        "./src/popover.css.js": "./src/popover.css.js",
-        "./sp-popover.js": "./sp-popover.js"
+        "./src/Search.js": "./src/Search.js",
+        "./src/search.css.js": "./src/search.css.js",
+        "./sp-search.js": "./sp-search.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/popover": "npm:@spectrum-web-components/popover@0.37.0"
+        "@swc-uxp-internal/search": "npm:@spectrum-web-components/search@0.37.0",
+        "@swc-uxp-wrappers/button": "1.0.0",
+        "@swc-uxp-wrappers/textfield": "1.0.0"
     },
     "files": [
         "**/*.js"
@@ -31,6 +33,6 @@
     "keywords": [
         "UXP",
         "Spectrum Web Components",
-        "@spectrum-web-components/popover"
+        "@spectrum-web-components/search"
     ]
 }

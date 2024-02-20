@@ -67,291 +67,412 @@ governing permissions and limitations under the License.
     <body>
         <script defer src="main.bundle.js"></script>
 
-        <sp-theme scale="medium" color="light">
-            <div class="tab">
-                <button class="tablinks" onclick="openTab(event, 'sp-banner')">
-                    sp-banner
-                </button>
-                <button
-                    class="tablinks"
-                    onclick="openTab(event, 'sp-illustrated-message')"
-                >
-                    sp-illustrated-message
-                </button>
-                <button class="tablinks" onclick="openTab(event, 'sp-divider')">
-                    sp-divider
-                </button>
-                <button class="tablinks" onclick="openTab(event, 'sp-avatar')">
-                    sp-avatar
-                </button>
-                <button class="tablinks" onclick="openTab(event, 'sp-button')">
-                    sp-button
-                </button>
-                <button
-                    class="tablinks"
-                    onclick="openTab(event, 'sp-action-button')"
-                >
-                    sp-action-button
-                </button>
-                <button
-                    class="tablinks"
-                    onclick="openTab(event, 'sp-action-group')"
-                >
-                    sp-action-group
-                </button>
-                <button class="tablinks" onclick="openTab(event, 'sp-link')">
-                    sp-link
-                </button>
-                <button
-                    class="tablinks"
-                    onclick="openTab(event, 'sp-field-label')"
-                >
-                    sp-fieldlabel
-                </button>
-                <button
-                    class="tablinks"
-                    onclick="openTab(event, 'sp-checkbox')"
-                >
-                    sp-checkbox
-                </button>
-                <button class="tablinks" onclick="openTab(event, 'sp-card')">
-                    sp-card
-                </button>
-                <button
-                    class="tablinks"
-                    onclick="openTab(event, 'sp-action-bar')"
-                >
-                    sp-action-bar
-                </button>
-                <button class="tablinks" onclick="openTab(event, 'sp-popover')">
-                    sp-popover
-                </button>
-                <button class="tablinks" onclick="openTab(event, 'sp-tooltip')">
-                    sp-tooltip
-                </button>
-                <button
-                    class="tablinks"
-                    onclick="openTab(event, 'sp-picker-button')"
-                >
-                    sp-picker-button
-                </button>
-                <button class="tablinks" onclick="openTab(event, 'sp-menu')">
-                    sp-menu
-                </button>
-                <button
-                    class="tablinks"
-                    onclick="openTab(event, 'sp-menu-item')"
-                >
-                    sp-menu-item
-                </button>
-                <button
-                    class="tablinks"
-                    onclick="openTab(event, 'sp-menu-divider')"
-                >
-                    sp-menu-divider
-                </button>
-                <button
-                    class="tablinks"
-                    onclick="openTab(event, 'sp-menu-group')"
-                >
-                    sp-menu-group
-                </button>
-                <button class="tablinks" onclick="openTab(event, 'sp-table')">
-                    sp-table
-                </button>
-                <button
-                    class="tablinks"
-                    onclick="openTab(event, 'sp-textfield')"
-                >
-                    sp-textfield
-                </button>
-                <button
-                    class="tablinks"
-                    onclick="openTab(event, 'sp-help-text')"
-                >
-                    sp-help-text
-                </button>
-                <button onclick="openTab(event, 'sp-button-group')">
-                    sp-button-group
-                </button>
-                <button class="tablinks" onclick="openTab(event, 'sp-dialog')">
-                    sp-dialog
-                </button>
-                <button class="tablinks" onclick="openTab(event, 'sp-toast')">
-                    sp-toast
-                </button>
-                <button class="tablinks" onclick="openTab(event, 'sp-switch')">
-                    sp-switch
-                </button>
-                <button class="tablinks" onclick="openTab(event, 'sp-sidenav')">
-                    sp-sidenav
-                </button>
-                <button class="tablinks" onclick="openTab(event, 'sp-radio')">
-                    sp-radio
-                </button>
-                <button
-                    class="tablinks"
-                    onclick="openTab(event, 'sp-radio-group')"
-                >
-                    sp-radio-group
-                </button>
-                <button class="tablinks" onclick="openTab(event, 'sp-tags')">
-                    sp-tags
-                </button>
-                <button
-                    class="tablinks"
-                    onclick="openTab(event, 'sp-field-group')"
-                >
-                    sp-field-group
-                </button>
-                <button class="tablinks" onclick="openTab(event, 'sp-asset')">
-                    sp-asset
-                </button>
-                <button
-                    class="tablinks"
-                    onclick="openTab(event, 'sp-quick-actions')"
-                >
-                    sp-quick-actions
-                </button>
-                <button class="tablinks" onclick="openTab(event, 'sp-meter')">
-                    sp-meter
-                </button>
-            </div>
+        <sp-theme
+            id="theme-block"
+            theme="spectrum"
+            color="light"
+            scale="medium"
+            dir="ltr"
+        >
+            <div
+                id="global"
+                style="background-color: var(--spectrum-global-color-gray-50)"
+            >
+                <div class="control-bar">
+                    <div id="theme-control">
+                        <select
+                            name="color"
+                            onchange="handleThemeColor(this)"
+                            id="color-select"
+                        >
+                            <option value="lightest">Lightest</option>
+                            <option selected value="light">Light</option>
+                            <option value="dark">Dark</option>
+                            <option value="darkest">Darkest</option>
+                        </select>
+                        <select
+                            name="scale"
+                            onchange="handleThemeScale(this)"
+                            id="scale-select"
+                        >
+                            <option selected value="medium">Medium</option>
+                            <option value="large">Large</option>
+                        </select>
+                    </div>
+                    <sp-divider
+                        size="l"
+                        style="margin-bottom: 10px"
+                    ></sp-divider>
+                </div>
+                <div class="tab">
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-banner')"
+                    >
+                        sp-banner
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-illustrated-message')"
+                    >
+                        sp-illustrated-message
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-divider')"
+                    >
+                        sp-divider
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-avatar')"
+                    >
+                        sp-avatar
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-button')"
+                    >
+                        sp-button
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-action-button')"
+                    >
+                        sp-action-button
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-action-group')"
+                    >
+                        sp-action-group
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-link')"
+                    >
+                        sp-link
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-field-label')"
+                    >
+                        sp-fieldlabel
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-checkbox')"
+                    >
+                        sp-checkbox
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-card')"
+                    >
+                        sp-card
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-action-bar')"
+                    >
+                        sp-action-bar
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-popover')"
+                    >
+                        sp-popover
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-tooltip')"
+                    >
+                        sp-tooltip
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-picker-button')"
+                    >
+                        sp-picker-button
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-menu')"
+                    >
+                        sp-menu
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-menu-item')"
+                    >
+                        sp-menu-item
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-menu-divider')"
+                    >
+                        sp-menu-divider
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-menu-group')"
+                    >
+                        sp-menu-group
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-table')"
+                    >
+                        sp-table
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-textfield')"
+                    >
+                        sp-textfield
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-textarea')"
+                    >
+                        sp-textfield(multiline)
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-help-text')"
+                    >
+                        sp-help-text
+                    </button>
+                    <button onclick="openTab(event, 'sp-button-group')">
+                        sp-button-group
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-dialog')"
+                    >
+                        sp-dialog
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-toast')"
+                    >
+                        sp-toast
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-switch')"
+                    >
+                        sp-switch
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-sidenav')"
+                    >
+                        sp-sidenav
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-radio')"
+                    >
+                        sp-radio
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-radio-group')"
+                    >
+                        sp-radio-group
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-tags')"
+                    >
+                        sp-tags
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-field-group')"
+                    >
+                        sp-field-group
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-asset')"
+                    >
+                        sp-asset
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-quick-actions')"
+                    >
+                        sp-quick-actions
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-meter')"
+                    >
+                        sp-meter
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-number-field')"
+                    >
+                        sp-number-field
+                    </button>
+                    <button
+                        class="tablinks"
+                        onclick="openTab(event, 'sp-search')"
+                    >
+                        sp-search
+                    </button>
+                </div>
 
-            <div id="sp-banner" class="tabcontent">
-                <!--#include sp-banner.html -->
-            </div>
+                <div id="sp-banner" class="tabcontent">
+                    <!--#include sp-banner.html -->
+                </div>
 
-            <div id="sp-illustrated-message" class="tabcontent">
-                <!--#include sp-illustrated-message.html -->
-            </div>
+                <div id="sp-illustrated-message" class="tabcontent">
+                    <!--#include sp-illustrated-message.html -->
+                </div>
 
-            <div id="sp-divider" class="tabcontent">
-                <!--#include sp-divider.html -->
-            </div>
+                <div id="sp-divider" class="tabcontent">
+                    <!--#include sp-divider.html -->
+                </div>
 
-            <div id="sp-avatar" class="tabcontent">
-                <!--#include sp-avatar.html -->
-            </div>
+                <div id="sp-avatar" class="tabcontent">
+                    <!--#include sp-avatar.html -->
+                </div>
 
-            <div id="sp-button" class="tabcontent">
-                <!--#include sp-button.html -->
-            </div>
+                <div id="sp-button" class="tabcontent">
+                    <!--#include sp-button.html -->
+                </div>
 
-            <div id="sp-action-button" class="tabcontent">
-                <!--#include sp-action-button.html -->
-            </div>
+                <div id="sp-action-button" class="tabcontent">
+                    <!--#include sp-action-button.html -->
+                </div>
 
-            <div id="sp-action-group" class="tabcontent">
-                <!--#include sp-action-group.html -->
-            </div>
+                <div id="sp-action-group" class="tabcontent">
+                    <!--#include sp-action-group.html -->
+                </div>
 
-            <div id="sp-link" class="tabcontent">
-                <!--#include sp-link.html -->
-            </div>
+                <div id="sp-link" class="tabcontent">
+                    <!--#include sp-link.html -->
+                </div>
 
-            <div id="sp-field-label" class="tabcontent">
-                <!--#include sp-field-label.html -->
-            </div>
+                <div id="sp-field-label" class="tabcontent">
+                    <!--#include sp-field-label.html -->
+                </div>
 
-            <div id="sp-checkbox" class="tabcontent">
-                <!--#include sp-checkbox.html -->
-            </div>
+                <div id="sp-checkbox" class="tabcontent">
+                    <!--#include sp-checkbox.html -->
+                </div>
 
-            <div id="sp-card" class="tabcontent">
-                <!--#include sp-card.html -->
-            </div>
+                <div id="sp-card" class="tabcontent">
+                    <!--#include sp-card.html -->
+                </div>
 
-            <div id="sp-action-bar" class="tabcontent">
-                <!--#include sp-action-bar.html -->
-            </div>
+                <div id="sp-action-bar" class="tabcontent">
+                    <!--#include sp-action-bar.html -->
+                </div>
 
-            <div id="sp-popover" class="tabcontent">
-                <!--#include sp-popover.html -->
-            </div>
+                <div id="sp-popover" class="tabcontent">
+                    <!--#include sp-popover.html -->
+                </div>
 
-            <div id="sp-tooltip" class="tabcontent">
-                <!--#include sp-tooltip.html -->
-            </div>
+                <div id="sp-tooltip" class="tabcontent">
+                    <!--#include sp-tooltip.html -->
+                </div>
 
-            <div id="sp-picker-button" class="tabcontent">
-                <!--#include sp-picker-button.html -->
-            </div>
+                <div id="sp-picker-button" class="tabcontent">
+                    <!--#include sp-picker-button.html -->
+                </div>
 
-            <div id="sp-menu" class="tabcontent">
-                <!--#include sp-menu.html -->
-            </div>
+                <div id="sp-menu" class="tabcontent">
+                    <!--#include sp-menu.html -->
+                </div>
 
-            <div id="sp-menu-divider" class="tabcontent">
-                <!--#include sp-menu-divider.html -->
-            </div>
+                <div id="sp-menu-divider" class="tabcontent">
+                    <!--#include sp-menu-divider.html -->
+                </div>
 
-            <div id="sp-menu-item" class="tabcontent">
-                <!--#include sp-menu-item.html -->
-            </div>
+                <div id="sp-menu-item" class="tabcontent">
+                    <!--#include sp-menu-item.html -->
+                </div>
 
-            <div id="sp-menu-group" class="tabcontent">
-                <!--#include sp-menu-group.html -->
-            </div>
+                <div id="sp-menu-group" class="tabcontent">
+                    <!--#include sp-menu-group.html -->
+                </div>
 
-            <div id="sp-table" class="tabcontent">
-                <!--#include sp-table.html -->
-            </div>
+                <div id="sp-table" class="tabcontent">
+                    <!--#include sp-table.html -->
+                </div>
 
-            <div id="sp-textfield" class="tabcontent">
-                <!--#include sp-textfield.html -->
-            </div>
+                <div id="sp-textfield" class="tabcontent">
+                    <!--#include sp-textfield.html -->
+                </div>
 
-            <div id="sp-help-text" class="tabcontent">
-                <!--#include sp-help-text.html -->
-            </div>
+                <div id="sp-help-text" class="tabcontent">
+                    <!--#include sp-help-text.html -->
+                </div>
 
-            <div id="sp-button-group" class="tabcontent">
-                <!--#include sp-button-group.html -->
-            </div>
+                <div id="sp-button-group" class="tabcontent">
+                    <!--#include sp-button-group.html -->
+                </div>
 
-            <div id="sp-dialog" class="tabcontent">
-                <!--#include sp-dialog.html -->
-            </div>
+                <div id="sp-dialog" class="tabcontent">
+                    <!--#include sp-dialog.html -->
+                </div>
 
-            <div id="sp-toast" class="tabcontent">
-                <!--#include sp-toast.html -->
-            </div>
+                <div id="sp-toast" class="tabcontent">
+                    <!--#include sp-toast.html -->
+                </div>
 
-            <div id="sp-switch" class="tabcontent">
-                <!--#include sp-switch.html -->
-            </div>
+                <div id="sp-textarea" class="tabcontent">
+                    <!--#include sp-textarea.html -->
+                </div>
 
-            <div id="sp-sidenav" class="tabcontent">
-                <!--#include sp-sidenav.html -->
-            </div>
+                <div id="sp-switch" class="tabcontent">
+                    <!--#include sp-switch.html -->
+                </div>
 
-            <div id="sp-radio" class="tabcontent">
-                <!--#include sp-radio.html -->
-            </div>
+                <div id="sp-sidenav" class="tabcontent">
+                    <!--#include sp-sidenav.html -->
+                </div>
 
-            <div id="sp-radio-group" class="tabcontent">
-                <!--#include sp-radio-group.html -->
-            </div>
+                <div id="sp-radio" class="tabcontent">
+                    <!--#include sp-radio.html -->
+                </div>
 
-            <div id="sp-tags" class="tabcontent">
-                <!--#include sp-tags.html -->
-            </div>
+                <div id="sp-radio-group" class="tabcontent">
+                    <!--#include sp-radio-group.html -->
+                </div>
 
-            <div id="sp-field-group" class="tabcontent">
-                <!--#include sp-field-group.html -->
-            </div>
+                <div id="sp-tags" class="tabcontent">
+                    <!--#include sp-tags.html -->
+                </div>
 
-            <div id="sp-asset" class="tabcontent">
-                <!--#include sp-asset.html -->
-            </div>
+                <div id="sp-field-group" class="tabcontent">
+                    <!--#include sp-field-group.html -->
+                </div>
 
-            <div id="sp-quick-actions" class="tabcontent">
-                <!--#include sp-quick-actions.html -->
-            </div>
+                <div id="sp-search" class="tabcontent">
+                    <!--#include sp-search.html -->
+                </div>
 
-            <div id="sp-meter" class="tabcontent">
-                <!--#include sp-meter.html -->
+                <div id="sp-number-field" class="tabcontent">
+                    <!--#include sp-number-field.html -->
+                </div>
+
+                <div id="sp-asset" class="tabcontent">
+                    <!--#include sp-asset.html -->
+                </div>
+
+                <div id="sp-quick-actions" class="tabcontent">
+                    <!--#include sp-quick-actions.html -->
+                </div>
+
+                <div id="sp-meter" class="tabcontent">
+                    <!--#include sp-meter.html -->
+                </div>
             </div>
         </sp-theme>
     </body>
