@@ -50,6 +50,38 @@ governing permissions and limitations under the License.
                 </sp-menu>
             </sp-popover>
         </div>
+        <div>
+            <sp-popover open>
+                <sp-menu label="Style/Color" @change=${update}>
+                    <sp-menu-group label="Font Style" selects="multiple" id="font">
+                        <sp-menu-item value="bold" selected>Bold</sp-menu-item>
+                        <sp-menu-item value="italic" selected>Italic</sp-menu-item>
+                    </sp-menu-group>
+                    <sp-menu-divider></sp-menu-divider>
+                    <sp-menu-group label="Text Color" selects="single" id="color">
+                        <sp-menu-item value="black">Black</sp-menu-item>
+                        <sp-menu-item value="blue" selected>Blue</sp-menu-item>
+                        <sp-menu-item value="red">Red</sp-menu-item>
+                        <sp-menu-item value="green">Green</sp-menu-item>
+                    </sp-menu-group>
+                    <sp-menu-divider></sp-menu-divider>
+                    <sp-menu-group
+                        label="Text Decoration"
+                        selects="single"
+                        id="decoration"
+                    >
+                        <sp-menu-item value="none">None</sp-menu-item>
+                        <sp-menu-item value="overline" selected>
+                            Overline
+                        </sp-menu-item>
+                        <sp-menu-item value="line-through">
+                            Line-through
+                        </sp-menu-item>
+                        <sp-menu-item value="underline">Underline</sp-menu-item>
+                    </sp-menu-group>
+                </sp-menu>
+            </sp-popover>
+        </div>
     </div>
 
     <div id="right">

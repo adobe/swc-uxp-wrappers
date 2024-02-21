@@ -90,6 +90,52 @@ governing permissions and limitations under the License.
                 </sp-menu-item>
             </sp-menu>
         </div>
+        <div>
+            <sp-menu>
+                <sp-menu-item>Menu Item</sp-menu-item>
+            </sp-menu>
+        </div>
+        <div>
+            <sp-menu style="width: 150px;">
+                <sp-menu-item no-wrap>
+                    Select a Country with a very long label, too long, in fact
+                </sp-menu-item>
+            </sp-menu>
+        </div>
+        <div>
+            <sp-menu>
+                <sp-menu-item>
+                    Quick export
+                    <span slot="description">Share a snapshot</span>
+                </sp-menu-item>
+            </sp-menu>
+        </div>
+        <div>
+            <sp-menu style="width: 150px;" selects="single">
+                <sp-menu-item>
+                    Save
+                    <kbd slot="value">⌘​S</kbd>
+                </sp-menu-item>
+                <sp-menu-item selected>
+                    Save As...
+                    <kbd slot="value">⇧​⌘​S</kbd>
+                </sp-menu-item>
+                <sp-menu-item disabled>
+                    Save All
+                    <kbd slot="value">⌥​⌘​S</kbd>
+                </sp-menu-item>
+            </sp-menu>
+        </div>
+        <div>
+            <sp-menu style="width: 150px;">
+                <sp-menu-item
+                    href="https://opensource.adobe.com/spectrum-web-components"
+                >
+                    <sp-icon-edit slot="icon"></sp-icon-edit>
+                    Edit the Documentation Site
+                </sp-menu-item>
+            </sp-menu>
+        </div>
     </div>
 
     <div id="right">

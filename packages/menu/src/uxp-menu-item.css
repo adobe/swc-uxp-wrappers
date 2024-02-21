@@ -11,11 +11,36 @@ governing permissions and limitations under the License.
 */
 
 /* write uxp style overrides */
+:host {
+    display: flex;
+    flex-direction: row; /* Main layout direction */
+}
 
-/* Workaround for - https://jira.corp.adobe.com/browse/UXP-21329 */
-#selected {
-    padding-left: -8px;
+:host {
+    min-height:  var(--mod-menu-item-min-height, var(--spectrum-menu-item-min-height) );
+    padding-bottom: var(--mod-menu-item-bottom-edge-to-text, var(--spectrum-menu-item-bottom-edge-to-text) );
+    padding-right: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content) );
+    padding-top: var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text) );
 }
-#label {
-    margin-right: 8px;
+
+.checkmark {
+    height: var(--mod-menu-item-checkmark-height, var(--spectrum-menu-item-checkmark-height));
+    width: var(--mod-menu-item-checkmark-width, var(--spectrum-menu-item-checkmark-width));
+    margin-top: calc(
+        var(
+                --mod-menu-item-top-to-checkmark,
+                var(--spectrum-menu-item-top-to-checkmark)
+            ) -
+            var(
+                --mod-menu-item-top-edge-to-text,
+                var(--spectrum-menu-item-top-edge-to-text)
+            )
+    );
+    margin-right: var(
+        --mod-menu-item-text-to-control,
+        var(--spectrum-menu-item-text-to-control)
+    );   
 }
+
+
+
