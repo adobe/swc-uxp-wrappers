@@ -50,12 +50,4 @@ export const aliases = {
     '@spectrum-web-components/sidenav': '@swc-uxp-wrappers/sidenav',
     '../sp-menu.dev.js': '@swc-uxp-wrappers/menu/sp-menu.js',
     '../sp-menu.js': '@swc-uxp-wrappers/menu/sp-menu.js',
-    '../sp-table-row.dev.js': '@swc-uxp-wrappers/table/sp-table-row.js',
-    '../sp-table-row.js': '@swc-uxp-wrappers/table/sp-table-row.js',
-    '../sp-table-checkbox-cell.dev.js':
-        '@swc-uxp-wrappers/table/sp-table-checkbox-cell.js',
-    '../sp-table-checkbox-cell.js':
-        '@swc-uxp-wrappers/table/sp-table-checkbox-cell.js',
-    '../sp-table-body.dev.js': '@swc-uxp-wrappers/table/sp-table-body.js',
-    '../sp-table-body.js': '@swc-uxp-wrappers/table/sp-table-body.js',
 };

@@ -11,3 +11,37 @@ governing permissions and limitations under the License.
 */
 
 /* write uxp style overrides */
+
+:host {
+    max-width: 100%;
+    min-height: var(--mod-radio-height, var(--spectrum-radio-height));
+}
+
+#input {
+    height: 100%;
+    width: 100%;
+}
+
+#button {
+    height: var(
+        --mod-radio-button-control-size,
+        var(--spectrum-radio-button-control-size)
+    );
+    width: var(
+        --mod-radio-button-control-size,
+        var(--spectrum-radio-button-control-size)
+    );
+    margin-top: var(
+        --mod-radio-button-top-to-control,
+        var(--spectrum-radio-button-top-to-control)
+    );
+}
+
+#label {
+    margin-bottom: var(--spectrum-radio-label-bottom-to-text);
+    margin-top: var(--spectrum-radio-label-top-to-text);
+    margin-left: var(
+        --mod-radio-text-to-control,
+        var(--spectrum-radio-text-to-control)
+    );
+}
