@@ -15,6 +15,18 @@ governing permissions and limitations under the License.
 <div id="content">
     <div id="left">
         <div id="subtitle">sp-textfield</div>
+        <sp-field-label for="textarea">Background</sp-field-label>
+        <sp-textfield
+            id="textarea"
+            multiline
+            placeholder="Enter your life story"
+        ></sp-textfield>
+        <sp-field-label size="s" for="name-0-s">Name</sp-field-label>
+        <sp-textfield
+            size="s"
+            id="name-0-s"
+            placeholder="Enter your name"
+        ></sp-textfield>
         <sp-field-label for="name-0">Name</sp-field-label>
         <sp-textfield id="name-0" placeholder="Enter your name"></sp-textfield>
 
@@ -35,12 +47,42 @@ governing permissions and limitations under the License.
             placeholder="Enter your name"
         ></sp-textfield>
 
-        <sp-field-label for="name-3">Name (quietly)</sp-field-label>
+        <sp-field-label for="name-3">Name (quiet)</sp-field-label>
         <sp-textfield
             id="name-3"
             placeholder="Enter your name"
             quiet
         ></sp-textfield>
+
+        <sp-field-label for="name-3">Name (quiet valid)</sp-field-label>
+        <sp-textfield
+            id="name-3"
+            placeholder="Enter your name"
+            quiet
+            valid
+        ></sp-textfield>
+
+        <sp-field-label for="name-3">Name (quiet invalid)</sp-field-label>
+        <sp-textfield
+            id="name-3"
+            placeholder="Enter your name"
+            quiet
+            invalid
+        ></sp-textfield>
+
+        <sp-field-label for="name-3">Name (quiet disabled)</sp-field-label>
+        <sp-textfield
+            id="name-3"
+            placeholder="Enter your name"
+            disabled
+        ></sp-textfield>
+
+        <sp-field-label for="password-1">Password</sp-field-label>
+        <sp-textfield id="password-1" type="password">
+            <sp-help-text slot="help-text" variant="negative" icon>
+                Password with at least 8 characters.
+            </sp-help-text>
+        </sp-textfield>
 
         <sp-textfield
             id="self"
@@ -48,13 +90,6 @@ governing permissions and limitations under the License.
             value="Positive"
         >
             <sp-help-text slot="help-text">Please be "Positive".</sp-help-text>
-        </sp-textfield>
-
-        <sp-field-label for="password-1">Password</sp-field-label>
-        <sp-textfield id="password-1" type="password">
-            <sp-help-text slot="help-text" variant="negative" icon>
-                Create a password with at least 8 characters.
-            </sp-help-text>
         </sp-textfield>
     </div>
 

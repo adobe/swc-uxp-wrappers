@@ -11,3 +11,10 @@ governing permissions and limitations under the License.
 */
 
 /* write uxp style overrides */
+
+:host {
+    width: auto;
+    height: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
+    margin-left: calc(var(--mod-menu-section-divider-margin-block, max(0px, var(--spectrum-menu-item-section-divider-height))) - var(--spectrum-menu-divider-thickness) / 2);
+    margin-top: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content) );
+}

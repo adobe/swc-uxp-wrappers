@@ -1,0 +1,117 @@
+<!-- 
+Copyright 2024 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License. 
+-->
+
+<h3>sp-number-field</h3>
+
+<div id="content">
+    <div id="left">
+        <div id="subtitle">sp-number-field</div>
+        <div style="margin: 20px 20px">
+            <sp-number-field
+                label="Size"
+                value="1024"
+                size="m"
+                style="--spectrum-stepper-width: 110px; width: 150px"
+                style="width: 300px"
+            ></sp-number-field>
+            <sp-number-field
+                label="Size"
+                value="1024"
+                size="s"
+                style="--spectrum-stepper-width: 85px; width: 120px"
+            ></sp-number-field>
+            <sp-field-label for="decimals">Adjust exposure</sp-field-label>
+            <sp-number-field
+                id="decimals"
+                value="0"
+                style="width: 100px"
+                format-options='{
+        "signDisplay": "exceptZero",
+        "minimumFractionDigits": 1,
+        "maximumFractionDigits": 2
+    }'
+            ></sp-number-field>
+            <sp-field-label for="percents">Sales tax</sp-field-label>
+            <sp-number-field
+                id="percents"
+                style="width: 200px"
+                value="0.05"
+                format-options='{
+        "style": "percent"
+    }'
+            ></sp-number-field>
+            <sp-field-label for="currency">Transaction amount</sp-field-label>
+            <sp-number-field
+                id="currency"
+                style="width: 200px"
+                value="45"
+                format-options='{
+        "style": "currency",
+        "currency": "EUR",
+        "currencyDisplay": "code",
+        "currencySign": "accounting"
+    }'
+            ></sp-number-field>
+            <sp-field-label for="units">Package width</sp-field-label>
+            <sp-number-field
+                id="units"
+                style="width: 200px"
+                value="4"
+                format-options='{
+        "style": "unit",
+        "unit": "inch",
+        "unitDisplay": "long"
+    }'
+            ></sp-number-field>
+            <sp-field-label for="units">
+                Document width in pixels
+            </sp-field-label>
+            <sp-number-field
+                id="units"
+                style="width: 200px"
+                value="500"
+                format-options='{
+        "style": "unit",
+        "unit": "px"
+    }'
+            ></sp-number-field>
+            <sp-field-label for="max-min">Max (10), Min(-10)</sp-field-label>
+            <sp-number-field
+                id="max-min"
+                max="10"
+                min="-10"
+                style="width: 200px"
+                value="5"
+                format-options='{
+        "style": "unit",
+        "unit": "px"
+    }'
+            ></sp-number-field>
+        </div>
+    </div>
+
+    <div id="right">
+        <div id="subtitle">my-number-field</div>
+        <sp-field-label for="my-currency">Transaction amount</sp-field-label>
+        <my-number-field
+            id="my-currency"
+            style="width: 200px"
+            value="45"
+            format-options='{
+    "style": "currency",
+    "currency": "EUR",
+    "currencyDisplay": "code",
+    "currencySign": "accounting"
+}'
+        ></my-number-field>
+    </div>
+</div>
