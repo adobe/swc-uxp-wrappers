@@ -16,6 +16,10 @@ governing permissions and limitations under the License.
     width: var(--mod-stepper-width, var(--spectrum-stepper-width));
 }
 
+#textfield {
+    width: 100%;
+}
+
 .input {
     border-bottom-right-radius: 0px;
     border-right-width: 0px;
@@ -24,19 +28,12 @@ governing permissions and limitations under the License.
 }
 
 .buttons {
-    height: var(--mod-textfield-height, var(--spectrum-textfield-height));
     width: calc(
         var(--mod-textfield-height, var(--spectrum-textfield-height)) * 3 / 4
     );
     padding-top: var(--spectrum-stepper-button-gap);
     padding-bottom: var(--spectrum-stepper-button-gap);
-}
-
-.buttons {
-    height: var(
-        --mod-stepper-buttons-height,
-        var(--spectrum-stepper-buttons-height)
-    );
+    height: var(--mod-textfield-height, var(--spectrum-textfield-height));
     border-bottom-right-radius: var(
         --mod-stepper-border-radius,
         var(--spectrum-stepper-border-radius)
@@ -47,13 +44,7 @@ governing permissions and limitations under the License.
         var(--spectrum-stepper-border-radius)
     );
     border-top-left-radius: 0px;
-    width: calc(
-        var(--mod-stepper-button-width, var(--spectrum-stepper-button-width)) +
-            var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap)) *
-            2
-    );
     padding-right: var(--spectrum-stepper-button-gap);
-    row-gap: var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap));
 }
 
 .step-up {
@@ -87,18 +78,6 @@ governing permissions and limitations under the License.
 
 .step-down,
 .step-up {
-    height: calc(
-        var(
-                --mod-stepper-buttons-height,
-                var(--spectrum-stepper-buttons-height)
-            ) / 2 -
-            var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap)) *
-            2.5
-    );
-    width: var(
-        --mod-stepper-button-width,
-        var(--spectrum-stepper-button-width)
-    );
     min-width: 0px;
     padding-right: var(
         --mod-stepper-button-padding,
