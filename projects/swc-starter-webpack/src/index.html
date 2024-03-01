@@ -11,7 +11,7 @@ governing permissions and limitations under the License.
 -->
 
 <!DOCTYPE html>
-<html>
+<html style="height: 1024px">
     <head>
         <meta charset="utf-8" />
         <title>Spectrum Web Components in UXP</title>
@@ -105,6 +105,12 @@ governing permissions and limitations under the License.
                     ></sp-divider>
                 </div>
                 <div class="tab">
+                    <button
+                    class="tablinks"
+                    onclick="openTab(event, 'sp-overlay')"
+                >
+                    sp-overlay
+                </button>
                     <button
                         class="tablinks"
                         onclick="openTab(event, 'sp-banner')"
@@ -324,6 +330,10 @@ governing permissions and limitations under the License.
                     >
                         sp-search
                     </button>
+                </div>
+
+                <div id="sp-overlay" class="tabcontent">
+                    <!--#include sp-overlay.html -->
                 </div>
 
                 <div id="sp-banner" class="tabcontent">

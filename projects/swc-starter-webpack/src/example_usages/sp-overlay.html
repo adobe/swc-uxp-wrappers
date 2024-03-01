@@ -1,0 +1,60 @@
+<h3>sp-overlay</h3>
+
+<div id="content">
+    <div id="left">
+        <div id="subtitle">sp-overlay</div>
+        <div>
+             <div style="margin-top: 0px">
+                <div style="margin-top: 0px">
+                    <div>
+                    <span>Placement: </span>
+                    <select id="placementselection" value="top">
+                        <option value="top">top</option>
+                        <option value="bottom">bottom</option>
+                        <option  value="left">left</option>
+                        <option value="right">right</option>
+                        <option value="top-start">top-start</option>
+                        <optio value="top-end">top-end</option>
+                        <option value="bottom-start">bottom-start</option>
+                        <option value="bottom-end">bottom-end</option>
+                        <option value="left-start">left-start</option>
+                        <option value="left-end">left-end</option>
+                        <option value="right-start">right-start</option>
+                        <option value="right-end">right-end</option>
+                        <option value="auto-start">auto-start</option>
+                        <option value="auto-end">auto-end</option>
+                        <option value="none">none</option>
+                    </select>
+                    <br/>
+                    <span>Trigger: </span>
+                    <select id="triggerselection">
+                        <option value="click">click</option>
+                        <option value="hover">hover</option>
+                        <option value="longpress">longpress</option>
+                    </select>
+                    <br/>
+                    <span>Offset: </span>
+                    <input id="offsetvalue" type="text" style="width: 75px"/>
+                    </div>
+                    <div style="margin: 0px;">
+                    <sp-button id="trigger">Click here</sp-button>
+                    <sp-overlay id="overlay" trigger="trigger@click" offset="2" placement="top">
+                        <sp-popover>
+                            <sp-dialog style="max-width: 400px;">
+                                <h2 slot="heading">Clicking opens this popover...</h2>
+                                <p>But, it really could be anything. Really.</p>
+                            </sp-dialog>
+                        </sp-popover>
+                    </sp-overlay> 
+
+                    <sp-button id="trigger-2">Content</sp-button>
+                    <sp-popover id="content">
+                        <sp-dialog style="max-width: 400px;">
+                            <h2 slot="heading">Imperative API...</h2>
+                            <p>But, it really could be anything. Really.</p>
+                        </sp-dialog>
+                    </sp-popover>
+                    </div>
+                </div>      
+        </div>
+    </div>
