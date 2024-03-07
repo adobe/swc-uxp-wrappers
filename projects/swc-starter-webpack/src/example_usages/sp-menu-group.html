@@ -52,13 +52,23 @@ governing permissions and limitations under the License.
         </div>
         <div>
             <sp-popover open>
-                <sp-menu label="Style/Color" @change=${update}>
-                    <sp-menu-group label="Font Style" selects="multiple" id="font">
+                <sp-menu label="Style/Color" @change="${update}">
+                    <sp-menu-group
+                        label="Font Style"
+                        selects="multiple"
+                        id="font"
+                    >
                         <sp-menu-item value="bold" selected>Bold</sp-menu-item>
-                        <sp-menu-item value="italic" selected>Italic</sp-menu-item>
+                        <sp-menu-item value="italic" selected>
+                            Italic
+                        </sp-menu-item>
                     </sp-menu-group>
                     <sp-menu-divider></sp-menu-divider>
-                    <sp-menu-group label="Text Color" selects="single" id="color">
+                    <sp-menu-group
+                        label="Text Color"
+                        selects="single"
+                        id="color"
+                    >
                         <sp-menu-item value="black">Black</sp-menu-item>
                         <sp-menu-item value="blue" selected>Blue</sp-menu-item>
                         <sp-menu-item value="red">Red</sp-menu-item>

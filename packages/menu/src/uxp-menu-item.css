@@ -17,15 +17,37 @@ governing permissions and limitations under the License.
 }
 
 :host {
-    min-height:  var(--mod-menu-item-min-height, var(--spectrum-menu-item-min-height) );
-    padding-bottom: var(--mod-menu-item-bottom-edge-to-text, var(--spectrum-menu-item-bottom-edge-to-text) );
-    padding-right: var(--mod-menu-item-label-inline-edge-to-content, var(--spectrum-menu-item-label-inline-edge-to-content) );
-    padding-top: var(--mod-menu-item-top-edge-to-text, var(--spectrum-menu-item-top-edge-to-text) );
+    min-height: var(
+        --mod-menu-item-min-height,
+        var(--spectrum-menu-item-min-height)
+    );
+    padding-bottom: var(
+        --mod-menu-item-bottom-edge-to-text,
+        var(--spectrum-menu-item-bottom-edge-to-text)
+    );
+    padding-right: var(
+        --mod-menu-item-label-inline-edge-to-content,
+        var(--spectrum-menu-item-label-inline-edge-to-content)
+    );
+    padding-top: var(
+        --mod-menu-item-top-edge-to-text,
+        var(--spectrum-menu-item-top-edge-to-text)
+    );
+    padding-left: var(
+        --mod-menu-item-label-inline-edge-to-content,
+        var(--spectrum-menu-item-label-inline-edge-to-content)
+    );
 }
 
 .checkmark {
-    height: var(--mod-menu-item-checkmark-height, var(--spectrum-menu-item-checkmark-height));
-    width: var(--mod-menu-item-checkmark-width, var(--spectrum-menu-item-checkmark-width));
+    height: var(
+        --mod-menu-item-checkmark-height,
+        var(--spectrum-menu-item-checkmark-height)
+    );
+    width: var(
+        --mod-menu-item-checkmark-width,
+        var(--spectrum-menu-item-checkmark-width)
+    );
     margin-top: calc(
         var(
                 --mod-menu-item-top-to-checkmark,
@@ -39,8 +61,12 @@ governing permissions and limitations under the License.
     margin-right: var(
         --mod-menu-item-text-to-control,
         var(--spectrum-menu-item-text-to-control)
-    );   
+    );
 }
 
-
-
+/* ::slotted([slot='“icon”']) {
+    margin-right: var(
+        --mod-menu-item-label-text-to-visual,
+        var(--spectrum-menu-item-label-text-to-visual)
+    );
+} */
