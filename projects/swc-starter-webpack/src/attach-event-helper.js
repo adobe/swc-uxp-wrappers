@@ -41,6 +41,24 @@ function attachEvents(tabName) {
         `;
         eval(eventListener3);
     }
+
+    if (tabName === 'sp-swatch') {
+        const eventListener4 = `
+            const swatch = document.getElementById("swatch-group-single-select");
+            swatch.addEventListener("change", () => {
+                swatch.nextElementSibling.textContent = 'Selected: ' + JSON.stringify(swatch.selected);
+            });
+        `;
+        eval(eventListener4);
+
+        const eventListener5 = `
+            const swatch = document.getElementById("swatch-group-gradient-select");
+            swatch.addEventListener("change", () => {
+                swatch.nextElementSibling.textContent = 'Selected: ' + JSON.stringify(swatch.selected);
+            });
+        `;
+        eval(eventListener5);
+    }
 }
 
 function handleThemeColor(selectObject) {
