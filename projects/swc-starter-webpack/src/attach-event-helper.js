@@ -41,6 +41,16 @@ function attachEvents(tabName) {
         `;
         eval(eventListener3);
     }
+
+    if (tabName === 'sp-menu') {
+        const eventListener4 = `
+            const menu = document.getElementById('inherit-menu');
+            menu.addEventListener("change", () => {
+                menu.previousElementSibling.textContent = menu.value;
+            });
+        `;
+        eval(eventListener4);
+    }
 }
 
 function handleThemeColor(selectObject) {

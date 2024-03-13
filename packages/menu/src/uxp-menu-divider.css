@@ -13,25 +13,17 @@ governing permissions and limitations under the License.
 /* write uxp style overrides */
 
 :host {
+    /* Workaround for - https://jira.corp.adobe.com/browse/UXP-22514 */
+    --uxp-swc-menu-divider-margin-block: 3px;
     width: auto;
     height: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-    margin-left: calc(
-        var(
-                --mod-menu-section-divider-margin-block,
-                max(0px, var(--spectrum-menu-item-section-divider-height))
-            ) - var(--spectrum-menu-divider-thickness) / 2
-    );
-    margin-right: calc(
-        var(
-                --mod-menu-section-divider-margin-block,
-                max(0px, var(--spectrum-menu-item-section-divider-height))
-            ) - var(--spectrum-menu-divider-thickness) / 2
-    );
-    margin-top: var(
+    margin-top: var(--uxp-swc-menu-divider-margin-block);
+    margin-bottom: var(--uxp-swc-menu-divider-margin-block);
+    margin-left: var(
         --mod-menu-item-label-inline-edge-to-content,
         var(--spectrum-menu-item-label-inline-edge-to-content)
     );
-    margin-bottom: var(
+    margin-right: var(
         --mod-menu-item-label-inline-edge-to-content,
         var(--spectrum-menu-item-label-inline-edge-to-content)
     );
