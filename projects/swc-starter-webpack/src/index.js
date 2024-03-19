@@ -76,6 +76,7 @@ import '@spectrum-web-components/icons-workflow/icons/sp-icon-star.js';
 import '@spectrum-web-components/icons-workflow/icons/sp-icon-add-to-selection.js';
 import '@spectrum-web-components/icons-workflow/icons/sp-icon-edit.js';
 import '@spectrum-web-components/icons-workflow/icons/sp-icon-magnify.js';
+import '@spectrum-web-components/icons-workflow/icons/sp-icon-more.js';
 
 // Importing custom elements (my-*) extended from the respective Spectrum Web Components
 import './extended_swc_samples/my-banner.js';

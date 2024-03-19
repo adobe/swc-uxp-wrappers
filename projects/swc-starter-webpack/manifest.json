@@ -9,27 +9,27 @@
     },
     "entrypoints": [
         {
-          "type": "panel",
-          "id": "vanilla",
-          "minimumSize": {
-            "width": 230,
-            "height": 200
-          },
-          "maximumSize": {
-            "width": 2000,
-            "height": 2000
-          },
-          "preferredDockedSize": {
-            "width": 230,
-            "height": 300
-          },
-          "preferredFloatingSize": {
-            "width": 230,
-            "height": 300
-          },
-          "label": {
-            "default": "Starter Panel"
-          }
+            "type": "panel",
+            "id": "vanilla",
+            "minimumSize": {
+                "width": 230,
+                "height": 200
+            },
+            "maximumSize": {
+                "width": 2000,
+                "height": 2000
+            },
+            "preferredDockedSize": {
+                "width": 230,
+                "height": 300
+            },
+            "preferredFloatingSize": {
+                "width": 230,
+                "height": 300
+            },
+            "label": {
+                "default": "Starter Panel"
+            }
         }
     ],
     "host": [

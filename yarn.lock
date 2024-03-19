@@ -1301,7 +1301,7 @@
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@eslint/js/-/js-8.56.0.tgz#ef20350fec605a7f7035a01764731b2de0f3782b"
   integrity sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==
 
-"@floating-ui/core@^1.6.0":
+"@floating-ui/core@^1.5.3", "@floating-ui/core@^1.6.0":
   version "1.6.0"
   resolved "https://registry.yarnpkg.com/@floating-ui/core/-/core-1.6.0.tgz#fa41b87812a16bf123122bf945946bae3fdf7fc1"
   integrity sha512-PcF++MykgmTj3CIyOQbKA/hDzOAiqI3mhuoN44WRCopIs1sgoDoU4oty4Jtqaj/y3oDU6fnVSm4QG0a3t5i0+g==
@@ -1329,7 +1329,7 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.1.6.tgz#22958c042e10b67463997bd6ea7115fe28cbcaf9"
   integrity sha512-OfX7E2oUDYxtBvsuS4e/jSn4Q9Qb6DzgeYtsAdkPZ47znpoNsMgZw0+tVijiv3uGNR6dgNlty6r9rzIzHjtd/A==
 
-"@floating-ui/utils@^0.2.1":
+"@floating-ui/utils@^0.2.0", "@floating-ui/utils@^0.2.1":
   version "0.2.1"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@floating-ui/utils/-/utils-0.2.1.tgz#16308cea045f0fc777b6ff20a9f25474dd8293d2"
   integrity sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==
@@ -2363,6 +2363,17 @@
     "@spectrum-web-components/icons-ui" "^0.37.0"
     "@spectrum-web-components/shared" "^0.37.0"
 
+"@spectrum-web-components/action-group@^0.37.0":
+  version "0.37.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/action-group/-/action-group-0.37.0.tgz#7d8586f2fd57f782ae8ae887cff042768b260d6e"
+  integrity sha512-unC1SMjhWI080lfHeAMxBL1y2Vyk6fIhKdukWzqQnzMpPdogh+tvKF9kUgPLZ3rq0hFFCquT0ZZezyywvjTWZA==
+  dependencies:
+    "@lit-labs/observers" "^2.0.0"
+    "@spectrum-web-components/action-button" "^0.37.0"
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/icons-workflow" "^0.37.0"
+    "@spectrum-web-components/reactive-controllers" "^0.37.0"
+
 "@spectrum-web-components/asset@^0.37.0", "@swc-uxp-internal/asset@npm:@spectrum-web-components/asset@0.37.0":
   name "@swc-uxp-internal/asset"
   version "0.37.0"
@@ -2630,13 +2641,13 @@
     "@spectrum-web-components/shared" "^0.37.0"
     "@spectrum-web-components/theme" "^0.37.0"
 
-"@spectrum-web-components/popover@^0.12.9":
-  version "0.12.17"
-  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/popover/-/popover-0.12.17.tgz#63dcda2f0109834eda1192ec0972b394fd4b3714"
-  integrity sha512-pBavYoIzIFyIIZXwzzg656IgmO2cMBQGkRNnIR1oJMTM3dh3x2Hw+w9/PjQp4S7EOIHdaMx0efxoRKjiCpVnaw==
+"@spectrum-web-components/popover@^0.37.0", "@swc-uxp-internal/popover@npm:@spectrum-web-components/popover@0.37.0":
+  version "0.37.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/popover/-/popover-0.37.0.tgz#0a37d0886994f9b24e70a6d6ff6da543a775a324"
+  integrity sha512-UilQj4W2HgDMopON2RG7wEYxnGViAWBJYFaTuO7dCLgEHuQMbIN6h30JvSwfz5Z0Vr/eJgSd3I7xj0K9Bl2c6Q==
   dependencies:
-    "@spectrum-web-components/base" "^0.7.5"
-    "@spectrum-web-components/overlay" "^0.19.5"
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/overlay" "^0.37.0"
 
 "@spectrum-web-components/quick-actions@^0.37.0", "@swc-uxp-internal/quick-actions@npm:@spectrum-web-components/quick-actions@0.37.0":
   name "@swc-uxp-internal/quick-actions"
@@ -2865,13 +2876,15 @@
     "@lit-labs/react" "^1.1.0"
     "@spectrum-web-components/theme" "^0.14.7"
 
-"@swc-uxp-internal/action-bar@npm:@spectrum-web-components/action-bar@0.5.9":
-  version "0.5.9"
-  resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/action-bar/-/action-bar-0.5.9.tgz#cc97da1420706cd7fad3bc1d8b187be579960c94"
-  integrity sha512-8x00r1F4AqpxDRlcFq0PYvq4w+fmr6Sj/Zf0KNe7phkk+Eb4yyxsfJTNCZfm9HjGDnZtbcHLgk/u7CRIY+bjCg==
+"@swc-uxp-internal/action-bar@npm:@spectrum-web-components/action-bar@0.37.0":
+  version "0.37.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/action-bar/-/action-bar-0.37.0.tgz#563138be3d69e862876ece62f2093f66d01e3498"
+  integrity sha512-tf6bNCeAdJW18VbA/KCGaSVOdumFJyrtqHThJVFidrxorGaujapKW4lO3xQ1JPoLfZ67Vc0L7Z/Ubwho6wRK0w==
   dependencies:
-    "@spectrum-web-components/base" "^0.7.2"
-    "@spectrum-web-components/popover" "^0.12.9"
+    "@spectrum-web-components/action-group" "^0.37.0"
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/button" "^0.37.0"
+    "@spectrum-web-components/popover" "^0.37.0"
 
 "@swc-uxp-internal/action-group@npm:@spectrum-web-components/action-group@0.37.0":
   version "0.37.0"
@@ -2986,14 +2999,6 @@
   dependencies:
     "@spectrum-web-components/base" "^0.7.2"
     "@spectrum-web-components/icons-ui" "^0.9.5"
-
-"@swc-uxp-internal/popover@npm:@spectrum-web-components/popover@0.37.0":
-  version "0.37.0"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/popover/-/popover-0.37.0.tgz#0a37d0886994f9b24e70a6d6ff6da543a775a324"
-  integrity sha512-UilQj4W2HgDMopON2RG7wEYxnGViAWBJYFaTuO7dCLgEHuQMbIN6h30JvSwfz5Z0Vr/eJgSd3I7xj0K9Bl2c6Q==
-  dependencies:
-    "@spectrum-web-components/base" "^0.37.0"
-    "@spectrum-web-components/overlay" "^0.37.0"
 
 "@swc-uxp-internal/radio@npm:@spectrum-web-components/radio@0.37.0":
   version "0.37.0"
