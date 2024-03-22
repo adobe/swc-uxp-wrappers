@@ -14,7 +14,9 @@ governing permissions and limitations under the License.
 
 :host {
     --uxp-spectrum-swatch-disabled-icon-color: transparent;
-    --uxp-polyfill-for-clip-path: 4px;
+    --uxp-polyfill-for-clip-path: calc(
+        var(--spectrum-swatch-border-thickness-selected) * 2
+    );
 }
 :host:after {
     top: calc(
@@ -51,10 +53,6 @@ governing permissions and limitations under the License.
 }
 
 .fill:before {
-    box-shadow: -1 -1 0 var(
-            --mod-swatch-border-thickness,
-            var(--spectrum-swatch-border-thickness)
-        ) var(--highcontrast-swatch-border-color, var(--mod-swatch-border-color, var(--spectrum-swatch-border-color)));
     top: 0;
     left: 0;
     right: 0;

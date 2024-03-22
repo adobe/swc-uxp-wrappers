@@ -21,7 +21,7 @@
         "./src/Swatch.js": "./src/Swatch.js",
         "./src/swatch.css.js": "./src/swatch.css.js",
         "./sp-swatch.js": "./sp-swatch.js",
-        "./src/SwatchGrouo.js": "./src/SwatchGroup.js",
+        "./src/SwatchGroup.js": "./src/SwatchGroup.js",
         "./src/swatch-group.css.js": "./src/swatch-group.css.js",
         "./sp-swatch-group.js": "./sp-swatch-group.js"
     },
