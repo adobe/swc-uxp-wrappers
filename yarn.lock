@@ -3026,6 +3026,18 @@
     "@spectrum-web-components/reactive-controllers" "^0.37.0"
     "@spectrum-web-components/shared" "^0.37.0"
 
+"@swc-uxp-internal/swatch@npm:@spectrum-web-components/swatch@0.37.0":
+  version "0.37.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/swatch/-/swatch-0.37.0.tgz#55a539c3222c04b094343d49a62d6b9de771fa4a"
+  integrity sha512-snYP5td+vX+It4s4qeY8LirDqgKauJjUJhrxz8lIvGpGTL9pj8NTBUr7UpMSfs1VyzUCngSIpgEZ/GUSDZ6bXA==
+  dependencies:
+    "@lit-labs/observers" "^2.0.0"
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/icon" "^0.37.0"
+    "@spectrum-web-components/icons-ui" "^0.37.0"
+    "@spectrum-web-components/reactive-controllers" "^0.37.0"
+    "@spectrum-web-components/shared" "^0.37.0"
+
 "@swc-uxp-internal/switch@npm:@spectrum-web-components/switch@0.37.0":
   version "0.37.0"
   resolved "https://artifactory.corp.adobe.com/artifactory/api/npm/npmjs/@spectrum-web-components/switch/-/switch-0.37.0.tgz#2e2da7c2f57379fddf5ae0d7f8bd6054d6a89381"
