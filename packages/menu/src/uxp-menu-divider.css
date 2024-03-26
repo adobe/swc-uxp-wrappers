@@ -14,7 +14,12 @@ governing permissions and limitations under the License.
 
 :host {
     /* Workaround for - https://jira.corp.adobe.com/browse/UXP-22514 */
-    --uxp-swc-menu-divider-margin-block: 3px;
+    --uxp-swc-menu-divider-margin-block: calc(
+        (
+                var(--spectrum-menu-item-section-divider-height) -
+                    var(--spectrum-menu-divider-thickness)
+            ) / 2
+    );
     width: auto;
     height: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
     margin-top: var(--uxp-swc-menu-divider-margin-block);
