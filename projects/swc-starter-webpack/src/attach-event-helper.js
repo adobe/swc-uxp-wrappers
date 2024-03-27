@@ -42,14 +42,32 @@ function attachEvents(tabName) {
         eval(eventListener3);
     }
 
+    if (tabName === 'sp-swatch') {
+        const eventListener1 = `
+            const swatch = document.getElementById("swatch-group-single-select");
+            swatch.addEventListener("change", () => {
+                swatch.nextElementSibling.textContent = 'Selected: ' + JSON.stringify(swatch.selected);
+            });
+        `;
+        eval(eventListener1);
+
+        const eventListener2 = `
+            const swatch = document.getElementById("swatch-group-gradient-select");
+            swatch.addEventListener("change", () => {
+                swatch.nextElementSibling.textContent = 'Selected: ' + JSON.stringify(swatch.selected);
+            });
+        `;
+        eval(eventListener2);
+    }
+
     if (tabName === 'sp-menu') {
-        const eventListener4 = `
+        const eventListener1 = `
             const menu = document.getElementById('inherit-menu');
             menu.addEventListener("change", () => {
                 menu.previousElementSibling.textContent = menu.value;
             });
         `;
-        eval(eventListener4);
+        eval(eventListener1);
     }
 }
 

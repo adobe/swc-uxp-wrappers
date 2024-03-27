@@ -1,0 +1,433 @@
+<!-- 
+Copyright 2024 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License. 
+-->
+
+<h3>sp-swatch</h3>
+
+<div id="content">
+    <div id="left">
+        <div id="subtitle">sp-swatch</div>
+
+        <div id="variantLabel">sizes</div>
+        <div class="demo-example" style="display: flex">
+            <div class="size-div">
+                <sp-field-label for="xs">XS</sp-field-label>
+                <sp-swatch
+                    id="xs"
+                    size="xs"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="s">S</sp-field-label>
+                <sp-swatch
+                    id="s"
+                    size="s"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="m">M</sp-field-label>
+                <sp-swatch id="m" color="rgb(255 0 0 / 0.7)"></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="l">L</sp-field-label>
+                <sp-swatch
+                    id="l"
+                    size="l"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+        </div>
+
+        <div id="variantLabel">sizes / rounding = "none"</div>
+        <div class="demo-example" style="display: flex">
+            <div class="size-div">
+                <sp-field-label for="xs">XS</sp-field-label>
+                <sp-swatch
+                    rounding="none"
+                    id="xs"
+                    size="xs"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="s">S</sp-field-label>
+                <sp-swatch
+                    rounding="none"
+                    id="s"
+                    size="s"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="m">M</sp-field-label>
+                <sp-swatch
+                    rounding="none"
+                    id="m"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="l">L</sp-field-label>
+                <sp-swatch
+                    rounding="none"
+                    id="l"
+                    size="l"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+        </div>
+
+        <div id="variantLabel">sizes / rounding = "full"</div>
+        <div class="demo-example" style="display: flex">
+            <div class="size-div">
+                <sp-field-label for="xs">XS</sp-field-label>
+                <sp-swatch
+                    rounding="full"
+                    id="xs"
+                    size="xs"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="s">S</sp-field-label>
+                <sp-swatch
+                    rounding="full"
+                    id="s"
+                    size="s"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="m">M</sp-field-label>
+                <sp-swatch
+                    rounding="full"
+                    id="m"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="l">L</sp-field-label>
+                <sp-swatch
+                    rounding="full"
+                    id="l"
+                    size="l"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+        </div>
+
+        <div id="variantLabel">sizes / border = "none"</div>
+        <div class="demo-example" style="display: flex">
+            <div class="size-div">
+                <sp-field-label for="xs">XS</sp-field-label>
+                <sp-swatch
+                    border="none"
+                    id="xs"
+                    size="xs"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="s">S</sp-field-label>
+                <sp-swatch
+                    border="none"
+                    id="s"
+                    size="s"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="m">M</sp-field-label>
+                <sp-swatch
+                    border="none"
+                    id="m"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="l">L</sp-field-label>
+                <sp-swatch
+                    border="none"
+                    id="l"
+                    size="l"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+        </div>
+
+        <div id="variantLabel">sizes / nothing</div>
+        <div class="demo-example" style="display: flex">
+            <div class="size-div">
+                <sp-field-label for="xs">XS</sp-field-label>
+                <sp-swatch
+                    nothing
+                    id="xs"
+                    size="xs"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="s">S</sp-field-label>
+                <sp-swatch
+                    nothing
+                    id="s"
+                    size="s"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="m">M</sp-field-label>
+                <sp-swatch
+                    nothing
+                    id="m"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="l">L</sp-field-label>
+                <sp-swatch
+                    nothing
+                    id="l"
+                    size="l"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+        </div>
+
+        <div id="variantLabel">sizes / shape = "rectangle"</div>
+        <div class="demo-example" style="display: flex">
+            <div class="size-div">
+                <sp-field-label for="xs">XS</sp-field-label>
+                <sp-swatch
+                    shape="rectangle"
+                    id="xs"
+                    size="xs"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="s">S</sp-field-label>
+                <sp-swatch
+                    shape="rectangle"
+                    id="s"
+                    size="s"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="m">M</sp-field-label>
+                <sp-swatch
+                    shape="rectangle"
+                    id="m"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="l">L</sp-field-label>
+                <sp-swatch
+                    shape="rectangle"
+                    id="l"
+                    size="l"
+                    color="rgb(255 0 0 / 0.7)"
+                ></sp-swatch>
+            </div>
+        </div>
+
+        <div id="variantLabel">sizes / disabled</div>
+        <div class="demo-example" style="display: flex">
+            <div class="size-div">
+                <sp-field-label for="xs">XS</sp-field-label>
+                <sp-swatch
+                    disabled
+                    id="xs"
+                    size="xs"
+                    color="orange"
+                ></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="s">S</sp-field-label>
+                <sp-swatch disabled id="s" size="s" color="blue"></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="m">M</sp-field-label>
+                <sp-swatch disabled id="m" color="yellow"></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="l">L</sp-field-label>
+                <sp-swatch disabled id="l" size="l" color="green"></sp-swatch>
+            </div>
+        </div>
+
+        <div id="variantLabel">sizes / mixed-value</div>
+        <div class="demo-example" style="display: flex">
+            <div class="size-div">
+                <sp-field-label for="xs">XS</sp-field-label>
+                <sp-swatch
+                    mixed-value
+                    id="xs"
+                    size="xs"
+                    color="orange"
+                ></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="s">S</sp-field-label>
+                <sp-swatch mixed-value id="s" size="s" color="blue"></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="m">M</sp-field-label>
+                <sp-swatch mixed-value id="m" color="yellow"></sp-swatch>
+            </div>
+
+            <div class="size-div">
+                <sp-field-label for="l">L</sp-field-label>
+                <sp-swatch
+                    mixed-value
+                    id="l"
+                    size="l"
+                    color="green"
+                ></sp-swatch>
+            </div>
+        </div>
+
+        <div id="subtitle" style="margin-top: 20px">sp-swatch-group</div>
+
+        <div class="demo-example" style="padding: 20px 20px">
+            <sp-swatch-group size="m">
+                <sp-swatch></sp-swatch>
+                <sp-swatch nothing></sp-swatch>
+                <sp-swatch></sp-swatch>
+                <sp-swatch shape="rectangle" mixed-value></sp-swatch>
+            </sp-swatch-group>
+        </div>
+
+        <div id="variantLabel">density="compact"</div>
+        <div class="demo-example" style="padding: 20px 20px">
+            <sp-swatch-group size="m" density="compact">
+                <sp-swatch></sp-swatch>
+                <sp-swatch nothing></sp-swatch>
+                <sp-swatch disabled></sp-swatch>
+                <sp-swatch shape="rectangle" mixed-value></sp-swatch>
+            </sp-swatch-group>
+        </div>
+
+        <div id="variantLabel">density="spacious"</div>
+        <div class="demo-example" style="padding: 20px 20px">
+            <sp-swatch-group size="m" density="spacious">
+                <sp-swatch></sp-swatch>
+                <sp-swatch nothing></sp-swatch>
+                <sp-swatch disabled></sp-swatch>
+                <sp-swatch shape="rectangle" mixed-value></sp-swatch>
+            </sp-swatch-group>
+        </div>
+
+        <div id="variantLabel">selects="single"</div>
+        <div class="demo-example" style="padding: 20px 20px">
+            <sp-swatch-group id="swatch-group-single-select" selects="single">
+                <sp-swatch color="var(--spectrum-blue-500)"></sp-swatch>
+                <sp-swatch color="rgb(255 0 0 / 0.7)"></sp-swatch>
+                <sp-swatch color="orange" selected></sp-swatch>
+                <sp-swatch color="var(--spectrum-fuchsia-500)"></sp-swatch>
+                <sp-swatch color="var(--spectrum-magenta-500)"></sp-swatch>
+            </sp-swatch-group>
+            <div>Selected: [ "var(--spectrum-purple-500)" ]</div>
+        </div>
+
+        <div id="variantLabel">Gradient</div>
+        <div class="demo-example" style="padding: 20px 20px">
+            <sp-swatch-group id="swatch-group-gradient-select" selects="single">
+                <sp-swatch
+                    color="linear-gradient(82deg, rgba(2,0,36,1) 0%, rgba(31,215,224,1) 59%, rgba(0,212,255,1) 100%)"
+                ></sp-swatch>
+                <sp-swatch
+                    color="linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 79%)"
+                    selected
+                ></sp-swatch>
+                <sp-swatch
+                    color="linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(253,29,29,1) 59%, rgba(252,176,69,1) 100%)"
+                ></sp-swatch>
+            </sp-swatch-group>
+            <div>
+                Selected: [ "linear-gradient(0deg, rgba(34,193,195,1) 0%,
+                rgba(253,187,45,1) 79%)" ]
+            </div>
+        </div>
+
+        <div id="variantLabel">selects="multiple"</div>
+        <div class="demo-example" style="padding: 20px 20px">
+            <sp-swatch-group selects="multiple">
+                <sp-swatch color="var(--spectrum-blue-500)"></sp-swatch>
+                <sp-swatch color="var(--spectrum-indigo-500)"></sp-swatch>
+                <sp-swatch color="var(--spectrum-purple-500)"></sp-swatch>
+                <sp-swatch color="var(--spectrum-fuchsia-500)"></sp-swatch>
+                <sp-swatch color="var(--spectrum-magenta-500)"></sp-swatch>
+            </sp-swatch-group>
+        </div>
+
+        <div id="variantLabel">selects="multiple" / selected by value</div>
+        <div class="demo-example" style="padding: 20px 20px">
+            <sp-swatch-group selects="multiple" selected='["color-2"]'>
+                <sp-swatch
+                    color="var(--spectrum-blue-500)"
+                    value="color-0"
+                ></sp-swatch>
+                <sp-swatch
+                    color="var(--spectrum-indigo-500)"
+                    value="color-1"
+                ></sp-swatch>
+                <sp-swatch
+                    color="var(--spectrum-purple-500)"
+                    value="color-2"
+                ></sp-swatch>
+                <sp-swatch
+                    color="var(--spectrum-fuchsia-500)"
+                    value="color-3"
+                ></sp-swatch>
+                <sp-swatch
+                    color="var(--spectrum-magenta-500)"
+                    value="color-4"
+                ></sp-swatch>
+            </sp-swatch-group>
+        </div>
+    </div>
+    <div id="right">
+        <div id="subtitle">my-swatch</div>
+        <my-swatch-group selects="multiple" style="margin: 20px 20px 10px 5px">
+            <my-swatch color="orange"></my-swatch>
+            <my-swatch color="lightblue"></my-swatch>
+            <my-swatch color="yellow"></my-swatch>
+        </my-swatch-group>
+    </div>
+</div>
