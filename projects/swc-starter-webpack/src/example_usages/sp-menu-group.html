@@ -16,22 +16,10 @@ governing permissions and limitations under the License.
     <div id="left">
         <div id="subtitle">sp-menu-group</div>
         <div>
-            <p>
-                Your favorite park in New York is:
-                <span id="group-1-value"></span>
-                <br />
-                <br />
-                Your favorite park in San Fransisco is:
-                <span id="group-2-value"></span>
-            </p>
             <sp-popover open style="position: relative">
                 <sp-menu
                     label="What are your favorite parks?"
                     style="width: 200px"
-                    onchange="this.parentElement
-                                                .previousElementSibling
-                                                .querySelector(`#${arguments[0].target.id}-value`)
-                                                .textContent = arguments[0].target.value"
                 >
                     <sp-menu-group id="group-1" selects="single">
                         <span slot="header">New York</span>
@@ -50,27 +38,57 @@ governing permissions and limitations under the License.
                 </sp-menu>
             </sp-popover>
         </div>
+        <div>
+            <sp-popover open>
+                <sp-menu label="Style/Color" @change="${update}">
+                    <sp-menu-group
+                        label="Font Style"
+                        selects="multiple"
+                        id="font"
+                    >
+                        <sp-menu-item value="bold" selected>Bold</sp-menu-item>
+                        <sp-menu-item value="italic" selected>
+                            Italic
+                        </sp-menu-item>
+                    </sp-menu-group>
+                    <sp-menu-divider></sp-menu-divider>
+                    <sp-menu-group
+                        label="Text Color"
+                        selects="single"
+                        id="color"
+                    >
+                        <sp-menu-item value="black">Black</sp-menu-item>
+                        <sp-menu-item value="blue" selected>Blue</sp-menu-item>
+                        <sp-menu-item value="red">Red</sp-menu-item>
+                        <sp-menu-item value="green">Green</sp-menu-item>
+                    </sp-menu-group>
+                    <sp-menu-divider></sp-menu-divider>
+                    <sp-menu-group
+                        label="Text Decoration"
+                        selects="single"
+                        id="decoration"
+                    >
+                        <sp-menu-item value="none">None</sp-menu-item>
+                        <sp-menu-item value="overline" selected>
+                            Overline
+                        </sp-menu-item>
+                        <sp-menu-item value="line-through">
+                            Line-through
+                        </sp-menu-item>
+                        <sp-menu-item value="underline">Underline</sp-menu-item>
+                    </sp-menu-group>
+                </sp-menu>
+            </sp-popover>
+        </div>
     </div>
 
     <div id="right">
         <div id="subtitle">my-menu-group</div>
         <div>
-            <p>
-                Your favorite park in New York is:
-                <span id="group-1-value"></span>
-                <br />
-                <br />
-                Your favorite park in San Fransisco is:
-                <span id="group-2-value"></span>
-            </p>
             <sp-popover open style="position: relative">
                 <sp-menu
                     label="What are your favorite parks?"
                     style="width: 200px"
-                    onchange="this.parentElement
-                                                .previousElementSibling
-                                                .querySelector(`#${arguments[0].target.id}-value`)
-                                                .textContent = arguments[0].target.value"
                 >
                     <my-menu-group
                         class="my-menu-group"

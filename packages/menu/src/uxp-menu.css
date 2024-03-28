@@ -11,3 +11,17 @@ governing permissions and limitations under the License.
 */
 
 /* write uxp style overrides */
+
+:host([selects]) ::slotted(sp-menu-item) {
+    padding-left: var(
+        --mod-menu-item-selectable-edge-to-text-not-selected,
+        var(--spectrum-menu-item-selectable-edge-to-text-not-selected)
+    );
+}
+
+:host([selects]) ::slotted(sp-menu-item[selected]) {
+    padding-left: var(
+        --mod-menu-item-label-inline-edge-to-content,
+        var(--spectrum-menu-item-label-inline-edge-to-content)
+    );
+}

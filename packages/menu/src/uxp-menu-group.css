@@ -11,3 +11,46 @@ governing permissions and limitations under the License.
 */
 
 /* write uxp style overrides */
+
+:host([selects]) ::slotted(sp-menu-item) {
+    padding-left: var(
+        --mod-menu-item-selectable-edge-to-text-not-selected,
+        var(--spectrum-menu-item-selectable-edge-to-text-not-selected)
+    );
+}
+
+:host([selects]) ::slotted(sp-menu-item[selected]) {
+    padding-left: var(
+        --mod-menu-item-label-inline-edge-to-content,
+        var(--spectrum-menu-item-label-inline-edge-to-content)
+    );
+}
+
+.header {
+    min-width: var(
+        --mod-menu-section-header-min-width,
+        var(--spectrum-menu-section-header-min-width)
+    );
+    padding-bottom: var(
+        --mod-menu-section-header-bottom-edge-to-text,
+        var(
+            --mod-menu-item-bottom-edge-to-text,
+            var(--spectrum-menu-item-bottom-edge-to-text)
+        )
+    );
+    padding-top: var(
+        --mod-menu-section-header-top-edge-to-text,
+        var(
+            --mod-menu-item-top-edge-to-text,
+            var(--spectrum-menu-item-top-edge-to-text)
+        )
+    );
+    padding-left: var(
+        --mod-menu-item-label-inline-edge-to-content,
+        var(--spectrum-menu-item-label-inline-edge-to-content)
+    );
+    padding-right: var(
+        --mod-menu-item-label-inline-edge-to-content,
+        var(--spectrum-menu-item-label-inline-edge-to-content)
+    );
+}

@@ -11,11 +11,71 @@ governing permissions and limitations under the License.
 */
 
 /* write uxp style overrides */
-
-/* Workaround for - https://jira.corp.adobe.com/browse/UXP-21329 */
-#selected {
-    padding-left: -8px;
+:host {
+    display: flex;
+    flex-direction: row; /* Main layout direction */
+    /* Workaround for - https://jira.corp.adobe.com/browse/UXP-22518 */
+    border-left: var(--spectrum-menu-item-focus-indicator-width) solid
+        transparent;
 }
-#label {
-    margin-right: 8px;
+
+:host {
+    min-height: var(
+        --mod-menu-item-min-height,
+        var(--spectrum-menu-item-min-height)
+    );
+    padding-bottom: var(
+        --mod-menu-item-bottom-edge-to-text,
+        var(--spectrum-menu-item-bottom-edge-to-text)
+    );
+    padding-right: var(
+        --mod-menu-item-label-inline-edge-to-content,
+        var(--spectrum-menu-item-label-inline-edge-to-content)
+    );
+    padding-top: var(
+        --mod-menu-item-top-edge-to-text,
+        var(--spectrum-menu-item-top-edge-to-text)
+    );
+    padding-left: var(
+        --mod-menu-item-label-inline-edge-to-content,
+        var(--spectrum-menu-item-label-inline-edge-to-content)
+    );
+}
+
+.checkmark {
+    min-height: var(
+        --mod-menu-item-checkmark-height,
+        var(--spectrum-menu-item-checkmark-height)
+    );
+    min-width: var(
+        --mod-menu-item-checkmark-width,
+        var(--spectrum-menu-item-checkmark-width)
+    );
+    margin-top: calc(
+        var(
+                --mod-menu-item-top-to-checkmark,
+                var(--spectrum-menu-item-top-to-checkmark)
+            ) -
+            var(
+                --mod-menu-item-top-edge-to-text,
+                var(--spectrum-menu-item-top-edge-to-text)
+            )
+    );
+    margin-right: var(
+        --mod-menu-item-text-to-control,
+        var(--spectrum-menu-item-text-to-control)
+    );
+}
+
+::slotted([slot='icon']) {
+    margin-right: var(
+        --mod-menu-item-label-text-to-visual,
+        var(--spectrum-menu-item-label-text-to-visual)
+    );
+}
+
+:host(:focus),
+:host([focused]) {
+    border-left: var(--spectrum-menu-item-focus-indicator-width) solid
+        var(--spectrum-menu-item-focus-indicator-color);
 }
