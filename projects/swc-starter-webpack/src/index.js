@@ -52,6 +52,8 @@ import '@spectrum-web-components/tags/sp-tag.js';
 import '@spectrum-web-components/field-group/sp-field-group.js';
 import '@spectrum-web-components/swatch/sp-swatch.js';
 import '@spectrum-web-components/swatch/sp-swatch-group.js';
+import '@spectrum-web-components/accordion/sp-accordion.js';
+import '@spectrum-web-components/accordion/sp-accordion-item.js';
 
 import '@spectrum-web-components/table/sp-table.js';
 import '@spectrum-web-components/table/sp-table-body.js';

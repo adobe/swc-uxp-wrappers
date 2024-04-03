@@ -2642,6 +2642,7 @@
     "@spectrum-web-components/theme" "^0.37.0"
 
 "@spectrum-web-components/popover@^0.37.0", "@swc-uxp-internal/popover@npm:@spectrum-web-components/popover@0.37.0":
+  name "@swc-uxp-internal/popover"
   version "0.37.0"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/popover/-/popover-0.37.0.tgz#0a37d0886994f9b24e70a6d6ff6da543a775a324"
   integrity sha512-UilQj4W2HgDMopON2RG7wEYxnGViAWBJYFaTuO7dCLgEHuQMbIN6h30JvSwfz5Z0Vr/eJgSd3I7xj0K9Bl2c6Q==
@@ -2875,6 +2876,17 @@
   dependencies:
     "@lit-labs/react" "^1.1.0"
     "@spectrum-web-components/theme" "^0.14.7"
+
+"@swc-uxp-internal/accordion@npm:@spectrum-web-components/accordion@0.37.0":
+  version "0.37.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/accordion/-/accordion-0.37.0.tgz#42bb56213304e30bb3868b0c11831dac4a8290c1"
+  integrity sha512-64cGyQ13i6vWNym3bP12nMirJMRY+rfrwF6p7/uYw2jtTTZ+QJTJAWxDvAi6+xQKrzdTc27v84tyWZ3i3FzrSQ==
+  dependencies:
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/icon" "^0.37.0"
+    "@spectrum-web-components/icons-ui" "^0.37.0"
+    "@spectrum-web-components/reactive-controllers" "^0.37.0"
+    "@spectrum-web-components/shared" "^0.37.0"
 
 "@swc-uxp-internal/action-bar@npm:@spectrum-web-components/action-bar@0.37.0":
   version "0.37.0"

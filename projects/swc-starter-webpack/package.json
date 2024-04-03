@@ -40,6 +40,7 @@
         "@swc-uxp-wrappers/asset": "*",
         "@swc-uxp-wrappers/quick-actions": "*",
         "@swc-uxp-wrappers/meter": "*",
+        "@swc-uxp-wrappers/accordion": "*",
         "@swc-uxp-wrappers/tags": "*",
         "@swc-uxp-wrappers/help-text": "*",
         "@swc-uxp-wrappers/picker-button": "*",
