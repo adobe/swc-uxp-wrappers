@@ -109,6 +109,17 @@ sp-toast {
     margin: 20px;
 }
 
+sp-accordion {
+    width: 100%;
+    margin: 10px;
+}
+
+.size-div > sp-field-label {
+    background-color: var(--spectrum-gray-300);
+    width: 100%;
+    padding: 10px;
+}
+
 h3 {
     color: var(--spectrum-global-color-gray-500);
     font-family: 'Lato', sans-serif;

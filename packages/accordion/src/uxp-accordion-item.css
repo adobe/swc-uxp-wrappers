@@ -1,0 +1,115 @@
+/*
+Copyright 2024 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* write uxp style overrides */
+
+:host {
+    border-bottom: 1px solid
+        var(
+            --mod-accordion-divider-color,
+            var(--spectrum-accordion-divider-color)
+        );
+    min-height: var(
+        --mod-accordion-item-height,
+        var(--spectrum-accordion-item-height)
+    );
+    min-width: var(
+        --mod-accordion-item-width,
+        var(--spectrum-accordion-item-width)
+    );
+}
+
+.iconContainer {
+    height: var(
+        --mod-accordion-disclosure-indicator-height,
+        var(--spectrum-accordion-disclosure-indicator-height)
+    );
+    width: var(
+        --mod-accordion-disclosure-indicator-height,
+        var(--spectrum-accordion-disclosure-indicator-height)
+    );
+    left: max(
+        0px,
+        calc(
+            (
+                    var(
+                            --mod-accordion-min-block-size,
+                            var(--spectrum-accordion-min-block-size)
+                        ) -
+                        var(
+                            --mod-accordion-disclosure-indicator-height,
+                            var(
+                                --spectrum-accordion-disclosure-indicator-height
+                            )
+                        )
+                ) / 2
+        )
+    );
+    padding-left: var(
+        --mod-accordion-edge-to-disclosure-indicator-space,
+        var(--spectrum-accordion-edge-to-disclosure-indicator-space)
+    );
+    padding-top: 5px;
+}
+
+#header {
+    min-height: var(
+        --mod-accordion-min-block-size,
+        var(--spectrum-accordion-min-block-size)
+    );
+    padding-top: var(
+        --mod-accordion-item-header-top-to-text-space,
+        var(--spectrum-accordion-item-header-top-to-text-space)
+    );
+    padding-bottom: var(
+        --mod-accordion-item-header-bottom-to-text-space,
+        var(--spectrum-accordion-item-header-bottom-to-text-space)
+    );
+    padding-right: var(
+        --mod-accordion-edge-to-text-space,
+        var(--spectrum-accordion-edge-to-text-space)
+    );
+    padding-left: calc(
+        var(
+                --mod-accordion-disclosure-indicator-to-text-space,
+                var(--spectrum-accordion-disclosure-indicator-to-text-space)
+            ) +
+            var(
+                --mod-accordion-disclosure-indicator-height,
+                var(--spectrum-accordion-disclosure-indicator-height)
+            )
+    );
+    width: 100%;
+}
+
+#content {
+    padding-top: var(
+        --mod-accordion-item-content-area-top-to-content,
+        var(--spectrum-accordion-item-content-area-top-to-content)
+    );
+    padding-bottom: var(
+        --mod-accordion-item-content-area-bottom-to-content,
+        var(--spectrum-accordion-item-content-area-bottom-to-content)
+    );
+    padding-left: var(
+        --mod-accordion-component-edge-to-text,
+        var(--spectrum-accordion-component-edge-to-text)
+    );
+    padding-right: var(
+        --mod-accordion-component-edge-to-text,
+        var(--spectrum-accordion-component-edge-to-text)
+    );
+}
+
+:host(:first-child) {
+    border-top: 1px solid rgba(0, 0, 0, 0);
+}
