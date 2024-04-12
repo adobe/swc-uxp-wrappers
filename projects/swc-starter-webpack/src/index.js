@@ -115,3 +115,20 @@ import './extended_swc_samples/my-sidenav.js';
 import './extended_swc_samples/my-asset.js';
 import './extended_swc_samples/my-quick-actions.js';
 import './extended_swc_samples/my-meter.js';
+
+import { Overlay } from "@spectrum-web-components/overlay";
+
+document.getElementById("trigger-imperative").addEventListener("click", () => {
+    (async () => {   
+    const content = document.createElement('sp-popover');
+    content.innerHTML = '<div style="max-width:250px">Overlay Content</div>';
+    const options = {
+    placement: 'right',
+    trigger: document.getElementById("trigger-imperative"),
+    type: 'auto',
+    };
+    const overlay = await Overlay.open(content, options);
+    document.querySelector('sp-theme').append(overlay);
+    })();
+}); 
+

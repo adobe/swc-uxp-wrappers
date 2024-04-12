@@ -45,47 +45,22 @@ function attachEvents(tabName) {
 
         const placementListener = `
             document.getElementById("placementselection").addEventListener("change", () => {
-                document.getElementById("overlay").placement = document.getElementById("placementselection").value;
+                document.querySelectorAll(".overlay").forEach((overlay) => {
+                    overlay.placement = document.getElementById("placementselection").value;
+                  });
             });
             `;
         eval(placementListener);
 
-        const triggerInteractionListener = `
-            document.getElementById("triggerselection").addEventListener("change", () => {
-                document.getElementById("overlay").triggerInteraction =  document.getElementById("triggerselection").value;
-            });
-            `;
-        eval(triggerInteractionListener);
-
         const offsetListener = `
             document.getElementById("offsetvalue").addEventListener("input", () => {
-                document.getElementById("overlay").offset = document.getElementById("offsetvalue").value;
+                document.querySelectorAll(".overlay").forEach((overlay) => {
+                    overlay.offset = document.getElementById("offsetvalue").value;
+                });
             });
             `;
 
         eval(offsetListener);
-
-        const openOverlayListener = `
-        import('@spectrum-web-components/overlay.js').then(Overlay => {
-        document.getElementById("trigger-2").addEventListener( "click", () => {
-            (async () => {   
-            const content = document.querySelector('#content');
-            const options = {
-            offset: document.getElementById("offsetvalue").value,
-            placement: 'document.getElementById("placementselection").value',
-            trigger: document.querySelector('#trigger-2'),
-            type: 'auto',
-            };
-            const overlay = await Overlay.open(content, options);
-            document.body.append(overlay);
-            })();
-            }); 
-        })
-        .catch(error => {
-            console.error('Failed to dynamically import module:', error);
-        });
-        `;
-        // eval(openOverlayListener);
     }
 }
 
