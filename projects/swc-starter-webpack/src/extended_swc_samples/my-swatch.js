@@ -1,5 +1,5 @@
 /*
-Copyright 2023 Adobe. All rights reserved.
+Copyright 2024 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,21 +10,30 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { ActionBar } from '@spectrum-web-components/action-bar';
+import { Swatch, SwatchGroup } from '@spectrum-web-components/swatch';
 import { css } from 'lit';
 
-class MyActionBar extends ActionBar {
+class MySwatch extends Swatch {
     static styles = [
-        ActionBar.styles,
+        Swatch.styles,
         css`
-            :host([open]) {
-                background-color: darkgray;
-                padding: 10px;
-                border-radius: 10px;
-                box-shadow: 0px 0px 30px darkgrey;
+            :host {
+                box-shadow: 5px 5px 5px var(--spectrum-global-color-gray-500);
             }
         `,
     ];
 }
 
-customElements.define('my-action-bar', MyActionBar);
+class MySwatchGroup extends SwatchGroup {
+    static styles = [
+        SwatchGroup.styles,
+        css`
+            :host {
+                transform: rotate(45deg);
+            }
+        `,
+    ];
+}
+
+customElements.define('my-swatch', MySwatch);
+customElements.define('my-swatch-group', MySwatchGroup);
