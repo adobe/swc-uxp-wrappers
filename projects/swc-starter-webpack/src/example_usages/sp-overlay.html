@@ -1,5 +1,4 @@
 <h3>sp-overlay</h3>
-
 <div id="content">
     <div id="left">
         <div id="subtitle">sp-overlay</div>
@@ -29,7 +28,7 @@
                         <span>Offset: </span>
                         <input id="offsetvalue" type="text" style="width: 75px" />
                     </div>
-                    <div  style="margin: 0px;">
+                    <div style="margin: 0px;">
                         <div style="margin: 0px;">
                             <sp-button style="margin: 10px;" id="trigger">Click here</sp-button>
                             <sp-overlay class="overlay" trigger="trigger@click" offset="2" placement="top">
@@ -97,7 +96,76 @@
                                 </sp-popover>
                             </sp-overlay>
                         </div>
+
+                        <div>
+                            <sp-action-group vertical quiet emphasized selects="single">
+                                <sp-action-button id="trigger-1ab" hold-affordance>
+                                    <sp-icon-abc slot="icon"></sp-icon-abc>
+                                </sp-action-button>
+                                <sp-action-button id="trigger-2ab" hold-affordance>
+                                    <sp-icon-star slot="icon"></sp-icon-star>
+                                </sp-action-button>
+                                <sp-action-button id="trigger-3ab" hold-affordance>
+                                    <sp-icon-more slot="icon"></sp-icon-more>
+                                </sp-action-button>
+                            </sp-action-group>
+                            <sp-overlay trigger="trigger-1ab@hover" type="hint">
+                                <sp-tooltip>Hover</sp-tooltip>
+                            </sp-overlay>
+                            <sp-overlay trigger="trigger-1ab@longpress" type="auto" placement="right-start">
+                                <sp-popover class="overlay-demo-popover" tip>
+                                    <sp-action-group vertical quiet>
+                                        <sp-action-button>
+                                            <sp-icon-abc slot="icon"></sp-icon-abc>
+                                        </sp-action-button>
+                                        <sp-action-button>
+                                            <sp-icon-star slot="icon"></sp-icon-star>
+                                        </sp-action-button>
+                                        <sp-action-button>
+                                            <sp-icon-more slot="icon"></sp-icon-more>
+                                        </sp-action-button>
+                                    </sp-action-group>
+                                </sp-popover>
+                            </sp-overlay>
+                            <sp-overlay trigger="trigger-2ab@hover" type="hint">
+                                <sp-tooltip>Hover</sp-tooltip>
+                            </sp-overlay>
+                            <sp-overlay trigger="trigger-2ab@longpress" type="auto" placement="right-start">
+                                <sp-popover class="overlay-demo-popover" tip>
+                                    <sp-action-group vertical quiet>
+                                        <sp-action-button>
+                                            <sp-icon-abc slot="icon"></sp-icon-abc>
+                                        </sp-action-button>
+                                        <sp-action-button>
+                                            <sp-icon-star slot="icon"></sp-icon-star>
+                                        </sp-action-button>
+                                        <sp-action-button>
+                                            <sp-icon-more slot="icon"></sp-icon-more>
+                                        </sp-action-button>
+                                    </sp-action-group>
+                                </sp-popover>
+                            </sp-overlay>
+                            <sp-overlay trigger="trigger-3ab@hover" type="hint">
+                                <sp-tooltip>Hover</sp-tooltip>
+                            </sp-overlay>
+                            <sp-overlay trigger="trigger-3ab@longpress" type="auto" placement="right-start">
+                                <sp-popover class="overlay-demo-popover" tip>
+                                    <sp-action-group vertical quiet>
+                                        <sp-action-button>
+                                            <sp-icon-star slot="icon"></sp-icon-star>
+                                        </sp-action-button>
+                                        <sp-action-button>
+                                            <sp-icon-abc slot="icon"></sp-icon-abc>
+                                        </sp-action-button>
+                                        <sp-action-button>
+                                            <sp-icon-more slot="icon"></sp-icon-more>
+                                        </sp-action-button>
+                                    </sp-action-group>
+                                </sp-popover>
+                            </sp-overlay>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
