@@ -23,7 +23,7 @@
         "./sp-picker-button.js": "./sp-picker-button.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/picker-button": "npm:@spectrum-web-components/picker-button@0.1.4",
+        "@swc-uxp-internal/picker-button": "npm:@spectrum-web-components/picker-button@0.37.0",
         "@swc-uxp-wrappers/button": "1.0.0"
     },
     "files": [
