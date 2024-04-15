@@ -66,6 +66,13 @@ governing permissions and limitations under the License.
     bottom: 0;
     left: 0;
     right: 0;
+    /* Fixed focus-ring layouting aorund sp-switch */
+    border-radius: calc(
+        var(--mod-switch-control-height, var(--spectrum-switch-control-height)) /
+            2 +
+            var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) *
+            2
+    );
 }
 
 #switch:before {

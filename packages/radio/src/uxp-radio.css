@@ -45,3 +45,18 @@ governing permissions and limitations under the License.
         var(--spectrum-radio-text-to-control)
     );
 }
+
+/* workaround for missing 'box-sizing' support, fixed layouting of focus-ring by adding twice of var(--spectrum-radio-focus-indicator-thickness) to the height & width respectively */
+#input.focus-visible + #button:after,
+:host(.focus-visible) #input + #button:after {
+    height: calc(
+        var(--spectrum-radio-button-control-size) +
+            var(--spectrum-radio-focus-indicator-gap) * 2 +
+            var(--spectrum-radio-focus-indicator-thickness) * 2
+    );
+    width: calc(
+        var(--spectrum-radio-button-control-size) +
+            var(--spectrum-radio-focus-indicator-gap) * 2 +
+            var(--spectrum-radio-focus-indicator-thickness) * 2
+    );
+}

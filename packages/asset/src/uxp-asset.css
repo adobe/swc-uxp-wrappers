@@ -11,3 +11,9 @@ governing permissions and limitations under the License.
 */
 
 /* write uxp style overrides */
+
+/* workaround for missing logical property 'max-block-size' & 'max-inline-size' */
+::slotted(*) {
+    max-height: 100%;
+    max-width: 100%;
+}

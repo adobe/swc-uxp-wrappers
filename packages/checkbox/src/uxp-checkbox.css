@@ -49,3 +49,11 @@ governing permissions and limitations under the License.
         var(--spectrum-checkbox-control-size)
     );
 }
+
+/* workaround for missing logical property 'inset', fixed layouting of focus-ring */
+#box:after {
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}

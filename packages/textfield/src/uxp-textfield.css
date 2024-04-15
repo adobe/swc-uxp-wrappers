@@ -256,3 +256,22 @@ governing permissions and limitations under the License.
         var(--spectrum-text-area-min-inline-size)
     );
 }
+
+/* Workaround for missing 'min-block-size' logical property  */
+:host([multiline][quiet]) .input {
+    min-height: var(
+        --mod-text-area-min-block-size-quiet,
+        var(--spectrum-text-area-min-block-size-quiet)
+    );
+}
+
+/* Workaround to fix focus-ring layouting in quiet variant, replacing relevant logical properties with trivial ones */
+:host([quiet]) #textfield:after {
+    height: var(
+        --mod-textfield-focus-indicator-width,
+        var(--spectrum-textfield-focus-indicator-width)
+    );
+    width: 100%;
+    left: 0;
+    right: 0;
+}
