@@ -98,6 +98,33 @@
                         </div>
 
                         <div>
+                            <sp-button style="margin: 10px;" id="trigger-long">Long Press here</sp-button>
+                            <sp-overlay class="overlay" trigger="trigger-long@hover" offset="2" placement="top">
+                                <sp-popover>
+                                    <sp-dialog style="max-width: 300px;">
+                                        <h2 slot="heading">Long pressing opens this popover...</h2>
+                                        <p>But, it really could be anything. Really.</p>
+                                    </sp-dialog>
+                                </sp-popover>
+                            </sp-overlay>
+                            <sp-button style="margin: 10px;" id="trigger-long2">Long press here</sp-button>
+                            <sp-overlay class="overlay" trigger="trigger-long2@longpress" offset="2" placement="top">
+                                <sp-popover>
+                                    <div style="background-color: skyblue;">
+                                        <div>Long pressing on button</div>
+                                    </div>
+                                </sp-popover>
+                            </sp-overlay>
+                            <sp-button style="margin: 10px;" id="trigger-long3">Long press here</sp-button>
+                            <sp-overlay class="overlay" type="hint" trigger="trigger-long3@longpress" placement="bottom"
+                                dir="ltr">
+                                <sp-tooltip variant="" placement="bottom" dir="ltr">
+                                    tooltip
+                                </sp-tooltip>
+                            </sp-overlay>
+                        </div>
+
+                        <div>
                             <sp-action-group vertical quiet emphasized selects="single">
                                 <sp-action-button id="trigger-1ab" hold-affordance>
                                     <sp-icon-abc slot="icon"></sp-icon-abc>
