@@ -32,6 +32,7 @@ governing permissions and limitations under the License.
                             document.getElementById(tabName).innerHTML =
                                 this.responseText;
                             attachEvents(tabName);
+                            attachListenersToTags([tabName]);
                         }
                     };
                     xhttp.open(

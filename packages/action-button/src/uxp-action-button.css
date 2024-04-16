@@ -94,3 +94,17 @@ governing permissions and limitations under the License.
     bottom: 0px;
     right: 0px;
 }
+
+.hold-affordance + ::slotted([slot='icon']),
+[icon-only]::slotted([slot='icon']) {
+    margin-left: calc(
+        var(
+                --mod-actionbutton-edge-to-visual-only,
+                var(--spectrum-actionbutton-edge-to-visual-only)
+            ) -
+            var(
+                --mod-actionbutton-edge-to-text,
+                var(--spectrum-actionbutton-edge-to-text)
+            )
+    );
+}

@@ -71,6 +71,28 @@ function attachEvents(tabName) {
     }
 }
 
+function attachListenersToTags(tagNames) {
+    const eventListener1 = `
+        tagNames.forEach(function (tagName) {
+            const elements = document.querySelectorAll(tagName);
+            elements.forEach(function (element) {
+                // Attach click event listener
+                element.addEventListener('click', function (event) {
+                    // Your click event handler logic here
+                    console.log('Clicked:', event.target);
+                });
+
+                // Attach keydown event listener
+                element.addEventListener('keydown', function (event) {
+                    // Your keydown event handler logic here
+                    console.log('Keydown:', event.key);
+                });
+            });
+        });
+    `;
+    eval(eventListener1);
+}
+
 function handleThemeColor(selectObject) {
     var value = selectObject.value;
     document.querySelector('#theme-block').setAttribute('color', value);

@@ -25,10 +25,7 @@ governing permissions and limitations under the License.
         --mod-search-edge-to-visual,
         var(--spectrum-search-edge-to-visual)
     );
-    margin-top: calc(
-        var(--mod-search-top-to-text, var(--spectrum-search-top-to-text)) -
-            var(--mod-search-border-width, var(--spectrum-search-border-width))
-    );
+    margin-top: calc((var(--spectrum-textfield-height)) / 4);
 }
 
 :host([quiet]) #textfield .icon-search {
@@ -36,11 +33,15 @@ governing permissions and limitations under the License.
         var(--mod-search-top-to-text, var(--spectrum-search-top-to-text)) -
             var(--mod-search-border-width, var(--spectrum-search-border-width))
     );
+    margin-top: calc((var(--spectrum-textfield-height)) / 4);
 }
 
 .icon-search {
     left: 0px;
-    margin: auto;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    margin-bottom: auto;
 }
 
 :host(:not([quiet])) #textfield .input {
@@ -57,6 +58,7 @@ governing permissions and limitations under the License.
             var(--mod-search-icon-size, var(--spectrum-search-icon-size)) +
             var(--mod-search-text-to-icon, var(--spectrum-search-text-to-icon))
     );
+    padding-top: calc((var(--spectrum-textfield-height)) / 4);
 }
 
 :host([quiet]) #textfield .input {
@@ -73,6 +75,7 @@ governing permissions and limitations under the License.
             var(--mod-search-icon-size, var(--spectrum-search-icon-size)) +
             var(--mod-search-text-to-icon, var(--spectrum-search-text-to-icon))
     );
+    padding-top: calc(var(--spectrum-textfield-height) / 4);
 }
 
 .input {
@@ -97,4 +100,5 @@ governing permissions and limitations under the License.
                 var(--spectrum-search-button-inline-size)
             )
     );
+    right: 0px;
 }

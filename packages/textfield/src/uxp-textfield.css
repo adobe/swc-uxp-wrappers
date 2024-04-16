@@ -115,16 +115,6 @@ governing permissions and limitations under the License.
         --mod-textfield-min-width,
         var(--spectrum-textfield-min-width)
     );
-    padding-bottom: calc(
-        var(
-                --mod-textfield-spacing-block-end,
-                var(--spectrum-textfield-spacing-block-end)
-            ) -
-            var(
-                --mod-textfield-border-width,
-                var(--spectrum-textfield-border-width)
-            )
-    );
     padding-top: calc(
         var(
                 --mod-textfield-spacing-block-start,
@@ -274,4 +264,36 @@ governing permissions and limitations under the License.
     width: 100%;
     left: 0;
     right: 0;
+}
+
+:host([grows]:not([quiet])) #textfield:after {
+    min-height: calc(
+        var(
+                --mod-text-area-min-block-size,
+                var(--spectrum-text-area-min-block-size)
+            ) +
+            var(
+                --mod-textfield-focus-indicator-gap,
+                var(--spectrum-textfield-focus-indicator-gap)
+            ) * 2
+    );
+}
+
+:host([grows]) .input {
+    margin-bottom: calc(
+        (
+                var(
+                        --mod-textfield-spacing-block-end,
+                        var(--spectrum-textfield-spacing-block-end)
+                    ) -
+                    var(
+                        --mod-textfield-border-width,
+                        var(--spectrum-textfield-border-width)
+                    )
+            ) * -1
+    );
+}
+
+#sizer {
+    height: auto;
 }

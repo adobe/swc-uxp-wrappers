@@ -20,7 +20,7 @@ governing permissions and limitations under the License.
     border-bottom-right-radius: 0px;
     border-right-width: 0px;
     border-top-right-radius: 0px;
-    min-width: 0px;
+    min-width: var(--spectrum-textfield-min-width);
 }
 
 .buttons {
@@ -33,10 +33,6 @@ governing permissions and limitations under the License.
 }
 
 .buttons {
-    height: var(
-        --mod-stepper-buttons-height,
-        var(--spectrum-stepper-buttons-height)
-    );
     border-bottom-right-radius: var(
         --mod-stepper-border-radius,
         var(--spectrum-stepper-border-radius)
@@ -47,13 +43,8 @@ governing permissions and limitations under the License.
         var(--spectrum-stepper-border-radius)
     );
     border-top-left-radius: 0px;
-    width: calc(
-        var(--mod-stepper-button-width, var(--spectrum-stepper-button-width)) +
-            var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap)) *
-            2
-    );
+
     padding-right: var(--spectrum-stepper-button-gap);
-    row-gap: var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap));
 }
 
 .step-up {
@@ -87,18 +78,6 @@ governing permissions and limitations under the License.
 
 .step-down,
 .step-up {
-    height: calc(
-        var(
-                --mod-stepper-buttons-height,
-                var(--spectrum-stepper-buttons-height)
-            ) / 2 -
-            var(--mod-stepper-button-gap, var(--spectrum-stepper-button-gap)) *
-            2.5
-    );
-    width: var(
-        --mod-stepper-button-width,
-        var(--spectrum-stepper-button-width)
-    );
     min-width: 0px;
     padding-right: var(
         --mod-stepper-button-padding,
@@ -113,4 +92,28 @@ governing permissions and limitations under the License.
 .step-down .stepper-icon,
 .step-up .stepper-icon {
     margin-left: 0px;
+}
+
+:host([quiet]) .step-down,
+:host([quiet]) .step-up {
+    border-top-color: currentColor;
+    border-top-style: none;
+    border-bottom-style: none;
+    border-left-color: currentColor;
+    border-right-color: currentColor;
+    border-left-style: none;
+    border-right-style: none;
+    background: none;
+    min-width: 0;
+    padding-right: 0;
+}
+
+:host([quiet][focused]) #textfield .step-down,
+:host([quiet][focused]) #textfield .step-up {
+    background-color: transparent;
+}
+
+:host([readonly]) #textfield .input,
+.input:read-only {
+    border-color: transparent !important;
 }
