@@ -67,6 +67,26 @@ governing permissions and limitations under the License.
             ></sp-textfield>
         </div>
 
+        <div id="variantLabel">readonly</div>
+        <div class="demo-example">
+            <sp-field-label for="story-1" required>Background</sp-field-label>
+            <sp-textfield
+                id="story-1"
+                multiline
+                value="You cannot type anything as its a readonly textarea"
+                readonly
+            ></sp-textfield>
+
+            <sp-field-label for="story-1" required>Background</sp-field-label>
+            <sp-textfield
+                id="story-1"
+                multiline
+                value="You cannot type anything as its a readonly textarea"
+                readonly
+                quiet
+            ></sp-textfield>
+        </div>
+
         <div id="variantLabel">invalid</div>
         <div class="demo-example">
             <sp-field-label for="story-2" required>Background</sp-field-label>

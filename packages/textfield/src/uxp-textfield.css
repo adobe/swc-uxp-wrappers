@@ -297,3 +297,7 @@ governing permissions and limitations under the License.
 #sizer {
     height: auto;
 }
+
+:host([disabled]) #textfield {
+    pointer-events: none;
+}
