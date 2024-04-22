@@ -20,10 +20,14 @@
         "./package.json": "./package.json",
         "./src/Overlay.js": "./src/Overlay.js",
         "./src/overlay.css.js": "./src/overlay.css.js",
-        "./sp-overlay.js": "./sp-overlay.js"
+        "./sp-overlay.js": "./sp-overlay.js",
+        "./src/OverlayTrigger.js": "./src/OverlayTrigger.js",
+        "./overlay-trigger.js": "./overlay-trigger.js",
+        "./sync/overlay-trigger.js": "./overlay-trigger-sync.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/overlay": "npm:@spectrum-web-components/overlay@0.37.0"
+        "@swc-uxp-internal/overlay": "npm:@spectrum-web-components/overlay@0.37.0",
+        "@swc-uxp-wrappers/action-button": "1.0.0"
     },
     "files": [
         "**/*.js"
