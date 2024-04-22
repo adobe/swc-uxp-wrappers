@@ -13,57 +13,67 @@ governing permissions and limitations under the License.
 <h3>sp-link</h3>
 
 <div id="content">
-    <div id="left">
-        <div id="subtitle">sp-link</div>
-        This is a
-        <sp-link id="lifestory-1" href="http://www.adobe.com">
-            standard link
-        </sp-link>
-        This is a
-        <sp-link href="#" variant="secondary">secondary link</sp-link>
-        <p>
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-link</div>
             This is a
-            <sp-link quiet href="#">quiet standard link</sp-link>
-            .
-        </p>
-        <p>
-            This is a
-            <sp-link quiet variant="secondary" href="#">
-                quiet secondary link
+            <sp-link id="lifestory-1" href="http://www.adobe.com">
+                standard link
             </sp-link>
-            .
-        </p>
-        <div
-            style="
-                background-color: #0f797d;
-                padding: 15px 20px;
-                display: inline-block;
-            "
-        >
-            <p style="color: rgb(240, 240, 240)">
+            This is a
+            <sp-link href="#" variant="secondary">secondary link</sp-link>
+            <p>
                 This is a
-                <sp-link static="white" quiet href="#">quiet link</sp-link>
-                over a background.
+                <sp-link quiet href="#">quiet standard link</sp-link>
+                .
             </p>
+            <p>
+                This is a
+                <sp-link quiet variant="secondary" href="#">
+                    quiet secondary link
+                </sp-link>
+                .
+            </p>
+            <div
+                style="
+                    background-color: #0f797d;
+                    padding: 15px 20px;
+                    display: inline-block;
+                "
+            >
+                <p style="color: rgb(240, 240, 240)">
+                    This is a
+                    <sp-link static="white" quiet href="#">quiet link</sp-link>
+                    over a background.
+                </p>
+            </div>
+            <div
+                style="
+                    background-color: #0f797d;
+                    padding: 15px 20px;
+                    display: inline-block;
+                "
+            >
+                <p style="color: rgb(240, 240, 240)">
+                    This
+                    <sp-link static="white" href="#">link</sp-link>
+                    is over a background.
+                </p>
+            </div>
         </div>
-        <div
-            style="
-                background-color: #0f797d;
-                padding: 15px 20px;
-                display: inline-block;
-            "
-        >
-            <p style="color: rgb(240, 240, 240)">
-                This
-                <sp-link static="white" href="#">link</sp-link>
-                is over a background.
-            </p>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-link</div>
+            This is a
+            <my-link class="my-link" href="http://www.adobe.com">
+                my link
+            </my-link>
         </div>
     </div>
-    <input type="text" style="width: 2px" />
-    <div id="right">
-        <div id="subtitle">my-link</div>
-        This is a
-        <my-link class="my-link" href="http://www.adobe.com">my link</my-link>
+
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
     </div>
 </div>

@@ -13,37 +13,45 @@ governing permissions and limitations under the License.
 <h3>sp-help-text</h3>
 
 <div id="content">
-    <div id="left">
-        <div id="subtitle">sp-help-text</div>
-        <sp-help-text size="s">
-            Passwords must be at least 8 characters.
-        </sp-help-text>
-        <sp-help-text size="m">
-            Passwords must be at least 8 characters.
-        </sp-help-text>
-        <sp-help-text size="l">
-            Passwords must be at least 8 characters.
-        </sp-help-text>
-        <sp-help-text size="xl">
-            Passwords must be at least 8 characters.
-        </sp-help-text>
-        <sp-help-text variant="negative">
-            Create a password with at least 8 characters.
-        </sp-help-text>
-        <sp-help-text variant="negative" icon>
-            Create a password with at least 8 characters.
-        </sp-help-text>
-        <sp-help-text disabled>
-            Passwords must be at least 8 characters.
-        </sp-help-text>
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-help-text</div>
+            <sp-help-text size="s">
+                Passwords must be at least 8 characters.
+            </sp-help-text>
+            <sp-help-text size="m">
+                Passwords must be at least 8 characters.
+            </sp-help-text>
+            <sp-help-text size="l">
+                Passwords must be at least 8 characters.
+            </sp-help-text>
+            <sp-help-text size="xl">
+                Passwords must be at least 8 characters.
+            </sp-help-text>
+            <sp-help-text variant="negative">
+                Create a password with at least 8 characters.
+            </sp-help-text>
+            <sp-help-text variant="negative" icon>
+                Create a password with at least 8 characters.
+            </sp-help-text>
+            <sp-help-text disabled>
+                Passwords must be at least 8 characters.
+            </sp-help-text>
+        </div>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-help-text</div>
+            <my-help-text class="my-help-text" size="xl">
+                It provides either an informative description or an error
+                message that gives more context about what a user needs to
+                input. It's commonly used in forms.
+            </my-help-text>
+        </div>
     </div>
-    <input type="text" style="width: 2px" />
-    <div id="right">
-        <div id="subtitle">my-help-text</div>
-        <my-help-text class="my-help-text" size="xl">
-            It provides either an informative description or an error message
-            that gives more context about what a user needs to input. It's
-            commonly used in forms.
-        </my-help-text>
+
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
     </div>
 </div>

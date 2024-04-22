@@ -69,28 +69,81 @@ function attachEvents(tabName) {
         `;
         eval(eventListener1);
     }
-}
 
-function attachListenersToTags(tagNames) {
-    const eventListener1 = `
-        tagNames.forEach(function (tagName) {
-            const elements = document.querySelectorAll(tagName);
-            elements.forEach(function (element) {
-                // Attach click event listener
-                element.addEventListener('click', function (event) {
-                    // Your click event handler logic here
-                    console.log('Clicked:', event.target);
-                });
-
-                // Attach keydown event listener
-                element.addEventListener('keydown', function (event) {
-                    // Your keydown event handler logic here
-                    console.log('Keydown:', event.key);
-                });
+    if (tabName === 'sp-checkbox') {
+        const spCheckboxSizes = `
+            const sizes = document.getElementById('checkbox-sizes');
+            sizes.addEventListener("change", () => {
+                document.querySelector('#dynamic-api-test').setAttribute('size', sizes.value); 
             });
-        });
-    `;
-    eval(eventListener1);
+        `;
+        eval(spCheckboxSizes);
+
+        const spCheckboxDisabled = `
+            document.querySelector('#disabled').addEventListener('change', (evt) => {
+                    const checked = evt.target.checked;
+                    const checkbox = document.querySelector('#dynamic-api-test');
+                    if (checked) {
+                        checkbox.setAttribute("disabled", "disabled");
+                    } else {
+                        checkbox.removeAttribute("disabled");
+                    }
+                });
+        `;
+        eval(spCheckboxDisabled);
+
+        const spCheckboxEmphasized = `
+            document.querySelector('#emphasized').addEventListener('change', (evt) => {
+                    const checked = evt.target.checked;
+                    const checkbox = document.querySelector('#dynamic-api-test');
+                    if (checked) {
+                        checkbox.setAttribute("emphasized", "emphasized");
+                    } else {
+                        checkbox.removeAttribute("emphasized");
+                    }
+                });
+        `;
+        eval(spCheckboxEmphasized);
+
+        const spCheckboxInvalid = `
+            document.querySelector('#invalid').addEventListener('change', (evt) => {
+                    const checked = evt.target.checked;
+                    const checkbox = document.querySelector('#dynamic-api-test');
+                    if (checked) {
+                        checkbox.setAttribute("invalid", "invalid");
+                    } else {
+                        checkbox.removeAttribute("invalid");
+                    }
+                });
+        `;
+        eval(spCheckboxInvalid);
+
+        const spCheckboxIntermediate = `
+            document.querySelector('#indeterminate').addEventListener('change', (evt) => {
+                    const checked = evt.target.checked;
+                    const checkbox = document.querySelector('#dynamic-api-test');
+                    if (checked) {
+                        checkbox.setAttribute("indeterminate", "indeterminate");
+                    } else {
+                        checkbox.removeAttribute("indeterminate");
+                    }
+                });
+        `;
+        eval(spCheckboxIntermediate);
+
+        const spCheckboxReadonly = `
+            document.querySelector('#readonly').addEventListener('change', (evt) => {
+                    const checked = evt.target.checked;
+                    const checkbox = document.querySelector('#dynamic-api-test');
+                    if (checked) {
+                        checkbox.setAttribute("readonly", "readonly");
+                    } else {
+                        checkbox.removeAttribute("readonly");
+                    }
+                });
+        `;
+        eval(spCheckboxReadonly);
+    }
 }
 
 function handleThemeColor(selectObject) {
@@ -101,4 +154,120 @@ function handleThemeColor(selectObject) {
 function handleThemeScale(selectObject) {
     var value = selectObject.value;
     document.querySelector('#theme-block').setAttribute('scale', value);
+}
+
+// logging events
+function logEvent(evt) {
+    const eventType = evt.type;
+    const filterElement = document.querySelector(`#chk${eventType}`);
+    if (!filterElement.checked) return;
+    const logs = document.querySelector('#logs');
+    let key = evt.key === ' ' ? 'Space' : evt.key;
+
+    let evtText =
+        `EVENT=${evt.type} CONTROL=${evt.target.tagName.toLowerCase()}` +
+        `${
+            evt.target.value !== undefined ? ` VALUE=${evt.target.value}` : ''
+        }` +
+        `${
+            evt.target.checked !== undefined
+                ? ` CHECKED=${evt.target.checked}`
+                : ''
+        }` +
+        `${
+            evt.target.selectedIndex !== undefined
+                ? ` SELECTED=${evt.target.selectedIndex}`
+                : ''
+        }` +
+        `${key !== undefined ? ` KEY=${key}` : ''}` +
+        `${evt.charCode !== undefined ? ` CHAR=${evt.charCode}` : ''}` +
+        `<br>`; // Use <br> tag for line breaks
+
+    logs.innerHTML += evtText;
+}
+
+function toggleClassSpControl(toggle = 'add') {
+    [
+        'sp-button',
+        'sp-clear-button',
+        'sp-close-button',
+        'sp-button-group',
+        'sp-action-button',
+        'sp-action-group',
+        'sp-link',
+        'sp-checkbox',
+        'sp-card',
+        'sp-action-bar',
+        'sp-menu',
+        'sp-menu-item',
+        'sp-menu-group',
+        'sp-radio',
+        'sp-radio-group',
+        'sp-textfield',
+        'sp-switch',
+        'sp-picker-button',
+        'sp-toast',
+        'sp-sidenav',
+        'sp-tags',
+        'sp-tag',
+        'sp-quick-actions',
+        'sp-number-field',
+        'sp-search',
+        'sp-swatch',
+        'sp-swatch-group',
+    ].forEach((spectrumcontrol) => {
+        Array.from(document.getElementsByTagName(spectrumcontrol)).forEach(
+            (control) => {
+                if (toggle === 'add') {
+                    control.classList.add('sp-control');
+                } else if (toggle === 'remove') {
+                    control.classList.remove('sp-control');
+                }
+            }
+        );
+    });
+}
+
+function toggleEventListenerToSpControls(toggle = 'add') {
+    ['click', 'focus', 'blur', 'input', 'change', 'keydown', 'keyup'].forEach(
+        (evtName) => {
+            Array.from(document.querySelectorAll('.sp-control')).forEach(
+                (control) => {
+                    if (toggle === 'add') {
+                        control.addEventListener(evtName, logEvent);
+                    } else if (toggle === 'remove') {
+                        control.removeEventListener(evtName, logEvent);
+                    }
+                }
+            );
+        }
+    );
+}
+
+function mainControl() {
+    document
+        .querySelector('#toggleConsole')
+        .addEventListener('change', (evt) => {
+            const selected = evt.target.selected;
+            const theConsole = document.querySelector('#console');
+            if (selected) {
+                toggleClassSpControl('add');
+                toggleEventListenerToSpControls('add');
+            } else {
+                toggleEventListenerToSpControls('remove');
+                toggleClassSpControl('remove');
+            }
+        });
+
+    document.querySelector('#clearConsole').addEventListener('click', () => {
+        var logs = document.getElementById('logs');
+        logs.innerText = '';
+    });
+}
+
+function reset() {
+    const toggleConsole = document.getElementById('toggleConsole');
+    const changeEvent = new Event('change', { bubbles: true });
+    toggleConsole.removeAttribute('selected');
+    toggleConsole.dispatchEvent(changeEvent);
 }

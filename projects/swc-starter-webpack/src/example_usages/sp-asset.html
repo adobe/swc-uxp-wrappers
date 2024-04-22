@@ -13,25 +13,40 @@ governing permissions and limitations under the License.
 <h3>sp-asset</h3>
 
 <div id="content">
-    <div id="left">
-        <div id="subtitle">sp-asset</div>
-        <sp-asset style="height: 128px">
-            <img src="https://picsum.photos/500/500" alt="Demo Image" />
-        </sp-asset>
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-asset</div>
+            <sp-asset style="height: 128px">
+                <img src="https://picsum.photos/500/500" alt="Demo Image" />
+            </sp-asset>
 
-        <div class="flex">
-            <sp-asset variant="file"></sp-asset>
-            <sp-asset variant="file" label="Named File Asset"></sp-asset>
+            <div class="flex">
+                <sp-asset variant="file"></sp-asset>
+                <sp-asset variant="file" label="Named File Asset"></sp-asset>
+            </div>
+
+            <div class="flex">
+                <sp-asset variant="folder"></sp-asset>
+                <sp-asset
+                    variant="folder"
+                    label="Named Folder Asset"
+                ></sp-asset>
+            </div>
         </div>
-
-        <div class="flex">
-            <sp-asset variant="folder"></sp-asset>
-            <sp-asset variant="folder" label="Named Folder Asset"></sp-asset>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-asset</div>
+            <my-asset
+                class="my-asset"
+                variant="file"
+                label="my asset"
+            ></my-asset>
         </div>
     </div>
-    <input type="text" style="width: 2px" />
-    <div id="right">
-        <div id="subtitle">my-asset</div>
-        <my-asset class="my-asset" variant="file" label="my asset"></my-asset>
+
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
     </div>
 </div>

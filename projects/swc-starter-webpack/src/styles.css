@@ -17,12 +17,6 @@ body {
     font-family: Arial;
     max-height: 100vh;
 }
-
-.parentdiv {
-    display: flex;
-    flex-direction: column;
-}
-
 /* Style the tab */
 .tab {
     display: inline-flex;
@@ -70,15 +64,14 @@ body {
     left: 285px;
     background: var(--spectrum-global-color-gray-50);
     right: 0;
-    bottom: 0;
     padding: 20px;
+    height: 70vh;
     border-left: 2px solid var(--spectrum-global-color-gray-700);
     overflow-y: auto;
 }
 
 #content {
-    margin: 20px;
-    padding: 20px;
+    margin: 40px 0px;
     display: flex;
     border-radius: 5px;
 }
@@ -86,10 +79,7 @@ body {
 #left,
 #right {
     border-radius: 5px;
-    flex: 1 1 0%;
     max-width: 100%;
-    overflow: auto;
-    margin: 20px;
     padding: 20px;
     background: var(--spectrum-global-color-gray-200);
 }
@@ -118,9 +108,8 @@ h3 {
     font-family: 'Lato', sans-serif;
     font-size: 54px;
     font-weight: 300;
-    line-height: 58px;
-    margin: 0 0 58px;
 }
+
 #subtitle {
     color: var(--spectrum-global-color-gray-100);
     background: var(--spectrum-global-color-gray-400);
@@ -149,6 +138,7 @@ p {
     text-indent: 30px;
     margin: 10px 0px 10px 0px;
 }
+
 .sub-heading {
     color: var(--spectrum-global-color-gray-100);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -161,7 +151,6 @@ p {
     background: var(--spectrum-global-color-gray-100);
     flex: 1 1 0%;
     max-width: 100%;
-    overflow: auto;
     padding: 10px 10px 10px 10px;
     margin: 10px 10px 0px 0px;
     position: relative;
@@ -188,4 +177,65 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+#console {
+    margin-left: 15px;
+    padding: 20px;
+    border-radius: 5px;
+    background-color: var(--spectrum-global-color-gray-700);
+    color: var(--spectrum-global-color-gray-100);
+    font-size: small;
+    height: 300px;
+    width: 73%;
+    overflow-y: auto;
+    display: inline-flex;
+    flex: 0 0 74%;
+}
+
+#loging {
+    position: absolute;
+    left: 285px;
+    background: var(--spectrum-global-color-gray-50);
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    height: 30vh;
+    border-left: 2px solid var(--spectrum-global-color-gray-700);
+    overflow-y: auto;
+    display: flex;
+}
+
+#config {
+    flex: 0 0 24%;
+    border-radius: 5px;
+    overflow: auto;
+    margin-left: 20px;
+    padding: 20px;
+    background: var(--spectrum-global-color-gray-200);
+}
+
+#playground {
+    flex: 0 0 75%;
+    display: flex;
+    flex-direction: column;
+}
+
+#panel {
+    border: 1px solid var(--spectrum-global-color-gray-700);
+    border-radius: 5px;
+    padding: 10px 20px;
+    height: 300px;
+    width: 350px;
+    display: inline-flex;
+    flex-direction: column;
+    flex: 0 0 25%;
+}
+
+#panel > sp-checkbox {
+    margin-right: 5px;
+}
+
+#section {
+    border-left: 2px solid var(--spectrum-global-color-gray-700);
 }

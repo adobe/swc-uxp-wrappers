@@ -12,35 +12,42 @@ governing permissions and limitations under the License.
 
 <h3>sp-banner</h3>
 <div id="content">
-    <div id="left">
-        <div id="subtitle">sp-banner</div>
-        <sp-banner>
-            <div slot="header">This is an info banner</div>
-            <div slot="content">Description here, sp-banner</div>
-        </sp-banner>
-
-        <div
-            style="
-                width: 300px;
-                margin: 50px 0px 50px;
-                max-width: 75%;
-                height: 100px;
-                background-color: #ba598b;
-                position: relative;
-            "
-        >
-            <sp-banner corner type="error">
-                <div slot="header">This banner is in a corner</div>
-                <div slot="content">Neat!</div>
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-banner</div>
+            <sp-banner>
+                <div slot="header">This is an info banner</div>
+                <div slot="content">Description here, sp-banner</div>
             </sp-banner>
+
+            <div
+                style="
+                    width: 300px;
+                    margin: 50px 0px 50px;
+                    max-width: 75%;
+                    height: 100px;
+                    background-color: #ba598b;
+                    position: relative;
+                "
+            >
+                <sp-banner corner type="error">
+                    <div slot="header">This banner is in a corner</div>
+                    <div slot="content">Neat!</div>
+                </sp-banner>
+            </div>
+        </div>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">sp-banner</div>
+            <my-banner>
+                <div slot="header">This is a custom info banner</div>
+                <div slot="content">Description here, my-banner</div>
+            </my-banner>
         </div>
     </div>
-    <input type="text" style="width: 2px" />
-    <div id="right">
-        <div id="subtitle">sp-banner</div>
-        <my-banner>
-            <div slot="header">This is a custom info banner</div>
-            <div slot="content">Description here, my-banner</div>
-        </my-banner>
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
     </div>
 </div>

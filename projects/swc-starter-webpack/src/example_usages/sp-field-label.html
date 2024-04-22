@@ -13,66 +13,74 @@ governing permissions and limitations under the License.
 <h3>sp-field-label</h3>
 
 <div id="content">
-    <div id="left">
-        <div id="subtitle">sp-field-label</div>
-        <div>
-            <sp-field-label for="lifestory-1" style="width: 100px">
-                Life Story
-            </sp-field-label>
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-field-label</div>
+            <div>
+                <sp-field-label for="lifestory-1" style="width: 100px">
+                    Life Story
+                </sp-field-label>
+                <sp-textfield
+                    placeholder="Enter your life story"
+                    id="lifestory-1"
+                ></sp-textfield>
+                <br />
+                <sp-field-label
+                    for="lifestory-2"
+                    side-aligned="start"
+                    style="width: 100px"
+                >
+                    Life Story
+                </sp-field-label>
+                <sp-textfield
+                    placeholder="Enter your life story"
+                    id="lifestory-2"
+                ></sp-textfield>
+                <br />
+                <sp-field-label
+                    required
+                    for="lifestory-3"
+                    side-aligned="end"
+                    style="width: 100px"
+                >
+                    Life Story
+                </sp-field-label>
+                <sp-textfield
+                    placeholder="Enter your life story"
+                    id="lifestory-3"
+                ></sp-textfield>
+                <br />
+                <sp-field-label
+                    required
+                    disabled
+                    for="lifestory-4"
+                    side-aligned="end"
+                    style="width: 100px"
+                >
+                    Life Story
+                </sp-field-label>
+                <sp-textfield
+                    placeholder="Enter your life story"
+                    id="lifestory-4"
+                ></sp-textfield>
+            </div>
+        </div>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-field-label</div>
+            <my-field-label class="my-field-label" for="lifestory-5">
+                my-field-label is italic
+            </my-field-label>
             <sp-textfield
                 placeholder="Enter your life story"
-                id="lifestory-1"
-            ></sp-textfield>
-            <br />
-            <sp-field-label
-                for="lifestory-2"
-                side-aligned="start"
-                style="width: 100px"
-            >
-                Life Story
-            </sp-field-label>
-            <sp-textfield
-                placeholder="Enter your life story"
-                id="lifestory-2"
-            ></sp-textfield>
-            <br />
-            <sp-field-label
-                required
-                for="lifestory-3"
-                side-aligned="end"
-                style="width: 100px"
-            >
-                Life Story
-            </sp-field-label>
-            <sp-textfield
-                placeholder="Enter your life story"
-                id="lifestory-3"
-            ></sp-textfield>
-            <br />
-            <sp-field-label
-                required
-                disabled
-                for="lifestory-4"
-                side-aligned="end"
-                style="width: 100px"
-            >
-                Life Story
-            </sp-field-label>
-            <sp-textfield
-                placeholder="Enter your life story"
-                id="lifestory-4"
+                id="lifestory-5"
             ></sp-textfield>
         </div>
     </div>
-    <input type="text" style="width: 2px" />
-    <div id="right">
-        <div id="subtitle">my-field-label</div>
-        <my-field-label class="my-field-label" for="lifestory-5">
-            my-field-label is italic
-        </my-field-label>
-        <sp-textfield
-            placeholder="Enter your life story"
-            id="lifestory-5"
-        ></sp-textfield>
+
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
     </div>
 </div>

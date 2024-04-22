@@ -13,24 +13,39 @@ governing permissions and limitations under the License.
 <h3>sp-action-bar</h3>
 
 <div id="content">
-    <div id="left">
-        <div id="subtitle">sp-action-bar</div>
-        <div id="variantLabel">Default</div>
-        <div class="demo-example">
-            <sp-action-bar open>
-                2 selected
-                <sp-action-button slot="buttons" label="Edit">
-                    <sp-icon-edit slot="icon"></sp-icon-edit>
-                </sp-action-button>
-                <sp-action-button slot="buttons" label="More">
-                    <sp-icon-more slot="icon"></sp-icon-more>
-                </sp-action-button>
-            </sp-action-bar>
-        </div>
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-action-bar</div>
+            <div id="variantLabel">Default</div>
+            <div class="demo-example">
+                <sp-action-bar open>
+                    2 selected
+                    <sp-action-button slot="buttons" label="Edit">
+                        <sp-icon-edit slot="icon"></sp-icon-edit>
+                    </sp-action-button>
+                    <sp-action-button slot="buttons" label="More">
+                        <sp-icon-more slot="icon"></sp-icon-more>
+                    </sp-action-button>
+                </sp-action-bar>
+            </div>
 
-        <div id="variantLabel">Emphasized</div>
-        <div class="demo-example">
-            <sp-action-bar emphasized open>
+            <div id="variantLabel">Emphasized</div>
+            <div class="demo-example">
+                <sp-action-bar emphasized open>
+                    2 selected
+                    <sp-action-button slot="buttons" label="Edit">
+                        <sp-icon-edit slot="icon"></sp-icon-edit>
+                    </sp-action-button>
+                    <sp-action-button slot="buttons" label="More">
+                        <sp-icon-more slot="icon"></sp-icon-more>
+                    </sp-action-button>
+                </sp-action-bar>
+            </div>
+        </div>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-action-bar</div>
+            <my-action-bar open>
                 2 selected
                 <sp-action-button slot="buttons" label="Edit">
                     <sp-icon-edit slot="icon"></sp-icon-edit>
@@ -38,20 +53,12 @@ governing permissions and limitations under the License.
                 <sp-action-button slot="buttons" label="More">
                     <sp-icon-more slot="icon"></sp-icon-more>
                 </sp-action-button>
-            </sp-action-bar>
+            </my-action-bar>
         </div>
     </div>
-    <input type="text" style="width: 2px" />
-    <div id="right">
-        <div id="subtitle">my-action-bar</div>
-        <my-action-bar open>
-            2 selected
-            <sp-action-button slot="buttons" label="Edit">
-                <sp-icon-edit slot="icon"></sp-icon-edit>
-            </sp-action-button>
-            <sp-action-button slot="buttons" label="More">
-                <sp-icon-more slot="icon"></sp-icon-more>
-            </sp-action-button>
-        </my-action-bar>
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
     </div>
 </div>

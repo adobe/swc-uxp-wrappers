@@ -13,30 +13,38 @@ governing permissions and limitations under the License.
 <h3>sp-avatar</h3>
 
 <div id="content">
-    <div id="left">
-        <div id="subtitle">sp-avatar</div>
-        <p>
-            An avatar is a thumbnail representation of an entity, such as a user
-            or an organization.
-        </p>
-        <sp-avatar
-            size="700"
-            label="Dog the User"
-            src="https://picsum.photos/500/500"
-        ></sp-avatar>
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-avatar</div>
+            <p>
+                An avatar is a thumbnail representation of an entity, such as a
+                user or an organization.
+            </p>
+            <sp-avatar
+                size="700"
+                label="Dog the User"
+                src="https://picsum.photos/500/500"
+            ></sp-avatar>
+        </div>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-avatar</div>
+            <p>
+                An avatar is a thumbnail representation of an entity, such as a
+                user or an organization.
+            </p>
+            <my-avatar
+                class="my-avatar"
+                size="700"
+                label="Dog the User"
+                src="https://picsum.photos/700/700"
+            ></my-avatar>
+        </div>
     </div>
-    <input type="text" style="width: 2px" />
-    <div id="right">
-        <div id="subtitle">my-avatar</div>
-        <p>
-            An avatar is a thumbnail representation of an entity, such as a user
-            or an organization.
-        </p>
-        <my-avatar
-            class="my-avatar"
-            size="700"
-            label="Dog the User"
-            src="https://picsum.photos/700/700"
-        ></my-avatar>
+
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
     </div>
 </div>

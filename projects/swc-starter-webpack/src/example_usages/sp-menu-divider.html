@@ -13,58 +13,78 @@ governing permissions and limitations under the License.
 <h3>sp-menu-divider</h3>
 
 <div id="content">
-    <div id="left">
-        <div id="subtitle">sp-menu-divider</div>
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-menu-divider</div>
 
-        <div id="variantLabel">sizes</div>
-        <div class="demo-example">
-            <sp-popover open style="position: relative">
-                <sp-menu selects="multiple" size="s">
-                    <sp-menu-item selected>Deselect</sp-menu-item>
-                    <sp-menu-item selected>Select inverse</sp-menu-item>
-                    <sp-menu-divider size="s"></sp-menu-divider>
+            <div id="variantLabel">sizes</div>
+            <div class="demo-example">
+                <sp-popover open style="position: relative">
+                    <sp-menu selects="multiple" size="s">
+                        <sp-menu-item selected>Deselect</sp-menu-item>
+                        <sp-menu-item selected>Select inverse</sp-menu-item>
+                        <sp-menu-divider size="s"></sp-menu-divider>
+                        <sp-menu-item>Feather...</sp-menu-item>
+                        <sp-menu-item>Select and mask...</sp-menu-item>
+                        <sp-menu-item>Save selection</sp-menu-item>
+                        <sp-menu-item disabled>Make work path</sp-menu-item>
+                    </sp-menu>
+                </sp-popover>
+
+                <sp-popover open style="position: relative">
+                    <sp-menu>
+                        <sp-menu-item value="item-1">Deselect</sp-menu-item>
+                        <sp-menu-item value="item-2">
+                            Select inverse
+                        </sp-menu-item>
+                        <sp-menu-divider size="m"></sp-menu-divider>
+                        <sp-menu-item value="item-3">Feather...</sp-menu-item>
+                        <sp-menu-item value="item-4">
+                            Select and mask...
+                        </sp-menu-item>
+                        <sp-menu-item value="item-5">
+                            Save selection
+                        </sp-menu-item>
+                        <sp-menu-item value="item-6" disabled>
+                            Make work path
+                        </sp-menu-item>
+                    </sp-menu>
+                </sp-popover>
+
+                <sp-popover open style="position: relative">
+                    <sp-menu selects="multiple" size="l">
+                        <sp-menu-item selected>Deselect</sp-menu-item>
+                        <sp-menu-item selected>Select inverse</sp-menu-item>
+                        <sp-menu-divider size="l"></sp-menu-divider>
+                        <sp-menu-item>Feather...</sp-menu-item>
+                        <sp-menu-item>Select and mask...</sp-menu-item>
+                        <sp-menu-item>Save selection</sp-menu-item>
+                        <sp-menu-item disabled>Make work path</sp-menu-item>
+                    </sp-menu>
+                </sp-popover>
+            </div>
+            <div>
+                <sp-menu style="margin: 20px">
+                    <sp-menu-item>Deselect</sp-menu-item>
+                    <sp-menu-divider></sp-menu-divider>
+                    <sp-menu-item>Select inverse</sp-menu-item>
                     <sp-menu-item>Feather...</sp-menu-item>
+                    <sp-menu-divider></sp-menu-divider>
                     <sp-menu-item>Select and mask...</sp-menu-item>
+                    <sp-menu-divider></sp-menu-divider>
                     <sp-menu-item>Save selection</sp-menu-item>
                     <sp-menu-item disabled>Make work path</sp-menu-item>
                 </sp-menu>
-            </sp-popover>
-
-            <sp-popover open style="position: relative">
-                <sp-menu>
-                    <sp-menu-item value="item-1">Deselect</sp-menu-item>
-                    <sp-menu-item value="item-2">Select inverse</sp-menu-item>
-                    <sp-menu-divider size="m"></sp-menu-divider>
-                    <sp-menu-item value="item-3">Feather...</sp-menu-item>
-                    <sp-menu-item value="item-4">
-                        Select and mask...
-                    </sp-menu-item>
-                    <sp-menu-item value="item-5">Save selection</sp-menu-item>
-                    <sp-menu-item value="item-6" disabled>
-                        Make work path
-                    </sp-menu-item>
-                </sp-menu>
-            </sp-popover>
-
-            <sp-popover open style="position: relative">
-                <sp-menu selects="multiple" size="l">
-                    <sp-menu-item selected>Deselect</sp-menu-item>
-                    <sp-menu-item selected>Select inverse</sp-menu-item>
-                    <sp-menu-divider size="l"></sp-menu-divider>
-                    <sp-menu-item>Feather...</sp-menu-item>
-                    <sp-menu-item>Select and mask...</sp-menu-item>
-                    <sp-menu-item>Save selection</sp-menu-item>
-                    <sp-menu-item disabled>Make work path</sp-menu-item>
-                </sp-menu>
-            </sp-popover>
+            </div>
         </div>
-        <div>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-menu-divider</div>
             <sp-menu style="margin: 20px">
                 <sp-menu-item>Deselect</sp-menu-item>
-                <sp-menu-divider></sp-menu-divider>
+                <my-menu-divider class="my-menu-divider"></my-menu-divider>
                 <sp-menu-item>Select inverse</sp-menu-item>
                 <sp-menu-item>Feather...</sp-menu-item>
-                <sp-menu-divider></sp-menu-divider>
                 <sp-menu-item>Select and mask...</sp-menu-item>
                 <sp-menu-divider></sp-menu-divider>
                 <sp-menu-item>Save selection</sp-menu-item>
@@ -72,18 +92,10 @@ governing permissions and limitations under the License.
             </sp-menu>
         </div>
     </div>
-    <input type="text" style="width: 2px" />
-    <div id="right">
-        <div id="subtitle">my-menu-divider</div>
-        <sp-menu style="margin: 20px">
-            <sp-menu-item>Deselect</sp-menu-item>
-            <my-menu-divider class="my-menu-divider"></my-menu-divider>
-            <sp-menu-item>Select inverse</sp-menu-item>
-            <sp-menu-item>Feather...</sp-menu-item>
-            <sp-menu-item>Select and mask...</sp-menu-item>
-            <sp-menu-divider></sp-menu-divider>
-            <sp-menu-item>Save selection</sp-menu-item>
-            <sp-menu-item disabled>Make work path</sp-menu-item>
-        </sp-menu>
+
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
     </div>
 </div>

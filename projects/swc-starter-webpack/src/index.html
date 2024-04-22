@@ -29,10 +29,11 @@ governing permissions and limitations under the License.
                     var xhttp = new XMLHttpRequest();
                     xhttp.onreadystatechange = function () {
                         if (this.readyState == 4 && this.status == 200) {
+                            reset();
                             document.getElementById(tabName).innerHTML =
                                 this.responseText;
                             attachEvents(tabName);
-                            attachListenersToTags([tabName]);
+                            mainControl();
                         }
                     };
                     xhttp.open(
@@ -332,158 +333,203 @@ governing permissions and limitations under the License.
                         sp-swatch
                     </button>
                 </div>
-
-                <div id="sp-banner" class="tabcontent">
-                    <!--#include sp-banner.html -->
+            </div>
+            <div id="loging">
+                <div id="panel">
+                    <div>
+                        <sp-action-group>
+                            <sp-action-button
+                                toggles
+                                emphasized
+                                id="toggleConsole"
+                            >
+                                <sp-icon-edit slot="icon"></sp-icon-edit>
+                                Enable Events Logging
+                            </sp-action-button>
+                            <sp-action-button emphasized id="clearConsole">
+                                <sp-icon-delete slot="icon"></sp-icon-delete>
+                                Clear Console
+                            </sp-action-button>
+                        </sp-action-group>
+                    </div>
+                    <div style="display: flex; flex-direction: column">
+                        <sp-checkbox class="filter" id="chkclick" checked>
+                            click
+                        </sp-checkbox>
+                        <sp-checkbox class="filter" id="chkfocus" checked>
+                            focus
+                        </sp-checkbox>
+                        <sp-checkbox class="filter" id="chkblur" checked>
+                            blur
+                        </sp-checkbox>
+                        <sp-checkbox class="filter" id="chkchange" checked>
+                            change
+                        </sp-checkbox>
+                        <sp-checkbox class="filter" id="chkinput" checked>
+                            input
+                        </sp-checkbox>
+                        <sp-checkbox class="filter" id="chkkeydown" checked>
+                            keydown
+                        </sp-checkbox>
+                        <sp-checkbox class="filter" id="chkkeyup" checked>
+                            keyup
+                        </sp-checkbox>
+                    </div>
                 </div>
-
-                <div id="sp-illustrated-message" class="tabcontent">
-                    <!--#include sp-illustrated-message.html -->
+                <div id="console" class="console">
+                    <span id="logs"></span>
                 </div>
+            </div>
+            <div id="sp-banner" class="tabcontent">
+                <!--#include sp-banner.html -->
+            </div>
 
-                <div id="sp-divider" class="tabcontent">
-                    <!--#include sp-divider.html -->
-                </div>
+            <div id="sp-illustrated-message" class="tabcontent">
+                <!--#include sp-illustrated-message.html -->
+            </div>
 
-                <div id="sp-avatar" class="tabcontent">
-                    <!--#include sp-avatar.html -->
-                </div>
+            <div id="sp-divider" class="tabcontent">
+                <!--#include sp-divider.html -->
+            </div>
 
-                <div id="sp-button" class="tabcontent">
-                    <!--#include sp-button.html -->
-                </div>
+            <div id="sp-avatar" class="tabcontent">
+                <!--#include sp-avatar.html -->
+            </div>
 
-                <div id="sp-action-button" class="tabcontent">
-                    <!--#include sp-action-button.html -->
-                </div>
+            <div id="sp-button" class="tabcontent">
+                <!--#include sp-button.html -->
+            </div>
 
-                <div id="sp-action-group" class="tabcontent">
-                    <!--#include sp-action-group.html -->
-                </div>
+            <div id="sp-action-button" class="tabcontent">
+                <!--#include sp-action-button.html -->
+            </div>
 
-                <div id="sp-link" class="tabcontent">
-                    <!--#include sp-link.html -->
-                </div>
+            <div id="sp-action-group" class="tabcontent">
+                <!--#include sp-action-group.html -->
+            </div>
 
-                <div id="sp-field-label" class="tabcontent">
-                    <!--#include sp-field-label.html -->
-                </div>
+            <div id="sp-link" class="tabcontent">
+                <!--#include sp-link.html -->
+            </div>
 
-                <div id="sp-checkbox" class="tabcontent">
-                    <!--#include sp-checkbox.html -->
-                </div>
+            <div id="sp-field-label" class="tabcontent">
+                <!--#include sp-field-label.html -->
+            </div>
 
-                <div id="sp-card" class="tabcontent">
-                    <!--#include sp-card.html -->
-                </div>
+            <div id="sp-checkbox" class="tabcontent">
+                <!--#include sp-checkbox.html -->
+            </div>
 
-                <div id="sp-action-bar" class="tabcontent">
-                    <!--#include sp-action-bar.html -->
-                </div>
+            <div id="sp-card" class="tabcontent">
+                <!--#include sp-card.html -->
+            </div>
 
-                <div id="sp-popover" class="tabcontent">
-                    <!--#include sp-popover.html -->
-                </div>
+            <div id="sp-action-bar" class="tabcontent">
+                <!--#include sp-action-bar.html -->
+            </div>
 
-                <div id="sp-tooltip" class="tabcontent">
-                    <!--#include sp-tooltip.html -->
-                </div>
+            <div id="sp-popover" class="tabcontent">
+                <!--#include sp-popover.html -->
+            </div>
 
-                <div id="sp-picker-button" class="tabcontent">
-                    <!--#include sp-picker-button.html -->
-                </div>
+            <div id="sp-tooltip" class="tabcontent">
+                <!--#include sp-tooltip.html -->
+            </div>
 
-                <div id="sp-menu" class="tabcontent">
-                    <!--#include sp-menu.html -->
-                </div>
+            <div id="sp-picker-button" class="tabcontent">
+                <!--#include sp-picker-button.html -->
+            </div>
 
-                <div id="sp-menu-divider" class="tabcontent">
-                    <!--#include sp-menu-divider.html -->
-                </div>
+            <div id="sp-menu" class="tabcontent">
+                <!--#include sp-menu.html -->
+            </div>
 
-                <div id="sp-menu-item" class="tabcontent">
-                    <!--#include sp-menu-item.html -->
-                </div>
+            <div id="sp-menu-divider" class="tabcontent">
+                <!--#include sp-menu-divider.html -->
+            </div>
 
-                <div id="sp-menu-group" class="tabcontent">
-                    <!--#include sp-menu-group.html -->
-                </div>
+            <div id="sp-menu-item" class="tabcontent">
+                <!--#include sp-menu-item.html -->
+            </div>
 
-                <div id="sp-table" class="tabcontent">
-                    <!--#include sp-table.html -->
-                </div>
+            <div id="sp-menu-group" class="tabcontent">
+                <!--#include sp-menu-group.html -->
+            </div>
 
-                <div id="sp-textfield" class="tabcontent">
-                    <!--#include sp-textfield.html -->
-                </div>
+            <div id="sp-table" class="tabcontent">
+                <!--#include sp-table.html -->
+            </div>
 
-                <div id="sp-help-text" class="tabcontent">
-                    <!--#include sp-help-text.html -->
-                </div>
+            <div id="sp-textfield" class="tabcontent">
+                <!--#include sp-textfield.html -->
+            </div>
 
-                <div id="sp-button-group" class="tabcontent">
-                    <!--#include sp-button-group.html -->
-                </div>
+            <div id="sp-help-text" class="tabcontent">
+                <!--#include sp-help-text.html -->
+            </div>
 
-                <div id="sp-dialog" class="tabcontent">
-                    <!--#include sp-dialog.html -->
-                </div>
+            <div id="sp-button-group" class="tabcontent">
+                <!--#include sp-button-group.html -->
+            </div>
 
-                <div id="sp-toast" class="tabcontent">
-                    <!--#include sp-toast.html -->
-                </div>
+            <div id="sp-dialog" class="tabcontent">
+                <!--#include sp-dialog.html -->
+            </div>
 
-                <div id="sp-textarea" class="tabcontent">
-                    <!--#include sp-textarea.html -->
-                </div>
+            <div id="sp-toast" class="tabcontent">
+                <!--#include sp-toast.html -->
+            </div>
 
-                <div id="sp-switch" class="tabcontent">
-                    <!--#include sp-switch.html -->
-                </div>
+            <div id="sp-textarea" class="tabcontent">
+                <!--#include sp-textarea.html -->
+            </div>
 
-                <div id="sp-sidenav" class="tabcontent">
-                    <!--#include sp-sidenav.html -->
-                </div>
+            <div id="sp-switch" class="tabcontent">
+                <!--#include sp-switch.html -->
+            </div>
 
-                <div id="sp-radio" class="tabcontent">
-                    <!--#include sp-radio.html -->
-                </div>
+            <div id="sp-sidenav" class="tabcontent">
+                <!--#include sp-sidenav.html -->
+            </div>
 
-                <div id="sp-radio-group" class="tabcontent">
-                    <!--#include sp-radio-group.html -->
-                </div>
+            <div id="sp-radio" class="tabcontent">
+                <!--#include sp-radio.html -->
+            </div>
 
-                <div id="sp-tags" class="tabcontent">
-                    <!--#include sp-tags.html -->
-                </div>
+            <div id="sp-radio-group" class="tabcontent">
+                <!--#include sp-radio-group.html -->
+            </div>
 
-                <div id="sp-field-group" class="tabcontent">
-                    <!--#include sp-field-group.html -->
-                </div>
+            <div id="sp-tags" class="tabcontent">
+                <!--#include sp-tags.html -->
+            </div>
 
-                <div id="sp-search" class="tabcontent">
-                    <!--#include sp-search.html -->
-                </div>
+            <div id="sp-field-group" class="tabcontent">
+                <!--#include sp-field-group.html -->
+            </div>
 
-                <div id="sp-number-field" class="tabcontent">
-                    <!--#include sp-number-field.html -->
-                </div>
+            <div id="sp-search" class="tabcontent">
+                <!--#include sp-search.html -->
+            </div>
 
-                <div id="sp-asset" class="tabcontent">
-                    <!--#include sp-asset.html -->
-                </div>
+            <div id="sp-number-field" class="tabcontent">
+                <!--#include sp-number-field.html -->
+            </div>
 
-                <div id="sp-quick-actions" class="tabcontent">
-                    <!--#include sp-quick-actions.html -->
-                </div>
+            <div id="sp-asset" class="tabcontent">
+                <!--#include sp-asset.html -->
+            </div>
 
-                <div id="sp-meter" class="tabcontent">
-                    <!--#include sp-meter.html -->
-                </div>
+            <div id="sp-quick-actions" class="tabcontent">
+                <!--#include sp-quick-actions.html -->
+            </div>
 
-                <div id="sp-swatch" class="tabcontent">
-                    <!--#include sp-swatch.html -->
-                </div>
+            <div id="sp-meter" class="tabcontent">
+                <!--#include sp-meter.html -->
+            </div>
+
+            <div id="sp-swatch" class="tabcontent">
+                <!--#include sp-swatch.html -->
             </div>
         </sp-theme>
     </body>
