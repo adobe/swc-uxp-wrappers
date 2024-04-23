@@ -59,19 +59,10 @@ governing permissions and limitations under the License.
 }
 
 /* workaround for https://jira.corp.adobe.com/browse/UXP-22441, adding more specificity to the style */
-:host([invalid][invalid]) #box:before,
-:host([invalid][invalid]) #input:checked + #box:before {
-    border-color: var(
-        --highcontrast-checkbox-color-default,
-        var(
-            --mod-checkbox-invalid-color-default,
-            var(--spectrum-checkbox-invalid-color-default)
-        )
-    );
-}
-
-:host([invalid][invalid][indeterminate]) #box:before,
-:host([invalid][invalid][indeterminate]) #input:checked + #box:before {
+:host([invalid]) #box:before,
+:host([invalid][indeterminate]) #box:before,
+:host([invalid]) #input:checked + #box:before,
+:host([invalid][indeterminate]) #input:checked + #box:before {
     border-color: var(
         --highcontrast-checkbox-color-default,
         var(
