@@ -124,4 +124,5 @@ import './extended_swc_samples/my-asset.js';
 import './extended_swc_samples/my-quick-actions.js';
 import './extended_swc_samples/my-meter.js';
 import './extended_swc_samples/my-swatch.js';
+import './extended_swc_samples/my-overlay.js';
 

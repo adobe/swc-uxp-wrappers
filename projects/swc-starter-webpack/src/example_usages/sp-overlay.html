@@ -28,22 +28,9 @@
                         <span>Offset: </span>
                         <input id="offsetvalue" type="text" style="width: 75px" />
                     </div>
-                    <div style="margin: 0px;">
-                        <div style="margin: 0px;">
-
-                            <div id="overlay-trigger">
-                                <overlay-trigger id="over-trigger" placement="top">
-                                    <sp-button slot="trigger">Button popover</sp-button>
-                                    <sp-popover slot="click-content" direction="top" tip>
-                                        <sp-dialog style="max-width: 300px;">
-                                            <h2 slot="heading">Clicking opens this popover...</h2>
-                                            <p>But, it really could be anything. Really.</p>
-                                        </sp-dialog>
-                                    </sp-popover>
-                                </overlay-trigger>
-                            </div>
-
-                            <div>
+                    <div>
+                        <div>
+                            <div class="demo-example">
                                 <sp-button style="margin: 10px;" id="trigger">Click here</sp-button>
                                 <sp-overlay class="overlay" trigger="trigger@click" offset="2" placement="top">
                                     <sp-popover>
@@ -64,7 +51,7 @@
                                 </sp-overlay>
                             </div>
 
-                            <div>
+                            <div class="demo-example">
                                 <sp-button style="margin: 10px;" id="trigger-2">Hover here</sp-button>
                                 <sp-overlay class="overlay" trigger="trigger-2@hover" offset="2" placement="top">
                                     <sp-popover>
@@ -91,7 +78,7 @@
                                 </sp-overlay>
                             </div>
 
-                            <div>
+                            <div class="demo-example">
                                 <sp-button style="margin: 10px;" id="trigger-3">Hover or Click here</sp-button>
                                 <sp-overlay class="overlay" trigger="trigger-3@hover" offset="2" placement="top">
                                     <sp-popover>
@@ -111,7 +98,7 @@
                                 </sp-overlay>
                             </div>
 
-                            <div id="longpress">
+                            <div id="longpress" class="demo-example">
                                 <sp-button style="margin: 10px;" id="trigger-long">Long Press here</sp-button>
                                 <sp-overlay class="overlay" trigger="trigger-long@longpress" offset="2" placement="top">
                                     <sp-popover>
@@ -139,7 +126,7 @@
                                 </sp-overlay>
                             </div>
 
-                            <div id="overlay-demo">
+                            <div id="overlay-demo" class="demo-example">
                                 <sp-action-group vertical quiet emphasized selects="single">
                                     <sp-action-button id="trigger-1ab" hold-affordance>
                                         <sp-icon-abc slot="icon"></sp-icon-abc>
@@ -205,6 +192,49 @@
                                         </sp-action-group>
                                     </sp-popover>
                                 </sp-overlay>
+                            </div>
+
+                            <div id="overlay-trigger" class="demo-example">
+                                <overlay-trigger id="over-trigger" placement="top">
+                                    <sp-button slot="trigger">Button popover</sp-button>
+                                    <sp-popover slot="click-content" direction="top" tip>
+                                        <sp-dialog style="max-width: 300px;">
+                                            <h2 slot="heading">Clicking opens this popover...</h2>
+                                            <p>But, it really could be anything. Really.</p>
+                                        </sp-dialog>
+                                    </sp-popover>
+                                </overlay-trigger>
+                            </div>
+
+                            <div class="demo-example">
+                                <sp-button id="mytrigger">Click here</sp-button>
+                                <my-overlay class="overlay" trigger="mytrigger@click" offset="2" placement="top">
+                                    <sp-popover>
+                                        <sp-dialog style="max-width: 300px;">
+                                            <h2 slot="heading">Clicking opens this popover...</h2>
+                                            <p>But, it really could be anything. Really.</p>
+                                        </sp-dialog>
+                                    </sp-popover>
+                                </my-overlay>
+                                <sp-button id="mytrigger-2">Hover here</sp-button>
+                                <my-overlay class="overlay" trigger="mytrigger-2@hover" offset="2" placement="top">
+                                    <sp-popover>
+                                        <sp-dialog style="max-width: 300px;">
+                                            <h2 slot="heading">Hovering opens this popover...</h2>
+                                            <p>But, it really could be anything. Really.</p>
+                                        </sp-dialog>
+                                    </sp-popover>
+                                </my-overlay>
+                                <sp-button id="mytrigger-tooltip">Hover here</sp-button>
+                                <my-overlay class="overlay" type="hint" trigger="mytrigger-tooltip@hover"
+                                    placement="bottom" dir="ltr">
+                                    <sp-tooltip variant="" placement="bottom" dir="ltr">
+                                        tooltip with long text
+                                    </sp-tooltip>
+                                </my-overlay>
+
+
+
                             </div>
                         </div>
                     </div>

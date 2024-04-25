@@ -10,6 +10,9 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-export * from './Overlay.js';
-export * from './OverlayTrigger.js';
-export * from './VirtualTrigger.js';
+import { VirtualTrigger } from '@swc-uxp-internal/overlay';
+
+class UxpVirtualTrigger extends VirtualTrigger {
+}
+
+export { UxpVirtualTrigger as VirtualTrigger };
