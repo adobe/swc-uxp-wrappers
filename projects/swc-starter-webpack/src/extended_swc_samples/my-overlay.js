@@ -17,9 +17,9 @@ class MyOverlay extends Overlay {
     static styles = [
         Overlay.styles,
         css`
-            sp-icon-chevron200 {
-                transform: rotate(45deg);
-            }
+        :host([class='my-overlay']) {
+            background-color: blue;
+        }
         `,
     ];
 }
