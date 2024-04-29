@@ -14,4 +14,3 @@ import { OverlayTrigger } from './src/OverlayTrigger.js';
 import './overlay-trigger.js';
 import './sp-overlay.js';
 export { OverlayTrigger };
-

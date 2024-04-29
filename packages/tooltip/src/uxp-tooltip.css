@@ -19,19 +19,27 @@ governing permissions and limitations under the License.
 }
 
 :host([placement*='top']) #tooltip #tip {
-    margin-top: calc(var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height));
+    margin-top: calc(
+        var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height)
+    );
 }
 
 :host([placement*='left']) #tooltip #tip {
-    margin-left: calc(var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height));
+    margin-left: calc(
+        var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height)
+    );
 }
 
 :host([placement*='right']) #tooltip #tip {
-    left: calc(var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height));
+    left: calc(
+        var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height)
+    );
 }
 
 :host([placement*='bottom']) #tooltip #tip {
-    margin-bottom: calc(var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height));
+    margin-bottom: calc(
+        var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height)
+    );
 }
 
 :host([placement*='left']) #tooltip #tip,
@@ -39,8 +47,12 @@ governing permissions and limitations under the License.
 :host([placement*='left']) #tooltip #tip[style],
 :host([placement*='right']) #tooltip #tip[style] {
     transform: rotate(45deg) !important;
-    margin-top: calc(var(--spectrum-tooltip-neutral-tip-width,
-                var(--spectrum-global-dimension-size-100)) * var(--uxp-swc-tooltip-factor) * 0.5);
+    margin-top: calc(
+        var(
+                --spectrum-tooltip-neutral-tip-width,
+                var(--spectrum-global-dimension-size-100)
+            ) * var(--uxp-swc-tooltip-factor) * 0.5
+    );
 }
 
 :host([placement*='top']) #tooltip #tip,
@@ -48,67 +60,110 @@ governing permissions and limitations under the License.
 :host([placement*='top']) #tooltip #tip[style],
 :host([placement*='bottom']) #tooltip #tip[style] {
     transform: rotate(45deg) !important;
-    margin-left: calc(var(--spectrum-tooltip-neutral-tip-width,
-                var(--spectrum-global-dimension-size-100)) * var(--uxp-swc-tooltip-factor) * 0.5);
+    margin-left: calc(
+        var(
+                --spectrum-tooltip-neutral-tip-width,
+                var(--spectrum-global-dimension-size-100)
+            ) * var(--uxp-swc-tooltip-factor) * 0.5
+    );
 }
 
 #tooltip {
     height: auto;
-    width : auto;
-    max-width: var(--mod-tooltip-max-inline-size,
-            var(--spectrum-tooltip-max-inline-size));
+    width: auto;
+    max-width: var(
+        --mod-tooltip-max-inline-size,
+        var(--spectrum-tooltip-max-inline-size)
+    );
     min-height: var(--mod-tooltip-height, var(--spectrum-tooltip-height));
-    padding-left: var(--mod-tooltip-spacing-inline,
-            var(--spectrum-tooltip-spacing-inline));
-    padding-right: var(--mod-tooltip-spacing-inline,
-            var(--spectrum-tooltip-spacing-inline));
+    padding-left: var(
+        --mod-tooltip-spacing-inline,
+        var(--spectrum-tooltip-spacing-inline)
+    );
+    padding-right: var(
+        --mod-tooltip-spacing-inline,
+        var(--spectrum-tooltip-spacing-inline)
+    );
 }
 
 ::slotted([slot='icon']) {
     height: var(--mod-tooltip-icon-height, var(--spectrum-tooltip-icon-height));
-    width : var(--mod-tooltip-icon-width, var(--spectrum-tooltip-icon-width));
-    margin-top: var(--mod-tooltip-icon-spacing-block-start,
-            var(--spectrum-tooltip-icon-spacing-block-start));
-    margin-right: var(--mod-tooltip-icon-spacing-inline-end,
-            var(--spectrum-tooltip-icon-spacing-inline-end));
-    margin-left: calc(var(--mod-tooltip-icon-spacing-inline-start,
-                var(--spectrum-tooltip-icon-spacing-inline-start)) - var(--mod-tooltip-spacing-inline,
-                var(--spectrum-tooltip-spacing-inline)));
+    width: var(--mod-tooltip-icon-width, var(--spectrum-tooltip-icon-width));
+    margin-top: var(
+        --mod-tooltip-icon-spacing-block-start,
+        var(--spectrum-tooltip-icon-spacing-block-start)
+    );
+    margin-right: var(
+        --mod-tooltip-icon-spacing-inline-end,
+        var(--spectrum-tooltip-icon-spacing-inline-end)
+    );
+    margin-left: calc(
+        var(
+                --mod-tooltip-icon-spacing-inline-start,
+                var(--spectrum-tooltip-icon-spacing-inline-start)
+            ) -
+            var(
+                --mod-tooltip-spacing-inline,
+                var(--spectrum-tooltip-spacing-inline)
+            )
+    );
 }
 
 #label {
-    line-height: var(--mod-tooltip-line-height,
-            var(--spectrum-tooltip-line-height));
-    margin-bottom: var(--mod-tooltip-spacing-block-end,
-            var(--spectrum-tooltip-spacing-block-end));
-    margin-top: var(--mod-tooltip-spacing-block-start,
-            var(--spectrum-tooltip-spacing-block-start));
+    line-height: var(
+        --mod-tooltip-line-height,
+        var(--spectrum-tooltip-line-height)
+    );
+    margin-bottom: var(
+        --mod-tooltip-spacing-block-end,
+        var(--spectrum-tooltip-spacing-block-end)
+    );
+    margin-top: var(
+        --mod-tooltip-spacing-block-start,
+        var(--spectrum-tooltip-spacing-block-start)
+    );
 }
 
 #tip {
     clip-path: none !important;
-    height   : calc(var(--spectrum-tooltip-tip-inline-size) * var(--uxp-swc-tooltip-factor) * (-1)) !important;
-    width    : calc(var(--spectrum-tooltip-tip-inline-size) * var(--uxp-swc-tooltip-factor) * (-1)) !important;
+    height: calc(
+        var(--spectrum-tooltip-tip-inline-size) * var(--uxp-swc-tooltip-factor) *
+            (-1)
+    ) !important;
+    width: calc(
+        var(--spectrum-tooltip-tip-inline-size) * var(--uxp-swc-tooltip-factor) *
+            (-1)
+    ) !important;
 }
 
 :host([placement*='top']) #tooltip #tip[style],
 :host([placement*='bottom']) #tooltip #tip[style] {
-    left: calc((var(--spectrum-tooltip-tip-inline-size) * var(--uxp-swc-tooltip-factor) * (-1))/2) !important;
+    left: calc(
+        (
+                var(--spectrum-tooltip-tip-inline-size) *
+                    var(--uxp-swc-tooltip-factor) * (-1)
+            ) / 2
+    ) !important;
 }
 
 :host([placement*='left']) #tooltip #tip[style],
 :host([placement*='right']) #tooltip #tip[style] {
-    top: calc((var(--spectrum-tooltip-tip-inline-size) * var(--uxp-swc-tooltip-factor) * (-1))/2) !important;
+    top: calc(
+        (
+                var(--spectrum-tooltip-tip-inline-size) *
+                    var(--uxp-swc-tooltip-factor) * (-1)
+            ) / 2
+    ) !important;
 }
 
 :host([placement='top']) #tooltip #tip[style],
 :host([placement='bottom']) #tooltip #tip[style] {
-    left     : 50% !important;
+    left: 50% !important;
     translate: 0px !important;
 }
 
 :host([placement='left']) #tooltip #tip[style],
 :host([placement='right']) #tooltip #tip[style] {
-    top      : 50% !important;
+    top: 50% !important;
     translate: 0px !important;
 }

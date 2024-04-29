@@ -70,8 +70,7 @@ function attachEvents(tabName) {
         eval(eventListener1);
     }
 
-    if (tabName === "sp-overlay") {
-
+    if (tabName === 'sp-overlay') {
         const placementListener = `
             document.getElementById("placementselection").addEventListener("change", () => {
                 document.querySelectorAll(".overlay").forEach((overlay) => {

@@ -17,9 +17,9 @@ class MyOverlay extends Overlay {
     static styles = [
         Overlay.styles,
         css`
-        :host([class='my-overlay']) {
-            background-color: blue;
-        }
+            :host([class='my-overlay']) {
+                background-color: blue;
+            }
         `,
     ];
 }

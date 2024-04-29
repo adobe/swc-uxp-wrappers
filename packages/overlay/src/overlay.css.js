@@ -15,6 +15,9 @@ import swcOverlayStyles from '@swc-uxp-internal/overlay/src/overlay.css.js';
 
 import uxpOverlayStyles from './uxp-overlay.css.js';
 
-const combinedOverlayStyles = unsafeCSS(swcOverlayStyles.toString(), uxpOverlayStyles.toString());
- 
+const combinedOverlayStyles = unsafeCSS(
+    swcOverlayStyles.toString(),
+    uxpOverlayStyles.toString()
+);
+
 export default combinedOverlayStyles;

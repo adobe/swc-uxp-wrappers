@@ -11,5 +11,3 @@ governing permissions and limitations under the License.
 */
 
 export * from '@swc-uxp-internal/overlay/src/loader.js';
-
-
