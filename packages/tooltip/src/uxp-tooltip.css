@@ -43,8 +43,10 @@ governing permissions and limitations under the License.
 }
 
 :host([placement*='left']) #tooltip #tip,
-:host([placement*='right']) #tooltip #tip {
-    transform: rotate(45deg);
+:host([placement*='right']) #tooltip #tip,
+:host([placement*='left']) #tooltip #tip[style],
+:host([placement*='right']) #tooltip #tip[style] {
+    transform: rotate(45deg) !important;
     margin-top: calc(
         var(
                 --spectrum-tooltip-neutral-tip-width,
@@ -54,8 +56,10 @@ governing permissions and limitations under the License.
 }
 
 :host([placement*='top']) #tooltip #tip,
-:host([placement*='bottom']) #tooltip #tip {
-    transform: rotate(45deg);
+:host([placement*='bottom']) #tooltip #tip,
+:host([placement*='top']) #tooltip #tip[style],
+:host([placement*='bottom']) #tooltip #tip[style] {
+    transform: rotate(45deg) !important;
     margin-left: calc(
         var(
                 --spectrum-tooltip-neutral-tip-width,
@@ -121,6 +125,7 @@ governing permissions and limitations under the License.
 }
 
 #tip {
+    clip-path: none !important;
     height: calc(
         var(--spectrum-tooltip-tip-inline-size) * var(--uxp-swc-tooltip-factor) *
             (-1)
@@ -129,4 +134,36 @@ governing permissions and limitations under the License.
         var(--spectrum-tooltip-tip-inline-size) * var(--uxp-swc-tooltip-factor) *
             (-1)
     ) !important;
+}
+
+:host([placement*='top']) #tooltip #tip[style],
+:host([placement*='bottom']) #tooltip #tip[style] {
+    left: calc(
+        (
+                var(--spectrum-tooltip-tip-inline-size) *
+                    var(--uxp-swc-tooltip-factor) * (-1)
+            ) / 2
+    ) !important;
+}
+
+:host([placement*='left']) #tooltip #tip[style],
+:host([placement*='right']) #tooltip #tip[style] {
+    top: calc(
+        (
+                var(--spectrum-tooltip-tip-inline-size) *
+                    var(--uxp-swc-tooltip-factor) * (-1)
+            ) / 2
+    ) !important;
+}
+
+:host([placement='top']) #tooltip #tip[style],
+:host([placement='bottom']) #tooltip #tip[style] {
+    left: 50% !important;
+    translate: 0px !important;
+}
+
+:host([placement='left']) #tooltip #tip[style],
+:host([placement='right']) #tooltip #tip[style] {
+    top: 50% !important;
+    translate: 0px !important;
 }
