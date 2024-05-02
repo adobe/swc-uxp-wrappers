@@ -2628,7 +2628,7 @@
     "@spectrum-web-components/shared" "^0.15.7"
     "@spectrum-web-components/theme" "^0.15.0"
 
-"@spectrum-web-components/overlay@^0.37.0":
+"@spectrum-web-components/overlay@^0.37.0", "@swc-uxp-internal/overlay@npm:@spectrum-web-components/overlay@0.37.0":
   version "0.37.0"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/overlay/-/overlay-0.37.0.tgz#6173da0c12b407c572acba15a0024d828e7dea07"
   integrity sha512-kMEXAWdHJ/RGLbR4GHAEvgb03uaKNJSakVYgqoxQ15Z8PTq669FZQZMvYGr5VftRaXpejm5n1GK+KxuK6Cy+uw==

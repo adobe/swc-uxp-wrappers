@@ -49,6 +49,7 @@ export const aliases = {
     '@spectrum-web-components/meter': '@swc-uxp-wrappers/meter',
     '@spectrum-web-components/sidenav': '@swc-uxp-wrappers/sidenav',
     '@spectrum-web-components/swatch': '@swc-uxp-wrappers/swatch',
+    '@spectrum-web-components/overlay': '@swc-uxp-wrappers/overlay',
     '../sp-menu.dev.js': '@swc-uxp-wrappers/menu/sp-menu.js',
     '../sp-menu.js': '@swc-uxp-wrappers/menu/sp-menu.js',
 };
