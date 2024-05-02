@@ -69,6 +69,27 @@ function attachEvents(tabName) {
         `;
         eval(eventListener1);
     }
+
+    if (tabName === 'sp-overlay') {
+        const placementListener = `
+            document.getElementById("placementselection").addEventListener("change", () => {
+                document.querySelectorAll(".overlay").forEach((overlay) => {
+                    overlay.placement = document.getElementById("placementselection").value;
+                  });
+            });
+            `;
+        eval(placementListener);
+
+        const offsetListener = `
+            document.getElementById("offsetvalue").addEventListener("input", () => {
+                document.querySelectorAll(".overlay").forEach((overlay) => {
+                    overlay.offset = document.getElementById("offsetvalue").value;
+                });
+            });
+            `;
+
+        eval(offsetListener);
+    }
 }
 
 function handleThemeColor(selectObject) {
