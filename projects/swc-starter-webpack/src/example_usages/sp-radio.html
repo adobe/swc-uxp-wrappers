@@ -13,56 +13,64 @@ governing permissions and limitations under the License.
 <h3>sp-radio</h3>
 
 <div id="content">
-    <div id="left">
-        <div id="subtitle">sp-radio</div>
-        <sp-field-label for="small">Small Size</sp-field-label>
-        <sp-radio-group
-            label="Small"
-            selected="first"
-            name="example"
-            id="small"
-        >
-            <sp-radio value="first" size="s">Option 1</sp-radio>
-            <sp-radio value="second" size="s">Option 2</sp-radio>
-            <sp-radio value="third" size="s">Option 3</sp-radio>
-            <sp-radio value="fourth" size="s">Option 4</sp-radio>
-        </sp-radio-group>
-        <sp-field-label for="extra-large">Extra Large Size</sp-field-label>
-        <sp-radio-group
-            label="Extra large"
-            selected="first"
-            name="example"
-            id="extra-large"
-        >
-            <sp-radio value="first" size="xl">Option 1</sp-radio>
-            <sp-radio value="second" size="xl">Option 2</sp-radio>
-            <sp-radio value="third" size="xl">Option 3</sp-radio>
-            <sp-radio value="fourth" size="xl">Option 4</sp-radio>
-        </sp-radio-group>
-        <div style="display: flex; flex-direction: column">
-            <h4 class="spectrum-Heading--subtitle1">Default</h4>
-            <sp-radio value="kittens">Kittens</sp-radio>
-            <sp-radio value="puppies" checked>Puppies</sp-radio>
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-radio</div>
+            <sp-field-label for="small">Small Size</sp-field-label>
+            <sp-radio-group
+                label="Small"
+                selected="first"
+                name="example"
+                id="small"
+            >
+                <sp-radio value="first" size="s">Option 1</sp-radio>
+                <sp-radio value="second" size="s">Option 2</sp-radio>
+                <sp-radio value="third" size="s">Option 3</sp-radio>
+                <sp-radio value="fourth" size="s">Option 4</sp-radio>
+            </sp-radio-group>
+            <sp-field-label for="extra-large">Extra Large Size</sp-field-label>
+            <sp-radio-group
+                label="Extra large"
+                selected="first"
+                name="example"
+                id="extra-large"
+            >
+                <sp-radio value="first" size="xl">Option 1</sp-radio>
+                <sp-radio value="second" size="xl">Option 2</sp-radio>
+                <sp-radio value="third" size="xl">Option 3</sp-radio>
+                <sp-radio value="fourth" size="xl">Option 4</sp-radio>
+            </sp-radio-group>
+            <div style="display: flex; flex-direction: column">
+                <h4 class="spectrum-Heading--subtitle1">Default</h4>
+                <sp-radio value="kittens">Kittens</sp-radio>
+                <sp-radio value="puppies" checked>Puppies</sp-radio>
+            </div>
+            <div style="display: flex; flex-direction: column">
+                <h4 class="spectrum-Heading--subtitle1">Invalid</h4>
+                <sp-radio invalid value="kittens">Kittens</sp-radio>
+                <sp-radio invalid value="puppies" checked>Puppies</sp-radio>
+            </div>
+            <div style="display: flex; flex-direction: column">
+                <h4 class="spectrum-Heading--subtitle1">Disabled</h4>
+                <sp-radio disabled value="kittens">Kittens</sp-radio>
+                <sp-radio disabled value="puppies" checked>Puppies</sp-radio>
+            </div>
+            <div style="display: flex; flex-direction: column">
+                <h4 class="spectrum-Heading--subtitle1">Emphasized</h4>
+                <sp-radio emphasized value="kittens">Kittens</sp-radio>
+                <sp-radio emphasized value="puppies" checked>Puppies</sp-radio>
+            </div>
         </div>
-        <div style="display: flex; flex-direction: column">
-            <h4 class="spectrum-Heading--subtitle1">Invalid</h4>
-            <sp-radio invalid value="kittens">Kittens</sp-radio>
-            <sp-radio invalid value="puppies" checked>Puppies</sp-radio>
-        </div>
-        <div style="display: flex; flex-direction: column">
-            <h4 class="spectrum-Heading--subtitle1">Disabled</h4>
-            <sp-radio disabled value="kittens">Kittens</sp-radio>
-            <sp-radio disabled value="puppies" checked>Puppies</sp-radio>
-        </div>
-        <div style="display: flex; flex-direction: column">
-            <h4 class="spectrum-Heading--subtitle1">Emphasized</h4>
-            <sp-radio emphasized value="kittens">Kittens</sp-radio>
-            <sp-radio emphasized value="puppies" checked>Puppies</sp-radio>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-radio</div>
+            <my-radio value="radio">My Radio Button</my-radio>
         </div>
     </div>
 
-    <div id="right">
-        <div id="subtitle">my-radio</div>
-        <my-radio value="radio">My Radio Button</my-radio>
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
     </div>
 </div>
