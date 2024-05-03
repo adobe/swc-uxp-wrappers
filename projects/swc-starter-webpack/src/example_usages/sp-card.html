@@ -13,228 +13,84 @@ governing permissions and limitations under the License.
 <h3>sp-card</h3>
 
 <div id="content">
-    <div id="left">
-        <div id="subtitle">sp-card</div>
-        <div id="variantLabel">slot="cover-photo"</div>
-        <div class="demo-example">
-            <sp-card heading="Card Heading" subheading="JPG Photo">
-                <img
-                    slot="cover-photo"
-                    src="https://picsum.photos/200/300"
-                    alt="Demo Image"
-                />
-                <div slot="footer">Footer</div>
-            </sp-card>
-        </div>
-        <div id="variantLabel">slot="preview"</div>
-        <div class="demo-example">
-            <sp-card heading="Card Title" subheading="JPG">
-                <img
-                    slot="preview"
-                    src="https://picsum.photos/200/300"
-                    alt="Demo Image"
-                />
-                <div slot="footer">Footer</div>
-            </sp-card>
-        </div>
-
-        <div id="variantLabel">heading</div>
-        <div class="demo-example">
-            <sp-card
-                subheading="JPG Photo"
-                style="--spectrum-card-body-header-height: auto"
-            >
-                <h1 slot="heading">Card Heading</h1>
-                <img
-                    alt=""
-                    slot="cover-photo"
-                    src="https://picsum.photos/200/300"
-                />
-                <div slot="footer">Footer</div>
-            </sp-card>
-        </div>
-
-        <div id="variantLabel">linking</div>
-        <div class="demo-example">
-            <sp-card
-                heading="Card Title"
-                subheading="JPG"
-                href="https://opensource.adobe.com/spectrum-web-components"
-                target="_blank"
-            >
-                <img
-                    slot="cover-photo"
-                    src="https://picsum.photos/200/300"
-                    alt="Demo Image"
-                />
-            </sp-card>
-        </div>
-
-        <div id="variantLabel">variant</div>
-        <div class="demo-example">
-            <sp-field-label for="xs">Normal</sp-field-label>
-            <sp-card heading="Card Heading">
-                <img
-                    alt=""
-                    slot="cover-photo"
-                    src="https://picsum.photos/200/300"
-                />
-                <span slot="subheading">JPG photo</span>
-                <div slot="footer">Footer</div>
-            </sp-card>
-        </div>
-        <div class="demo-example">
-            <sp-field-label for="xs">Actions</sp-field-label>
-            <sp-card heading="Card Heading" subheading="JPG Photo">
-                <img
-                    slot="cover-photo"
-                    src="https://picsum.photos/200/300"
-                    alt="Demo Image"
-                />
-                <div slot="footer">Footer</div>
-                <sp-action-menu
-                    label="More Actions"
-                    slot="actions"
-                    placement="bottom-end"
-                    quiet
-                >
-                    <sp-menu-item>Deselect</sp-menu-item>
-                    <sp-menu-item>Select Inverse</sp-menu-item>
-                    <sp-menu-item>Feather...</sp-menu-item>
-                    <sp-menu-item>Select and Mask...</sp-menu-item>
-                    <sp-menu-divider></sp-menu-divider>
-                    <sp-menu-item>Save Selection</sp-menu-item>
-                    <sp-menu-item disabled>Make Work Path</sp-menu-item>
-                </sp-action-menu>
-            </sp-card>
-        </div>
-        <div class="demo-example">
-            <sp-field-label for="xs">No Preview Image</sp-field-label>
-            <sp-card heading="Card Title" subheading="No Preview Image">
-                <div slot="footer">Footer</div>
-            </sp-card>
-        </div>
-        <div class="demo-example">
-            <sp-field-label for="xs">Quiet</sp-field-label>
-            <div style="width: 208px; height: 264px">
-                <sp-card
-                    variant="quiet"
-                    heading="Card Heading"
-                    subheading="JPG Photo"
-                >
-                    <img
-                        alt=""
-                        slot="preview"
-                        src="https://picsum.photos/200/300"
-                    />
-                    <div slot="description">10/15/18</div>
-                    <div slot="footer">Footer</div>
-                </sp-card>
-            </div>
-            <sp-field-label for="xs">Quiet + Action</sp-field-label>
-            <div style="width: 208px; height: 264px">
-                <sp-card
-                    variant="quiet"
-                    heading="Card Heading"
-                    subheading="JPG Photo"
-                >
-                    <img
-                        alt=""
-                        slot="preview"
-                        src="https://picsum.photos/200/300"
-                    />
-                    <div slot="description">10/15/18</div>
-                    <sp-action-menu
-                        label="More Actions"
-                        slot="actions"
-                        placement="bottom-end"
-                        quiet
-                    >
-                        <sp-menu-item>Deselect</sp-menu-item>
-                        <sp-menu-item>Select Inverse</sp-menu-item>
-                        <sp-menu-item>Feather...</sp-menu-item>
-                        <sp-menu-item>Select and Mask...</sp-menu-item>
-                        <sp-menu-divider></sp-menu-divider>
-                        <sp-menu-item>Save Selection</sp-menu-item>
-                        <sp-menu-item disabled>Make Work Path</sp-menu-item>
-                    </sp-action-menu>
-                </sp-card>
-            </div>
-        </div>
-
-        <div id="variantLabel">gallery</div>
-        <div class="demo-example">
-            <div style="width: 532px; max-width: 100%; height: 224px">
-                <sp-card
-                    variant="gallery"
-                    heading="Card Heading"
-                    subheading="JPG Photo"
-                >
-                    <img
-                        alt=""
-                        slot="preview"
-                        src="https://picsum.photos/532/192"
-                    />
-                    <div slot="description">10/15/18</div>
-                    <div slot="footer">Footer</div>
-                </sp-card>
-            </div>
-        </div>
-
-        <div id="variantLabel">size-s</div>
-        <div class="demo-example">
-            <sp-field-label for="xs">Default</sp-field-label>
-            <div style="width: 208px; height: 264px">
-                <sp-card size="s" heading="Card Heading" subheading="JPG Photo">
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-card</div>
+            <div id="variantLabel">slot="cover-photo"</div>
+            <div class="demo-example">
+                <sp-card heading="Card Heading" subheading="JPG Photo">
                     <img
                         slot="cover-photo"
+                        src="https://picsum.photos/200/300"
                         alt="Demo Image"
-                        src="https://picsum.photos/110"
                     />
                     <div slot="footer">Footer</div>
                 </sp-card>
             </div>
-            <sp-field-label for="xs">horizontal</sp-field-label>
-            <div style="color: var(--spectrum-neutral-content-color-default)">
-                <sp-card
-                    size="s"
-                    horizontal
-                    heading="Card Heading"
-                    subheading="JPG Photo"
-                >
-                    <sp-icon slot="preview" style="width: 36px; height: 36px">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 0 36 36"
-                            aria-hidden="true"
-                            role="img"
-                            fill="currentColor"
-                        >
-                            <path d="M20 2v10h10L20 2z" />
-                            <path
-                                d="M19 14a1 1 0 01-1-1V2H7a1 1 0 00-1 1v30a1 1 0 001 1h22a1 1 0 001-1V14zm7 15.5a.5.5 0 01-.5.5h-15a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5h15a.5.5 0 01.5.5zm0-4a.5.5 0 01-.5.5h-15a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5h15a.5.5 0 01.5.5zm0-4a.5.5 0 01-.5.5h-15a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5h15a.5.5 0 01.5.5z"
-                            />
-                        </svg>
-                    </sp-icon>
+            <div id="variantLabel">slot="preview"</div>
+            <div class="demo-example">
+                <sp-card heading="Card Title" subheading="JPG">
+                    <img
+                        slot="preview"
+                        src="https://picsum.photos/200/300"
+                        alt="Demo Image"
+                    />
+                    <div slot="footer">Footer</div>
                 </sp-card>
             </div>
-            <sp-field-label for="xs">Quiet</sp-field-label>
-            <div
-                style="
-                    color: var(--spectrum-neutral-content-color-default);
-                    width: 110px;
-                "
-            >
+
+            <div id="variantLabel">heading</div>
+            <div class="demo-example">
                 <sp-card
-                    size="s"
-                    heading="Card Heading"
                     subheading="JPG Photo"
-                    variant="quiet"
+                    style="--spectrum-card-body-header-height: auto"
+                >
+                    <h1 slot="heading">Card Heading</h1>
+                    <img
+                        alt=""
+                        slot="cover-photo"
+                        src="https://picsum.photos/200/300"
+                    />
+                    <div slot="footer">Footer</div>
+                </sp-card>
+            </div>
+
+            <div id="variantLabel">linking</div>
+            <div class="demo-example">
+                <sp-card
+                    heading="Card Title"
+                    subheading="JPG"
+                    href="https://opensource.adobe.com/spectrum-web-components"
+                    target="_blank"
                 >
                     <img
-                        src="https://picsum.photos/110"
+                        slot="cover-photo"
+                        src="https://picsum.photos/200/300"
                         alt="Demo Image"
-                        slot="preview"
+                    />
+                </sp-card>
+            </div>
+
+            <div id="variantLabel">variant</div>
+            <div class="demo-example">
+                <sp-field-label for="xs">Normal</sp-field-label>
+                <sp-card heading="Card Heading">
+                    <img
+                        alt=""
+                        slot="cover-photo"
+                        src="https://picsum.photos/200/300"
+                    />
+                    <span slot="subheading">JPG photo</span>
+                    <div slot="footer">Footer</div>
+                </sp-card>
+            </div>
+            <div class="demo-example">
+                <sp-field-label for="xs">Actions</sp-field-label>
+                <sp-card heading="Card Heading" subheading="JPG Photo">
+                    <img
+                        slot="cover-photo"
+                        src="https://picsum.photos/200/300"
+                        alt="Demo Image"
                     />
                     <div slot="footer">Footer</div>
                     <sp-action-menu
@@ -253,30 +109,195 @@ governing permissions and limitations under the License.
                     </sp-action-menu>
                 </sp-card>
             </div>
-        </div>
+            <div class="demo-example">
+                <sp-field-label for="xs">No Preview Image</sp-field-label>
+                <sp-card heading="Card Title" subheading="No Preview Image">
+                    <div slot="footer">Footer</div>
+                </sp-card>
+            </div>
+            <div class="demo-example">
+                <sp-field-label for="xs">Quiet</sp-field-label>
+                <div style="width: 208px; height: 264px">
+                    <sp-card
+                        variant="quiet"
+                        heading="Card Heading"
+                        subheading="JPG Photo"
+                    >
+                        <img
+                            alt=""
+                            slot="preview"
+                            src="https://picsum.photos/200/300"
+                        />
+                        <div slot="description">10/15/18</div>
+                        <div slot="footer">Footer</div>
+                    </sp-card>
+                </div>
+                <sp-field-label for="xs">Quiet + Action</sp-field-label>
+                <div style="width: 208px; height: 264px">
+                    <sp-card
+                        variant="quiet"
+                        heading="Card Heading"
+                        subheading="JPG Photo"
+                    >
+                        <img
+                            alt=""
+                            slot="preview"
+                            src="https://picsum.photos/200/300"
+                        />
+                        <div slot="description">10/15/18</div>
+                        <sp-action-menu
+                            label="More Actions"
+                            slot="actions"
+                            placement="bottom-end"
+                            quiet
+                        >
+                            <sp-menu-item>Deselect</sp-menu-item>
+                            <sp-menu-item>Select Inverse</sp-menu-item>
+                            <sp-menu-item>Feather...</sp-menu-item>
+                            <sp-menu-item>Select and Mask...</sp-menu-item>
+                            <sp-menu-divider></sp-menu-divider>
+                            <sp-menu-item>Save Selection</sp-menu-item>
+                            <sp-menu-item disabled>Make Work Path</sp-menu-item>
+                        </sp-action-menu>
+                    </sp-card>
+                </div>
+            </div>
 
-        <div id="variantLabel">toggles</div>
-        <div class="demo-example">
-            <sp-card heading="Card Heading" subheading="JPG Photo" toggles>
+            <div id="variantLabel">gallery</div>
+            <div class="demo-example">
+                <div style="width: 532px; max-width: 100%; height: 224px">
+                    <sp-card
+                        variant="gallery"
+                        heading="Card Heading"
+                        subheading="JPG Photo"
+                    >
+                        <img
+                            alt=""
+                            slot="preview"
+                            src="https://picsum.photos/532/192"
+                        />
+                        <div slot="description">10/15/18</div>
+                        <div slot="footer">Footer</div>
+                    </sp-card>
+                </div>
+            </div>
+
+            <div id="variantLabel">size-s</div>
+            <div class="demo-example">
+                <sp-field-label for="xs">Default</sp-field-label>
+                <div style="width: 208px; height: 264px">
+                    <sp-card
+                        size="s"
+                        heading="Card Heading"
+                        subheading="JPG Photo"
+                    >
+                        <img
+                            slot="cover-photo"
+                            alt="Demo Image"
+                            src="https://picsum.photos/110"
+                        />
+                        <div slot="footer">Footer</div>
+                    </sp-card>
+                </div>
+                <sp-field-label for="xs">horizontal</sp-field-label>
+                <div
+                    style="color: var(--spectrum-neutral-content-color-default)"
+                >
+                    <sp-card
+                        size="s"
+                        horizontal
+                        heading="Card Heading"
+                        subheading="JPG Photo"
+                    >
+                        <sp-icon
+                            slot="preview"
+                            style="width: 36px; height: 36px"
+                        >
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                viewBox="0 0 36 36"
+                                aria-hidden="true"
+                                role="img"
+                                fill="currentColor"
+                            >
+                                <path d="M20 2v10h10L20 2z" />
+                                <path
+                                    d="M19 14a1 1 0 01-1-1V2H7a1 1 0 00-1 1v30a1 1 0 001 1h22a1 1 0 001-1V14zm7 15.5a.5.5 0 01-.5.5h-15a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5h15a.5.5 0 01.5.5zm0-4a.5.5 0 01-.5.5h-15a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5h15a.5.5 0 01.5.5zm0-4a.5.5 0 01-.5.5h-15a.5.5 0 01-.5-.5v-1a.5.5 0 01.5-.5h15a.5.5 0 01.5.5z"
+                                />
+                            </svg>
+                        </sp-icon>
+                    </sp-card>
+                </div>
+                <sp-field-label for="xs">Quiet</sp-field-label>
+                <div
+                    style="
+                        color: var(--spectrum-neutral-content-color-default);
+                        width: 110px;
+                    "
+                >
+                    <sp-card
+                        size="s"
+                        heading="Card Heading"
+                        subheading="JPG Photo"
+                        variant="quiet"
+                    >
+                        <img
+                            src="https://picsum.photos/110"
+                            alt="Demo Image"
+                            slot="preview"
+                        />
+                        <div slot="footer">Footer</div>
+                        <sp-action-menu
+                            label="More Actions"
+                            slot="actions"
+                            placement="bottom-end"
+                            quiet
+                        >
+                            <sp-menu-item>Deselect</sp-menu-item>
+                            <sp-menu-item>Select Inverse</sp-menu-item>
+                            <sp-menu-item>Feather...</sp-menu-item>
+                            <sp-menu-item>Select and Mask...</sp-menu-item>
+                            <sp-menu-divider></sp-menu-divider>
+                            <sp-menu-item>Save Selection</sp-menu-item>
+                            <sp-menu-item disabled>Make Work Path</sp-menu-item>
+                        </sp-action-menu>
+                    </sp-card>
+                </div>
+            </div>
+
+            <div id="variantLabel">toggles</div>
+            <div class="demo-example">
+                <sp-card heading="Card Heading" subheading="JPG Photo" toggles>
+                    <img
+                        slot="cover-photo"
+                        src="https://picsum.photos/200/300"
+                        alt="Demo Image"
+                    />
+                    <div slot="footer">Footer</div>
+                </sp-card>
+            </div>
+        </div>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-card</div>
+            <my-card
+                class="my-card"
+                heading="My Card"
+                subheading="Font size 30px"
+            >
                 <img
                     slot="cover-photo"
                     src="https://picsum.photos/200/300"
                     alt="Demo Image"
                 />
                 <div slot="footer">Footer</div>
-            </sp-card>
+            </my-card>
         </div>
     </div>
 
-    <div id="right">
-        <div id="subtitle">my-card</div>
-        <my-card class="my-card" heading="My Card" subheading="Font size 30px">
-            <img
-                slot="cover-photo"
-                src="https://picsum.photos/200/300"
-                alt="Demo Image"
-            />
-            <div slot="footer">Footer</div>
-        </my-card>
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
     </div>
 </div>

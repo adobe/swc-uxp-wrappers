@@ -13,45 +13,322 @@ governing permissions and limitations under the License.
 <h3>sp-number-field</h3>
 
 <div id="content">
-    <div id="left">
-        <div id="subtitle">sp-number-field</div>
-        <div style="margin: 20px 20px">
-            <sp-number-field
-                label="Size"
-                value="1024"
-                size="m"
-                style="--spectrum-stepper-width: 110px; width: 150px"
-                style="width: 300px"
-            ></sp-number-field>
-            <sp-number-field
-                label="Size"
-                value="1024"
-                size="s"
-                style="--spectrum-stepper-width: 85px; width: 120px"
-            ></sp-number-field>
-            <sp-field-label for="decimals">Adjust exposure</sp-field-label>
-            <sp-number-field
-                id="decimals"
-                value="0"
-                style="width: 100px"
-                format-options='{
-        "signDisplay": "exceptZero",
-        "minimumFractionDigits": 1,
-        "maximumFractionDigits": 2
-    }'
-            ></sp-number-field>
-            <sp-field-label for="percents">Sales tax</sp-field-label>
-            <sp-number-field
-                id="percents"
-                style="width: 200px"
-                value="0.05"
-                format-options='{
-        "style": "percent"
-    }'
-            ></sp-number-field>
-            <sp-field-label for="currency">Transaction amount</sp-field-label>
-            <sp-number-field
-                id="currency"
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-number-field</div>
+            <div id="variantLabel">sizes</div>
+            <div class="demo-example" style="display: flex">
+                <div class="size-div" style="display: block">
+                    <sp-field-label for="s">Small</sp-field-label>
+                    <sp-number-field
+                        label="Size"
+                        value="1024"
+                        size="s"
+                        style="--spectrum-stepper-width: 85px"
+                    ></sp-number-field>
+                </div>
+
+                <div class="size-div" style="display: block; margin-left: 10px">
+                    <sp-field-label for="m">Medium</sp-field-label>
+                    <sp-number-field
+                        label="Size"
+                        value="1024"
+                        size="m"
+                        style="--spectrum-stepper-width: 110px"
+                    ></sp-number-field>
+                </div>
+
+                <div class="size-div" style="display: block; margin-left: 10px">
+                    <sp-field-label for="L">Large</sp-field-label>
+                    <sp-number-field
+                        label="Size"
+                        value="1024"
+                        id="number"
+                        size="l"
+                        style="--spectrum-stepper-width: 135px"
+                    ></sp-number-field>
+                </div>
+
+                <div class="size-div" style="display: block; margin-left: 10px">
+                    <sp-field-label for="XL">Extra large</sp-field-label>
+                    <sp-number-field
+                        label="Size"
+                        value="1024"
+                        size="xl"
+                        style="--spectrum-stepper-width: 160px"
+                    ></sp-number-field>
+                </div>
+            </div>
+
+            <div class="demo-example" style="display: flex">
+                <div class="size-div" style="display: block">
+                    <sp-field-label for="s">Small</sp-field-label>
+                    <sp-number-field
+                        label="Size"
+                        value="1024"
+                        size="s"
+                        quiet
+                        style="--spectrum-stepper-width: 85px"
+                    ></sp-number-field>
+                </div>
+
+                <div class="size-div" style="display: block; margin-left: 10px">
+                    <sp-field-label for="m">Medium</sp-field-label>
+                    <sp-number-field
+                        label="Size"
+                        value="1024"
+                        size="m"
+                        quiet
+                        style="--spectrum-stepper-width: 110px"
+                    ></sp-number-field>
+                </div>
+
+                <div class="size-div" style="display: block; margin-left: 10px">
+                    <sp-field-label for="L">Large</sp-field-label>
+                    <sp-number-field
+                        label="Size"
+                        value="1024"
+                        size="l"
+                        quiet
+                        style="--spectrum-stepper-width: 135px"
+                    ></sp-number-field>
+                </div>
+
+                <div class="size-div" style="display: block; margin-left: 10px">
+                    <sp-field-label for="XL">Extra large</sp-field-label>
+                    <sp-number-field
+                        label="Size"
+                        value="1024"
+                        size="xl"
+                        quiet
+                        style="--spectrum-stepper-width: 160px"
+                    ></sp-number-field>
+                </div>
+            </div>
+
+            <div id="variantLabel">disabled</div>
+            <div class="demo-example">
+                <sp-field-label for="s">Amount</sp-field-label>
+                <sp-number-field
+                    label="Size"
+                    value="1024"
+                    disabled
+                    style="--spectrum-stepper-width: 150px"
+                ></sp-number-field>
+
+                <sp-field-label for="s">Contrast</sp-field-label>
+                <sp-number-field
+                    label="Size"
+                    value="10"
+                    disabled
+                    quiet
+                    style="--spectrum-stepper-width: 150px"
+                ></sp-number-field>
+            </div>
+
+            <div id="variantLabel">maxlength</div>
+            <div class="demo-example">
+                <sp-field-label for="age">Age</sp-field-label>
+                <sp-number-field
+                    placeholder="Enter Age"
+                    id="age"
+                    style="width: 200px"
+                    maxlength="2"
+                ></sp-number-field>
+            </div>
+
+            <div id="variantLabel">Indeterminate</div>
+            <div class="demo-example">
+                <sp-field-label for="age">Enter a number</sp-field-label>
+                <sp-number-field
+                    placeholder="Enter Age"
+                    id="age"
+                    style="width: 200px"
+                    indeterminate
+                ></sp-number-field>
+            </div>
+
+            <div id="variantLabel">Readonly</div>
+            <div class="demo-example">
+                <sp-field-label for="readonly">
+                    You can only read the following value
+                </sp-field-label>
+                <sp-number-field
+                    value="666"
+                    id="readonly"
+                    style="width: 200px"
+                    readonly
+                ></sp-number-field>
+            </div>
+
+            <div id="variantLabel">Readonly</div>
+            <div class="demo-example">
+                <sp-field-label for="hideStepper">
+                    Without Stepper UI
+                </sp-field-label>
+                <sp-number-field
+                    id="hideStepper"
+                    hide-stepper
+                ></sp-number-field>
+
+                <sp-field-label for="quietHideStepper">
+                    Without Stepper UI - Quiet
+                </sp-field-label>
+                <sp-number-field
+                    quiet
+                    id="quietHideStepper"
+                    hide-stepper
+                ></sp-number-field>
+            </div>
+
+            <div id="variantLabel">Readonly</div>
+            <div class="demo-example">
+                <div class="scroller">
+                    <div>
+                        <sp-field-label for="default">
+                            Enter a number
+                        </sp-field-label>
+                        <sp-number-field
+                            id="default"
+                            style="width: 200px"
+                        ></sp-number-field>
+                        <p>
+                            This box should not scroll when the focus is inside
+                            the number field and field value is changed by using
+                            the mouse wheel.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div id="variantLabel">decimals</div>
+            <div class="demo-example">
+                <sp-field-label for="decimals">Adjust exposure</sp-field-label>
+                <sp-number-field
+                    id="decimals"
+                    value="0"
+                    style="width: 100px"
+                    format-options='{
+            "signDisplay": "exceptZero",
+            "minimumFractionDigits": 1,
+            "maximumFractionDigits": 2
+        }'
+                ></sp-number-field>
+            </div>
+
+            <div id="variantLabel">percentages</div>
+            <div class="demo-example">
+                <sp-field-label for="percents">Sales tax</sp-field-label>
+                <sp-number-field
+                    id="percents"
+                    style="width: 200px"
+                    value="0.05"
+                    format-options='{
+            "style": "percent"
+        }'
+                ></sp-number-field>
+            </div>
+
+            <div id="variantLabel">currency values</div>
+            <div class="demo-example">
+                <sp-field-label for="currency">
+                    Transaction amount
+                </sp-field-label>
+                <sp-number-field
+                    id="currency"
+                    style="width: 200px"
+                    value="45"
+                    format-options='{
+            "style": "currency",
+            "currency": "EUR",
+            "currencyDisplay": "code",
+            "currencySign": "accounting"
+        }'
+                ></sp-number-field>
+            </div>
+
+            <div id="variantLabel">units</div>
+            <div class="demo-example">
+                <sp-field-label for="units">Package width</sp-field-label>
+                <sp-number-field
+                    id="units"
+                    style="width: 200px"
+                    value="4"
+                    format-options='{
+            "style": "unit",
+            "unit": "inch",
+            "unitDisplay": "long"
+        }'
+                ></sp-number-field>
+            </div>
+
+            <div id="variantLabel">
+                Units not included in Intl.NumberFormatOptions
+            </div>
+            <div class="demo-example">
+                <sp-field-label for="units">
+                    Document width in pixels
+                </sp-field-label>
+                <sp-number-field
+                    id="units"
+                    style="width: 200px"
+                    value="500"
+                    format-options='{
+                        "style": "unit",
+                        "unit": "px"
+                    }'
+                ></sp-number-field>
+            </div>
+
+            <div id="variantLabel">units</div>
+            <div class="demo-example">
+                <sp-field-label for="step">Step</sp-field-label>
+                <sp-number-field id="step" step="10"></sp-number-field>
+
+                <sp-field-label for="step-min">Step + min</sp-field-label>
+                <sp-number-field
+                    id="step-min"
+                    min="2"
+                    step="3"
+                ></sp-number-field>
+
+                <sp-field-label for="step-min-max">
+                    Step + min + max
+                </sp-field-label>
+                <sp-number-field
+                    id="step-min-max"
+                    min="2"
+                    max="21"
+                    step="3"
+                ></sp-number-field>
+            </div>
+
+            <div id="variantLabel">minimum and maximum values</div>
+            <div class="demo-example">
+                <sp-field-label for="max-min">
+                    Max (10), Min(-10)
+                </sp-field-label>
+                <sp-number-field
+                    id="max-min"
+                    max="10"
+                    min="-10"
+                    style="width: 200px"
+                    value="5"
+                    format-options='{
+            "style": "unit",
+            "unit": "px"
+        }'
+                ></sp-number-field>
+            </div>
+        </div>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-number-field</div>
+            <sp-field-label for="my-currency">
+                Transaction amount
+            </sp-field-label>
+            <my-number-field
+                id="my-currency"
                 style="width: 200px"
                 value="45"
                 format-options='{
@@ -60,58 +337,13 @@ governing permissions and limitations under the License.
         "currencyDisplay": "code",
         "currencySign": "accounting"
     }'
-            ></sp-number-field>
-            <sp-field-label for="units">Package width</sp-field-label>
-            <sp-number-field
-                id="units"
-                style="width: 200px"
-                value="4"
-                format-options='{
-        "style": "unit",
-        "unit": "inch",
-        "unitDisplay": "long"
-    }'
-            ></sp-number-field>
-            <sp-field-label for="units">
-                Document width in pixels
-            </sp-field-label>
-            <sp-number-field
-                id="units"
-                style="width: 200px"
-                value="500"
-                format-options='{
-        "style": "unit",
-        "unit": "px"
-    }'
-            ></sp-number-field>
-            <sp-field-label for="max-min">Max (10), Min(-10)</sp-field-label>
-            <sp-number-field
-                id="max-min"
-                max="10"
-                min="-10"
-                style="width: 200px"
-                value="5"
-                format-options='{
-        "style": "unit",
-        "unit": "px"
-    }'
-            ></sp-number-field>
+            ></my-number-field>
         </div>
     </div>
 
-    <div id="right">
-        <div id="subtitle">my-number-field</div>
-        <sp-field-label for="my-currency">Transaction amount</sp-field-label>
-        <my-number-field
-            id="my-currency"
-            style="width: 200px"
-            value="45"
-            format-options='{
-    "style": "currency",
-    "currency": "EUR",
-    "currencyDisplay": "code",
-    "currencySign": "accounting"
-}'
-        ></my-number-field>
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
     </div>
 </div>

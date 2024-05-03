@@ -268,3 +268,10 @@ governing permissions and limitations under the License.
             var(--mod-card-border-width, var(--spectrum-card-border-width))
     );
 }
+
+.subtitle + ::slotted([slot='description']):before {
+    padding-right: var(
+        --mod-card-subtitle-padding-right,
+        var(--spectrum-card-subtitle-padding-right)
+    );
+}

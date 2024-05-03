@@ -13,61 +13,69 @@ governing permissions and limitations under the License.
 <h3>sp-toast</h3>
 
 <div id="content">
-    <div id="left">
-        <div id="subtitle">sp-toast</div>
-        <sp-toast open>
-            This is important information that you should read, soon.
-        </sp-toast>
-        <sp-toast open>
-            This is important information that you should read, soon.
-            <sp-button
-                slot="action"
-                static="white"
-                variant="secondary"
-                treatment="outline"
-            >
-                Do something
-            </sp-button>
-        </sp-toast>
-        <sp-toast open style="width: 300px">
-            This is important information that you should read, soon.
-            <sp-button
-                slot="action"
-                static="white"
-                variant="secondary"
-                treatment="outline"
-            >
-                Do something
-            </sp-button>
-        </sp-toast>
-        <sp-toast open variant="negative">
-            This is negative information that you should read, soon.
-        </sp-toast>
-        <sp-toast open variant="positive">
-            This is positive information that you should read, soon.
-        </sp-toast>
-        <sp-toast open variant="info">
-            This is information that you should read.
-        </sp-toast>
-        <sp-toast open timeout="1000">
-            When a timeout is provided it represents the number of milliseconds
-            from when the Toast was placed on the page before it will
-            automatically dismiss itself.
-        </sp-toast>
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-toast</div>
+            <sp-toast open>
+                This is important information that you should read, soon.
+            </sp-toast>
+            <sp-toast open>
+                This is important information that you should read, soon.
+                <sp-button
+                    slot="action"
+                    static="white"
+                    variant="secondary"
+                    treatment="outline"
+                >
+                    Do something
+                </sp-button>
+            </sp-toast>
+            <sp-toast open style="width: 300px">
+                This is important information that you should read, soon.
+                <sp-button
+                    slot="action"
+                    static="white"
+                    variant="secondary"
+                    treatment="outline"
+                >
+                    Do something
+                </sp-button>
+            </sp-toast>
+            <sp-toast open variant="negative">
+                This is negative information that you should read, soon.
+            </sp-toast>
+            <sp-toast open variant="positive">
+                This is positive information that you should read, soon.
+            </sp-toast>
+            <sp-toast open variant="info">
+                This is information that you should read.
+            </sp-toast>
+            <sp-toast open timeout="1000">
+                When a timeout is provided it represents the number of
+                milliseconds from when the Toast was placed on the page before
+                it will automatically dismiss itself.
+            </sp-toast>
+        </div>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-toast</div>
+            <my-toast open>
+                This is important information that you should read, soon.
+                <sp-button
+                    slot="action"
+                    static="white"
+                    variant="secondary"
+                    treatment="outline"
+                >
+                    Do something
+                </sp-button>
+            </my-toast>
+        </div>
     </div>
 
-    <div id="right">
-        <div id="subtitle">my-toast</div>
-        <my-toast open>
-            This is important information that you should read, soon.
-            <sp-button
-                slot="action"
-                static="white"
-                variant="secondary"
-                treatment="outline"
-            >
-                Do something
-            </sp-button>
-        </my-toast>
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
     </div>
 </div>
