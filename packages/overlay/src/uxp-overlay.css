@@ -11,3 +11,7 @@ governing permissions and limitations under the License.
 */
 
 /* write uxp style overrides */
+
+.dialog {
+    z-index: 1000;
+}
