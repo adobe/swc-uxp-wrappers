@@ -43,3 +43,7 @@ import { Meter } from '@swc-uxp-wrappers/meter';
 ```html
 <sp-meter></sp-meter>
 ```
+
+## Known Issues
+- Duplicate labels appear in React context
+

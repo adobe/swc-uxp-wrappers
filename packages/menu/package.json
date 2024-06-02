@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/menu",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -33,8 +33,8 @@
     },
     "dependencies": {
         "@swc-uxp-internal/menu": "npm:@spectrum-web-components/menu@0.37.0",
-        "@swc-uxp-wrappers/divider": "1.0.0",
-        "@swc-uxp-wrappers/action-button": "1.0.0"
+        "@swc-uxp-wrappers/divider": "2.0.0",
+        "@swc-uxp-wrappers/action-button": "2.0.0"
     },
     "files": [
         "**/*.js"

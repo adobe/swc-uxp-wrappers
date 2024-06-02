@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/table",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -42,7 +42,7 @@
     },
     "dependencies": {
         "@swc-uxp-internal/table": "npm:@spectrum-web-components/table@0.37.0",
-        "@swc-uxp-wrappers/checkbox": "1.0.0"
+        "@swc-uxp-wrappers/checkbox": "2.0.0"
     },
     "files": [
         "**/*.js"

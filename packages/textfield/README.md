@@ -43,3 +43,11 @@ import { Textfield } from '@swc-uxp-wrappers/textfield';
 ```html
 <sp-textfield></sp-textfield>
 ```
+## Known Issues
+- Focus ring is not curved on the corners
+- Grows API is not supported
+- Black background appears for quiet and readonly variant in windows
+- For multiline variant, text value blinks on hovering on windows
+- In windows, after typing text with symbols example `abcdss, efgh@ssss` and on pressing enter results in some text value getting missed on the left side
+- Tab navigation has issues with type=password
+

@@ -43,3 +43,12 @@ import { Search } from '@swc-uxp-wrappers/search';
 ```html
 <sp-search></sp-search>
 ```
+
+## Known Issues
+- Black background appears for quiet and readonly variant in windows
+- Close button does not respond on Mac platform
+- Placeholder text is not vertically and horizontally aligned
+- Placeholder text is not greyed with `disable` attribute
+- Placeholder text is trimmed for `size=s`
+- Focus ring is not curved on the corners
+

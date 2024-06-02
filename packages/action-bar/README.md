@@ -43,3 +43,5 @@ import { ActionBar } from '@swc-uxp-wrappers/action-bar';
 ```html
 <sp-action-bar></sp-action-bar>
 ```
+## Known issues
+- Sticky variant is not supported

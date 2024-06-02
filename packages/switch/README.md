@@ -43,3 +43,7 @@ import { Switch } from '@swc-uxp-wrappers/switch';
 ```html
 <sp-switch></sp-switch>
 ```
+
+## Known Issues
+- Tab navigation does not work
+- Line break is seen when switch is used for `scale=large`
