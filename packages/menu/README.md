@@ -43,3 +43,8 @@ import { Menu } from '@swc-uxp-wrappers/menu';
 ```html
 <sp-menu></sp-menu>
 ```
+
+## Known Issues
+- Multi select variant does not work
+- Submenu is not supported
+- Performance issue observed when one clicks multiple times on a menu item

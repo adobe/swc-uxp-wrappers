@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/number-field",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -24,8 +24,8 @@
     },
     "dependencies": {
         "@swc-uxp-internal/number-field": "npm:@spectrum-web-components/number-field@0.37.0",
-        "@swc-uxp-wrappers/action-button": "1.0.0",
-        "@swc-uxp-wrappers/textfield": "1.0.0"
+        "@swc-uxp-wrappers/action-button": "2.0.0",
+        "@swc-uxp-wrappers/textfield": "2.0.0"
     },
     "files": [
         "**/*.js"

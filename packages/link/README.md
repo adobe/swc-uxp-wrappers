@@ -43,3 +43,5 @@ import { Link } from '@swc-uxp-wrappers/link';
 ```html
 <sp-link></sp-link>
 ```
+## Known Issues
+- The double underline does not appear on hyperlinks on tabbing in Windows.

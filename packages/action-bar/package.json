@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/action-bar",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -24,7 +24,7 @@
     },
     "dependencies": {
         "@swc-uxp-internal/action-bar": "npm:@spectrum-web-components/action-bar@0.37.0",
-        "@swc-uxp-wrappers/popover": "1.0.0"
+        "@swc-uxp-wrappers/popover": "2.0.0"
     },
     "files": [
         "**/*.js"
