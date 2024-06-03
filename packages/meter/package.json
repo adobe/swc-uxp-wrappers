@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/meter",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -24,7 +24,7 @@
     },
     "dependencies": {
         "@swc-uxp-internal/meter": "npm:@spectrum-web-components/meter@0.37.0",
-        "@swc-uxp-wrappers/field-label": "1.0.0"
+        "@swc-uxp-wrappers/field-label": "2.0.0"
     },
     "files": [
         "**/*.js"

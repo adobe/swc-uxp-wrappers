@@ -43,3 +43,7 @@ import { Sidenav } from '@swc-uxp-wrappers/sidenav';
 ```html
 <sp-sidenav></sp-sidenav>
 ```
+
+## Known Issues
+- Tab navigation happens with tab key and not arrow keys
+- `manageTabIndex` attribute is not supported

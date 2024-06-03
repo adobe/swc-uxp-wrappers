@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/field-group",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -24,7 +24,7 @@
     },
     "dependencies": {
         "@swc-uxp-internal/field-group": "npm:@spectrum-web-components/field-group@0.37.0",
-        "@swc-uxp-wrappers/help-text": "1.0.0"
+        "@swc-uxp-wrappers/help-text": "2.0.0"
     },
     "files": [
         "**/*.js"

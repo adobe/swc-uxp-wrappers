@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/dialog",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -28,9 +28,9 @@
     },
     "dependencies": {
         "@swc-uxp-internal/dialog": "npm:@spectrum-web-components/dialog@0.37.0",
-        "@swc-uxp-wrappers/button": "1.0.0",
-        "@swc-uxp-wrappers/button-group": "1.0.0",
-        "@swc-uxp-wrappers/divider": "1.0.0"
+        "@swc-uxp-wrappers/button": "2.0.0",
+        "@swc-uxp-wrappers/button-group": "2.0.0",
+        "@swc-uxp-wrappers/divider": "2.0.0"
     },
     "files": [
         "**/*.js"
