@@ -11,3 +11,267 @@ governing permissions and limitations under the License.
 */
 
 /* write uxp style overrides */
+
+/* Workaround for missing logical property support: https://jira.corp.adobe.com/browse/UXP-20649 */
+
+:host {
+    min-width: var(
+        --mod-card-minimum-width,
+        var(--spectrum-card-minimum-width)
+    );
+}
+
+::slotted([slot='footer']) {
+    border-top: var(--mod-card-border-width, var(--spectrum-card-border-width))
+        solid var(--mod-card-divider-color, var(--spectrum-card-divider-color));
+    margin-top: calc(
+        (
+                var(--mod-card-body-spacing, var(--spectrum-card-body-spacing)) -
+                    var(
+                        --mod-card-content-margin-bottom,
+                        var(--spectrum-card-content-margin-bottom)
+                    )
+            ) * -1
+    );
+    margin-right: var(
+        --mod-card-body-spacing,
+        var(--spectrum-card-body-spacing)
+    );
+    margin-left: var(
+        --mod-card-body-spacing,
+        var(--spectrum-card-body-spacing)
+    );
+    padding-bottom: calc(
+        var(--mod-card-body-spacing, var(--spectrum-card-body-spacing)) -
+            var(--mod-card-border-width, var(--spectrum-card-border-width))
+    );
+    padding-top: var(
+        --mod-card-footer-margin-top,
+        var(--spectrum-card-footer-margin-top)
+    );
+}
+
+:host::before {
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+}
+
+:host::after {
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    /* Workaround to handle missing box-sizing support in UXP, fixed focus-ring layout for sp-card */
+    margin-top: 0px;
+    margin-left: 0px;
+}
+
+#cover-photo {
+    height: var(
+        --mod-card-preview-minimum-height,
+        var(--spectrum-card-preview-minimum-height)
+    );
+    border-bottom-color: var(
+        --mod-card-border-color,
+        var(--spectrum-card-border-color)
+    );
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: calc(
+        var(--mod-card-corner-radius, var(--spectrum-card-corner-radius)) -
+            var(--mod-card-border-width, var(--spectrum-card-border-width))
+    );
+    border-top-left-radius: calc(
+        var(--mod-card-corner-radius, var(--spectrum-card-corner-radius)) -
+            var(--mod-card-border-width, var(--spectrum-card-border-width))
+    );
+}
+
+.body {
+    padding-bottom: calc(
+        var(--mod-card-body-spacing, var(--spectrum-card-body-spacing)) -
+            var(--mod-card-border-width, var(--spectrum-card-border-width))
+    );
+    padding-top: var(
+        --mod-card-title-padding-top,
+        var(--spectrum-card-title-padding-top)
+    );
+    padding-right: calc(
+        var(--mod-card-body-spacing, var(--spectrum-card-body-spacing)) -
+            var(--mod-card-border-width, var(--spectrum-card-border-width))
+    );
+    padding-left: calc(
+        var(--mod-card-body-spacing, var(--spectrum-card-body-spacing)) -
+            var(--mod-card-border-width, var(--spectrum-card-border-width))
+    );
+}
+
+.title {
+    padding-right: var(
+        --mod-card-title-padding-right,
+        var(--spectrum-card-title-padding-right)
+    );
+}
+
+.content {
+    margin-top: var(
+        --mod-card-content-margin-top,
+        var(--spectrum-card-content-margin-top)
+    );
+}
+
+.subtitle {
+    padding-right: var(
+        --mod-card-subtitle-padding-right,
+        var(--spectrum-card-subtitle-padding-right)
+    );
+}
+
+.quick-actions {
+    height: var(--mod-card-actions-size, var(--spectrum-card-actions-size));
+    width: var(--mod-card-actions-size, var(--spectrum-card-actions-size));
+    top: calc(
+        var(--mod-card-actions-spacing, var(--spectrum-card-actions-spacing)) -
+            var(--mod-card-border-width, var(--spectrum-card-border-width))
+    );
+    left: calc(
+        var(--mod-card-actions-spacing, var(--spectrum-card-actions-spacing)) -
+            var(--mod-card-border-width, var(--spectrum-card-border-width))
+    );
+}
+
+::slotted(*) {
+    height: 100%;
+}
+
+:host([variant='gallery']) #preview:after,
+:host([variant='quiet']) #preview:after {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin-top: calc(
+        var(
+                --mod-card-focus-indicator-width,
+                var(--spectrum-card-focus-indicator-width)
+            ) * -1
+    );
+    margin-left: calc(
+        var(
+                --mod-card-focus-indicator-width,
+                var(--spectrum-card-focus-indicator-width)
+            ) * -1
+    );
+}
+
+:host([variant='gallery']),
+:host([variant='quiet']) {
+    height: 100%;
+    min-width: var(
+        --mod-card-minimum-width,
+        var(--spectrum-card-minimum-width)
+    );
+}
+
+#preview {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: var(
+        --mod-card-corner-radius,
+        var(--spectrum-card-corner-radius)
+    );
+    border-top-left-radius: var(
+        --mod-card-corner-radius,
+        var(--spectrum-card-corner-radius)
+    );
+}
+
+.subtitle + ::slotted([slot='description']):before {
+    padding-right: var(
+        --mod-card-subtitle-padding-right,
+        var(--spectrum-card-subtitle-padding-right)
+    );
+}
+
+:host([variant='gallery']) #preview,
+:host([variant='quiet']) #preview {
+    width: 100%;
+    min-height: var(
+        --mod-card-preview-minimum-height,
+        var(--spectrum-card-preview-minimum-height)
+    );
+}
+
+:host([variant='gallery']) #preview:before,
+:host([variant='quiet']) #preview:before {
+    height: 100%;
+    width: 100%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+:host([horizontal]) #preview {
+    border-top-left-radius: calc(
+        var(--mod-card-corner-radius, var(--spectrum-card-corner-radius)) -
+            var(--mod-card-border-width, var(--spectrum-card-border-width))
+    );
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: calc(
+        var(--mod-card-corner-radius, var(--spectrum-card-corner-radius)) -
+            var(--mod-card-border-width, var(--spectrum-card-border-width))
+    );
+    min-height: 0px;
+}
+
+:host([horizontal]) .body {
+    padding-top: 0px;
+    padding-bottom: 0px;
+    padding-left: var(
+        --mod-card-horizontal-body-padding,
+        var(--spectrum-card-horizontal-body-padding)
+    );
+    padding-right: var(
+        --mod-card-horizontal-body-padding,
+        var(--spectrum-card-horizontal-body-padding)
+    );
+}
+
+:host([horizontal]) .header,
+:host([horizontal]) .content {
+    height: auto;
+    margin-top: 0px;
+}
+
+:host([horizontal]) .title {
+    padding-right: 0px;
+}
+
+:host([horizontal]) .content {
+    margin-bottom: 0px;
+}
+
+#cover-photo ::slotted(*) {
+    border-top-right-radius: calc(
+        var(--mod-card-corner-radius, var(--spectrum-card-corner-radius)) -
+            var(--mod-card-border-width, var(--spectrum-card-border-width))
+    );
+    border-top-left-radius: calc(
+        var(--mod-card-corner-radius, var(--spectrum-card-corner-radius)) -
+            var(--mod-card-border-width, var(--spectrum-card-border-width))
+    );
+}
+
+.subtitle + ::slotted([slot='description']):before {
+    padding-right: var(
+        --mod-card-subtitle-padding-right,
+        var(--spectrum-card-subtitle-padding-right)
+    );
+}

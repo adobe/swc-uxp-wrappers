@@ -1,0 +1,277 @@
+<!-- 
+Copyright 2024 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License. 
+-->
+
+<h3>sp-textfield(multiline)</h3>
+
+<div id="content">
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-textfield(multiline)</div>
+            <div id="variantLabel">sizes</div>
+            <div class="demo-example">
+                <sp-field-label for="story-0-s">Small</sp-field-label>
+                <sp-textfield
+                    size="s"
+                    id="story-0-s"
+                    multiline
+                    placeholder="Enter your life story"
+                    maxlength="1024"
+                ></sp-textfield>
+                <sp-field-label for="story-0-m">Medium</sp-field-label>
+                <sp-textfield
+                    id="story-0-m"
+                    multiline
+                    placeholder="Enter your life story"
+                ></sp-textfield>
+                <sp-field-label for="story-0-l">Large</sp-field-label>
+                <sp-textfield
+                    size="l"
+                    id="story-0-l"
+                    multiline
+                    placeholder="Enter your life story"
+                ></sp-textfield>
+                <sp-field-label for="story-0-xl">Extra Large</sp-field-label>
+                <sp-textfield
+                    size="xl"
+                    id="story-0-xl"
+                    multiline
+                    placeholder="Enter your life story"
+                ></sp-textfield>
+            </div>
+
+            <div id="variantLabel">valid</div>
+            <div class="demo-example">
+                <sp-field-label for="story-1" required>
+                    Background
+                </sp-field-label>
+                <sp-textfield
+                    id="story-1"
+                    multiline
+                    placeholder="Enter your name"
+                    valid
+                ></sp-textfield>
+
+                <sp-field-label for="story-1" required>
+                    Background
+                </sp-field-label>
+                <sp-textfield
+                    id="story-1"
+                    multiline
+                    disabled
+                    placeholder="Enter your name"
+                    valid
+                ></sp-textfield>
+            </div>
+
+            <div id="variantLabel">readonly</div>
+            <div class="demo-example">
+                <sp-field-label for="story-1" required>
+                    Background
+                </sp-field-label>
+                <sp-textfield
+                    id="story-1"
+                    multiline
+                    value="You cannot type anything as its a readonly textarea"
+                    readonly
+                ></sp-textfield>
+
+                <sp-field-label for="story-1" required>
+                    Background
+                </sp-field-label>
+                <sp-textfield
+                    id="story-1"
+                    multiline
+                    value="You cannot type anything as its a readonly textarea"
+                    readonly
+                    quiet
+                ></sp-textfield>
+            </div>
+
+            <div id="variantLabel">invalid</div>
+            <div class="demo-example">
+                <sp-field-label for="story-2" required>
+                    Background
+                </sp-field-label>
+                <sp-textfield
+                    id="story-2"
+                    invalid
+                    multiline
+                    placeholder="Enter your name"
+                ></sp-textfield>
+
+                <sp-field-label for="story-2" required>
+                    Background
+                </sp-field-label>
+                <sp-textfield
+                    id="story-2"
+                    invalid
+                    multiline
+                    disabled
+                    placeholder="Enter your name"
+                ></sp-textfield>
+            </div>
+
+            <div id="variantLabel">quiet</div>
+            <div class="demo-example">
+                <sp-field-label for="story-3">
+                    Background (quietly)
+                </sp-field-label>
+                <sp-textfield
+                    id="story-3"
+                    multiline
+                    placeholder="Enter your name"
+                    quiet
+                ></sp-textfield>
+
+                <sp-field-label for="story-3">
+                    Background (quietly)
+                </sp-field-label>
+                <sp-textfield
+                    id="story-3"
+                    multiline
+                    placeholder="Enter your name"
+                    quiet
+                    disabled
+                ></sp-textfield>
+            </div>
+
+            <div id="variantLabel">invalid quiet</div>
+            <div class="demo-example">
+                <sp-field-label for="story-31">
+                    Background (quietly)
+                </sp-field-label>
+                <sp-textfield
+                    id="story-31"
+                    multiline
+                    invalid
+                    placeholder="Enter your name"
+                    quiet
+                ></sp-textfield>
+
+                <sp-field-label for="story-31">
+                    Background (quietly)
+                </sp-field-label>
+                <sp-textfield
+                    id="story-31"
+                    multiline
+                    invalid
+                    placeholder="Enter your name"
+                    quiet
+                    disabled
+                ></sp-textfield>
+            </div>
+
+            <div id="variantLabel">valid quiet</div>
+            <div class="demo-example">
+                <sp-field-label for="story-32">
+                    Background (quietly)
+                </sp-field-label>
+                <sp-textfield
+                    id="story-32"
+                    multiline
+                    valid
+                    placeholder="Enter your name"
+                    quiet
+                ></sp-textfield>
+
+                <sp-field-label for="story-32">
+                    Background (quietly)
+                </sp-field-label>
+                <sp-textfield
+                    id="story-32"
+                    multiline
+                    valid
+                    placeholder="Enter your name"
+                    quiet
+                    disabled
+                ></sp-textfield>
+            </div>
+
+            <div id="variantLabel">help text</div>
+            <div class="demo-example">
+                <sp-field-label for="self">Stay "Positive"</sp-field-label>
+                <sp-textfield
+                    multiline
+                    id="self"
+                    pattern="[P][o][s][i][t][i][v][e]"
+                    value="Positive"
+                >
+                    <sp-help-text slot="help-text">
+                        Tell us how you are feeling today.
+                    </sp-help-text>
+                    <sp-help-text slot="negative-help-text">
+                        Please be "Positive".
+                    </sp-help-text>
+                </sp-textfield>
+
+                <sp-field-label for="self">Stay "Positive"</sp-field-label>
+                <sp-textfield
+                    multiline
+                    id="self"
+                    disabled
+                    pattern="[P][o][s][i][t][i][v][e]"
+                    value="Positive"
+                >
+                    <sp-help-text slot="help-text">
+                        Tell us how you are feeling today.
+                    </sp-help-text>
+                    <sp-help-text slot="negative-help-text">
+                        Please be "Positive".
+                    </sp-help-text>
+                </sp-textfield>
+            </div>
+
+            <div id="variantLabel">grows</div>
+            <div class="demo-example">
+                <div>
+                    <sp-field-label for="story-5">Background</sp-field-label>
+                    <sp-textfield
+                        id="story-5"
+                        grows
+                        multiline
+                        placeholder="Enter your name"
+                        value="By default the text area has a fixed height and will scroll when text entry goes beyond the available space. With the use of the `grows` attribute the text area will grow to accommodate the full content of the element."
+                    ></sp-textfield>
+                </div>
+                <div>
+                    <sp-field-label for="story-6">
+                        Background (quietly)
+                    </sp-field-label>
+                    <sp-textfield
+                        id="story-6"
+                        grows
+                        multiline
+                        placeholder="Enter your name"
+                        value="By default the text area has a fixed height and will scroll when text entry goes beyond the available space. With the use of the `grows` attribute the text area will grow to accommodate the full content of the element."
+                        quiet
+                    ></sp-textfield>
+                </div>
+            </div>
+        </div>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-textfield</div>
+            <sp-field-label for="name-0">Name</sp-field-label>
+            <my-textfield
+                id="name-0"
+                placeholder="Enter your name"
+                value="This is my-textfield"
+            ></my-textfield>
+        </div>
+    </div>
+
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
+    </div>
+</div>

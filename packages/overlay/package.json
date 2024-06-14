@@ -1,0 +1,52 @@
+{
+    "name": "@swc-uxp-wrappers/overlay",
+    "version": "2.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/overlay component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/overlay"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/AbstractOverlay.js": "./src/AbstractOverlay.js",
+        "./src/Overlay.js": "./src/Overlay.js",
+        "./src/OverlayTrigger.js": "./src/OverlayTrigger.js",
+        "./src/PlacementController.js": "./src/PlacementController.js",
+        "./src/VirtualTrigger.js": "./src/VirtualTrigger.js",
+        "./src/fullSizePlugin.js": "./src/fullSizePlugin.js",
+        "./src/index.js": "./src/index.js",
+        "./src/loader.js": "./src/loader.js",
+        "./src/overlay-events.js": "./src/overlay-events.js",
+        "./src/overlay-timer.js": "./src/overlay-timer.js",
+        "./src/overlay-trigger.css.js": "./src/overlay-trigger.css.js",
+        "./src/overlay-types.js": "./src/overlay-types.js",
+        "./src/overlay.css.js": "./src/overlay.css.js",
+        "./src/topLayerOverTransforms.js": "./src/topLayerOverTransforms.js",
+        "./active-overlay.js": "./active-overlay.js",
+        "./overlay-trigger.js": "./overlay-trigger.js",
+        "./sync/overlay-trigger.js": "./overlay-trigger-sync.js",
+        "./sp-overlay.js": "./sp-overlay.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/overlay": "npm:@spectrum-web-components/overlay@0.37.0",
+        "@swc-uxp-wrappers/action-button": "2.0.0"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/overlay"
+    ]
+}

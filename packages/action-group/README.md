@@ -6,7 +6,7 @@
 This is UXP wrapper for `@spectrum-web-components/action-group` package 
 <br />
 
--   For detailed README regarding `@spectrum-web-components/action-group` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/action-group/v/0.12.4)
+-   For detailed README regarding `@spectrum-web-components/action-group` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/action-group/v/0.37.0)
 
 -   Detailed specification regarding `@spectrum-web-components/action-group` support in UXP through `@swc-uxp-wrappers/action-group` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
 
