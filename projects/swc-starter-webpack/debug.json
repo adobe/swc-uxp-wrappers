@@ -1,4 +1,4 @@
 {
     "port": 9222,
-    "breakOnStart": false
+    "breakOnStart": true
 }

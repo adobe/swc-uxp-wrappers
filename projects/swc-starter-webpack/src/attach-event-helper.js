@@ -165,6 +165,43 @@ function attachEvents(tabName) {
 
         eval(offsetListener);
     }
+
+    if (tabName === 'sp-action-menu') {
+        const eventListener1 = `
+            const actionMenu = document.getElementById("action-menu-single-select");
+            actionMenu.addEventListener("change", () => {
+                actionMenu.previousElementSibling.querySelector('#single-value').textContent=actionMenu.value;
+            });
+        `;
+        eval(eventListener1);
+
+        // const eventListener2 = `
+        //     const swatch = document.getElementById("swatch-group-gradient-select");
+        //     swatch.addEventListener("change", () => {
+        //         swatch.nextElementSibling.textContent = 'Selected: ' + JSON.stringify(swatch.selected);
+        //     });
+        // `;
+        // eval(eventListener2);
+    }
+
+    if (tabName === 'sp-underlay') {
+        const triggerClick = `
+            const trigger = document.getElementById('trigger');
+            trigger.addEventListener("click", () => {
+                trigger.nextElementSibling.open = true;
+            });
+            `;
+        eval(triggerClick);
+
+        const closeDialogButtonClick = `
+            const closeButton = document.getElementById('closeButton');
+            closeButton.addEventListener("click", () => {
+                closeButton.parentElement.previousElementSibling.open = false;
+            });
+            `;
+
+        eval(closeDialogButtonClick);
+    }
 }
 
 function handleThemeColor(selectObject) {

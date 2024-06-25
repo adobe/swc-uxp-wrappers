@@ -1,0 +1,78 @@
+<!-- 
+Copyright 2024 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License. 
+-->
+
+<h3>sp-split-view</h3>
+<div id="content">
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-split-view</div>
+            <sp-split-view>
+                <div>Left panel</div>
+                <div>Right panel</div>
+            </sp-split-view>
+
+            <sp-split-view
+                resizable
+                primary-min="50"
+                secondary-min="50"
+                primary-size="100"
+                label="Resize the horizontal panels"
+            >
+                <div>
+                    <h1>Left panel</h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry.
+                    </p>
+                </div>
+                <div>
+                    <h2>Right panel</h2>
+                    <p>
+                        It is a long established fact that a reader will be
+                        distracted by the readable content of a page when
+                        looking at its layout.
+                    </p>
+                </div>
+            </sp-split-view>
+
+            <sp-split-view
+                resizable
+                primary-size="50%"
+                label="Resize the horizontal collapsible panels"
+            >
+                <div>
+                    <h1>Left panel</h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry.
+                    </p>
+                </div>
+                <div>
+                    <h2>Right panel</h2>
+                    <p>
+                        It is a long established fact that a reader will be
+                        distracted by the readable content of a page when
+                        looking at its layout.
+                    </p>
+                </div>
+            </sp-split-view>
+        </div>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-split-view</div>
+        </div>
+    </div>
+    <div id="config">
+        <div style="display: inline-flex"></div>
+        <div style="display: flex; flex-direction: column"></div>
+    </div>
+</div>

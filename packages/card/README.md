@@ -43,5 +43,7 @@ import { Card } from '@swc-uxp-wrappers/card';
 ```html
 <sp-card></sp-card>
 ```
+
 ## Known Issues
-- `Actions` variant is not supported
+
+-   `Actions` variant is not supported

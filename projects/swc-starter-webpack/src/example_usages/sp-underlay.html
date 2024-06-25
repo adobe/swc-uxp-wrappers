@@ -1,0 +1,56 @@
+<!-- 
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License. 
+-->
+
+<h3>sp-underlay</h3>
+
+<div id="content">
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-underlay</div>
+            <style>
+                sp-underlay:not([open]) + sp-dialog {
+                    display: none;
+                }
+
+                sp-underlay + sp-dialog {
+                    position: fixed;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: 1;
+                    background: var(--spectrum-gray-100);
+                }
+            </style>
+
+            <sp-button id="trigger">
+                Open dialog with underlay element
+            </sp-button>
+
+            <sp-underlay></sp-underlay>
+            <sp-dialog size="s">
+                <h1 slot="heading">Hello, I'm an overlay!</h1>
+                <p>Enjoy your day...</p>
+                <sp-button id="closeButton" slot="button">Close</sp-button>
+            </sp-dialog>
+        </div>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-underlay</div>
+        </div>
+    </div>
+
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
+    </div>
+</div>

@@ -1,0 +1,992 @@
+<!-- 
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License. 
+-->
+
+<h3>sp-picker</h3>
+
+<div id="content">
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-picker</div>
+
+            <div class="demo-example" style="display: flex">
+                <div class="size-div" style="display: block">
+                    <div id="variantLabel">Small</div>
+                    <sp-field-group>
+                        <div class="variantDiv">
+                            <sp-field-label for="picker-s" size="s">
+                                Dafault
+                            </sp-field-label>
+                            <sp-picker
+                                id="picker-s"
+                                size="s"
+                                label="Selection type"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label for="picker-disabled-s" size="s">
+                                Dafault|Disabled
+                            </sp-field-label>
+                            <sp-picker
+                                disabled
+                                id="picker-disabled-s"
+                                size="s"
+                                label="Selection type"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label for="picker-s-quiet" size="s">
+                                Quiet
+                            </sp-field-label>
+                            <sp-picker
+                                id="picker-s-quiet"
+                                quiet
+                                size="s"
+                                label="Selection type"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label
+                                for="picker-disabled-s-quiet"
+                                size="s"
+                            >
+                                Quiet|Disabled
+                            </sp-field-label>
+                            <sp-picker
+                                id="picker-disabled-s-quiet"
+                                quiet
+                                size="s"
+                                disabled
+                                label="Selection type"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label size="s" for="picker-invalid">
+                                Invalid
+                            </sp-field-label>
+                            <sp-picker
+                                size="s"
+                                label="Select a Country with a very long label, too long in fact"
+                                invalid
+                                id="picker-invalid"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label
+                                size="s"
+                                for="picker-disabled-invalid"
+                            >
+                                Invalid|Disabled
+                            </sp-field-label>
+                            <sp-picker
+                                size="s"
+                                label="Select a Country with a very long label, too long in fact"
+                                invalid
+                                disabled
+                                id="picker-disabled-invalid"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label size="s" for="picker-invalid-quiet">
+                                Quiet|Invalid
+                            </sp-field-label>
+                            <sp-picker
+                                label="Select a Country with a very long label, too long in fact"
+                                invalid
+                                quiet
+                                size="s"
+                                id="picker-invalid-quiet"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label
+                                size="s"
+                                for="picker-disabled-invalid-quiet"
+                            >
+                                Quiet|Disabled
+                            </sp-field-label>
+                            <sp-picker
+                                label="Select a Country with a very long label, too long in fact"
+                                invalid
+                                quiet
+                                disabled
+                                size="s"
+                                id="picker-disabled-invalid-quiet"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                    </sp-field-group>
+                </div>
+
+                <div class="size-div" style="display: block; margin-left: 10px">
+                    <div id="variantLabel">Medium</div>
+                    <sp-field-group>
+                        <div class="variantDiv">
+                            <sp-field-label for="picker-m" size="m">
+                                Selection type:
+                            </sp-field-label>
+                            <sp-picker
+                                id="picker-m"
+                                size="m"
+                                label="Selection type"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label for="picker-disabled-m" size="m">
+                                Selection type:
+                            </sp-field-label>
+                            <sp-picker
+                                id="picker-disabled-m"
+                                size="m"
+                                disabled
+                                label="Selection type"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label for="picker-m-quiet" size="m">
+                                Selection type:
+                            </sp-field-label>
+                            <sp-picker
+                                id="picker-m-quiet"
+                                quiet
+                                size="m"
+                                label="Selection type"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label
+                                for="picker-disabled-m-quiet"
+                                size="m"
+                            >
+                                Selection type:
+                            </sp-field-label>
+                            <sp-picker
+                                id="picker-disabled-m-quiet"
+                                quiet
+                                size="m"
+                                disabled
+                                label="Selection type"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label size="m" for="picker-invalid-m">
+                                Standard:
+                            </sp-field-label>
+                            <sp-picker
+                                size="m"
+                                label="Select a Country with a very long label, too long in fact"
+                                invalid
+                                id="picker-invalid-m"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label
+                                size="m"
+                                for="picker-disabled-invalid-m"
+                            >
+                                Standard:
+                            </sp-field-label>
+                            <sp-picker
+                                size="m"
+                                label="Select a Country with a very long label, too long in fact"
+                                invalid
+                                disabled
+                                id="picker-disabled-invalid-m"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label
+                                size="m"
+                                for="picker-invalid-quiet-m"
+                            >
+                                Quiet:
+                            </sp-field-label>
+                            <sp-picker
+                                label="Select a Country with a very long label, too long in fact"
+                                invalid
+                                quiet
+                                size="m"
+                                id="picker-invalid-quiet-m"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label
+                                size="m"
+                                for="picker-disabled-invalid-quiet-m"
+                            >
+                                Quiet:
+                            </sp-field-label>
+                            <sp-picker
+                                label="Select a Country with a very long label, too long in fact"
+                                invalid
+                                quiet
+                                disabled
+                                size="m"
+                                id="picker-disabled-invalid-quiet-m"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                    </sp-field-group>
+                </div>
+
+                <div class="size-div" style="display: block; margin-left: 10px">
+                    <div id="variantLabel">Large</div>
+                    <sp-field-group>
+                        <div class="variantDiv">
+                            <sp-field-label for="picker-l" size="l">
+                                Selection type:
+                            </sp-field-label>
+                            <sp-picker
+                                id="picker-l"
+                                size="l"
+                                label="Selection type"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label for="picker-disabled-l" size="l">
+                                Selection type:
+                            </sp-field-label>
+                            <sp-picker
+                                id="picker-disabled-l"
+                                size="l"
+                                disabled
+                                label="Selection type"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label for="picker-l-quiet" size="l">
+                                Selection type:
+                            </sp-field-label>
+                            <sp-picker
+                                id="picker-l-quiet"
+                                quiet
+                                size="l"
+                                label="Selection type"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label
+                                for="picker-disabled-l-quiet"
+                                size="l"
+                            >
+                                Selection type:
+                            </sp-field-label>
+                            <sp-picker
+                                id="picker-disabled-l-quiet"
+                                quiet
+                                disabled
+                                size="l"
+                                label="Selection type"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label size="l" for="picker-invalid-l">
+                                Standard:
+                            </sp-field-label>
+                            <sp-picker
+                                size="l"
+                                label="Select a Country with a very long label, too long in fact"
+                                invalid
+                                id="picker-invalid-l"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label
+                                size="l"
+                                for="picker-disabled-invalid-l"
+                            >
+                                Standard:
+                            </sp-field-label>
+                            <sp-picker
+                                size="l"
+                                label="Select a Country with a very long label, too long in fact"
+                                invalid
+                                disabled
+                                id="picker-disabled-invalid-l"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label
+                                size="l"
+                                for="picker-invalid-quiet-l"
+                            >
+                                Quiet:
+                            </sp-field-label>
+                            <sp-picker
+                                label="Select a Country with a very long label, too long in fact"
+                                invalid
+                                quiet
+                                size="l"
+                                id="picker-invalid-quiet-l"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label
+                                size="l"
+                                for="picker-disabled-invalid-quiet-l"
+                            >
+                                Quiet:
+                            </sp-field-label>
+                            <sp-picker
+                                label="Select a Country with a very long label, too long in fact"
+                                invalid
+                                quiet
+                                size="l"
+                                disabled
+                                id="picker-disabled-invalid-quiet-l"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                    </sp-field-group>
+                </div>
+
+                <div class="size-div" style="display: block; margin-left: 10px">
+                    <div id="variantLabel">Extra Large</div>
+                    <sp-field-group>
+                        <div class="variantDiv">
+                            <sp-field-label for="picker-xl" size="xl">
+                                Selection type:
+                            </sp-field-label>
+                            <sp-picker
+                                id="picker-xl"
+                                size="xl"
+                                label="Selection type"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label for="picker-disabled-xl" size="xl">
+                                Selection type:
+                            </sp-field-label>
+                            <sp-picker
+                                id="picker-disabled-xl"
+                                size="xl"
+                                disabled
+                                label="Selection type"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label for="picker-xl-quiet" size="xl">
+                                Selection type:
+                            </sp-field-label>
+                            <sp-picker
+                                id="picker-xl-quiet"
+                                quiet
+                                size="xl"
+                                label="Selection type"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label
+                                for="picker-disabled-xl-quiet"
+                                size="xl"
+                            >
+                                Selection type:
+                            </sp-field-label>
+                            <sp-picker
+                                id="picker-disabled-xl-quiet"
+                                quiet
+                                size="xl"
+                                disabled
+                                label="Selection type"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label size="xl" for="picker-invalid-xl">
+                                Standard:
+                            </sp-field-label>
+                            <sp-picker
+                                size="xl"
+                                label="Select a Country with a very long label, too long in fact"
+                                invalid
+                                id="picker-invalid-xl"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label
+                                size="xl"
+                                for="picker-disabled-invalid-xl"
+                            >
+                                Standard:
+                            </sp-field-label>
+                            <sp-picker
+                                size="xl"
+                                label="Select a Country with a very long label, too long in fact"
+                                invalid
+                                disabled
+                                id="picker-disabled-invalid-xl"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label
+                                size="xl"
+                                for="picker-invalid-quiet-xl"
+                            >
+                                Quiet:
+                            </sp-field-label>
+                            <sp-picker
+                                label="Select a Country with a very long label, too long in fact"
+                                invalid
+                                quiet
+                                size="xl"
+                                id="picker-invalid-quiet-xl"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                        <div class="variantDiv">
+                            <sp-field-label
+                                size="xl"
+                                for="picker-disabled-invalid-quiet-xl"
+                            >
+                                Quiet:
+                            </sp-field-label>
+                            <sp-picker
+                                label="Select a Country with a very long label, too long in fact"
+                                invalid
+                                quiet
+                                disabled
+                                size="xl"
+                                id="picker-disabled-invalid-quiet-xl"
+                            >
+                                <sp-menu-item>Deselect</sp-menu-item>
+                                <sp-menu-item>Select inverse</sp-menu-item>
+                                <sp-menu-item>Feather...</sp-menu-item>
+                                <sp-menu-item>Select and mask...</sp-menu-item>
+                                <sp-menu-divider></sp-menu-divider>
+                                <sp-menu-item>Save selection</sp-menu-item>
+                                <sp-menu-item disabled>
+                                    Make work path
+                                </sp-menu-item>
+                            </sp-picker>
+                        </div>
+                    </sp-field-group>
+                </div>
+            </div>
+
+            <div id="variantLabel">icos</div>
+            <div class="demo-example" style="display: flex">
+                <sp-field-label for="picker-icons">
+                    Choose an action...
+                </sp-field-label>
+                <sp-picker
+                    label="What would you like to do?"
+                    value="item-2"
+                    id="picker-icons"
+                >
+                    <sp-menu-item>
+                        <sp-icon-save-floppy slot="icon"></sp-icon-save-floppy>
+                        Save
+                    </sp-menu-item>
+                    <sp-menu-item>
+                        <sp-icon-stopwatch slot="icon"></sp-icon-stopwatch>
+                        Finish
+                    </sp-menu-item>
+                    <sp-menu-item>
+                        <sp-icon-user-activity
+                            slot="icon"
+                        ></sp-icon-user-activity>
+                        Review
+                    </sp-menu-item>
+                </sp-picker>
+            </div>
+
+            <div class="demo-example" style="display: flex">
+                <sp-field-label for="picker-icons-only">
+                    Choose an action...
+                </sp-field-label>
+                <sp-picker
+                    label="What would you like to do?"
+                    value="item-2"
+                    id="picker-icons-only"
+                >
+                    <sp-menu-item value="item-1">
+                        <sp-icon-save-floppy
+                            slot="icon"
+                            label="Save"
+                        ></sp-icon-save-floppy>
+                    </sp-menu-item>
+                    <sp-menu-item value="item-2">
+                        <sp-icon-stopwatch
+                            slot="icon"
+                            label="Finish"
+                        ></sp-icon-stopwatch>
+                    </sp-menu-item>
+                    <sp-menu-item value="item-3">
+                        <sp-icon-user-activity
+                            slot="icon"
+                            label="Review"
+                        ></sp-icon-user-activity>
+                    </sp-menu-item>
+                </sp-picker>
+            </div>
+
+            <div class="demo-example" style="display: flex">
+                <sp-field-label for="picker-icons-value">
+                    Choose an action...
+                </sp-field-label>
+                <sp-picker
+                    label="What would you like to do?"
+                    value="item-2"
+                    id="picker-icons-value"
+                    icons="only"
+                >
+                    <sp-menu-item>
+                        <sp-icon-save-floppy slot="icon"></sp-icon-save-floppy>
+                        Save
+                    </sp-menu-item>
+                    <sp-menu-item>
+                        <sp-icon-stopwatch slot="icon"></sp-icon-stopwatch>
+                        Finish
+                    </sp-menu-item>
+                    <sp-menu-item>
+                        <sp-icon-user-activity
+                            slot="icon"
+                        ></sp-icon-user-activity>
+                        Review
+                    </sp-menu-item>
+                </sp-picker>
+            </div>
+
+            <div class="demo-example" style="display: flex">
+                <sp-field-label for="picker-icons-none">
+                    Choose an action...
+                </sp-field-label>
+                <sp-picker
+                    label="What would you like to do?"
+                    value="item-2"
+                    id="picker-icons-none"
+                    icons="none"
+                >
+                    <sp-menu-item>
+                        <sp-icon-save-floppy slot="icon"></sp-icon-save-floppy>
+                        Save
+                    </sp-menu-item>
+                    <sp-menu-item>
+                        <sp-icon-stopwatch slot="icon"></sp-icon-stopwatch>
+                        Finish
+                    </sp-menu-item>
+                    <sp-menu-item>
+                        <sp-icon-user-activity
+                            slot="icon"
+                        ></sp-icon-user-activity>
+                        Review
+                    </sp-menu-item>
+                </sp-picker>
+            </div>
+
+            <div id="variantLabel">matching value</div>
+            <div class="demo-example" style="display: flex">
+                <sp-field-label for="picker-value">
+                    Selection type:
+                </sp-field-label>
+                <sp-picker
+                    label="Select a Country with a very long label, too long in fact"
+                    value="item-2"
+                    id="picker-value"
+                >
+                    <sp-menu-item value="item-1">Deselect</sp-menu-item>
+                    <sp-menu-item value="item-2">Select inverse</sp-menu-item>
+                    <sp-menu-item value="item-3">Feather...</sp-menu-item>
+                    <sp-menu-item value="item-4">
+                        Select and mask...
+                    </sp-menu-item>
+                    <sp-menu-divider></sp-menu-divider>
+                    <sp-menu-item value="item-5">Save selection</sp-menu-item>
+                    <sp-menu-item disabled value="item-6">
+                        Make work path
+                    </sp-menu-item>
+                </sp-picker>
+            </div>
+
+            <div id="variantLabel">matching itemText</div>
+            <div class="demo-example" style="display: flex">
+                <sp-field-label for="picker-item-text">
+                    Selection type:
+                </sp-field-label>
+                <sp-picker
+                    label="Select a Country with a very long label, too long in fact"
+                    value="Feather..."
+                    id="picker-item-text"
+                >
+                    <sp-menu-item>Deselect</sp-menu-item>
+                    <sp-menu-item>Select inverse</sp-menu-item>
+                    <sp-menu-item>Feather...</sp-menu-item>
+                    <sp-menu-item>Select and mask...</sp-menu-item>
+                    <sp-menu-divider></sp-menu-divider>
+                    <sp-menu-item>Save selection</sp-menu-item>
+                    <sp-menu-item>Make work path</sp-menu-item>
+                </sp-picker>
+            </div>
+
+            <div id="variantLabel">side label</div>
+            <div class="demo-example" style="display: flex">
+                <sp-field-group>
+                    <div class="variantDiv">
+                        <sp-field-label
+                            side-aligned="start"
+                            for="picker-sideLabel"
+                        >
+                            Standard:
+                        </sp-field-label>
+                        <sp-picker
+                            label="Select a Country with a very long label, too long in fact"
+                            id="picker-sideLabel"
+                        >
+                            <sp-menu-item>Deselect</sp-menu-item>
+                            <sp-menu-item>Select inverse</sp-menu-item>
+                            <sp-menu-item>Feather...</sp-menu-item>
+                            <sp-menu-item>Select and mask...</sp-menu-item>
+                            <sp-menu-divider></sp-menu-divider>
+                            <sp-menu-item>Save selection</sp-menu-item>
+                            <sp-menu-item disabled>Make work path</sp-menu-item>
+                        </sp-picker>
+                    </div>
+                    <div>
+                        <sp-field-label
+                            side-aligned="start"
+                            for="picker-sideLabel-quiet"
+                        >
+                            Quiet:
+                        </sp-field-label>
+                        <sp-picker
+                            label="Select a Country with a very long label, too long in fact"
+                            quiet
+                            id="picker-sideLabel-quiet"
+                        >
+                            <sp-menu-item>Deselect</sp-menu-item>
+                            <sp-menu-item>Select inverse</sp-menu-item>
+                            <sp-menu-item>Feather...</sp-menu-item>
+                            <sp-menu-item>Select and mask...</sp-menu-item>
+                            <sp-menu-divider></sp-menu-divider>
+                            <sp-menu-item>Save selection</sp-menu-item>
+                            <sp-menu-item disabled>Make work path</sp-menu-item>
+                        </sp-picker>
+                    </div>
+                </sp-field-group>
+            </div>
+        </div>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-picker</div>
+        </div>
+    </div>
+
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
+    </div>
+</div>

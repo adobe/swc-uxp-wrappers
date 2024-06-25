@@ -15,6 +15,8 @@ governing permissions and limitations under the License.
  *  integrator have to import these aliases list in the bundler/package manager and pass on to aliasing module.
  */
 export const aliases = {
+    '@spectrum-web-components/reactive-controllers/src/MatchMedia.js':
+        '@swc-uxp-wrappers/utils/src/MatchMediaController.js',
     '@spectrum-web-components/banner': '@swc-uxp-wrappers/banner',
     '@spectrum-web-components/divider': '@swc-uxp-wrappers/divider',
     '@spectrum-web-components/illustrated-message':
@@ -50,6 +52,16 @@ export const aliases = {
     '@spectrum-web-components/sidenav': '@swc-uxp-wrappers/sidenav',
     '@spectrum-web-components/swatch': '@swc-uxp-wrappers/swatch',
     '@spectrum-web-components/overlay': '@swc-uxp-wrappers/overlay',
+    '@spectrum-web-components/picker': '@swc-uxp-wrappers/picker',
+    '@spectrum-web-components/action-menu': '@swc-uxp-wrappers/action-menu',
+    '@spectrum-web-components/tabs': '@swc-uxp-wrappers/tabs',
+    '@spectrum-web-components/slider': '@swc-uxp-wrappers/slider',
+    '@spectrum-web-components/accordion': '@swc-uxp-wrappers/accordion',
+    '@spectrum-web-components/split-view': '@swc-uxp-wrappers/split-view',
+    '@spectrum-web-components/progress-bar': '@swc-uxp-wrappers/progress-bar',
+    '@spectrum-web-components/underlay': '@swc-uxp-wrappers/underlay',
+    '@spectrum-web-components/progress-circle':
+        '@swc-uxp-wrappers/progress-circle',
     '../sp-menu.dev.js': '@swc-uxp-wrappers/menu/sp-menu.js',
     '../sp-menu.js': '@swc-uxp-wrappers/menu/sp-menu.js',
 };

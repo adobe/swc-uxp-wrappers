@@ -45,8 +45,6 @@ import { Meter } from '@swc-uxp-wrappers/meter';
 ```
 
 ## Known Issues
-- Duplicate content appears in this way of usage `<sp-meter>Task Status</sp-meter>`, known SWC library issue. 
-    - Workaround : use `<sp-meter label="Task Status"></sp-meter>`
 
-
-
+-   Duplicate content appears in this way of usage `<sp-meter>Task Status</sp-meter>`, known SWC library issue.
+    -   Workaround : use `<sp-meter label="Task Status"></sp-meter>`

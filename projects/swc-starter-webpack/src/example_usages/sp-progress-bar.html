@@ -1,0 +1,81 @@
+<!-- 
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License. 
+-->
+
+<h3>sp-progress-bar</h3>
+
+<div id="content">
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-progress-bar</div>
+            <div
+                style="
+                    width: 240px;
+                    height: 160px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                "
+            >
+                <sp-progress-bar
+                    size="m"
+                    label="Loaded a little"
+                    progress="22"
+                ></sp-progress-bar>
+            </div>
+
+            <div
+                style="
+                    width: 240px;
+                    height: 160px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                    background-color: var(--spectrum-transparent-black-400);
+                "
+            >
+                <sp-progress-bar
+                    label="Loaded a large amount"
+                    progress="77"
+                    over-background
+                ></sp-progress-bar>
+            </div>
+
+            <div
+                style="
+                    width: 240px;
+                    height: 160px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: space-around;
+                "
+            >
+                <sp-progress-bar
+                    label="Loaded an unclear amount"
+                    indeterminate
+                ></sp-progress-bar>
+            </div>
+        </div>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-progress-bar</div>
+        </div>
+    </div>
+
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
+    </div>
+</div>

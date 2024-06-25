@@ -1,0 +1,84 @@
+/*
+Copyright 2024 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* write uxp style overrides */
+
+:host {
+    display: block;
+}
+
+#list {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+:host([direction^='horizontal']) #list #selection-indicator {
+    height: var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size));
+    bottom: 0;
+}
+
+:host([direction^='horizontal'])
+    #list
+    ::slotted(:not([slot]):not(:first-child)) {
+    margin-left: var(
+        --mod-tabs-item-horizontal-spacing,
+        var(--spectrum-tabs-item-horizontal-spacing)
+    );
+}
+
+/* focus ring support an issue */
+::slotted(:not([slot])):focus-visible:before,
+::slotted(:not([slot])):focus:before {
+    border-color: transparent;
+}
+
+:host([direction='vertical-right']) #list #selection-indicator,
+:host([direction='vertical']) #list #selection-indicator {
+    top: 0;
+}
+
+:host([direction^='vertical-right']) #list #selection-indicator,
+:host([direction^='vertical']) #list #selection-indicator {
+    width: var(--mod-tabs-divider-size, var(--spectrum-tabs-divider-size));
+    top: 0;
+    left: 0;
+}
+
+:host([direction^='vertical-right']) #list ::slotted(:not([slot])),
+:host([direction^='vertical']) #list ::slotted(:not([slot])) {
+    height: var(--mod-tabs-item-height, var(--spectrum-tabs-item-height));
+    margin-bottom: var(
+        --mod-tabs-item-vertical-spacing,
+        var(--spectrum-tabs-item-vertical-spacing)
+    );
+    margin-right: var(
+        --mod-tabs-start-to-edge,
+        var(--spectrum-tabs-start-to-edge)
+    );
+    margin-left: var(
+        --mod-tabs-start-to-edge,
+        var(--spectrum-tabs-start-to-edge)
+    );
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+:host([direction^='horizontal'][quiet])
+    ::slotted([slot='tab-panel'][selected]) {
+    display: block;
+}
+
+:host([direction^='vertical']) ::slotted([sp-tab] ::slotted([slot='icon'])) {
+    margin-top: calc(
+        var(--mod-tabs-top-to-icon, var(--spectrum-tabs-top-to-icon)) / 2
+    );
+}

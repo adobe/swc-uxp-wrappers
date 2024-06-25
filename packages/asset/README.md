@@ -43,6 +43,7 @@ import { Asset } from '@swc-uxp-wrappers/asset';
 ```html
 <sp-asset></sp-asset>
 ```
-## Known Issues
-- For variant file or folder, one needs to explicitly set height and/or width in the plugin
 
+## Known Issues
+
+-   For variant file or folder, one needs to explicitly set height and/or width in the plugin

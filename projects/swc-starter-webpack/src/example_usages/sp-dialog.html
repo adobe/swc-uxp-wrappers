@@ -10,6 +10,29 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License. 
 -->
 
+<overlay-trigger type="modal">
+    <sp-dialog-base underlay slot="click-content">
+        <sp-dialog size="s">
+            <h2 slot="heading">A thing is about to happen</h2>
+            <p>Something that might happen a lot is about to happen.</p>
+            <p>
+                The click events for the "OK" button are bound to the story not
+                to the components in specific.
+            </p>
+            <sp-button
+                variant="secondary"
+                treatment="fill"
+                slot="button"
+                onclick="this.dispatchEvent(new Event('close', { bubbles: true, composed: true }));"
+            >
+                Ok
+            </sp-button>
+            <sp-checkbox slot="footer">Don't show me this again</sp-checkbox>
+        </sp-dialog>
+    </sp-dialog-base>
+    <sp-button slot="trigger" variant="primary">Toggle Dialog</sp-button>
+</overlay-trigger>
+
 <sp-dialog size="m">
     <h2 slot="heading">Disclaimer</h2>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

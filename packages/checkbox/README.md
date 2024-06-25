@@ -43,5 +43,7 @@ import { Checkbox } from '@swc-uxp-wrappers/checkbox';
 ```html
 <sp-checkbox></sp-checkbox>
 ```
+
 ## Known Issues
-- Tab navigation is not supported
+
+-   Tab navigation is not supported

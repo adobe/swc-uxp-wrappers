@@ -1,0 +1,196 @@
+<!-- 
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License. 
+-->
+
+<h3>sp-tabs</h3>
+
+<div id="content">
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-tabs</div>
+
+            <sp-tabs selected="1" size="m">
+                <sp-tab label="Tab 1" value="1"></sp-tab>
+                <sp-tab label="Tab 2" value="2"></sp-tab>
+                <sp-tab label="Tab 3" value="3"></sp-tab>
+                <sp-tab label="Tab 4" value="4"></sp-tab>
+                <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                <sp-tab-panel value="2">Content for Tab 2</sp-tab-panel>
+                <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+            </sp-tabs>
+
+            <sp-tabs selected="2" disabled>
+                <sp-tab label="Tab 1" value="1"></sp-tab>
+                <sp-tab label="Tab 2" value="2"></sp-tab>
+                <sp-tab label="Tab 3" value="3"></sp-tab>
+                <sp-tab label="Tab 4" value="4"></sp-tab>
+                <sp-tab-panel value="1">
+                    Content for Tab 1 is not selectable
+                </sp-tab-panel>
+                <sp-tab-panel value="2">
+                    Content for Tab 2 is selected
+                </sp-tab-panel>
+                <sp-tab-panel value="3">
+                    Content for Tab 3 is not selectable
+                </sp-tab-panel>
+                <sp-tab-panel value="4">
+                    Content for Tab 4 is not selectable
+                </sp-tab-panel>
+            </sp-tabs>
+
+            <sp-tabs selected="1" compact>
+                <sp-tab label="Tab 1" value="1"></sp-tab>
+                <sp-tab label="Tab 2" value="2"></sp-tab>
+                <sp-tab label="Tab 3" value="3"></sp-tab>
+                <sp-tab label="Tab 4" value="4"></sp-tab>
+                <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                <sp-tab-panel value="2">Content for Tab 2</sp-tab-panel>
+                <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+            </sp-tabs>
+
+            <sp-tabs selected="1" quiet>
+                <sp-tab label="Tab 1" value="1"></sp-tab>
+                <sp-tab label="Tab 2" value="2"></sp-tab>
+                <sp-tab label="Tab 3" value="3"></sp-tab>
+                <sp-tab label="Tab 4" value="4"></sp-tab>
+                <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                <sp-tab-panel value="2">Content for Tab 2</sp-tab-panel>
+                <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+            </sp-tabs>
+
+            <sp-tabs selected="1" quiet compact>
+                <sp-tab label="Tab 1" value="1"></sp-tab>
+                <sp-tab label="Tab 2" value="2"></sp-tab>
+                <sp-tab label="Tab 3" value="3"></sp-tab>
+                <sp-tab label="Tab 4" value="4"></sp-tab>
+                <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                <sp-tab-panel value="2">Content for Tab 2</sp-tab-panel>
+                <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+            </sp-tabs>
+
+            <sp-tabs selected="1">
+                <sp-tab label="Tab 1" value="1">
+                    <sp-icon-edit slot="icon"></sp-icon-edit>
+                </sp-tab>
+                <sp-tab label="Tab 2" value="2">
+                    <sp-icon-more slot="icon"></sp-icon-more>
+                </sp-tab>
+                <sp-tab label="Tab 3" value="3">
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                </sp-tab>
+                <sp-tab label="Tab 4" value="4">
+                    <sp-icon-stopwatch slot="icon"></sp-icon-stopwatch>
+                </sp-tab>
+                <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                <sp-tab-panel value="2">Content for Tab 2</sp-tab-panel>
+                <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+            </sp-tabs>
+
+            <sp-tabs selected="1" direction="vertical">
+                <sp-tab label="Tab 1" value="1"></sp-tab>
+                <sp-tab label="Tab 2" value="2"></sp-tab>
+                <sp-tab label="Tab 3" value="3"></sp-tab>
+                <sp-tab label="Tab 4" value="4"></sp-tab>
+                <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                <sp-tab-panel value="2">Content for Tab 2</sp-tab-panel>
+                <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+            </sp-tabs>
+
+            <sp-tabs selected="1" compact direction="vertical">
+                <sp-tab label="Tab 1" value="1"></sp-tab>
+                <sp-tab label="Tab 2" value="2"></sp-tab>
+                <sp-tab label="Tab 3" value="3"></sp-tab>
+                <sp-tab label="Tab 4" value="4"></sp-tab>
+                <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                <sp-tab-panel value="2">Content for Tab 2</sp-tab-panel>
+                <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+            </sp-tabs>
+
+            <sp-tabs selected="2" disabled direction="vertical">
+                <sp-tab label="Tab 1" value="1"></sp-tab>
+                <sp-tab label="Tab 2" value="2"></sp-tab>
+                <sp-tab label="Tab 3" value="3"></sp-tab>
+                <sp-tab label="Tab 4" value="4"></sp-tab>
+                <sp-tab-panel value="1">
+                    Content for Tab 1 is not selectable
+                </sp-tab-panel>
+                <sp-tab-panel value="2">
+                    Content for Tab 2 is selected
+                </sp-tab-panel>
+                <sp-tab-panel value="3">
+                    Content for Tab 3 is not selectable
+                </sp-tab-panel>
+                <sp-tab-panel value="4">
+                    Content for Tab 4 is not selectable
+                </sp-tab-panel>
+            </sp-tabs>
+
+            <sp-tabs selected="1" quiet direction="vertical">
+                <sp-tab label="Tab 1" value="1"></sp-tab>
+                <sp-tab label="Tab 2" value="2"></sp-tab>
+                <sp-tab label="Tab 3" value="3"></sp-tab>
+                <sp-tab label="Tab 4" value="4"></sp-tab>
+                <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                <sp-tab-panel value="2">Content for Tab 2</sp-tab-panel>
+                <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+            </sp-tabs>
+
+            <sp-tabs selected="1" quiet compact direction="vertical">
+                <sp-tab label="Tab 1" value="1"></sp-tab>
+                <sp-tab label="Tab 2" value="2"></sp-tab>
+                <sp-tab label="Tab 3" value="3"></sp-tab>
+                <sp-tab label="Tab 4" value="4"></sp-tab>
+                <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                <sp-tab-panel value="2">Content for Tab 2</sp-tab-panel>
+                <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+            </sp-tabs>
+
+            <sp-tabs selected="1" direction="vertical">
+                <sp-tab label="Tab 1" value="1">
+                    <sp-icon-edit slot="icon"></sp-icon-edit>
+                </sp-tab>
+                <sp-tab label="Tab 2" value="2">
+                    <sp-icon-more slot="icon"></sp-icon-more>
+                </sp-tab>
+                <sp-tab label="Tab 3" value="3">
+                    <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                </sp-tab>
+                <sp-tab label="Tab 4" value="4">
+                    <sp-icon-stopwatch slot="icon"></sp-icon-stopwatch>
+                </sp-tab>
+                <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                <sp-tab-panel value="2">Content for Tab 2</sp-tab-panel>
+                <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+            </sp-tabs>
+        </div>
+
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-tabs</div>
+        </div>
+    </div>
+
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
+    </div>
+</div>
