@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/picker-button",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -23,8 +23,8 @@
         "./sp-picker-button.js": "./sp-picker-button.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/picker-button": "npm:@spectrum-web-components/picker-button@0.1.4",
-        "@swc-uxp-wrappers/button": "1.0.0"
+        "@swc-uxp-internal/picker-button": "npm:@spectrum-web-components/picker-button@0.37.0",
+        "@swc-uxp-wrappers/button": "2.0.0"
     },
     "files": [
         "**/*.js"

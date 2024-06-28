@@ -1,0 +1,36 @@
+{
+    "name": "@swc-uxp-wrappers/asset",
+    "version": "2.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/asset component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/asset"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/Asset.js": "./src/Asset.js",
+        "./src/asset.css.js": "./src/asset.css.js",
+        "./sp-asset.js": "./sp-asset.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/asset": "npm:@spectrum-web-components/asset@0.37.0"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/asset"
+    ]
+}
