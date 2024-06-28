@@ -6,7 +6,7 @@
 This is UXP wrapper for `@spectrum-web-components/radio` package 
 <br />
 
--   For detailed README regarding `@spectrum-web-components/radio` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/radio/v/0.37.0)
+-   For detailed README regarding `@spectrum-web-components/radio` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/radio/v/0.10.0)
 
 -   Detailed specification regarding `@spectrum-web-components/radio` support in UXP through `@swc-uxp-wrappers/radio` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
 

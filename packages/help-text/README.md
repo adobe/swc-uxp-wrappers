@@ -6,7 +6,7 @@
 This is UXP wrapper for `@spectrum-web-components/help-text` package 
 <br />
 
--   For detailed README regarding `@spectrum-web-components/help-text` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/help-text/v/0.37.0)
+-   For detailed README regarding `@spectrum-web-components/help-text` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/help-text/v/0.2.7)
 
 -   Detailed specification regarding `@spectrum-web-components/help-text` support in UXP through `@swc-uxp-wrappers/help-text` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
 

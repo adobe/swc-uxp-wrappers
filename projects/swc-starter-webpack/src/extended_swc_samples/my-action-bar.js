@@ -18,10 +18,7 @@ class MyActionBar extends ActionBar {
         ActionBar.styles,
         css`
             :host([open]) {
-                background-color: darkgray;
-                padding: 10px;
-                border-radius: 10px;
-                box-shadow: 0px 0px 30px darkgrey;
+                background-color: antiquewhite;
             }
         `,
     ];

@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/button",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -29,7 +29,7 @@
         "./src/button-base.css.js": "./src/button-base.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/button": "npm:@spectrum-web-components/button@0.37.0"
+        "@swc-uxp-internal/button": "npm:@spectrum-web-components/button@0.19.8"
     },
     "files": [
         "**/*.js"

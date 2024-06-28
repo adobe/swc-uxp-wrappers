@@ -10,18 +10,19 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { TextfieldBase } from '@spectrum-web-components/textfield';
+import { Textfield } from '@spectrum-web-components/textfield';
 import { css } from 'lit';
 
-class MyTextfieldBase extends TextfieldBase {
+class MyTextfield extends Textfield {
     static styles = [
-        TextfieldBase.styles,
+        Textfield.styles,
         css`
             .input {
-                background-color: aquamarine;
+                background-color: darkcyan;
+                color: antiquewhite;
             }
         `,
     ];
 }
 
-customElements.define('my-textfield', MyTextfieldBase);
+customElements.define('my-textfield', MyTextfield);

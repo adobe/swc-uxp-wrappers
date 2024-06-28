@@ -11,8 +11,3 @@ governing permissions and limitations under the License.
 */
 
 /* write uxp style overrides */
-
-/* Workaround for https://jira.corp.adobe.com/browse/UXP-22533 */
-:host {
-    display: inline-block;
-}

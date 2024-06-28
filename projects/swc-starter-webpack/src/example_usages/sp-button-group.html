@@ -11,46 +11,29 @@ governing permissions and limitations under the License.
 -->
 
 <h3>sp-button-group</h3>
+<div style="display: inline-block">
+    <sp-button-group style="margin-bottom: 20px; width: fit-content">
+        <sp-button>Button 1</sp-button>
+        <sp-button>Longer Button 2</sp-button>
+        <sp-button>Short 3</sp-button>
+    </sp-button-group>
 
-<div id="content">
-    <div id="playground">
-        <div id="left">
-            <div id="subtitle">sp-button-group</div>
-            <div id="variantLabel">horizontal</div>
-            <div class="demo-example" style="display: flex">
-                <sp-button-group>
-                    <sp-button>Button 1</sp-button>
-                    <sp-button>Longer Button 2</sp-button>
-                    <sp-button>Short 3</sp-button>
-                </sp-button-group>
-            </div>
-            <div id="variantLabel">vertical</div>
-            <div class="demo-example" style="display: flex">
-                <sp-button-group vertical style="margin-right: 40px">
-                    <sp-button>Button 1</sp-button>
-                    <sp-button>Longer Button 2</sp-button>
-                    <sp-button>Short 3</sp-button>
-                </sp-button-group>
-            </div>
-        </div>
-        <input type="text" style="width: 2px" />
-        <div id="right">
-            <div id="subtitle">my-button-group</div>
-            <my-button-group style="margin-bottom: 20px; width: fit-content">
-                <sp-button>Button 1</sp-button>
-                <sp-button>Longer Button 2</sp-button>
-                <sp-button>Short 3</sp-button>
-            </my-button-group>
-            <my-button-group vertical>
-                <sp-button>Button 1</sp-button>
-                <sp-button>Longer Button 2</sp-button>
-                <sp-button>Short 3</sp-button>
-            </my-button-group>
-        </div>
-    </div>
-    <div id="config">
-        <div style="display: inline-flex"></div>
+    <my-button-group style="margin-bottom: 20px; width: fit-content">
+        <sp-button>Button 1</sp-button>
+        <sp-button>Longer Button 2</sp-button>
+        <sp-button>Short 3</sp-button>
+    </my-button-group>
+</div>
+<div style="display: inline-block">
+    <sp-button-group vertical style="margin-right: 40px">
+        <sp-button>Button 1</sp-button>
+        <sp-button>Longer Button 2</sp-button>
+        <sp-button>Short 3</sp-button>
+    </sp-button-group>
 
-        <div style="display: flex; flex-direction: column"></div>
-    </div>
+    <my-button-group vertical>
+        <sp-button>Button 1</sp-button>
+        <sp-button>Longer Button 2</sp-button>
+        <sp-button>Short 3</sp-button>
+    </my-button-group>
 </div>

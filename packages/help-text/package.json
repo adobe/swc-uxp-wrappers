@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/help-text",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -27,7 +27,7 @@
         "./HelpTextManager.js": "./src/HelpTextManager.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/help-text": "npm:@spectrum-web-components/help-text@0.37.0"
+        "@swc-uxp-internal/help-text": "npm:@spectrum-web-components/help-text@0.2.7"
     },
     "files": [
         "**/*.js"

@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/avatar",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -23,7 +23,7 @@
         "./src/avatar.css.js": "./src/avatar.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/avatar": "npm:@spectrum-web-components/avatar@0.37.0"
+        "@swc-uxp-internal/avatar": "npm:@spectrum-web-components/avatar@0.10.3"
     },
     "files": [
         "**/*.js"

@@ -11,24 +11,24 @@
         {
             "type": "panel",
             "id": "vanilla",
+            "label": {
+                "default": "SWC Starter"
+            },
             "minimumSize": {
-                "width": 230,
-                "height": 200
+                "width": 1200,
+                "height": 800
             },
             "maximumSize": {
-                "width": 2000,
-                "height": 2000
+                "width": 1200,
+                "height": 800
             },
             "preferredDockedSize": {
-                "width": 230,
-                "height": 300
+                "width": 1200,
+                "height": 800
             },
             "preferredFloatingSize": {
-                "width": 230,
-                "height": 300
-            },
-            "label": {
-                "default": "Starter Panel"
+                "width": 1200,
+                "height": 800
             }
         }
     ],

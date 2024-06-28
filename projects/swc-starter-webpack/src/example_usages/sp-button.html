@@ -13,277 +13,60 @@ governing permissions and limitations under the License.
 <h3>sp-button</h3>
 
 <div id="content">
-    <div id="playground">
-        <div id="left">
-            <div id="subtitle">sp-button</div>
-
-            <div id="variantLabel">sizes</div>
-            <div class="demo-example" style="display: flex">
-                <div class="size-div" style="display: block">
-                    <sp-field-label for="s">Small</sp-field-label>
-                    <sp-button size="s">Small</sp-button>
-                </div>
-
-                <div class="size-div" style="display: block; margin-left: 10px">
-                    <sp-field-label for="m">Medium</sp-field-label>
-                    <sp-button size="m">Medium</sp-button>
-                </div>
-
-                <div class="size-div" style="display: block; margin-left: 10px">
-                    <sp-field-label for="L">Large</sp-field-label>
-                    <sp-button size="l">Large</sp-button>
-                </div>
-
-                <div class="size-div" style="display: block; margin-left: 10px">
-                    <sp-field-label for="XL">Extra large</sp-field-label>
-                    <sp-button size="xl">Extra large</sp-button>
-                </div>
-            </div>
-
-            <div id="variantLabel">content</div>
-            <div class="demo-example" style="display: flex">
-                <sp-button-group>
-                    <sp-button variant="primary">Label only</sp-button>
-                    <sp-button variant="primary">
-                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
-                        Icon + Label
-                    </sp-button>
-                    <sp-button variant="primary">
-                        <svg
-                            slot="icon"
-                            viewBox="0 0 36 36"
-                            focusable="false"
-                            aria-hidden="true"
-                            role="img"
-                        >
-                            <path
-                                d="M16 36a4.407 4.407 0 0 0 4-4h-8a4.407 4.407 0 0 0 4 4zm9.143-24.615c0-3.437-3.206-4.891-7.143-5.268V3a1.079 1.079 0 0 0-1.143-1h-1.714A1.079 1.079 0 0 0 14 3v3.117c-3.937.377-7.143 1.831-7.143 5.268C6.857 26.8 2 26.111 2 28.154V30h28v-1.846C30 26 25.143 26.8 25.143 11.385z"
-                            ></path>
-                        </svg>
-                        SVG Icon + Label
-                    </sp-button>
-                    <sp-button variant="primary" label="Icon only" icon-only>
-                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
-                    </sp-button>
-                </sp-button-group>
-            </div>
-
-            <div id="variantLabel">variants</div>
-            <div class="demo-example" style="display: flex">
-                <sp-button-group style="min-width: max-content">
-                    <sp-button variant="accent">Label only</sp-button>
-                    <sp-button variant="accent">
-                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
-                        Icon + Label
-                    </sp-button>
-                    <sp-button variant="accent" label="Icon only" icon-only>
-                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
-                    </sp-button>
-                </sp-button-group>
-            </div>
-
-            <div class="demo-example" style="display: flex">
-                <sp-button-group style="min-width: max-content">
-                    <sp-button variant="primary">Label only</sp-button>
-                    <sp-button variant="primary">
-                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
-                        Icon + Label
-                    </sp-button>
-                    <sp-button variant="primary" label="Icon only" icon-only>
-                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
-                    </sp-button>
-                </sp-button-group>
-            </div>
-
-            <div class="demo-example" style="display: flex">
-                <sp-button-group style="min-width: max-content">
-                    <sp-button variant="secondary">Label only</sp-button>
-                    <sp-button variant="secondary">
-                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
-                        Icon + Label
-                    </sp-button>
-                    <sp-button variant="secondary" label="Icon only" icon-only>
-                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
-                    </sp-button>
-                </sp-button-group>
-            </div>
-
-            <div class="demo-example" style="display: flex">
-                <sp-button-group style="min-width: max-content">
-                    <sp-button variant="negative">Label only</sp-button>
-                    <sp-button variant="negative">
-                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
-                        Icon + Label
-                    </sp-button>
-                    <sp-button variant="negative" label="Icon only" icon-only>
-                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
-                    </sp-button>
-                </sp-button-group>
-            </div>
-
-            <div class="demo-example" style="display: flex">
-                <sp-button-group style="min-width: max-content">
-                    <sp-button static="black">Label only</sp-button>
-                    <sp-button static="black">
-                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
-                        Icon + Label
-                    </sp-button>
-                    <sp-button static="black" label="Icon only" icon-only>
-                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
-                    </sp-button>
-                </sp-button-group>
-            </div>
-
-            <div class="demo-example" style="display: flex">
-                <sp-button-group style="min-width: max-content">
-                    <sp-button static="white">Label only</sp-button>
-                    <sp-button static="white">
-                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
-                        Icon + Label
-                    </sp-button>
-                    <sp-button static="white" label="Icon only" icon-only>
-                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
-                    </sp-button>
-                </sp-button-group>
-            </div>
-
-            <div id="variantLabel">treatment</div>
-            <div class="demo-example" style="display: flex">
-                <sp-button-group style="min-width: max-content">
-                    <sp-button treatment="fill" variant="primary">
-                        Primary, Fill
-                    </sp-button>
-                    <sp-button treatment="fill" variant="secondary">
-                        Secondary, Fill
-                    </sp-button>
-                    <sp-button treatment="fill" variant="negative">
-                        Negative, Fill
-                    </sp-button>
-                </sp-button-group>
-            </div>
-
-            <div class="demo-example" style="display: flex">
-                <sp-button-group style="min-width: max-content">
-                    <sp-button treatment="outline" variant="primary">
-                        Primary, Outline
-                    </sp-button>
-                    <sp-button treatment="outline" variant="secondary">
-                        Secondary, Outline
-                    </sp-button>
-                    <sp-button treatment="outline" variant="negative">
-                        Negative, Outline
-                    </sp-button>
-                </sp-button-group>
-            </div>
-
-            <div class="demo-example" style="display: flex">
-                <sp-button-group
-                    style="
-                        background: var(--spectrum-seafoam-600);
-                        padding: 0.5em;
-                        min-width: max-content;
-                    "
-                >
-                    <sp-button treatment="outline" static="black">
-                        Label only
-                    </sp-button>
-                    <sp-button treatment="outline" static="black">
-                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
-                        Icon + Label
-                    </sp-button>
-                    <sp-button
-                        treatment="outline"
-                        static="black"
-                        label="Icon only"
-                        icon-only
-                    >
-                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
-                    </sp-button>
-                </sp-button-group>
-            </div>
-
-            <div class="demo-example" style="display: flex">
-                <sp-button-group
-                    style="
-                        background: var(--spectrum-seafoam-600);
-                        padding: 0.5em;
-                        min-width: max-content;
-                    "
-                >
-                    <sp-button treatment="outline" static="white">
-                        Label only
-                    </sp-button>
-                    <sp-button treatment="outline" static="white">
-                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
-                        Icon + Label
-                    </sp-button>
-                    <sp-button
-                        treatment="outline"
-                        static="white"
-                        label="Icon only"
-                        icon-only
-                    >
-                        <sp-icon-magnify slot="icon"></sp-icon-magnify>
-                    </sp-button>
-                </sp-button-group>
-            </div>
-
-            <div id="variantLabel">close button</div>
-            <div class="demo-example" style="display: flex">
-                <div class="size-div" style="display: block">
-                    <sp-field-label for="s">Small</sp-field-label>
-                    <sp-close-button size="s">Small</sp-close-button>
-                </div>
-
-                <div class="size-div" style="display: block; margin-left: 10px">
-                    <sp-field-label for="m">Medium</sp-field-label>
-                    <sp-close-button size="m">Medium</sp-close-button>
-                </div>
-
-                <div class="size-div" style="display: block; margin-left: 10px">
-                    <sp-field-label for="L">Large</sp-field-label>
-                    <sp-close-button size="l">Large</sp-close-button>
-                </div>
-
-                <div class="size-div" style="display: block; margin-left: 10px">
-                    <sp-field-label for="XL">Extra large</sp-field-label>
-                    <sp-close-button size="xl">Extra large</sp-close-button>
-                </div>
-            </div>
-
-            <div id="variantLabel">clear button</div>
-            <div class="demo-example" style="display: flex">
-                <div class="size-div" style="display: block">
-                    <sp-field-label for="s">Small</sp-field-label>
-                    <sp-clear-button size="s">Small</sp-clear-button>
-                </div>
-
-                <div class="size-div" style="display: block; margin-left: 10px">
-                    <sp-field-label for="m">Medium</sp-field-label>
-                    <sp-clear-button size="m">Medium</sp-clear-button>
-                </div>
-
-                <div class="size-div" style="display: block; margin-left: 10px">
-                    <sp-field-label for="L">Large</sp-field-label>
-                    <sp-clear-button size="l">Large</sp-clear-button>
-                </div>
-
-                <div class="size-div" style="display: block; margin-left: 10px">
-                    <sp-field-label for="XL">Extra large</sp-field-label>
-                    <sp-clear-button size="xl">Extra large</sp-clear-button>
-                </div>
-            </div>
+    <div id="left">
+        <div id="subtitle">sp-button</div>
+        <div>
+            <sp-button
+                treatment="fill"
+                variant="primary"
+                style="margin: 10px; margin-left: 0px"
+            >
+                Primary, Fill
+            </sp-button>
+            <sp-button
+                treatment="fill"
+                variant="secondary"
+                style="margin: 10px"
+            >
+                Secondary, Fill
+            </sp-button>
+            <sp-button treatment="fill" variant="negative" style="margin: 10px">
+                Negative, Fill
+            </sp-button>
         </div>
-        <input type="text" style="width: 2px" />
-        <div id="right">
-            <div id="subtitle">my-button</div>
-            <my-button class="my-button">My Button</my-button>
+        <div>
+            <sp-button variant="primary" style="margin: 10px; margin-left: 0px">
+                <svg
+                    slot="icon"
+                    viewBox="0 0 36 36"
+                    focusable="false"
+                    aria-hidden="true"
+                    role="img"
+                >
+                    <path
+                        d="M16 36a4.407 4.407 0 0 0 4-4h-8a4.407 4.407 0 0 0 4 4zm9.143-24.615c0-3.437-3.206-4.891-7.143-5.268V3a1.079 1.079 0 0 0-1.143-1h-1.714A1.079 1.079 0 0 0 14 3v3.117c-3.937.377-7.143 1.831-7.143 5.268C6.857 26.8 2 26.111 2 28.154V30h28v-1.846C30 26 25.143 26.8 25.143 11.385z"
+                    ></path>
+                </svg>
+                SVG Icon + Label
+            </sp-button>
+            <sp-button variant="accent" style="margin: 10px">Accent</sp-button>
+            <sp-button variant="primary" disabled style="margin: 10px">
+                Disabled
+            </sp-button>
+            <sp-button variant="accent" style="margin: 10px">
+                <sp-icon-display-advert slot="icon"></sp-icon-display-advert>
+                Accent
+            </sp-button>
+            <sp-button variant="negative" style="margin: 10px">
+                <sp-icon-add-to-selection
+                    slot="icon"
+                ></sp-icon-add-to-selection>
+            </sp-button>
         </div>
     </div>
 
-    <div id="config">
-        <div style="display: inline-flex"></div>
-
-        <div style="display: flex; flex-direction: column"></div>
+    <div id="right">
+        <div id="subtitle">my-button</div>
+        <my-button class="my-button">My Button</my-button>
     </div>
 </div>

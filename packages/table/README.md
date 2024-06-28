@@ -6,7 +6,7 @@
 This is UXP wrapper for `@spectrum-web-components/table` package 
 <br />
 
--   For detailed README regarding `@spectrum-web-components/table` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/table/v/0.37.0)
+-   For detailed README regarding `@spectrum-web-components/table` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/table/v/0.1.7)
 
 -   Detailed specification regarding `@spectrum-web-components/table` support in UXP through `@swc-uxp-wrappers/table` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
 
@@ -43,6 +43,3 @@ import { Table } from '@swc-uxp-wrappers/table';
 ```html
 <sp-table></sp-table>
 ```
-## Known Issues
-- Virtualised table does not work
-- Selects attribute does not work

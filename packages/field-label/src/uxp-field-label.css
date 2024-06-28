@@ -39,10 +39,6 @@ governing permissions and limitations under the License.
 
 /* Workaround for - https://jira.corp.adobe.com/browse/UXP-21381 */
 :host {
-    min-height: var(
-        --mod-fieldlabel-min-height,
-        var(--spectrum-fieldlabel-min-height)
-    );
-    padding: var(--spectrum-fieldlabel-top-to-text) 0px
-        var(--spectrum-fieldlabel-bottom-to-text);
+    padding-top: var(--spectrum-fieldlabel-top-to-text);
+    padding-bottom: var(--spectrum-fieldlabel-bottom-to-text);
 }

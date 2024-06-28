@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/checkbox",
-    "version": "2.0.0",
+    "version": "1.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -24,7 +24,7 @@
         "./src/checkbox.css.js": "./src/checkbox.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/checkbox": "npm:@spectrum-web-components/checkbox@0.37.0"
+        "@swc-uxp-internal/checkbox": "npm:@spectrum-web-components/checkbox@0.14.0"
     },
     "files": [
         "**/*.js"

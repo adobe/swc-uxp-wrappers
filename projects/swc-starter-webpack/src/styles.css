@@ -15,63 +15,81 @@ governing permissions and limitations under the License.
 
 body {
     font-family: Arial;
+    overflow-y: scroll;
     max-height: 100vh;
 }
+
+.parentdiv {
+    display: flex;
+    flex-direction: column;
+}
+
 /* Style the tab */
 .tab {
     display: inline-flex;
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    background: var(--spectrum-global-color-gray-50);
-    padding: 30px 20px 30px 30px;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+    width: fit-content;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    padding: 30px;
+    margin: 30px;
+    overflow-y: auto;
 }
 
 /* Style the buttons inside the tab */
 .tab button {
     display: block;
-    padding: 22px 36px;
+    background-color: inherit;
+    color: black;
+    padding: 22px 16px;
     width: 100%;
     border: none;
     outline: none;
     text-align: left;
     cursor: pointer;
     transition: 0.3s;
-    margin: 2px;
+    font-size: 17px;
 }
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-    outline: 2px solid var(--spectrum-global-color-gray-500);
-    outline-offset: 1px;
-    width: 115%; /* Adjust the width as needed */
-    height: 115%; /* Adjust the height as needed */
-    background-color: var(--spectrum-global-color-gray-300);
+    background-color: #ddd;
 }
 
 /* Create an active/current "tab button" class */
 .tab button.active {
-    background-color: var(--spectrum-global-color-gray-200);
-    border-radius: 6px;
-    width: 120%; /* Adjust the width as needed */
-    height: 120%; /* Adjust the height as needed */
+    background-color: #ccc;
 }
 
 /* Style the tab content */
 .tabcontent {
     position: absolute;
     top: 0;
-    left: 285px;
-    background: var(--spectrum-global-color-gray-50);
+    left: 300px;
+    background: white;
     right: 0;
+    bottom: 0;
     padding: 20px;
-    height: 70vh;
-    border-left: 2px solid var(--spectrum-global-color-gray-700);
+    border: 1px solid #ccc;
     overflow-y: auto;
 }
 
+.demo-example {
+    flex: 1 1 0%;
+    max-width: 100%;
+    overflow: auto;
+    margin: 10px;
+    padding: 10px;
+}
+
 #content {
-    margin: 40px 0px;
+    margin: 20px;
+    padding: 20px;
     display: flex;
     border-radius: 5px;
 }
@@ -79,19 +97,15 @@ body {
 #left,
 #right {
     border-radius: 5px;
+    flex: 1 1 0%;
     max-width: 100%;
+    overflow: auto;
+    margin: 20px;
     padding: 20px;
-    background: var(--spectrum-global-color-gray-200);
+    background-color: #f5f5f5;
 }
 
-sp-action-group {
-    margin-bottom: 10px;
-}
-
-sp-textfield,
-sp-tags,
-sp-number-field,
-sp-search {
+sp-textfield {
     margin-bottom: 20px;
 }
 
@@ -99,38 +113,23 @@ sp-toast {
     margin: 20px;
 }
 
-sp-picker-button {
-    margin-bottom: 5px;
-}
-
 h3 {
-    color: var(--spectrum-global-color-gray-500);
+    color: black;
     font-family: 'Lato', sans-serif;
     font-size: 54px;
     font-weight: 300;
+    line-height: 58px;
+    margin: 0 0 58px;
 }
-
 #subtitle {
-    color: var(--spectrum-global-color-gray-100);
-    background: var(--spectrum-global-color-gray-400);
+    color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(202, 199, 199);
     font-size: 18px;
     margin: 0px 0px 30px 0px;
     padding: 8px;
     border-radius: 3px;
 }
-
-#variantLabel {
-    color: var(--spectrum-global-color-gray-500);
-    background: var(--spectrum-global-color-gray-300);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 12px;
-    margin: 20px 0px 20px 0px;
-    padding: 6px;
-    border-radius: 2px;
-    width: fit-content;
-}
-
 p {
     color: grey;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -138,104 +137,10 @@ p {
     text-indent: 30px;
     margin: 10px 0px 10px 0px;
 }
-
 .sub-heading {
-    color: var(--spectrum-global-color-gray-100);
+    color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 13px;
     margin-top: 30px;
     font-weight: bold;
-}
-
-.demo-example {
-    background: var(--spectrum-global-color-gray-100);
-    flex: 1 1 0%;
-    max-width: 100%;
-    padding: 10px 10px 10px 10px;
-    margin: 10px 10px 0px 0px;
-    position: relative;
-    z-index: 1;
-}
-
-.control-bar {
-    position: relative;
-    padding: 30px 30px 0px 50px;
-    width: fit-content;
-    display: flex;
-    justify-content: space-evenly;
-    flex-direction: column;
-}
-
-#global {
-    overflow-y: auto;
-    height: 100vh;
-    background: var(--spectrum-global-color-gray-50);
-}
-
-.size-div {
-    margin: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-#console {
-    margin-left: 15px;
-    padding: 20px;
-    border-radius: 5px;
-    background-color: var(--spectrum-global-color-gray-700);
-    color: var(--spectrum-global-color-gray-100);
-    font-size: small;
-    height: 300px;
-    width: 73%;
-    overflow-y: auto;
-    display: inline-flex;
-    flex: 0 0 74%;
-}
-
-#loging {
-    position: absolute;
-    left: 285px;
-    background: var(--spectrum-global-color-gray-50);
-    right: 0;
-    bottom: 0;
-    padding: 20px;
-    height: 30vh;
-    border-left: 2px solid var(--spectrum-global-color-gray-700);
-    overflow-y: auto;
-    display: flex;
-}
-
-#config {
-    flex: 0 0 24%;
-    border-radius: 5px;
-    overflow: auto;
-    margin-left: 20px;
-    padding: 20px;
-    background: var(--spectrum-global-color-gray-200);
-}
-
-#playground {
-    flex: 0 0 75%;
-    display: flex;
-    flex-direction: column;
-}
-
-#panel {
-    border: 1px solid var(--spectrum-global-color-gray-700);
-    border-radius: 5px;
-    padding: 10px 20px;
-    height: 300px;
-    width: 350px;
-    display: inline-flex;
-    flex-direction: column;
-    flex: 0 0 25%;
-}
-
-#panel > sp-checkbox {
-    margin-right: 5px;
-}
-
-#section {
-    border-left: 2px solid var(--spectrum-global-color-gray-700);
 }

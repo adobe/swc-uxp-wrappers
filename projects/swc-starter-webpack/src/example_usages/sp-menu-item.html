@@ -13,129 +13,100 @@ governing permissions and limitations under the License.
 <h3>sp-menu-item</h3>
 
 <div id="content">
-    <div id="playground">
-        <div id="left">
-            <div id="subtitle">sp-menu-item</div>
-            <div id="variantLabel">selected</div>
-            <div class="demo-example">
-                <sp-menu style="margin: 20px">
-                    <sp-menu-item selected>Deselect</sp-menu-item>
-                    <sp-menu-item selected>Select inverse</sp-menu-item>
-                    <sp-menu-item>Feather...</sp-menu-item>
-                    <sp-menu-item>Select and mask...</sp-menu-item>
-                    <sp-menu-item>Save selection</sp-menu-item>
-                </sp-menu>
-            </div>
-
-            <div id="variantLabel">disabled</div>
-            <div class="demo-example">
-                <sp-menu selects="single" style="margin: 20px">
-                    <sp-menu-item>Active Menu Item</sp-menu-item>
-                    <sp-menu-item disabled>Disabled Menu Item</sp-menu-item>
-                    <sp-menu-item>Selected Menu Item</sp-menu-item>
-                </sp-menu>
-            </div>
-
-            <div id="variantLabel">with icon</div>
-            <div class="demo-example">
-                <sp-menu style="width: 200px">
-                    <sp-menu-item>
-                        <sp-icon-save-floppy slot="icon"></sp-icon-save-floppy>
-                        Save
-                    </sp-menu-item>
-                    <sp-menu-item>
-                        <sp-icon-stopwatch slot="icon"></sp-icon-stopwatch>
-                        Finish
-                    </sp-menu-item>
-                    <sp-menu-item>
-                        <sp-icon-user-activity
-                            slot="icon"
-                        ></sp-icon-user-activity>
-                        Review
-                    </sp-menu-item>
-                </sp-menu>
-            </div>
-
-            <div id="variantLabel">kbd slotted items</div>
-            <div class="demo-example">
-                <sp-menu style="width: 150px" selects="single">
-                    <sp-menu-item>
-                        Save
-                        <kbd slot="value">⌘​S</kbd>
-                    </sp-menu-item>
-                    <sp-menu-item selected>
-                        Save As...
-                        <kbd slot="value">⇧​⌘​S</kbd>
-                    </sp-menu-item>
-                    <sp-menu-item disabled>
-                        Save All
-                        <kbd slot="value">⌥​⌘​S</kbd>
-                    </sp-menu-item>
-                </sp-menu>
-            </div>
-
-            <div id="variantLabel">value slot</div>
-            <div class="demo-example">
-                <sp-menu style="width: 200px">
-                    <sp-menu-item>
-                        Save
-                        <kbd slot="value">⌘S</kbd>
-                    </sp-menu-item>
-                    <sp-menu-item>
-                        Completed
-                        <bkd slot="value">47%</bkd>
-                    </sp-menu-item>
-                    <sp-menu-item>
-                        Activity
-                        <sp-link slot="value" href="#">More&nbsp;info</sp-link>
-                    </sp-menu-item>
-                </sp-menu>
-            </div>
-
-            <div id="variantLabel">no-wrap and wrap menu-item content</div>
-            <div class="demo-example">
-                <sp-popover
-                    open
-                    style="position: relative; margin-bottom: 10px"
-                >
-                    <sp-menu style="width: 300px">
-                        <sp-menu-item no-wrap>
-                            Select a Country with a very long label, too long,
-                            in fact
-                        </sp-menu-item>
-                        <sp-menu-item>
-                            Select a Country with a very long label, too long,
-                            in fact
-                        </sp-menu-item>
-                    </sp-menu>
-                </sp-popover>
-            </div>
+    <div id="left">
+        <div id="subtitle">sp-menu-item</div>
+        <div>
+            <sp-menu selects="multiple" style="margin: 20px">
+                <sp-menu-item selected>Deselect</sp-menu-item>
+                <sp-menu-item selected>Select inverse</sp-menu-item>
+                <sp-menu-item>Feather...</sp-menu-item>
+                <sp-menu-item>Select and mask...</sp-menu-item>
+                <sp-menu-item>Save selection</sp-menu-item>
+                <sp-menu-item disabled>Make work path</sp-menu-item>
+            </sp-menu>
         </div>
-        <input type="text" style="width: 2px" />
-        <div id="right">
-            <div id="subtitle">my-menu-item</div>
+        <div>
+            <sp-menu selects="single" style="margin: 20px">
+                <sp-menu-item>Active Menu Item</sp-menu-item>
+                <sp-menu-item disabled>Disabled Menu Item</sp-menu-item>
+                <sp-menu-item selected>Selected Menu Item</sp-menu-item>
+            </sp-menu>
+        </div>
+        <div>
             <sp-menu style="margin: 20px; width: 200px">
-                <my-menu-item class="my-menu-item">
-                    <sp-icon-edit slot="icon"></sp-icon-edit>
-                    Save
-                </my-menu-item>
                 <sp-menu-item>
-                    <sp-icon-alert slot="icon"></sp-icon-alert>
+                    <sp-icon size="s" slot="icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 22 22"
+                            role="img"
+                            fill="currentColor"
+                            height="18"
+                            width="18"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M19.75,10.04h-15l5.97-5.97a.483.483,0,0,0,0-.7l-.35-.36a.513.513,0,0,0-.71,0L2.24,10.44a.513.513,0,0,0,0,.71l7.39,7.84a.513.513,0,0,0,.71,0l.35-.35a.513.513,0,0,0,0-.71L4.76,11.5H19.75a.25.25,0,0,0,.25-.25v-.96A.25.25,0,0,0,19.75,10.04Z"
+                            ></path>
+                        </svg>
+                    </sp-icon>
+                    Save
+                </sp-menu-item>
+                <sp-menu-item>
+                    <sp-icon size="s" slot="icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 22 22"
+                            role="img"
+                            fill="currentColor"
+                            height="18"
+                            width="18"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M19.75,10.04h-15l5.97-5.97a.483.483,0,0,0,0-.7l-.35-.36a.513.513,0,0,0-.71,0L2.24,10.44a.513.513,0,0,0,0,.71l7.39,7.84a.513.513,0,0,0,.71,0l.35-.35a.513.513,0,0,0,0-.71L4.76,11.5H19.75a.25.25,0,0,0,.25-.25v-.96A.25.25,0,0,0,19.75,10.04Z"
+                            ></path>
+                        </svg>
+                    </sp-icon>
                     Finish
                 </sp-menu-item>
                 <sp-menu-item>
-                    <sp-icon-display-advert
-                        slot="icon"
-                    ></sp-icon-display-advert>
+                    <sp-icon size="s" slot="icon">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 22 22"
+                            role="img"
+                            fill="currentColor"
+                            height="18"
+                            width="18"
+                            aria-hidden="true"
+                        >
+                            <path
+                                d="M19.75,10.04h-15l5.97-5.97a.483.483,0,0,0,0-.7l-.35-.36a.513.513,0,0,0-.71,0L2.24,10.44a.513.513,0,0,0,0,.71l7.39,7.84a.513.513,0,0,0,.71,0l.35-.35a.513.513,0,0,0,0-.71L4.76,11.5H19.75a.25.25,0,0,0,.25-.25v-.96A.25.25,0,0,0,19.75,10.04Z"
+                            ></path>
+                        </svg>
+                    </sp-icon>
                     Review
                 </sp-menu-item>
             </sp-menu>
         </div>
     </div>
 
-    <div id="config">
-        <div style="display: inline-flex"></div>
-
-        <div style="display: flex; flex-direction: column"></div>
+    <div id="right">
+        <div id="subtitle">my-menu-item</div>
+        <sp-menu style="margin: 20px; width: 200px">
+            <my-menu-item class="my-menu-item">
+                <sp-icon-edit slot="icon"></sp-icon-edit>
+                Save
+            </my-menu-item>
+            <sp-menu-item>
+                <sp-icon-alert slot="icon"></sp-icon-alert>
+                Finish
+            </sp-menu-item>
+            <sp-menu-item>
+                <sp-icon-display-advert slot="icon"></sp-icon-display-advert>
+                Review
+            </sp-menu-item>
+        </sp-menu>
     </div>
 </div>

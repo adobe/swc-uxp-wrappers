@@ -6,7 +6,7 @@
 This is UXP wrapper for `@spectrum-web-components/field-label` package 
 <br />
 
--   For detailed README regarding `@spectrum-web-components/field-label` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/field-label/v/0.37.0)
+-   For detailed README regarding `@spectrum-web-components/field-label` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/field-label/v/0.10.3)
 
 -   Detailed specification regarding `@spectrum-web-components/field-label` support in UXP through `@swc-uxp-wrappers/field-label` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
 

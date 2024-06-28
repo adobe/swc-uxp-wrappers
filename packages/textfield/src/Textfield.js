@@ -10,19 +10,9 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import {
-    TextfieldBase,
-    Textfield,
-} from '@swc-uxp-internal/textfield/src/Textfield.js';
+import { Textfield } from '@swc-uxp-internal/textfield/src/Textfield.js';
 
 import styles from './uxp-textfield.css.js';
-
-class UxpTextfieldBase extends TextfieldBase {
-    static get styles() {
-        // We are combining our styles to make all super class styles available along with the transitive dependent classes styles.
-        return [super.styles, styles];
-    }
-}
 
 class UxpTextfield extends Textfield {
     static get styles() {
@@ -32,4 +22,3 @@ class UxpTextfield extends Textfield {
 }
 
 export { UxpTextfield as Textfield };
-export { UxpTextfieldBase as TextfieldBase };
