@@ -60,8 +60,16 @@ export const aliases = {
     '@spectrum-web-components/split-view': '@swc-uxp-wrappers/split-view',
     '@spectrum-web-components/progress-bar': '@swc-uxp-wrappers/progress-bar',
     '@spectrum-web-components/underlay': '@swc-uxp-wrappers/underlay',
+    '@spectrum-web-components/theme': '@swc-uxp-internal/theme',
+    '@spectrum-web-components/base': '@swc-uxp-internal/base',
+    '@spectrum-web-components/shared': '@swc-uxp-internal/shared',
+    '@spectrum-web-components/styles': '@swc-uxp-internal/styles',
+    '@spectrum-web-components/reactive-controllers': '@swc-uxp-internal/reactive-controllers',
+    '@spectrum-web-components/icon': '@swc-uxp-internal/icon',
+    '@spectrum-web-components/icons': '@swc-uxp-internal/icons',
+    '@spectrum-web-components/icons-ui': '@swc-uxp-internal/icons-ui',
+    '@spectrum-web-components/iconset': '@swc-uxp-internal/iconset',
+    '@spectrum-web-components/icons-workflow': '@swc-uxp-internal/icons-workflow',
     '@spectrum-web-components/progress-circle':
-        '@swc-uxp-wrappers/progress-circle',
-    '../sp-menu.dev.js': '@swc-uxp-wrappers/menu/sp-menu.js',
-    '../sp-menu.js': '@swc-uxp-wrappers/menu/sp-menu.js',
+        '@swc-uxp-wrappers/progress-circle'
 };

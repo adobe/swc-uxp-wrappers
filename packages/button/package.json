@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/button",
-    "version": "2.0.0",
+    "version": "2.0.1-dev",
     "publishConfig": {
         "access": "public"
     },
@@ -29,7 +29,10 @@
         "./src/button-base.css.js": "./src/button-base.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/button": "npm:@spectrum-web-components/button@0.37.0"
+        "@swc-uxp-internal/button": "npm:@spectrum-web-components/button@0.37.0",
+        "@swc-uxp-wrappers/clear-button": "2.0.1-dev",
+        "@swc-uxp-wrappers/close-button": "2.0.1-dev",
+        "@swc-uxp-wrappers/utils": "2.0.1-dev"
     },
     "files": [
         "**/*.js"

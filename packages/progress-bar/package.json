@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/progress-bar",
-    "version": "1.0.0",
+    "version": "2.0.1-dev",
     "publishConfig": {
         "access": "public"
     },
@@ -23,7 +23,9 @@
         "./sp-progress-bar.js": "./sp-progress-bar.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/progress-bar": "npm:@spectrum-web-components/progress-bar@0.37.0"
+        "@swc-uxp-internal/progress-bar": "npm:@spectrum-web-components/progress-bar@0.37.0",
+        "@swc-uxp-wrappers/field-label": "2.0.1-dev",
+        "@swc-uxp-wrappers/utils": "2.0.1-dev"
     },
     "files": [
         "**/*.js"

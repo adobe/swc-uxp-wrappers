@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/picker",
-    "version": "1.0.0",
+    "version": "2.0.1-dev",
     "publishConfig": {
         "access": "public"
     },
@@ -23,7 +23,12 @@
         "./sp-picker.js": "./sp-picker.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/picker": "npm:@spectrum-web-components/picker@0.37.0"
+        "@swc-uxp-internal/picker": "npm:@spectrum-web-components/picker@0.37.0",
+        "@swc-uxp-wrappers/button": "2.0.1-dev",
+        "@swc-uxp-wrappers/menu": "2.0.1-dev",
+        "@swc-uxp-wrappers/overlay": "2.0.1-dev",
+        "@swc-uxp-wrappers/popover": "2.0.1-dev",
+        "@swc-uxp-wrappers/utils": "2.0.1-dev"
     },
     "files": [
         "**/*.js"

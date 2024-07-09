@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/split-view",
-    "version": "1.0.0",
+    "version": "2.0.1-dev",
     "publishConfig": {
         "access": "public"
     },
@@ -23,7 +23,8 @@
         "./sp-split-view.js": "./sp-split-view.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/split-view": "npm:@spectrum-web-components/split-view@0.37.0"
+        "@swc-uxp-internal/split-view": "npm:@spectrum-web-components/split-view@0.37.0",
+        "@swc-uxp-wrappers/utils": "2.0.1-dev"
     },
     "files": [
         "**/*.js"

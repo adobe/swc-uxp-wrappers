@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/toast",
-    "version": "2.0.0",
+    "version": "2.0.1-dev",
     "publishConfig": {
         "access": "public"
     },
@@ -24,7 +24,8 @@
     },
     "dependencies": {
         "@swc-uxp-internal/toast": "npm:@spectrum-web-components/toast@0.37.0",
-        "@swc-uxp-wrappers/button": "2.0.0"
+        "@swc-uxp-wrappers/button": "2.0.1-dev",
+        "@swc-uxp-wrappers/utils": "2.0.1-dev"
     },
     "files": [
         "**/*.js"

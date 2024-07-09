@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/accordion",
-    "version": "1.0.0",
+    "version": "2.0.1-dev",
     "publishConfig": {
         "access": "public"
     },
@@ -26,7 +26,8 @@
         "./sp-accordion-item.js": "./sp-accordion-item.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/accordion": "npm:@spectrum-web-components/accordion@0.37.0"
+        "@swc-uxp-internal/accordion": "npm:@spectrum-web-components/accordion@0.37.0",
+        "@swc-uxp-wrappers/utils": "2.0.1-dev"
     },
     "files": [
         "**/*.js"

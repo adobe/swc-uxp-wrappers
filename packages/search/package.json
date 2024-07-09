@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/search",
-    "version": "2.0.0",
+    "version": "2.0.1-dev",
     "publishConfig": {
         "access": "public"
     },
@@ -24,8 +24,9 @@
     },
     "dependencies": {
         "@swc-uxp-internal/search": "npm:@spectrum-web-components/search@0.37.0",
-        "@swc-uxp-wrappers/button": "2.0.0",
-        "@swc-uxp-wrappers/textfield": "2.0.0"
+        "@swc-uxp-wrappers/button": "2.0.1-dev",
+        "@swc-uxp-wrappers/textfield": "2.0.1-dev",
+        "@swc-uxp-wrappers/utils": "2.0.1-dev"
     },
     "files": [
         "**/*.js"

@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/radio",
-    "version": "2.0.0",
+    "version": "2.0.1-dev",
     "publishConfig": {
         "access": "public"
     },
@@ -26,8 +26,9 @@
     },
     "dependencies": {
         "@swc-uxp-internal/radio": "npm:@spectrum-web-components/radio@0.37.0",
-        "@swc-uxp-wrappers/field-group": "2.0.0",
-        "@swc-uxp-wrappers/help-text": "2.0.0"
+        "@swc-uxp-wrappers/field-group": "2.0.1-dev",
+        "@swc-uxp-wrappers/help-text": "2.0.1-dev",
+        "@swc-uxp-wrappers/utils": "2.0.1-dev"
     },
     "files": [
         "**/*.js"

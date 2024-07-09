@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/utils",
-    "version": "2.0.0",
+    "version": "2.0.1-dev",
     "publishConfig": {
         "access": "public"
     },
@@ -20,6 +20,18 @@
         "./package.json": "./package.json",
         "./src/aliases.js": "./src/aliases.js",
         "./src/MatchMediaController.js": "./src/MatchMediaController.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/theme": "npm:@spectrum-web-components/theme@0.37.0",
+        "@swc-uxp-internal/base": "npm:@spectrum-web-components/base@0.37.0",
+        "@swc-uxp-internal/styles": "npm:@spectrum-web-components/styles@0.37.0",
+        "@swc-uxp-internal/shared": "npm:@spectrum-web-components/shared@0.37.0",
+        "@swc-uxp-internal/reactive-controllers": "npm:@spectrum-web-components/reactive-controllers@0.37.0",
+        "@swc-uxp-internal/icon": "npm:@spectrum-web-components/icon@0.37.0",
+        "@swc-uxp-internal/icons": "npm:@spectrum-web-components/icons@0.37.0",
+        "@swc-uxp-internal/iconset": "npm:@spectrum-web-components/iconset@0.37.0",
+        "@swc-uxp-internal/icons-ui": "npm:@spectrum-web-components/icons-ui@0.37.0",
+        "@swc-uxp-internal/icons-workflow": "npm:@spectrum-web-components/icons-workflow@0.37.0"
     },
     "files": [
         "**/*.js"

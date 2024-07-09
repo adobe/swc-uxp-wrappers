@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/action-menu",
-    "version": "1.0.0",
+    "version": "2.0.1-dev",
     "publishConfig": {
         "access": "public"
     },
@@ -24,8 +24,9 @@
     },
     "dependencies": {
         "@swc-uxp-internal/action-menu": "npm:@spectrum-web-components/action-menu@0.39.0",
-        "@swc-uxp-wrappers/action-button": "*",
-        "@swc-uxp-wrappers/picker": "*"
+        "@swc-uxp-wrappers/action-button": "2.0.1-dev",
+        "@swc-uxp-wrappers/picker": "2.0.1-dev",
+        "@swc-uxp-wrappers/utils": "2.0.1-dev"
     },
     "files": [
         "**/*.js"
