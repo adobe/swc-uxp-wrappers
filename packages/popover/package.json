@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/popover",
-    "version": "2.0.1-dev",
+    "version": "2.1.0",
     "publishConfig": {
         "access": "public"
     },
@@ -24,8 +24,8 @@
     },
     "dependencies": {
         "@swc-uxp-internal/popover": "npm:@spectrum-web-components/popover@0.37.0",
-        "@swc-uxp-wrappers/overlay": "2.0.1-dev",
-        "@swc-uxp-wrappers/utils": "2.0.1-dev"
+        "@swc-uxp-wrappers/overlay": "2.1.0",
+        "@swc-uxp-wrappers/utils": "2.1.0"
     },
     "files": [
         "**/*.js"

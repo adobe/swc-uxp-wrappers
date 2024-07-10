@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/slider",
-    "version": "2.0.1-dev",
+    "version": "2.1.0",
     "publishConfig": {
         "access": "public"
     },
@@ -26,9 +26,9 @@
     },
     "dependencies": {
         "@swc-uxp-internal/slider": "npm:@spectrum-web-components/slider@0.37.0",
-        "@swc-uxp-wrappers/field-label": "2.0.1-dev",
-        "@swc-uxp-wrappers/number-field": "2.0.1-dev",
-        "@swc-uxp-wrappers/utils": "2.0.1-dev"
+        "@swc-uxp-wrappers/field-label": "2.1.0",
+        "@swc-uxp-wrappers/number-field": "2.1.0",
+        "@swc-uxp-wrappers/utils": "2.1.0"
     },
     "files": [
         "**/*.js"

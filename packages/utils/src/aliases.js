@@ -56,6 +56,7 @@ export const aliases = {
     '@spectrum-web-components/action-menu': '@swc-uxp-wrappers/action-menu',
     '@spectrum-web-components/tabs': '@swc-uxp-wrappers/tabs',
     '@spectrum-web-components/slider': '@swc-uxp-wrappers/slider',
+    '@spectrum-web-components/modal': '@swc-uxp-wrappers/modal',
     '@spectrum-web-components/accordion': '@swc-uxp-wrappers/accordion',
     '@spectrum-web-components/split-view': '@swc-uxp-wrappers/split-view',
     '@spectrum-web-components/progress-bar': '@swc-uxp-wrappers/progress-bar',

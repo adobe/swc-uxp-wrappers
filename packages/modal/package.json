@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/modal",
-    "version": "2.0.1-dev",
+    "version": "2.1.0",
     "publishConfig": {
         "access": "public"
     },
@@ -16,15 +16,14 @@
     "module": "src/index.js",
     "type": "module",
     "exports": {
-        ".": "./src/index.js",
         "./package.json": "./package.json",
-        "./src/Modal.js": "./src/Modal.js",
         "./src/modal.css.js": "./src/modal.css.js",
-        "./sp-modal.js": "./sp-modal.js"
+        "./src/modal-wrapper.css.js": "./src/modal-wrapper.css.js",
+        ".": "./src/modal-wrapper.css.js"
     },
     "dependencies": {
         "@swc-uxp-internal/modal": "npm:@spectrum-web-components/modal@0.37.0",
-        "@swc-uxp-wrappers/utils": "2.0.1-dev"
+        "@swc-uxp-wrappers/utils": "2.1.0"
     },
     "files": [
         "**/*.js"

@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/tags",
-    "version": "2.0.1-dev",
+    "version": "2.1.0",
     "publishConfig": {
         "access": "public"
     },
@@ -27,8 +27,8 @@
     },
     "dependencies": {
         "@swc-uxp-internal/tags": "npm:@spectrum-web-components/tags@0.37.0",
-        "@swc-uxp-wrappers/button": "2.0.1-dev",
-        "@swc-uxp-wrappers/utils": "2.0.1-dev"
+        "@swc-uxp-wrappers/button": "2.1.0",
+        "@swc-uxp-wrappers/utils": "2.1.0"
     },
     "files": [
         "**/*.js"
