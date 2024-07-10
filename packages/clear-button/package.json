@@ -1,0 +1,35 @@
+{
+    "name": "@swc-uxp-wrappers/clear-button",
+    "version": "2.1.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/clear-button component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/clear-button"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/clear-button.css.js",
+        "./package.json": "./package.json",
+        "./src/clear-button.css.js": "./src/clear-button.css.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/clear-button": "npm:@spectrum-web-components/clear-button@0.37.0",
+        "@swc-uxp-wrappers/utils": "2.1.0"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/clear-button"
+    ]
+}

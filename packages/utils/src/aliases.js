@@ -26,6 +26,8 @@ export const aliases = {
     '@spectrum-web-components/field-label': '@swc-uxp-wrappers/field-label',
     '@spectrum-web-components/card': '@swc-uxp-wrappers/card',
     '@spectrum-web-components/button': '@swc-uxp-wrappers/button',
+    '@spectrum-web-components/clear-button': '@swc-uxp-wrappers/clear-button',
+    '@spectrum-web-components/close-button': '@swc-uxp-wrappers/close-button',
     '@spectrum-web-components/action-button': '@swc-uxp-wrappers/action-button',
     '@spectrum-web-components/checkbox': '@swc-uxp-wrappers/checkbox',
     '@spectrum-web-components/action-group': '@swc-uxp-wrappers/action-group',
@@ -65,12 +67,14 @@ export const aliases = {
     '@spectrum-web-components/base': '@swc-uxp-internal/base',
     '@spectrum-web-components/shared': '@swc-uxp-internal/shared',
     '@spectrum-web-components/styles': '@swc-uxp-internal/styles',
-    '@spectrum-web-components/reactive-controllers': '@swc-uxp-internal/reactive-controllers',
+    '@spectrum-web-components/reactive-controllers':
+        '@swc-uxp-internal/reactive-controllers',
     '@spectrum-web-components/icon': '@swc-uxp-internal/icon',
     '@spectrum-web-components/icons': '@swc-uxp-internal/icons',
     '@spectrum-web-components/icons-ui': '@swc-uxp-internal/icons-ui',
     '@spectrum-web-components/iconset': '@swc-uxp-internal/iconset',
-    '@spectrum-web-components/icons-workflow': '@swc-uxp-internal/icons-workflow',
+    '@spectrum-web-components/icons-workflow':
+        '@swc-uxp-internal/icons-workflow',
     '@spectrum-web-components/progress-circle':
-        '@swc-uxp-wrappers/progress-circle'
+        '@swc-uxp-wrappers/progress-circle',
 };

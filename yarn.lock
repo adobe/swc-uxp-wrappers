@@ -2449,14 +2449,14 @@
     "@spectrum-web-components/icons-ui" "^0.37.0"
     "@spectrum-web-components/shared" "^0.37.0"
 
-"@spectrum-web-components/clear-button@^0.37.0":
+"@spectrum-web-components/clear-button@0.37.0", "@spectrum-web-components/clear-button@^0.37.0", "@swc-uxp-internal/clear-button@npm:@spectrum-web-components/clear-button@0.37.0":
   version "0.37.0"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/clear-button/-/clear-button-0.37.0.tgz#8b2efda8d93219f3db7ba9791750f124c64c6c1f"
   integrity sha512-8NGvpHogC/pWGgKnVD1ZN0t+WWtuKrW6muNRI9fPJW0rGzVTTNzsTvL/QNrGusBES8/aiT08L35ayV3QfnAU7g==
   dependencies:
     "@spectrum-web-components/base" "^0.37.0"
 
-"@spectrum-web-components/close-button@^0.37.0":
+"@spectrum-web-components/close-button@0.37.0", "@spectrum-web-components/close-button@^0.37.0", "@swc-uxp-internal/close-button@npm:@spectrum-web-components/close-button@0.37.0":
   version "0.37.0"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/close-button/-/close-button-0.37.0.tgz#2094dd88c9b4380f121cb6edb79c271a79cf11d1"
   integrity sha512-sqqDyi725V3/3oy2J+IbUTlcHpZKEY7m+wXifanQ5mDOjP/8zX17DDZgSX2X7HI4IFevBSVYZxCV2MUhG5Zp1w==
@@ -2590,8 +2590,7 @@
     "@spectrum-web-components/field-label" "^0.37.0"
     "@spectrum-web-components/shared" "^0.37.0"
 
-"@spectrum-web-components/modal@^0.37.0", "@swc-uxp-internal/modal@npm:@spectrum-web-components/modal@0.37.0":
-  name "@swc-uxp-internal/modal"
+"@spectrum-web-components/modal@0.37.0", "@spectrum-web-components/modal@^0.37.0", "@swc-uxp-internal/modal@npm:@spectrum-web-components/modal@0.37.0":
   version "0.37.0"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/modal/-/modal-0.37.0.tgz#546ec9ad8f17056e77c9c7ed61ae34f56219f3e4"
   integrity sha512-GXtRZdXFHZoP3UKu5oG7TQFEOShHhxGE5p7vvN7oFPm2Yz1WtpmjH2HdBFb2mI8BmEvKax/KEG5kZCrTDQpTvg==
@@ -2848,8 +2847,7 @@
     "@spectrum-web-components/shared" "^0.37.0"
     "@spectrum-web-components/underlay" "^0.37.0"
 
-"@spectrum-web-components/underlay@^0.37.0", "@swc-uxp-internal/underlay@npm:@spectrum-web-components/underlay@0.37.0":
-  name "@swc-uxp-internal/underlay"
+"@spectrum-web-components/underlay@0.37.0", "@spectrum-web-components/underlay@^0.37.0", "@swc-uxp-internal/underlay@npm:@spectrum-web-components/underlay@0.37.0":
   version "0.37.0"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/underlay/-/underlay-0.37.0.tgz#87d0acdc9032aea31f30030b4549db57017688a9"
   integrity sha512-H3a3HmxrqGY6+N9nQwiapxXVLEIJoQ87naoXKy7ZnEmRyUnPcLjBaoXvLZKKXEDosaYxE3Mm6dnfjyKpk5PM1Q==

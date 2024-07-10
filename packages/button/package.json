@@ -30,7 +30,9 @@
     },
     "dependencies": {
         "@swc-uxp-internal/button": "npm:@spectrum-web-components/button@0.37.0",
-        "@swc-uxp-wrappers/utils": "2.1.0"
+        "@swc-uxp-wrappers/utils": "2.1.0",
+        "@swc-uxp-wrappers/clear-button": "2.1.0",
+        "@swc-uxp-wrappers/close-button": "2.1.0"
     },
     "files": [
         "**/*.js"

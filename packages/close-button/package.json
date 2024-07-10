@@ -1,0 +1,35 @@
+{
+    "name": "@swc-uxp-wrappers/close-button",
+    "version": "2.1.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/close-button component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/close-button"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/close-button.css.js",
+        "./package.json": "./package.json",
+        "./src/close-button.css.js": "./src/close-button.css.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/close-button": "npm:@spectrum-web-components/close-button@0.37.0",
+        "@swc-uxp-wrappers/utils": "2.1.0"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/close-button"
+    ]
+}
