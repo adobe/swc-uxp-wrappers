@@ -1,0 +1,34 @@
+name: Trigger Jenkins Build
+
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+
+jobs:
+  trigger-jenkins:
+    runs-on: self-hosted
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+
+    - name: Send PR info to Jenkins
+      run: |
+        curl -X POST "${{ secrets.JENKINS_SERVER }}/github-webhook/" \
+        -H "Content-Type: application/json" \
+        -d '{
+              "repository": "${{ github.repository }}",
+              "pull_request": {
+                "number": ${{ github.event.number }},
+                "head": {
+                  "ref": "${{ github.event.pull_request.head.ref }}",
+                  "sha": "${{ github.event.pull_request.head.sha }}"
+                },
+                "base": {
+                  "ref": "${{ github.event.pull_request.base.ref }}"
+                }
+              }
+            }'
+      env:
+        JENKINS_USER: ${{ secrets.JENKINS_USER }}
+        JENKINS_TOKEN: ${{ secrets.JENKINS_TOKEN }}
