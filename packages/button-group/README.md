@@ -6,7 +6,7 @@
 This is UXP wrapper for `@spectrum-web-components/button-group` package 
 <br />
 
--   For detailed README regarding `@spectrum-web-components/button-group` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/button-group/v/0.10.8)
+-   For detailed README regarding `@spectrum-web-components/button-group` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/button-group/v/0.37.0)
 
 -   Detailed specification regarding `@spectrum-web-components/button-group` support in UXP through `@swc-uxp-wrappers/button-group` [refer this link](https://wiki.corp.adobe.com/pages/viewpage.action?spaceKey=UXP&title=Support+for+Spectrum+Web+Components+in+UXP)
 

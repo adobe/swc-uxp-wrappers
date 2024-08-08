@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/field-label",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -23,7 +23,7 @@
         "./src/field-label.css.js": "./src/field-label.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/field-label": "npm:@spectrum-web-components/field-label@0.10.3"
+        "@swc-uxp-internal/field-label": "npm:@spectrum-web-components/field-label@0.37.0"
     },
     "files": [
         "**/*.js"

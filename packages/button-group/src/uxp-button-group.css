@@ -13,15 +13,8 @@ governing permissions and limitations under the License.
 /* write uxp style overrides */
 
 /* Workaround for - https://jira.corp.adobe.com/browse/UXP-21294 */
-:host([dir='ltr']) ::slotted(:not(:last-child)) {
+:host(:not([vertical])) ::slotted(:not(:last-child)) {
     margin-right: var(
-        --mod-buttongroup-spacing-horizontal,
-        var(--spectrum-buttongroup-spacing-horizontal)
-    );
-}
-
-:host([dir='rtl']) ::slotted(:not(:first-child)) {
-    margin-left: var(
         --mod-buttongroup-spacing-horizontal,
         var(--spectrum-buttongroup-spacing-horizontal)
     );

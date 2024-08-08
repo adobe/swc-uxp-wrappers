@@ -13,58 +13,208 @@ governing permissions and limitations under the License.
 <h3>sp-textfield</h3>
 
 <div id="content">
-    <div id="left">
-        <div id="subtitle">sp-textfield</div>
-        <sp-field-label for="name-0">Name</sp-field-label>
-        <sp-textfield id="name-0" placeholder="Enter your name"></sp-textfield>
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-textfield</div>
+            <div id="variantLabel">sizes</div>
+            <div class="demo-example">
+                <sp-field-label for="story-0-s">Small</sp-field-label>
+                <sp-textfield
+                    size="s"
+                    id="story-0-s"
+                    placeholder="Enter your life story"
+                    maxlength="1024"
+                ></sp-textfield>
+                <sp-field-label for="story-0-m">Medium</sp-field-label>
+                <sp-textfield
+                    id="story-0-m"
+                    placeholder="Enter your life story"
+                ></sp-textfield>
+                <sp-field-label for="story-0-l">Large</sp-field-label>
+                <sp-textfield
+                    size="l"
+                    id="story-0-l"
+                    placeholder="Enter your life story"
+                ></sp-textfield>
+                <sp-field-label for="story-0-xl">Extra Large</sp-field-label>
+                <sp-textfield
+                    size="xl"
+                    id="story-0-xl"
+                    placeholder="Enter your life story"
+                ></sp-textfield>
+            </div>
 
-        <sp-textfield disabled placeholder="Enter your name"></sp-textfield>
+            <div id="variantLabel">valid</div>
+            <div class="demo-example">
+                <sp-field-label for="story-1" required>
+                    Background
+                </sp-field-label>
+                <sp-textfield
+                    id="story-1"
+                    placeholder="Enter your name"
+                    valid
+                ></sp-textfield>
 
-        <sp-field-label for="name-1" required>Name</sp-field-label>
-        <sp-textfield
-            id="name-1"
-            placeholder="Enter your name"
-            valid
-            value="My Name"
-        ></sp-textfield>
+                <sp-field-label for="story-1" required>
+                    Background
+                </sp-field-label>
+                <sp-textfield
+                    id="story-1"
+                    disabled
+                    placeholder="Enter your name"
+                    valid
+                ></sp-textfield>
+            </div>
 
-        <sp-field-label for="name-2" required>Name</sp-field-label>
-        <sp-textfield
-            id="name-2"
-            invalid
-            placeholder="Enter your name"
-        ></sp-textfield>
+            <div id="variantLabel">invalid</div>
+            <div class="demo-example">
+                <sp-field-label for="story-2" required>
+                    Background
+                </sp-field-label>
+                <sp-textfield
+                    id="story-2"
+                    invalid
+                    placeholder="Enter your name"
+                ></sp-textfield>
 
-        <sp-field-label for="name-3">Name (quietly)</sp-field-label>
-        <sp-textfield
-            id="name-3"
-            placeholder="Enter your name"
-            quiet
-        ></sp-textfield>
+                <sp-field-label for="story-2" required>
+                    Background
+                </sp-field-label>
+                <sp-textfield
+                    id="story-2"
+                    invalid
+                    disabled
+                    placeholder="Enter your name"
+                ></sp-textfield>
+            </div>
 
-        <sp-textfield
-            id="self"
-            pattern="[P][o][s][i][t][i][v][e]"
-            value="Positive"
-        >
-            <sp-help-text slot="help-text">Please be "Positive".</sp-help-text>
-        </sp-textfield>
+            <div id="variantLabel">quiet</div>
+            <div class="demo-example">
+                <sp-field-label for="story-3">
+                    Background (quietly)
+                </sp-field-label>
+                <sp-textfield
+                    id="story-3"
+                    placeholder="Enter your name"
+                    quiet
+                ></sp-textfield>
 
-        <sp-field-label for="password-1">Password</sp-field-label>
-        <sp-textfield id="password-1" type="password">
-            <sp-help-text slot="help-text" variant="negative" icon>
-                Create a password with at least 8 characters.
-            </sp-help-text>
-        </sp-textfield>
+                <sp-field-label for="story-3">
+                    Background (quietly)
+                </sp-field-label>
+                <sp-textfield
+                    id="story-3"
+                    placeholder="Enter your name"
+                    quiet
+                    disabled
+                ></sp-textfield>
+            </div>
+
+            <div id="variantLabel">invalid quiet</div>
+            <div class="demo-example">
+                <sp-field-label for="story-31">
+                    Background (quietly)
+                </sp-field-label>
+                <sp-textfield
+                    id="story-31"
+                    invalid
+                    placeholder="Enter your name"
+                    quiet
+                ></sp-textfield>
+
+                <sp-field-label for="story-31">
+                    Background (quietly)
+                </sp-field-label>
+                <sp-textfield
+                    id="story-31"
+                    invalid
+                    placeholder="Enter your name"
+                    quiet
+                    disabled
+                ></sp-textfield>
+            </div>
+
+            <div id="variantLabel">valid quiet</div>
+            <div class="demo-example">
+                <sp-field-label for="story-32">
+                    Background (quietly)
+                </sp-field-label>
+                <sp-textfield
+                    id="story-32"
+                    valid
+                    placeholder="Enter your name"
+                    quiet
+                ></sp-textfield>
+
+                <sp-field-label for="story-32">
+                    Background (quietly)
+                </sp-field-label>
+                <sp-textfield
+                    id="story-32"
+                    valid
+                    placeholder="Enter your name"
+                    quiet
+                    disabled
+                ></sp-textfield>
+            </div>
+
+            <div id="variantLabel">help text</div>
+            <div class="demo-example">
+                <sp-field-label for="self">Stay "Positive"</sp-field-label>
+                <sp-textfield
+                    id="self"
+                    pattern="[P][o][s][i][t][i][v][e]"
+                    value="Positive"
+                >
+                    <sp-help-text slot="help-text">
+                        Tell us how you are feeling today.
+                    </sp-help-text>
+                    <sp-help-text slot="negative-help-text">
+                        Please be "Positive".
+                    </sp-help-text>
+                </sp-textfield>
+
+                <sp-field-label for="self">Stay "Positive"</sp-field-label>
+                <sp-textfield
+                    id="self"
+                    disabled
+                    pattern="[P][o][s][i][t][i][v][e]"
+                    value="Positive"
+                >
+                    <sp-help-text slot="help-text">
+                        Tell us how you are feeling today.
+                    </sp-help-text>
+                    <sp-help-text slot="negative-help-text">
+                        Please be "Positive".
+                    </sp-help-text>
+                </sp-textfield>
+            </div>
+
+            <div id="variantLabel">valid quiet</div>
+            <div class="demo-example">
+                <sp-field-label for="password-1">Password</sp-field-label>
+                <sp-textfield id="password-1" type="password">
+                    <sp-help-text slot="help-text" variant="negative" icon>
+                        Password with at least 8 characters.
+                    </sp-help-text>
+                </sp-textfield>
+            </div>
+        </div>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-textfield</div>
+            <sp-field-label for="name-0">Name</sp-field-label>
+            <my-textfield
+                id="name-0"
+                placeholder="Enter your name"
+                value="This is my-textfield"
+            ></my-textfield>
+        </div>
     </div>
 
-    <div id="right">
-        <div id="subtitle">my-textfield</div>
-        <sp-field-label for="name-0">Name</sp-field-label>
-        <my-textfield
-            id="name-0"
-            placeholder="Enter your name"
-            value="This is my-textfield"
-        ></my-textfield>
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
     </div>
 </div>
