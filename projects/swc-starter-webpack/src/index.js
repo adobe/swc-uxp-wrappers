@@ -44,9 +44,14 @@ import '@spectrum-web-components/sidenav/sp-sidenav-heading.js';
 import '@spectrum-web-components/sidenav/sp-sidenav-item.js';
 import '@spectrum-web-components/radio/sp-radio.js';
 import '@spectrum-web-components/radio/sp-radio-group.js';
+import '@spectrum-web-components/asset/sp-asset.js';
+import '@spectrum-web-components/quick-actions/sp-quick-actions.js';
+import '@spectrum-web-components/meter/sp-meter.js';
 import '@spectrum-web-components/tags/sp-tags.js';
 import '@spectrum-web-components/tags/sp-tag.js';
 import '@spectrum-web-components/field-group/sp-field-group.js';
+import '@spectrum-web-components/swatch/sp-swatch.js';
+import '@spectrum-web-components/swatch/sp-swatch-group.js';
 
 import '@spectrum-web-components/table/sp-table.js';
 import '@spectrum-web-components/table/sp-table-body.js';
@@ -56,6 +61,11 @@ import '@spectrum-web-components/table/sp-table-head.js';
 import '@spectrum-web-components/table/sp-table-head-cell.js';
 import '@spectrum-web-components/table/sp-table-row.js';
 
+import '@spectrum-web-components/overlay/sp-overlay.js';
+import '@spectrum-web-components/overlay/overlay-trigger.js';
+
+import '@spectrum-web-components/number-field/sp-number-field.js';
+import '@spectrum-web-components/search/sp-search.js';
 import '@spectrum-web-components/textfield/sp-textfield.js';
 import '@spectrum-web-components/icons/sp-icons-medium.js';
 import '@spectrum-web-components/icons/sp-icons-large.js';
@@ -71,6 +81,12 @@ import '@spectrum-web-components/icons-workflow/icons/sp-icon-star.js';
 import '@spectrum-web-components/icons-workflow/icons/sp-icon-add-to-selection.js';
 import '@spectrum-web-components/icons-workflow/icons/sp-icon-edit.js';
 import '@spectrum-web-components/icons-workflow/icons/sp-icon-magnify.js';
+import '@spectrum-web-components/icons-workflow/icons/sp-icon-more.js';
+import '@spectrum-web-components/icons-workflow/icons/sp-icon-delete.js';
+
+import '@spectrum-web-components/icons-workflow/icons/sp-icon-save-floppy.js';
+import '@spectrum-web-components/icons-workflow/icons/sp-icon-stopwatch.js';
+import '@spectrum-web-components/icons-workflow/icons/sp-icon-user-activity.js';
 
 // Importing custom elements (my-*) extended from the respective Spectrum Web Components
 import './extended_swc_samples/my-banner.js';
@@ -94,6 +110,8 @@ import './extended_swc_samples/my-menu-group.js';
 import './extended_swc_samples/my-picker-button.js';
 import './extended_swc_samples/my-help-text.js';
 import './extended_swc_samples/my-textfield.js';
+import './extended_swc_samples/my-numberfield.js';
+import './extended_swc_samples/my-search.js';
 import './extended_swc_samples/my-dialog.js';
 import './extended_swc_samples/my-button-group.js';
 import './extended_swc_samples/my-toast.js';
@@ -103,3 +121,8 @@ import './extended_swc_samples/my-radio-group.js';
 import './extended_swc_samples/my-field-group.js';
 import './extended_swc_samples/my-tags.js';
 import './extended_swc_samples/my-sidenav.js';
+import './extended_swc_samples/my-asset.js';
+import './extended_swc_samples/my-quick-actions.js';
+import './extended_swc_samples/my-meter.js';
+import './extended_swc_samples/my-swatch.js';
+import './extended_swc_samples/my-overlay.js';

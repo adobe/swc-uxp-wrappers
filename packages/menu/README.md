@@ -6,7 +6,7 @@
 This is UXP wrapper for `@spectrum-web-components/menu` package 
 <br />
 
--   For detailed README regarding `@spectrum-web-components/menu` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/menu/v/0.16.9)
+-   For detailed README regarding `@spectrum-web-components/menu` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/menu/v/0.37.0)
 
 -   Detailed specification regarding `@spectrum-web-components/menu` support in UXP through `@swc-uxp-wrappers/menu` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
 
@@ -43,3 +43,8 @@ import { Menu } from '@swc-uxp-wrappers/menu';
 ```html
 <sp-menu></sp-menu>
 ```
+
+## Known Issues
+- Multi select variant does not work
+- Submenu is not supported
+- Performance issue observed when one clicks multiple times on a menu item

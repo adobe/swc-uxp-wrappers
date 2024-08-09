@@ -11,3 +11,5 @@ governing permissions and limitations under the License.
 */
 
 export * from './Dialog.js';
+export * from './DialogBase.js';
+export * from './DialogWrapper.js';

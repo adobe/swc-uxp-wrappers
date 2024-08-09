@@ -17,8 +17,8 @@ class MyPickerButton extends PickerButton {
     static styles = [
         PickerButton.styles,
         css`
-            sp-icon-chevron200 {
-                transform: rotate(45deg);
+            .spectrum-PickerButton-fill {
+                background: red;
             }
         `,
     ];

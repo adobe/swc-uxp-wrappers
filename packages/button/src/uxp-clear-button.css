@@ -11,3 +11,11 @@ governing permissions and limitations under the License.
 */
 
 /* write uxp style overrides */
+
+/* workaround for missing logical property 'inset', fixed layouting of focus-ring */
+:host:after {
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}

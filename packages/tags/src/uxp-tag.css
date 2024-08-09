@@ -31,11 +31,52 @@ governing permissions and limitations under the License.
                 var(--spectrum-tag-label-spacing-inline-end)
             ) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
     );
-    padding-left: calc(
+    padding-top: calc(
         var(
                 --mod-tag-label-spacing-block,
                 var(--spectrum-tag-label-spacing-block)
             ) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+    );
+    height: 100%;
+}
+
+::slotted([slot='icon']) {
+    height: var(--mod-tag-icon-size, var(--spectrum-tag-icon-size));
+    width: var(--mod-tag-icon-size, var(--spectrum-tag-icon-size));
+    margin-bottom: calc(
+        var(
+                --mod-tag-icon-spacing-block-end,
+                var(--spectrum-tag-icon-spacing-block-end)
+            ) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+    );
+    margin-top: calc(
+        var(
+                --mod-tag-icon-spacing-block-start,
+                var(--spectrum-tag-icon-spacing-block-start)
+            ) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+    );
+    margin-right: var(
+        --mod-tag-icon-spacing-inline-end,
+        var(--spectrum-tag-icon-spacing-inline-end)
+    );
+}
+
+::slotted([slot='avatar']) {
+    margin-bottom: calc(
+        var(
+                --mod-tag-avatar-spacing-block-end,
+                var(--spectrum-tag-avatar-spacing-block-end)
+            ) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+    );
+    margin-top: calc(
+        var(
+                --mod-tag-avatar-spacing-block-start,
+                var(--spectrum-tag-avatar-spacing-block-start)
+            ) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+    );
+    margin-right: var(
+        --mod-tag-avatar-spacing-inline-end,
+        var(--spectrum-tag-avatar-spacing-inline-end)
     );
 }
 
@@ -57,16 +98,30 @@ governing permissions and limitations under the License.
                 var(--spectrum-tag-label-spacing-inline-end)
             ) * -1
     );
+    /* Workaround to handle missing box-sizing support in UXP */
+    margin-top: var(--spectrum-tag-border-width);
     padding-bottom: calc(
         var(
                 --mod-tag-clear-button-spacing-block,
                 var(--spectrum-tag-clear-button-spacing-block)
-            ) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+            ) -
+            calc(
+                var(
+                    --mod-tag-border-width,
+                    var(--spectrum-tag-border-width) * 2
+                )
+            )
     );
     padding-top: calc(
         var(
                 --mod-tag-clear-button-spacing-block,
                 var(--spectrum-tag-clear-button-spacing-block)
-            ) - var(--mod-tag-border-width, var(--spectrum-tag-border-width))
+            ) -
+            calc(
+                var(
+                    --mod-tag-border-width,
+                    var(--spectrum-tag-border-width) * 2
+                )
+            )
     );
 }
