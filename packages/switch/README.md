@@ -45,5 +45,6 @@ import { Switch } from '@swc-uxp-wrappers/switch';
 ```
 
 ## Known Issues
-- Tab navigation does not work
-- Line break is seen when switch is used for `scale=large`
+
+-   Tab navigation does not work
+-   Line break is seen when switch is used for `scale=large`

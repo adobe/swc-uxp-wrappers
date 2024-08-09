@@ -43,6 +43,8 @@ import { Table } from '@swc-uxp-wrappers/table';
 ```html
 <sp-table></sp-table>
 ```
+
 ## Known Issues
-- Virtualised table does not work
-- Selects attribute does not work
+
+-   Virtualised table does not work
+-   Selects attribute does not work

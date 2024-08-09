@@ -43,8 +43,10 @@ import { Overlay } from '@swc-uxp-wrappers/overlay';
 ```html
 <sp-overlay></sp-overlay>
 ```
+
 ## Known Issues
-- Styling of popover and tip rendered is incorrect  when used inside overlay
-- Nested overlay is not supported
-- The toast dissapears when hovered on it inside overlay
-- Longpress attribute does not work with keyboard press event
+
+-   Styling of popover and tip rendered is incorrect when used inside overlay
+-   Nested overlay is not supported
+-   The toast dissapears when hovered on it inside overlay
+-   Longpress attribute does not work with keyboard press event

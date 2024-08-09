@@ -43,4 +43,3 @@ import { Tooltip } from '@swc-uxp-wrappers/tooltip';
 ```html
 <sp-tooltip></sp-tooltip>
 ```
-

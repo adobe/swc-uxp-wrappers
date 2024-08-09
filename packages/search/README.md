@@ -45,9 +45,9 @@ import { Search } from '@swc-uxp-wrappers/search';
 ```
 
 ## Known Issues
-- Black background appears for quiet and readonly variant in windows
-- Close button does not respond on Mac platform
-- Placeholder text is not greyed with `disable` attribute
-- Focus ring is not curved on the corners
-- Font does not adapt to the T-shirt sizing due to limitation of PS/DVA platform
 
+-   Black background appears for quiet and readonly variant in windows
+-   Close button does not respond on Mac platform
+-   Placeholder text is not greyed with `disable` attribute
+-   Focus ring is not curved on the corners
+-   Font does not adapt to the T-shirt sizing due to limitation of PS/DVA platform

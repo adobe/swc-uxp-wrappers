@@ -43,5 +43,7 @@ import { Tags } from '@swc-uxp-wrappers/tags';
 ```html
 <sp-tags></sp-tags>
 ```
+
 ## Known Issues
-- Avatar do not get greyscaled with disabled attribute
+
+-   Avatar do not get greyscaled with disabled attribute
