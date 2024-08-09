@@ -45,7 +45,8 @@ import { NumberField } from '@swc-uxp-wrappers/number-field';
 ```
 
 ## Known Issues
-- Quiet and Readonly variant has black background for Windows
-- Stepper icons are trimmed with quiet variant in React context
-- On inserting an alphabet in the number field, the cursor moves from the defined place.
-- Font does not adapt to the T-shirt sizing due to limitation of PS/DVA platform
+
+-   Quiet and Readonly variant has black background for Windows
+-   Stepper icons are trimmed with quiet variant in React context
+-   On inserting an alphabet in the number field, the cursor moves from the defined place.
+-   Font does not adapt to the T-shirt sizing due to limitation of PS/DVA platform
