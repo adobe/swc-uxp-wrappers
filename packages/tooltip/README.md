@@ -43,3 +43,12 @@ import { Tooltip } from '@swc-uxp-wrappers/tooltip';
 ```html
 <sp-tooltip></sp-tooltip>
 ```
+
+## Known issues
+- The overlaid variant tied to the overlay trigger is not functioning.
+- The wrapping of text is incorrect in case of Windows.
+
+## Fixed issues
+ - Text content's margin bottom is incorrect. 
+ - Tooltip's tip is incorrect due to missing transform rotate. 
+

@@ -43,3 +43,7 @@ import { Sidenav } from '@swc-uxp-wrappers/sidenav';
 ```html
 <sp-sidenav></sp-sidenav>
 ```
+
+## Known issues
+- Manage Tab Index attribute is not working.
+
