@@ -3,10 +3,10 @@
 ---
 
 <br />
-This is UXP wrapper for `@spectrum-web-components/checkbox` package 
+This is UXP wrapper for `@spectrum-web-components/checkbox` package
 <br />
 
--   For detailed README regarding `@spectrum-web-components/checkbox` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/checkbox/v/0.14.0)
+-   For detailed README regarding `@spectrum-web-components/checkbox` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/checkbox/v/0.37.0)
 
 -   Detailed specification regarding `@spectrum-web-components/checkbox` support in UXP through `@swc-uxp-wrappers/checkbox` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
 
@@ -43,3 +43,7 @@ import { Checkbox } from '@swc-uxp-wrappers/checkbox';
 ```html
 <sp-checkbox></sp-checkbox>
 ```
+
+## Known Issues
+
+-   Tab navigation is not supported

@@ -6,7 +6,7 @@
 This is UXP wrapper for `@spectrum-web-components/link` package 
 <br />
 
--   For detailed README regarding `@spectrum-web-components/link` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/link/v/0.14.1)
+-   For detailed README regarding `@spectrum-web-components/link` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/link/v/0.37.0)
 
 -   Detailed specification regarding `@spectrum-web-components/link` support in UXP through `@swc-uxp-wrappers/link` [refer this link](https://wiki.corp.adobe.com/pages/viewpage.action?spaceKey=UXP&title=Support+for+Spectrum+Web+Components+in+UXP)
 
@@ -43,3 +43,7 @@ import { Link } from '@swc-uxp-wrappers/link';
 ```html
 <sp-link></sp-link>
 ```
+
+## Known Issues
+
+-   The double underline does not appear on hyperlinks on tabbing in Windows.

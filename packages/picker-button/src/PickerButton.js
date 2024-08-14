@@ -10,7 +10,7 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { PickerButton } from '@swc-uxp-internal/picker-button/src/PickerButton';
+import { PickerButton } from '@swc-uxp-internal/picker-button/src/PickerButton.js';
 
 import styles from './uxp-picker-button.css.js';
 

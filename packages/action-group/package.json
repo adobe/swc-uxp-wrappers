@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/action-group",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -23,8 +23,8 @@
         "./src/action-group.css.js": "./src/action-group.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/action-group": "npm:@spectrum-web-components/action-group@0.12.4",
-        "@swc-uxp-wrappers/action-button": "1.0.0"
+        "@swc-uxp-internal/action-group": "npm:@spectrum-web-components/action-group@0.37.0",
+        "@swc-uxp-wrappers/action-button": "2.0.0"
     },
     "files": [
         "**/*.js"

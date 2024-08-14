@@ -1,0 +1,37 @@
+{
+    "name": "@swc-uxp-wrappers/meter",
+    "version": "2.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/meter component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/meter"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/Meter.js": "./src/Meter.js",
+        "./src/meter.css.js": "./src/meter.css.js",
+        "./sp-meter.js": "./sp-meter.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/meter": "npm:@spectrum-web-components/meter@0.37.0",
+        "@swc-uxp-wrappers/field-label": "2.0.0"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/meter"
+    ]
+}

@@ -12,97 +12,158 @@ governing permissions and limitations under the License.
 
 /* write uxp style overrides */
 
+/* Workaround for - https://jira.corp.adobe.com/browse/UXP-22211 */
+
 :host {
     --uxp-swc-tooltip-factor: -0.7;
 }
 
-/* Workaround for - https://jira.corp.adobe.com/browse/UXP-21333 */
-#label {
-    margin-bottom: var(
-        --spectrum-tooltip-neutral-text-margin-top,
-        var(--spectrum-global-dimension-static-size-50)
-    );
-}
-
-/* Workarounds for - https://jira.corp.adobe.com/browse/UXP-21118 */
-#tip:after {
-    border-width: calc(
-        -1 * var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height)
-    );
-}
-
-:host([placement*='top']) #tip:after {
-    transform: rotate(45deg);
+:host([placement*='top']) #tooltip #tip {
     margin-top: calc(
         var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height)
     );
 }
 
-:host([placement*='left']) #tip:after {
-    transform: rotate(45deg);
+:host([placement*='left']) #tooltip #tip {
     margin-left: calc(
         var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height)
     );
 }
 
-:host([placement*='right']) #tip:after {
-    transform: rotate(45deg);
-    margin-right: calc(
+:host([placement*='right']) #tooltip #tip {
+    left: calc(
         var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height)
     );
 }
 
-:host([placement*='bottom']) #tip:after {
+:host([placement*='bottom']) #tooltip #tip {
     margin-bottom: calc(
         var(--uxp-swc-tooltip-factor) * var(--spectrum-tooltip-tip-height)
     );
-    transform: rotate(45deg);
 }
 
-:host([variant='negative']) #tip:after {
-    border-top-color: var(
-        --spectrum-tooltip-negative-background-color,
-        var(--spectrum-semantic-negative-background-color)
-    );
-}
-
-:host([variant='info']) #tip:after {
-    border-top-color: var(
-        --spectrum-tooltip-info-background-color,
-        var(--spectrum-semantic-informative-background-color)
-    );
-}
-
-:host([variant='positive']) #tip:after {
-    border-top-color: var(
-        --spectrum-tooltip-positive-background-color,
-        var(--spectrum-semantic-positive-background-color)
-    );
-}
-
-:host([variant='neutral']) #tip:after {
-    border-top-color: var(
-        --spectrum-tooltip-neutral-background-color,
-        var(--spectrum-semantic-neutral-background-color-default)
-    );
-}
-
-:host([placement*='left']) #tip,
-:host([placement*='right']) #tip {
+:host([placement*='left']) #tooltip #tip,
+:host([placement*='right']) #tooltip #tip,
+:host([placement*='left']) #tooltip #tip[style],
+:host([placement*='right']) #tooltip #tip[style] {
+    transform: rotate(45deg) !important;
     margin-top: calc(
         var(
                 --spectrum-tooltip-neutral-tip-width,
                 var(--spectrum-global-dimension-size-100)
-            ) * var(--uxp-swc-tooltip-factor)
+            ) * var(--uxp-swc-tooltip-factor) * 0.5
     );
 }
 
-:host([placement*='top']) #tip,
-:host([placement*='bottom']) #tip {
+:host([placement*='top']) #tooltip #tip,
+:host([placement*='bottom']) #tooltip #tip,
+:host([placement*='top']) #tooltip #tip[style],
+:host([placement*='bottom']) #tooltip #tip[style] {
+    transform: rotate(45deg) !important;
     margin-left: calc(
         var(
                 --spectrum-tooltip-neutral-tip-width,
                 var(--spectrum-global-dimension-size-100)
-            ) * var(--uxp-swc-tooltip-factor)
+            ) * var(--uxp-swc-tooltip-factor) * 0.5
     );
+}
+
+#tooltip {
+    height: auto;
+    width: auto;
+    max-width: var(
+        --mod-tooltip-max-inline-size,
+        var(--spectrum-tooltip-max-inline-size)
+    );
+    min-height: var(--mod-tooltip-height, var(--spectrum-tooltip-height));
+    padding-left: var(
+        --mod-tooltip-spacing-inline,
+        var(--spectrum-tooltip-spacing-inline)
+    );
+    padding-right: var(
+        --mod-tooltip-spacing-inline,
+        var(--spectrum-tooltip-spacing-inline)
+    );
+}
+
+::slotted([slot='icon']) {
+    height: var(--mod-tooltip-icon-height, var(--spectrum-tooltip-icon-height));
+    width: var(--mod-tooltip-icon-width, var(--spectrum-tooltip-icon-width));
+    margin-top: var(
+        --mod-tooltip-icon-spacing-block-start,
+        var(--spectrum-tooltip-icon-spacing-block-start)
+    );
+    margin-right: var(
+        --mod-tooltip-icon-spacing-inline-end,
+        var(--spectrum-tooltip-icon-spacing-inline-end)
+    );
+    margin-left: calc(
+        var(
+                --mod-tooltip-icon-spacing-inline-start,
+                var(--spectrum-tooltip-icon-spacing-inline-start)
+            ) -
+            var(
+                --mod-tooltip-spacing-inline,
+                var(--spectrum-tooltip-spacing-inline)
+            )
+    );
+}
+
+#label {
+    line-height: var(
+        --mod-tooltip-line-height,
+        var(--spectrum-tooltip-line-height)
+    );
+    margin-bottom: var(
+        --mod-tooltip-spacing-block-end,
+        var(--spectrum-tooltip-spacing-block-end)
+    );
+    margin-top: var(
+        --mod-tooltip-spacing-block-start,
+        var(--spectrum-tooltip-spacing-block-start)
+    );
+}
+
+#tip {
+    clip-path: none !important;
+    height: calc(
+        var(--spectrum-tooltip-tip-inline-size) * var(--uxp-swc-tooltip-factor) *
+            (-1)
+    ) !important;
+    width: calc(
+        var(--spectrum-tooltip-tip-inline-size) * var(--uxp-swc-tooltip-factor) *
+            (-1)
+    ) !important;
+}
+
+:host([placement*='top']) #tooltip #tip[style],
+:host([placement*='bottom']) #tooltip #tip[style] {
+    left: calc(
+        (
+                var(--spectrum-tooltip-tip-inline-size) *
+                    var(--uxp-swc-tooltip-factor) * (-1)
+            ) / 2
+    ) !important;
+}
+
+:host([placement*='left']) #tooltip #tip[style],
+:host([placement*='right']) #tooltip #tip[style] {
+    top: calc(
+        (
+                var(--spectrum-tooltip-tip-inline-size) *
+                    var(--uxp-swc-tooltip-factor) * (-1)
+            ) / 2
+    ) !important;
+}
+
+:host([placement='top']) #tooltip #tip[style],
+:host([placement='bottom']) #tooltip #tip[style] {
+    left: 50% !important;
+    translate: 0px !important;
+}
+
+:host([placement='left']) #tooltip #tip[style],
+:host([placement='right']) #tooltip #tip[style] {
+    top: 50% !important;
+    translate: 0px !important;
 }

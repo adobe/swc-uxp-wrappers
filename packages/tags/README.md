@@ -6,7 +6,7 @@
 This is UXP wrapper for `@spectrum-web-components/tags` package 
 <br />
 
--   For detailed README regarding `@spectrum-web-components/tags` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/tags/v/0.10.1)
+-   For detailed README regarding `@spectrum-web-components/tags` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/tags/v/0.37.0)
 
 -   Detailed specification regarding `@spectrum-web-components/tags` support in UXP through `@swc-uxp-wrappers/tags` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
 
@@ -43,3 +43,7 @@ import { Tags } from '@swc-uxp-wrappers/tags';
 ```html
 <sp-tags></sp-tags>
 ```
+
+## Known Issues
+
+-   Avatar do not get greyscaled with disabled attribute
