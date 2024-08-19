@@ -18,6 +18,17 @@ class UxpCloseButton extends CloseButton {
     static get styles() {
         return [super.styles, styles];
     }
+
+    firstUpdated(changed) {
+        super.firstUpdated(changed);
+        this.addEventListener('keyup', this._onKeyUp);
+    }
+
+    _onKeyUp(event) {
+        if (event.code === 'Enter' || event.code === 'NumpadEnter') {
+            this.click();
+        }
+    }
 }
 
 export { UxpCloseButton as CloseButton };
