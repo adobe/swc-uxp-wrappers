@@ -1,0 +1,183 @@
+<!-- 
+Copyright 2024 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License. 
+-->
+
+<h3>sp-progress-circle</h3>
+
+<div id="content">
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-progress-circle</div>
+            <div id="variantLabel">sizes</div>
+            <div class="demo-example" style="display: flex; height: 500px">
+                <div
+                    class="size-div"
+                    style="display: block; width: 33%; margin-right: 10px"
+                >
+                    <div id="variantLabel">small</div>
+                    <div class="progressDiv">
+                        <sp-progress-circle
+                            size="s"
+                            label="Loaded a little"
+                            progress="22"
+                        ></sp-progress-circle>
+                    </div>
+
+                    <div class="progressOverBackgroundDiv">
+                        <sp-progress-circle
+                            size="s"
+                            label="Loaded a large amount"
+                            progress="77"
+                            over-background
+                        ></sp-progress-circle>
+                    </div>
+
+                    <div class="progressDiv">
+                        <sp-progress-circle
+                            size="s"
+                            label="Loaded an unclear amount"
+                            indeterminate
+                        ></sp-progress-circle>
+                    </div>
+                </div>
+
+                <div
+                    class="size-div"
+                    style="display: block; width: 34%; margin-right: 10px"
+                >
+                    <div id="variantLabel">medium</div>
+                    <div class="progressDiv">
+                        <sp-progress-circle
+                            size="m"
+                            label="Loaded a little"
+                            progress="22"
+                        ></sp-progress-circle>
+                    </div>
+
+                    <div class="progressOverBackgroundDiv">
+                        <sp-progress-circle
+                            size="m"
+                            label="Loaded a large amount"
+                            progress="77"
+                            over-background
+                        ></sp-progress-circle>
+                    </div>
+
+                    <div class="progressDiv">
+                        <sp-progress-circle
+                            size="m"
+                            label="Loaded an unclear amount"
+                            indeterminate
+                        ></sp-progress-circle>
+                    </div>
+                </div>
+
+                <div class="size-div" style="display: block; width: 33%">
+                    <div id="variantLabel">large</div>
+                    <div class="progressDiv">
+                        <sp-progress-circle
+                            size="l"
+                            label="Loaded a little"
+                            progress="22"
+                        ></sp-progress-circle>
+                    </div>
+
+                    <div class="progressOverBackgroundDiv">
+                        <sp-progress-circle
+                            size="l"
+                            label="Loaded a large amount"
+                            progress="77"
+                            over-background
+                        ></sp-progress-circle>
+                    </div>
+
+                    <div class="progressDiv">
+                        <sp-progress-circle
+                            size="l"
+                            label="Loaded an unclear amount"
+                            indeterminate
+                        ></sp-progress-circle>
+                    </div>
+                </div>
+            </div>
+
+            <div id="variantLabel">sizes</div>
+            <div
+                class="demo-example"
+                style="display: flex; justify-content: space-around"
+            >
+                <sp-button treatment="fill" static="black" variant="accent">
+                    <sp-progress-circle
+                        progress="53"
+                        static="white"
+                        size="s"
+                        slot="icon"
+                        label="Processing"
+                    ></sp-progress-circle>
+                    Processing...
+                </sp-button>
+
+                <sp-button treatment="fill" static="black" variant="accent">
+                    <sp-progress-circle
+                        indeterminate
+                        static="white"
+                        size="s"
+                        slot="icon"
+                        label="Processing"
+                    ></sp-progress-circle>
+                    Processing...
+                </sp-button>
+
+                <sp-button treatment="fill" static="black" variant="accent">
+                    <sp-progress-circle
+                        progress="53"
+                        size="s"
+                        slot="icon"
+                        label="Processing"
+                    ></sp-progress-circle>
+                    Processing...
+                </sp-button>
+
+                <sp-button treatment="fill" static="black" variant="accent">
+                    <sp-progress-circle
+                        indeterminate
+                        size="s"
+                        slot="icon"
+                        label="Processing"
+                    ></sp-progress-circle>
+                    Processing...
+                </sp-button>
+            </div>
+        </div>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-progress-circle</div>
+            <div style="margin: 20px 20px">
+                <my-progress-circle
+                    label="Tasks Completed"
+                    progress="71"
+                ></my-progress-circle>
+            </div>
+            <div style="margin: 20px 20px">
+                <my-progress-circle
+                    label="Downloading"
+                    indeterminate
+                ></my-progress-circle>
+            </div>
+        </div>
+    </div>
+
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
+    </div>
+</div>

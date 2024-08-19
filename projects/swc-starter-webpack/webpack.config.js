@@ -119,6 +119,7 @@ const shared = (env) => {
         mode: ENV,
         output: {
             path: OUTPUT_PATH,
+            publicPath: '/',
             filename: '[name].bundle.js',
         },
         module: {

@@ -52,6 +52,8 @@ import '@spectrum-web-components/tags/sp-tag.js';
 import '@spectrum-web-components/field-group/sp-field-group.js';
 import '@spectrum-web-components/swatch/sp-swatch.js';
 import '@spectrum-web-components/swatch/sp-swatch-group.js';
+import '@spectrum-web-components/progress-bar/sp-progress-bar.js';
+import '@spectrum-web-components/progress-circle/sp-progress-circle.js';
 
 import '@spectrum-web-components/table/sp-table.js';
 import '@spectrum-web-components/table/sp-table-body.js';
@@ -126,3 +128,5 @@ import './extended_swc_samples/my-quick-actions.js';
 import './extended_swc_samples/my-meter.js';
 import './extended_swc_samples/my-swatch.js';
 import './extended_swc_samples/my-overlay.js';
+import './extended_swc_samples/my-progress-bar.js';
+import './extended_swc_samples/my-progress-circle.js';
