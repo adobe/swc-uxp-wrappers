@@ -1,0 +1,279 @@
+<!-- 
+Copyright 2024 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License. 
+-->
+
+<h3>sp-action-menu</h3>
+
+<div id="content">
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-action-menu</div>
+
+            <div id="variantLabel">sizes</div>
+            <div class="demo-example" style="display: flex">
+                <div class="size-div" style="display: block">
+                    <sp-field-label for="s">Small</sp-field-label>
+                    <sp-action-menu size="s">
+                        <span slot="label">More Actions</span>
+                        <sp-menu-item>Deselect</sp-menu-item>
+                        <sp-menu-item>Select inverse</sp-menu-item>
+                        <sp-menu-item>Feather...</sp-menu-item>
+                        <sp-menu-item>Select and mask...</sp-menu-item>
+                        <sp-menu-divider></sp-menu-divider>
+                        <sp-menu-item>Save selection</sp-menu-item>
+                        <sp-menu-item disabled>Make work path</sp-menu-item>
+                    </sp-action-menu>
+                </div>
+
+                <div class="size-div" style="display: block; margin-left: 10px">
+                    <sp-field-label for="m">Medium</sp-field-label>
+                    <sp-action-menu size="m">
+                        <span slot="label">More Actions</span>
+                        <sp-menu-item>Deselect</sp-menu-item>
+                        <sp-menu-item>Select inverse</sp-menu-item>
+                        <sp-menu-item>Feather...</sp-menu-item>
+                        <sp-menu-item>Select and mask...</sp-menu-item>
+                        <sp-menu-divider></sp-menu-divider>
+                        <sp-menu-item>Save selection</sp-menu-item>
+                        <sp-menu-item disabled>Make work path</sp-menu-item>
+                    </sp-action-menu>
+                </div>
+
+                <div class="size-div" style="display: block; margin-left: 10px">
+                    <sp-field-label for="L">Large</sp-field-label>
+                    <sp-action-menu size="l">
+                        <span slot="label">More Actions</span>
+                        <sp-menu-item>Deselect</sp-menu-item>
+                        <sp-menu-item>Select inverse</sp-menu-item>
+                        <sp-menu-item>Feather...</sp-menu-item>
+                        <sp-menu-item>Select and mask...</sp-menu-item>
+                        <sp-menu-divider></sp-menu-divider>
+                        <sp-menu-item>Save selection</sp-menu-item>
+                        <sp-menu-item disabled>Make work path</sp-menu-item>
+                    </sp-action-menu>
+                </div>
+
+                <div class="size-div" style="display: block; margin-left: 10px">
+                    <sp-field-label for="XL">Extra large</sp-field-label>
+                    <sp-action-menu size="xl">
+                        <span slot="label">More Actions</span>
+                        <sp-menu-item>Deselect</sp-menu-item>
+                        <sp-menu-item>Select inverse</sp-menu-item>
+                        <sp-menu-item>Feather...</sp-menu-item>
+                        <sp-menu-item>Select and mask...</sp-menu-item>
+                        <sp-menu-divider></sp-menu-divider>
+                        <sp-menu-item>Save selection</sp-menu-item>
+                        <sp-menu-item disabled>Make work path</sp-menu-item>
+                    </sp-action-menu>
+                </div>
+            </div>
+            <div id="variantLabel">open</div>
+            <div class="demo-example" style="display: flex">
+                <sp-action-menu size="m" open>
+                    <span slot="label">More Actions</span>
+                    <sp-menu-item>Deselect</sp-menu-item>
+                    <sp-menu-item>Select inverse</sp-menu-item>
+                    <sp-menu-item>Feather...</sp-menu-item>
+                    <sp-menu-item>Select and mask...</sp-menu-item>
+                    <sp-menu-divider></sp-menu-divider>
+                    <sp-menu-item>Save selection</sp-menu-item>
+                    <sp-menu-item disabled>Make work path</sp-menu-item>
+                </sp-action-menu>
+            </div>
+            <div id="variantLabel">no icon</div>
+            <div class="demo-example" style="display: flex">
+                <sp-action-menu>
+                    <span slot="label-only">More Actions</span>
+                    <sp-menu-item>Deselect</sp-menu-item>
+                    <sp-menu-item>Select inverse</sp-menu-item>
+                    <sp-menu-item>Feather...</sp-menu-item>
+                    <sp-menu-item>Select and mask...</sp-menu-item>
+                    <sp-menu-divider></sp-menu-divider>
+                    <sp-menu-item>Save selection</sp-menu-item>
+                    <sp-menu-item disabled>Make work path</sp-menu-item>
+                </sp-action-menu>
+            </div>
+
+            <div id="variantLabel">no label</div>
+            <div class="demo-example" style="display: flex">
+                <div class="size-div" style="display: block; margin-left: 10px">
+                    <sp-action-menu label="More Actions">
+                        <sp-menu-item>Deselect</sp-menu-item>
+                        <sp-menu-item>Select inverse</sp-menu-item>
+                        <sp-menu-item>Feather...</sp-menu-item>
+                        <sp-menu-item>Select and mask...</sp-menu-item>
+                        <sp-menu-divider></sp-menu-divider>
+                        <sp-menu-item>Save selection</sp-menu-item>
+                        <sp-menu-item disabled>Make work path</sp-menu-item>
+                    </sp-action-menu>
+                </div>
+            </div>
+
+            <div id="variantLabel">alternate icon</div>
+            <div class="demo-example" style="display: flex">
+                <div class="size-div" style="display: block; margin-left: 10px">
+                    <sp-action-menu>
+                        <sp-icon-settings slot="icon"></sp-icon-settings>
+                        <span slot="label">Actions under the gear</span>
+                        <sp-menu-item>Deselect</sp-menu-item>
+                        <sp-menu-item>Select inverse</sp-menu-item>
+                        <sp-menu-item>Feather...</sp-menu-item>
+                        <sp-menu-item>Select and mask...</sp-menu-item>
+                        <sp-menu-divider></sp-menu-divider>
+                        <sp-menu-item>Save selection</sp-menu-item>
+                        <sp-menu-item disabled>Make work path</sp-menu-item>
+                    </sp-action-menu>
+                </div>
+            </div>
+
+            <div id="variantLabel">alternate icon & no label</div>
+            <div class="demo-example" style="display: flex">
+                <div class="size-div" style="display: block; margin-left: 10px">
+                    <sp-action-menu>
+                        <sp-icon-settings slot="icon"></sp-icon-settings>
+                        <sp-menu-item>Deselect</sp-menu-item>
+                        <sp-menu-item>Select inverse</sp-menu-item>
+                        <sp-menu-item>Feather...</sp-menu-item>
+                        <sp-menu-item>Select and mask...</sp-menu-item>
+                        <sp-menu-divider></sp-menu-divider>
+                        <sp-menu-item>Save selection</sp-menu-item>
+                        <sp-menu-item disabled>Make work path</sp-menu-item>
+                    </sp-action-menu>
+                </div>
+            </div>
+
+            <div id="variantLabel">quiet</div>
+            <div class="demo-example" style="display: flex">
+                <div class="size-div" style="display: block; margin-left: 10px">
+                    <sp-action-menu size="m" quiet>
+                        <span slot="label">More Actions</span>
+                        <sp-menu-item>Deselect</sp-menu-item>
+                        <sp-menu-item>Select inverse</sp-menu-item>
+                        <sp-menu-item>Feather...</sp-menu-item>
+                        <sp-menu-item>Select and mask...</sp-menu-item>
+                        <sp-menu-divider></sp-menu-divider>
+                        <sp-menu-item>Save selection</sp-menu-item>
+                        <sp-menu-item disabled>Make work path</sp-menu-item>
+                    </sp-action-menu>
+                </div>
+            </div>
+
+            <div id="variantLabel">group with select</div>
+            <div class="demo-example" style="display: flex">
+                <sp-action-menu label="Filter or Sort">
+                    <sp-menu-group selects="single">
+                        <span slot="header">Sort By</span>
+                        <sp-menu-item>Name</sp-menu-item>
+                        <sp-menu-item>Created</sp-menu-item>
+                        <sp-menu-item>Modified</sp-menu-item>
+                    </sp-menu-group>
+                    <sp-menu-divider size="m"></sp-menu-divider>
+                    <sp-menu-group selects="multiple">
+                        <sp-menu-item>Reverse Order</sp-menu-item>
+                    </sp-menu-group>
+                </sp-action-menu>
+            </div>
+
+            <div id="variantLabel">sub-menu</div>
+            <div class="demo-example" style="display: flex">
+                <sp-action-menu label="More Actions">
+                    <sp-menu-item>One</sp-menu-item>
+                    <sp-menu-item>Two</sp-menu-item>
+                    <sp-menu-item>
+                        Select some items
+                        <sp-menu slot="submenu" selects="multiple">
+                            <sp-menu-item>A</sp-menu-item>
+                            <sp-menu-item>B</sp-menu-item>
+                            <sp-menu-item>C</sp-menu-item>
+                        </sp-menu>
+                    </sp-menu-item>
+                </sp-action-menu>
+            </div>
+
+            <div id="variantLabel">tootip in action menu</div>
+            <div class="demo-example" style="display: flex">
+                <div class="size-div" style="display: block; margin-left: 10px">
+                    <sp-action-menu>
+                        <sp-tooltip
+                            slot="tooltip"
+                            self-managed
+                            placement="bottom"
+                        >
+                            Content
+                        </sp-tooltip>
+                        <span slot="label">Available shapes</span>
+                        <sp-menu-item value="shape-1-square">
+                            Square
+                        </sp-menu-item>
+                        <sp-menu-item value="shape-2-triangle">
+                            Triangle
+                        </sp-menu-item>
+                        <sp-menu-item value="shape-3-parallelogram">
+                            Parallelogram
+                        </sp-menu-item>
+                    </sp-action-menu>
+                </div>
+            </div>
+
+            <div id="variantLabel">selection</div>
+            <div class="demo-example" style="display: flex">
+                <div class="size-div" style="display: block; margin-left: 10px">
+                    <p>
+                        The value of the `&lt;sp-action-menu&gt;` element is:
+                        <span id="single-value"></span>
+                    </p>
+                    <sp-action-menu
+                        id="action-menu-single-select"
+                        selects="single"
+                    >
+                        <span slot="label">Available shapes</span>
+                        <sp-menu-item value="shape-1-square">
+                            Square
+                        </sp-menu-item>
+                        <sp-menu-item value="shape-2-triangle">
+                            Triangle
+                        </sp-menu-item>
+                        <sp-menu-item value="shape-3-parallelogram">
+                            Parallelogram
+                        </sp-menu-item>
+                        <sp-menu-item value="shape-4-star">Star</sp-menu-item>
+                        <sp-menu-item value="shape-5-hexagon">
+                            Hexagon
+                        </sp-menu-item>
+                        <sp-menu-item value="shape-6-circle" disabled>
+                            Circle
+                        </sp-menu-item>
+                    </sp-action-menu>
+                </div>
+            </div>
+        </div>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-action-menu</div>
+            <my-action-menu>
+                <span slot="label">More Actions</span>
+                <sp-menu-item>Deselect</sp-menu-item>
+                <sp-menu-item>Select inverse</sp-menu-item>
+                <sp-menu-item>Feather...</sp-menu-item>
+                <sp-menu-item>Select and mask...</sp-menu-item>
+                <sp-menu-divider></sp-menu-divider>
+                <sp-menu-item>Save selection</sp-menu-item>
+                <sp-menu-item disabled>Make work path</sp-menu-item>
+            </my-action-menu>
+        </div>
+    </div>
+
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
+    </div>
+</div>

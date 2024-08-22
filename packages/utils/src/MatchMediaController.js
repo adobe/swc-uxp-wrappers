@@ -10,31 +10,8 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* write uxp style overrides */
-
-/* Workaround for - https://jira.corp.adobe.com/browse/UXP-21331 */
-:host {
-    --uxp-swc-horizontal-offset: 0px;
-    --uxp-swc-vertical-offset: 2px;
-    --uxp-swc-blur: 6px;
-    box-shadow: var(--uxp-swc-horizontal-offset) var(--uxp-swc-vertical-offset)
-        var(--uxp-swc-blur)
-        var(
-            --spectrum-popover-shadow-color,
-            var(--spectrum-alias-dropshadow-color)
-        );
+// Custom  MatchMediaController
+export function MatchMediaController(context, isMobile) {
+    return false;
 }
-
-.block {
-    height: 10px;
-    width: 100%;
-}
-
-.inline {
-    height: 100%;
-    width: 10px;
-}
-
-::slotted(.visually-hidden) {
-    visibility: hidden;
-}
+export const IS_MOBILE = false;

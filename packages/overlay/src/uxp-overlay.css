@@ -16,3 +16,8 @@ governing permissions and limitations under the License.
 .dialog {
     z-index: 1000;
 }
+
+.dialog[actual-placement*='bottom'] {
+    padding-top: var(--swc-overlay-animation-distance);
+    padding-bottom: var(--swc-overlay-animation-distance);
+}
