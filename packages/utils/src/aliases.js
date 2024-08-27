@@ -52,4 +52,7 @@ export const aliases = {
     '@spectrum-web-components/overlay': '@swc-uxp-wrappers/overlay',
     '../sp-menu.dev.js': '@swc-uxp-wrappers/menu/sp-menu.js',
     '../sp-menu.js': '@swc-uxp-wrappers/menu/sp-menu.js',
+    './ButtonBase.js': '@swc-uxp-wrappers/button/src/ButtonBase.js',
+    './ButtonBase.dev.js': '@swc-uxp-wrappers/button/src/ButtonBase.js',
+    
 };
