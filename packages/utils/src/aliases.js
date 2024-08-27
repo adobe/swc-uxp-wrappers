@@ -52,4 +52,8 @@ export const aliases = {
     '@spectrum-web-components/overlay': '@swc-uxp-wrappers/overlay',
     '../sp-menu.dev.js': '@swc-uxp-wrappers/menu/sp-menu.js',
     '../sp-menu.js': '@swc-uxp-wrappers/menu/sp-menu.js',
+    './topLayerOverTransforms.dev.js':
+        '@swc-uxp-internal/overlay/src/topLayerOverTransforms.js',
+    './topLayerOverTransforms.js':
+        '@swc-uxp-internal/overlay/src/topLayerOverTransforms.js',
 };
