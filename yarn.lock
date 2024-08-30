@@ -2602,6 +2602,20 @@
   dependencies:
     "@spectrum-web-components/base" "^0.37.0"
 
+"@spectrum-web-components/number-field@^0.37.0", "@swc-uxp-internal/number-field@npm:@spectrum-web-components/number-field@0.37.0":
+  version "0.37.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/number-field/-/number-field-0.37.0.tgz#b41c265b2d2a6253fe6ee2f3e45a7016c50cbf2d"
+  integrity sha512-XJZJQGyhfnm9GY5XUBshUXb3LEgzB33D8y8hY4cSnky1a9mdpeboV+HB+z2TOkeriB9ZQTaIoT8Ev/p15Tr+ew==
+  dependencies:
+    "@internationalized/number" "^3.1.0"
+    "@spectrum-web-components/action-button" "^0.37.0"
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/icon" "^0.37.0"
+    "@spectrum-web-components/icons-ui" "^0.37.0"
+    "@spectrum-web-components/reactive-controllers" "^0.37.0"
+    "@spectrum-web-components/shared" "^0.37.0"
+    "@spectrum-web-components/textfield" "^0.37.0"
+
 "@spectrum-web-components/overlay@^0.19.5":
   version "0.19.5"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/overlay/-/overlay-0.19.5.tgz#a92fe99937643665ff3002c945751325ebe83fda"
@@ -2954,20 +2968,6 @@
     "@spectrum-web-components/field-label" "^0.37.0"
     "@spectrum-web-components/shared" "^0.37.0"
 
-"@swc-uxp-internal/number-field@npm:@spectrum-web-components/number-field@0.37.0":
-  version "0.37.0"
-  resolved "https://registry.yarnpkg.com/@spectrum-web-components/number-field/-/number-field-0.37.0.tgz#b41c265b2d2a6253fe6ee2f3e45a7016c50cbf2d"
-  integrity sha512-XJZJQGyhfnm9GY5XUBshUXb3LEgzB33D8y8hY4cSnky1a9mdpeboV+HB+z2TOkeriB9ZQTaIoT8Ev/p15Tr+ew==
-  dependencies:
-    "@internationalized/number" "^3.1.0"
-    "@spectrum-web-components/action-button" "^0.37.0"
-    "@spectrum-web-components/base" "^0.37.0"
-    "@spectrum-web-components/icon" "^0.37.0"
-    "@spectrum-web-components/icons-ui" "^0.37.0"
-    "@spectrum-web-components/reactive-controllers" "^0.37.0"
-    "@spectrum-web-components/shared" "^0.37.0"
-    "@spectrum-web-components/textfield" "^0.37.0"
-
 "@swc-uxp-internal/picker-button@npm:@spectrum-web-components/picker-button@0.37.0":
   version "0.37.0"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/picker-button/-/picker-button-0.37.0.tgz#d8f097a81f83251b193c39889ede93270276f9f6"
@@ -3007,6 +3007,20 @@
     "@spectrum-web-components/base" "^0.37.0"
     "@spectrum-web-components/reactive-controllers" "^0.37.0"
     "@spectrum-web-components/shared" "^0.37.0"
+
+"@swc-uxp-internal/slider@npm:@spectrum-web-components/slider@0.37.0":
+  version "0.37.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/slider/-/slider-0.37.0.tgz#bcb9fe706991c6fbd7f0260c6764b2fc3ede6712"
+  integrity sha512-/tc+ubracSbCgbZiR15lYibP52Dg+n7OmroSrI92rkqYhFspecNlmkjV+M6JdbTonYGyK4a+/Ilab1GCJYAwKw==
+  dependencies:
+    "@internationalized/number" "^3.1.0"
+    "@lit-labs/observers" "^2.0.0"
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/field-label" "^0.37.0"
+    "@spectrum-web-components/number-field" "^0.37.0"
+    "@spectrum-web-components/reactive-controllers" "^0.37.0"
+    "@spectrum-web-components/shared" "^0.37.0"
+    "@spectrum-web-components/theme" "^0.37.0"
 
 "@swc-uxp-internal/swatch@npm:@spectrum-web-components/swatch@0.37.0":
   version "0.37.0"

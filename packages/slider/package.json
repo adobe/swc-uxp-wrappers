@@ -1,0 +1,40 @@
+{
+    "name": "@swc-uxp-wrappers/slider",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/slider component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/slider"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/Slider.js": "./src/Slider.js",
+        "./src/SliderHandle.js": "./src/SliderHandle.js",
+        "./src/slider.css.js": "./src/slider.css.js",
+        "./sp-slider.js": "./sp-slider.js",
+        "./sp-slider-handle.js": "./sp-slider-handle.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/slider": "npm:@spectrum-web-components/slider@0.37.0",
+        "@swc-uxp-wrappers/field-label": "*",
+        "@swc-uxp-wrappers/number-field": "*"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/slider"
+    ]
+}
