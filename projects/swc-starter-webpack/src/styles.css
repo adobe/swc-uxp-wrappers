@@ -89,10 +89,16 @@ sp-action-group {
 }
 
 sp-textfield,
+sp-tabs,
 sp-tags,
+sp-split-view,
 sp-number-field,
 sp-search {
     margin-bottom: 20px;
+}
+
+sp-tabs {
+    margin-bottom: 40px;
 }
 
 sp-toast {
@@ -173,10 +179,26 @@ p {
 }
 
 .size-div {
-    margin: 5px;
+    padding: 10px;
+    background: var(--spectrum-global-color-gray-200);
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+sp-accordion {
+    width: 100%;
+    margin: 10px;
+}
+
+.size-div > sp-field-label {
+    background-color: var(--spectrum-gray-300);
+    width: 100%;
+    padding: 10px;
+}
+
+.variantDiv {
+    padding-bottom: 20px;
 }
 
 #console {
