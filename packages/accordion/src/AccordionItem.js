@@ -27,21 +27,26 @@ class UxpAccordionItem extends AccordionItem {
 
     handleKeyup(event) {
         const { code, target } = event;
-        if (this === target) {
-            switch (code) {
-                case 'Enter':
-                case 'Space':
-                case 'NumpadEnter':
-                    this.onClick();
-                    break;
-                default:
-                    break;
-            }
-        } else {
+        if (this !== target) {
             // Prevent the accordion from toggling if the focus is on a child element within #content
             return;
         }
+
+        switch (code) {
+            case 'Enter':
+            case 'Space':
+            case 'NumpadEnter':
+                this.onClick();
+                break;
+            default:
+                break;
+        }
     }
+
+    // We are making changes in render, as sp-accordion-item relies on native button as header
+    // since UXP has limitation to handle icons in native button
+    // apart from this font-size is not supported in PS for widgets like button/input etc due to which t-shirt sizing will not be working if we dont adopt this by replacing button whith div here
+    // also text-align property is only supprted at div/span level in UXP, button widget need to be tweaked to make it work both from native and alpaca end
 
     render() {
         return html`
