@@ -31,6 +31,7 @@ governing permissions and limitations under the License.
                 <div class="size-div" style="display: block; margin-left: 10px">
                     <sp-field-label for="m">Medium</sp-field-label>
                     <sp-number-field
+                        id="dynamic-api-test"
                         label="Size"
                         value="1024"
                         size="m"
@@ -342,8 +343,27 @@ governing permissions and limitations under the License.
     </div>
 
     <div id="config">
-        <div style="display: inline-flex"></div>
+        <div style="display: inline-flex">
+            <sp-field-label
+                size="l"
+                side-aligned="end"
+                for="number-field-sizes"
+            >
+                Sizes
+            </sp-field-label>
+            <select id="number-field-sizes">
+                <option value="s">Small</option>
+                <option selected value="m" selected>Medium</option>
+                <option value="l">Large</option>
+                <option value="xl">Extra Large</option>
+            </select>
+        </div>
 
-        <div style="display: flex; flex-direction: column"></div>
+        <div style="display: flex; flex-direction: column">
+            <sp-checkbox id="disabled">Disabled</sp-checkbox>
+            <sp-checkbox id="quiet">Quiet</sp-checkbox>
+            <sp-checkbox id="indeterminate">Indeterminate</sp-checkbox>
+            <sp-checkbox id="hide-stepper">Hide Stepper</sp-checkbox>
+        </div>
     </div>
 </div>
