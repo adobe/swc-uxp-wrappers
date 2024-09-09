@@ -19,6 +19,17 @@ class UxpSwatch extends Swatch {
         // We are combining our styles to make all super class styles available along with the transitive dependent classes styles.
         return [super.styles, styles];
     }
+
+    firstUpdated(changed) {
+        super.firstUpdated(changed);
+        this.addEventListener('keyup', this._onKeyUp);
+    }
+
+    _onKeyUp(event) {
+        if (event.code === 'Enter' || event.code === 'NumpadEnter') {
+            this.click();
+        }
+    }
 }
 
 export { UxpSwatch as Swatch };
