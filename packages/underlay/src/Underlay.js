@@ -19,19 +19,6 @@ class UxpUnderlay extends Underlay {
         // We are combining our styles to make all super class styles available along with the transitive dependent classes styles.
         return [super.styles, styles];
     }
-
-    constructor() {
-        super(...arguments);
-        // Add event listener for Escape key
-        this.addEventListener('keydown', this.handleEscape);
-    }
-
-    handleEscape(event) {
-        if (event.key === 'Escape') {
-            console.log('handleEscape');
-            this.open = false;
-        }
-    }
 }
 
 export { UxpUnderlay as Underlay };
