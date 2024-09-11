@@ -165,6 +165,31 @@ function attachEvents(tabName) {
 
         eval(offsetListener);
     }
+
+    if (tabName === 'sp-accordion') {
+        const spAccordionSizes = `
+            const sizes = document.getElementById('accordion-sizes');
+            sizes.addEventListener("change", () => {
+                document.querySelectorAll('#dynamic-api-test').forEach(element => {
+                    element.setAttribute('size', sizes.value);
+                });
+            });
+        `;
+        eval(spAccordionSizes);
+
+        const spCheckboxDisabled = `
+            document.querySelector('#disabled').addEventListener('change', (evt) => {
+                    const checked = evt.target.checked;
+                    const accordionItem = document.querySelector('#dynamic-disabled-api-test');
+                    if (checked) {
+                        accordionItem.setAttribute("disabled", "disabled");
+                    } else {
+                        accordionItem.removeAttribute("disabled");
+                    }
+                });
+        `;
+        eval(spCheckboxDisabled);
+    }
 }
 
 function handleThemeColor(selectObject) {
