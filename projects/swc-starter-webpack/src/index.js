@@ -54,6 +54,8 @@ import '@spectrum-web-components/tags/sp-tag.js';
 import '@spectrum-web-components/field-group/sp-field-group.js';
 import '@spectrum-web-components/swatch/sp-swatch.js';
 import '@spectrum-web-components/swatch/sp-swatch-group.js';
+import '@spectrum-web-components/accordion/sp-accordion.js';
+import '@spectrum-web-components/accordion/sp-accordion-item.js';
 
 import '@spectrum-web-components/table/sp-table.js';
 import '@spectrum-web-components/table/sp-table-body.js';
@@ -65,6 +67,11 @@ import '@spectrum-web-components/table/sp-table-row.js';
 
 import '@spectrum-web-components/overlay/sp-overlay.js';
 import '@spectrum-web-components/overlay/overlay-trigger.js';
+
+import '@spectrum-web-components/tabs/sp-tabs.js';
+import '@spectrum-web-components/tabs/sp-tab.js';
+import '@spectrum-web-components/tabs/sp-tab-panel.js';
+import '@spectrum-web-components/tabs/sp-tabs-overflow.js';
 
 import '@spectrum-web-components/number-field/sp-number-field.js';
 import '@spectrum-web-components/search/sp-search.js';
@@ -128,3 +135,5 @@ import './extended_swc_samples/my-quick-actions.js';
 import './extended_swc_samples/my-meter.js';
 import './extended_swc_samples/my-swatch.js';
 import './extended_swc_samples/my-overlay.js';
+import './extended_swc_samples/my-tabs.js';
+import './extended_swc_samples/my-accordion.js';
