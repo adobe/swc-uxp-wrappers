@@ -56,4 +56,8 @@ export const aliases = {
     '../sp-menu.js': '@swc-uxp-wrappers/menu/sp-menu.js',
     './ButtonBase.js': '@swc-uxp-wrappers/button/src/ButtonBase.js',
     './ButtonBase.dev.js': '@swc-uxp-wrappers/button/src/ButtonBase.js',
+    './topLayerOverTransforms.dev.js':
+        '@swc-uxp-internal/overlay/src/topLayerOverTransforms.js',
+    './topLayerOverTransforms.js':
+        '@swc-uxp-internal/overlay/src/topLayerOverTransforms.js',
 };
