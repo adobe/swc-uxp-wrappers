@@ -166,6 +166,201 @@ function attachEvents(tabName) {
         eval(offsetListener);
     }
 
+    if (tabName === 'sp-underlay') {
+        const showModalDialogButtonClick = `
+            const launchModalDialog = document.getElementById('launchModalDialog');
+            launchModalDialog.addEventListener("click", () => {
+                const modalDialog = document.getElementById('modalDialog');
+                modalDialog.showModal({
+                    size: {
+                        width: 600,
+                        height: 400
+                    },
+                    titleVisibility: "hide"
+                });
+            });
+            `;
+
+        eval(showModalDialogButtonClick);
+
+        const showFullscreenDialog = `
+            const buttonFullscreen = document.getElementById('button-fullscreen');
+            buttonFullscreen.addEventListener("click", () => {
+                const underlayFullscreen = document.getElementById('underlay-fullscreen');
+                underlayFullscreen.open = true;
+            });
+            `;
+        eval(showFullscreenDialog);
+
+        const closeFullscreenDialog = `
+            const closeFullscreenDialog = document.getElementById('closeFullscreenDialog');
+            closeFullscreenDialog.addEventListener("click", () => {
+                const underlayFullscreen = document.getElementById('underlay-fullscreen');
+                underlayFullscreen.open = false;
+            });
+            `;
+
+        eval(closeFullscreenDialog);
+
+        const showAlertErrorDialog = `
+        const buttonAlertError = document.getElementById('button-alertError');
+        buttonAlertError.addEventListener("click", () => {
+            const underlayAlertError = document.getElementById('underlay-alertError');
+            underlayAlertError.open = true;
+        });
+        `;
+        eval(showAlertErrorDialog);
+
+        const closeAlertErrorDialog = `
+            const closeAlertErrorDialog = document.getElementById('closeAlertErrorDialog');
+            closeAlertErrorDialog.addEventListener("click", () => {
+                const underlayAlertError = document.getElementById('underlay-alertError');
+                underlayAlertError.open = false;
+            });
+            `;
+
+        eval(closeAlertErrorDialog);
+
+        const showConfirmationDialog = `
+        const buttonConfirmation = document.getElementById('button-confirmation');
+        buttonConfirmation.addEventListener("click", () => {
+            const underlayConfirmation = document.getElementById('underlay-confirmation');
+            underlayConfirmation.open = true;
+        });
+        `;
+        eval(showConfirmationDialog);
+
+        const closeConfirmationDialog = `
+            const closeConfirmationDialog = document.getElementById('closeConfirmationDialog');
+            closeConfirmationDialog.addEventListener("click", () => {
+                const underlayConfirmation = document.getElementById('underlay-confirmation');
+                underlayConfirmation.open = false;
+            });
+            `;
+
+        eval(closeConfirmationDialog);
+
+        const showHeroDialog = `
+        const buttonHero = document.getElementById('button-hero');
+        buttonHero.addEventListener("click", () => {
+            const underlayHero = document.getElementById('underlay-hero');
+            underlayHero.open = true;
+        });
+        `;
+        eval(showHeroDialog);
+
+        document
+            .getElementById('hero')
+            .addEventListener('close', function (event) {
+                const underlayHero = document.getElementById('underlay-hero');
+                underlayHero.open = false;
+            });
+
+        const showDismissableDialog = `
+        const buttonDismissable = document.getElementById('button-dismissable');
+        buttonDismissable.addEventListener("click", () => {
+            const underlayDismissable = document.getElementById('underlay-dismissable');
+            underlayDismissable.open = true;
+        });
+        `;
+        eval(showDismissableDialog);
+
+        document
+            .getElementById('dismissable')
+            .addEventListener('close', function (event) {
+                const underlayDismissable = document.getElementById(
+                    'underlay-dismissable'
+                );
+                underlayDismissable.open = false;
+            });
+
+        const showCloseEventDialog = `
+        const buttonCloseEvent = document.getElementById('button-closeEvent');
+        buttonCloseEvent.addEventListener("click", () => {
+            const underlayCloseEvent = document.getElementById('underlay-closeEvent');
+            underlayCloseEvent.open = true;
+        });
+        `;
+        eval(showCloseEventDialog);
+
+        const closeCloseEventDialog = `
+            const closeEventButton = document.getElementById('closeEventButton');
+            closeEventButton.addEventListener("click", () => {
+                const underlayCloseEvent = document.getElementById('underlay-closeEvent');
+                underlayCloseEvent.open = false;
+            });
+            `;
+
+        eval(closeCloseEventDialog);
+
+        const showCustomtDialog = `
+         const buttonCustomDialog = document.getElementById('button-customDialog');
+         buttonCustomDialog.addEventListener("click", () => {
+             const underlayCustomDialog = document.getElementById('underlay-customDialog');
+             underlayCustomDialog.open = true;
+         });
+         `;
+        eval(showCustomtDialog);
+
+        const closeCustomtDialog = `
+             const closeCustomDialogButton = document.getElementById('closeCustomDialogButton');
+             closeCustomDialogButton.addEventListener("click", () => {
+                 const underlayCustomDialog = document.getElementById('underlay-customDialog');
+                 underlayCustomDialog.open = false;
+             });
+             `;
+
+        eval(closeCustomtDialog);
+
+        const showScrollableContentDialog = `
+        const buttonScrollableContent = document.getElementById('button-scrollable-content');
+        buttonScrollableContent.addEventListener("click", () => {
+            const underlayScrollableContent = document.getElementById('underlay-scrollable-content');
+            underlayScrollableContent.open = true;
+        });
+        `;
+        eval(showScrollableContentDialog);
+
+        document
+            .getElementById('scrollable-content')
+            .addEventListener('close', function (event) {
+                const underlayScrollableContent = document.getElementById(
+                    'underlay-scrollable-content'
+                );
+                underlayScrollableContent.open = false;
+            });
+
+        const showFormContentDialog = `
+         const buttonFormContent = document.getElementById('button-form-content');
+         buttonFormContent.addEventListener("click", () => {
+             const underlayFormContent = document.getElementById('underlay-form-content');
+             underlayFormContent.open = true;
+         });
+         `;
+        eval(showFormContentDialog);
+
+        document
+            .getElementById('form-content')
+            .addEventListener('close', function (event) {
+                const underlayFormContent = document.getElementById(
+                    'underlay-form-content'
+                );
+                underlayFormContent.open = false;
+            });
+    }
+
+    if (tabName === 'sp-dialog') {
+        const showAlertErrorDialog = `
+            const closeAlertErrorDialogButton = document.getElementById('closeAlertErrorDialog');
+            closeAlertErrorDialogButton.addEventListener("click", () => {
+                closeAlertErrorDialogButton.dispatchEvent(new Event('close', { bubbles: true, composed: true }));
+
+            });
+            `;
+
+        eval(showAlertErrorDialog);
+    }
+
     if (tabName === 'sp-accordion') {
         const spAccordionSizes = `
             const sizes = document.getElementById('accordion-sizes');
