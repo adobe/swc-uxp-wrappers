@@ -10,6 +10,72 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License. 
 -->
 
+<div style="display: inline-flex">
+    <overlay-trigger>
+        <sp-dialog-base underlay slot="click-content">
+            <sp-dialog size="s" dismissable>
+                <h2 slot="heading">A thing is about to happen</h2>
+                <p>Something that might happen a lot is about to happen.</p>
+                <p>
+                    The click events for the "OK" button are bound to the story
+                    not to the components in specific.
+                </p>
+                <sp-checkbox slot="footer">
+                    Don't show me this again
+                </sp-checkbox>
+            </sp-dialog>
+        </sp-dialog-base>
+        <sp-button slot="trigger" variant="primary">
+            Launch sp-dialog using sp-overlay via sp-dialog-base
+        </sp-button>
+    </overlay-trigger>
+
+    <overlay-trigger>
+        <sp-dialog-base underlay slot="click-content">
+            <sp-dialog size="s" id="alertError" error>
+                <h2 slot="heading">Enable Smart Filters?</h2>
+                Smart filters are nondestructive and will preserve your original
+                images.
+                <sp-button
+                    variant="secondary"
+                    treatment="outline"
+                    slot="button"
+                    style="margin-right: 10px"
+                >
+                    Cancel
+                </sp-button>
+                <sp-button
+                    id="closeAlertErrorDialog"
+                    variant="primary"
+                    treatment="outline"
+                    slot="button"
+                >
+                    Enable
+                </sp-button>
+            </sp-dialog>
+        </sp-dialog-base>
+        <sp-button slot="trigger" variant="primary">
+            Launch error state sp-dialog using sp-overlay via sp-dialog-base
+        </sp-button>
+    </overlay-trigger>
+
+    <overlay-trigger>
+        <sp-dialog-wrapper
+            slot="click-content"
+            headline="Dialog title"
+            dismissable
+            dismiss-label="Close"
+            underlay
+            footer="Content for footer"
+        >
+            Content of the dialog
+        </sp-dialog-wrapper>
+        <sp-button slot="trigger" variant="primary">
+            Launch sp-dialog using sp-overlay via sp-dialog-wrapper
+        </sp-button>
+    </overlay-trigger>
+</div>
+
 <sp-dialog size="m">
     <h2 slot="heading">Disclaimer</h2>
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod

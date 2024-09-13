@@ -30,7 +30,9 @@
         "@swc-uxp-internal/dialog": "npm:@spectrum-web-components/dialog@0.37.0",
         "@swc-uxp-wrappers/button": "2.0.0",
         "@swc-uxp-wrappers/button-group": "2.0.0",
-        "@swc-uxp-wrappers/divider": "2.0.0"
+        "@swc-uxp-wrappers/divider": "2.0.0",
+        "@swc-uxp-wrappers/modal": "*",
+        "@swc-uxp-wrappers/underlay": "*"
     },
     "files": [
         "**/*.js"

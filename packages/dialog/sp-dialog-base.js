@@ -12,5 +12,4 @@ governing permissions and limitations under the License.
 
 import { DialogBase } from './src/DialogBase.js';
 
-/* sp-dialog-base will be enabled once overlay supported in UXP */
-// customElements.define('sp-dialog-base', DialogBase);
+customElements.define('sp-dialog-base', DialogBase);

@@ -2595,7 +2595,7 @@
     "@spectrum-web-components/overlay" "^0.19.5"
     "@spectrum-web-components/shared" "^0.15.7"
 
-"@spectrum-web-components/modal@^0.37.0":
+"@spectrum-web-components/modal@^0.37.0", "@swc-uxp-internal/modal@npm:@spectrum-web-components/modal@0.37.0":
   version "0.37.0"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/modal/-/modal-0.37.0.tgz#546ec9ad8f17056e77c9c7ed61ae34f56219f3e4"
   integrity sha512-GXtRZdXFHZoP3UKu5oG7TQFEOShHhxGE5p7vvN7oFPm2Yz1WtpmjH2HdBFb2mI8BmEvKax/KEG5kZCrTDQpTvg==
@@ -2695,7 +2695,8 @@
     "@spectrum-web-components/base" "^0.37.0"
     "@spectrum-web-components/styles" "^0.37.0"
 
-"@spectrum-web-components/underlay@^0.37.0":
+"@spectrum-web-components/underlay@^0.37.0", "@swc-uxp-internal/underlay@npm:@spectrum-web-components/underlay@0.37.0":
+  name "@swc-uxp-internal/underlay"
   version "0.37.0"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/underlay/-/underlay-0.37.0.tgz#87d0acdc9032aea31f30030b4549db57017688a9"
   integrity sha512-H3a3HmxrqGY6+N9nQwiapxXVLEIJoQ87naoXKy7ZnEmRyUnPcLjBaoXvLZKKXEDosaYxE3Mm6dnfjyKpk5PM1Q==
@@ -2862,6 +2863,17 @@
   dependencies:
     "@lit-labs/react" "^1.1.0"
     "@spectrum-web-components/theme" "^0.14.7"
+
+"@swc-uxp-internal/accordion@npm:@spectrum-web-components/accordion@0.37.0":
+  version "0.37.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/accordion/-/accordion-0.37.0.tgz#42bb56213304e30bb3868b0c11831dac4a8290c1"
+  integrity sha512-64cGyQ13i6vWNym3bP12nMirJMRY+rfrwF6p7/uYw2jtTTZ+QJTJAWxDvAi6+xQKrzdTc27v84tyWZ3i3FzrSQ==
+  dependencies:
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/icon" "^0.37.0"
+    "@spectrum-web-components/icons-ui" "^0.37.0"
+    "@spectrum-web-components/reactive-controllers" "^0.37.0"
+    "@spectrum-web-components/shared" "^0.37.0"
 
 "@swc-uxp-internal/action-bar@npm:@spectrum-web-components/action-bar@0.37.0":
   version "0.37.0"
@@ -3039,6 +3051,18 @@
     "@spectrum-web-components/checkbox" "^0.37.0"
     "@spectrum-web-components/icon" "^0.37.0"
     "@spectrum-web-components/icons-ui" "^0.37.0"
+
+"@swc-uxp-internal/tabs@npm:@spectrum-web-components/tabs@0.37.0":
+  version "0.37.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/tabs/-/tabs-0.37.0.tgz#643a3905e04c0a090880fe728a543a92087df460"
+  integrity sha512-bLIAZ6MX/4e+L2NpIxfGy2DsUrBoWEC2vLoTjNgdgGyCF0BeGlAU6QZoOM/h61PJdNI9d9ksczkxQj3Io7wFVA==
+  dependencies:
+    "@lit-labs/observers" "^2.0.0"
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/icon" "^0.37.0"
+    "@spectrum-web-components/icons-ui" "^0.37.0"
+    "@spectrum-web-components/reactive-controllers" "^0.37.0"
+    "@spectrum-web-components/shared" "^0.37.0"
 
 "@swc-uxp-internal/tags@npm:@spectrum-web-components/tags@0.37.0":
   version "0.37.0"
