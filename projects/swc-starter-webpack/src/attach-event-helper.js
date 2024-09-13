@@ -166,6 +166,68 @@ function attachEvents(tabName) {
         eval(offsetListener);
     }
 
+    if (tabName === 'sp-number-field') {
+        const spNumberFieldSizes = `
+            const sizes = document.getElementById('number-field-sizes');
+            sizes.addEventListener("change", () => {
+                document.querySelector('#dynamic-api-test').setAttribute('size', sizes.value); 
+            });
+        `;
+        eval(spNumberFieldSizes);
+
+        const spNumberFieldDisabled = `
+            document.querySelector('#disabled').addEventListener('change', (evt) => {
+                    const checked = evt.target.checked;
+                    const numberField = document.querySelector('#dynamic-api-test');
+                    if (checked) {
+                        numberField.setAttribute("disabled", "disabled");
+                    } else {
+                        numberField.removeAttribute("disabled");
+                    }
+                });
+        `;
+        eval(spNumberFieldDisabled);
+
+        const spNumberFieldQuiet = `
+            document.querySelector('#quiet').addEventListener('change', (evt) => {
+                    const checked = evt.target.checked;
+                    const numberField = document.querySelector('#dynamic-api-test');
+                    if (checked) {
+                        numberField.setAttribute("quiet", "quiet");
+                    } else {
+                        numberField.removeAttribute("quiet");
+                    }
+                });
+        `;
+        eval(spNumberFieldQuiet);
+
+        const spNumberFieldIntermediate = `
+            document.querySelector('#indeterminate').addEventListener('change', (evt) => {
+                    const checked = evt.target.checked;
+                    const numberField = document.querySelector('#dynamic-api-test');
+                    if (checked) {
+                        numberField.setAttribute("indeterminate", "indeterminate");
+                    } else {
+                        numberField.removeAttribute("indeterminate");
+                    }
+                });
+        `;
+        eval(spNumberFieldIntermediate);
+
+        const spNumberFieldHideStepper = `
+            document.querySelector('#hide-stepper').addEventListener('change', (evt) => {
+                    const checked = evt.target.checked;
+                    const numberField = document.querySelector('#dynamic-api-test');
+                    if (checked) {
+                        numberField.setAttribute("hide-stepper", "hide-stepper");
+                    } else {
+                        numberField.removeAttribute("hide-stepper");
+                    }
+                });
+        `;
+        eval(spNumberFieldHideStepper);
+    }
+
     if (tabName === 'sp-underlay') {
         const showModalDialogButtonClick = `
             const launchModalDialog = document.getElementById('launchModalDialog');
@@ -434,8 +496,8 @@ function toggleEventListenerToSpControls(toggle = 'add') {
         (evtName) => {
             Array.from(document.querySelectorAll('*')).forEach((control) => {
                 if (
-                    control._nodeName !== 'sp-theme' &&
-                    control._nodeName.startsWith('sp-')
+                    control?._nodeName !== 'sp-theme' &&
+                    control?._nodeName?.startsWith('sp-')
                 ) {
                     if (toggle === 'add') {
                         control.addEventListener(evtName, logEvent);
