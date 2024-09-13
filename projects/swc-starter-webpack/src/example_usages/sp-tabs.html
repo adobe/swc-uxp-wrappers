@@ -1,0 +1,1292 @@
+<!-- 
+Copyright 2024 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License. 
+-->
+
+<style>
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin-left: 10px;
+    }
+
+    .align-right {
+        align-self: flex-end;
+    }
+
+    .non-flex {
+        display: block;
+    }
+</style>
+
+<h3>sp-tabs</h3>
+
+<div id="content">
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-tabs</div>
+
+            <div id="variantLabel">sizes</div>
+            <div class="demo-example">
+                <div class="size-div non-flex">
+                    <sp-field-label for="s">Small</sp-field-label>
+                    <sp-tabs selected="2" size="s">
+                        <sp-tab label="Tab 1" value="1"></sp-tab>
+                        <sp-tab label="Tab 2" value="2"></sp-tab>
+                        <sp-tab label="Tab 3" value="3"></sp-tab>
+                        <sp-tab label="Tab 4" value="4"></sp-tab>
+                        <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                        <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+
+                <div class="size-div non-flex">
+                    <sp-field-label for="m">Medium</sp-field-label>
+                    <sp-tabs selected="2" size="m">
+                        <sp-tab label="Tab 1" value="1"></sp-tab>
+                        <sp-tab label="Tab 2" value="2"></sp-tab>
+                        <sp-tab label="Tab 3" value="3"></sp-tab>
+                        <sp-tab label="Tab 4" value="4"></sp-tab>
+                        <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                        <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+
+                <div class="size-div non-flex">
+                    <sp-field-label for="L">Large</sp-field-label>
+                    <sp-tabs selected="2" size="l">
+                        <sp-tab label="Tab 1" value="1"></sp-tab>
+                        <sp-tab label="Tab 2" value="2"></sp-tab>
+                        <sp-tab label="Tab 3" value="3"></sp-tab>
+                        <sp-tab label="Tab 4" value="4"></sp-tab>
+                        <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                        <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+
+                <div class="size-div non-flex">
+                    <sp-field-label for="XL">Extra large</sp-field-label>
+                    <sp-tabs selected="2" size="xl">
+                        <sp-tab label="Tab 1" value="1"></sp-tab>
+                        <sp-tab label="Tab 2" value="2"></sp-tab>
+                        <sp-tab label="Tab 3" value="3"></sp-tab>
+                        <sp-tab label="Tab 4" value="4"></sp-tab>
+                        <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                        <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+            </div>
+
+            <div id="variantLabel">disabled</div>
+            <div class="demo-example">
+                <div class="size-div non-flex">
+                    <sp-tabs selected="2" disabled>
+                        <sp-tab label="Tab 1" value="1"></sp-tab>
+                        <sp-tab label="Tab 2" value="2"></sp-tab>
+                        <sp-tab label="Tab 3" value="3"></sp-tab>
+                        <sp-tab label="Tab 4" value="4"></sp-tab>
+                        <sp-tab-panel value="1">
+                            Content for Tab 1 is not selectable
+                        </sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">
+                            Content for Tab 3 is not selectable
+                        </sp-tab-panel>
+                        <sp-tab-panel value="4">
+                            Content for Tab 4 is not selectable
+                        </sp-tab-panel>
+                    </sp-tabs>
+                </div>
+            </div>
+
+            <div id="variantLabel">disabled particular tab</div>
+            <div class="demo-example">
+                <div class="size-div non-flex">
+                    <sp-tabs selected="2">
+                        <sp-tab label="Tab 1" value="1"></sp-tab>
+                        <sp-tab label="Tab 2" value="2"></sp-tab>
+                        <sp-tab label="Tab 3" value="3" disabled></sp-tab>
+                        <sp-tab label="Tab 4" value="4"></sp-tab>
+                        <sp-tab-panel value="1">
+                            Content for Tab 1 is not selectable
+                        </sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">
+                            Content for Tab 3 is not selectable
+                        </sp-tab-panel>
+                        <sp-tab-panel value="4">
+                            Content for Tab 4 is not selectable
+                        </sp-tab-panel>
+                    </sp-tabs>
+                </div>
+            </div>
+
+            <div id="variantLabel">disabled + icon</div>
+            <div class="demo-example">
+                <div class="size-div non-flex">
+                    <sp-tabs selected="2" disabled>
+                        <sp-tab label="Tab 1" value="1">
+                            <sp-icon-edit slot="icon"></sp-icon-edit>
+                        </sp-tab>
+                        <sp-tab label="Tab 2" value="2">
+                            <sp-icon-more slot="icon"></sp-icon-more>
+                        </sp-tab>
+                        <sp-tab label="Tab 3" value="3">
+                            <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                        </sp-tab>
+                        <sp-tab label="Tab 4" value="4">
+                            <sp-icon-stopwatch slot="icon"></sp-icon-stopwatch>
+                        </sp-tab>
+                        <sp-tab-panel value="1">
+                            Content for Tab 1 is not selectable
+                        </sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">
+                            Content for Tab 3 is not selectable
+                        </sp-tab-panel>
+                        <sp-tab-panel value="4">
+                            Content for Tab 4 is not selectable
+                        </sp-tab-panel>
+                    </sp-tabs>
+                </div>
+            </div>
+
+            <div id="variantLabel">compact</div>
+            <div class="demo-example">
+                <div class="size-div non-flex">
+                    <sp-tabs selected="2" compact>
+                        <sp-tab label="Tab 1" value="1"></sp-tab>
+                        <sp-tab label="Tab 2" value="2"></sp-tab>
+                        <sp-tab label="Tab 3" value="3"></sp-tab>
+                        <sp-tab label="Tab 4" value="4"></sp-tab>
+                        <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                        <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+            </div>
+
+            <div id="variantLabel">compact + icon</div>
+            <div class="demo-example">
+                <div class="size-div non-flex">
+                    <sp-tabs selected="2" compact>
+                        <sp-tab label="Tab 1" value="1">
+                            <sp-icon-edit slot="icon"></sp-icon-edit>
+                        </sp-tab>
+                        <sp-tab label="Tab 2" value="2">
+                            <sp-icon-more slot="icon"></sp-icon-more>
+                        </sp-tab>
+                        <sp-tab label="Tab 3" value="3">
+                            <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                        </sp-tab>
+                        <sp-tab label="Tab 4" value="4">
+                            <sp-icon-stopwatch slot="icon"></sp-icon-stopwatch>
+                        </sp-tab>
+                        <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                        <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+            </div>
+
+            <div id="variantLabel">quiet</div>
+            <div class="demo-example">
+                <div class="size-div non-flex">
+                    <sp-tabs selected="2" quiet>
+                        <sp-tab label="Tab 1" value="1"></sp-tab>
+                        <sp-tab label="Tab 2" value="2"></sp-tab>
+                        <sp-tab label="Tab 3" value="3"></sp-tab>
+                        <sp-tab label="Tab 4" value="4"></sp-tab>
+                        <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                        <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+            </div>
+
+            <div id="variantLabel">quiet + icon</div>
+            <div class="demo-example">
+                <div class="size-div non-flex">
+                    <sp-tabs selected="2" quiet>
+                        <sp-tab label="Tab 1" value="1">
+                            <sp-icon-edit slot="icon"></sp-icon-edit>
+                        </sp-tab>
+                        <sp-tab label="Tab 2" value="2">
+                            <sp-icon-more slot="icon"></sp-icon-more>
+                        </sp-tab>
+                        <sp-tab label="Tab 3" value="3">
+                            <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                        </sp-tab>
+                        <sp-tab label="Tab 4" value="4">
+                            <sp-icon-stopwatch slot="icon"></sp-icon-stopwatch>
+                        </sp-tab>
+                        <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                        <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+            </div>
+
+            <div id="variantLabel">quiet + compact</div>
+            <div class="demo-example">
+                <div class="size-div non-flex">
+                    <sp-tabs selected="2" quiet compact>
+                        <sp-tab label="Tab 1" value="1"></sp-tab>
+                        <sp-tab label="Tab 2" value="2"></sp-tab>
+                        <sp-tab label="Tab 3" value="3"></sp-tab>
+                        <sp-tab label="Tab 4" value="4"></sp-tab>
+                        <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                        <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+            </div>
+
+            <div id="variantLabel">quiet + compact + icon</div>
+            <div class="demo-example">
+                <div class="size-div non-flex">
+                    <sp-tabs selected="2" quiet compact>
+                        <sp-tab label="Tab 1" value="1">
+                            <sp-icon-edit slot="icon"></sp-icon-edit>
+                        </sp-tab>
+                        <sp-tab label="Tab 2" value="2">
+                            <sp-icon-more slot="icon"></sp-icon-more>
+                        </sp-tab>
+                        <sp-tab label="Tab 3" value="3">
+                            <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                        </sp-tab>
+                        <sp-tab label="Tab 4" value="4">
+                            <sp-icon-stopwatch slot="icon"></sp-icon-stopwatch>
+                        </sp-tab>
+                        <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                        <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+            </div>
+
+            <div id="variantLabel">sizes + vertical</div>
+            <div class="demo-example">
+                <div class="size-div non-flex">
+                    <sp-field-label for="s">Small</sp-field-label>
+                    <sp-tabs selected="2" size="s" direction="vertical">
+                        <sp-tab label="Tab 1" value="1"></sp-tab>
+                        <sp-tab label="Tab 2" value="2"></sp-tab>
+                        <sp-tab label="Tab 3" value="3"></sp-tab>
+                        <sp-tab label="Tab 4" value="4"></sp-tab>
+                        <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                        <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+
+                <div class="size-div non-flex">
+                    <sp-field-label for="m">Medium</sp-field-label>
+                    <sp-tabs selected="2" size="m" direction="vertical">
+                        <sp-tab label="Tab 1" value="1"></sp-tab>
+                        <sp-tab label="Tab 2" value="2"></sp-tab>
+                        <sp-tab label="Tab 3" value="3"></sp-tab>
+                        <sp-tab label="Tab 4" value="4"></sp-tab>
+                        <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                        <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+
+                <div class="size-div non-flex">
+                    <sp-field-label for="L">Large</sp-field-label>
+                    <sp-tabs selected="2" size="l" direction="vertical">
+                        <sp-tab label="Tab 1" value="1"></sp-tab>
+                        <sp-tab label="Tab 2" value="2"></sp-tab>
+                        <sp-tab label="Tab 3" value="3"></sp-tab>
+                        <sp-tab label="Tab 4" value="4"></sp-tab>
+                        <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                        <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+
+                <div class="size-div non-flex">
+                    <sp-field-label for="XL">Extra large</sp-field-label>
+                    <sp-tabs selected="2" size="xl" direction="vertical">
+                        <sp-tab label="Tab 1" value="1"></sp-tab>
+                        <sp-tab label="Tab 2" value="2"></sp-tab>
+                        <sp-tab label="Tab 3" value="3"></sp-tab>
+                        <sp-tab label="Tab 4" value="4"></sp-tab>
+                        <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                        <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+            </div>
+
+            <div id="variantLabel">disabled + vertical</div>
+            <div class="demo-example">
+                <div class="size-div non-flex">
+                    <sp-tabs selected="2" disabled direction="vertical">
+                        <sp-tab label="Tab 1" value="1"></sp-tab>
+                        <sp-tab label="Tab 2" value="2"></sp-tab>
+                        <sp-tab label="Tab 3" value="3"></sp-tab>
+                        <sp-tab label="Tab 4" value="4"></sp-tab>
+                        <sp-tab-panel value="1">
+                            Content for Tab 1 is not selectable
+                        </sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">
+                            Content for Tab 3 is not selectable
+                        </sp-tab-panel>
+                        <sp-tab-panel value="4">
+                            Content for Tab 4 is not selectable
+                        </sp-tab-panel>
+                    </sp-tabs>
+                </div>
+            </div>
+
+            <div id="variantLabel">disabled + icon + vertical</div>
+            <div class="demo-example">
+                <div class="size-div non-flex">
+                    <sp-tabs selected="2" disabled direction="vertical">
+                        <sp-tab label="Tab 1" value="1">
+                            <sp-icon-edit slot="icon"></sp-icon-edit>
+                        </sp-tab>
+                        <sp-tab label="Tab 2" value="2">
+                            <sp-icon-more slot="icon"></sp-icon-more>
+                        </sp-tab>
+                        <sp-tab label="Tab 3" value="3">
+                            <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                        </sp-tab>
+                        <sp-tab label="Tab 4" value="4">
+                            <sp-icon-stopwatch slot="icon"></sp-icon-stopwatch>
+                        </sp-tab>
+                        <sp-tab-panel value="1">
+                            Content for Tab 1 is not selectable
+                        </sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">
+                            Content for Tab 3 is not selectable
+                        </sp-tab-panel>
+                        <sp-tab-panel value="4">
+                            Content for Tab 4 is not selectable
+                        </sp-tab-panel>
+                    </sp-tabs>
+                </div>
+            </div>
+
+            <div id="variantLabel">compact + vertical</div>
+            <div class="demo-example">
+                <div class="size-div non-flex">
+                    <sp-tabs selected="2" compact direction="vertical">
+                        <sp-tab label="Tab 1" value="1"></sp-tab>
+                        <sp-tab label="Tab 2" value="2"></sp-tab>
+                        <sp-tab label="Tab 3" value="3"></sp-tab>
+                        <sp-tab label="Tab 4" value="4"></sp-tab>
+                        <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                        <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+            </div>
+
+            <div id="variantLabel">compact + icon + vertical</div>
+            <div class="demo-example">
+                <div class="size-div non-flex">
+                    <sp-tabs selected="2" compact direction="vertical">
+                        <sp-tab label="Tab 1" value="1">
+                            <sp-icon-edit slot="icon"></sp-icon-edit>
+                        </sp-tab>
+                        <sp-tab label="Tab 2" value="2">
+                            <sp-icon-more slot="icon"></sp-icon-more>
+                        </sp-tab>
+                        <sp-tab label="Tab 3" value="3">
+                            <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                        </sp-tab>
+                        <sp-tab label="Tab 4" value="4">
+                            <sp-icon-stopwatch slot="icon"></sp-icon-stopwatch>
+                        </sp-tab>
+                        <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                        <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+            </div>
+
+            <div id="variantLabel">quiet + vertical</div>
+            <div class="demo-example">
+                <div class="size-div non-flex">
+                    <sp-tabs selected="2" quiet direction="vertical">
+                        <sp-tab label="Tab 1" value="1"></sp-tab>
+                        <sp-tab label="Tab 2" value="2"></sp-tab>
+                        <sp-tab label="Tab 3" value="3"></sp-tab>
+                        <sp-tab label="Tab 4" value="4"></sp-tab>
+                        <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                        <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+            </div>
+
+            <div id="variantLabel">quiet + icon + vertical</div>
+            <div class="demo-example">
+                <div class="size-div non-flex">
+                    <sp-tabs selected="2" quiet direction="vertical">
+                        <sp-tab label="Tab 1" value="1">
+                            <sp-icon-edit slot="icon"></sp-icon-edit>
+                        </sp-tab>
+                        <sp-tab label="Tab 2" value="2">
+                            <sp-icon-more slot="icon"></sp-icon-more>
+                        </sp-tab>
+                        <sp-tab label="Tab 3" value="3">
+                            <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                        </sp-tab>
+                        <sp-tab label="Tab 4" value="4">
+                            <sp-icon-stopwatch slot="icon"></sp-icon-stopwatch>
+                        </sp-tab>
+                        <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                        <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+            </div>
+
+            <div id="variantLabel">quiet + compact + vertical</div>
+            <div class="demo-example">
+                <div class="size-div non-flex">
+                    <sp-tabs selected="2" quiet compact direction="vertical">
+                        <sp-tab label="Tab 1" value="1"></sp-tab>
+                        <sp-tab label="Tab 2" value="2"></sp-tab>
+                        <sp-tab label="Tab 3" value="3"></sp-tab>
+                        <sp-tab label="Tab 4" value="4"></sp-tab>
+                        <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                        <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+            </div>
+
+            <div id="variantLabel">quiet + compact + icon + vertical</div>
+            <div class="demo-example">
+                <div class="size-div non-flex">
+                    <sp-tabs selected="2" quiet compact direction="vertical">
+                        <sp-tab label="Tab 1" value="1">
+                            <sp-icon-edit slot="icon"></sp-icon-edit>
+                        </sp-tab>
+                        <sp-tab label="Tab 2" value="2">
+                            <sp-icon-more slot="icon"></sp-icon-more>
+                        </sp-tab>
+                        <sp-tab label="Tab 3" value="3">
+                            <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                        </sp-tab>
+                        <sp-tab label="Tab 4" value="4">
+                            <sp-icon-stopwatch slot="icon"></sp-icon-stopwatch>
+                        </sp-tab>
+                        <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                        <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+            </div>
+        </div>
+
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-tabs</div>
+            <my-tabs selected="2" size="s">
+                <my-tab label="Tab 1" value="1"></my-tab>
+                <my-tab label="Tab 2" value="2"></my-tab>
+                <my-tab label="Tab 3" value="3"></my-tab>
+                <my-tab label="Tab 4" value="4"></my-tab>
+                <my-tab-panel value="1">Content for Tab 1</my-tab-panel>
+                <my-tab-panel value="2">
+                    <div class="container">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing
+                            elit. Sed ac dolor sit amet purus malesuada congue.
+                            Donec quis nibh at felis congue commodo. Ut enim ad
+                            minima veniam, quis nostrum exercitationem ullam
+                            corporis suscipit laboriosam, nisi ut aliquid ex ea
+                            commodi consequatur
+                        </p>
+                        <sp-field-label for="lifestory-1" style="width: 100px">
+                            Life Story
+                        </sp-field-label>
+                        <sp-textfield
+                            placeholder="Enter your life story"
+                            id="lifestory-1"
+                        ></sp-textfield>
+                        <sp-button
+                            treatment="outline"
+                            variant="primary"
+                            class="align-right"
+                        >
+                            Submit
+                        </sp-button>
+                    </div>
+                </my-tab-panel>
+                <my-tab-panel value="3">Content for Tab 3</my-tab-panel>
+                <my-tab-panel value="4">Content for Tab 4</my-tab-panel>
+            </my-tabs>
+        </div>
+    </div>
+
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
+    </div>
+</div>

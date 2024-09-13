@@ -1,5 +1,5 @@
 /*
-Copyright 2023 Adobe. All rights reserved.
+Copyright 2024 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,6 +10,14 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { DialogWrapper } from './src/DialogWrapper.js';
+import { unsafeCSS } from '@spectrum-web-components/base';
+import swcTabsSizesStyles from '@swc-uxp-internal/tabs/src/tabs-sizes.css.js';
 
-customElements.define('sp-dialog-wrapper', DialogWrapper);
+import uxpTabsSizesStyles from './uxp-tabs-sizes.css.js';
+
+const combinedTabsStyles = unsafeCSS(
+    swcTabsSizesStyles.toString(),
+    uxpTabsSizesStyles.toString()
+);
+
+export default combinedTabsStyles;
