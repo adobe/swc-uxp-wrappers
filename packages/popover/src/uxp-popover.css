@@ -34,7 +34,3 @@ governing permissions and limitations under the License.
     height: 100%;
     width: 10px;
 }
-
-::slotted(.visually-hidden) {
-    visibility: hidden;
-}

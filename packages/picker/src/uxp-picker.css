@@ -196,10 +196,6 @@ governing permissions and limitations under the License.
         var(--spectrum-picker-focus-indicator-color);
 }
 
-.visually-hidden {
-    visibility: hidden;
-}
-
 #button:disabled #label.placeholder,
 :host([disabled]) #button #label.placeholder {
     color: var(--spectrum-picker-font-color-disabled) !important;
