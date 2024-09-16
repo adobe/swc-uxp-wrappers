@@ -12,5 +12,4 @@ governing permissions and limitations under the License.
 
 import { DialogWrapper } from './src/DialogWrapper.js';
 
-/* sp-dialog-wrapper will be enabled once overlay supported in UXP */
-// customElements.define('sp-dialog-wrapper', DialogWrapper);
+customElements.define('sp-dialog-wrapper', DialogWrapper);

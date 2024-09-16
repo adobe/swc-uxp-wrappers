@@ -51,6 +51,20 @@ export const aliases = {
     '@spectrum-web-components/swatch': '@swc-uxp-wrappers/swatch',
     '@spectrum-web-components/overlay': '@swc-uxp-wrappers/overlay',
     '@spectrum-web-components/slider': '@swc-uxp-wrappers/slider',
+    '@spectrum-web-components/picker': '@swc-uxp-wrappers/picker',
+    '@spectrum-web-components/action-menu': '@swc-uxp-wrappers/action-menu',
+    '@spectrum-web-components/reactive-controllers/src/MatchMedia.js':
+        '@swc-uxp-wrappers/utils/src/MatchMediaController.js',
+    '@spectrum-web-components/underlay': '@swc-uxp-wrappers/underlay',
+    '@spectrum-web-components/modal': '@swc-uxp-wrappers/modal',
+    '@spectrum-web-components/tabs': '@swc-uxp-wrappers/tabs',
+    '@spectrum-web-components/accordion': '@swc-uxp-wrappers/accordion',
     '../sp-menu.dev.js': '@swc-uxp-wrappers/menu/sp-menu.js',
     '../sp-menu.js': '@swc-uxp-wrappers/menu/sp-menu.js',
+    './ButtonBase.js': '@swc-uxp-wrappers/button/src/ButtonBase.js',
+    './ButtonBase.dev.js': '@swc-uxp-wrappers/button/src/ButtonBase.js',
+    './topLayerOverTransforms.dev.js':
+        '@swc-uxp-internal/overlay/src/topLayerOverTransforms.js',
+    './topLayerOverTransforms.js':
+        '@swc-uxp-internal/overlay/src/topLayerOverTransforms.js',
 };

@@ -1,0 +1,38 @@
+{
+    "name": "@swc-uxp-wrappers/action-menu",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/action-menu component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/action-menu"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/ActionMenu.js": "./src/ActionMenu.js",
+        "./src/action-menu.css.js": "./src/action-menu.css.js",
+        "./sp-action-menu.js": "./sp-action-menu.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/action-menu": "npm:@spectrum-web-components/action-menu@0.39.0",
+        "@swc-uxp-wrappers/action-button": "*",
+        "@swc-uxp-wrappers/picker": "*"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/action-menu"
+    ]
+}
