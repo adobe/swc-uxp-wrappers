@@ -1,0 +1,40 @@
+{
+    "name": "@swc-uxp-wrappers/picker",
+    "version": "1.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/picker component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/picker"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/Picker.js": "./src/Picker.js",
+        "./src/picker.css.js": "./src/picker.css.js",
+        "./sp-picker.js": "./sp-picker.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/picker": "npm:@spectrum-web-components/picker@0.37.0",
+        "@swc-uxp-wrappers/button": "*",
+        "@swc-uxp-wrappers/menu": "*",
+        "@swc-uxp-wrappers/overlay": "*",
+        "@swc-uxp-wrappers/popover": "*"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/picker"
+    ]
+}

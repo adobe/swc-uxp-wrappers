@@ -447,6 +447,78 @@ function attachEvents(tabName) {
         `;
         eval(spCheckboxDisabled);
     }
+
+    if (tabName === 'sp-action-menu') {
+        const actionMenuValue = `
+            const actionMenu = document.getElementById("action-menu-single-select");
+            actionMenu.addEventListener("change", () => {
+                actionMenu.previousElementSibling.querySelector('#single-value').textContent=actionMenu.value;
+            });
+        `;
+        eval(actionMenuValue);
+    }
+
+    if (tabName === 'sp-picker') {
+        const spPickerSizes = `
+            const sizes = document.getElementById('picker-sizes');
+            sizes.addEventListener("change", () => {
+                document.querySelector('#dynamic-api-test').setAttribute('size', sizes.value); 
+            });
+        `;
+        eval(spPickerSizes);
+
+        const spPickerDisabled = `
+            document.querySelector('#disabled').addEventListener('change', (evt) => {
+                    const checked = evt.target.checked;
+                    const picker = document.querySelector('#dynamic-api-test');
+                    if (checked) {
+                        picker.setAttribute("disabled", "disabled");
+                    } else {
+                        picker.removeAttribute("disabled");
+                    }
+                });
+        `;
+        eval(spPickerDisabled);
+
+        const spPickerQuiet = `
+            document.querySelector('#quiet').addEventListener('change', (evt) => {
+                    const checked = evt.target.checked;
+                    const picker = document.querySelector('#dynamic-api-test');
+                    if (checked) {
+                        picker.setAttribute("quiet", "quiet");
+                    } else {
+                        picker.removeAttribute("quiet");
+                    }
+                });
+        `;
+        eval(spPickerQuiet);
+
+        const spPickerInvalid = `
+            document.querySelector('#invalid').addEventListener('change', (evt) => {
+                    const checked = evt.target.checked;
+                    const picker = document.querySelector('#dynamic-api-test');
+                    if (checked) {
+                        picker.setAttribute("invalid", "invalid");
+                    } else {
+                        picker.removeAttribute("invalid");
+                    }
+                });
+        `;
+        eval(spPickerInvalid);
+
+        const spPickerReadonly = `
+            document.querySelector('#readonly').addEventListener('change', (evt) => {
+                    const checked = evt.target.checked;
+                    const picker = document.querySelector('#dynamic-api-test');
+                    if (checked) {
+                        picker.setAttribute("readonly", "readonly");
+                    } else {
+                        picker.removeAttribute("readonly");
+                    }
+                });
+        `;
+        eval(spPickerReadonly);
+    }
 }
 
 function handleThemeColor(selectObject) {
