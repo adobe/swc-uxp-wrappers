@@ -50,6 +50,7 @@ export const aliases = {
     '@spectrum-web-components/sidenav': '@swc-uxp-wrappers/sidenav',
     '@spectrum-web-components/swatch': '@swc-uxp-wrappers/swatch',
     '@spectrum-web-components/overlay': '@swc-uxp-wrappers/overlay',
+    '@spectrum-web-components/slider': '@swc-uxp-wrappers/slider',
     '@spectrum-web-components/picker': '@swc-uxp-wrappers/picker',
     '@spectrum-web-components/action-menu': '@swc-uxp-wrappers/action-menu',
     '@spectrum-web-components/reactive-controllers/src/MatchMedia.js':

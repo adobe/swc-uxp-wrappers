@@ -47,6 +47,7 @@
         "@swc-uxp-wrappers/field-group": "*",
         "@swc-uxp-wrappers/button-group": "*",
         "@swc-uxp-wrappers/overlay": "*",
+        "@swc-uxp-wrappers/slider": "*",
         "@swc-uxp-wrappers/underlay": "*",
         "@swc-uxp-wrappers/modal": "*",
         "@spectrum-web-components/theme": "0.37.0",

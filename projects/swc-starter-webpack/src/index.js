@@ -57,6 +57,8 @@ import '@spectrum-web-components/swatch/sp-swatch-group.js';
 import '@spectrum-web-components/accordion/sp-accordion.js';
 import '@spectrum-web-components/accordion/sp-accordion-item.js';
 
+import '@spectrum-web-components/slider/sp-slider.js';
+
 import '@spectrum-web-components/table/sp-table.js';
 import '@spectrum-web-components/table/sp-table-body.js';
 import '@spectrum-web-components/table/sp-table-cell.js';
@@ -138,6 +140,7 @@ import './extended_swc_samples/my-quick-actions.js';
 import './extended_swc_samples/my-meter.js';
 import './extended_swc_samples/my-swatch.js';
 import './extended_swc_samples/my-overlay.js';
+import './extended_swc_samples/my-slider.js';
 import './extended_swc_samples/my-picker.js';
 import './extended_swc_samples/my-action-menu.js';
 import './extended_swc_samples/my-tabs.js';

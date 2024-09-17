@@ -1,0 +1,148 @@
+<!-- 
+Copyright 2024 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License. 
+-->
+
+<h3>sp-slider</h3>
+
+<div id="content">
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-slider</div>
+
+            <div id="variantLabel">sizes</div>
+            <div class="demo-example" style="display: flex">
+                <div class="size-div" style="display: block; width: 25%">
+                    <sp-field-label for="s">Small</sp-field-label>
+                    <sp-slider size="s" label="Slider Label"></sp-slider>
+                    <sp-slider
+                        size="s"
+                        disabled
+                        label="Slider Label - Disabled"
+                    ></sp-slider>
+                    <sp-slider
+                        size="s"
+                        label="No visible value label"
+                        label-visibility="text"
+                        value="50"
+                    ></sp-slider>
+                    <sp-slider
+                        size="s"
+                        label="No visible labels"
+                        label-visibility="none"
+                    ></sp-slider>
+                    <sp-slider
+                        size="s"
+                        label="No visible text label"
+                        label-visibility="value"
+                    ></sp-slider>
+                </div>
+
+                <div
+                    class="size-div"
+                    style="display: block; margin-left: 10px; width: 25%"
+                >
+                    <sp-field-label for="m">Medium</sp-field-label>
+                    <sp-slider size="m" label="Slider Label"></sp-slider>
+                    <sp-slider
+                        size="m"
+                        disabled
+                        label="Slider Label - Disabled"
+                    ></sp-slider>
+                    <sp-slider
+                        size="m"
+                        label="No visible value label"
+                        label-visibility="text"
+                        value="50"
+                    ></sp-slider>
+                    <sp-slider
+                        size="m"
+                        label="No visible labels"
+                        label-visibility="none"
+                    ></sp-slider>
+                    <sp-slider
+                        size="m"
+                        label="No visible text label"
+                        label-visibility="value"
+                    ></sp-slider>
+                </div>
+
+                <div
+                    class="size-div"
+                    style="display: block; margin-left: 10px; width: 25%"
+                >
+                    <sp-field-label for="L">Large</sp-field-label>
+                    <sp-slider size="l" label="Slider Label"></sp-slider>
+                    <sp-slider
+                        size="l"
+                        disabled
+                        label="Slider Label - Disabled"
+                    ></sp-slider>
+                    <sp-slider
+                        size="l"
+                        label="No visible value label"
+                        label-visibility="text"
+                        value="50"
+                    ></sp-slider>
+                    <sp-slider
+                        size="l"
+                        label="No visible labels"
+                        label-visibility="none"
+                    ></sp-slider>
+                    <sp-slider
+                        size="l"
+                        label="No visible text label"
+                        label-visibility="value"
+                    ></sp-slider>
+                </div>
+
+                <div
+                    class="size-div"
+                    style="display: block; margin-left: 10px; width: 25%"
+                >
+                    <sp-field-label for="XL">Extra large</sp-field-label>
+                    <sp-slider size="xl" label="Slider Label"></sp-slider>
+                    <sp-slider
+                        size="xl"
+                        disabled
+                        label="Slider Label - Disabled"
+                    ></sp-slider>
+                    <sp-slider
+                        size="xl"
+                        label="No visible value label"
+                        label-visibility="text"
+                        value="50"
+                    ></sp-slider>
+                    <sp-slider
+                        size="xl"
+                        label="No visible labels"
+                        label-visibility="none"
+                    ></sp-slider>
+                    <sp-slider
+                        size="xl"
+                        label="No visible text label"
+                        label-visibility="value"
+                    ></sp-slider>
+                </div>
+            </div>
+        </div>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-slider</div>
+            <my-slider label="Slider Label"></my-slider>
+        </div>
+    </div>
+
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
+    </div>
+</div>
