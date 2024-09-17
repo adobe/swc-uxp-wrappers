@@ -197,6 +197,17 @@ sp-accordion {
     align-items: center;
 }
 
+sp-accordion {
+    width: 100%;
+    margin: 10px;
+}
+
+.size-div > sp-field-label {
+    background-color: var(--spectrum-gray-300);
+    width: 100%;
+    padding: 10px;
+}
+
 .variantDiv {
     padding-bottom: 20px;
 }

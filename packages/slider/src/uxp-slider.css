@@ -1,0 +1,171 @@
+/*
+Copyright 2024 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* write uxp style overrides */
+
+:host {
+    min-width: var(--mod-slider-min-size, var(--spectrum-slider-min-size));
+}
+
+#label-container {
+    width: auto;
+    margin-top: var(
+        --mod-slider-label-top-to-text,
+        var(--spectrum-slider-label-top-to-text)
+    );
+}
+
+#label {
+    padding-left: 0;
+    padding-top: calc(
+        var(--mod-slider-font-size, var(--spectrum-slider-font-size)) / 3
+    );
+}
+
+#value {
+    margin-left: var(
+        --mod-slider-label-margin-start,
+        var(--spectrum-slider-label-margin-start)
+    );
+    padding-right: 0;
+}
+
+#controls {
+    height: var(
+        --mod-slider-control-height,
+        var(--spectrum-slider-control-height)
+    );
+    width: calc(
+        100% -
+            var(
+                --mod-slider-controls-margin,
+                var(--spectrum-slider-controls-margin)
+            ) * 2
+    );
+    margin-left: var(
+        --mod-slider-controls-margin,
+        var(--spectrum-slider-controls-margin)
+    );
+}
+
+#fill,
+.track {
+    height: var(
+        --mod-slider-track-fill-thickness,
+        var(--spectrum-slider-track-fill-thickness)
+    );
+    top: calc(
+        var(--mod-slider-control-height, var(--spectrum-slider-control-height)) /
+            2 -
+            var(
+                --mod-slider-track-fill-thickness,
+                var(--spectrum-slider-track-fill-thickness)
+            ) / 2
+    );
+    left: 0 auto;
+    margin-left: var(
+        --mod-slider-track-margin-offset,
+        var(--spectrum-slider-track-margin-offset)
+    );
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: var(
+        --mod-slider-handle-gap,
+        var(--spectrum-slider-handle-gap)
+    );
+    padding-left: 0;
+}
+
+#fill:before,
+.track:before {
+    height: 100%;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+}
+
+.handle {
+    height: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
+    width: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
+    top: calc(
+        var(--mod-slider-control-height, var(--spectrum-slider-control-height)) /
+            2 -
+            var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) /
+            2
+    );
+    left: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: calc(
+        var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / -2
+    );
+    margin-right: calc(
+        var(--mod-slider-handle-size, var(--spectrum-slider-handle-size)) / -2
+    );
+}
+
+.handle:before {
+    height: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
+    width: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
+}
+
+.input {
+    height: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
+    width: var(--mod-slider-handle-size, var(--spectrum-slider-handle-size));
+    top: var(
+        --mod-slider-input-top-size,
+        var(--spectrum-slider-input-top-size)
+    );
+    left: var(--mod-slider-input-left, var(--spectrum-slider-input-left));
+    opacity: 0;
+}
+
+.track ~ .track {
+    left: auto !important;
+    right: var(
+        --mod-slider-range-track-reset,
+        var(--spectrum-slider-range-track-reset)
+    );
+    margin-right: var(
+        --mod-slider-track-margin-offset,
+        var(--spectrum-slider-track-margin-offset)
+    );
+    margin-left: var(
+        --mod-slider-range-track-reset,
+        var(--spectrum-slider-range-track-reset)
+    );
+    padding-top: 0;
+    padding-bottom: 0;
+    padding-right: 0;
+    padding-left: var(
+        --mod-slider-track-handleoffset,
+        var(--spectrum-slider-track-handleoffset)
+    );
+}
+
+:host([disabled]) .handle {
+    border-color: var(
+        --highcontrast-slider-handle-border-color-disabled,
+        var(
+            --mod-slider-handle-border-color-disabled,
+            var(--spectrum-slider-handle-border-color-disabled)
+        )
+    ) !important;
+}
+
+.track:before {
+    background: var(
+        --highcontrast-slider-track-color,
+        var(--mod-slider-track-color, var(--spectrum-slider-track-color))
+    ) !important;
+}
