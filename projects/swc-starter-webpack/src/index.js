@@ -60,6 +60,7 @@ import '@spectrum-web-components/accordion/sp-accordion.js';
 import '@spectrum-web-components/accordion/sp-accordion-item.js';
 
 import '@spectrum-web-components/slider/sp-slider.js';
+import '@spectrum-web-components/split-view/sp-split-view.js';
 
 import '@spectrum-web-components/table/sp-table.js';
 import '@spectrum-web-components/table/sp-table-body.js';
@@ -149,3 +150,4 @@ import './extended_swc_samples/my-picker.js';
 import './extended_swc_samples/my-action-menu.js';
 import './extended_swc_samples/my-tabs.js';
 import './extended_swc_samples/my-accordion.js';
+import './extended_swc_samples/my-split-view.js';

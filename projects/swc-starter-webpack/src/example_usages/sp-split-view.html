@@ -1,0 +1,139 @@
+<!-- 
+Copyright 2024 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License. 
+-->
+
+<h3>sp-split-view</h3>
+<div id="content">
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-split-view</div>
+            <sp-split-view>
+                <div>Left panel</div>
+                <div>Right panel</div>
+            </sp-split-view>
+
+            <sp-split-view
+                resizable
+                primary-min="300"
+                secondary-min="300"
+                label="Resize the horizontal panels"
+            >
+                <div>
+                    <h1>Left panel</h1>
+                    <div class="container">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing
+                            elit. Sed ac dolor sit amet purus malesuada congue.
+                            Donec quis nibh at felis congue commodo. Ut enim ad
+                            minima veniam, quis nostrum exercitationem ullam
+                            corporis suscipit laboriosam, nisi ut aliquid ex ea
+                            commodi consequatur
+                        </p>
+                        <sp-field-label for="lifestory-1" style="width: 100px">
+                            Life Story
+                        </sp-field-label>
+                        <sp-textfield
+                            placeholder="Enter your life story"
+                            id="lifestory-1"
+                        ></sp-textfield>
+                        <sp-button
+                            treatment="outline"
+                            variant="primary"
+                            class="align-right"
+                        >
+                            Submit
+                        </sp-button>
+                    </div>
+                </div>
+                <div>
+                    <h1>Right panel</h1>
+                    <div class="container">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetuer adipiscing
+                            elit. Sed ac dolor sit amet purus malesuada congue.
+                            Donec quis nibh at felis congue commodo. Ut enim ad
+                            minima veniam, quis nostrum exercitationem ullam
+                            corporis suscipit laboriosam, nisi ut aliquid ex ea
+                            commodi consequatur
+                        </p>
+                        <sp-field-label for="lifestory-1" style="width: 100px">
+                            Life Story
+                        </sp-field-label>
+                        <sp-textfield
+                            placeholder="Enter your life story"
+                            id="lifestory-1"
+                        ></sp-textfield>
+                        <sp-button
+                            treatment="outline"
+                            variant="primary"
+                            class="align-right"
+                        >
+                            Submit
+                        </sp-button>
+                    </div>
+                </div>
+            </sp-split-view>
+
+            <sp-split-view
+                resizable
+                label="Resize the horizontal collapsible panels"
+            >
+                <div>
+                    <h1>Left panel</h1>
+                    <p>
+                        Lorem Ipsum is simply dummy text of the printing and
+                        typesetting industry.
+                    </p>
+                </div>
+                <div>
+                    <h2>Right panel</h2>
+                    <p>
+                        It is a long established fact that a reader will be
+                        distracted by the readable content of a page when
+                        looking at its layout.
+                    </p>
+                </div>
+            </sp-split-view>
+        </div>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-split-view</div>
+            <div style="margin: 20px 20px">
+                <my-split-view
+                    resizable
+                    secondary-min="100"
+                    primary-min="100"
+                    label="Resize the horizontal panels"
+                >
+                    <div>
+                        <h1>Left panel</h1>
+                        <p>
+                            Lorem Ipsum is simply dummy text of the printing and
+                            typesetting industry.
+                        </p>
+                    </div>
+                    <div>
+                        <h2>Right panel</h2>
+                        <p>
+                            It is a long established fact that a reader will be
+                            distracted by the readable content of a page when
+                            looking at its layout.
+                        </p>
+                    </div>
+                </my-split-view>
+            </div>
+        </div>
+    </div>
+    <div id="config">
+        <div style="display: inline-flex"></div>
+        <div style="display: flex; flex-direction: column"></div>
+    </div>
+</div>

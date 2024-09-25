@@ -52,6 +52,7 @@
         "@swc-uxp-wrappers/slider": "*",
         "@swc-uxp-wrappers/underlay": "*",
         "@swc-uxp-wrappers/modal": "*",
+        "@swc-uxp-wrappers/split-view": "*",
         "@spectrum-web-components/theme": "0.37.0",
         "@spectrum-web-components/icon": "0.37.0",
         "@spectrum-web-components/icons": "0.37.0",

@@ -62,6 +62,7 @@ export const aliases = {
     '@spectrum-web-components/modal': '@swc-uxp-wrappers/modal',
     '@spectrum-web-components/tabs': '@swc-uxp-wrappers/tabs',
     '@spectrum-web-components/accordion': '@swc-uxp-wrappers/accordion',
+    '@spectrum-web-components/split-view': '@swc-uxp-wrappers/split-view',
     '../sp-menu.dev.js': '@swc-uxp-wrappers/menu/sp-menu.js',
     '../sp-menu.js': '@swc-uxp-wrappers/menu/sp-menu.js',
     './ButtonBase.js': '@swc-uxp-wrappers/button/src/ButtonBase.js',
