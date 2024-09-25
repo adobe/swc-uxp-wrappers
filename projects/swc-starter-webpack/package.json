@@ -47,6 +47,8 @@
         "@swc-uxp-wrappers/field-group": "*",
         "@swc-uxp-wrappers/button-group": "*",
         "@swc-uxp-wrappers/overlay": "*",
+        "@swc-uxp-wrappers/progress-bar": "*",
+        "@swc-uxp-wrappers/progress-circle": "*",
         "@swc-uxp-wrappers/slider": "*",
         "@swc-uxp-wrappers/underlay": "*",
         "@swc-uxp-wrappers/modal": "*",

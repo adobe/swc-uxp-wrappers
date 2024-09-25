@@ -89,6 +89,7 @@ sp-action-group {
 }
 
 sp-textfield,
+sp-tabs,
 sp-tags,
 sp-split-view,
 sp-number-field,
@@ -177,6 +178,17 @@ p {
     background: var(--spectrum-global-color-gray-50);
 }
 
+sp-accordion {
+    width: 100%;
+    margin: 10px;
+}
+
+.size-div > sp-field-label {
+    background-color: var(--spectrum-gray-300);
+    width: 100%;
+    padding: 10px;
+}
+
 .size-div {
     padding: 10px;
     background: var(--spectrum-global-color-gray-200);
@@ -259,4 +271,22 @@ sp-accordion {
 
 #section {
     border-left: 2px solid var(--spectrum-global-color-gray-700);
+}
+.progressDiv {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.progressOverBackgroundDiv {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--spectrum-transparent-black-400);
 }

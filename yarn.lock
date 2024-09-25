@@ -3159,6 +3159,21 @@
     "@spectrum-web-components/shared" "^0.37.0"
     "@spectrum-web-components/tray" "^0.37.0"
 
+"@swc-uxp-internal/progress-bar@npm:@spectrum-web-components/progress-bar@0.37.0":
+  version "0.37.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/progress-bar/-/progress-bar-0.37.0.tgz#adf82bdafa73a668c8b92721f5f626510e6efa71"
+  integrity sha512-DPDUnwT05nhCiKloupnfuzffhf+n+xrsB6NwOmJVv9Z5lNFURYKCSaXgfm/Xi8yOs4OubjAyZzHxgRURVwG66A==
+  dependencies:
+    "@spectrum-web-components/base" "^0.37.0"
+    "@spectrum-web-components/field-label" "^0.37.0"
+
+"@swc-uxp-internal/progress-circle@npm:@spectrum-web-components/progress-circle@0.37.0":
+  version "0.37.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/progress-circle/-/progress-circle-0.37.0.tgz#11fdad6d9b51d5266adad93e220fcb09fca44b4e"
+  integrity sha512-OjabwypclIBqjUwwiWDztjy4QRV1guIojhmdv3HaCEbueX0zhv9y9XqYZn3dxKnDubSkNfT4FrYHJXaMsKrovQ==
+  dependencies:
+    "@spectrum-web-components/base" "^0.37.0"
+
 "@swc-uxp-internal/radio@npm:@spectrum-web-components/radio@0.37.0":
   version "0.37.0"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/radio/-/radio-0.37.0.tgz#a210fce0f4097b87d82becf3ae3ebd936eb5b768"
