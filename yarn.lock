@@ -3219,6 +3219,13 @@
     "@spectrum-web-components/shared" "^0.37.0"
     "@spectrum-web-components/theme" "^0.37.0"
 
+"@swc-uxp-internal/split-view@npm:@spectrum-web-components/split-view@0.37.0":
+  version "0.37.0"
+  resolved "https://registry.yarnpkg.com/@spectrum-web-components/split-view/-/split-view-0.37.0.tgz#1c89f3dccae414bc2159ad107ce6185f3d213466"
+  integrity sha512-FRlwZpbARJlFS/wqY24ovf6kwavXqZGtHC21CJbw0zWXT4vUAUhbl3dxU8/L4iYk/7YvcdpLUbBbm7Gv8Q38bA==
+  dependencies:
+    "@spectrum-web-components/base" "^0.37.0"
+
 "@swc-uxp-internal/swatch@npm:@spectrum-web-components/swatch@0.37.0":
   version "0.37.0"
   resolved "https://registry.yarnpkg.com/@spectrum-web-components/swatch/-/swatch-0.37.0.tgz#55a539c3222c04b094343d49a62d6b9de771fa4a"
