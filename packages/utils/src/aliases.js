@@ -63,12 +63,30 @@ export const aliases = {
     '@spectrum-web-components/tabs': '@swc-uxp-wrappers/tabs',
     '@spectrum-web-components/accordion': '@swc-uxp-wrappers/accordion',
     '@spectrum-web-components/split-view': '@swc-uxp-wrappers/split-view',
-    '../sp-menu.dev.js': '@swc-uxp-wrappers/menu/sp-menu.js',
-    '../sp-menu.js': '@swc-uxp-wrappers/menu/sp-menu.js',
     './ButtonBase.js': '@swc-uxp-wrappers/button/src/ButtonBase.js',
     './ButtonBase.dev.js': '@swc-uxp-wrappers/button/src/ButtonBase.js',
     './topLayerOverTransforms.dev.js':
         '@swc-uxp-internal/overlay/src/topLayerOverTransforms.js',
     './topLayerOverTransforms.js':
         '@swc-uxp-internal/overlay/src/topLayerOverTransforms.js',
+    '@spectrum-web-components/theme': '@swc-uxp-internal/theme',
+    '@spectrum-web-components/base': '@swc-uxp-internal/base',
+    '@spectrum-web-components/shared': '@swc-uxp-internal/shared',
+    '@spectrum-web-components/styles': '@swc-uxp-internal/styles',
+    '@spectrum-web-components/reactive-controllers':
+        '@swc-uxp-internal/reactive-controllers',
+    '@spectrum-web-components/icon': '@swc-uxp-internal/icon',
+    '@spectrum-web-components/icons': '@swc-uxp-internal/icons',
+    '@spectrum-web-components/icons-ui': '@swc-uxp-internal/icons-ui',
+    '@spectrum-web-components/iconset': '@swc-uxp-internal/iconset',
+    '@spectrum-web-components/icons-workflow':
+        '@swc-uxp-internal/icons-workflow',
+    '@floating-ui/core': '@swc-uxp-internal/floating-ui-core',
+    '@floating-ui/dom': '@swc-uxp-internal/floating-ui-dom',
+    '@floating-ui/utils': '@swc-uxp-internal/floating-ui-utils',
+    '@lit-labs/observers': '@swc-uxp-internal/lit-labs-observers',
+    '@lit-labs/virtualizer': '@swc-uxp-internal/lit-labs-virtualizer',
+    '@internationalized/number': '@swc-uxp-internal/internationalized-number',
+    'focus-visible': '@swc-uxp-internal/focus-visible',
+    lit: '@swc-uxp-internal/lit',
 };

@@ -36,6 +36,7 @@ const copyStatics = {
 const shared = {
     output: {
         path: resolve('dist'), // the bundle output path
+        publicPath: '/', // entry to be included in webpack config, otherwise these chunks will not be referred.
         filename: 'bundle.js', // the name of the bundle
     },
     plugins: [
