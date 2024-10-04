@@ -119,7 +119,7 @@ const shared = (env) => {
         mode: ENV,
         output: {
             path: OUTPUT_PATH,
-            publicPath: '/',
+            publicPath: '/', // entry to be included in webpack config, otherwise these chunks will not be referred.
             filename: '[name].bundle.js',
         },
         module: {
