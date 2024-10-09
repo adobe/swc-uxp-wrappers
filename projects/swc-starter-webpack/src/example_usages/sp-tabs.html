@@ -37,7 +37,7 @@ governing permissions and limitations under the License.
             <div class="demo-example">
                 <div class="size-div non-flex">
                     <sp-field-label for="s">Small</sp-field-label>
-                    <sp-tabs selected="2" size="s">
+                    <sp-tabs id="dynamic-api-test" selected="2" size="s">
                         <sp-tab label="Tab 1" value="1"></sp-tab>
                         <sp-tab label="Tab 2" value="2"></sp-tab>
                         <sp-tab label="Tab 3" value="3"></sp-tab>
@@ -263,7 +263,7 @@ governing permissions and limitations under the License.
             <div class="demo-example">
                 <div class="size-div non-flex">
                     <sp-tabs selected="2">
-                        <sp-tab label="Tab 1" value="1"></sp-tab>
+                        <sp-tab label="Tab 1" value="1" disabled></sp-tab>
                         <sp-tab label="Tab 2" value="2"></sp-tab>
                         <sp-tab label="Tab 3" value="3" disabled></sp-tab>
                         <sp-tab label="Tab 4" value="4"></sp-tab>
@@ -1241,6 +1241,59 @@ governing permissions and limitations under the License.
                     </sp-tabs>
                 </div>
             </div>
+
+            <div id="variantLabel">vertical-right</div>
+            <div class="demo-example">
+                <div class="size-div non-flex">
+                    <sp-tabs selected="2" direction="vertical-right">
+                        <sp-tab label="Tab 1" value="1">
+                            <sp-icon-edit slot="icon"></sp-icon-edit>
+                        </sp-tab>
+                        <sp-tab label="Tab 2" value="2">
+                            <sp-icon-more slot="icon"></sp-icon-more>
+                        </sp-tab>
+                        <sp-tab label="Tab 3" value="3">
+                            <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                        </sp-tab>
+                        <sp-tab label="Tab 4" value="4">
+                            <sp-icon-stopwatch slot="icon"></sp-icon-stopwatch>
+                        </sp-tab>
+                        <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                        <sp-tab-panel value="2">
+                            <div class="container">
+                                <p>
+                                    Lorem ipsum dolor sit amet, consectetuer
+                                    adipiscing elit. Sed ac dolor sit amet purus
+                                    malesuada congue. Donec quis nibh at felis
+                                    congue commodo. Ut enim ad minima veniam,
+                                    quis nostrum exercitationem ullam corporis
+                                    suscipit laboriosam, nisi ut aliquid ex ea
+                                    commodi consequatur
+                                </p>
+                                <sp-field-label
+                                    for="lifestory-1"
+                                    style="width: 100px"
+                                >
+                                    Life Story
+                                </sp-field-label>
+                                <sp-textfield
+                                    placeholder="Enter your life story"
+                                    id="lifestory-1"
+                                ></sp-textfield>
+                                <sp-button
+                                    treatment="outline"
+                                    variant="primary"
+                                    class="align-right"
+                                >
+                                    Submit
+                                </sp-button>
+                            </div>
+                        </sp-tab-panel>
+                        <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                        <sp-tab-panel value="4">Content for Tab 4</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+            </div>
         </div>
 
         <input type="text" style="width: 2px" />
@@ -1285,8 +1338,25 @@ governing permissions and limitations under the License.
     </div>
 
     <div id="config">
-        <div style="display: inline-flex"></div>
+        <div style="display: inline-flex">
+            <sp-field-label size="l" side-aligned="end" for="tabs-sizes">
+                Sizes
+            </sp-field-label>
+            <select id="tabs-sizes">
+                <option value="s">Small</option>
+                <option selected value="m" selected>Medium</option>
+                <option value="l">Large</option>
+                <option value="xl">Extra Large</option>
+            </select>
+        </div>
 
-        <div style="display: flex; flex-direction: column"></div>
+        <div style="display: flex; flex-direction: column">
+            <sp-checkbox id="disabled">Disabled</sp-checkbox>
+            <sp-checkbox id="emphasized">Emphasized</sp-checkbox>
+            <div style="display: inline-flex; align-items: center">
+                <div style="padding-right: 10px; font-size: 14px">Vertical</div>
+                <sp-switch id="vertical">Vertical-Right</sp-switch>
+            </div>
+        </div>
     </div>
 </div>
