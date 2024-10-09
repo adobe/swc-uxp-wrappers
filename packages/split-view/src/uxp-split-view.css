@@ -47,10 +47,8 @@ governing permissions and limitations under the License.
 
 ::slotted(:first-child) {
     min-width: var(--primary-min);
-    overflow: hidden;
 }
 
 ::slotted(:nth-child(2)) {
     min-width: var(--secondary-min);
-    overflow: hidden;
 }

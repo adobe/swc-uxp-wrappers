@@ -519,6 +519,57 @@ function attachEvents(tabName) {
         `;
         eval(spPickerReadonly);
     }
+
+    if (tabName === 'sp-tabs') {
+        const spTabsSizes = `
+            const sizes = document.getElementById('tabs-sizes');
+            sizes.addEventListener("change", () => {
+                document.querySelector('#dynamic-api-test').setAttribute('size', sizes.value); 
+            });
+        `;
+        eval(spTabsSizes);
+
+        const spTabsDisabled = `
+            document.querySelector('#disabled').addEventListener('change', (evt) => {
+                    const checked = evt.target.checked;
+                    const tabs = document.querySelector('#dynamic-api-test');
+                    if (checked) {
+                        tabs.setAttribute("disabled", "disabled");
+                    } else {
+                        tabs.removeAttribute("disabled");
+                    }
+                });
+        `;
+        eval(spTabsDisabled);
+
+        const spTabsEmphasized = `
+            document.querySelector('#emphasized').addEventListener('change', (evt) => {
+                    const checked = evt.target.checked;
+                    const tabs = document.querySelector('#dynamic-api-test');
+                    if (checked) {
+                        tabs.setAttribute("emphasized", "emphasized");
+                    } else {
+                        tabs.removeAttribute("emphasized");
+                    }
+                });
+        `;
+        eval(spTabsEmphasized);
+
+        const spTabsVertical = `
+            document.querySelector('#vertical').addEventListener('change', (evt) => {
+                const checked = evt.target.checked;
+                const tabs = document.querySelectorAll('[direction^="vertical"]'); // Select all elements with direction="vertical"
+                tabs.forEach(tab => {
+                    if (checked) {
+                        tab.setAttribute("direction", "vertical-right");
+                    } else {
+                        tab.setAttribute("direction", "vertical");
+                    }
+                });
+            });
+        `;
+        eval(spTabsVertical);
+    }
 }
 
 function handleThemeColor(selectObject) {

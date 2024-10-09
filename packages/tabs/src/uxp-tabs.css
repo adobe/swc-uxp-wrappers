@@ -16,6 +16,14 @@ governing permissions and limitations under the License.
     display: block;
 }
 
+::slotted(:not([slot])),
+::slotted(:not([slot])) {
+    color: var(
+        --highcontrast-tabs-color,
+        var(--mod-tabs-color, var(--spectrum-tabs-color))
+    );
+}
+
 :host([direction^='vertical']) {
     display: inline-flex;
 }
@@ -45,6 +53,10 @@ governing permissions and limitations under the License.
 
 :host(:not([disabled])) ::slotted(sp-tab.focus-visible):before {
     border-color: var(--spectrum-focus-indicator-color) !important;
+}
+
+:host([direction='vertical-right']) ::slotted(sp-tab-panel) {
+    margin-left: 2px; /* To compensate for lack of box-sizing support */
 }
 
 :host(:not([disabled])) ::slotted(sp-tab-panel.focus-visible) {
