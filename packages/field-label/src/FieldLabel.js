@@ -16,7 +16,7 @@ import styles from './uxp-field-label.css.js';
 
 class UxpFieldLabel extends FieldLabel {
     static get styles() {
-        return [super.styles, styles];
+        return [...super.styles, styles];
     }
 }
 

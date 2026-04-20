@@ -10,4 +10,21 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* write uxp style overrides */
+/* Physical margin-right fallback for horizontal item spacing.
+ *
+ *
+ * UXP does not support margin-inline-end (logical property). The SWC
+ * field-group.css already provides physical overrides for [dir='ltr'] and
+ * [dir='rtl'] hosts — those cover the normal case when sp-theme propagates
+ * the dir attribute.
+ *
+ * However, if no dir attribute is present on the sp-field-group host itself
+ * (e.g. dir is only set on a parent sp-theme), UXP ignores margin-inline-end
+ * and items in horizontal mode have no spacing between them.
+ *
+ * Fix: Apply margin-right as a fallback when dir is not explicitly set on
+ * the host. The :not([dir]) condition prevents this rule from conflicting
+ * with the [dir='rtl'] case (where margin-left should apply instead). */
+:host([horizontal]:not([dir])) .group slot:not([name])::slotted(*:not(:last-child)) {
+    margin-right: var(--spectrum-fieldgroup-margin);
+}

@@ -16,8 +16,7 @@ import swcFieldLabelStyles from '@swc-uxp-internal/field-label/src/field-label.c
 import uxpFieldLabelStyles from './uxp-field-label.css.js';
 
 const combinedFieldLabelStyles = unsafeCSS(
-    swcFieldLabelStyles.toString(),
-    uxpFieldLabelStyles.toString()
+    swcFieldLabelStyles.toString() + '\n' + uxpFieldLabelStyles.toString()
 );
 
 export default combinedFieldLabelStyles;

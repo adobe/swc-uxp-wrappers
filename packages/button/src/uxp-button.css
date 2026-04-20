@@ -32,6 +32,7 @@ governing permissions and limitations under the License.
 }
 
 #label {
+    align-self: center;
     padding-bottom: calc(
         var(--mod-button-bottom-to-text, var(--spectrum-button-bottom-to-text)) -
             var(--mod-button-border-width, var(--spectrum-button-border-width))
@@ -43,13 +44,37 @@ governing permissions and limitations under the License.
     margin: auto;
 }
 
+/* Hide label box for icon-only buttons — UXP maps display:contents to display:block,
+ * causing the empty #label span to contribute unwanted width. display:none removes it. */
+[icon-only] + #label {
+    display: none;
+}
+
+/* Physical margin for icon placement — replaces margin-inline-start and margin-block-start
+ * (UXP: no logical margin properties).
+ * Physical height/width for icons — replaces logical block-size/inline-size (UXP: ignored).
+ * visibility:inherit — replaces visibility:revert-layer (UXP: no CSS layer support,
+ * silently fails causing icons to disappear). */
 ::slotted([slot='icon']) {
+    height: var(--spectrum-icon-size, var(--spectrum-workflow-icon-size-100));
+    width: var(--spectrum-icon-size, var(--spectrum-workflow-icon-size-100));
     margin-left: calc(
         var(--mod-button-edge-to-visual, var(--spectrum-button-edge-to-visual)) -
             var(--mod-button-edge-to-text, var(--spectrum-button-edge-to-text))
     );
+    margin-top: var(--mod-button-icon-margin-block-start, 0px);
+    visibility: inherit;
 }
 
+/* Physical dimensions for SVG/IMG icons — replaces block-size/inline-size (UXP: ignored). */
+slot[name='icon']::slotted(svg),
+slot[name='icon']::slotted(img) {
+    height: var(--spectrum-icon-size, var(--spectrum-workflow-icon-size-100));
+    width: var(--spectrum-icon-size, var(--spectrum-workflow-icon-size-100));
+}
+
+/* Physical margin-right for icon-to-label gap — replaces logical margin-inline-end
+ * (UXP: no logical margin properties). */
 :not(slot[icon-only])::slotted([slot='icon']) {
     margin-right: var(
         --mod-button-padding-label-to-icon,
@@ -57,10 +82,55 @@ governing permissions and limitations under the License.
     );
 }
 
-/* workaround for missing logical property 'inset', fixed layouting of focus-ring */
-:host:after {
+/* Icon-only button circle fix.
+ * UXP maps display:inline-flex to display:flex (block-level), so width:auto fills the
+ * parent width instead of shrinking to content, producing an ellipse instead of a circle.
+ * Explicit width = button height token forces a square at any size.
+ * min-width:0 clears the minimum-width constraint that would otherwise widen the button.
+ * Explicit padding longhands produce correct equal padding on all sides. */
+:host([icon-only]) {
+    min-width: 0;
+    width: var(--mod-button-height, var(--spectrum-button-height));
+    padding-top: calc(
+        var(--mod-button-edge-to-visual-only, var(--spectrum-button-edge-to-visual-only)) -
+            var(--mod-button-border-width, var(--spectrum-button-border-width))
+    );
+    padding-right: calc(
+        var(--mod-button-edge-to-visual-only, var(--spectrum-button-edge-to-visual-only)) -
+            var(--mod-button-border-width, var(--spectrum-button-border-width))
+    );
+    padding-bottom: calc(
+        var(--mod-button-edge-to-visual-only, var(--spectrum-button-edge-to-visual-only)) -
+            var(--mod-button-border-width, var(--spectrum-button-border-width))
+    );
+    padding-left: calc(
+        var(--mod-button-edge-to-visual-only, var(--spectrum-button-edge-to-visual-only)) -
+            var(--mod-button-border-width, var(--spectrum-button-border-width))
+    );
+}
+
+/* Zero out icon offsets inside icon-only buttons — physical equivalents of
+ * margin-block-start:0 and margin-inline-start:0 (UXP: no logical properties). */
+:host([icon-only]) ::slotted([slot='icon']) {
+    margin-left: 0;
+    margin-top: 0;
+}
+
+/* Physical inset for focus-ring overlay — replaces the logical 'inset' shorthand
+ * (UXP: no logical four-sided inset shorthand). */
+:host::after {
     top: 0px;
     left: 0px;
     bottom: 0px;
     right: 0px;
+}
+
+/* Pending state — NOT SUPPORTED IN UXP.
+ * SWC sets cursor:default; pointer-events:none on :host([pending]:not([disabled])).
+ * UXP applies these plain properties even though it ignores the associated animations.
+ * Override restores pointer interactivity; sp-progress-circle is never rendered
+ * (see renderButton() in Button.js). */
+:host([pending]:not([disabled])) {
+    cursor: auto;
+    pointer-events: auto;
 }

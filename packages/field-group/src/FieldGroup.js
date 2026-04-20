@@ -10,14 +10,21 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+/**
+ * UXP wrapper for sp-field-group.
+ *
+ * Extends the SWC FieldGroup class and injects UXP-specific CSS overrides.
+ * The overrides in uxp-field-group.css.js patch:
+ *   - margin-inline-end (logical) in horizontal mode when no dir attribute is set
+ *
+ */
 import { FieldGroup } from '@swc-uxp-internal/field-group/src/FieldGroup.js';
 
 import styles from './uxp-field-group.css.js';
 
 class UxpFieldGroup extends FieldGroup {
     static get styles() {
-        // We are combining our styles to make all super class styles available along with the transitive dependent classes styles.
-        return [super.styles, styles];
+        return [...super.styles, styles];
     }
 }
 

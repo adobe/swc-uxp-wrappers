@@ -10,9 +10,9 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* write uxp style overrides */
-
-/* Workaround for - https://jira.corp.adobe.com/browse/UXP-21294 */
+/* Gap workaround — UXP does not reliably support CSS 'gap' in flex.
+ * We use margin-right on non-last children instead.
+ * Ref: https://jira.corp.adobe.com/browse/UXP-21294 */
 :host(:not([vertical])) ::slotted(:not(:last-child)) {
     margin-right: var(
         --mod-buttongroup-spacing-horizontal,

@@ -10,10 +10,10 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* write uxp style overrides */
-
-/* workaround for missing logical property 'inset', fixed layouting of focus-ring */
-:host:after {
+/* Physical inset for focus-ring overlay — replaces logical 'inset' shorthand.
+ * UXP does not support the 'inset' CSS shorthand property.
+ * Ref: https://jira.corp.adobe.com/browse/UXP-20649 */
+:host::after {
     top: 0px;
     left: 0px;
     bottom: 0px;

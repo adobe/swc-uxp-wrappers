@@ -1,5 +1,5 @@
 /*
-Copyright 2023 Adobe. All rights reserved.
+Copyright 2026 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -10,13 +10,18 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-import { unsafeCSS } from '@spectrum-web-components/base';
-import swcFieldGroupStyles from '@swc-uxp-internal/field-group/src/field-group.css.js';
+/**
+ * UXP wrapper for Icon (used by the sp-icon element).
+ * Inherits the UxpIconBase CSS fixes (physical width/height).
+ */
+import { Icon } from '@swc-uxp-internal/icon/src/Icon.js';
 
-import uxpFieldGroupStyles from './uxp-field-group.css.js';
+import styles from './uxp-icon.css.js';
 
-const combinedFieldGroupStyles = unsafeCSS(
-    swcFieldGroupStyles.toString() + '\n' + uxpFieldGroupStyles.toString()
-);
+class UxpIcon extends Icon {
+    static get styles() {
+        return [...super.styles, styles];
+    }
+}
 
-export default combinedFieldGroupStyles;
+export { UxpIcon as Icon };

@@ -1,15 +1,15 @@
 {
-    "name": "@swc-uxp-wrappers/field-group",
+    "name": "@swc-uxp-wrappers/icon",
     "version": "3.0.0",
     "publishConfig": {
         "access": "public"
     },
-    "description": "UXP wrapper of the @spectrum-web-components/field-group component",
+    "description": "UXP wrapper of the @spectrum-web-components/icon component",
     "license": "Apache-2.0",
     "repository": {
         "type": "git",
         "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
-        "directory": "packages/field-group"
+        "directory": "packages/icon"
     },
     "author": "Adobe Inc",
     "main": "src/index.js",
@@ -18,13 +18,12 @@
     "exports": {
         ".": "./src/index.js",
         "./package.json": "./package.json",
-        "./src/FieldGroup.js": "./src/FieldGroup.js",
-        "./src/field-group.css.js": "./src/field-group.css.js",
-        "./sp-field-group.js": "./sp-field-group.js"
+        "./src/IconBase.js": "./src/IconBase.js",
+        "./src/Icon.js": "./src/Icon.js",
+        "./sp-icon.js": "./sp-icon.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/field-group": "npm:@spectrum-web-components/field-group@0.44.0",
-        "@swc-uxp-wrappers/help-text": "2.0.0"
+        "@swc-uxp-internal/icon": "npm:@spectrum-web-components/icon@0.44.0"
     },
     "files": [
         "**/*.js"
@@ -32,6 +31,6 @@
     "keywords": [
         "UXP",
         "Spectrum Web Components",
-        "@spectrum-web-components/field-group"
+        "@spectrum-web-components/icon"
     ]
 }

@@ -10,13 +10,22 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+import { html } from '@spectrum-web-components/base';
 import { Button } from '@swc-uxp-internal/button/src/Button.js';
 
 import styles from './uxp-button.css.js';
 
 class UxpButton extends Button {
     static get styles() {
-        return [super.styles, styles];
+        return [...super.styles, styles];
+    }
+
+    renderButton() {
+        return html`${this.buttonContent}`;
+    }
+
+    click() {
+        HTMLElement.prototype.click.call(this);
     }
 }
 

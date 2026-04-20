@@ -16,8 +16,7 @@ import swcButtonBaseStyles from '@swc-uxp-internal/button/src/button-base.css.js
 import uxpButtonBaseStyles from './uxp-button-base.css.js';
 
 const combinedButtonBaseStyles = unsafeCSS(
-    swcButtonBaseStyles.toString(),
-    uxpButtonBaseStyles.toString()
+    swcButtonBaseStyles.toString() + '\n' + uxpButtonBaseStyles.toString()
 );
 
 export default combinedButtonBaseStyles;

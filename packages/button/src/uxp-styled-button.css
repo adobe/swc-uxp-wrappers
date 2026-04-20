@@ -10,4 +10,11 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* write uxp style overrides */
+/* Physical inset for focus-ring overlay — replaces the logical 'inset' shorthand
+ * (UXP: no logical four-sided inset shorthand). */
+:host::after {
+    top: 0px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+}

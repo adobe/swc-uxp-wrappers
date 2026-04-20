@@ -10,14 +10,26 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+/**
+ * UXP wrapper for sp-button-group.
+ *
+ * Extends the SWC ButtonGroup class and injects margin-based gap overrides
+ * because UXP does not support CSS 'gap' in flex containers reliably.
+ *
+ *   - SizedMixin now receives { noDefaultSize: true } as second argument.
+ *     This means ButtonGroup no longer has an implicit default size of 'm'.
+ *     In UXP usage, always set the [size] attribute explicitly on sp-button-group.
+ *
+ * We are combining our styles to make all super class styles available
+ * along with the transitive dependent classes styles.
+ */
 import { ButtonGroup } from '@swc-uxp-internal/button-group/src/ButtonGroup.js';
 
 import styles from './uxp-button-group.css.js';
 
 class UxpButtonGroup extends ButtonGroup {
     static get styles() {
-        // We are combining our styles to make all super class styles available along with the transitive dependent classes styles.
-        return [super.styles, styles];
+        return [...super.styles, styles];
     }
 }
 

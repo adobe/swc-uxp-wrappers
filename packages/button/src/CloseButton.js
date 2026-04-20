@@ -16,7 +16,7 @@ import styles from './uxp-close-button.css.js';
 
 class UxpCloseButton extends CloseButton {
     static get styles() {
-        return [super.styles, styles];
+        return [...super.styles, styles];
     }
 }
 

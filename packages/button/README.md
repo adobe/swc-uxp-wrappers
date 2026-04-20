@@ -6,7 +6,7 @@
 This is UXP wrapper for `@spectrum-web-components/button` package
 <br />
 
--   For detailed README regarding `@spectrum-web-components/button` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/button/v/0.37.0)
+-   For detailed README regarding `@spectrum-web-components/button` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/button/v/0.44.0)
 
 -   Detailed specification regarding `@spectrum-web-components/button` support in UXP through `@swc-uxp-wrappers/button` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
 
@@ -43,3 +43,11 @@ import { Button } from '@swc-uxp-wrappers/button';
 ```html
 <sp-button></sp-button>
 ```
+
+## Unsupported Variants
+
+---
+
+<br />
+
+-   **pending**: The pending state relies on `sp-progress-circle`, which uses CSS animations not supported in UXP. Setting the `pending` attribute has no visual effect in UXP.
