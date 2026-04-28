@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/banner",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -23,7 +23,7 @@
         "./sp-banner.js": "./sp-banner.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/banner": "npm:@spectrum-web-components/banner@0.37.0"
+        "@swc-uxp-internal/banner": "npm:@spectrum-web-components/banner@0.44.0"
     },
     "files": [
         "**/*.js"

@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/swatch",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -26,7 +26,7 @@
         "./sp-swatch-group.js": "./sp-swatch-group.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/swatch": "npm:@spectrum-web-components/swatch@0.37.0"
+        "@swc-uxp-internal/swatch": "npm:@spectrum-web-components/swatch@0.44.0"
     },
     "files": [
         "**/*.js"

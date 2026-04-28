@@ -16,8 +16,7 @@ import swcBannerStyles from '@swc-uxp-internal/banner/src/banner.css.js';
 import uxpBannerStyles from './uxp-banner.css.js';
 
 const combinedBannerStyles = unsafeCSS(
-    swcBannerStyles.toString(),
-    uxpBannerStyles.toString()
+    swcBannerStyles.toString() + '\n' + uxpBannerStyles.toString()
 );
 
 export default combinedBannerStyles;

@@ -17,7 +17,44 @@ governing permissions and limitations under the License.
     --uxp-polyfill-for-clip-path: calc(
         var(--spectrum-swatch-border-thickness-selected) * 2
     );
+    width: var(--mod-swatch-size, var(--spectrum-swatch-size));
+    height: var(--mod-swatch-size, var(--spectrum-swatch-size));
 }
+
+.disabledIcon {
+    width: var(
+        --mod-swatch-disabled-icon-size,
+        var(--spectrum-swatch-disabled-icon-size)
+    );
+    height: var(
+        --mod-swatch-disabled-icon-size,
+        var(--spectrum-swatch-disabled-icon-size)
+    );
+}
+
+.fill {
+    height: 100%;
+    width: 100%;
+    border: 1px solid black;
+}
+
+:host([shape='rectangle']) {
+    width: calc(var(--mod-swatch-size, var(--spectrum-swatch-size)) * 2);
+}
+
+::slotted([slot='image']) {
+    height: 100%;
+    width: 100%;
+}
+
+:host([nothing]) .fill:after {
+    width: var(
+        --mod-swatch-slash-thickness,
+        var(--spectrum-swatch-slash-thickness)
+    );
+    height: 200%;
+}
+
 :host:after {
     top: calc(
         var(
@@ -57,10 +94,6 @@ governing permissions and limitations under the License.
     left: 0;
     right: 0;
     bottom: 0;
-}
-
-.fill {
-    border: 1px solid black;
 }
 
 :host([selected]) {
