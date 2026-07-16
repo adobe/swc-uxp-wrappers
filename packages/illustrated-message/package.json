@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/illustrated-message",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -19,11 +19,12 @@
         ".": "./src/index.js",
         "./package.json": "./package.json",
         "./src/IllustratedMessage.js": "./src/IllustratedMessage.js",
+        "./src/illustratedmessage-overrides.css.js": "./src/illustratedmessage-overrides.css.js",
         "./sp-illustrated-message.js": "./sp-illustrated-message.js",
         "./src/illustrated-message.css.js": "./src/illustrated-message.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/illustrated-message": "npm:@spectrum-web-components/illustrated-message@0.37.0"
+        "@swc-uxp-internal/illustrated-message": "npm:@spectrum-web-components/illustrated-message@1.12.1"
     },
     "files": [
         "**/*.js"

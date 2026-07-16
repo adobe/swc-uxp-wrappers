@@ -15,17 +15,26 @@ import './styles.css';
 
 import '@spectrum-web-components/theme/sp-theme.js';
 import '@spectrum-web-components/theme/src/themes.js';
+import '@spectrum-web-components/theme/src/spectrum-two/themes.js';
 
+import '@spectrum-web-components/badge/sp-badge.js';
 import '@spectrum-web-components/banner/sp-banner.js';
+import '@spectrum-web-components/badge/sp-badge.js';
+import '@spectrum-web-components/breadcrumbs/sp-breadcrumbs.js';
 import '@spectrum-web-components/divider/sp-divider.js';
+import '@spectrum-web-components/dropzone/sp-dropzone.js';
 import '@spectrum-web-components/illustrated-message/sp-illustrated-message.js';
 import '@spectrum-web-components/link/sp-link.js';
 import '@spectrum-web-components/avatar/sp-avatar.js';
 import '@spectrum-web-components/field-label/sp-field-label.js';
 import '@spectrum-web-components/button/sp-button.js';
+import '@swc-uxp-wrappers/button/sp-close-button.js';
+import '@swc-uxp-wrappers/button/sp-clear-button.js';
 import '@spectrum-web-components/action-button/sp-action-button.js';
 import '@spectrum-web-components/card/sp-card.js';
 import '@spectrum-web-components/checkbox/sp-checkbox.js';
+import '@spectrum-web-components/coachmark/sp-coachmark.js';
+import '@spectrum-web-components/coachmark/sp-coach-indicator.js';
 import '@spectrum-web-components/action-group/sp-action-group.js';
 import '@spectrum-web-components/action-bar/sp-action-bar.js';
 import '@spectrum-web-components/popover/sp-popover.js';
@@ -37,6 +46,8 @@ import '@spectrum-web-components/menu/sp-menu-item.js';
 import '@spectrum-web-components/menu/sp-menu-group.js';
 import '@spectrum-web-components/menu/sp-menu-divider.js';
 import '@spectrum-web-components/toast/sp-toast.js';
+import '@spectrum-web-components/alert-dialog/sp-alert-dialog.js';
+import '@spectrum-web-components/alert-banner/sp-alert-banner.js';
 import '@spectrum-web-components/dialog/sp-dialog.js';
 import '@spectrum-web-components/switch/sp-switch.js';
 import '@spectrum-web-components/sidenav/sp-sidenav.js';
@@ -47,11 +58,17 @@ import '@spectrum-web-components/radio/sp-radio-group.js';
 import '@spectrum-web-components/asset/sp-asset.js';
 import '@spectrum-web-components/quick-actions/sp-quick-actions.js';
 import '@spectrum-web-components/meter/sp-meter.js';
+import '@spectrum-web-components/progress-bar/sp-progress-bar.js';
 import '@spectrum-web-components/tags/sp-tags.js';
 import '@spectrum-web-components/tags/sp-tag.js';
+import '@spectrum-web-components/tabs/sp-tabs.js';
+import '@spectrum-web-components/tabs/sp-tab.js';
+import '@spectrum-web-components/tabs/sp-tab-panel.js';
+import '@spectrum-web-components/thumbnail/sp-thumbnail.js';
 import '@spectrum-web-components/field-group/sp-field-group.js';
 import '@spectrum-web-components/swatch/sp-swatch.js';
 import '@spectrum-web-components/swatch/sp-swatch-group.js';
+import '@spectrum-web-components/contextual-help/sp-contextual-help.js';
 
 import '@spectrum-web-components/table/sp-table.js';
 import '@spectrum-web-components/table/sp-table-body.js';
@@ -63,8 +80,15 @@ import '@spectrum-web-components/table/sp-table-row.js';
 
 import '@spectrum-web-components/overlay/sp-overlay.js';
 import '@spectrum-web-components/overlay/overlay-trigger.js';
+import '@spectrum-web-components/combobox/sp-combobox.js';
+
+// sp-overlay must be imported BEFORE sp-action-menu (DependencyManagerController pre-registration)
+import '@swc-uxp-wrappers/action-menu/sp-action-menu.js';
+
+import '@spectrum-web-components/picker/sp-picker.js';
 
 import '@spectrum-web-components/number-field/sp-number-field.js';
+import '@spectrum-web-components/progress-circle/sp-progress-circle.js';
 import '@spectrum-web-components/search/sp-search.js';
 import '@spectrum-web-components/textfield/sp-textfield.js';
 import '@spectrum-web-components/icons/sp-icons-medium.js';
@@ -78,6 +102,8 @@ import '@spectrum-web-components/icons-workflow/icons/sp-icon-add-circle.js';
 import '@spectrum-web-components/icons-workflow/icons/sp-icon-display-advert.js';
 import '@spectrum-web-components/icons-workflow/icons/sp-icon-add-to.js';
 import '@spectrum-web-components/icons-workflow/icons/sp-icon-star.js';
+import '@spectrum-web-components/icons-workflow/icons/sp-icon-checkmark-circle.js';
+import '@spectrum-web-components/icons-workflow/icons/sp-icon-settings.js';
 import '@spectrum-web-components/icons-workflow/icons/sp-icon-add-to-selection.js';
 import '@spectrum-web-components/icons-workflow/icons/sp-icon-edit.js';
 import '@spectrum-web-components/icons-workflow/icons/sp-icon-magnify.js';
@@ -90,6 +116,7 @@ import '@spectrum-web-components/icons-workflow/icons/sp-icon-user-activity.js';
 
 // Importing custom elements (my-*) extended from the respective Spectrum Web Components
 import './extended_swc_samples/my-banner.js';
+import './extended_swc_samples/my-badge.js';
 import './extended_swc_samples/my-divider.js';
 import './extended_swc_samples/my-avatar.js';
 import './extended_swc_samples/my-illustrated-message.js';
@@ -112,6 +139,8 @@ import './extended_swc_samples/my-help-text.js';
 import './extended_swc_samples/my-textfield.js';
 import './extended_swc_samples/my-numberfield.js';
 import './extended_swc_samples/my-search.js';
+import './extended_swc_samples/my-alert-banner.js';
+import './extended_swc_samples/my-alert-dialog.js';
 import './extended_swc_samples/my-dialog.js';
 import './extended_swc_samples/my-button-group.js';
 import './extended_swc_samples/my-toast.js';
@@ -120,9 +149,11 @@ import './extended_swc_samples/my-radio.js';
 import './extended_swc_samples/my-radio-group.js';
 import './extended_swc_samples/my-field-group.js';
 import './extended_swc_samples/my-tags.js';
+import './extended_swc_samples/my-thumbnail.js';
 import './extended_swc_samples/my-sidenav.js';
 import './extended_swc_samples/my-asset.js';
 import './extended_swc_samples/my-quick-actions.js';
 import './extended_swc_samples/my-meter.js';
 import './extended_swc_samples/my-swatch.js';
 import './extended_swc_samples/my-overlay.js';
+import './extended_swc_samples/my-contextual-help.js';

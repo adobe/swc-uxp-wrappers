@@ -16,7 +16,7 @@ import styles from './uxp-link.css.js';
 
 class UxpLink extends Link {
     static get styles() {
-        return [super.styles, styles];
+        return [...super.styles, styles];
     }
 }
 

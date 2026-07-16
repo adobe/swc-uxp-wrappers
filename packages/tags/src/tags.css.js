@@ -16,8 +16,7 @@ import swcTagsStyles from '@swc-uxp-internal/tags/src/tags.css.js';
 import uxpTagsStyles from './uxp-tags.css.js';
 
 const combinedTagsStyles = unsafeCSS(
-    swcTagsStyles.toString(),
-    uxpTagsStyles.toString()
+    swcTagsStyles.toString() + '\n' + uxpTagsStyles.toString()
 );
 
 export default combinedTagsStyles;

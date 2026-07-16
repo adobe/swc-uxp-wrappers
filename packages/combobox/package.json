@@ -1,0 +1,44 @@
+{
+  "name": "@swc-uxp-wrappers/combobox",
+  "version": "3.0.0",
+  "publishConfig": {
+    "access": "public"
+  },
+  "description": "UXP wrapper of the @spectrum-web-components/combobox component",
+  "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+    "directory": "packages/combobox"
+  },
+  "author": "Adobe Inc",
+  "main": "src/index.js",
+  "module": "src/index.js",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js",
+    "./package.json": "./package.json",
+    "./src/Combobox.js": "./src/Combobox.js",
+    "./src/combobox.css.js": "./src/combobox.css.js",
+    "./src/combobox-overrides.css.js": "./src/combobox-overrides.css.js",
+    "./src/index.js": "./src/index.js",
+    "./sp-combobox.js": "./sp-combobox.js"
+  },
+  "dependencies": {
+    "@swc-uxp-internal/combobox": "npm:@spectrum-web-components/combobox@1.12.1",
+    "@swc-uxp-wrappers/textfield": "3.0.0",
+    "@swc-uxp-wrappers/picker-button": "3.0.0",
+    "@swc-uxp-wrappers/menu": "3.0.0",
+    "@swc-uxp-wrappers/overlay": "3.0.0",
+    "@swc-uxp-wrappers/popover": "3.0.0",
+    "@swc-uxp-wrappers/action-button": "3.0.0"
+  },
+  "files": [
+    "**/*.js"
+  ],
+  "keywords": [
+    "UXP",
+    "Spectrum Web Components",
+    "@spectrum-web-components/combobox"
+  ]
+}

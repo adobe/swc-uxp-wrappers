@@ -16,8 +16,7 @@ import swcCardStyles from '@swc-uxp-internal/card/src/card.css.js';
 import uxpCardStyles from './uxp-card.css.js';
 
 const combinedCardStyles = unsafeCSS(
-    swcCardStyles.toString(),
-    uxpCardStyles.toString()
+    swcCardStyles.toString() + '\n' + uxpCardStyles.toString()
 );
 
 export default combinedCardStyles;

@@ -16,7 +16,19 @@ import styles from './uxp-avatar.css.js';
 
 class UxpAvatar extends Avatar {
     static get styles() {
-        return [super.styles, styles];
+        return [...super.styles, styles];
+    }
+
+    // SWC Avatar declares size as type:Number with reflect:true. LitElement's
+    // defaultConverter.toAttribute for Number returns the raw number without
+    // stringifying, so UXP's SizeAttribute receives a number and crashes on
+    // value.toLowerCase(). Coerce size to string before UXP's handler sees it.
+    setAttribute(name, value) {
+        if (name === 'size' && typeof value !== 'string') {
+            super.setAttribute(name, String(value));
+        } else {
+            super.setAttribute(name, value);
+        }
     }
 }
 

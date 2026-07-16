@@ -23,6 +23,15 @@ governing permissions and limitations under the License.
     align-items: flex-start;
 }
 
+/* SWC 1.12.0 introduced :host(:not([error],[dismissable],[mode])) .grid { display: grid }
+   which has higher specificity (0,2,0) than the plain .grid rule above (0,1,0).
+   Match that specificity here to ensure display:flex wins for the default dialog variant. */
+:host(:not([error],[dismissable],[mode])) .grid {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
 :host([dismissable]) .grid {
     padding-top: calc(-1 * var(--spectrum-dialog-confirm-padding));
 }

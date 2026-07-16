@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/table",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -26,6 +26,12 @@
         "./src/table-head.css.js": "./src/table-head.css.js",
         "./src/table-head-cell.css.js": "./src/table-head-cell.css.js",
         "./src/table-row.css.js": "./src/table-row.css.js",
+        "./src/table-overrides.css.js": "./src/table-overrides.css.js",
+        "./src/table-cell-overrides.css.js": "./src/table-cell-overrides.css.js",
+        "./src/table-checkbox-cell-overrides.css.js": "./src/table-checkbox-cell-overrides.css.js",
+        "./src/table-head-overrides.css.js": "./src/table-head-overrides.css.js",
+        "./src/table-head-cell-overrides.css.js": "./src/table-head-cell-overrides.css.js",
+        "./src/table-row-overrides.css.js": "./src/table-row-overrides.css.js",
         "./src/TableBody.js": "./src/TableBody.js",
         "./src/TableCell.js": "./src/TableCell.js",
         "./src/TableCheckboxCell.js": "./src/TableCheckboxCell.js",
@@ -41,8 +47,8 @@
         "./sp-table-row.js": "./sp-table-row.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/table": "npm:@spectrum-web-components/table@0.37.0",
-        "@swc-uxp-wrappers/checkbox": "2.0.0"
+        "@swc-uxp-internal/table": "npm:@spectrum-web-components/table@1.12.1",
+        "@swc-uxp-wrappers/checkbox": "3.0.0"
     },
     "files": [
         "**/*.js"

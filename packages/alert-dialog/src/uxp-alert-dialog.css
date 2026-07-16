@@ -1,0 +1,36 @@
+/*
+Copyright 2026 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* display:grid not supported in UXP (UXP-21311).
+   SWC: .grid { display: grid }
+   The grid has no grid-template, so flex column achieves the same stacking layout. */
+.grid {
+    display: flex;
+    flex-direction: column;
+}
+
+/* align-items:baseline not supported in UXP.
+   SWC: .header { align-items: baseline }
+   flex-start keeps heading and icon top-aligned, which is visually equivalent. */
+.header {
+    align-items: flex-start;
+}
+
+/* Button spacing — gap not supported in UXP flex containers (UXP-21294).
+   Buttons are slotted via alert-dialog's named <slot name="button"> inside
+   sp-button-group, so button-group's own ::slotted gap fix cannot reach them
+   (re-slotted elements are invisible to the inner shadow's ::slotted selector).
+   Apply margin-left to all slotted buttons; the first button's extra margin is
+   negligible since the button-group is right-aligned (justify-content: flex-end). */
+::slotted([slot='button']) {
+    margin-left: var(--spectrum-buttongroup-spacing);
+}

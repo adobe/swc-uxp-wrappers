@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/dialog",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -24,13 +24,15 @@
         "./sp-dialog.js": "./sp-dialog.js",
         "./sp-dialog-base.js": "./sp-dialog-base.js",
         "./sp-dialog-wrapper.js": "./sp-dialog-wrapper.js",
-        "./src/dialog.css.js": "./src/dialog.css.js"
+        "./src/dialog.css.js": "./src/dialog.css.js",
+        "./src/dialog-overrides.css.js": "./src/dialog-overrides.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/dialog": "npm:@spectrum-web-components/dialog@0.37.0",
-        "@swc-uxp-wrappers/button": "2.0.0",
-        "@swc-uxp-wrappers/button-group": "2.0.0",
-        "@swc-uxp-wrappers/divider": "2.0.0"
+        "@swc-uxp-internal/dialog": "npm:@spectrum-web-components/dialog@1.12.1",
+        "@swc-uxp-wrappers/button": "3.0.0",
+        "@swc-uxp-wrappers/button-group": "3.0.0",
+        "@swc-uxp-wrappers/divider": "3.0.0",
+        "@swc-uxp-wrappers/alert-dialog": "3.0.0"
     },
     "files": [
         "**/*.js"

@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/tooltip",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -20,10 +20,11 @@
         "./package.json": "./package.json",
         "./src/Tooltip.js": "./src/Tooltip.js",
         "./src/tooltip.css.js": "./src/tooltip.css.js",
+        "./src/tooltip-overrides.css.js": "./src/tooltip-overrides.css.js",
         "./sp-tooltip.js": "./sp-tooltip.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/tooltip": "npm:@spectrum-web-components/tooltip@0.37.0"
+        "@swc-uxp-internal/tooltip": "npm:@spectrum-web-components/tooltip@1.12.1"
     },
     "files": [
         "**/*.js"

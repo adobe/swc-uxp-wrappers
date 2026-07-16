@@ -12,17 +12,33 @@ governing permissions and limitations under the License.
 
 /* write uxp style overrides */
 
-/* Workaround for - https://jira.corp.adobe.com/browse/UXP-21294 */
+/* SWC v1.12.0 sets display:var(--spectrum-buttongroup-display) and
+   flex-direction:var(--spectrum-buttongroup-flex-direction) via custom properties.
+   Provide explicit values as a safety fallback in case UXP does not resolve
+   display/flex-direction through custom property substitution. */
+:host {
+    display: flex;
+    flex-direction: row;
+}
+
+:host([vertical]) {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+/* gap workaround — UXP does not support gap in flex containers (UXP-21294).
+   v0.37.0 used --spectrum-buttongroup-spacing-horizontal/vertical; those tokens
+   were removed in v1.12.0 and replaced by the unified --spectrum-buttongroup-spacing. */
 :host(:not([vertical])) ::slotted(:not(:last-child)) {
-    margin-right: var(
-        --mod-buttongroup-spacing-horizontal,
-        var(--spectrum-buttongroup-spacing-horizontal)
-    );
+    margin-right: var(--spectrum-buttongroup-spacing);
 }
 
 :host([vertical]) ::slotted(:not(:last-child)) {
-    margin-bottom: var(
-        --mod-buttongroup-spacing-vertical,
-        var(--spectrum-buttongroup-spacing-vertical)
-    );
+    margin-bottom: var(--spectrum-buttongroup-spacing);
+}
+
+/* :dir(rtl) pseudo-class not supported in UXP — v1.12.0 changed from [dir=rtl]
+   attribute selector to :dir(rtl). Restore using attribute selector. */
+:host([vertical][dir='rtl']) ::slotted(sp-action-button) {
+    --spectrum-actionbutton-label-text-align: right;
 }

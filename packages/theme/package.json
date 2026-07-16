@@ -1,0 +1,37 @@
+{
+    "name": "@swc-uxp-wrappers/theme",
+    "version": "3.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/theme component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/theme"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/Theme.js": "./src/Theme.js",
+        "./sp-theme.js": "./sp-theme.js",
+        "./src/themes.js": "./src/themes.js",
+        "./src/spectrum-two/themes.js": "./src/spectrum-two/themes.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/theme": "npm:@spectrum-web-components/theme@1.12.1"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/theme"
+    ]
+}

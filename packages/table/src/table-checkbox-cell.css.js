@@ -16,8 +16,7 @@ import swcTableCheckboxCellStyles from '@swc-uxp-internal/table/src/table-checkb
 import uxpTableCheckboxCellStyles from './uxp-table-checkbox-cell.css.js';
 
 const combinedTableCheckboxCellStyles = unsafeCSS(
-    swcTableCheckboxCellStyles.toString(),
-    uxpTableCheckboxCellStyles.toString()
+    swcTableCheckboxCellStyles.toString() + '\n' + uxpTableCheckboxCellStyles.toString()
 );
 
 export default combinedTableCheckboxCellStyles;

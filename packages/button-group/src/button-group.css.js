@@ -16,8 +16,7 @@ import swcButtonGroupStyles from '@swc-uxp-internal/button-group/src/button-grou
 import uxpButtonGroupStyles from './uxp-button-group.css.js';
 
 const combinedButtonGroupStyles = unsafeCSS(
-    swcButtonGroupStyles.toString(),
-    uxpButtonGroupStyles.toString()
+    swcButtonGroupStyles.toString() + '\n' + uxpButtonGroupStyles.toString()
 );
 
 export default combinedButtonGroupStyles;

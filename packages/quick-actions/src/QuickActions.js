@@ -17,7 +17,7 @@ import styles from './uxp-quick-actions.css.js';
 class UxpQuickActions extends QuickActions {
     static get styles() {
         // We are combining our styles to make all super class styles available along with the transitive dependent classes styles.
-        return [super.styles, styles];
+        return [...super.styles, styles];
     }
 }
 

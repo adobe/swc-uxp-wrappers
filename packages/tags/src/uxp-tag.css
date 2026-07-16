@@ -125,3 +125,46 @@ governing permissions and limitations under the License.
             )
     );
 }
+
+/* :is(:active,[active]) expansion — UXP does not support :is() pseudo-class.
+   SWC v1.12.0 uses :host([variant]:is(:active,[active])) for active states.
+   Expanded to two separate rules each. */
+
+:host(:active),
+:host([active]) {
+    color: var(--highcontrast-tag-content-color-active, var(--mod-tag-content-color-active, var(--spectrum-tag-content-color-active)));
+    background-color: var(--highcontrast-tag-background-color-active, var(--mod-tag-background-color-active, var(--spectrum-tag-background-color-active)));
+    border-color: var(--highcontrast-tag-border-color-active, var(--mod-tag-border-color-active, var(--spectrum-tag-border-color-active)));
+}
+
+:host([selected]:active),
+:host([selected][active]) {
+    background-color: var(--highcontrast-tag-background-color-selected-active, var(--mod-tag-background-color-selected-active, var(--spectrum-tag-background-color-selected-active)));
+    border-color: var(--highcontrast-tag-border-color-selected-active, var(--mod-tag-border-color-selected-active, var(--spectrum-tag-border-color-selected-active)));
+}
+
+:host([invalid]:active),
+:host([invalid][active]) {
+    color: var(--highcontrast-tag-content-color-invalid-active, var(--mod-tag-content-color-invalid-active, var(--spectrum-tag-content-color-invalid-active)));
+    border-color: var(--highcontrast-tag-border-color-invalid-active, var(--mod-tag-border-color-invalid-active, var(--spectrum-tag-border-color-invalid-active)));
+}
+
+:host([invalid][selected]:active),
+:host([invalid][selected][active]) {
+    background-color: var(--highcontrast-tag-background-color-invalid-selected-active, var(--mod-tag-background-color-invalid-selected-active, var(--spectrum-tag-background-color-invalid-selected-active)));
+    border-color: var(--highcontrast-tag-border-color-invalid-selected-active, var(--mod-tag-border-color-invalid-selected-active, var(--spectrum-tag-border-color-invalid-selected-active)));
+}
+
+:host([emphasized]:active),
+:host([emphasized][active]) {
+    background-color: var(--highcontrast-tag-background-color-emphasized-active, var(--mod-tag-background-color-emphasized-active, var(--spectrum-tag-background-color-emphasized-active)));
+    border-color: var(--highcontrast-tag-border-color-emphasized-active, var(--mod-tag-border-color-emphasized-active, var(--spectrum-tag-border-color-emphasized-active)));
+}
+
+:host([invalid]):hover .clear-button,
+:host([invalid]:active) .clear-button,
+:host([invalid][active]) .clear-button {
+    --spectrum-clearbutton-medium-icon-color: var(--spectrum-tag-icon-color-error-hover, var(--spectrum-red-600));
+    --spectrum-clearbutton-medium-icon-color-hover: var(--spectrum-clearbutton-medium-icon-color);
+    --spectrum-clearbutton-medium-icon-color-down: var(--spectrum-tag-deletable-icon-color-error-down, var(--spectrum-red-700));
+}

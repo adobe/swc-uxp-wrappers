@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/radio",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -21,13 +21,14 @@
         "./src/Radio.js": "./src/Radio.js",
         "./src/RadioGroup.js": "./src/RadioGroup.js",
         "./src/radio.css.js": "./src/radio.css.js",
+        "./src/radio-overrides.css.js": "./src/radio-overrides.css.js",
         "./sp-radio.js": "./sp-radio.js",
         "./sp-radio-group.js": "./sp-radio-group.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/radio": "npm:@spectrum-web-components/radio@0.37.0",
-        "@swc-uxp-wrappers/field-group": "2.0.0",
-        "@swc-uxp-wrappers/help-text": "2.0.0"
+        "@swc-uxp-internal/radio": "npm:@spectrum-web-components/radio@1.12.1",
+        "@swc-uxp-wrappers/field-group": "3.0.0",
+        "@swc-uxp-wrappers/help-text": "3.0.0"
     },
     "files": [
         "**/*.js"

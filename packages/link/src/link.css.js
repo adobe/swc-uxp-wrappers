@@ -16,8 +16,7 @@ import swcLinkStyles from '@swc-uxp-internal/link/src/link.css.js';
 import uxpLinkStyles from './uxp-link.css.js';
 
 const combinedLinkStyles = unsafeCSS(
-    swcLinkStyles.toString(),
-    uxpLinkStyles.toString()
+    swcLinkStyles.toString() + '\n' + uxpLinkStyles.toString()
 );
 
 export default combinedLinkStyles;

@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/overlay",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -31,15 +31,24 @@
         "./src/overlay-trigger.css.js": "./src/overlay-trigger.css.js",
         "./src/overlay-types.js": "./src/overlay-types.js",
         "./src/overlay.css.js": "./src/overlay.css.js",
-        "./src/topLayerOverTransforms.js": "./src/topLayerOverTransforms.js",
         "./active-overlay.js": "./active-overlay.js",
         "./overlay-trigger.js": "./overlay-trigger.js",
         "./sync/overlay-trigger.js": "./overlay-trigger-sync.js",
-        "./sp-overlay.js": "./sp-overlay.js"
+        "./sp-overlay.js": "./sp-overlay.js",
+        "./src/ClickController.js": "./src/ClickController.js",
+        "./src/HoverController.js": "./src/HoverController.js",
+        "./src/InteractionController.js": "./src/InteractionController.js",
+        "./src/LongpressController.js": "./src/LongpressController.js",
+        "./src/events.js": "./src/events.js",
+        "./src/overlay-trigger-directive.js": "./src/overlay-trigger-directive.js",
+        "./src/slottable-request-directive.js": "./src/slottable-request-directive.js",
+        "./src/slottable-request-event.js": "./src/slottable-request-event.js",
+        "./src/strategies.js": "./src/strategies.js",
+        "./src/uxp-css-polyfill.js": "./src/uxp-css-polyfill.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/overlay": "npm:@spectrum-web-components/overlay@0.37.0",
-        "@swc-uxp-wrappers/action-button": "2.0.0"
+        "@swc-uxp-internal/overlay": "npm:@spectrum-web-components/overlay@1.12.1",
+        "@swc-uxp-wrappers/action-button": "3.0.0"
     },
     "files": [
         "**/*.js"

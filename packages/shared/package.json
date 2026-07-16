@@ -1,0 +1,47 @@
+{
+    "name": "@swc-uxp-wrappers/shared",
+    "version": "3.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/shared package",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/shared"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/first-focusable-in.js": "./src/first-focusable-in.js",
+        "./src/focus-visible.js": "./src/focus-visible.js",
+        "./src/focusable-selectors.js": "./src/focusable-selectors.js",
+        "./src/focusable.js": "./src/focusable.js",
+        "./src/get-active-element.js": "./src/get-active-element.js",
+        "./src/get-deep-element-from-point.js": "./src/get-deep-element-from-point.js",
+        "./src/get-label-from-slot.js": "./src/get-label-from-slot.js",
+        "./src/index.js": "./src/index.js",
+        "./src/like-anchor.js": "./src/like-anchor.js",
+        "./src/observe-slot-presence.js": "./src/observe-slot-presence.js",
+        "./src/observe-slot-text.js": "./src/observe-slot-text.js",
+        "./src/platform.js": "./src/platform.js",
+        "./src/random-id.js": "./src/random-id.js",
+        "./src/reparent-children.js": "./src/reparent-children.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/shared": "npm:@spectrum-web-components/shared@1.12.1"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/shared"
+    ]
+}

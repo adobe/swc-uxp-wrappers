@@ -16,3 +16,15 @@ governing permissions and limitations under the License.
 .dialog {
     z-index: 1000;
 }
+
+/* v1.12.0 changed .dialog:not([is-visible]) from translate:-999em to display:none.
+   UXP renders the overlay at inset:0 auto auto 0 (top-left) while PlacementController
+   computes position. Restore the v0.37.0 approach: keep hidden overlays rendered
+   off-screen via translate so layout measurement works and no flash occurs.
+   When [is-visible] is set, this rule stops matching and PlacementController's
+   inline style (translate: Xpx Ypx) positions the overlay at the correct location. */
+.dialog:not([is-visible]) {
+    translate: -999em -999em !important;
+    display: flex !important;
+}
+

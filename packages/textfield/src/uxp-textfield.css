@@ -10,111 +10,18 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* write uxp style overrides */
-
-/* Workaround for - 
+/* Workaround for -
     https://jira.corp.adobe.com/browse/UXP-20703
-    https://jira.corp.adobe.com/browse/UXP-21323 
+    https://jira.corp.adobe.com/browse/UXP-21323
 */
 
 :host {
-    width: var(--mod-textfield-width, var(--spectrum-textfield-width));
     display: inline-flex;
     flex-direction: column;
 }
 
-:host([invalid]) .input {
-    padding-right: calc(
-        var(
-                --mod-textfield-icon-spacing-inline-start-invalid,
-                var(--spectrum-textfield-icon-spacing-inline-start-invalid)
-            ) +
-            var(
-                --mod-textfield-icon-size-invalid,
-                var(--spectrum-textfield-icon-size-invalid)
-            ) +
-            var(
-                --mod-textfield-icon-spacing-inline-end-invalid,
-                var(--spectrum-textfield-icon-spacing-inline-end-invalid)
-            ) -
-            var(
-                --mod-textfield-border-width,
-                var(--spectrum-textfield-border-width)
-            )
-    );
-}
-
-:host([valid]) .input {
-    padding-right: calc(
-        var(
-                --mod-textfield-icon-spacing-inline-start-invalid,
-                var(--spectrum-textfield-icon-spacing-inline-start-invalid)
-            ) +
-            var(
-                --mod-textfield-icon-size-invalid,
-                var(--spectrum-textfield-icon-size-invalid)
-            ) +
-            var(
-                --mod-textfield-icon-spacing-inline-end-invalid,
-                var(--spectrum-textfield-icon-spacing-inline-end-invalid)
-            ) -
-            var(
-                --mod-textfield-border-width,
-                var(--spectrum-textfield-border-width)
-            )
-    );
-}
-
-:host([quiet][invalid]) .input {
-    padding-right: calc(
-        var(
-                --mod-textfield-icon-spacing-inline-start-invalid,
-                var(--spectrum-textfield-icon-spacing-inline-start-invalid)
-            ) +
-            var(
-                --mod-textfield-icon-size-invalid,
-                var(--spectrum-textfield-icon-size-invalid)
-            ) +
-            var(
-                --mod-textfield-icon-spacing-inline-end-invalid,
-                var(--spectrum-textfield-icon-spacing-inline-end-invalid)
-            ) -
-            var(
-                --mod-textfield-border-width,
-                var(--spectrum-textfield-border-width)
-            )
-    );
-}
-
-:host([quiet][valid]) .input {
-    padding-right: calc(
-        var(
-                --mod-textfield-icon-spacing-inline-start-invalid,
-                var(--spectrum-textfield-icon-spacing-inline-start-invalid)
-            ) +
-            var(
-                --mod-textfield-icon-size-invalid,
-                var(--spectrum-textfield-icon-size-invalid)
-            ) +
-            var(
-                --mod-textfield-icon-spacing-inline-end-invalid,
-                var(--spectrum-textfield-icon-spacing-inline-end-invalid)
-            ) -
-            var(
-                --mod-textfield-border-width,
-                var(--spectrum-textfield-border-width)
-            )
-    );
-}
+/* SWC subtracts border-width once; UXP subtracts twice to match UXP border box rendering */
 .input {
-    width: 100%;
-    appearance: none;
-    padding-left: var(--spectrum-textarea-padding-left);
-    height: var(--mod-textfield-height, var(--spectrum-textfield-height));
-    min-width: var(
-        --mod-textfield-min-width,
-        var(--spectrum-textfield-min-width)
-    );
     padding-top: calc(
         var(
                 --mod-textfield-spacing-block-start,
@@ -135,29 +42,9 @@ governing permissions and limitations under the License.
                 var(--spectrum-textfield-border-width)
             ) * 2
     );
-    padding-left: calc(
-        var(
-                --mod-textfield-spacing-inline,
-                var(--spectrum-textfield-spacing-inline)
-            ) -
-            var(
-                --mod-textfield-border-width,
-                var(--spectrum-textfield-border-width)
-            )
-    );
-
-    padding-right: calc(
-        var(
-                --mod-textfield-spacing-inline,
-                var(--spectrum-textfield-spacing-inline)
-            ) -
-            var(
-                --mod-textfield-border-width,
-                var(--spectrum-textfield-border-width)
-            )
-    );
 }
 
+/* SWC 1.12.0 sets no block-size/inline-size for the valid icon; explicit sizing needed in UXP */
 :host([valid]) #textfield .icon {
     height: var(
         --mod-textfield-icon-size-valid,
@@ -167,69 +54,11 @@ governing permissions and limitations under the License.
         --mod-textfield-icon-size-valid,
         var(--spectrum-textfield-icon-size-valid)
     );
-    bottom: var(
-        --mod-textfield-icon-spacing-block-valid,
-        var(--spectrum-textfield-icon-spacing-block-valid)
-    );
-    top: var(
-        --mod-textfield-icon-spacing-block-valid,
-        var(--spectrum-textfield-icon-spacing-block-valid)
-    );
-    right: var(
-        --mod-textfield-icon-spacing-inline-end-valid,
-        var(--spectrum-textfield-icon-spacing-inline-end-valid)
-    );
 }
 
-:host([invalid]) #textfield .icon {
-    height: var(
-        --mod-textfield-icon-size-invalid,
-        var(--spectrum-textfield-icon-size-invalid)
-    );
-    width: var(
-        --mod-textfield-icon-size-invalid,
-        var(--spectrum-textfield-icon-size-invalid)
-    );
-    bottom: var(
-        --mod-textfield-icon-spacing-block-invalid,
-        var(--spectrum-textfield-icon-spacing-block-invalid)
-    );
-    top: var(
-        --mod-textfield-icon-spacing-block-invalid,
-        var(--spectrum-textfield-icon-spacing-block-invalid)
-    );
-    right: var(
-        --mod-textfield-icon-spacing-inline-end-invalid,
-        var(--spectrum-textfield-icon-spacing-inline-end-invalid)
-    );
-}
-
+/* SWC uses inline-grid; UXP needs inline-flex for layout compatibility (UXP-20703) */
 #textfield {
     display: inline-flex;
-    min-width: var(--spectrum-textfield-texticon-min-width);
-    width: 100%;
-}
-
-:host([quiet]) .input {
-    border-top-width: 0px;
-    border-left: 0px;
-    border-right: 0px;
-    margin-bottom: var(
-        --mod-textfield-spacing-block-quiet,
-        var(--spectrum-textfield-spacing-block-quiet)
-    );
-    padding-top: var(
-        --mod-textfield-spacing-block-start,
-        var(--spectrum-textfield-spacing-block-start)
-    );
-    padding-left: var(
-        --mod-textfield-spacing-inline-quiet,
-        var(--spectrum-textfield-spacing-inline-quiet)
-    );
-    padding-right: var(
-        --mod-textfield-spacing-inline-quiet,
-        var(--spectrum-textfield-spacing-inline-quiet)
-    );
 }
 
 :host([quiet][invalid]) #textfield .icon,
@@ -244,49 +73,6 @@ governing permissions and limitations under the License.
 
 :host([multiline]) #textfield {
     display: inline-flex;
-}
-
-:host([multiline]) .input {
-    min-height: var(
-        --mod-text-area-min-block-size,
-        var(--spectrum-text-area-min-block-size)
-    );
-    min-width: var(
-        --mod-text-area-min-inline-size,
-        var(--spectrum-text-area-min-inline-size)
-    );
-}
-
-/* Workaround for missing 'min-block-size' logical property  */
-:host([multiline][quiet]) .input {
-    min-height: var(
-        --mod-text-area-min-block-size-quiet,
-        var(--spectrum-text-area-min-block-size-quiet)
-    );
-}
-
-/* Workaround to fix focus-ring layouting in quiet variant, replacing relevant logical properties with trivial ones */
-:host([quiet]) #textfield:after {
-    height: var(
-        --mod-textfield-focus-indicator-width,
-        var(--spectrum-textfield-focus-indicator-width)
-    );
-    width: 100%;
-    left: 0;
-    right: 0;
-}
-
-:host([grows]:not([quiet])) #textfield:after {
-    min-height: calc(
-        var(
-                --mod-text-area-min-block-size,
-                var(--spectrum-text-area-min-block-size)
-            ) +
-            var(
-                --mod-textfield-focus-indicator-gap,
-                var(--spectrum-textfield-focus-indicator-gap)
-            ) * 2
-    );
 }
 
 :host([grows]) .input {
@@ -304,10 +90,150 @@ governing permissions and limitations under the License.
     );
 }
 
-#sizer {
-    height: auto;
-}
-
 :host([disabled]) #textfield {
     pointer-events: none;
+}
+
+/* background-color:initial is not supported in UXP (only named colors, transparent, currentcolor
+   are accepted); replace with explicit transparent for all states that use it */
+:host([quiet]) .input {
+    background-color: transparent;
+}
+
+:host([quiet][disabled]) .input {
+    background-color: transparent;
+}
+
+.input:read-only,
+:host([readonly]) #textfield .input {
+    background-color: transparent;
+}
+
+.input:read-only::placeholder,
+:host([readonly]) #textfield .input::placeholder {
+    background-color: transparent;
+}
+
+/* @media (hover:hover) unwrap — UXP does not support hover media query;
+   rules moved here unconditionally from 1.12.0 SWC textfield.css.js */
+.input:hover,
+#textfield:hover .input {
+    border-color: var(
+        --highcontrast-textfield-border-color-hover,
+        var(
+            --mod-textfield-border-color-hover,
+            var(--spectrum-textfield-border-color-hover)
+        )
+    );
+}
+
+.input:hover,
+.input:hover::placeholder,
+#textfield:hover .input,
+#textfield:hover .input::placeholder {
+    color: var(
+        --highcontrast-textfield-text-color-hover,
+        var(
+            --mod-textfield-text-color-hover,
+            var(--spectrum-textfield-text-color-hover)
+        )
+    );
+}
+
+:host([focused]) .input:hover,
+.input:focus:hover {
+    border-color: var(
+        --mod-textfield-border-color-focus-hover,
+        var(--spectrum-textfield-border-color-focus-hover)
+    );
+}
+
+:host([focused]) .input:hover,
+:host([focused]) .input:hover::placeholder,
+.input:focus:hover,
+.input:focus:hover::placeholder {
+    color: var(
+        --mod-textfield-text-color-focus-hover,
+        var(--spectrum-textfield-text-color-focus-hover)
+    );
+}
+
+:host([invalid]) .input:hover:not(.is-disabled),
+:host([invalid]:hover):not(.is-disabled) .input {
+    border-color: var(
+        --highcontrast-textfield-border-color-invalid-hover,
+        var(
+            --mod-textfield-border-color-invalid-hover,
+            var(--spectrum-textfield-border-color-invalid-hover)
+        )
+    );
+}
+
+:host([invalid]) .input:focus:hover,
+:host([invalid][focused]) .input:hover,
+:host([invalid]:focus) .input:hover {
+    border-color: var(
+        --mod-textfield-border-color-invalid-focus-hover,
+        var(--spectrum-textfield-border-color-invalid-focus-hover)
+    );
+}
+
+:host([disabled]) #textfield:hover .input {
+    background-color: var(
+        --mod-textfield-background-color-disabled,
+        var(--spectrum-textfield-background-color-disabled)
+    );
+    border-color: var(
+        --mod-textfield-border-color-disabled,
+        var(--spectrum-textfield-border-color-disabled)
+    );
+    resize: none;
+    opacity: 1;
+}
+
+:host([quiet][disabled]:hover) .input,
+:host([disabled]) #textfield:hover .input,
+:host([disabled]) #textfield:hover .input::placeholder {
+    color: var(
+        --highcontrast-textfield-text-color-disabled,
+        var(
+            --mod-textfield-text-color-disabled,
+            var(--spectrum-textfield-text-color-disabled)
+        )
+    );
+}
+
+:host([quiet][disabled]:hover) .input {
+    background-color: transparent;
+    border-color: var(
+        --mod-textfield-border-color-disabled,
+        var(--spectrum-textfield-border-color-disabled)
+    );
+}
+
+:host([quiet][disabled]:hover) .input::placeholder {
+    color: var(
+        --highcontrast-textfield-text-color-disabled,
+        var(
+            --mod-textfield-text-color-disabled,
+            var(--spectrum-textfield-text-color-disabled)
+        )
+    );
+}
+
+:host([readonly]) #textfield:hover .input {
+    border-color: #0000;
+    outline: none;
+}
+
+:host([readonly]) #textfield:hover .input,
+:host([readonly]) #textfield:hover .input::placeholder {
+    color: var(
+        --highcontrast-textfield-text-color-readonly,
+        var(
+            --mod-textfield-text-color-readonly,
+            var(--spectrum-textfield-text-color-readonly)
+        )
+    );
+    background-color: transparent;
 }

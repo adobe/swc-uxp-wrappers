@@ -16,7 +16,7 @@ import styles from './uxp-action-group.css.js';
 
 class UxpActionGroup extends ActionGroup {
     static get styles() {
-        return [super.styles, styles];
+        return [...super.styles, styles];
     }
 }
 

@@ -16,8 +16,7 @@ import swcMeterStyles from '@swc-uxp-internal/meter/src/meter.css.js';
 import uxpMeterStyles from './uxp-meter.css.js';
 
 const combinedMeterStyles = unsafeCSS(
-    swcMeterStyles.toString(),
-    uxpMeterStyles.toString()
+    swcMeterStyles.toString() + '\n' + uxpMeterStyles.toString()
 );
 
 export default combinedMeterStyles;

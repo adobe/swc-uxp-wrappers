@@ -1,4 +1,4 @@
-<!-- 
+<!--
 Copyright 2023 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
@@ -7,7 +7,7 @@ of the License at http://www.apache.org/licenses/LICENSE-2.0
 Unless required by applicable law or agreed to in writing, software distributed under
 the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
 OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License. 
+governing permissions and limitations under the License.
 -->
 
 <h3>sp-table</h3>
@@ -15,7 +15,7 @@ governing permissions and limitations under the License.
 <div id="content">
     <div id="playground">
         <div id="left">
-            <div id="subtitle">sp-table</div>
+            <div id="subtitle">Basic table</div>
             <div>
                 <sp-table size="m">
                     <sp-table-head>
@@ -39,15 +39,97 @@ governing permissions and limitations under the License.
                             <sp-table-cell>Row Item Charlie</sp-table-cell>
                             <sp-table-cell>Row Item Charlie</sp-table-cell>
                         </sp-table-row>
+                    </sp-table-body>
+                </sp-table>
+            </div>
+
+            <div id="subtitle" style="margin-top: 16px">Sortable columns</div>
+            <div>
+                <sp-table size="m" id="sortable-table">
+                    <sp-table-head>
+                        <sp-table-head-cell sortable sort-key="name" sort-direction="asc">Name</sp-table-head-cell>
+                        <sp-table-head-cell sortable sort-key="type">Type</sp-table-head-cell>
+                        <sp-table-head-cell sortable sort-key="date">Date</sp-table-head-cell>
+                    </sp-table-head>
+                    <sp-table-body id="sortable-body">
                         <sp-table-row>
-                            <sp-table-cell>Row Item Delta</sp-table-cell>
-                            <sp-table-cell>Row Item Delta</sp-table-cell>
-                            <sp-table-cell>Row Item Delta</sp-table-cell>
+                            <sp-table-cell>Project Alpha</sp-table-cell>
+                            <sp-table-cell>Folder</sp-table-cell>
+                            <sp-table-cell>Jan 10, 2024</sp-table-cell>
                         </sp-table-row>
                         <sp-table-row>
-                            <sp-table-cell>Row Item Echo</sp-table-cell>
-                            <sp-table-cell>Row Item Echo</sp-table-cell>
-                            <sp-table-cell>Row Item Echo</sp-table-cell>
+                            <sp-table-cell>Project Bravo</sp-table-cell>
+                            <sp-table-cell>File</sp-table-cell>
+                            <sp-table-cell>Feb 22, 2024</sp-table-cell>
+                        </sp-table-row>
+                        <sp-table-row>
+                            <sp-table-cell>Project Charlie</sp-table-cell>
+                            <sp-table-cell>Folder</sp-table-cell>
+                            <sp-table-cell>Mar 5, 2024</sp-table-cell>
+                        </sp-table-row>
+                    </sp-table-body>
+                </sp-table>
+            </div>
+
+            <div id="subtitle" style="margin-top: 16px">Selectable rows (checkbox)</div>
+            <div>
+                <!--
+                    selects="multiple" causes sp-table to auto-inject sp-table-checkbox-cell
+                    into the header and each row via manageCheckboxes()/manageSelects().
+                    Do NOT manually add sp-table-checkbox-cell here — it would create duplicates.
+                    Each row requires a unique value attribute for selection tracking.
+                -->
+                <sp-table size="m" selects="multiple">
+                    <sp-table-head>
+                        <sp-table-head-cell>Name</sp-table-head-cell>
+                        <sp-table-head-cell>Type</sp-table-head-cell>
+                        <sp-table-head-cell>Status</sp-table-head-cell>
+                    </sp-table-head>
+                    <sp-table-body>
+                        <sp-table-row value="row1">
+                            <sp-table-cell>Asset Alpha</sp-table-cell>
+                            <sp-table-cell>Image</sp-table-cell>
+                            <sp-table-cell>Published</sp-table-cell>
+                        </sp-table-row>
+                        <sp-table-row value="row2">
+                            <sp-table-cell>Asset Bravo</sp-table-cell>
+                            <sp-table-cell>Video</sp-table-cell>
+                            <sp-table-cell>Draft</sp-table-cell>
+                        </sp-table-row>
+                        <sp-table-row value="row3">
+                            <sp-table-cell>Asset Charlie</sp-table-cell>
+                            <sp-table-cell>Document</sp-table-cell>
+                            <sp-table-cell>Review</sp-table-cell>
+                        </sp-table-row>
+                    </sp-table-body>
+                </sp-table>
+            </div>
+
+            <div id="subtitle" style="margin-top: 16px">Size variants</div>
+            <div style="display: flex; flex-direction: column">
+                <div>size=s</div>
+                <sp-table size="s">
+                    <sp-table-head>
+                        <sp-table-head-cell>Column A</sp-table-head-cell>
+                        <sp-table-head-cell>Column B</sp-table-head-cell>
+                    </sp-table-head>
+                    <sp-table-body>
+                        <sp-table-row>
+                            <sp-table-cell>Alpha</sp-table-cell>
+                            <sp-table-cell>Bravo</sp-table-cell>
+                        </sp-table-row>
+                    </sp-table-body>
+                </sp-table>
+                <div style="margin-top: 8px">size=l</div>
+                <sp-table size="l">
+                    <sp-table-head>
+                        <sp-table-head-cell>Column A</sp-table-head-cell>
+                        <sp-table-head-cell>Column B</sp-table-head-cell>
+                    </sp-table-head>
+                    <sp-table-body>
+                        <sp-table-row>
+                            <sp-table-cell>Alpha</sp-table-cell>
+                            <sp-table-cell>Bravo</sp-table-cell>
                         </sp-table-row>
                     </sp-table-body>
                 </sp-table>

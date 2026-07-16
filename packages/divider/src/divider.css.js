@@ -16,8 +16,7 @@ import swcDividerStyles from '@swc-uxp-internal/divider/src/divider.css.js';
 import uxpDividerStyles from './uxp-divider.css.js';
 
 const combinedDividerStyles = unsafeCSS(
-    swcDividerStyles.toString(),
-    uxpDividerStyles.toString()
+    swcDividerStyles.toString() + '\n' + uxpDividerStyles.toString()
 );
 
 export default combinedDividerStyles;

@@ -1,0 +1,44 @@
+{
+    "name": "@swc-uxp-wrappers/coachmark",
+    "version": "3.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/coachmark component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/coachmark"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/CoachIndicator.js": "./src/CoachIndicator.js",
+        "./sp-coach-indicator.js": "./sp-coach-indicator.js",
+        "./src/Coachmark.js": "./src/Coachmark.js",
+        "./sp-coachmark.js": "./sp-coachmark.js",
+        "./src/coachmark.css.js": "./src/coachmark.css.js",
+        "./src/coach-indicator.css.js": "./src/coach-indicator.css.js",
+        "./src/coachmark-overrides.css.js": "./src/coachmark-overrides.css.js",
+        "./src/coach-indicator-overrides.css.js": "./src/coach-indicator-overrides.css.js",
+        "./src/uxp-coachmark.css.js": "./src/uxp-coachmark.css.js",
+        "./src/uxp-coach-indicator.css.js": "./src/uxp-coach-indicator.css.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/coachmark": "npm:@spectrum-web-components/coachmark@1.12.2"
+    },
+    "files": [
+        "**/*.js",
+        "**/*.css"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/coachmark"
+    ]
+}

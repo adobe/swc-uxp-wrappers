@@ -11,3 +11,42 @@ governing permissions and limitations under the License.
 */
 
 /* write uxp style overrides */
+
+/* UXP does not apply CSS custom properties set via compound
+   `:host([attr]) a { --custom-prop: ... }` selectors — the custom property
+   never reaches the inner <a> element. However, setting regular properties
+   (e.g. `color`) via the same compound selector does work.
+   Fix: set `color` directly on `a` for each variant, resolving the full
+   token chain that SWC intends via --mod-link-text-color. */
+
+:host([variant=secondary]) a {
+    color: var(--highcontrast-link-text-color, var(--mod-link-text-color-secondary-default, var(--spectrum-neutral-content-color-default)));
+}
+
+:host([static-color=white]) a {
+    color: var(--mod-link-text-color-white, var(--spectrum-white));
+}
+
+:host([static-color=black]) a {
+    color: var(--mod-link-text-color-black, var(--spectrum-black));
+}
+
+/* @media (hover: hover) unwrap — UXP does not support hover media query.
+   Use :host(:hover) instead of a:hover for reliability in UXP. */
+:host(:hover) a {
+    color: var(--highcontrast-link-text-color, var(--mod-link-text-color-hover, var(--mod-link-text-color-primary-hover, var(--spectrum-accent-content-color-hover))));
+}
+
+:host([variant=secondary]:hover) a {
+    color: var(--highcontrast-link-text-color, var(--mod-link-text-color-secondary-hover, var(--spectrum-neutral-content-color-hover)));
+}
+
+:host([quiet]:hover) a {
+    text-decoration: underline;
+}
+
+/* text-decoration-skip: objects is not supported in UXP — reset to avoid
+   potential rendering issues on the anchor element. */
+a {
+    text-decoration-skip: none;
+}

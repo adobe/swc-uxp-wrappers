@@ -11,6 +11,7 @@ governing permissions and limitations under the License.
 */
 
 import { resolve } from 'path';
+import webpack from 'webpack';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { CleanWebpackPlugin } from 'clean-webpack-plugin';
@@ -26,7 +27,10 @@ const IS_DEV = ENV === 'development';
 const IS_DEV_SERVER = process.argv.find((arg) =>
     arg.includes('webpack-dev-server')
 );
-const OUTPUT_PATH = IS_DEV_SERVER ? resolve('dist') : resolve('dist');
+
+// 'dist'     → production build (loaded by UXP)
+// 'dist-dev' → dev-server build (browser preview, hot reload)
+const OUTPUT_PATH = IS_DEV_SERVER ? resolve('dist-dev') : resolve('dist');
 
 /**
  * === Copy static files configuration
@@ -65,9 +69,12 @@ const copyStatics = {
  * Plugin configuration
  */
 const plugins = [
-    new CleanWebpackPlugin(),
+    // Only clean the output directory for production builds.
+    // Skipping during yarn serve prevents wiping the UXP-loaded dist/ while
+    // the dev server writes to dist-dev/.
+    ...(!IS_DEV_SERVER ? [new CleanWebpackPlugin()] : []),
     new CopyWebpackPlugin(copyStatics),
-    new MiniCssExtractPlugin({ filename: '[name].bundle.css' }),
+    new MiniCssExtractPlugin({ filename: '[name].bundle.css' })
 ];
 
 const shared = (env) => {

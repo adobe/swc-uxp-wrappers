@@ -1,0 +1,40 @@
+{
+    "name": "@swc-uxp-wrappers/alert-dialog",
+    "version": "3.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/alert-dialog component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/alert-dialog"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/AlertDialog.js": "./src/AlertDialog.js",
+        "./sp-alert-dialog.js": "./sp-alert-dialog.js",
+        "./src/alert-dialog-overrides.css.js": "./src/alert-dialog-overrides.css.js",
+        "./src/alert-dialog.css.js": "./src/alert-dialog.css.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/alert-dialog": "npm:@spectrum-web-components/alert-dialog@1.12.1",
+        "@swc-uxp-wrappers/button": "3.0.0",
+        "@swc-uxp-wrappers/button-group": "3.0.0",
+        "@swc-uxp-wrappers/divider": "3.0.0"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/alert-dialog"
+    ]
+}

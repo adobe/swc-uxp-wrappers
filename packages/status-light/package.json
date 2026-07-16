@@ -1,0 +1,38 @@
+{
+    "name": "@swc-uxp-wrappers/status-light",
+    "version": "3.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/status-light component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/status-light"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/StatusLight.js": "./src/StatusLight.js",
+        "./sp-status-light.js": "./sp-status-light.js",
+        "./src/index.js": "./src/index.js",
+        "./src/status-light-overrides.css.js": "./src/status-light-overrides.css.js",
+        "./src/status-light.css.js": "./src/status-light.css.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/status-light": "npm:@spectrum-web-components/status-light@1.12.1"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/status-light"
+    ]
+}

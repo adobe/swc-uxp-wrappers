@@ -12,7 +12,17 @@ governing permissions and limitations under the License.
 
 /* write uxp style overrides */
 
-/* Workaround for - https://jira.corp.adobe.com/browse/UXP-21331 */
+/* display: inline-flex → flex — UXP layout engine maps inline-flex to block;
+   the UXP logical-properties mapper does not cover display values, so this
+   must be overridden explicitly (see "What the mapper does NOT cover" table). */
+:host {
+    display: flex;
+}
+
+/* Workaround for - https://jira.corp.adobe.com/browse/UXP-21331
+   v1.12.0 uses filter: drop-shadow() which may not render in all UXP versions.
+   The filter is already nulled by `*{--mod-popover-filter:none}` in the SWC CSS,
+   but we add an explicit box-shadow as the visual shadow fallback. */
 :host {
     --uxp-swc-horizontal-offset: 0px;
     --uxp-swc-vertical-offset: 2px;
@@ -21,10 +31,76 @@ governing permissions and limitations under the License.
         var(--uxp-swc-blur)
         var(
             --spectrum-popover-shadow-color,
-            var(--spectrum-alias-dropshadow-color)
+            var(--spectrum-drop-shadow-color)
         );
 }
 
+/* v1.12.0 animation transforms — UXP does not run the CSS transitions that
+   animate these away. The upstream intent is that the popover slides in from
+   an offset position, but without transitions the transform is permanent,
+   shifting the popover by --spectrum-popover-animation-distance (~4 px).
+   Override all placement-direction open-state transforms to none. */
+:host([placement*="top"][open]),
+:host([open]) .spectrum-Popover--top-start,
+:host([open]) .spectrum-Popover--top-end,
+:host([open]) .spectrum-Popover--top-left,
+:host([open]) .spectrum-Popover--top-right {
+    transform: none;
+}
+
+:host([placement*="bottom"][open]),
+:host([open]) .spectrum-Popover--bottom-start,
+:host([open]) .spectrum-Popover--bottom-end,
+:host([open]) .spectrum-Popover--bottom-left,
+:host([open]) .spectrum-Popover--bottom-right {
+    transform: none;
+}
+
+:host([placement*="right"][open]),
+:host([open]) .spectrum-Popover--right-top,
+:host([open]) .spectrum-Popover--right-bottom {
+    transform: none;
+}
+
+:host([placement*="left"][open]),
+:host([open]) .spectrum-Popover--left-top,
+:host([open]) .spectrum-Popover--left-bottom {
+    transform: none;
+}
+
+:host([open]) .spectrum-Popover--start,
+:host([open]) .spectrum-Popover--start-top,
+:host([open]) .spectrum-Popover--start-bottom,
+:host([open]) .spectrum-Popover--end,
+:host([open]) .spectrum-Popover--end-top,
+:host([open]) .spectrum-Popover--end-bottom {
+    transform: none;
+}
+
+/* Center the tip caret via CSS for top/bottom placements.
+   v1.12.0's JS-computed arrow offset (floating-ui arrow middleware) is unreliable
+   in UXP — the dialog may be display:none when floating-ui measures it. Rather
+   than fix the JS position, UxpPlacementController clears the tip's inline styles
+   entirely and we center the caret with pure CSS.
+   [tip] is required to match the upstream specificity (0,2,0,1) so these rules
+   beat :host([tip][placement*=top]) #tip { inset-inline: 0 } in the cascade. */
+:host([tip][placement*="top"]) #tip {
+    left: 50%;
+    right: auto;
+    margin: 0;
+    transform: translateX(-50%);
+}
+
+:host([tip][placement*="bottom"]) #tip {
+    left: 50%;
+    right: auto;
+    margin: 0;
+    transform: translateX(-50%) scaleY(-1);
+}
+
+/* UXP needs explicit dimensions on the tip SVG containers.
+   v1.12.0 sets width/height:100% on .block/.inline but UXP needs
+   a concrete pixel value for SVG elements to render correctly. */
 .block {
     height: 10px;
     width: 100%;

@@ -16,8 +16,7 @@ import swcActionButtonStyles from '@swc-uxp-internal/action-button/src/action-bu
 import uxpActionButtonStyles from './uxp-action-button.css.js';
 
 const combinedActionButtonStyles = unsafeCSS(
-    swcActionButtonStyles.toString(),
-    uxpActionButtonStyles.toString()
+    swcActionButtonStyles.toString() + '\n' + uxpActionButtonStyles.toString()
 );
 
 export default combinedActionButtonStyles;

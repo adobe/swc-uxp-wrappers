@@ -20,18 +20,49 @@ governing permissions and limitations under the License.
                 An avatar is a thumbnail representation of an entity, such as a
                 user or an organization.
             </p>
+
+            <div id="variantLabel">Sizes</div>
+            <div class="demo-example demo-flex-row">
+                <sp-avatar
+                    size="50"
+                    label="Size 50"
+                    src="https://picsum.photos/100/100"
+                ></sp-avatar>
+                <sp-avatar
+                    size="100"
+                    label="Size 100"
+                    src="https://picsum.photos/200/200"
+                ></sp-avatar>
+                <sp-avatar
+                    size="200"
+                    label="Size 200"
+                    src="https://picsum.photos/300/300"
+                ></sp-avatar>
+                <sp-avatar
+                    size="300"
+                    label="Size 300"
+                    src="https://picsum.photos/400/400"
+                ></sp-avatar>
+                <sp-avatar
+                    size="700"
+                    label="Dog the User"
+                    src="https://picsum.photos/500/500"
+                ></sp-avatar>
+            </div>
+
+            <div id="variantLabel">Linked avatar</div>
             <sp-avatar
-                size="700"
-                label="Dog the User"
-                src="https://picsum.photos/500/500"
+                size="200"
+                label="View John Doe's profile"
+                src="https://picsum.photos/350/350"
+                href="https://www.adobe.com"
             ></sp-avatar>
         </div>
         <input type="text" style="width: 2px" />
         <div id="right">
             <div id="subtitle">my-avatar</div>
             <p>
-                An avatar is a thumbnail representation of an entity, such as a
-                user or an organization.
+                Extended avatar with square corners at size 700.
             </p>
             <my-avatar
                 class="my-avatar"

@@ -1,0 +1,186 @@
+<!--
+Copyright 2026 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+-->
+
+<!--
+    UXP does not support `gap` on flex containers (UXP-21294).
+    Use .badge-demo-row which applies margin-right / margin-bottom on
+    child items instead — consistent with the gap workaround pattern
+    used across all swc-uxp-wrappers demo files.
+-->
+<style>
+.badge-demo-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-bottom: 24px;
+}
+.badge-demo-row > * {
+    margin-right: 8px;
+    margin-bottom: 8px;
+}
+.badge-demo-row-top {
+    align-items: flex-start;
+}
+</style>
+
+<h3>sp-badge</h3>
+
+<div id="picker-demo-wrap" style="display: flex; flex-direction: column;">
+
+    <!-- ═══════════════════════════════════════════════════════
+         Semantic Variants
+         ═══════════════════════════════════════════════════════ -->
+    <div class="subtitle">Semantic Variants</div>
+    <div class="badge-demo-row">
+        <sp-badge variant="accent">Accent</sp-badge>
+        <sp-badge variant="neutral">Neutral</sp-badge>
+        <sp-badge variant="informative">Informative</sp-badge>
+        <sp-badge variant="positive">Positive</sp-badge>
+        <sp-badge variant="negative">Negative</sp-badge>
+        <sp-badge variant="notice">Notice</sp-badge>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         Color Variants
+         S1 (1st-gen) only: 14 variants from BADGE_VARIANTS_COLOR_S1.
+         S2-only variants (pink / turquoise / brown / cinnamon / silver)
+         are not available in this wrapper.
+         ═══════════════════════════════════════════════════════ -->
+    <div class="subtitle">Color Variants (S1)</div>
+    <div class="badge-demo-row">
+        <sp-badge variant="gray">Gray</sp-badge>
+        <sp-badge variant="red">Red</sp-badge>
+        <sp-badge variant="orange">Orange</sp-badge>
+        <sp-badge variant="yellow">Yellow</sp-badge>
+        <sp-badge variant="chartreuse">Chartreuse</sp-badge>
+        <sp-badge variant="celery">Celery</sp-badge>
+        <sp-badge variant="green">Green</sp-badge>
+        <sp-badge variant="seafoam">Seafoam</sp-badge>
+        <sp-badge variant="cyan">Cyan</sp-badge>
+        <sp-badge variant="blue">Blue</sp-badge>
+        <sp-badge variant="indigo">Indigo</sp-badge>
+        <sp-badge variant="purple">Purple</sp-badge>
+        <sp-badge variant="fuchsia">Fuchsia</sp-badge>
+        <sp-badge variant="magenta">Magenta</sp-badge>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         Sizes
+         SWC badge v1.12.x supports 4 sizes (s/m/l/xl only):
+           s  → 24px height  + font-75
+           m  → 32px height  + font-100  [default]
+           l  → 40px height  + font-200
+           xl → 48px height  + font-300
+         xs / xxl are NOT in the SWC badge spec; passing them
+         falls through to default (m) upstream styles, but UXP
+         CSS provides defensive height overrides (20px / 56px).
+         ═══════════════════════════════════════════════════════ -->
+    <div class="subtitle">Sizes</div>
+    <div class="badge-demo-row" style="margin-bottom: 8px;">
+        <sp-badge variant="informative" size="s">Small (s)</sp-badge>
+        <sp-badge variant="informative" size="m">Medium (m)</sp-badge>
+        <sp-badge variant="informative" size="l">Large (l)</sp-badge>
+        <sp-badge variant="informative" size="xl">XL (xl)</sp-badge>
+    </div>
+    <div style="font-size: var(--spectrum-font-size-75, 12px); color: gray; margin-bottom: 24px;">
+        s: 24px · m: 32px · l: 40px · xl: 48px<br>
+        xs / xxl: not in SWC spec (renders as m upstream; UXP CSS provides 20px / 56px defensive overrides).
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         Default variant (no variant attribute) — should render as informative
+         ═══════════════════════════════════════════════════════ -->
+    <div class="subtitle">Default (no variant attribute)</div>
+    <div class="badge-demo-row">
+        <sp-badge>Default</sp-badge>
+        <sp-badge size="s">Default S</sp-badge>
+        <sp-badge>
+            <sp-icon-star slot="icon"></sp-icon-star>
+            Default with icon
+        </sp-badge>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         fixed attribute — flush edges
+         Logical values (v1.12.0 spec) + deprecated physical values
+         ═══════════════════════════════════════════════════════ -->
+    <div class="subtitle">Fixed Position — logical values</div>
+    <div class="badge-demo-row">
+        <sp-badge variant="accent" fixed="inline-start">inline-start</sp-badge>
+        <sp-badge variant="accent" fixed="inline-end">inline-end</sp-badge>
+        <sp-badge variant="accent" fixed="block-start">block-start</sp-badge>
+        <sp-badge variant="accent" fixed="block-end">block-end</sp-badge>
+    </div>
+
+
+    <!-- ═══════════════════════════════════════════════════════
+         Icon + text
+         ═══════════════════════════════════════════════════════ -->
+    <div class="subtitle">With Icon (icon + text)</div>
+    <div class="badge-demo-row">
+        <sp-badge variant="positive" size="s">
+            <sp-icon-star slot="icon"></sp-icon-star>
+            Small
+        </sp-badge>
+        <sp-badge variant="positive" size="m">
+            <sp-icon-star slot="icon"></sp-icon-star>
+            Medium
+        </sp-badge>
+        <sp-badge variant="informative" size="l">
+            <sp-icon-edit slot="icon"></sp-icon-edit>
+            Large
+        </sp-badge>
+        <sp-badge variant="notice" size="xl">
+            <sp-icon-magnify slot="icon"></sp-icon-magnify>
+            XL
+        </sp-badge>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         Icon only — implemented sizes only (s / m / l / xl)
+         ═══════════════════════════════════════════════════════ -->
+    <div class="subtitle">Icon Only (per size)</div>
+    <div class="badge-demo-row">
+        <sp-badge variant="accent" size="s">
+            <sp-icon-star slot="icon"></sp-icon-star>
+        </sp-badge>
+        <sp-badge variant="accent" size="m">
+            <sp-icon-star slot="icon"></sp-icon-star>
+        </sp-badge>
+        <sp-badge variant="accent" size="l">
+            <sp-icon-star slot="icon"></sp-icon-star>
+        </sp-badge>
+        <sp-badge variant="accent" size="xl">
+            <sp-icon-star slot="icon"></sp-icon-star>
+        </sp-badge>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         Multi-line label — badge wraps long text (v1.12.0 added
+         a 2-line cap via .label slot max-height in upstream, but
+         that rule targets <slot> which does not exist in the UXP
+         wrapper — text is adopted directly into .label, so there
+         is no cap; the badge grows to fit the text naturally)
+         ═══════════════════════════════════════════════════════ -->
+    <div class="subtitle">Multi-line label (wraps naturally — upstream 2-line cap not applicable in UXP wrapper)</div>
+    <div class="badge-demo-row badge-demo-row-top">
+        <sp-badge variant="informative" style="max-width: 120px;">
+            This is a long label that wraps
+        </sp-badge>
+        <sp-badge variant="positive" style="max-width: 120px;">
+            <sp-icon-star slot="icon"></sp-icon-star>
+            Icon with a long wrapping label
+        </sp-badge>
+    </div>
+
+
+</div>

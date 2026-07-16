@@ -12,10 +12,29 @@ governing permissions and limitations under the License.
 
 /* write uxp style overrides */
 
-/* workaround for missing logical property 'inset', fixed layouting of focus-ring */
-:host:after {
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
+/* @media (hover:hover) unwrap — UXP does not support hover media query.
+   v1.12.0 sets `color` on :host (not .icon) for hover; .icon has color:inherit so it picks it up.
+   Setting on :host avoids the compound ':host(selector) .child' pattern which is unreliable in UXP.
+   Background goes on .fill child (not :host) in v1.12.0; value is transparent for default variant
+   so both :host and .fill targets are provided for completeness.
+   Only [disabled] attribute selector is used — UXP does not map the disabled attribute to the
+   :disabled pseudo-class on custom elements, so :not(:disabled) is unreliable. */
+:host(:hover:not([disabled])) {
+    color: var(--highcontrast-clear-button-icon-color-hover, var(--mod-clear-button-icon-color-hover, var(--spectrum-clear-button-icon-color-hover)));
+}
+
+:host(:hover:not([disabled])) .fill {
+    background-color: var(--mod-clear-button-background-color-hover, var(--spectrum-clear-button-background-color-hover));
+}
+
+/* :is(:active,[active]) expansion — UXP :is() support is partial.
+   v1.12.0 sets both color on :host and background-color on .fill for active state. */
+:host(:active:not([disabled])),
+:host([active]:not([disabled])) {
+    color: var(--mod-clear-button-icon-color-down, var(--spectrum-clear-button-icon-color-down));
+}
+
+:host(:active:not([disabled])) .fill,
+:host([active]:not([disabled])) .fill {
+    background-color: var(--mod-clear-button-background-color-down, var(--spectrum-clear-button-background-color-down));
 }

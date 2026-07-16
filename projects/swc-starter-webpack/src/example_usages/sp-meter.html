@@ -1,5 +1,5 @@
-<!-- 
-Copyright 2023 Adobe. All rights reserved.
+<!--
+Copyright 2024 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -7,7 +7,7 @@ of the License at http://www.apache.org/licenses/LICENSE-2.0
 Unless required by applicable law or agreed to in writing, software distributed under
 the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
 OF ANY KIND, either express or implied. See the License for the specific language
-governing permissions and limitations under the License. 
+governing permissions and limitations under the License.
 -->
 
 <h3>sp-meter</h3>
@@ -16,30 +16,48 @@ governing permissions and limitations under the License.
     <div id="playground">
         <div id="left">
             <div id="subtitle">sp-meter</div>
-            <div style="margin: 20px 20px">
-                <sp-meter size="m" progress="71" style="width: 200px">
+
+            <h4 class="spectrum-Heading--subtitle1">Default</h4>
+            <div style="margin-bottom: 16px;">
+                <sp-meter size="m" progress="71" style="width: 240px;">
                     Tasks Completed
                 </sp-meter>
             </div>
 
-            <div
-                style="
-                    width: 240px;
-                    height: 160px;
-                    display: flex;
-                    flex-direction: column;
-                    align-items: center;
-                    justify-content: space-around;
-                    background-color: #14ecf39a;
-                "
-            >
-                <sp-meter progress="42" over-background style="width: 200px">
-                    Tasks Completed
+            <h4 class="spectrum-Heading--subtitle1">Variants</h4>
+            <div style="display: flex; flex-direction: column; margin-bottom: 16px;">
+                <sp-meter progress="40" style="width: 240px;">
+                    Default (no variant)
+                </sp-meter>
+                <sp-meter variant="positive" progress="80" style="width: 240px; margin-top: 12px;">
+                    Positive
+                </sp-meter>
+                <sp-meter variant="notice" progress="55" style="width: 240px; margin-top: 12px;">
+                    Notice
+                </sp-meter>
+                <sp-meter variant="negative" progress="20" style="width: 240px; margin-top: 12px;">
+                    Negative
                 </sp-meter>
             </div>
 
-            <div style="margin-top: 20px">
-                <sp-meter side-label style="width: 200px">Side Label</sp-meter>
+            <h4 class="spectrum-Heading--subtitle1">Sizes</h4>
+            <div style="display: flex; flex-direction: column; margin-bottom: 16px;">
+                <sp-meter size="s" progress="60" style="width: 240px;">Small</sp-meter>
+                <sp-meter size="m" progress="60" style="width: 240px; margin-top: 12px;">Medium</sp-meter>
+                <sp-meter size="l" progress="60" style="width: 240px; margin-top: 12px;">Large</sp-meter>
+                <sp-meter size="xl" progress="60" style="width: 240px; margin-top: 12px;">Extra Large</sp-meter>
+            </div>
+
+            <h4 class="spectrum-Heading--subtitle1">Side Label</h4>
+            <div style="margin-bottom: 16px;">
+                <sp-meter side-label progress="45" style="width: 240px;">Side Label</sp-meter>
+            </div>
+
+            <h4 class="spectrum-Heading--subtitle1">Side Label with Variant</h4>
+            <div style="margin-bottom: 16px;">
+                <sp-meter side-label variant="positive" progress="75" style="width: 240px;">
+                    Positive
+                </sp-meter>
             </div>
         </div>
         <input type="text" style="width: 2px" />
@@ -55,7 +73,6 @@ governing permissions and limitations under the License.
 
     <div id="config">
         <div style="display: inline-flex"></div>
-
         <div style="display: flex; flex-direction: column"></div>
     </div>
 </div>

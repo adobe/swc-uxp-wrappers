@@ -16,8 +16,7 @@ import swcAssetStyles from '@swc-uxp-internal/asset/src/asset.css.js';
 import uxpAssetStyles from './uxp-asset.css.js';
 
 const combinedAssetStyles = unsafeCSS(
-    swcAssetStyles.toString(),
-    uxpAssetStyles.toString()
+    swcAssetStyles.toString() + '\n' + uxpAssetStyles.toString()
 );
 
 export default combinedAssetStyles;

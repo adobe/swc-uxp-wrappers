@@ -1,0 +1,45 @@
+## Description
+
+---
+
+<br />
+This is UXP wrapper for `@spectrum-web-components/infield-button` package
+<br />
+
+-   For detailed README regarding `@spectrum-web-components/infield-button` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/infield-button/v/1.12.1)
+
+-   Detailed specification regarding `@spectrum-web-components/infield-button` support in UXP through `@swc-uxp-wrappers/infield-button` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
+
+## Usage
+
+---
+
+<br />
+
+```
+yarn add @swc-uxp-wrappers/infield-button
+```
+
+Import the side effectful registration of `<sp-infield-button>` via:
+
+```
+import '@swc-uxp-wrappers/infield-button/sp-infield-button.js';
+```
+
+When looking to leverage the `InfieldButton` base class as a type and/or for extension purposes, do so via:
+
+```
+import { InfieldButton } from '@swc-uxp-wrappers/infield-button';
+```
+
+<br />
+
+## Example
+
+---
+
+<br />
+
+```html
+<sp-infield-button></sp-infield-button>
+```

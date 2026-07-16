@@ -20,8 +20,7 @@ class MyNumberField extends NumberField {
             .input {
                 background-color: aquamarine;
             }
-            .step-down,
-            .step-up {
+            .buttons {
                 background-color: yellow;
             }
         `,

@@ -16,8 +16,7 @@ import swcMenuDividerStyles from '@swc-uxp-internal/menu/src/menu-divider.css.js
 import uxpMenuDividerStyles from './uxp-menu-divider.css.js';
 
 const combinedMenuDividerStyles = unsafeCSS(
-    swcMenuDividerStyles.toString(),
-    uxpMenuDividerStyles.toString()
+    swcMenuDividerStyles.toString() + '\n' + uxpMenuDividerStyles.toString()
 );
 
 export default combinedMenuDividerStyles;

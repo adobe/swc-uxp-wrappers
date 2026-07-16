@@ -16,8 +16,7 @@ import swcTableHeadCellStyles from '@swc-uxp-internal/table/src/table-head-cell.
 import uxpTableHeadCellStyles from './uxp-table-head-cell.css.js';
 
 const combinedTableHeadCellStyles = unsafeCSS(
-    swcTableHeadCellStyles.toString(),
-    uxpTableHeadCellStyles.toString()
+    swcTableHeadCellStyles.toString() + '\n' + uxpTableHeadCellStyles.toString()
 );
 
 export default combinedTableHeadCellStyles;

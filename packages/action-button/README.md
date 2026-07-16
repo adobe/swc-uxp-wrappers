@@ -6,7 +6,7 @@
 This is UXP wrapper for `@spectrum-web-components/action-button` package
 <br />
 
--   For detailed README regarding `@spectrum-web-components/action-button` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/action-button/v/0.37.0)
+-   For detailed README regarding `@spectrum-web-components/action-button` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/action-button/v/1.12.1)
 
 -   Detailed specification regarding `@spectrum-web-components/action-button` support in UXP through `@swc-uxp-wrappers/action-button` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
 

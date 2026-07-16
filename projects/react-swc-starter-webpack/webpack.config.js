@@ -11,63 +11,66 @@ governing permissions and limitations under the License.
 */
 
 import { resolve } from 'path';
+import webpack from 'webpack';
 import CopyWebpackPlugin from 'copy-webpack-plugin';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import { aliases } from '@swc-uxp-wrappers/utils';
 
-/**
- * === Copy static files configuration
- */
-const copyStatics = {
-    patterns: [
-        {
-            from: 'debug.json',
-            context: resolve('./'),
-            to: resolve('dist'),
-        },
-        {
-            from: 'manifest.json',
-            context: resolve('./'),
-            to: resolve('dist'),
-        },
-    ],
-};
+const OUTPUT_PATH = resolve('dist');
 
-const shared = {
-    output: {
-        path: resolve('dist'), // the bundle output path
-        publicPath: '/', // entry to be included in webpack config, otherwise these chunks will not be referred.
-        filename: 'bundle.js', // the name of the bundle
-    },
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: 'src/index.html', // to import index.html file inside index.js
-        }),
-        new CopyWebpackPlugin(copyStatics),
-    ],
-    devServer: {
-        port: 3030, // you can change the port
-    },
-    module: {
-        rules: [
+export default (_env, argv) => {
+    /**
+     * === Copy static files configuration
+     */
+    const copyStatics = {
+        patterns: [
             {
-                test: /\.(js|jsx)$/, // .js and .jsx files
-                exclude: /node_modules/, // excluding the node_modules folder
-                use: {
-                    loader: 'babel-loader',
-                },
+                from: 'debug.json',
+                context: resolve('./'),
+                to: OUTPUT_PATH,
             },
             {
-                test: /\.(sa|sc|c)ss$/, // styles files
-                use: ['style-loader', 'css-loader', 'sass-loader'],
+                from: 'manifest.json',
+                context: resolve('./'),
+                to: OUTPUT_PATH,
             },
         ],
-    },
-    resolve: {
-        extensions: ['.js', '.json'],
-        // This is required for the spectrum web component to properly work in UXP
-        alias: aliases,
-    },
-};
+    };
 
-export default shared;
+    return {
+        output: {
+            path: OUTPUT_PATH,
+            publicPath: '/',
+            filename: 'bundle.js',
+        },
+        plugins: [
+            new HtmlWebpackPlugin({
+                template: 'src/index.html',
+            }),
+            new CopyWebpackPlugin(copyStatics),
+        ],
+        devServer: {
+            port: 3030,
+        },
+        module: {
+            rules: [
+                {
+                    test: /\.(js|jsx)$/,
+                    exclude: /node_modules/,
+                    use: {
+                        loader: 'babel-loader',
+                    },
+                },
+                {
+                    test: /\.(sa|sc|c)ss$/,
+                    use: ['style-loader', 'css-loader', 'sass-loader'],
+                },
+            ],
+        },
+        resolve: {
+            extensions: ['.js', '.json'],
+            // This is required for the spectrum web component to properly work in UXP
+            alias: aliases,
+        },
+    };
+};

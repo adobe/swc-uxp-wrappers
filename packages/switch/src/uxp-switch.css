@@ -12,94 +12,66 @@ governing permissions and limitations under the License.
 
 /* write uxp style overrides */
 
-:host {
-    max-width: 100%;
-    min-height: var(--mod-switch-height, var(--spectrum-switch-min-height));
+/* @media (hover: hover) unwrap — UXP does not support the hover media query;
+   apply all hover rules unconditionally so handle/track/label states update on hover. */
+:host(:hover) #input+#switch:before {
+    background-color: var(--highcontrast-switch-handle-background-color, var(--mod-switch-handle-background-color-hover, var(--spectrum-switch-handle-background-color-hover)));
+    border-color: var(--highcontrast-switch-handle-border-color-hover, var(--mod-switch-handle-border-color-hover, var(--spectrum-switch-handle-border-color)));
+    box-shadow: none;
+}
+:host(:hover:active) #input+#switch:before {
+    background-color: var(--highcontrast-switch-handle-background-color, var(--mod-switch-handle-background-color-down, var(--spectrum-switch-handle-background-color-down)));
+}
+:host(:hover) #input+#switch {
+    border-color: var(--highcontrast-switch-border-color-hover, var(--mod-switch-border-color-hover, var(--spectrum-switch-border-color-hover)));
+}
+:host(:hover:active) #input+#switch {
+    border-color: var(--highcontrast-switch-border-color-down, var(--mod-switch-border-color-down, var(--spectrum-switch-border-color-down)));
+}
+:host(:hover) #input~#label {
+    color: var(--highcontrast-switch-label-color-hover, var(--mod-switch-label-color-hover, var(--spectrum-switch-label-color-hover)));
+}
+:host([checked]:hover) #input:enabled+#switch {
+    background-color: var(--highcontrast-switch-background-color-selected-hover, var(--mod-switch-background-color-selected-hover, var(--spectrum-switch-background-color-selected-hover)));
+    border-color: var(--highcontrast-switch-border-color-selected-hover, var(--mod-switch-border-color-selected-hover, var(--spectrum-switch-border-color-selected-hover)));
+}
+:host([checked]:hover) #input:enabled+#switch:before {
+    background-color: var(--highcontrast-switch-handle-background-color, var(--mod-switch-handle-background-color-selected-hover, var(--spectrum-switch-handle-background-color-selected)));
+    border-color: var(--highcontrast-switch-handle-border-color-selected-hover, var(--mod-switch-handle-border-color-selected-hover, var(--spectrum-switch-handle-border-color-selected)));
+}
+:host([checked]:hover:active) #input+#switch {
+    background-color: var(--highcontrast-switch-background-color-selected-down, var(--mod-switch-background-color-selected-down, var(--spectrum-switch-background-color-selected-down)));
+    border-color: var(--highcontrast-switch-border-color-selected-down, var(--mod-switch-border-color-selected-down, var(--spectrum-switch-border-color-selected-down)));
+}
+:host([disabled]:hover) #input+#switch {
+    background-color: var(--mod-switch-background-color-disabled, var(--spectrum-switch-background-color-disabled));
+}
+:host([disabled]:hover) #input+#switch:before {
+    border-color: var(--highcontrast-switch-handle-border-color-disabled, var(--mod-switch-handle-border-color-disabled, var(--spectrum-switch-handle-border-color-disabled)));
+}
+:host([disabled]:hover) #input~#label {
+    color: var(--highcontrast-switch-label-color-disabled, var(--mod-switch-label-color-disabled, var(--spectrum-switch-label-color-disabled)));
+}
+:host([disabled][checked]:hover) #input+#switch {
+    background-color: var(--highcontrast-switch-background-color-selected-disabled, var(--mod-switch-background-color-selected-disabled, var(--spectrum-switch-background-color-selected-disabled)));
+    border-color: var(--spectrum-switch-border-color-disabled);
+}
+:host([disabled][checked]:hover) #input~#label {
+    color: var(--highcontrast-switch-label-color-disabled, var(--mod-switch-label-color-disabled, var(--spectrum-switch-label-color-disabled)));
+}
+:host(:hover) #input:focus-visible+#switch:after {
+    box-shadow: 0 0 0 var(--mod-switch-focus-indicator-thickness, var(--spectrum-switch-focus-indicator-thickness)) var(--highcontrast-switch-focus-indicator-color, var(--mod-switch-focus-indicator-color, var(--spectrum-switch-focus-indicator-color)));
+}
+:host(:hover) #input:focus-visible+#switch:before {
+    border-color: var(--highcontrast-switch-handle-border-color-focus, var(--mod-switch-handle-border-color-focus, var(--spectrum-switch-handle-border-color)));
+}
+:host([checked]:hover) #input:focus-visible+#switch:before {
+    border-color: var(--highcontrast-switch-handle-border-color-selected-focus, var(--mod-switch-handle-border-color-selected-focus, var(--spectrum-switch-handle-border-color-selected)));
+}
+:host(:hover) #input:focus-visible~#label {
+    color: var(--highcontrast-switch-label-color-focus, var(--mod-switch-label-color-focus, var(--spectrum-switch-label-color-focus)));
 }
 
-#input {
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-}
-
-#switch {
-    height: var(
-        --mod-switch-control-height,
-        var(--spectrum-switch-control-height)
-    );
-    width: var(
-        --mod-switch-control-width,
-        var(--spectrum-switch-control-width)
-    );
-    left: 0;
-    right: 0;
-    margin-top: calc(
-        var(--mod-switch-height, var(--spectrum-switch-min-height)) -
-            var(
-                --mod-switch-control-height,
-                var(--spectrum-switch-control-height)
-            ) -
-            var(
-                --mod-switch-spacing-top-to-control,
-                var(--spectrum-switch-spacing-top-to-control)
-            )
-    );
-    margin-bottom: calc(
-        var(--mod-switch-height, var(--spectrum-switch-min-height)) -
-            var(
-                --mod-switch-control-height,
-                var(--spectrum-switch-control-height)
-            ) -
-            var(
-                --mod-switch-spacing-top-to-control,
-                var(--spectrum-switch-spacing-top-to-control)
-            )
-    );
-    margin-left: 0;
-    margin-right: 0;
-}
-
-#switch:after {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    /* Fixed focus-ring layouting aorund sp-switch */
-    border-radius: calc(
-        var(--mod-switch-control-height, var(--spectrum-switch-control-height)) /
-            2 +
-            var(--mod-focus-indicator-gap, var(--spectrum-focus-indicator-gap)) *
-            2
-    );
-}
-
-#switch:before {
-    height: var(
-        --mod-switch-control-height,
-        var(--spectrum-switch-control-height)
-    );
-    width: var(
-        --mod-switch-control-height,
-        var(--spectrum-switch-control-height)
-    );
-    top: 0;
-    left: 0;
-}
-
-#label {
-    margin-bottom: 0;
-    margin-top: var(
-        --mod-switch-spacing-top-to-label,
-        var(--spectrum-switch-spacing-top-to-label)
-    );
-    margin-left: var(
-        --mod-switch-control-label-spacing,
-        var(--spectrum-switch-control-label-spacing)
-    );
-    margin-right: var(
-        --mod-switch-control-label-spacing,
-        var(--spectrum-switch-control-label-spacing)
-    );
-}
+/* Logical property overrides removed — UXP handles logical properties
+   (min-block-size, inline-size, block-size, inset-*, margin-block-*, margin-inline-*)
+   automatically via the logical properties mapper (enableLogicalProperties). */

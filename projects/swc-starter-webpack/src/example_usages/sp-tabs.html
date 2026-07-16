@@ -1,0 +1,150 @@
+<!--
+Copyright 2026 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+-->
+
+<h3>sp-tabs</h3>
+
+<div id="content">
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-tabs</div>
+
+            <div id="variantLabel">horizontal (default)</div>
+            <div class="demo-example">
+                <sp-tabs selected="1" size="m">
+                    <sp-tab value="1">Tab 1</sp-tab>
+                    <sp-tab value="2">Tab 2</sp-tab>
+                    <sp-tab value="3">Tab 3</sp-tab>
+                    <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                    <sp-tab-panel value="2">Content for Tab 2</sp-tab-panel>
+                    <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                </sp-tabs>
+            </div>
+
+            <div id="variantLabel">emphasized</div>
+            <div class="demo-example">
+                <sp-tabs selected="1" emphasized size="m">
+                    <sp-tab value="1">Tab 1</sp-tab>
+                    <sp-tab value="2">Tab 2</sp-tab>
+                    <sp-tab value="3">Tab 3</sp-tab>
+                    <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                    <sp-tab-panel value="2">Content for Tab 2</sp-tab-panel>
+                    <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                </sp-tabs>
+            </div>
+
+            <div id="variantLabel">quiet</div>
+            <div class="demo-example">
+                <sp-tabs selected="1" quiet size="m">
+                    <sp-tab value="1">Tab 1</sp-tab>
+                    <sp-tab value="2">Tab 2</sp-tab>
+                    <sp-tab value="3">Tab 3</sp-tab>
+                    <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                    <sp-tab-panel value="2">Content for Tab 2</sp-tab-panel>
+                    <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                </sp-tabs>
+            </div>
+
+            <div id="variantLabel">compact</div>
+            <div class="demo-example">
+                <sp-tabs selected="1" compact size="m">
+                    <sp-tab value="1">Tab 1</sp-tab>
+                    <sp-tab value="2">Tab 2</sp-tab>
+                    <sp-tab value="3">Tab 3</sp-tab>
+                    <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                    <sp-tab-panel value="2">Content for Tab 2</sp-tab-panel>
+                    <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                </sp-tabs>
+            </div>
+
+            <div id="variantLabel">disabled</div>
+            <div class="demo-example">
+                <sp-tabs selected="1" size="m">
+                    <sp-tab value="1">Tab 1</sp-tab>
+                    <sp-tab value="2" disabled>Tab 2 (disabled)</sp-tab>
+                    <sp-tab value="3">Tab 3</sp-tab>
+                    <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                    <sp-tab-panel value="2">Content for Tab 2</sp-tab-panel>
+                    <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                </sp-tabs>
+            </div>
+
+            <div id="variantLabel">vertical</div>
+            <div class="demo-example">
+                <sp-tabs selected="1" direction="vertical" size="m">
+                    <sp-tab value="1">Tab 1</sp-tab>
+                    <sp-tab value="2">Tab 2</sp-tab>
+                    <sp-tab value="3">Tab 3</sp-tab>
+                    <sp-tab-panel value="1">Content for Tab 1</sp-tab-panel>
+                    <sp-tab-panel value="2">Content for Tab 2</sp-tab-panel>
+                    <sp-tab-panel value="3">Content for Tab 3</sp-tab-panel>
+                </sp-tabs>
+            </div>
+
+            <div id="variantLabel">sizes</div>
+            <div class="demo-example" style="display: flex; gap: 16px; flex-direction: column">
+                <div>
+                    <sp-field-label>Small (s)</sp-field-label>
+                    <sp-tabs selected="1" size="s">
+                        <sp-tab value="1">Tab 1</sp-tab>
+                        <sp-tab value="2">Tab 2</sp-tab>
+                        <sp-tab-panel value="1">Small panel</sp-tab-panel>
+                        <sp-tab-panel value="2">Small panel 2</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+                <div>
+                    <sp-field-label>Medium (m)</sp-field-label>
+                    <sp-tabs selected="1" size="m">
+                        <sp-tab value="1">Tab 1</sp-tab>
+                        <sp-tab value="2">Tab 2</sp-tab>
+                        <sp-tab-panel value="1">Medium panel</sp-tab-panel>
+                        <sp-tab-panel value="2">Medium panel 2</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+                <div>
+                    <sp-field-label>Large (l)</sp-field-label>
+                    <sp-tabs selected="1" size="l">
+                        <sp-tab value="1">Tab 1</sp-tab>
+                        <sp-tab value="2">Tab 2</sp-tab>
+                        <sp-tab-panel value="1">Large panel</sp-tab-panel>
+                        <sp-tab-panel value="2">Large panel 2</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+                <div>
+                    <sp-field-label>Extra Large (xl)</sp-field-label>
+                    <sp-tabs selected="1" size="xl">
+                        <sp-tab value="1">Tab 1</sp-tab>
+                        <sp-tab value="2">Tab 2</sp-tab>
+                        <sp-tab-panel value="1">XL panel</sp-tab-panel>
+                        <sp-tab-panel value="2">XL panel 2</sp-tab-panel>
+                    </sp-tabs>
+                </div>
+            </div>
+        </div>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">sp-tabs (right)</div>
+            <sp-tabs selected="a" size="m">
+                <sp-tab value="a">Alpha</sp-tab>
+                <sp-tab value="b">Beta</sp-tab>
+                <sp-tab value="c">Gamma</sp-tab>
+                <sp-tab-panel value="a">Alpha panel content</sp-tab-panel>
+                <sp-tab-panel value="b">Beta panel content</sp-tab-panel>
+                <sp-tab-panel value="c">Gamma panel content</sp-tab-panel>
+            </sp-tabs>
+        </div>
+    </div>
+
+    <div id="config">
+        <div style="display: inline-flex"></div>
+        <div style="display: flex; flex-direction: column"></div>
+    </div>
+</div>

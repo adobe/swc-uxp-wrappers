@@ -16,7 +16,7 @@ import styles from './uxp-illustrated-message.css.js';
 
 class UxpIllustratedMessage extends IllustratedMessage {
     static get styles() {
-        return [super.styles, styles];
+        return [...super.styles, styles];
     }
 }
 

@@ -34,6 +34,7 @@ node_modules/
 
 # generated output
 dist
+dist-dev
 .cache
 
 

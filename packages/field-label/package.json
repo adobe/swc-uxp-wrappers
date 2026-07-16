@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/field-label",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -19,11 +19,12 @@
         ".": "./src/index.js",
         "./package.json": "./package.json",
         "./src/FieldLabel.js": "./src/FieldLabel.js",
+        "./src/field-label-overrides.css.js": "./src/field-label-overrides.css.js",
         "./sp-field-label.js": "./sp-field-label.js",
         "./src/field-label.css.js": "./src/field-label.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/field-label": "npm:@spectrum-web-components/field-label@0.37.0"
+        "@swc-uxp-internal/field-label": "npm:@spectrum-web-components/field-label@1.12.1"
     },
     "files": [
         "**/*.js"

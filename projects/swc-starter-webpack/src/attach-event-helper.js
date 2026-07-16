@@ -70,6 +70,40 @@ function attachEvents(tabName) {
         eval(eventListener1);
     }
 
+    if (tabName === 'sp-table') {
+        const sortHandler = `
+            const sortableTable = document.getElementById('sortable-table');
+            const sortableBody = document.getElementById('sortable-body');
+            if (sortableTable) {
+                sortableTable.addEventListener('sorted', function(e) {
+                    const sortDirection = e.detail.sortDirection;
+                    const sortKey = e.detail.sortKey;
+                    const headCells = Array.from(sortableTable.querySelectorAll('sp-table-head-cell[sortable]'));
+                    const colIndex = headCells.findIndex(function(cell) {
+                        return cell.getAttribute('sort-key') === sortKey;
+                    });
+                    if (colIndex < 0) return;
+                    headCells.forEach(function(cell) {
+                        if (cell.getAttribute('sort-key') !== sortKey) {
+                            cell.removeAttribute('sort-direction');
+                        }
+                    });
+                    const rows = Array.from(sortableBody.querySelectorAll('sp-table-row'));
+                    rows.sort(function(a, b) {
+                        const aCells = a.querySelectorAll('sp-table-cell');
+                        const bCells = b.querySelectorAll('sp-table-cell');
+                        const aText = aCells[colIndex] ? aCells[colIndex].textContent.trim() : '';
+                        const bText = bCells[colIndex] ? bCells[colIndex].textContent.trim() : '';
+                        const cmp = aText.localeCompare(bText);
+                        return sortDirection === 'asc' ? cmp : -cmp;
+                    });
+                    rows.forEach(function(row) { sortableBody.appendChild(row); });
+                });
+            }
+        `;
+        eval(sortHandler);
+    }
+
     if (tabName === 'sp-checkbox') {
         const spCheckboxSizes = `
             const sizes = document.getElementById('checkbox-sizes');
@@ -145,6 +179,74 @@ function attachEvents(tabName) {
         eval(spCheckboxReadonly);
     }
 
+    if (tabName === 'sp-dropzone') {
+        (function () {
+            var dz       = document.getElementById('dropzone-interactive');
+            var stateEl  = document.getElementById('dz-dragged-state');
+            var eventEl  = document.getElementById('dz-last-event');
+            var fileEl   = document.getElementById('dz-dropped-filename');
+            var selectEl = document.getElementById('dz-file-select-label');
+            var effectEl = document.getElementById('dz-current-drop-effect');
+            var acceptEl = document.getElementById('dz-current-accept-filter');
+            if (!dz) return;
+
+            var effectGroup = document.getElementById('dz-drop-effect-group');
+            if (effectGroup) {
+                effectGroup.addEventListener('change', function () {
+                    var val = effectGroup.selected;
+                    if (val) { dz.dropEffect = val; effectEl.textContent = val; }
+                });
+            }
+
+            var acceptGroup = document.getElementById('dz-accept-filter-group');
+            if (acceptGroup) {
+                acceptGroup.addEventListener('change', function () {
+                    var val = acceptGroup.selected;
+                    var map = { all: '', image: 'image/*', text: 'text/*' };
+                    dz.accept = map[val] !== undefined ? map[val] : '';
+                    acceptEl.textContent = val;
+                });
+            }
+
+            var rejectCheck = document.getElementById('dz-reject-all-check');
+            dz.addEventListener('sp-dropzone-should-accept', function (e) {
+                eventEl.textContent = 'sp-dropzone-should-accept';
+                if (rejectCheck && rejectCheck.checked) { e.preventDefault(); }
+            });
+
+            var updateDragState = function () {
+                stateEl.textContent = dz.hasAttribute('dragged') ? 'true' : 'false';
+            };
+            var obs = new MutationObserver(updateDragState);
+            obs.observe(dz, { attributes: true, attributeFilter: ['dragged'] });
+            dz.addEventListener('sp-dropzone-dragover',  function () { eventEl.textContent = 'sp-dropzone-dragover';  updateDragState(); });
+            dz.addEventListener('sp-dropzone-dragleave', function () { eventEl.textContent = 'sp-dropzone-dragleave'; updateDragState(); });
+
+            dz.addEventListener('sp-dropzone-drop', function (e) {
+                updateDragState();
+                var files    = e.detail.files;
+                var source   = e.detail.source;
+                var rejected = e.detail.rejected;
+                eventEl.textContent = 'sp-dropzone-drop';
+                if (rejected) {
+                    fileEl.textContent = 'Rejected by accept filter';
+                    fileEl.style.color = 'rgb(211,21,16)';
+                } else if (!files || files.length === 0) {
+                    fileEl.textContent = '(no files)';
+                    fileEl.style.color = '';
+                } else {
+                    var names = files.map(function (f) { return f.name || f.nativePath || '(unknown)'; }).join(', ');
+                    fileEl.textContent = '[' + source + '] ' + names;
+                    fileEl.style.color = '';
+                }
+            });
+
+            if (selectEl) {
+                selectEl.addEventListener('click', function () { dz.openFilePicker({ multiple: true }); });
+            }
+        }());
+    }
+
     if (tabName === 'sp-overlay') {
         const placementListener = `
             document.getElementById("placementselection").addEventListener("change", () => {
@@ -165,6 +267,111 @@ function attachEvents(tabName) {
 
         eval(offsetListener);
     }
+
+    if (tabName === 'sp-picker') {
+        // Change-icons button: rotates icon sets across sp-menu-items
+        var iconSets = [
+            ['sp-icon-save-floppy',  'sp-icon-stopwatch',  'sp-icon-user-activity'],
+            ['sp-icon-edit',         'sp-icon-magnify',    'sp-icon-star'],
+            ['sp-icon-delete',       'sp-icon-add-circle', 'sp-icon-more'],
+        ];
+        var iconSetIndex = 0;
+        var changeIconsBtn = document.getElementById('btn-change-icons');
+        var dynPicker      = document.getElementById('picker-dyn-icons');
+        if (changeIconsBtn && dynPicker) {
+            changeIconsBtn.addEventListener('click', function () {
+                iconSetIndex = (iconSetIndex + 1) % iconSets.length;
+                var currentValue = dynPicker.value;
+                var items = dynPicker.querySelectorAll('sp-menu-item');
+                items.forEach(function (item, i) {
+                    var old = item.querySelector('[slot="icon"]');
+                    if (old) old.remove();
+                    var icon = document.createElement(iconSets[iconSetIndex][i]);
+                    icon.setAttribute('slot', 'icon');
+                    icon.setAttribute('size', 's');
+                    item.prepend(icon);
+                    if (typeof item.breakItemChildrenCache === 'function') {
+                        item.breakItemChildrenCache();
+                    }
+                });
+                dynPicker.value = '';
+                requestAnimationFrame(function () { dynPicker.value = currentValue; });
+            });
+        }
+
+        // Interactive controls
+        var interactivePickers = [
+            document.getElementById('picker-interactive'),
+            document.getElementById('picker-icons-only'),
+            document.getElementById('picker-icons-none'),
+        ].filter(Boolean);
+
+        var valueDisplay = document.getElementById('picker-selected-value');
+        if (interactivePickers[0] && valueDisplay) {
+            interactivePickers[0].addEventListener('change', function (e) {
+                valueDisplay.textContent = e.target.value;
+            });
+        }
+
+        var sizeGroup = document.getElementById('picker-size-group');
+        if (sizeGroup) {
+            // sp-radio-group exposes .selected, not .value
+            sizeGroup.addEventListener('change', function () {
+                interactivePickers.forEach(function (p) { p.setAttribute('size', sizeGroup.selected); });
+            });
+        }
+
+        function togglePickerAttr(checkboxId, attr) {
+            var cb = document.getElementById(checkboxId);
+            if (!cb) return;
+            cb.addEventListener('change', function () {
+                interactivePickers.forEach(function (p) {
+                    if (cb.checked) p.setAttribute(attr, '');
+                    else p.removeAttribute(attr);
+                });
+            });
+        }
+
+        togglePickerAttr('picker-toggle-quiet',    'quiet');
+        togglePickerAttr('picker-toggle-disabled', 'disabled');
+        togglePickerAttr('picker-toggle-invalid',  'invalid');
+        togglePickerAttr('picker-toggle-readonly', 'readonly');
+    }
+
+    if (tabName === 'sp-breadcrumbs') {
+        var el = document.getElementById('breadcrumbs-event-demo');
+        var output = document.getElementById('breadcrumbs-event-output');
+        if (el && output) {
+            el.addEventListener('change', function (e) {
+                output.textContent = 'change event: value = "' + (e.detail && e.detail.value) + '"';
+            });
+        }
+    }
+
+    if (tabName === 'sp-progress-circle') {
+        const eventListener = `
+            const circle = document.getElementById('interactive-circle');
+            const slider = document.getElementById('progress-slider');
+            const label = document.getElementById('progress-value');
+            if (slider && circle && label) {
+                slider.addEventListener('input', function() {
+                    const val = Math.round(Number(this.value));
+                    circle.progress = val;
+                    label.textContent = val + '%';
+                });
+            }
+            const s2Indeterminate = document.getElementById('indeterminate-s2');
+            if (s2Indeterminate) {
+                s2Indeterminate.progress = null;
+            }
+        `;
+        eval(eventListener);
+    }
+}
+
+function handleThemeSystem(selectObject) {
+    var value = selectObject.value;
+    document.querySelector('#theme-block').setAttribute('system', value);
 }
 
 function handleThemeColor(selectObject) {

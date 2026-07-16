@@ -5,7 +5,10 @@
     "main": "index.html",
     "manifestVersion": 4,
     "featureFlags": {
-        "enableSWCSupport": true
+        "enableSWCSupport": true,
+        "enableLogicalProperties": true,
+        "unhandledRejection": true,
+        "uncaughtException": true
     },
     "entrypoints": [
         {

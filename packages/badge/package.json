@@ -1,0 +1,39 @@
+{
+    "name": "@swc-uxp-wrappers/badge",
+    "version": "3.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/badge component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/badge"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/Badge.js": "./src/Badge.js",
+        "./sp-badge.js": "./sp-badge.js",
+        "./src/badge.css.js": "./src/badge.css.js",
+        "./src/uxp-badge.css.js": "./src/uxp-badge.css.js",
+        "./src/badge-overrides.css.js": "./src/badge-overrides.css.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/badge": "npm:@spectrum-web-components/badge@1.12.2"
+    },
+    "files": [
+        "**/*.js",
+        "**/*.css"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/badge"
+    ]
+}

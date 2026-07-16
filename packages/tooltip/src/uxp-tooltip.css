@@ -49,7 +49,7 @@ governing permissions and limitations under the License.
     transform: rotate(45deg) !important;
     margin-top: calc(
         var(
-                --spectrum-tooltip-neutral-tip-width,
+                --spectrum-tooltip-tip-inline-size,
                 var(--spectrum-global-dimension-size-100)
             ) * var(--uxp-swc-tooltip-factor) * 0.5
     );
@@ -62,7 +62,7 @@ governing permissions and limitations under the License.
     transform: rotate(45deg) !important;
     margin-left: calc(
         var(
-                --spectrum-tooltip-neutral-tip-width,
+                --spectrum-tooltip-tip-inline-size,
                 var(--spectrum-global-dimension-size-100)
             ) * var(--uxp-swc-tooltip-factor) * 0.5
     );

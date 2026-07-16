@@ -53,3 +53,14 @@ governing permissions and limitations under the License.
     margin-top: var(--spectrum-sidenav-top-to-icon);
     margin-right: var(--spectrum-sidenav-icon-spacing);
 }
+
+/* @media (hover:hover) unwrap — UXP does not support hover media query */
+:host([selected]) #item-link:hover {
+    color: var(--mod-sidenav-content-color-hover-selected, var(--spectrum-sidenav-content-color-hover-selected));
+    background-color: var(--highcontrast-sidenav-background-hover-selected, var(--mod-sidenav-background-hover-selected, var(--spectrum-sidenav-background-hover-selected)));
+}
+
+#item-link:hover {
+    color: var(--highcontrast-sidenav-content-color-hover, var(--mod-sidenav-content-color-hover, var(--spectrum-sidenav-content-color-hover)));
+    background-color: var(--highcontrast-sidenav-background-hover, var(--mod-sidenav-background-hover, var(--spectrum-sidenav-background-hover)));
+}

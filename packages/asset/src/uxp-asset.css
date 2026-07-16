@@ -12,8 +12,27 @@ governing permissions and limitations under the License.
 
 /* write uxp style overrides */
 
-/* workaround for missing logical property 'max-block-size' & 'max-inline-size' */
-::slotted(*) {
-    max-height: 100%;
-    max-width: 100%;
+/* SWC 1.12.0 uses block-size:100% on :host which collapses to auto when the parent has no
+   explicit height. The icon wrapper (.file,.folder) then also has block-size:100% = 0, making
+   the SVG invisible. Give the host a min-height so it does not collapse. */
+:host {
+    min-height: var(--mod-asset-icon-min-width, 48px);
+}
+
+/* max()/min() CSS math functions not supported in UXP. SWC 1.12.0 replaced the separate
+   physical width/min-width/max-width rules from 0.37.0 with:
+     inline-size: max(var(--mod-asset-icon-min-width,48px), min(100%, var(--mod-asset-icon-max-width,80px)))
+   Both inline-size declarations are invalid in UXP and are dropped, leaving the SVG with
+   no effective width. SWC 1.12.0 also dropped the separate min-height/max-height rules that
+   0.37.0 had, replacing them with block-size:100% which collapses to 0 when the host has no
+   explicit height. Restore the 0.37.0 physical property pattern for both axes using 1.12.0 mod
+   tokens. File and folder icons are square so the same width tokens apply to height. */
+.file,
+.folder {
+    width: 100%;
+    min-width: var(--mod-asset-icon-min-width, 48px);
+    max-width: var(--mod-asset-icon-max-width, 80px);
+    height: 100%;
+    min-height: var(--mod-asset-icon-min-width, 48px);
+    max-height: var(--mod-asset-icon-max-width, 80px);
 }

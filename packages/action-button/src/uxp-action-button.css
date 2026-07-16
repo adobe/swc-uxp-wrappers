@@ -12,99 +12,73 @@ governing permissions and limitations under the License.
 
 /* write uxp style overrides */
 
-:host {
-    padding-left: var(
-        --mod-actionbutton-edge-to-text,
-        var(--spectrum-actionbutton-edge-to-text)
-    );
-    padding-right: var(
-        --mod-actionbutton-edge-to-text,
-        var(--spectrum-actionbutton-edge-to-text)
-    );
-    min-width: var(
-        --mod-actionbutton-min-width,
-        var(--spectrum-actionbutton-min-width)
-    );
-}
-
-:host .hold-affordance {
-    bottom: calc(
-        var(
-                --mod-actionbutton-edge-to-hold-icon,
-                var(--spectrum-actionbutton-edge-to-hold-icon)
-            ) -
-            var(
-                --mod-actionbutton-border-width,
-                var(--spectrum-actionbutton-border-width)
-            )
-    );
-    right: calc(
-        var(
-                --mod-actionbutton-edge-to-hold-icon,
-                var(--spectrum-actionbutton-edge-to-hold-icon)
-            ) -
-            var(
-                --mod-actionbutton-border-width,
-                var(--spectrum-actionbutton-border-width)
-            )
-    );
-}
-
+/* gap not supported in UXP flex containers (UXP-21294).
+   SWC v1.12.0 sets gap:calc(text-to-visual + edge-to-text - edge-to-visual-only) on :host
+   and margin-inline-end:calc(edge-to-visual-only - edge-to-text) on the icon (negative).
+   Combined: effective icon-to-label space = text-to-visual.
+   With gap broken, the negative margin-inline-end causes label to overlap icon.
+   Fix: set margin-right directly to text-to-visual so the gap is absorbed into the margin. */
 ::slotted([slot='icon']) {
-    margin-right: calc(
-        var(
-                --mod-actionbutton-edge-to-visual-only,
-                var(--spectrum-actionbutton-edge-to-visual-only)
-            ) -
-            var(
-                --mod-actionbutton-edge-to-text,
-                var(--spectrum-actionbutton-edge-to-text)
-            )
-    );
-    margin-left: calc(
-        var(
-                --mod-actionbutton-edge-to-visual,
-                var(--spectrum-actionbutton-edge-to-visual)
-            ) -
-            var(
-                --mod-actionbutton-edge-to-text,
-                var(--spectrum-actionbutton-edge-to-text)
-            )
-    );
-    max-height: 100%;
+    margin-right: var(--spectrum-actionbutton-text-to-visual);
 }
 
-:not(slot[icon-only])::slotted([slot='icon']) {
-    margin-right: calc(
-        var(
-                --mod-actionbutton-edge-to-text,
-                var(--spectrum-actionbutton-edge-to-text)
-            ) -
-            var(
-                --mod-actionbutton-edge-to-visual-only,
-                var(--spectrum-actionbutton-edge-to-visual-only)
-            )
-    );
-}
-
-/* workaround for missing logical property 'inset', fixed layouting of focus-ring */
-:host:after {
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
-}
-
-.hold-affordance + ::slotted([slot='icon']),
+/* Icon-only (no label): no gap needed — restore the original negative margin-inline-end
+   so the icon sits at the correct distance from the button edge.
+   Note: hold-affordance is NOT included here — hold-affordance buttons can have both icon
+   and label, in which case the icon still needs the full text-to-visual margin-right. */
 [icon-only]::slotted([slot='icon']) {
-    margin-left: calc(
-        var(
-                --mod-actionbutton-edge-to-visual-only,
-                var(--spectrum-actionbutton-edge-to-visual-only)
-            ) -
-            var(
-                --mod-actionbutton-edge-to-text,
-                var(--spectrum-actionbutton-edge-to-text)
-            )
+    margin-right: calc(
+        var(--spectrum-actionbutton-edge-to-visual-only)
+        - var(--spectrum-actionbutton-edge-to-text)
+    );
+}
+
+/* @media (hover:hover) unwrap — UXP does not support the hover media query.
+   SWC v1.12.0 moved hover/active state token assignments inside @media (hover:hover);
+   declare them unconditionally so they fire in UXP. */
+:host(:hover) {
+    --mod-actionbutton-background-color-default: var(
+        --mod-actionbutton-background-color-hover,
+        var(--spectrum-actionbutton-background-color-hover)
+    );
+    --mod-actionbutton-border-color-default: var(
+        --mod-actionbutton-border-color-hover,
+        var(--spectrum-actionbutton-border-color-hover)
+    );
+    --mod-actionbutton-content-color-default: var(
+        --mod-actionbutton-content-color-hover,
+        var(--spectrum-neutral-content-color-hover)
+    );
+}
+
+/* :is(:active,[active]) expansion — UXP :is() support is partial.
+   SWC v1.12.0 uses :host(:is(:active,[active])) inside @media (hover:hover). */
+:host(:active) {
+    --mod-actionbutton-background-color-default: var(
+        --mod-actionbutton-background-color-down,
+        var(--spectrum-actionbutton-background-color-down)
+    );
+    --mod-actionbutton-border-color-default: var(
+        --mod-actionbutton-border-color-down,
+        var(--spectrum-actionbutton-border-color-down)
+    );
+    --mod-actionbutton-content-color-default: var(
+        --mod-actionbutton-content-color-down,
+        var(--spectrum-neutral-content-color-down)
+    );
+}
+
+:host([active]) {
+    --mod-actionbutton-background-color-default: var(
+        --mod-actionbutton-background-color-down,
+        var(--spectrum-actionbutton-background-color-down)
+    );
+    --mod-actionbutton-border-color-default: var(
+        --mod-actionbutton-border-color-down,
+        var(--spectrum-actionbutton-border-color-down)
+    );
+    --mod-actionbutton-content-color-default: var(
+        --mod-actionbutton-content-color-down,
+        var(--spectrum-neutral-content-color-down)
     );
 }

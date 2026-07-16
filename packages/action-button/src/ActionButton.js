@@ -16,7 +16,7 @@ import styles from './uxp-action-button.css.js';
 
 class UxpActionButton extends ActionButton {
     static get styles() {
-        return [super.styles, styles];
+        return [...super.styles, styles];
     }
 }
 

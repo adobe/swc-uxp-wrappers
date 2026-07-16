@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/tags",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -23,11 +23,13 @@
         "./src/tags.css.js": "./src/tags.css.js",
         "./src/tag.css.js": "./src/tag.css.js",
         "./sp-tags.js": "./sp-tags.js",
-        "./sp-tag.js": "./sp-tag.js"
+        "./sp-tag.js": "./sp-tag.js",
+        "./src/tag-overrides.css.js": "./src/tag-overrides.css.js",
+        "./src/tags-overrides.css.js": "./src/tags-overrides.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/tags": "npm:@spectrum-web-components/tags@0.37.0",
-        "@swc-uxp-wrappers/button": "2.0.0"
+        "@swc-uxp-internal/tags": "npm:@spectrum-web-components/tags@1.12.1",
+        "@swc-uxp-wrappers/button": "3.0.0"
     },
     "files": [
         "**/*.js"

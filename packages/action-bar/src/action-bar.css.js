@@ -16,8 +16,7 @@ import swcActionBarStyles from '@swc-uxp-internal/action-bar/src/action-bar.css.
 import uxpActionBarStyles from './uxp-action-bar.css.js';
 
 const combinedActionBarStyles = unsafeCSS(
-    swcActionBarStyles.toString(),
-    uxpActionBarStyles.toString()
+    swcActionBarStyles.toString() + '\n' + uxpActionBarStyles.toString()
 );
 
 export default combinedActionBarStyles;

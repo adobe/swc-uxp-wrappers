@@ -1,0 +1,83 @@
+<!--
+Copyright 2026 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+-->
+
+<h3>sp-contextual-help</h3>
+
+<div id="content">
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-contextual-help</div>
+
+            <div id="variantLabel">variant="info" (default)</div>
+            <div class="demo-example" style="display: flex; align-items: center">
+                <sp-contextual-help>
+                    <h2 slot="heading">Contextual help title</h2>
+                    <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua.
+                    </p>
+                    <sp-link slot="link" href="#">Learn more</sp-link>
+                </sp-contextual-help>
+                <span style="margin-left: 8px">Click the icon to open</span>
+            </div>
+
+            <div id="variantLabel">variant="help"</div>
+            <div class="demo-example" style="display: flex; align-items: center">
+                <sp-contextual-help variant="help">
+                    <h2 slot="heading">Help content</h2>
+                    <p>
+                        This is a help tooltip providing additional context for
+                        the user about an action or field.
+                    </p>
+                    <sp-link slot="link" href="#">View docs</sp-link>
+                </sp-contextual-help>
+                <span style="margin-left: 8px">variant="help"</span>
+            </div>
+
+            <div id="variantLabel">with label (aria-label override)</div>
+            <div class="demo-example" style="display: flex; align-items: center">
+                <sp-contextual-help label="More information about this field">
+                    <h2 slot="heading">More information</h2>
+                    <p>
+                        Custom aria-label set via the label attribute.
+                    </p>
+                </sp-contextual-help>
+                <span style="margin-left: 8px">Custom label</span>
+            </div>
+
+            <div id="variantLabel">no link slot</div>
+            <div class="demo-example" style="display: flex; align-items: center">
+                <sp-contextual-help>
+                    <h2 slot="heading">Heading only</h2>
+                    <p>Content without a learn-more link.</p>
+                </sp-contextual-help>
+                <span style="margin-left: 8px">No link</span>
+            </div>
+        </div>
+        <input type="text" style="width: 2px" />
+        <div id="right">
+            <div id="subtitle">my-contextual-help</div>
+            <my-contextual-help>
+                <h2 slot="heading">Extended component</h2>
+                <p>This is the extended my-contextual-help with a custom border style.</p>
+                <sp-link slot="link" href="#">Learn more</sp-link>
+            </my-contextual-help>
+        </div>
+    </div>
+
+    <div id="config">
+        <div style="display: inline-flex"></div>
+
+        <div style="display: flex; flex-direction: column"></div>
+    </div>
+</div>

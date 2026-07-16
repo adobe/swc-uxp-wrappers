@@ -10,14 +10,26 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
+/* Must be first import: polyfills CSS global before OverlayPopover.js evaluates CSS.supports() at module top-level */
+import './uxp-css-polyfill.js';
 import { Overlay } from '@swc-uxp-internal/overlay/src/Overlay.js';
+import { PlacementController as UxpPlacementController } from './PlacementController.js';
 
 import styles from './uxp-overlay.css.js';
 
 class UxpOverlay extends Overlay {
     static get styles() {
-        // We are combining our styles to make all super class styles available along with the transitive dependent classes styles.
-        return [super.styles, styles];
+        return [...super.styles, styles];
+    }
+
+    // Use UxpPlacementController which sets layoutShift: false on autoUpdate calls
+    // to prevent @floating-ui/dom from creating IntersectionObserver with negative
+    // rootMargin values that UXP rejects (SyntaxError: Invalid rootMargin value)
+    get placementController() {
+        if (!this._uxpPlacementController) {
+            this._uxpPlacementController = new UxpPlacementController(this);
+        }
+        return this._uxpPlacementController;
     }
 }
 

@@ -16,8 +16,7 @@ import swcTableRowStyles from '@swc-uxp-internal/table/src/table-row.css.js';
 import uxpTableRowStyles from './uxp-table-row.css.js';
 
 const combinedTableRowStyles = unsafeCSS(
-    swcTableRowStyles.toString(),
-    uxpTableRowStyles.toString()
+    swcTableRowStyles.toString() + '\n' + uxpTableRowStyles.toString()
 );
 
 export default combinedTableRowStyles;

@@ -1,5 +1,5 @@
 /*
-Copyright 2023 Adobe. All rights reserved.
+Copyright 2026 Adobe. All rights reserved.
 This file is licensed to you under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License. You may obtain a copy
 of the License at http://www.apache.org/licenses/LICENSE-2.0
@@ -12,73 +12,95 @@ governing permissions and limitations under the License.
 
 /* write uxp style overrides */
 
-/* Workaround for -
-    https://jira.corp.adobe.com/browse/UXP-20845
-    https://jira.corp.adobe.com/browse/UXP-20650
-*/
-
-:host {
-    max-width: 100%;
-    min-height: var(--mod-checkbox-height, var(--spectrum-checkbox-height));
-}
-
-#input {
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-}
-
+/* text-align: start → left — UXP does not support text-align: start */
 #label {
-    margin-top: var(
-        --mod-checkbox-top-to-text,
-        var(--spectrum-checkbox-top-to-text)
-    );
-    margin-left: var(
-        --mod-checkbox-text-to-control,
-        var(--spectrum-checkbox-text-to-control)
-    );
+    text-align: left;
 }
 
-#box {
-    height: var(
-        --mod-checkbox-control-size,
-        var(--spectrum-checkbox-control-size)
-    );
-    width: var(
-        --mod-checkbox-control-size,
-        var(--spectrum-checkbox-control-size)
-    );
+/* CSS transitions on border and box-shadow can get stuck mid-animation in UXP shadow DOM,
+   leaving the element in a broken visual state (e.g. invisible border or focus ring) until
+   a click/repaint. Disable all transitions on these elements. */
+#box:before {
+    transition: none;
 }
-
-/* workaround for missing logical property 'inset', fixed layouting of focus-ring */
 #box:after {
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
+    transition: none;
+}
+#checkmark,
+#partial-checkmark {
+    transition: none;
 }
 
-/* workaround for https://jira.corp.adobe.com/browse/UXP-22441, adding more specificity to the style */
-:host([invalid]) #box:before,
-:host([invalid][indeterminate]) #box:before,
-:host([invalid]) #input:checked + #box:before,
-:host([invalid][indeterminate]) #input:checked + #box:before {
-    border-color: var(
-        --highcontrast-checkbox-color-default,
-        var(
-            --mod-checkbox-invalid-color-default,
-            var(--spectrum-checkbox-invalid-color-default)
-        )
-    );
+/* :is() pseudo-class not supported in UXP — expand :host(:is(:active,[active])) to two rules each.
+   SWC source: :host(:is(:active,[active])) #box:before / #input:checked+#box:before / #label */
+:host(:active) #box:before,
+:host([active]) #box:before {
+    border-color: var(--highcontrast-checkbox-highlight-color-down, var(--mod-checkbox-control-color-down, var(--spectrum-checkbox-control-color-down)));
+}
+:host(:active) #input:checked + #box:before,
+:host([active]) #input:checked + #box:before {
+    border-color: var(--highcontrast-checkbox-highlight-color-down, var(--mod-checkbox-control-selected-color-down, var(--spectrum-checkbox-control-selected-color-down)));
+}
+:host(:active) #label,
+:host([active]) #label {
+    color: var(--highcontrast-checkbox-content-color-down, var(--mod-checkbox-content-color-down, var(--spectrum-checkbox-content-color-down)));
 }
 
+/* :is() not supported — expand emphasized+active :is() rules */
+:host([emphasized]:active) #input:checked + #box:before,
+:host([emphasized][active]) #input:checked + #box:before,
+:host([emphasized][indeterminate]:active) #box:before,
+:host([emphasized][indeterminate][active]) #box:before,
+:host([emphasized][indeterminate]:active) #input:checked + #box:before,
+:host([emphasized][indeterminate][active]) #input:checked + #box:before {
+    border-color: var(--highcontrast-checkbox-highlight-color-default, var(--mod-checkbox-emphasized-color-down, var(--spectrum-checkbox-emphasized-color-down)));
+}
+:host([emphasized][invalid][invalid]:active) #box:before,
+:host([emphasized][invalid][invalid][active]) #box:before,
+:host([emphasized][invalid][invalid]:active) #input:checked + #box:before,
+:host([emphasized][invalid][invalid][active]) #input:checked + #box:before {
+    border-color: var(--highcontrast-checkbox-highlight-color-default, var(--mod-checkbox-control-invalid-color-down, var(--spectrum-checkbox-invalid-color-down)));
+}
+
+/* @media (hover: hover) unwrap — UXP does not support the hover media query;
+   apply all hover rules unconditionally so box/label states update on hover.
+   SWC source: @media (hover:hover) { :host(:hover) ... } */
+:host(:hover) #box:before {
+    border-color: var(--highcontrast-checkbox-highlight-color-hover, var(--mod-checkbox-control-color-hover, var(--spectrum-checkbox-control-color-hover)));
+}
+:host(:hover) #input:checked + #box:before {
+    border-color: var(--highcontrast-checkbox-highlight-color-hover, var(--mod-checkbox-control-selected-color-hover, var(--spectrum-checkbox-control-selected-color-hover)));
+}
+:host(:hover) #label {
+    color: var(--highcontrast-checkbox-content-color-hover, var(--mod-checkbox-content-color-hover, var(--spectrum-checkbox-content-color-hover)));
+}
 :host([invalid][invalid]:hover) #box:before,
 :host([invalid][invalid]:hover) #input:checked + #box:before {
-    border-color: var(
-        --highcontrast-checkbox-color-hover,
-        var(
-            --mod-checkbox-invalid-color-hover,
-            var(--spectrum-checkbox-invalid-color-hover)
-        )
-    );
+    border-color: var(--highcontrast-checkbox-color-hover, var(--mod-checkbox-invalid-color-hover, var(--spectrum-checkbox-invalid-color-hover)));
 }
+:host([indeterminate]:hover) #box:before,
+:host([indeterminate]:hover) #input:checked + #box:before {
+    border-color: var(--highcontrast-checkbox-highlight-color-hover, var(--mod-checkbox-control-selected-color-hover, var(--spectrum-checkbox-control-selected-color-hover)));
+}
+:host([invalid][invalid][indeterminate]:hover) #box:before,
+:host([invalid][invalid][indeterminate]:hover) #input:checked + #box:before {
+    border-color: var(--highcontrast-checkbox-color-default, var(--mod-checkbox-invalid-color-hover, var(--spectrum-checkbox-invalid-color-hover)));
+}
+:host([invalid][invalid][indeterminate]:hover) #label {
+    color: var(--highcontrast-checkbox-content-color-hover, var(--mod-checkbox-content-color-hover, var(--spectrum-checkbox-content-color-hover)));
+}
+:host([emphasized][invalid][invalid][indeterminate]:hover) #box:before,
+:host([emphasized][invalid][invalid][indeterminate]:hover) #input:checked + #box:before,
+:host([emphasized][invalid][invalid]:hover) #input:checked + #box:before {
+    border-color: var(--highcontrast-checkbox-color-hover, var(--mod-checkbox-invalid-color-hover, var(--spectrum-checkbox-invalid-color-hover)));
+}
+:host([emphasized][indeterminate]:hover) #box:before,
+:host([emphasized][indeterminate]:hover) #input:checked + #box:before,
+:host([emphasized]:hover) #input:checked + #box:before {
+    border-color: var(--highcontrast-checkbox-highlight-color-hover, var(--mod-checkbox-emphasized-color-hover, var(--spectrum-checkbox-emphasized-color-hover)));
+}
+
+/* Logical property overrides removed — UXP handles logical properties
+   (max-inline-size, min-block-size, block-size, inline-size, margin-block-*,
+   margin-inline-*, inset-block, inset-inline) automatically via the logical
+   properties mapper (enableLogicalProperties). */

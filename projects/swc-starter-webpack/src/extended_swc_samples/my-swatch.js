@@ -18,7 +18,7 @@ class MySwatch extends Swatch {
         Swatch.styles,
         css`
             :host {
-                box-shadow: 5px 5px 5px var(--spectrum-global-color-gray-500);
+                box-shadow: 5px 5px 5px var(--spectrum-gray-500);
             }
         `,
     ];

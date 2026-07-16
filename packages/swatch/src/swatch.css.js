@@ -16,8 +16,7 @@ import swcSwatchStyles from '@swc-uxp-internal/swatch/src/swatch.css.js';
 import uxpSwatchStyles from './uxp-swatch.css.js';
 
 const combinedSwatchStyles = unsafeCSS(
-    swcSwatchStyles.toString(),
-    uxpSwatchStyles.toString()
+    swcSwatchStyles.toString() + '\n' + uxpSwatchStyles.toString()
 );
 
 export default combinedSwatchStyles;

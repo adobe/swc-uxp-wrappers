@@ -10,4 +10,33 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* write uxp style overrides */
+/* padding-inline shorthand not supported in UXP; expand to physical properties */
+/* border-block-start shorthand not supported in UXP; expand to border-top */
+/* vertical-align has no effect on display:block; use flex for vertical centering */
+:host {
+    padding-left: calc(
+        var(--mod-table-edge-to-content, var(--spectrum-table-edge-to-content)) -
+            var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width))
+    );
+    padding-right: calc(
+        var(--mod-table-edge-to-content, var(--spectrum-table-edge-to-content)) -
+            var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width))
+    );
+    border-top: var(--mod-table-border-width, var(--spectrum-table-border-width)) solid
+        var(
+            --highcontrast-table-divider-color,
+            var(--mod-table-divider-color, var(--spectrum-table-divider-color))
+        );
+    display: flex;
+    align-items: center;
+}
+
+/* border-inline-end shorthand not supported in UXP; expand to border-right */
+.divider {
+    border-right: var(--mod-table-border-width, var(--spectrum-table-border-width)) solid
+        var(
+            --highcontrast-table-divider-color,
+            var(--mod-table-divider-color, var(--spectrum-table-divider-color))
+        );
+}
+

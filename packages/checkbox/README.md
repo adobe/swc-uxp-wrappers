@@ -6,7 +6,7 @@
 This is UXP wrapper for `@spectrum-web-components/checkbox` package
 <br />
 
--   For detailed README regarding `@spectrum-web-components/checkbox` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/checkbox/v/0.37.0)
+-   For detailed README regarding `@spectrum-web-components/checkbox` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/checkbox/v/1.12.1)
 
 -   Detailed specification regarding `@spectrum-web-components/checkbox` support in UXP through `@swc-uxp-wrappers/checkbox` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
 

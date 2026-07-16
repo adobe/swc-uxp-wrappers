@@ -12,6 +12,18 @@ governing permissions and limitations under the License.
 
 /* write uxp style overrides */
 
+/* UXP does not support repeating-conic-gradient() or any gradient background functions
+   (background-image only accepts 'none'). The checkerboard pattern used to indicate
+   transparency is therefore invisible. Fall back to a solid neutral background using the
+   lighter of the two checkerboard tokens so semi-transparent swatch colors are still
+   visible against a contrasting backdrop. */
+.opacity-checkerboard {
+    background-color: var(
+        --mod-opacity-checkerboard-light,
+        var(--spectrum-opacity-checkerboard-square-light, #e4e4e4)
+    );
+}
+
 :host {
     --uxp-spectrum-swatch-disabled-icon-color: transparent;
     --uxp-polyfill-for-clip-path: calc(

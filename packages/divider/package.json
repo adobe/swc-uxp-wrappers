@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/divider",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -19,11 +19,12 @@
         ".": "./src/index.js",
         "./package.json": "./package.json",
         "./src/Divider.js": "./src/Divider.js",
+        "./src/divider-overrides.css.js": "./src/divider-overrides.css.js",
         "./sp-divider.js": "./sp-divider.js",
         "./src/divider.css.js": "./src/divider.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/divider": "npm:@spectrum-web-components/divider@0.37.0"
+        "@swc-uxp-internal/divider": "npm:@spectrum-web-components/divider@1.12.1"
     },
     "files": [
         "**/*.js"

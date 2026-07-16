@@ -123,12 +123,12 @@ governing permissions and limitations under the License.
 
             <div class="demo-example" style="display: flex">
                 <sp-button-group style="min-width: max-content">
-                    <sp-button static="black">Label only</sp-button>
-                    <sp-button static="black">
+                    <sp-button static-color="black">Label only</sp-button>
+                    <sp-button static-color="black">
                         <sp-icon-magnify slot="icon"></sp-icon-magnify>
                         Icon + Label
                     </sp-button>
-                    <sp-button static="black" label="Icon only" icon-only>
+                    <sp-button static-color="black" label="Icon only" icon-only>
                         <sp-icon-magnify slot="icon"></sp-icon-magnify>
                     </sp-button>
                 </sp-button-group>
@@ -136,12 +136,12 @@ governing permissions and limitations under the License.
 
             <div class="demo-example" style="display: flex">
                 <sp-button-group style="min-width: max-content">
-                    <sp-button static="white">Label only</sp-button>
-                    <sp-button static="white">
+                    <sp-button static-color="white">Label only</sp-button>
+                    <sp-button static-color="white">
                         <sp-icon-magnify slot="icon"></sp-icon-magnify>
                         Icon + Label
                     </sp-button>
-                    <sp-button static="white" label="Icon only" icon-only>
+                    <sp-button static-color="white" label="Icon only" icon-only>
                         <sp-icon-magnify slot="icon"></sp-icon-magnify>
                     </sp-button>
                 </sp-button-group>
@@ -184,16 +184,16 @@ governing permissions and limitations under the License.
                         min-width: max-content;
                     "
                 >
-                    <sp-button treatment="outline" static="black">
+                    <sp-button treatment="outline" static-color="black">
                         Label only
                     </sp-button>
-                    <sp-button treatment="outline" static="black">
+                    <sp-button treatment="outline" static-color="black">
                         <sp-icon-magnify slot="icon"></sp-icon-magnify>
                         Icon + Label
                     </sp-button>
                     <sp-button
                         treatment="outline"
-                        static="black"
+                        static-color="black"
                         label="Icon only"
                         icon-only
                     >
@@ -210,20 +210,32 @@ governing permissions and limitations under the License.
                         min-width: max-content;
                     "
                 >
-                    <sp-button treatment="outline" static="white">
+                    <sp-button treatment="outline" static-color="white">
                         Label only
                     </sp-button>
-                    <sp-button treatment="outline" static="white">
+                    <sp-button treatment="outline" static-color="white">
                         <sp-icon-magnify slot="icon"></sp-icon-magnify>
                         Icon + Label
                     </sp-button>
                     <sp-button
                         treatment="outline"
-                        static="white"
+                        static-color="white"
                         label="Icon only"
                         icon-only
                     >
                         <sp-icon-magnify slot="icon"></sp-icon-magnify>
+                    </sp-button>
+                </sp-button-group>
+            </div>
+
+            <div id="variantLabel">pending (UXP degraded)</div>
+            <div class="demo-example" style="display: flex">
+                <sp-button-group style="min-width: max-content">
+                    <sp-button size="m" variant="primary" pending>
+                        Pending
+                    </sp-button>
+                    <sp-button size="m" variant="secondary" pending pending-label="Saving">
+                        Custom label
                     </sp-button>
                 </sp-button-group>
             </div>

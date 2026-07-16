@@ -12,24 +12,13 @@ governing permissions and limitations under the License.
 
 /* write uxp style overrides */
 
+/* max() CSS function not supported in UXP — the SWC source uses
+   margin-block: var(--mod-..., max(0px, (section-divider-height - thickness) / 2)).
+   Pre-calculate the value in a custom property using calc() which UXP supports.
+   The enableLogicalProperties mapper translates margin-block → margin-top + margin-bottom. */
 :host {
-    /* Workaround for - https://jira.corp.adobe.com/browse/UXP-22514 */
     --uxp-swc-menu-divider-margin-block: calc(
-        (
-                var(--spectrum-menu-item-section-divider-height) -
-                    var(--spectrum-menu-divider-thickness)
-            ) / 2
+        (var(--spectrum-menu-item-section-divider-height) - var(--spectrum-menu-divider-thickness)) / 2
     );
-    width: auto;
-    height: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-    margin-top: var(--uxp-swc-menu-divider-margin-block);
-    margin-bottom: var(--uxp-swc-menu-divider-margin-block);
-    margin-left: var(
-        --mod-menu-item-label-inline-edge-to-content,
-        var(--spectrum-menu-item-label-inline-edge-to-content)
-    );
-    margin-right: var(
-        --mod-menu-item-label-inline-edge-to-content,
-        var(--spectrum-menu-item-label-inline-edge-to-content)
-    );
+    margin-block: var(--uxp-swc-menu-divider-margin-block);
 }

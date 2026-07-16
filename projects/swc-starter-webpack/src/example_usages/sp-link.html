@@ -16,15 +16,21 @@ governing permissions and limitations under the License.
     <div id="playground">
         <div id="left">
             <div id="subtitle">sp-link</div>
-            This is a
-            <sp-link id="lifestory-1" href="http://www.adobe.com">
-                standard link
-            </sp-link>
-            This is a
-            <sp-link href="#" variant="secondary">secondary link</sp-link>
             <p>
                 This is a
-                <sp-link quiet href="#">quiet standard link</sp-link>
+                <sp-link id="lifestory-1" href="https://www.adobe.com">
+                    primary link
+                </sp-link>
+                .
+            </p>
+            <p>
+                This is a
+                <sp-link href="#" variant="secondary">secondary link</sp-link>
+                .
+            </p>
+            <p>
+                This is a
+                <sp-link quiet href="#">quiet primary link</sp-link>
                 .
             </p>
             <p>
@@ -34,29 +40,37 @@ governing permissions and limitations under the License.
                 </sp-link>
                 .
             </p>
+            <p>
+                This is a
+                <sp-link disabled href="#">disabled link</sp-link>
+                .
+            </p>
             <div
                 style="
-                    background-color: #0f797d;
+                    background-color: var(--spectrum-gray-800);
                     padding: 15px 20px;
                     display: inline-block;
                 "
             >
-                <p style="color: rgb(240, 240, 240)">
+                <p style="color: var(--spectrum-gray-50)">
                     This is a
-                    <sp-link static="white" quiet href="#">quiet link</sp-link>
+                    <sp-link static-color="white" quiet href="#">
+                        quiet static white link
+                    </sp-link>
                     over a background.
                 </p>
             </div>
             <div
                 style="
-                    background-color: #0f797d;
+                    background-color: var(--spectrum-gray-800);
                     padding: 15px 20px;
                     display: inline-block;
+                    margin-top: 8px;
                 "
             >
-                <p style="color: rgb(240, 240, 240)">
+                <p style="color: var(--spectrum-gray-50)">
                     This
-                    <sp-link static="white" href="#">link</sp-link>
+                    <sp-link static-color="white" href="#">link</sp-link>
                     is over a background.
                 </p>
             </div>
@@ -65,7 +79,7 @@ governing permissions and limitations under the License.
         <div id="right">
             <div id="subtitle">my-link</div>
             This is a
-            <my-link class="my-link" href="http://www.adobe.com">
+            <my-link class="my-link" href="https://www.adobe.com">
                 my link
             </my-link>
         </div>

@@ -16,8 +16,7 @@ import swcSidenavHeadingStyles from '@swc-uxp-internal/sidenav/src/sidenav-headi
 import uxpSidenavHeadingStyles from './uxp-sidenav-heading.css.js';
 
 const combinedSidenavHeadingStyles = unsafeCSS(
-    swcSidenavHeadingStyles.toString(),
-    uxpSidenavHeadingStyles.toString()
+    swcSidenavHeadingStyles.toString() + '\n' + uxpSidenavHeadingStyles.toString()
 );
 
 export default combinedSidenavHeadingStyles;

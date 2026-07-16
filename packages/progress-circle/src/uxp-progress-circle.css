@@ -1,0 +1,69 @@
+/*
+Copyright 2026 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* [UXP] Two upstream token chains broken in UXP shadow DOM:
+   1. progress-circle-overrides.css sets --spectrum-progress-circle-size: inherit, which does not
+      cascade from :root into shadow DOM → override with concrete px fallbacks.
+   2. progress-circle-overrides.css maps color tokens through --system-progress-circle-* tokens
+      that do not resolve in UXP shadow DOM → override with direct fallback values. */
+:host {
+    --spectrum-progress-circle-size: var(--mod-progress-circle-size, var(--spectrum-progress-circle-size-medium, 32px));
+    --spectrum-progress-circle-thickness: var(--mod-progress-circle-thickness, var(--spectrum-progress-circle-thickness-medium, 3px));
+    --spectrum-progress-circle-track-border-color: var(--mod-progress-circle-track-border-color, var(--spectrum-gray-300));
+    --spectrum-progress-circle-fill-border-color: var(--mod-progress-circle-fill-border-color, var(--spectrum-accent-content-color-default));
+}
+:host([size=s]) {
+    --spectrum-progress-circle-size: var(--mod-progress-circle-size, var(--spectrum-progress-circle-size-small, 16px));
+    --spectrum-progress-circle-thickness: var(--mod-progress-circle-thickness, var(--spectrum-progress-circle-thickness-small, 2px));
+}
+:host([size=l]) {
+    --spectrum-progress-circle-size: var(--mod-progress-circle-size, var(--spectrum-progress-circle-size-large, 64px));
+    --spectrum-progress-circle-thickness: var(--mod-progress-circle-thickness, var(--spectrum-progress-circle-thickness-large, 4px));
+}
+
+/* [UXP] rgba(var(--rgb-triple)) is not supported in UXP (UXP-21294).
+   --spectrum-transparent-white-300/900 use this pattern — hardcode rgba values. */
+:host([static-color=white]) {
+    --spectrum-progress-circle-track-border-color-over-background: var(--mod-progress-circle-track-border-color-over-background, rgba(255, 255, 255, 0.3));
+    --spectrum-progress-circle-fill-border-color-over-background: var(--mod-progress-circle-fill-border-color-over-background, rgba(255, 255, 255, 0.9));
+}
+
+/* [UXP] SVG stroke color: apply the resolved color tokens to the SVG elements
+   rendered by the overridden render() method. */
+.uxp-track {
+    stroke: var(--spectrum-progress-circle-track-border-color);
+}
+.uxp-fill {
+    stroke: var(--spectrum-progress-circle-fill-border-color);
+}
+:host([static-color=white]) .uxp-track {
+    stroke: var(--spectrum-progress-circle-track-border-color-over-background);
+}
+:host([static-color=white]) .uxp-fill {
+    stroke: var(--spectrum-progress-circle-fill-border-color-over-background);
+}
+
+/* [UXP] Indeterminate animation: the upstream CSS animates .fills / .fillSubMask1 / .fillSubMask2,
+   but our render() replaces that entire div structure with an SVG. Those target elements no longer
+   exist in the DOM, so upstream animations never fire — in any browser.
+   Provide our own spin animation targeting the SVG element. UXP does not support @keyframes/
+   animation properties (confirmed via uxp-css-data.json), so this only animates in Chrome.
+   A static 25% arc remains the UXP fallback (acceptable per the Known Issues note in README). */
+@keyframes uxp-circle-spin {
+    to { transform: rotate(1turn); }
+}
+/* render() adds class="uxp-indeterminate" to the SVG whenever isIndeterminate is true,
+   covering both the legacy [indeterminate] attribute and the progress=null JS path. */
+svg.uxp-indeterminate {
+    animation: uxp-circle-spin 0.75s linear infinite;
+    transform-origin: center;
+}

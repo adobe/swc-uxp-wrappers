@@ -16,8 +16,7 @@ import swcRadioStyles from '@swc-uxp-internal/radio/src/radio.css.js';
 import uxpRadioStyles from './uxp-radio.css.js';
 
 const combinedRadioStyles = unsafeCSS(
-    swcRadioStyles.toString(),
-    uxpRadioStyles.toString()
+    swcRadioStyles.toString() + '\n' + uxpRadioStyles.toString()
 );
 
 export default combinedRadioStyles;

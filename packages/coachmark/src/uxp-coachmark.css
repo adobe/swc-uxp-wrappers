@@ -1,0 +1,90 @@
+/*
+Copyright 2026 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/*
+ * UXP overrides for sp-coachmark (SWC v1.12.x).
+ *
+ * This plugin's manifest has "enableLogicalProperties": true, so UXP
+ * automatically translates all logical CSS properties (block-size,
+ * inline-size, padding-block/inline, margin-block/inline, etc.) to
+ * their physical equivalents at parse time.
+ *
+ * Only properties NOT covered by that mapper need explicit overrides here:
+ *   - border-start-*-radius  (logical border-radius, not in the mapper)
+ *   - overflow: visible       (behavior fix, not a logical property)
+ *   - gap workarounds         (gap unreliable in UXP flex — UXP-21294)
+ *
+ * IMPORTANT: do not put backticks in any comment in this file — this file is
+ * synced verbatim into uxp-coachmark.css.js, where a backtick inside a comment
+ * terminates the css template literal and breaks the webpack build.
+ */
+
+/* border-start-start-radius / border-start-end-radius are logical border-radius
+ * properties not covered by enableLogicalProperties. Replicate as physical. */
+.image-wrapper {
+    border-top-left-radius: inherit;
+    border-top-right-radius: inherit;
+}
+
+.image {
+    border-top-left-radius: calc(
+        var(--mod-coachmark-border-radius, var(--spectrum-coachmark-border-radius))
+        - var(--mod-coachmark-border-size, var(--spectrum-coachmark-border-size))
+    );
+    border-top-right-radius: calc(
+        var(--mod-coachmark-border-radius, var(--spectrum-coachmark-border-radius))
+        - var(--mod-coachmark-border-size, var(--spectrum-coachmark-border-size))
+    );
+}
+
+/* overflow: visible — UXP flex containers default to overflow:hidden,
+ * which clips the action-menu dropdown and the header's action button.
+ * .footer is also included: the action dropdown is inside .static-item
+ * which is inside .footer — both must be visible. Moving .footer here
+ * (not in the JS-injected style) ensures it survives reconnects where
+ * firstUpdated does not re-run. */
+.header,
+.action-menu,
+.static-item,
+.footer {
+    overflow: visible;
+}
+
+/* gap workarounds — gap is unreliable in UXP flex containers (UXP-21294).
+ * Upstream uses gap on .keys and .flex-container; replace with margins.
+ *
+ * gap:0 neutralises the upstream gap in standard browsers so that only the
+ * margin-right below provides spacing — without it, browsers would apply
+ * BOTH the upstream gap AND the margin (double spacing, MUST-1 violation).
+ * In UXP, gap is already broken/zero, so gap:0 is a no-op there.
+ *
+ * :last-child { margin-right:0 } suppresses the trailing margin to match
+ * gap semantics exactly (gap never adds space after the last item). */
+.keys {
+    gap: 0;
+}
+.keys > * {
+    margin-right: var(--spectrum-coachmark-dimension-size-50);
+    margin-bottom: var(--spectrum-coachmark-dimension-size-175);
+}
+/* gap: suppresses trailing right-margin — gap never adds space after last item */
+.keys > *:last-child { margin-right: 0; }
+
+.flex-container {
+    gap: 0;
+}
+.flex-container > * {
+    margin-right: var(--spectrum-coachmark-dimension-size-200);
+    margin-bottom: var(--spectrum-coachmark-dimension-size-175);
+}
+/* gap: suppresses trailing right-margin — gap never adds space after last item */
+.flex-container > *:last-child { margin-right: 0; }

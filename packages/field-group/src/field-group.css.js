@@ -16,8 +16,7 @@ import swcFieldGroupStyles from '@swc-uxp-internal/field-group/src/field-group.c
 import uxpFieldGroupStyles from './uxp-field-group.css.js';
 
 const combinedFieldGroupStyles = unsafeCSS(
-    swcFieldGroupStyles.toString(),
-    uxpFieldGroupStyles.toString()
+    swcFieldGroupStyles.toString() + '\n' + uxpFieldGroupStyles.toString()
 );
 
 export default combinedFieldGroupStyles;

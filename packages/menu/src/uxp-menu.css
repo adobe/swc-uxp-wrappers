@@ -12,6 +12,8 @@ governing permissions and limitations under the License.
 
 /* write uxp style overrides */
 
+/* padding-inline-start on ::slotted() is not reliably applied in UXP — override with
+   physical padding-left to ensure selectable-item indent is applied correctly. */
 :host([selects]) ::slotted(sp-menu-item) {
     padding-left: var(
         --mod-menu-item-selectable-edge-to-text-not-selected,

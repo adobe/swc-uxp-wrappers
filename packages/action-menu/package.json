@@ -1,0 +1,41 @@
+{
+    "name": "@swc-uxp-wrappers/action-menu",
+    "version": "3.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/action-menu component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/adobe/swc-uxp-wrappers.git",
+        "directory": "packages/action-menu"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/ActionMenu.js": "./src/ActionMenu.js",
+        "./src/action-menu.css.js": "./src/action-menu.css.js",
+        "./src/uxp-action-menu.css.js": "./src/uxp-action-menu.css.js",
+        "./sp-action-menu.js": "./sp-action-menu.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/action-menu": "npm:@spectrum-web-components/action-menu@1.12.2",
+        "@swc-uxp-wrappers/menu": "3.0.0",
+        "@swc-uxp-wrappers/overlay": "3.0.0",
+        "@swc-uxp-wrappers/popover": "3.0.0"
+    },
+    "files": [
+        "**/*.js",
+        "**/*.css"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/action-menu"
+    ]
+}

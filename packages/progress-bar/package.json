@@ -1,0 +1,39 @@
+{
+    "name": "@swc-uxp-wrappers/progress-bar",
+    "version": "3.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/progress-bar component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/adobe/swc-uxp-wrappers.git",
+        "directory": "packages/progress-bar"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/ProgressBar.js": "./src/ProgressBar.js",
+        "./src/uxp-progress-bar.css.js": "./src/uxp-progress-bar.css.js",
+        "./src/progress-bar-overrides.css.js": "./src/progress-bar-overrides.css.js",
+        "./sp-progress-bar.js": "./sp-progress-bar.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/progress-bar": "npm:@spectrum-web-components/progress-bar@1.12.2",
+        "@swc-uxp-wrappers/field-label": "3.0.0"
+    },
+    "files": [
+        "**/*.js",
+        "**/*.css"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/progress-bar"
+    ]
+}

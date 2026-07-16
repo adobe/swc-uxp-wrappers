@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/textfield",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -20,11 +20,14 @@
         "./package.json": "./package.json",
         "./src/Textfield.js": "./src/Textfield.js",
         "./src/textfield.css.js": "./src/textfield.css.js",
+        "./src/textfield-overrides.css.js": "./src/textfield-overrides.css.js",
         "./sp-textfield.js": "./sp-textfield.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/textfield": "npm:@spectrum-web-components/textfield@0.37.0",
-        "@swc-uxp-wrappers/help-text": "2.0.0"
+        "@swc-uxp-internal/textfield": "npm:@spectrum-web-components/textfield@1.12.1",
+        "@swc-uxp-wrappers/help-text": "3.0.0",
+        "@swc-uxp-wrappers/overlay": "3.0.0",
+        "@swc-uxp-wrappers/tooltip": "3.0.0"
     },
     "files": [
         "**/*.js"

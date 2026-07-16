@@ -16,7 +16,7 @@ import styles from './uxp-button.css.js';
 
 class UxpButton extends Button {
     static get styles() {
-        return [super.styles, styles];
+        return [...super.styles, styles];
     }
 }
 

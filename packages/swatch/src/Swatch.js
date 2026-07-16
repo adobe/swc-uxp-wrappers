@@ -14,10 +14,33 @@ import { Swatch } from '@swc-uxp-internal/swatch/src/Swatch.js';
 
 import styles from './uxp-swatch.css.js';
 
+// UXP does not support CSS Color Level 4 space-separated syntax, e.g. rgb(255 0 0 / 0.7).
+// The alpha channel is silently dropped, rendering the color as fully opaque.
+// Detect and convert to the legacy comma-separated rgba()/hsla() form that UXP understands.
+function toUxpColor(color) {
+    if (!color) return color;
+    const m = color.match(
+        /^(rgba?|hsla?)\(\s*([\d.]+(?:deg|rad|turn|grad)?%?)\s+([\d.]+%?)\s+([\d.]+%?)(?:\s*\/\s*([\d.]+%?))?\s*\)$/i
+    );
+    if (!m) return color;
+    const [, fn, a, b, c, alpha] = m;
+    const base = fn.replace(/a$/i, '');
+    return alpha !== undefined
+        ? `${base}a(${a}, ${b}, ${c}, ${alpha})`
+        : `${base}(${a}, ${b}, ${c})`;
+}
+
 class UxpSwatch extends Swatch {
     static get styles() {
-        // We are combining our styles to make all super class styles available along with the transitive dependent classes styles.
-        return [super.styles, styles];
+        return [...super.styles, styles];
+    }
+
+    get color() {
+        return super.color;
+    }
+
+    set color(value) {
+        super.color = toUxpColor(value);
     }
 }
 

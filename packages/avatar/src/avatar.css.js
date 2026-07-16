@@ -16,8 +16,7 @@ import swcAvatarStyles from '@swc-uxp-internal/avatar/src/avatar.css.js';
 import uxpAvatarStyles from './uxp-avatar.css.js';
 
 const combinedAvatarStyles = unsafeCSS(
-    swcAvatarStyles.toString(),
-    uxpAvatarStyles.toString()
+    swcAvatarStyles.toString() + '\n' + uxpAvatarStyles.toString()
 );
 
 export default combinedAvatarStyles;

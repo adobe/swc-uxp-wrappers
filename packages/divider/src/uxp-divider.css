@@ -12,12 +12,6 @@ governing permissions and limitations under the License.
 
 /* write uxp style overrides */
 
-:host {
-    height: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-    width: 100%;
-}
-
-:host([vertical]) {
-    width: var(--mod-divider-thickness, var(--spectrum-divider-thickness));
-    height: 100%;
-}
+/* No UXP-specific overrides needed for v1.12.0.
+   block-size / inline-size on :host and :host([vertical]) are translated
+   automatically by UXP's enableLogicalProperties mapper. */

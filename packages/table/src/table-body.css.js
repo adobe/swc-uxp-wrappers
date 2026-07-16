@@ -16,8 +16,7 @@ import swcTableBodyStyles from '@swc-uxp-internal/table/src/table-body.css.js';
 import uxpTableBodyStyles from './uxp-table-body.css.js';
 
 const combinedTableBodyStyles = unsafeCSS(
-    swcTableBodyStyles.toString(),
-    uxpTableBodyStyles.toString()
+    swcTableBodyStyles.toString() + '\n' + uxpTableBodyStyles.toString()
 );
 
 export default combinedTableBodyStyles;

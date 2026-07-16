@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/search",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -20,12 +20,13 @@
         "./package.json": "./package.json",
         "./src/Search.js": "./src/Search.js",
         "./src/search.css.js": "./src/search.css.js",
+        "./src/search-overrides.css.js": "./src/search-overrides.css.js",
         "./sp-search.js": "./sp-search.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/search": "npm:@spectrum-web-components/search@0.37.0",
-        "@swc-uxp-wrappers/button": "2.0.0",
-        "@swc-uxp-wrappers/textfield": "2.0.0"
+        "@swc-uxp-internal/search": "npm:@spectrum-web-components/search@1.12.1",
+        "@swc-uxp-wrappers/button": "3.0.0",
+        "@swc-uxp-wrappers/textfield": "3.0.0"
     },
     "files": [
         "**/*.js"

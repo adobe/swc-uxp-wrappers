@@ -1,0 +1,47 @@
+/*
+Copyright 2026 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/*
+ * UXP overrides for sp-coach-indicator (SWC v1.12.x).
+ *
+ * "enableLogicalProperties": true in manifest.json means UXP auto-translates
+ * all logical CSS properties (inline-size, block-size, inset-*, etc.) to their
+ * physical equivalents. Rules for those are therefore not needed here.
+ *
+ * Theme@1.12.0 provides all --spectrum-coach-indicator-* color tokens via
+ * cascade, so no hardcoded rgb() fallbacks are needed for border-color either.
+ *
+ * What remains:
+ *   - :host([quiet]) physical sizing: upstream :host([quiet]) sets logical
+ *     sizing tokens that cascade, but verifying they reach UXP correctly
+ *     requires explicit physical fallback.
+ *   - v1.12.0 attribute rename: static → static-color (selector update only).
+ *
+ * v1.12.0 breaking changes vs v0.44.0:
+ *   - staticColor property (attr: static-color) replaces the old static attr
+ *   - variant property removed; use staticColor instead
+ */
+
+/* quiet variant: upstream :host([quiet]) sets --mod-coach-indicator-inline-size /
+ * --mod-coach-indicator-block-size as custom properties; the actual sizing is applied
+ * on :host via inline-size / block-size, which enableLogicalProperties translates to
+ * width / height at parse time.
+ *
+ * This rule adds an explicit physical width/height directly on :host([quiet]) as a
+ * safety net in case UXP's token cascade does not propagate the custom properties set
+ * in :host([quiet]) to the translated physical rule on :host.
+ * TODO: verify whether this rule is still needed in the next upgrade cycle — if
+ * enableLogicalProperties correctly handles the cascade, this block can be removed. */
+:host([quiet]) {
+    width: var(--mod-coach-indicator-inline-size, var(--spectrum-coach-indicator-inline-size));
+    height: var(--mod-coach-indicator-block-size, var(--spectrum-coach-indicator-block-size));
+}

@@ -16,8 +16,7 @@ import swcSidenavItemStyles from '@swc-uxp-internal/sidenav/src/sidenav-item.css
 import uxpSidenavItemStyles from './uxp-sidenav-item.css.js';
 
 const combinedSidenavItemStyles = unsafeCSS(
-    swcSidenavItemStyles.toString(),
-    uxpSidenavItemStyles.toString()
+    swcSidenavItemStyles.toString() + '\n' + uxpSidenavItemStyles.toString()
 );
 
 export default combinedSidenavItemStyles;

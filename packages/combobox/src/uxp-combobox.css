@@ -1,0 +1,169 @@
+/*
+Copyright 2026 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* --mod-combobox-background-color-default has no --spectrum-* fallback in SWC CSS.
+   UXP does not propagate IACVT through var() chains — when this token is unset the
+   native <input> falls back to its OS default instead of the theme color.
+   Provide explicit fallbacks so both halves of the combobox share the same background. */
+:host {
+    --mod-textfield-background-color: var(
+        --mod-combobox-background-color-default,
+        var(--spectrum-textfield-background-color)
+    );
+    --mod-picker-button-background-color: var(
+        --mod-combobox-background-color-default,
+        var(--spectrum-textfield-background-color)
+    );
+}
+
+/* @media (hover: hover) unwrap — UXP does not support hover media query.
+   Also background-color: revert is not supported in UXP; use initial instead. */
+:host .is-readOnly:not(.spectrum-Combobox--quiet) #input:read-only:hover {
+    background-color: initial;
+}
+
+:host([disabled]) .is-readOnly:not(.spectrum-Combobox--quiet) #input:read-only:hover {
+    background-color: var(
+        --mod-textfield-background-color-disabled,
+        var(--spectrum-combobox-readonly-background-color-disabled)
+    );
+}
+
+.button:not(:disabled, .is-invalid, [quiet]):hover,
+:host(:hover) .button:not(:disabled, .is-invalid, [quiet]) {
+    --mod-picker-button-border-color: var(
+        --highcontrast-combobox-border-color-highlight,
+        var(--mod-combobox-border-color-hover, var(--spectrum-combobox-border-color-hover))
+    );
+}
+
+/* :has() removed from selector list — UXP drops entire rule when any selector in the list
+   is invalid, so :host(:hover):has(:focus) would cause all selectors in this list to fail. */
+:host([focused]) .button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet):hover,
+.button:not(:disabled, .is-invalid, [quiet]):focus:hover,
+:host([focused]:hover) .button:not(:disabled, .is-invalid, [quiet]) {
+    --mod-picker-button-border-color: var(
+        --highcontrast-combobox-border-color-highlight,
+        var(--mod-combobox-border-color-focus-hover, var(--spectrum-combobox-border-color-focus-hover))
+    );
+}
+
+:host([invalid]) .button:not(:disabled, .spectrum-PickerButton--quiet):hover,
+:host([invalid]:hover) .button:not(:disabled, .spectrum-PickerButton--quiet) {
+    --mod-picker-button-border-color: var(
+        --highcontrast-combobox-border-color-invalid,
+        var(--mod-combobox-border-color-invalid-hover, var(--spectrum-combobox-border-color-invalid-hover))
+    );
+}
+
+/* :has() removed from selector list */
+:host([invalid][focused]) .button:not(:disabled, .spectrum-PickerButton--quiet):hover,
+:host([invalid]) .button:not(:disabled, .spectrum-PickerButton--quiet):focus:hover,
+:host([focused][invalid]:hover) .button:not(:disabled, .spectrum-PickerButton--quiet) {
+    --mod-picker-button-border-color: var(
+        --highcontrast-combobox-border-color-invalid,
+        var(
+            --mod-combobox-border-color-invalid-focus-hover,
+            var(--spectrum-combobox-border-color-invalid-focus-hover)
+        )
+    );
+}
+
+/* All --mod-combobox-background-color-* tokens have no --spectrum-* fallback in SWC CSS.
+   UXP does not propagate IACVT so every interaction state must carry an explicit fallback
+   to prevent the native <input> from reverting to the OS-default background on hover/focus. */
+#input:active {
+    --mod-textfield-background-color: var(
+        --mod-combobox-background-color-hover,
+        var(--spectrum-textfield-background-color)
+    );
+}
+
+#input:hover,
+#textfield:hover #input {
+    --mod-textfield-background-color: var(
+        --mod-combobox-background-color-hover,
+        var(--spectrum-textfield-background-color)
+    );
+}
+
+#input:focus,
+:host([focused]) #textfield #input {
+    --mod-textfield-background-color: var(
+        --mod-combobox-background-color-focus,
+        var(--spectrum-textfield-background-color)
+    );
+}
+
+#input:focus:hover,
+:host([focused]) #textfield #input:hover {
+    --mod-combobox-border-color-default: var(--spectrum-combobox-border-color-focus-hover);
+    --mod-textfield-background-color: var(
+        --mod-combobox-background-color-focus-hover,
+        var(--spectrum-textfield-background-color)
+    );
+}
+
+:host([keyboard-focused]) #textfield #input {
+    --mod-textfield-background-color: var(
+        --mod-combobox-background-color-key-focus,
+        var(--spectrum-textfield-background-color)
+    );
+}
+
+/* :has() in selector lists outside @media (hover:hover) — UXP drops entire rule.
+   Redeclare without the :has() selector so the valid selectors still apply. */
+:host([focused]) .button:not(:disabled, .is-invalid, .spectrum-PickerButton--quiet),
+.button:not(:disabled, .is-invalid, [quiet]):focus,
+:host([focused]) .button:not(:disabled, .is-invalid, [quiet]) {
+    --mod-picker-button-border-color: var(
+        --highcontrast-combobox-border-color-highlight,
+        var(--mod-combobox-border-color-focus, var(--spectrum-combobox-border-color-focus))
+    );
+}
+
+/* :has() removed — only redeclare the valid :active selector */
+.button:not(:disabled, .is-invalid, [quiet]):active {
+    --mod-picker-button-border-color: var(
+        --highcontrast-combobox-border-color-highlight,
+        var(--mod-combobox-border-color-hover, var(--spectrum-combobox-border-color-hover))
+    );
+}
+
+/* :has() removed from selector list */
+:host([invalid][focused]) .button:not(:disabled, .spectrum-PickerButton--quiet),
+:host([invalid]) .button:not(:disabled, .spectrum-PickerButton--quiet):focus,
+:host([focused][invalid]) .button:not(:disabled, .spectrum-PickerButton--quiet) {
+    --mod-picker-button-border-color: var(
+        --highcontrast-combobox-border-color-invalid,
+        var(--mod-combobox-border-color-invalid-focus, var(--spectrum-combobox-border-color-invalid-focus))
+    );
+}
+
+/* :has() removed — only redeclare the valid :active selector */
+:host([invalid]) .button:not(:disabled, .spectrum-PickerButton--quiet):active {
+    --mod-picker-button-border-color: var(
+        --highcontrast-combobox-border-color-invalid,
+        var(--mod-combobox-border-color-invalid-hover, var(--spectrum-combobox-border-color-invalid-hover))
+    );
+}
+
+/* border-block-end shorthand with mixed var() keyword var() value is not supported in UXP.
+   Split into individual physical border properties. */
+:host([quiet]) #textfield.is-readOnly #input:read-only {
+    border-bottom-width: var(--mod-combobox-border-width, var(--spectrum-combobox-border-width));
+    border-bottom-style: solid;
+    border-bottom-color: var(
+        --mod-combobox-readonly-input-border-color,
+        var(--spectrum-combobox-readonly-input-border-color)
+    );
+}

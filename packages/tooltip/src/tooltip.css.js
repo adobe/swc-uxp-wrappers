@@ -16,8 +16,7 @@ import swcTooltipStyles from '@swc-uxp-internal/tooltip/src/tooltip.css.js';
 import uxpTooltipStyles from './uxp-tooltip.css.js';
 
 const combinedTooltipStyles = unsafeCSS(
-    swcTooltipStyles.toString(),
-    uxpTooltipStyles.toString()
+    swcTooltipStyles.toString() + '\n' + uxpTooltipStyles.toString()
 );
 
 export default combinedTooltipStyles;

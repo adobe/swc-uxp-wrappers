@@ -16,8 +16,7 @@ import swcTextfieldStyles from '@swc-uxp-internal/textfield/src/textfield.css.js
 import uxpTextfieldStyles from './uxp-textfield.css.js';
 
 const combinedTextfieldStyles = unsafeCSS(
-    swcTextfieldStyles.toString(),
-    uxpTextfieldStyles.toString()
+    swcTextfieldStyles.toString() + '\n' + uxpTextfieldStyles.toString()
 );
 
 export default combinedTextfieldStyles;

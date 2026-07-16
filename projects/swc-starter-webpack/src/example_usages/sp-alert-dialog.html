@@ -1,0 +1,84 @@
+<!--
+Copyright 2026 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+-->
+
+<!-- confirmation variant -->
+<sp-alert-dialog variant="confirmation">
+    <h2 slot="heading">Enable Smart Filters?</h2>
+    Smart filters are nondestructive and will preserve your original images.
+    <sp-button variant="secondary" treatment="outline" slot="button">
+        Cancel
+    </sp-button>
+    <sp-button variant="accent" slot="button">Enable</sp-button>
+</sp-alert-dialog>
+
+<!-- information variant -->
+<sp-alert-dialog variant="information">
+    <h2 slot="heading">Connect to WiFi</h2>
+    Please connect to WiFi to sync your projects or go to Settings to change
+    your preferences.
+    <sp-button variant="secondary" treatment="outline" slot="button">
+        Cancel
+    </sp-button>
+    <sp-button variant="accent" slot="button">Connect to WiFi</sp-button>
+</sp-alert-dialog>
+
+<!-- warning variant -->
+<sp-alert-dialog variant="warning">
+    <h2 slot="heading">Unverified Format</h2>
+    This format has not been verified and may not be viewable for some users.
+    Do you want to continue publishing?
+    <sp-button variant="secondary" treatment="outline" slot="button">
+        Cancel
+    </sp-button>
+    <sp-button variant="accent" slot="button">Continue</sp-button>
+</sp-alert-dialog>
+
+<!-- error variant -->
+<sp-alert-dialog variant="error">
+    <h2 slot="heading">Unable to Delete</h2>
+    This folder could not be deleted. Access was denied.
+    <sp-button variant="accent" slot="button">Dismiss</sp-button>
+</sp-alert-dialog>
+
+<!-- destructive variant -->
+<sp-alert-dialog variant="destructive">
+    <h2 slot="heading">Permanently Delete 3 Projects?</h2>
+    Are you sure you want to delete the 3 selected projects? You cannot undo
+    this action.
+    <sp-button variant="secondary" treatment="outline" slot="button">
+        Cancel
+    </sp-button>
+    <sp-button variant="negative" slot="button">Delete</sp-button>
+</sp-alert-dialog>
+
+<!-- extended component (my-alert-dialog) -->
+<my-alert-dialog variant="confirmation">
+    <h2 slot="heading">Custom Alert Dialog</h2>
+    This is a custom extension of sp-alert-dialog with an accent border.
+    <sp-button variant="secondary" treatment="outline" slot="button">
+        Cancel
+    </sp-button>
+    <sp-button variant="accent" slot="button">Confirm</sp-button>
+</my-alert-dialog>
+
+<!-- secondary variant -->
+<sp-alert-dialog variant="secondary">
+    <h2 slot="heading">Rate this App</h2>
+    If you enjoy our app, would you mind taking a moment to rate it?
+    <sp-button variant="secondary" treatment="outline" slot="button">
+        No, Thanks
+    </sp-button>
+    <sp-button variant="secondary" treatment="outline" slot="button">
+        Remind Me Later
+    </sp-button>
+    <sp-button variant="accent" slot="button">Rate It</sp-button>
+</sp-alert-dialog>

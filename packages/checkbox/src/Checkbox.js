@@ -16,7 +16,28 @@ import styles from './uxp-checkbox.css.js';
 
 class UxpCheckbox extends Checkbox {
     static get styles() {
-        return [super.styles, styles];
+        return [...super.styles, styles];
+    }
+
+    updated(changedProperties) {
+        super.updated(changedProperties);
+        // UXP does not reliably propagate CSS custom property changes (driven by the
+        // size attribute on :host) down to shadow children like #label.  This means
+        // margin-inline-start on #label keeps its stale computed value after a size
+        // change, causing the label text to wrap until a hover/repaint forces a
+        // re-evaluation.  Force a layout flush on #label whenever size changes.
+        if (changedProperties.has('size')) {
+            const label = this.shadowRoot && this.shadowRoot.querySelector('#label');
+            if (label) {
+                label.style.display = 'none';
+                // Reading offsetWidth flushes layout; the next rAF restores display.
+                // eslint-disable-next-line no-unused-expressions
+                label.offsetWidth;
+                requestAnimationFrame(() => {
+                    label.style.display = '';
+                });
+            }
+        }
     }
 }
 

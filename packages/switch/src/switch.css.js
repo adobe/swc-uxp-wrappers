@@ -16,8 +16,7 @@ import swcSwitchStyles from '@swc-uxp-internal/switch/src/switch.css.js';
 import uxpSwitchStyles from './uxp-switch.css.js';
 
 const combinedSwitchStyles = unsafeCSS(
-    swcSwitchStyles.toString(),
-    uxpSwitchStyles.toString()
+    swcSwitchStyles.toString() + '\n' + uxpSwitchStyles.toString()
 );
 
 export default combinedSwitchStyles;

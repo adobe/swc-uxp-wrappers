@@ -16,7 +16,7 @@ import styles from './uxp-card.css.js';
 
 class UxpCard extends Card {
     static get styles() {
-        return [super.styles, styles];
+        return [...super.styles, styles];
     }
 }
 

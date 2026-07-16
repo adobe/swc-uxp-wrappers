@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/sidenav",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -22,14 +22,17 @@
         "./src/SidenavHeading.js": "./src/SidenavHeading.js",
         "./src/SidenavItem.js": "./src/SidenavItem.js",
         "./src/sidenav.css.js": "./src/sidenav.css.js",
+        "./src/sidenav-overrides.css.js": "./src/sidenav-overrides.css.js",
         "./src/sidenav-heading.css.js": "./src/sidenav-heading.css.js",
+        "./src/sidenav-heading-overrides.css.js": "./src/sidenav-heading-overrides.css.js",
         "./src/sidenav-item.css.js": "./src/sidenav-item.css.js",
+        "./src/sidenav-item-overrides.css.js": "./src/sidenav-item-overrides.css.js",
         "./sp-sidenav.js": "./sp-sidenav.js",
         "./sp-sidenav-item.js": "./sp-sidenav-item.js",
         "./sp-sidenav-heading.js": "./sp-sidenav-heading.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/sidenav": "npm:@spectrum-web-components/sidenav@0.37.0"
+        "@swc-uxp-internal/sidenav": "npm:@spectrum-web-components/sidenav@1.12.1"
     },
     "files": [
         "**/*.js"

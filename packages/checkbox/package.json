@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/checkbox",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -20,11 +20,13 @@
         "./package.json": "./package.json",
         "./src/Checkbox.js": "./src/Checkbox.js",
         "./src/CheckboxBase.js": "./src/CheckboxBase.js",
+        "./src/CheckboxMixin.js": "./src/CheckboxMixin.js",
         "./sp-checkbox.js": "./sp-checkbox.js",
-        "./src/checkbox.css.js": "./src/checkbox.css.js"
+        "./src/checkbox.css.js": "./src/checkbox.css.js",
+        "./src/checkbox-overrides.css.js": "./src/checkbox-overrides.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/checkbox": "npm:@spectrum-web-components/checkbox@0.37.0"
+        "@swc-uxp-internal/checkbox": "npm:@spectrum-web-components/checkbox@1.12.1"
     },
     "files": [
         "**/*.js"

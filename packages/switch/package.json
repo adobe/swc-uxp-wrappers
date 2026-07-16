@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/switch",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -19,12 +19,15 @@
         ".": "./src/index.js",
         "./package.json": "./package.json",
         "./src/Switch.js": "./src/Switch.js",
+        "./src/index.js": "./src/index.js",
         "./src/switch.css.js": "./src/switch.css.js",
+        "./src/switch-legacy.css.js": "./src/switch-legacy.css.js",
+        "./src/switch-overrides.css.js": "./src/switch-overrides.css.js",
         "./sp-switch.js": "./sp-switch.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/switch": "npm:@spectrum-web-components/switch@0.37.0",
-        "@swc-uxp-wrappers/checkbox": "2.0.0"
+        "@swc-uxp-internal/switch": "npm:@spectrum-web-components/switch@1.12.1",
+        "@swc-uxp-wrappers/checkbox": "3.0.0"
     },
     "files": [
         "**/*.js"

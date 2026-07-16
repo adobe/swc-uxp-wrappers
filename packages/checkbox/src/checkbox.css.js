@@ -16,8 +16,7 @@ import swcCheckboxStyles from '@swc-uxp-internal/checkbox/src/checkbox.css.js';
 import uxpCheckboxStyles from './uxp-checkbox.css.js';
 
 const combinedCheckboxStyles = unsafeCSS(
-    swcCheckboxStyles.toString(),
-    uxpCheckboxStyles.toString()
+    swcCheckboxStyles.toString() + '\n' + uxpCheckboxStyles.toString()
 );
 
 export default combinedCheckboxStyles;

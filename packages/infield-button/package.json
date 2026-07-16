@@ -1,0 +1,38 @@
+{
+    "name": "@swc-uxp-wrappers/infield-button",
+    "version": "3.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/infield-button component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/infield-button"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/InfieldButton.js": "./src/InfieldButton.js",
+        "./src/infield-button.css.js": "./src/infield-button.css.js",
+        "./src/infield-button-overrides.css.js": "./src/infield-button-overrides.css.js",
+        "./sp-infield-button.js": "./sp-infield-button.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/infield-button": "npm:@spectrum-web-components/infield-button@1.12.1",
+        "@swc-uxp-wrappers/button": "3.0.0"
+    },
+    "files": [
+        "**/*.js"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/infield-button"
+    ]
+}

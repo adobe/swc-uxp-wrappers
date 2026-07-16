@@ -12,65 +12,17 @@ governing permissions and limitations under the License.
 
 /* write uxp style overrides */
 
-/* Workaround for missing logical property support: https://jira.corp.adobe.com/browse/UXP-20649 */
-
-:host {
-    max-width: var(
-        --mod-progressbar-max-size,
-        var(--spectrum-progressbar-max-size)
-    );
-    min-width: var(
-        --mod-progressbar-min-size,
-        var(--spectrum-progressbar-min-size)
-    );
-}
-
+/* text-align: start → left — UXP does not support text-align: start */
 .label,
 .percentage {
-    margin-bottom: var(
-        --mod-progressbar-spacing-label-to-progressbar,
-        var(--spectrum-progressbar-spacing-label-to-progressbar)
-    );
-    margin-top: var(
-        --mod-progressbar-spacing-top-to-text,
-        var(--spectrum-progressbar-spacing-top-to-text)
-    );
+    text-align: left;
 }
 
-.percentage {
-    margin-left: var(
-        --mod-progressbar-spacing-label-to-text,
-        var(--spectrum-progressbar-spacing-label-to-text)
-    );
-}
-
-.track {
-    height: var(
-        --mod-progressbar-thickness,
-        var(--spectrum-progressbar-thickness)
-    );
-    width: 100%;
-}
-
-.fill {
-    height: var(
-        --mod-progressbar-thickness,
-        var(--spectrum-progressbar-thickness)
-    );
-}
-
-:host([side-label]) .label {
-    margin-bottom: 0;
-    margin-right: var(
-        --mod-progressbar-spacing-label-to-text,
-        var(--spectrum-progressbar-spacing-label-to-text)
-    );
-}
-
+/* text-align: end → right — UXP does not support text-align: end */
 :host([side-label]) .percentage {
-    margin-bottom: 0;
-    margin-left: var(
-        --mod-spacing-progressbar-label-to-text,
-        var(--spectrum-progressbar-spacing-label-to-text)
-    );
+    text-align: right;
 }
+
+/* Logical property overrides removed — UXP handles logical properties
+   (max-inline-size, min-inline-size, block-size, inline-size, margin-block-*, margin-inline-*)
+   automatically via the logical properties mapper (enableLogicalProperties). */

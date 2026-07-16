@@ -1,0 +1,93 @@
+<!--
+Copyright 2023 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+-->
+
+<h3>sp-combobox</h3>
+
+<div id="content">
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-combobox</div>
+
+            <div id="variantLabel">default</div>
+            <div class="demo-example">
+                <sp-field-label for="combo-default">Country</sp-field-label>
+                <sp-combobox id="combo-default" placeholder="Select a country">
+                    <sp-menu-item value="us">United States</sp-menu-item>
+                    <sp-menu-item value="ca">Canada</sp-menu-item>
+                    <sp-menu-item value="mx">Mexico</sp-menu-item>
+                    <sp-menu-item value="gb">United Kingdom</sp-menu-item>
+                    <sp-menu-item value="fr">France</sp-menu-item>
+                    <sp-menu-item value="de">Germany</sp-menu-item>
+                </sp-combobox>
+            </div>
+
+            <div id="variantLabel">sizes</div>
+            <div class="demo-example">
+                <sp-field-label for="combo-s">Small</sp-field-label>
+                <sp-combobox id="combo-s" size="s" placeholder="Small size">
+                    <sp-menu-item value="a">Option A</sp-menu-item>
+                    <sp-menu-item value="b">Option B</sp-menu-item>
+                    <sp-menu-item value="c">Option C</sp-menu-item>
+                </sp-combobox>
+
+                <sp-field-label for="combo-m">Medium</sp-field-label>
+                <sp-combobox id="combo-m" placeholder="Medium size">
+                    <sp-menu-item value="a">Option A</sp-menu-item>
+                    <sp-menu-item value="b">Option B</sp-menu-item>
+                    <sp-menu-item value="c">Option C</sp-menu-item>
+                </sp-combobox>
+
+                <sp-field-label for="combo-l">Large</sp-field-label>
+                <sp-combobox id="combo-l" size="l" placeholder="Large size">
+                    <sp-menu-item value="a">Option A</sp-menu-item>
+                    <sp-menu-item value="b">Option B</sp-menu-item>
+                    <sp-menu-item value="c">Option C</sp-menu-item>
+                </sp-combobox>
+
+                <sp-field-label for="combo-xl">Extra Large</sp-field-label>
+                <sp-combobox id="combo-xl" size="xl" placeholder="XL size">
+                    <sp-menu-item value="a">Option A</sp-menu-item>
+                    <sp-menu-item value="b">Option B</sp-menu-item>
+                    <sp-menu-item value="c">Option C</sp-menu-item>
+                </sp-combobox>
+            </div>
+
+            <div id="variantLabel">disabled</div>
+            <div class="demo-example">
+                <sp-field-label for="combo-disabled">Disabled</sp-field-label>
+                <sp-combobox id="combo-disabled" disabled placeholder="Disabled combobox">
+                    <sp-menu-item value="a">Option A</sp-menu-item>
+                    <sp-menu-item value="b">Option B</sp-menu-item>
+                </sp-combobox>
+            </div>
+
+            <div id="variantLabel">invalid</div>
+            <div class="demo-example">
+                <sp-field-label for="combo-invalid">Invalid</sp-field-label>
+                <sp-combobox id="combo-invalid" invalid placeholder="Invalid combobox">
+                    <sp-menu-item value="a">Option A</sp-menu-item>
+                    <sp-menu-item value="b">Option B</sp-menu-item>
+                </sp-combobox>
+            </div>
+
+            <div id="variantLabel">quiet</div>
+            <div class="demo-example">
+                <sp-field-label for="combo-quiet">Quiet</sp-field-label>
+                <sp-combobox id="combo-quiet" quiet placeholder="Quiet combobox">
+                    <sp-menu-item value="a">Option A</sp-menu-item>
+                    <sp-menu-item value="b">Option B</sp-menu-item>
+                    <sp-menu-item value="c">Option C</sp-menu-item>
+                </sp-combobox>
+            </div>
+        </div>
+    </div>
+</div>

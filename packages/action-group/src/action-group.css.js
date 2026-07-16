@@ -16,8 +16,7 @@ import swcActionGroupStyles from '@swc-uxp-internal/action-group/src/action-grou
 import uxpActionGroupStyles from './uxp-action-group.css.js';
 
 const combinedActionGroupStyles = unsafeCSS(
-    swcActionGroupStyles.toString(),
-    uxpActionGroupStyles.toString()
+    swcActionGroupStyles.toString() + '\n' + uxpActionGroupStyles.toString()
 );
 
 export default combinedActionGroupStyles;

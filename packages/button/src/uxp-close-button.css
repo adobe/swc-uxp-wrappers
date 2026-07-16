@@ -12,10 +12,33 @@ governing permissions and limitations under the License.
 
 /* write uxp style overrides */
 
-/* Workaround for missing inset property: https://jira.corp.adobe.com/browse/UXP-20649 */
-:host:after {
-    top: 0px;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+/* @media (hover:hover) unwrap — UXP does not support hover media query.
+   color is set on :host (not .icon) to avoid the compound ':host(selector) .child { color }'
+   pattern which is unreliable in UXP — .icon has color:inherit so it picks up the host value.
+   Only [disabled] attribute selector is used — UXP does not map the disabled attribute to the
+   :disabled pseudo-class on custom elements, so :not(:disabled) is unreliable. */
+:host(:hover:not([disabled])) {
+    background-color: var(--mod-closebutton-background-color-hover, var(--spectrum-closebutton-background-color-hover));
+    color: var(--highcontrast-closebutton-icon-color-hover, var(--mod-closebutton-icon-color-hover, var(--spectrum-closebutton-icon-color-hover)));
+}
+
+:host([static-color=black]:hover:not([disabled])),
+:host([static-color=white]:hover:not([disabled])) {
+    background-color: var(--mod-closebutton-static-background-color-hover, var(--spectrum-closebutton-static-background-color-hover));
+    color: var(--highcontrast-closebutton-icon-color-default, var(--mod-closebutton-icon-color-default, var(--spectrum-closebutton-icon-color-default)));
+}
+
+/* :is(:active,[active]) expansion — UXP :is() support is partial.
+   color is set on :host (not .icon) to avoid compound selector UXP issue. */
+:host(:active:not([disabled])),
+:host([active]:not([disabled])) {
+    background-color: var(--mod-closebutton-background-color-down, var(--spectrum-closebutton-background-color-down));
+    color: var(--highcontrast-closebutton-icon-color-down, var(--mod-closebutton-icon-color-down, var(--spectrum-closebutton-icon-color-down)));
+}
+
+:host([static-color=black]:active:not([disabled])),
+:host([static-color=black][active]:not([disabled])),
+:host([static-color=white]:active:not([disabled])),
+:host([static-color=white][active]:not([disabled])) {
+    background-color: var(--mod-closebutton-static-background-color-down, var(--spectrum-closebutton-static-background-color-down));
 }

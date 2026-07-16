@@ -16,7 +16,7 @@ import styles from './uxp-clear-button.css.js';
 
 class UxpClearButton extends ClearButton {
     static get styles() {
-        return [super.styles, styles];
+        return [...super.styles, styles];
     }
 }
 

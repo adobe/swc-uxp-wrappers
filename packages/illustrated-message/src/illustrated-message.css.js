@@ -16,8 +16,7 @@ import swcIllustratedMessageStyles from '@swc-uxp-internal/illustrated-message/s
 import uxpIllustratedMessageStyles from './uxp-illustrated-message.css.js';
 
 const combinedIllustratedMessageStyles = unsafeCSS(
-    swcIllustratedMessageStyles.toString(),
-    uxpIllustratedMessageStyles.toString()
+    swcIllustratedMessageStyles.toString() + '\n' + uxpIllustratedMessageStyles.toString()
 );
 
 export default combinedIllustratedMessageStyles;

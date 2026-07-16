@@ -12,37 +12,23 @@ governing permissions and limitations under the License.
 
 /* write uxp style overrides */
 
-/* Workaround for - https://jira.corp.adobe.com/browse/UXP-20846 */
+/* Workaround for - https://jira.corp.adobe.com/browse/UXP-20846
+   text-align: end (used by SWC on :host([side-aligned=end])) is not
+   supported in UXP — override with inline-flex + justify-content: flex-end. */
 :host([side-aligned='end']) {
     display: inline-flex;
     justify-content: flex-end;
 }
 
-:host([side-aligned]) {
-    margin-top: var(
-        --mod-fieldlabel-side-padding-top,
-        var(--spectrum-fieldlabel-side-padding-top)
-    );
-    margin-right: var(
-        --mod-fieldlabel-side-padding-right,
-        var(--spectrum-fieldlabel-side-padding-right)
-    );
-}
-
-/* Workaround for - https://jira.corp.adobe.com/browse/UXP-21327 */
-.required-icon {
-    margin-left: var(
-        --mod-fieldlabel-asterisk-gap,
-        var(--spectrum-fieldlabel-asterisk-gap)
-    );
-}
-
-/* Workaround for - https://jira.corp.adobe.com/browse/UXP-21381 */
-:host {
-    min-height: var(
-        --mod-fieldlabel-min-height,
-        var(--spectrum-fieldlabel-min-height)
-    );
-    padding: var(--spectrum-fieldlabel-top-to-text) 0px
-        var(--spectrum-fieldlabel-bottom-to-text);
-}
+/* Previously overridden:
+   - :host([side-aligned]) margin-top/margin-right (UXP-20846 side-padding-top/right)
+     → tokens renamed to --spectrum-field-label-side-margin-block-start /
+       --spectrum-field-label-side-padding-right in v1.12.0; margin-block-start and
+       margin-inline-end are now handled by UXP's enableLogicalProperties mapper.
+   - .required-icon margin-left (UXP-21327 asterisk-gap)
+     → token renamed to --spectrum-field-label-text-to-asterisk; margin-inline is
+       now handled by the mapper.
+   - :host min-height / padding (UXP-21381)
+     → tokens renamed to --spectrum-field-label-min-height / --spectrum-field-label-top-to-text
+       / --spectrum-field-label-bottom-to-text; min-block-size and padding-block are
+       now handled by the mapper. */

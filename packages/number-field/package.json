@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/number-field",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -20,12 +20,13 @@
         "./package.json": "./package.json",
         "./src/NumberField.js": "./src/NumberField.js",
         "./src/number-field.css.js": "./src/number-field.css.js",
+        "./src/number-field-overrides.css.js": "./src/number-field-overrides.css.js",
         "./sp-number-field.js": "./sp-number-field.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/number-field": "npm:@spectrum-web-components/number-field@0.37.0",
-        "@swc-uxp-wrappers/action-button": "2.0.0",
-        "@swc-uxp-wrappers/textfield": "2.0.0"
+        "@swc-uxp-internal/number-field": "npm:@spectrum-web-components/number-field@1.12.1",
+        "@swc-uxp-wrappers/textfield": "3.0.0",
+        "@swc-uxp-wrappers/infield-button": "3.0.0"
     },
     "files": [
         "**/*.js"

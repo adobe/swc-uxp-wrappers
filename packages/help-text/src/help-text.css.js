@@ -16,8 +16,7 @@ import swcHelpTextStyles from '@swc-uxp-internal/help-text/src/help-text.css.js'
 import uxpHelpTextStyles from './uxp-help-text.css.js';
 
 const combinedHelpTextStyles = unsafeCSS(
-    swcHelpTextStyles.toString(),
-    uxpHelpTextStyles.toString()
+    swcHelpTextStyles.toString() + '\n' + uxpHelpTextStyles.toString()
 );
 
 export default combinedHelpTextStyles;

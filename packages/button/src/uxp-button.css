@@ -12,55 +12,97 @@ governing permissions and limitations under the License.
 
 /* write uxp style overrides */
 
-:host {
-    margin-top: var(--mod-button-margin-block);
-    margin-bottom: var(--mod-button-margin-block);
-    margin-right: var(--mod-button-margin-right);
-    margin-left: var(--mod-button-margin-left);
-    min-height: var(--mod-button-height, var(--spectrum-button-height));
-    min-width: var(--mod-button-min-width, var(--spectrum-button-min-width));
-    padding-top: 0;
-    padding-bottom: 0;
-    padding-left: var(
-        --mod-button-edge-to-text,
-        var(--spectrum-button-edge-to-text)
-    );
-    padding-right: var(
-        --mod-button-edge-to-text,
-        var(--spectrum-button-edge-to-text)
-    );
-}
-
 #label {
-    padding-bottom: calc(
-        var(--mod-button-bottom-to-text, var(--spectrum-button-bottom-to-text)) -
-            var(--mod-button-border-width, var(--spectrum-button-border-width))
-    );
-    padding-top: calc(
-        var(--mod-button-top-to-text, var(--spectrum-button-top-to-text)) -
-            var(--mod-button-border-width, var(--spectrum-button-border-width))
-    );
     margin: auto;
+    /* spectrum-button.css sets align-self:start in v1.12.0; UXP ignores place-self so override explicitly */
+    align-self: center;
 }
 
+/* display:contents maps to display:block in UXP, causing empty label to consume width on icon-only buttons */
+[icon-only] + #label {
+    display: none;
+}
+
+/* text-align:start is unreliable in UXP — SWC v1.12.0 sets this on [name=icon]+#label.
+   gap is not supported in UXP flex containers (UXP-21294) — SWC sets
+   gap:var(--spectrum-button-padding-label-to-icon) on :host to space the icon from the
+   label. Replace with margin-inline-start on #label as the equivalent. */
+[name='icon'] + #label {
+    text-align: left;
+    margin-inline-start: var(--spectrum-button-padding-label-to-icon);
+}
+
+/* visibility:revert-layer not supported in UXP — preserve inherited value instead.
+   --spectrum-icon-size:inherit causes var() fallback to be silently skipped in UXP
+   (UXP custom-property inherit bug) — override with the button's intended icon size.
+   align-self:flex-start + margin-block-start:max(...) — UXP does not support max() as a
+   CSS value function, so the calculated top-offset collapses and the icon pins to the top
+   of the flex container. Override to center alignment with zero margin. */
 ::slotted([slot='icon']) {
-    margin-left: calc(
-        var(--mod-button-edge-to-visual, var(--spectrum-button-edge-to-visual)) -
-            var(--mod-button-edge-to-text, var(--spectrum-button-edge-to-text))
-    );
+    visibility: inherit;
+    --spectrum-icon-size: var(--mod-button-icon-size, var(--spectrum-button-intended-icon-size));
+    align-self: center;
+    margin-block-start: 0;
 }
 
-:not(slot[icon-only])::slotted([slot='icon']) {
-    margin-right: var(
-        --mod-button-padding-label-to-icon,
-        var(--spectrum-button-padding-label-to-icon)
-    );
+/* min-inline-size:unset (SWC) is translated to min-width:unset by the logical mapper, but
+   UXP does not honor the `unset` keyword — the base :host min-width persists.
+   Since min-width > --spectrum-button-height, the button is wider than tall → ellipse.
+   Fix: use min-width:0 (always honored) to clear the constraint, then force equal
+   width and height to guarantee a square that border-radius:50% renders as a circle.
+   height is also pinned explicitly because min-block-size (→ min-height) only sets a
+   minimum — if the icon's rendered height exceeds --spectrum-button-height the button
+   grows taller than wide, producing an ellipse in the other direction. */
+:host([icon-only]) {
+    min-width: 0;
+    width: var(--mod-button-height, var(--spectrum-button-height));
+    height: var(--mod-button-height, var(--spectrum-button-height));
 }
 
-/* workaround for missing logical property 'inset', fixed layouting of focus-ring */
-:host:after {
-    top: 0px;
-    left: 0px;
-    bottom: 0px;
-    right: 0px;
+/* @media (hover:hover) unwrap — UXP does not support hover media query */
+:host(:hover) {
+    color: var(--highcontrast-button-content-color-hover, var(--mod-button-content-color-hover, var(--spectrum-button-content-color-hover)));
+    background-color: var(--highcontrast-button-background-color-hover, var(--mod-button-background-color-hover, var(--spectrum-button-background-color-hover)));
+    border-color: var(--highcontrast-button-border-color-hover, var(--mod-button-border-color-hover, var(--spectrum-button-border-color-hover)));
+    box-shadow: none;
+}
+
+/* :is(:active,[active]) expansion — UXP :is() support is partial */
+:host(:active) {
+    color: var(--highcontrast-button-content-color-down, var(--mod-button-content-color-down, var(--spectrum-button-content-color-down)));
+    background-color: var(--highcontrast-button-background-color-down, var(--mod-button-background-color-down, var(--spectrum-button-background-color-down)));
+    border-color: var(--highcontrast-button-border-color-down, var(--mod-button-border-color-down, var(--spectrum-button-border-color-down)));
+    box-shadow: none;
+}
+
+:host([active]) {
+    color: var(--highcontrast-button-content-color-down, var(--mod-button-content-color-down, var(--spectrum-button-content-color-down)));
+    background-color: var(--highcontrast-button-background-color-down, var(--mod-button-background-color-down, var(--spectrum-button-background-color-down)));
+    border-color: var(--highcontrast-button-border-color-down, var(--mod-button-border-color-down, var(--spectrum-button-border-color-down)));
+    box-shadow: none;
+}
+
+/*
+ * Pending state — NOT supported in UXP.
+ * SWC uses animation-as-state-trigger (0s forwards) and sp-progress-circle (no UXP wrapper).
+ * Apply disabled appearance immediately; suppress the broken progress-circle element.
+ */
+
+/* Apply disabled colors immediately without animation delay */
+:host([pending]:not([disabled])) {
+    color: var(--highcontrast-button-content-color-disabled, var(--mod-button-content-color-disabled, var(--spectrum-button-content-color-disabled)));
+    background-color: var(--highcontrast-button-background-color-disabled, var(--mod-button-background-color-disabled, var(--spectrum-button-background-color-disabled)));
+    border-color: var(--highcontrast-button-border-color-disabled, var(--mod-button-border-color-disabled, var(--spectrum-button-border-color-disabled)));
+    /* pointer-events:none not supported in UXP (UXP-21230) — omitted */
+}
+
+/* Hide the sp-progress-circle rendered by PendingStateController — no UXP wrapper exists */
+:host([pending]) sp-progress-circle {
+    display: none;
+}
+
+/* Keep icon and label visible — animation-based hide does not work in UXP */
+:host([pending]:not([disabled])) slot[name='icon'],
+:host([pending]:not([disabled])) #label {
+    visibility: visible;
 }

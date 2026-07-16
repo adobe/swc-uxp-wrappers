@@ -1,0 +1,39 @@
+{
+    "name": "@swc-uxp-wrappers/dropzone",
+    "version": "3.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/dropzone component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://git.corp.adobe.com/torq/swc-uxp-wrappers.git",
+        "directory": "packages/dropzone"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/Dropzone.js": "./src/Dropzone.js",
+        "./src/dropzone.css.js": "./src/dropzone.css.js",
+        "./src/dropzone-overrides.css.js": "./src/dropzone-overrides.css.js",
+        "./src/uxp-dropzone.css.js": "./src/uxp-dropzone.css.js",
+        "./sp-dropzone.js": "./sp-dropzone.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/dropzone": "npm:@spectrum-web-components/dropzone@1.12.2"
+    },
+    "files": [
+        "**/*.js",
+        "**/*.css"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/dropzone"
+    ]
+}

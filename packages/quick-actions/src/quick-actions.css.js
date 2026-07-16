@@ -16,8 +16,7 @@ import swcQuickActionsStyles from '@swc-uxp-internal/quick-actions/src/quick-act
 import uxpQuickActionsStyles from './uxp-quick-actions.css.js';
 
 const combinedQuickActionsStyles = unsafeCSS(
-    swcQuickActionsStyles.toString(),
-    uxpQuickActionsStyles.toString()
+    swcQuickActionsStyles.toString() + '\n' + uxpQuickActionsStyles.toString()
 );
 
 export default combinedQuickActionsStyles;

@@ -6,7 +6,7 @@
 This is UXP wrapper for `@spectrum-web-components/search` package 
 <br />
 
--   For detailed README regarding `@spectrum-web-components/search` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/search/v/0.37.0)
+-   For detailed README regarding `@spectrum-web-components/search` [refer this link](https://www.npmjs.com/package/@spectrum-web-components/search/v/1.12.1)
 
 -   Detailed specification regarding `@spectrum-web-components/search` support in UXP through `@swc-uxp-wrappers/search` [refer this link](https://developer.adobe.com/photoshop/uxp/2022/uxp-api/reference-spectrum/swc/)
 

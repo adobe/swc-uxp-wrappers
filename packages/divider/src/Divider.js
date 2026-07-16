@@ -16,7 +16,7 @@ import styles from './uxp-divider.css.js';
 
 class UxpDivider extends Divider {
     static get styles() {
-        return [super.styles, styles];
+        return [...super.styles, styles];
     }
 }
 

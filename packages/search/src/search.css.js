@@ -16,8 +16,7 @@ import swcSearchStyles from '@swc-uxp-internal/search/src/search.css.js';
 import uxpSearchStyles from './uxp-search.css.js';
 
 const combinedSearchStyles = unsafeCSS(
-    swcSearchStyles.toString(),
-    uxpSearchStyles.toString()
+    swcSearchStyles.toString() + '\n' + uxpSearchStyles.toString()
 );
 
 export default combinedSearchStyles;

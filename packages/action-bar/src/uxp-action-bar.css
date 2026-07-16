@@ -10,75 +10,17 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* write uxp style overrides */
-
+/* SWC sets block-size, inset-block-end via logical props (mapper handles height/bottom).
+   top:0 anchors the host top edge — SWC does not set inset-block-start.
+   Margins with --mod-closebutton-* are UXP-specific layout adjustments not present in SWC source. */
 :host {
-    height: 0;
-    bottom: 0;
     top: 0;
     margin-top: var(--mod-closebutton-margin-top);
     margin-left: var(--mod-closebutton-margin-inline);
     margin-right: var(--mod-closebutton-margin-inline);
 }
 
-:host([open]) {
-    height: calc(
-        var(
-                --mod-actionbar-spacing-outer-edge,
-                var(--spectrum-actionbar-spacing-outer-edge)
-            ) + var(--mod-actionbar-height, var(--spectrum-actionbar-height))
-    );
-}
-
-#popover {
-    height: var(--mod-actionbar-height, var(--spectrum-actionbar-height));
-    width: 100%;
-}
-
-.close-button {
-    margin-top: calc(
-        var(
-                --mod-actionbar-spacing-close-button-top,
-                var(--spectrum-actionbar-spacing-close-button-top)
-            ) / 2
-    );
-    margin-right: var(
-        --mod-actionbar-spacing-close-button-end,
-        var(--spectrum-actionbar-spacing-close-button-end)
-    );
-    margin-left: var(
-        --mod-actionbar-spacing-close-button-start,
-        var(--spectrum-actionbar-spacing-close-button-start)
-    );
-}
-
-.field-label {
-    margin-top: calc(
-        var(
-                --mod-actionbar-spacing-item-counter-top,
-                var(--spectrum-actionbar-spacing-item-counter-top)
-            ) / 1.5
-    );
-    margin-right: var(
-        --mod-actionbar-spacing-item-counter-end,
-        var(--spectrum-actionbar-spacing-item-counter-end)
-    );
-}
-
-.action-group {
-    margin-top: calc(
-        var(
-                --mod-actionbar-spacing-action-group-top,
-                var(--spectrum-actionbar-spacing-action-group-top)
-            ) / 2
-    );
-    margin-right: var(
-        --mod-actionbar-spacing-action-group-end,
-        var(--spectrum-actionbar-spacing-action-group-end)
-    );
-    margin-left: auto;
-}
-
+/* SWC action-bar does not apply inline spacing between slotted buttons in the action-group */
 .action-group ::slotted([slot='buttons']:not(:last-child)) {
     margin-right: var(
         --mod-actiongroup-horizontal-spacing-regular,

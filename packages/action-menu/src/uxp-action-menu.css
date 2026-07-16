@@ -1,0 +1,94 @@
+/*
+Copyright 2026 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/*
+ * UXP overrides for sp-action-menu (action-menu@1.12.2)
+ *
+ * sp-action-menu renders <sp-action-button id="button"> in its shadow DOM.
+ * Hover/active state styles for that internal button are defined inside
+ * spectrum-action-button.css, not in action-menu.css.  The overrides below
+ * reach into that inner component by setting --mod-actionbutton-* custom
+ * properties from sp-action-menu's shadow scope, which cascade into
+ * sp-action-button's shadow DOM.
+ *
+ * Issues fixed here:
+ *
+ *  UXP-1  sp-action-button wraps its hover styles in @media(hover:hover).
+ *         When window.matchMedia is stubbed (older UXP without native
+ *         matchMedia), that query never matches and hover feedback is lost.
+ *         Fix: override --mod-actionbutton-* tokens on #button:hover from the
+ *         parent shadow scope so :hover drives the visual state directly,
+ *         bypassing the inner media-query guard.
+ *
+ *  UXP-2  spectrum-action-button.css uses :is(:active, [active]) for the
+ *         active/pressed state. UXP does not support :is() → the rule never
+ *         matches. Fix: override --mod-actionbutton-* tokens on both
+ *         #button:active and #button[active] from the parent shadow scope
+ *         using expanded, :is()-free selectors.
+ *
+ *  UXP-3  :focus-visible not supported in UXP — the upstream :focus-visible::after
+ *         focus-ring rule was always inert. No CSS fix is applied; focus-ring
+ *         suppression is handled in JS via hasVisibleFocusInTree() → false, which
+ *         prevents the [focused] attribute from being set. See Known Issues in README.
+ *
+ *  UXP-4  :dir() not supported → apply the LTR icon margin unconditionally.
+ *         action-menu.css uses ::slotted([slot="icon"]:dir(ltr))/.icon:dir(ltr)
+ *         for the negative margin that tucks the icon flush with the edge;
+ *         UXP only supports LTR so we apply the LTR value without :dir().
+ *
+ * CSS inside sp-action-menu's shadow root can reach the internal
+ * sp-action-button only by setting custom properties that sp-action-button
+ * exposes as --mod-* slots (they cascade across the shadow boundary).
+ */
+
+/* ─── Host layout ─────────────────────────────────────────────────────── */
+/* UXP: min-width:0 is required so the inline-flex host can shrink below
+   its content minimum-size when placed inside a flex/grid container.
+   Without it the host imposes an implicit auto minimum-width in UXP.
+   Upstream applies this only to :host([quiet]); in UXP all variants need
+   it for correct layout in constrained containers. */
+:host {
+    min-width: 0;
+}
+
+/* ─── UXP-1: hover state (bypasses sp-action-button's @media(hover:hover)) */
+#button:hover {
+    --mod-actionbutton-background-color-default: var(--mod-actionbutton-background-color-hover, var(--spectrum-actionbutton-background-color-hover));
+    --mod-actionbutton-border-color-default: var(--mod-actionbutton-border-color-hover, var(--spectrum-actionbutton-border-color-hover));
+    --mod-actionbutton-content-color-default: var(--mod-actionbutton-content-color-hover, var(--spectrum-neutral-content-color-hover));
+}
+
+/* ─── UXP-2: active/pressed state (expands :is(:active,[active])) ─────── */
+#button:active {
+    --mod-actionbutton-background-color-default: var(--mod-actionbutton-background-color-down, var(--spectrum-actionbutton-background-color-down));
+    --mod-actionbutton-border-color-default: var(--mod-actionbutton-border-color-down, var(--spectrum-actionbutton-border-color-down));
+    --mod-actionbutton-content-color-default: var(--mod-actionbutton-content-color-down, var(--spectrum-neutral-content-color-down));
+}
+
+#button[active] {
+    --mod-actionbutton-background-color-default: var(--mod-actionbutton-background-color-down, var(--spectrum-actionbutton-background-color-down));
+    --mod-actionbutton-border-color-default: var(--mod-actionbutton-border-color-down, var(--spectrum-actionbutton-border-color-down));
+    --mod-actionbutton-content-color-default: var(--mod-actionbutton-content-color-down, var(--spectrum-neutral-content-color-down));
+}
+
+/* ─── UXP-4: icon margin — LTR unconditional (:dir() not supported) ──── */
+/* action-menu.css uses ::slotted([slot="icon"]:dir(ltr)) / .icon:dir(ltr)
+   for the negative left margin; UXP does not support :dir() so we apply
+   the LTR value unconditionally.  flex-shrink:0 is already set by the
+   upstream ::slotted([slot="icon"]),.icon rule and is not repeated here.
+   Note: the slot[icon-only] margin-inline rule is intentionally omitted —
+   the upstream already declares it without :dir(), and enableLogicalProperties
+   translates margin-inline automatically. No UXP override is needed. */
+::slotted([slot="icon"]),
+.icon {
+    margin-left: calc(-1 * (var(--spectrum-actionbutton-textonly-padding-left-adjusted) - var(--spectrum-actionbutton-padding-left-adjusted)));
+}

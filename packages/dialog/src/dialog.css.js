@@ -16,8 +16,7 @@ import swcDialogStyles from '@swc-uxp-internal/dialog/src/dialog.css.js';
 import uxpDialogStyles from './uxp-dialog.css.js';
 
 const combinedDialogStyles = unsafeCSS(
-    swcDialogStyles.toString(),
-    uxpDialogStyles.toString()
+    swcDialogStyles.toString() + '\n' + uxpDialogStyles.toString()
 );
 
 export default combinedDialogStyles;

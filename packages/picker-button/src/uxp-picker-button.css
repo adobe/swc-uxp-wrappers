@@ -10,126 +10,45 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* write uxp style overrides */
-
-/* Workaround for https://github.com/adobe/spectrum-web-components/issues/3479 and https://jira.corp.adobe.com/browse/UXP-21655 */
-:host(:not([disabled]).focus-visible) .root .spectrum-PickerButton-fill {
-    border-color: var(
-        --spectrum-alias-infieldbutton-fill-border-color-key-focus,
-        var(--spectrum-alias-input-border-color-key-focus)
-    );
-    box-shadow: 0px 0px 0px 1px
-        var(--spectrum-alias-input-border-color-key-focus);
-    border-radius: var(--spectrum-picker-button-border-radius);
-}
-
-.root {
-    height: var(--mod-picker-button-width, var(--spectrum-picker-button-width));
-}
-
-.uiicononly {
-    width: var(
-        --mod-picker-button-height,
-        var(--spectrum-picker-button-height)
-    );
-}
-
-.textuiicon .spectrum-PickerButton-fill {
-    width: auto;
-}
-
-:host([position='right']) .spectrum-PickerButton-fill {
-    border-bottom-left-radius: var(
-        --mod-picker-button-border-radius-sided,
-        var(--spectrum-picker-button-border-radius-sided)
-    );
-    border-top-left-radius: var(
-        --mod-picker-button-border-radius-sided,
-        var(--spectrum-picker-button-border-radius-sided)
-    );
-}
-
-:host([position='left']) .spectrum-PickerButton-fill {
-    border-bottom-right-radius: var(
-        --mod-picker-button-border-radius-sided,
-        var(--spectrum-picker-button-border-radius-sided)
-    );
-    border-top-right-radius: var(
-        --mod-picker-button-border-radius-sided,
-        var(--spectrum-picker-button-border-radius-sided)
-    );
-}
-
-.spectrum-PickerButton-fill {
-    height: 100%;
-    border-bottom-right-radius: var(
-        --mod-picker-button-border-radius,
-        var(--spectrum-picker-button-border-radius)
-    );
-    border-bottom-left-radius: var(
-        --mod-picker-button-border-radius,
-        var(--spectrum-picker-button-border-radius)
-    );
-    border-top-right-radius: var(
-        --mod-picker-button-border-radius,
-        var(--spectrum-picker-button-border-radius)
-    );
-    border-top-left-radius: var(
-        --mod-picker-button-border-radius,
-        var(--spectrum-picker-button-border-radius)
-    );
-    width: 100%;
-    border-color: var(--spectrum-global-color-gray-500);
-}
-
+/* gap on flex containers not supported in UXP (UXP-21294).
+   .spectrum-PickerButton-fill uses gap to space label from icon.
+   Replicate with margin-inline-end on the label (mapper → margin-right). */
 .spectrum-PickerButton-label {
-    padding-bottom: var(
-        --mod-picker-button-label-padding,
-        var(--spectrum-picker-button-label-padding)
+    margin-inline-end: var(--mod-picker-button-gap, var(--spectrum-picker-button-gap));
+}
+
+/* @media (hover: hover) unwrap — UXP does not support hover media query */
+.root:hover {
+    --mod-picker-button-background-color: var(
+        --mod-picker-button-background-color-hover,
+        var(--spectrum-picker-button-background-color-hover)
     );
-    padding-top: var(
-        --mod-picker-button-label-padding,
-        var(--spectrum-picker-button-label-padding)
+    --mod-picker-button-font-color: var(
+        --mod-picker-button-font-color-hover,
+        var(--spectrum-picker-button-font-color-hover)
     );
-    padding-right: var(
-        --mod-picker-button-gap,
-        var(--spectrum-picker-button-gap)
+    --mod-picker-button-icon-color: var(
+        --mod-picker-button-icon-color-hover,
+        var(--spectrum-picker-button-icon-color-hover)
     );
 }
 
-:host([disabled]) .spectrum-PickerButton-fill {
-    border: var(--spectrum-picker-button-background-color);
-}
-
-:host([position='right'][rounded]) .spectrum-PickerButton-fill {
-    border-top-left-radius: var(
-        --mod-picker-button-border-radius-rounded-sided,
-        var(--spectrum-picker-button-border-radius-rounded-sided)
+/* :is() pseudo-class not supported in UXP — SWC uses :host(:is(:active,[active])) .root
+   in a selector list with :host([open]) .root. UXP drops the entire rule when any selector
+   is invalid, so :host([open]) must also be redeclared here. */
+:host([open]) .root,
+:host(:active) .root,
+:host([active]) .root {
+    --mod-picker-button-background-color: var(
+        --mod-picker-button-background-color-down,
+        var(--spectrum-picker-button-background-color-down)
     );
-    border-bottom-left-radius: var(
-        --mod-picker-button-border-radius-rounded-sided,
-        var(--spectrum-picker-button-border-radius-rounded-sided)
+    --mod-picker-button-font-color: var(
+        --mod-picker-button-font-color-down,
+        var(--spectrum-picker-button-font-color-down)
     );
-}
-
-:host([position='left'][rounded]) .spectrum-PickerButton-fill {
-    border-bottom-right-radius: var(
-        --mod-picker-button-border-radius-rounded-sided,
-        var(--spectrum-picker-button-border-radius-rounded-sided)
-    );
-    border-top-right-radius: var(
-        --mod-picker-button-border-radius-rounded-sided,
-        var(--spectrum-picker-button-border-radius-rounded-sided)
-    );
-}
-
-:host([rounded]) .spectrum-PickerButton-fill {
-    border-top-right-radius: var(
-        --mod-picker-button-border-radius-rounded,
-        var(--spectrum-picker-button-border-radius-rounded)
-    );
-    border-bottom-right-radius: var(
-        --mod-picker-button-border-radius-rounded,
-        var(--spectrum-picker-button-border-radius-rounded)
+    --mod-picker-button-icon-color: var(
+        --mod-picker-button-icon-color-down,
+        var(--spectrum-picker-button-icon-color-down)
     );
 }

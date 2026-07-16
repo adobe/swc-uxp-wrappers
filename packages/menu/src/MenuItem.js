@@ -17,7 +17,27 @@ import styles from './uxp-menu-item.css.js';
 class UxpMenuItem extends MenuItem {
     static get styles() {
         // We are combining our styles to make all super class styles available along with the transitive dependent classes styles.
-        return [super.styles, styles];
+        return [...super.styles, styles];
+    }
+
+    /**
+     * UXP does not support :focus-within in Element.matches().
+     * Upstream MenuItem.willUpdate() calls this.matches(':focus-within') when a
+     * submenu closes — throws SyntaxError in UXP.  Override to guard it.
+     * Replicates upstream logic exactly, wrapping only the matches() call.
+     */
+    willUpdate(changed) {
+        // Upstream calls super.updated() (not super.willUpdate()) — preserve that.
+        super.updated(changed);
+        if (changed.has('open') && !this.open && this.hasSubmenu && !this._closedViaPointer) {
+            let hasFocusWithin = false;
+            try {
+                hasFocusWithin = this.matches(':focus-within');
+            } catch (_) {
+                // :focus-within not supported in UXP
+            }
+            if (hasFocusWithin) this.focus();
+        }
     }
 }
 

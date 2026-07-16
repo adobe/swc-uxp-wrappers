@@ -16,8 +16,7 @@ import styles from './uxp-button-group.css.js';
 
 class UxpButtonGroup extends ButtonGroup {
     static get styles() {
-        // We are combining our styles to make all super class styles available along with the transitive dependent classes styles.
-        return [super.styles, styles];
+        return [...super.styles, styles];
     }
 }
 

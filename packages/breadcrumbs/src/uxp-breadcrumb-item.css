@@ -1,0 +1,56 @@
+/*
+Copyright 2026 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* UXP: margin-block, margin-inline, margin-block-start/end are auto-translated
+   by UXP's CSSLogicalPropertyMapper (manifest.json "enableLogicalProperties": true)
+   — no physical property overrides needed for #separator or #item-link margins. */
+
+/* UXP: @media (hover: hover) is unreliable — the upstream wraps the hover
+   underline rule in this media query to exclude touch devices. In UXP the
+   media query may not be processed in the same render pass as element styles,
+   causing the rule to never apply. Re-declare it unconditionally so UXP's
+   styling pipeline always picks it up. */
+:host(:not([is-last-of-type])) #item-link:hover {
+    text-decoration: underline;
+}
+
+/* UXP: ::before { position: absolute } inside shadow DOM does not anchor
+   correctly to its parent without an explicit position: relative on the parent.
+   The upstream focus ring is drawn via #item-link::before using absolute
+   positioning + negative margins. In UXP this ring renders at (0, 0) of the
+   shadow root rather than around the link text.
+   Since hasVisibleFocusInTree() returns false (see Breadcrumbs.js / BreadcrumbItem.js),
+   the is-keyboardFocused class is never set and no focus ring is needed.
+   Suppress the ::before entirely to avoid phantom rendering. */
+:host .is-dragged #item-link::before,
+#item-link::before {
+    display: none !important;
+}
+
+/* UXP: :host(:last-of-type) is not supported — the upstream uses it to bold
+   the current-page item and hide its separator. BreadcrumbItem.js reflects
+   isLastOfType to the [is-last-of-type] attribute so we can target it here. */
+:host([is-last-of-type]) {
+    font-family: var(--mod-breadcrumbs-font-family-current, var(--spectrum-breadcrumbs-font-family-current));
+    font-size: var(--mod-breadcrumbs-font-size-current, var(--spectrum-breadcrumbs-font-size-current));
+    font-weight: var(--mod-breadcrumbs-font-weight-current, var(--spectrum-breadcrumbs-font-weight-current));
+}
+
+:host([is-last-of-type]) #separator {
+    display: none;
+}
+
+:host([is-last-of-type]) #item-link {
+    color: var(--highcontrast-breadcrumbs-text-color-current,
+        var(--mod-breadcrumbs-text-color-current,
+        var(--spectrum-breadcrumbs-text-color-current)));
+}

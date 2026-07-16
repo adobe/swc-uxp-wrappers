@@ -16,8 +16,7 @@ import swcMenuItemStyles from '@swc-uxp-internal/menu/src/menu-item.css.js';
 import uxpMenuItemStyles from './uxp-menu-item.css.js';
 
 const combinedMenuItemStyles = unsafeCSS(
-    swcMenuItemStyles.toString(),
-    uxpMenuItemStyles.toString()
+    swcMenuItemStyles.toString() + '\n' + uxpMenuItemStyles.toString()
 );
 
 export default combinedMenuItemStyles;

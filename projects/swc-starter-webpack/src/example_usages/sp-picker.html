@@ -1,0 +1,479 @@
+<!--
+Copyright 2026 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+-->
+
+<h3>sp-picker</h3>
+
+<div id="picker-demo-wrap" style="display: flex; flex-direction: column;">
+
+    <!-- ═══════════════════════════════════════════════════════
+         States: default / disabled / invalid / readonly / quiet
+         ═══════════════════════════════════════════════════════ -->
+    <div id="subtitle">States</div>
+    <div style="display: inline-flex; flex-direction: row; align-items: flex-end; flex-wrap: wrap;">
+
+        <div style="display: flex; flex-direction: column; margin-right: 24px; margin-bottom: 8px;">
+            <sp-field-label>Default</sp-field-label>
+            <sp-picker label="Choose an option">
+                <sp-menu-item value="deselect">Deselect</sp-menu-item>
+                <sp-menu-item value="inverse">Select Inverse</sp-menu-item>
+                <sp-menu-item value="feather">Feather...</sp-menu-item>
+            </sp-picker>
+        </div>
+
+        <div style="display: flex; flex-direction: column; margin-right: 24px; margin-bottom: 8px;">
+            <sp-field-label>Disabled</sp-field-label>
+            <sp-picker label="Disabled" disabled value="feather">
+                <sp-menu-item value="deselect">Deselect</sp-menu-item>
+                <sp-menu-item value="inverse">Select Inverse</sp-menu-item>
+                <sp-menu-item value="feather">Feather...</sp-menu-item>
+            </sp-picker>
+        </div>
+
+        <div style="display: flex; flex-direction: column; margin-right: 24px; margin-bottom: 8px;">
+            <sp-field-label>Invalid</sp-field-label>
+            <sp-picker label="Invalid" invalid>
+                <sp-menu-item value="deselect">Deselect</sp-menu-item>
+                <sp-menu-item value="inverse">Select Inverse</sp-menu-item>
+                <sp-menu-item value="feather">Feather...</sp-menu-item>
+            </sp-picker>
+        </div>
+
+        <div style="display: flex; flex-direction: column; margin-right: 24px; margin-bottom: 8px;">
+            <sp-field-label>Readonly</sp-field-label>
+            <sp-picker label="Readonly" readonly value="feather">
+                <sp-menu-item value="deselect">Deselect</sp-menu-item>
+                <sp-menu-item value="inverse">Select Inverse</sp-menu-item>
+                <sp-menu-item value="feather">Feather...</sp-menu-item>
+            </sp-picker>
+        </div>
+
+        <div style="display: flex; flex-direction: column; margin-bottom: 8px;">
+            <sp-field-label>Quiet</sp-field-label>
+            <sp-picker label="Quiet" quiet>
+                <sp-menu-item value="deselect">Deselect</sp-menu-item>
+                <sp-menu-item value="inverse">Select Inverse</sp-menu-item>
+                <sp-menu-item value="feather">Feather...</sp-menu-item>
+            </sp-picker>
+        </div>
+
+        <div style="display: flex; flex-direction: column; margin-left: 24px; margin-bottom: 8px;">
+            <sp-field-label>Pending</sp-field-label>
+            <sp-picker label="Pending" pending pending-label="Loading...">
+                <sp-menu-item value="deselect">Deselect</sp-menu-item>
+                <sp-menu-item value="inverse">Select Inverse</sp-menu-item>
+                <sp-menu-item value="feather">Feather...</sp-menu-item>
+            </sp-picker>
+            <span style="font-size: var(--spectrum-font-size-75, 12px); color: gray; margin-top: 4px;">
+                Note: <code>sp-progress-circle</code> is not shown in UXP (CSS animations unsupported).
+            </span>
+        </div>
+
+    </div>
+
+    <div style="height: 32px; flex-shrink: 0;"></div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         Sizes: s / m / l / xl
+         ═══════════════════════════════════════════════════════ -->
+    <div id="subtitle">Sizes</div>
+    <div style="display: inline-flex; flex-direction: row; align-items: flex-end; flex-wrap: wrap;">
+
+        <div style="display: flex; flex-direction: column; margin-right: 20px; margin-bottom: 8px;">
+            <sp-field-label>Small (s)</sp-field-label>
+            <sp-picker size="s" label="Small" value="feather">
+                <sp-menu-item value="deselect">Deselect</sp-menu-item>
+                <sp-menu-item value="feather">Feather...</sp-menu-item>
+                <sp-menu-item value="mask">Select and Mask...</sp-menu-item>
+            </sp-picker>
+        </div>
+
+        <div style="display: flex; flex-direction: column; margin-right: 20px; margin-bottom: 8px;">
+            <sp-field-label>Medium (m) — default</sp-field-label>
+            <sp-picker size="m" label="Medium" value="feather">
+                <sp-menu-item value="deselect">Deselect</sp-menu-item>
+                <sp-menu-item value="feather">Feather...</sp-menu-item>
+                <sp-menu-item value="mask">Select and Mask...</sp-menu-item>
+            </sp-picker>
+        </div>
+
+        <div style="display: flex; flex-direction: column; margin-right: 20px; margin-bottom: 8px;">
+            <sp-field-label>Large (l)</sp-field-label>
+            <sp-picker size="l" label="Large" value="feather">
+                <sp-menu-item value="deselect">Deselect</sp-menu-item>
+                <sp-menu-item value="feather">Feather...</sp-menu-item>
+                <sp-menu-item value="mask">Select and Mask...</sp-menu-item>
+            </sp-picker>
+        </div>
+
+        <div style="display: flex; flex-direction: column; margin-bottom: 8px;">
+            <sp-field-label>Extra large (xl)</sp-field-label>
+            <sp-picker size="xl" label="Extra Large" value="feather">
+                <sp-menu-item value="deselect">Deselect</sp-menu-item>
+                <sp-menu-item value="feather">Feather...</sp-menu-item>
+                <sp-menu-item value="mask">Select and Mask...</sp-menu-item>
+            </sp-picker>
+        </div>
+
+    </div>
+
+    <div style="height: 32px; flex-shrink: 0;"></div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         icons attribute
+         ═══════════════════════════════════════════════════════ -->
+    <div id="subtitle">icons attribute</div>
+    <div style="display: inline-flex; flex-direction: row; align-items: flex-end; flex-wrap: wrap;">
+
+        <div style="display: flex; flex-direction: column; margin-right: 24px; margin-bottom: 8px;">
+            <sp-field-label style="white-space: nowrap;">Default — icon + label</sp-field-label>
+            <sp-picker label="Action" value="review">
+                <sp-menu-item value="save">
+                    <sp-icon-save-floppy slot="icon"></sp-icon-save-floppy>
+                    Save
+                </sp-menu-item>
+                <sp-menu-item value="finish">
+                    <sp-icon-stopwatch slot="icon"></sp-icon-stopwatch>
+                    Finish
+                </sp-menu-item>
+                <sp-menu-item value="review">
+                    <sp-icon-user-activity slot="icon"></sp-icon-user-activity>
+                    Review
+                </sp-menu-item>
+            </sp-picker>
+        </div>
+
+        <div style="display: flex; flex-direction: column; margin-right: 24px; margin-bottom: 8px;">
+            <sp-field-label style="white-space: nowrap;">icons="only"</sp-field-label>
+            <sp-picker label="Action" value="review" icons="only">
+                <sp-menu-item value="save">
+                    <sp-icon-save-floppy slot="icon"></sp-icon-save-floppy>
+                    Save
+                </sp-menu-item>
+                <sp-menu-item value="finish">
+                    <sp-icon-stopwatch slot="icon"></sp-icon-stopwatch>
+                    Finish
+                </sp-menu-item>
+                <sp-menu-item value="review">
+                    <sp-icon-user-activity slot="icon"></sp-icon-user-activity>
+                    Review
+                </sp-menu-item>
+            </sp-picker>
+        </div>
+
+        <div style="display: flex; flex-direction: column; margin-bottom: 8px;">
+            <sp-field-label style="white-space: nowrap;">icons="none"</sp-field-label>
+            <sp-picker label="Action" value="review" icons="none">
+                <sp-menu-item value="save">
+                    <sp-icon-save-floppy slot="icon"></sp-icon-save-floppy>
+                    Save
+                </sp-menu-item>
+                <sp-menu-item value="finish">
+                    <sp-icon-stopwatch slot="icon"></sp-icon-stopwatch>
+                    Finish
+                </sp-menu-item>
+                <sp-menu-item value="review">
+                    <sp-icon-user-activity slot="icon"></sp-icon-user-activity>
+                    Review
+                </sp-menu-item>
+            </sp-picker>
+        </div>
+
+    </div>
+
+    <div style="height: 32px; flex-shrink: 0;"></div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         Menu features: groups + dividers / disabled items
+         ═══════════════════════════════════════════════════════ -->
+    <div id="subtitle">Menu features</div>
+    <div style="display: inline-flex; flex-direction: row; align-items: flex-start; flex-wrap: wrap;">
+
+        <div style="display: flex; flex-direction: column; margin-right: 32px; margin-bottom: 8px;">
+            <sp-field-label style="white-space: nowrap;">Groups &amp; dividers</sp-field-label>
+            <sp-picker label="Font family">
+                <sp-menu-group>
+                    <span slot="header">Sans-serif</span>
+                    <sp-menu-item value="arial">Arial</sp-menu-item>
+                    <sp-menu-item value="helvetica">Helvetica</sp-menu-item>
+                    <sp-menu-item value="verdana">Verdana</sp-menu-item>
+                </sp-menu-group>
+                <sp-menu-divider></sp-menu-divider>
+                <sp-menu-group>
+                    <span slot="header">Serif</span>
+                    <sp-menu-item value="georgia">Georgia</sp-menu-item>
+                    <sp-menu-item value="times">Times New Roman</sp-menu-item>
+                </sp-menu-group>
+            </sp-picker>
+        </div>
+
+        <div style="display: flex; flex-direction: column; margin-bottom: 8px;">
+            <sp-field-label>Disabled items</sp-field-label>
+            <sp-picker label="Plan" value="free">
+                <sp-menu-item value="free">Free</sp-menu-item>
+                <sp-menu-item value="pro" disabled>Pro (unavailable)</sp-menu-item>
+                <sp-menu-item value="enterprise">Enterprise</sp-menu-item>
+            </sp-picker>
+        </div>
+
+    </div>
+
+    <div style="height: 32px; flex-shrink: 0;"></div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         placement attribute
+         ═══════════════════════════════════════════════════════ -->
+    <div id="subtitle">placement attribute</div>
+    <div style="display: inline-flex; flex-direction: row; align-items: flex-end; flex-wrap: wrap; padding-bottom: 40px;">
+
+        <div style="display: flex; flex-direction: column; margin-right: 24px; margin-bottom: 8px;">
+            <sp-field-label>bottom-start (default)</sp-field-label>
+            <sp-picker label="Choose" placement="bottom-start">
+                <sp-menu-item value="1">Option 1</sp-menu-item>
+                <sp-menu-item value="2">Option 2</sp-menu-item>
+                <sp-menu-item value="3">Option 3</sp-menu-item>
+            </sp-picker>
+        </div>
+
+        <div style="display: flex; flex-direction: column; margin-right: 24px; margin-bottom: 8px;">
+            <sp-field-label>top-start</sp-field-label>
+            <sp-picker label="Choose" placement="top-start">
+                <sp-menu-item value="1">Option 1</sp-menu-item>
+                <sp-menu-item value="2">Option 2</sp-menu-item>
+                <sp-menu-item value="3">Option 3</sp-menu-item>
+            </sp-picker>
+        </div>
+
+        <div style="display: flex; flex-direction: column; margin-bottom: 8px;">
+            <sp-field-label>right-start</sp-field-label>
+            <sp-picker label="Choose" placement="right-start">
+                <sp-menu-item value="1">Option 1</sp-menu-item>
+                <sp-menu-item value="2">Option 2</sp-menu-item>
+                <sp-menu-item value="3">Option 3</sp-menu-item>
+            </sp-picker>
+        </div>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         1.12.x features
+         ═══════════════════════════════════════════════════════ -->
+    <div id="subtitle">1.12.x features</div>
+
+    <!-- A. Left-side label -->
+    <div id="subtitle" style="font-size: 13px;">Left-side label (side-aligned="start")</div>
+    <p style="margin: 4px 0 8px; font-size: var(--spectrum-font-size-75, 12px); color: gray;">
+        <code>side-aligned="start"</code> on <code>sp-field-label</code> places the label
+        to the left of the picker instead of above it.
+    </p>
+    <div style="display: flex; align-items: center; gap: 8px; padding-bottom: 32px;">
+        <sp-field-label side-aligned="start" for="picker-side-label" size="m">
+            Favorite fruit?
+        </sp-field-label>
+        <sp-picker id="picker-side-label" label="Select a fruit">
+            <sp-menu-item value="apple">Apple</sp-menu-item>
+            <sp-menu-item value="banana">Banana</sp-menu-item>
+            <sp-menu-item value="cherry">Cherry</sp-menu-item>
+            <sp-menu-item value="mango">Mango</sp-menu-item>
+            <sp-menu-item value="orange">Orange</sp-menu-item>
+            <sp-menu-item disabled value="durian">Durian</sp-menu-item>
+        </sp-picker>
+    </div>
+
+    <!-- B. Slotted label -->
+    <div id="subtitle" style="font-size: 13px;">Slotted label (slot="label")</div>
+    <p style="margin: 4px 0 8px; font-size: var(--spectrum-font-size-75, 12px); color: gray;">
+        <code>sp-field-label</code> can be placed <em>inside</em> the picker via
+        <code>slot="label"</code> instead of as an external sibling with <code>for=</code>.
+        Visual output is identical — the difference is DOM structure.
+    </p>
+    <div style="display: flex; align-items: flex-start; gap: 40px; padding-bottom: 32px;">
+        <div style="display: flex; flex-direction: column;">
+            <span style="font-size: var(--spectrum-font-size-75, 12px); color: gray; margin-bottom: 4px;">External (sp-field-label for=)</span>
+            <sp-field-label for="picker-label-ext">Favorite fruit?</sp-field-label>
+            <sp-picker id="picker-label-ext" label="Select a fruit">
+                <sp-menu-item value="apple">Apple</sp-menu-item>
+                <sp-menu-item value="banana">Banana</sp-menu-item>
+                <sp-menu-item value="cherry">Cherry</sp-menu-item>
+                <sp-menu-item value="mango">Mango</sp-menu-item>
+                <sp-menu-item value="orange">Orange</sp-menu-item>
+                <sp-menu-item disabled value="durian">Durian</sp-menu-item>
+            </sp-picker>
+        </div>
+        <div style="display: flex; flex-direction: column; margin-left: 40px;">
+            <span style="font-size: var(--spectrum-font-size-75, 12px); color: gray; margin-bottom: 4px;">Slotted (sp-field-label slot="label")</span>
+            <sp-picker label="Select a fruit">
+                <sp-field-label slot="label">Favorite fruit?</sp-field-label>
+                <sp-menu-item value="apple">Apple</sp-menu-item>
+                <sp-menu-item value="banana">Banana</sp-menu-item>
+                <sp-menu-item value="cherry">Cherry</sp-menu-item>
+                <sp-menu-item value="mango">Mango</sp-menu-item>
+                <sp-menu-item value="orange">Orange</sp-menu-item>
+                <sp-menu-item disabled value="durian">Durian</sp-menu-item>
+            </sp-picker>
+        </div>
+    </div>
+
+    <!-- C. Tooltip slot -->
+    <div id="subtitle" style="font-size: 13px;">Tooltip (slot="tooltip")</div>
+    <p style="margin: 4px 0 8px; font-size: var(--spectrum-font-size-75, 12px); color: gray;">
+        Hover over the picker to see the tooltip.
+    </p>
+    <div style="display: flex; align-items: flex-end; gap: 24px; padding-bottom: 32px;">
+        <div style="display: flex; flex-direction: column;">
+            <sp-field-label for="picker-tooltip">Font size</sp-field-label>
+            <sp-picker id="picker-tooltip" label="Select size">
+                <sp-tooltip slot="tooltip" self-managed placement="top">
+                    Choose a font size
+                </sp-tooltip>
+                <sp-menu-item value="s">Small</sp-menu-item>
+                <sp-menu-item value="m">Medium</sp-menu-item>
+                <sp-menu-item value="l">Large</sp-menu-item>
+            </sp-picker>
+        </div>
+    </div>
+
+    <!-- D. Dynamic icons -->
+    <div id="subtitle" style="font-size: 13px;">Dynamic icons</div>
+    <div style="padding: 8px 0 0 0;">
+        <p style="margin: 0 0 8px 0; font-size: var(--spectrum-font-size-100, 14px);">
+            Click "Change icons" — the picker face must update to show the icon of the
+            currently selected item.
+        </p>
+        <sp-field-label for="picker-dyn-icons" size="m">Choose an action type...</sp-field-label>
+        <sp-picker id="picker-dyn-icons" label="Pick an action" value="2" style="margin-bottom: 12px;">
+            <sp-menu-item value="1">
+                <sp-icon-save-floppy slot="icon" size="s"></sp-icon-save-floppy>
+                Save
+            </sp-menu-item>
+            <sp-menu-item value="2">
+                <sp-icon-stopwatch slot="icon" size="s"></sp-icon-stopwatch>
+                Time
+            </sp-menu-item>
+            <sp-menu-item value="3">
+                <sp-icon-user-activity slot="icon" size="s"></sp-icon-user-activity>
+                Review
+            </sp-menu-item>
+        </sp-picker>
+        <sp-button id="btn-change-icons" style="background-color: rgb(2, 101, 220); border-color: transparent; color: white;">Change icons</sp-button>
+        <div style="font-size: var(--spectrum-font-size-75, 12px); color: gray; margin-top: 8px;">
+            Each click rotates to a different icon set.
+        </div>
+    </div>
+
+    <div style="height: 40px; flex-shrink: 0;"></div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         Interactive card
+         ═══════════════════════════════════════════════════════ -->
+    <div id="picker-interactive-card" style="background: var(--spectrum-gray-200); border-radius: 5px; padding: 20px; display: inline-flex; flex-direction: column;">
+
+        <div id="subtitle">Interactive</div>
+
+        <div style="display: flex; flex-direction: row; align-items: flex-start; flex-wrap: wrap;">
+
+            <!-- Left: pickers + event log -->
+            <div style="display: flex; flex-direction: column;">
+
+                <div style="display: flex; flex-direction: row; align-items: flex-end; flex-wrap: wrap;">
+
+                    <div style="display: flex; flex-direction: column; margin-right: 20px; margin-bottom: 8px;">
+                        <sp-field-label>Default</sp-field-label>
+                        <sp-picker id="picker-interactive" label="Selection type" value="feather">
+                            <sp-menu-item value="deselect">Deselect</sp-menu-item>
+                            <sp-menu-item value="inverse">Select Inverse</sp-menu-item>
+                            <sp-menu-item value="feather">Feather...</sp-menu-item>
+                            <sp-menu-item value="mask">Select and Mask...</sp-menu-item>
+                            <sp-menu-divider></sp-menu-divider>
+                            <sp-menu-item value="save-sel">Save Selection</sp-menu-item>
+                            <sp-menu-item value="path" disabled>Make Work Path</sp-menu-item>
+                        </sp-picker>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; margin-right: 20px; margin-bottom: 8px;">
+                        <sp-field-label>icons="only"</sp-field-label>
+                        <sp-picker id="picker-icons-only" label="Action" value="review" icons="only">
+                            <sp-menu-item value="save">
+                                <sp-icon-save-floppy slot="icon"></sp-icon-save-floppy>
+                                Save
+                            </sp-menu-item>
+                            <sp-menu-item value="finish">
+                                <sp-icon-stopwatch slot="icon"></sp-icon-stopwatch>
+                                Finish
+                            </sp-menu-item>
+                            <sp-menu-item value="review">
+                                <sp-icon-user-activity slot="icon"></sp-icon-user-activity>
+                                Review
+                            </sp-menu-item>
+                        </sp-picker>
+                    </div>
+
+                    <div style="display: flex; flex-direction: column; margin-bottom: 8px;">
+                        <sp-field-label>icons="none"</sp-field-label>
+                        <sp-picker id="picker-icons-none" label="Action" value="review" icons="none">
+                            <sp-menu-item value="save">
+                                <sp-icon-save-floppy slot="icon"></sp-icon-save-floppy>
+                                Save
+                            </sp-menu-item>
+                            <sp-menu-item value="finish">
+                                <sp-icon-stopwatch slot="icon"></sp-icon-stopwatch>
+                                Finish
+                            </sp-menu-item>
+                            <sp-menu-item value="review">
+                                <sp-icon-user-activity slot="icon"></sp-icon-user-activity>
+                                Review
+                            </sp-menu-item>
+                        </sp-picker>
+                    </div>
+
+                </div>
+
+                <div style="height: 12px; flex-shrink: 0;"></div>
+
+                <div style="font-size: var(--spectrum-font-size-75, 12px); display: flex; flex-direction: column;">
+                    <div>
+                        <sp-field-label>last change event value:</sp-field-label>
+                        <strong id="picker-selected-value">feather</strong>
+                    </div>
+                </div>
+
+            </div>
+
+            <div style="width: 24px; flex-shrink: 0;"></div>
+
+            <!-- Right: controls -->
+            <div id="picker-config" style="display: flex; flex-direction: column; flex-shrink: 0;">
+
+                <sp-field-label>Size</sp-field-label>
+                <sp-radio-group id="picker-size-group" selected="m" name="pickerSize">
+                    <sp-radio value="s">S</sp-radio>
+                    <sp-radio value="m">M</sp-radio>
+                    <sp-radio value="l">L</sp-radio>
+                    <sp-radio value="xl">XL</sp-radio>
+                </sp-radio-group>
+
+                <div style="height: 12px; flex-shrink: 0;"></div>
+
+                <sp-checkbox id="picker-toggle-quiet">Quiet</sp-checkbox>
+                <div style="height: 6px; flex-shrink: 0;"></div>
+                <sp-checkbox id="picker-toggle-disabled">Disabled</sp-checkbox>
+                <div style="height: 6px; flex-shrink: 0;"></div>
+                <sp-checkbox id="picker-toggle-invalid">Invalid</sp-checkbox>
+                <div style="height: 6px; flex-shrink: 0;"></div>
+                <sp-checkbox id="picker-toggle-readonly">Readonly</sp-checkbox>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

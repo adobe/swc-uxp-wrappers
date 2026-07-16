@@ -1,6 +1,6 @@
 {
     "name": "@swc-uxp-wrappers/menu",
-    "version": "2.0.0",
+    "version": "3.0.0",
     "publishConfig": {
         "access": "public"
     },
@@ -29,12 +29,18 @@
         "./sp-menu-item.js": "./sp-menu-item.js",
         "./src/menu-group.css.js": "./src/menu-group.css.js",
         "./src/menu-divider.css.js": "./src/menu-divider.css.js",
-        "./src/menu-item.css.js": "./src/uxp-menu-item.css.js"
+        "./src/menu-item.css.js": "./src/uxp-menu-item.css.js",
+        "./src/checkmark-overrides.css.js": "./src/checkmark-overrides.css.js",
+        "./src/chevron-overrides.css.js": "./src/chevron-overrides.css.js",
+        "./src/menu-divider-overrides.css.js": "./src/menu-divider-overrides.css.js",
+        "./src/menu-item-overrides.css.js": "./src/menu-item-overrides.css.js",
+        "./src/menu-overrides.css.js": "./src/menu-overrides.css.js",
+        "./src/menu-sectionHeading-overrides.css.js": "./src/menu-sectionHeading-overrides.css.js"
     },
     "dependencies": {
-        "@swc-uxp-internal/menu": "npm:@spectrum-web-components/menu@0.37.0",
-        "@swc-uxp-wrappers/divider": "2.0.0",
-        "@swc-uxp-wrappers/action-button": "2.0.0"
+        "@swc-uxp-internal/menu": "npm:@spectrum-web-components/menu@1.12.2",
+        "@swc-uxp-wrappers/divider": "3.0.0",
+        "@swc-uxp-wrappers/action-button": "3.0.0"
     },
     "files": [
         "**/*.js"

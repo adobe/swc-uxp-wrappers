@@ -16,8 +16,7 @@ import swcNumberFieldStyles from '@swc-uxp-internal/number-field/src/number-fiel
 import uxpNumberFieldStyles from './uxp-number-field.css.js';
 
 const combinedNumberFieldStyles = unsafeCSS(
-    swcNumberFieldStyles.toString(),
-    uxpNumberFieldStyles.toString()
+    swcNumberFieldStyles.toString() + '\n' + uxpNumberFieldStyles.toString()
 );
 
 export default combinedNumberFieldStyles;

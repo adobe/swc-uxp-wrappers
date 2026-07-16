@@ -1,0 +1,124 @@
+<!--
+Copyright 2026 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+-->
+
+<h3>sp-breadcrumbs</h3>
+
+<div id="content">
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-breadcrumbs</div>
+            <p>
+                Breadcrumbs show hierarchy and navigational context for a user's
+                location within an application.
+            </p>
+
+            <div id="variantLabel">Default (3 items)</div>
+            <div class="demo-example">
+                <sp-breadcrumbs label="Default breadcrumbs">
+                    <sp-breadcrumb-item value="home">Home</sp-breadcrumb-item>
+                    <sp-breadcrumb-item value="projects">Projects</sp-breadcrumb-item>
+                    <sp-breadcrumb-item value="current">Current Page</sp-breadcrumb-item>
+                </sp-breadcrumbs>
+            </div>
+
+            <div id="variantLabel">Compact</div>
+            <div class="demo-example">
+                <sp-breadcrumbs compact label="Compact breadcrumbs">
+                    <sp-breadcrumb-item value="home">Home</sp-breadcrumb-item>
+                    <sp-breadcrumb-item value="category">Category</sp-breadcrumb-item>
+                    <sp-breadcrumb-item value="current">Current Page</sp-breadcrumb-item>
+                </sp-breadcrumbs>
+            </div>
+
+            <div id="variantLabel">Many items (overflow truncation)</div>
+            <div class="demo-example">
+                <sp-breadcrumbs label="Many items" max-visible-items="3">
+                    <sp-breadcrumb-item value="l1">Level 1</sp-breadcrumb-item>
+                    <sp-breadcrumb-item value="l2">Level 2</sp-breadcrumb-item>
+                    <sp-breadcrumb-item value="l3">Level 3</sp-breadcrumb-item>
+                    <sp-breadcrumb-item value="l4">Level 4</sp-breadcrumb-item>
+                    <sp-breadcrumb-item value="l5">Level 5</sp-breadcrumb-item>
+                    <sp-breadcrumb-item value="current">Current</sp-breadcrumb-item>
+                </sp-breadcrumbs>
+            </div>
+
+            <div id="variantLabel">With root slot (overflow)</div>
+            <div class="demo-example">
+                <sp-breadcrumbs label="With root item and overflow" max-visible-items="2">
+                    <sp-breadcrumb-item slot="root" value="home">Home</sp-breadcrumb-item>
+                    <sp-breadcrumb-item value="l1">Level 1</sp-breadcrumb-item>
+                    <sp-breadcrumb-item value="l2">Level 2</sp-breadcrumb-item>
+                    <sp-breadcrumb-item value="l3">Level 3</sp-breadcrumb-item>
+                    <sp-breadcrumb-item value="current">Current</sp-breadcrumb-item>
+                </sp-breadcrumbs>
+            </div>
+
+            <div id="variantLabel">Custom action menu icon</div>
+            <div class="demo-example">
+                <sp-breadcrumbs label="Custom icon breadcrumbs" max-visible-items="2">
+                    <sp-icon-settings slot="icon"></sp-icon-settings>
+                    <sp-breadcrumb-item value="l1">Level 1</sp-breadcrumb-item>
+                    <sp-breadcrumb-item value="l2">Level 2</sp-breadcrumb-item>
+                    <sp-breadcrumb-item value="l3">Level 3</sp-breadcrumb-item>
+                    <sp-breadcrumb-item value="current">Current</sp-breadcrumb-item>
+                </sp-breadcrumbs>
+            </div>
+
+            <div id="variantLabel">With href links</div>
+            <div class="demo-example">
+                <sp-breadcrumbs label="Navigation with links">
+                    <sp-breadcrumb-item href="https://opensource.adobe.com/spectrum-web-components" value="home">Home</sp-breadcrumb-item>
+                    <sp-breadcrumb-item href="https://opensource.adobe.com/spectrum-web-components/components/breadcrumbs" value="breadcrumbs">breadcrumbs</sp-breadcrumb-item>
+                    <sp-breadcrumb-item href="https://opensource.adobe.com/spectrum-web-components/components/breadcrumb-item/" value="breadcrumb-item">breadcrumb item</sp-breadcrumb-item>
+                    <sp-breadcrumb-item value="current">Current Page</sp-breadcrumb-item>
+                </sp-breadcrumbs>
+            </div>
+
+            <div id="variantLabel">With links (overflow)</div>
+            <div class="demo-example">
+                <sp-breadcrumbs label="Links with overflow" max-visible-items="2">
+                    <sp-breadcrumb-item href="https://opensource.adobe.com/spectrum-web-components" value="home">Home</sp-breadcrumb-item>
+                    <sp-breadcrumb-item href="https://opensource.adobe.com/spectrum-web-components/components/breadcrumbs" value="breadcrumbs">breadcrumbs</sp-breadcrumb-item>
+                    <sp-breadcrumb-item href="https://opensource.adobe.com/spectrum-web-components/components/breadcrumb-item/" value="breadcrumb-item">breadcrumb item</sp-breadcrumb-item>
+                    <sp-breadcrumb-item value="current">Current</sp-breadcrumb-item>
+                </sp-breadcrumbs>
+            </div>
+
+            <div id="variantLabel">Single item (no separator)</div>
+            <div class="demo-example">
+                <sp-breadcrumbs label="Single item">
+                    <sp-breadcrumb-item value="only">Only Page</sp-breadcrumb-item>
+                </sp-breadcrumbs>
+            </div>
+
+            <div id="variantLabel">Change event demo</div>
+            <div class="demo-example">
+                <sp-breadcrumbs
+                    id="breadcrumbs-event-demo"
+                    label="Event breadcrumbs"
+                >
+                    <sp-breadcrumb-item value="home">Home</sp-breadcrumb-item>
+                    <sp-breadcrumb-item value="docs">Docs</sp-breadcrumb-item>
+                    <sp-breadcrumb-item value="api">API</sp-breadcrumb-item>
+                </sp-breadcrumbs>
+                <p id="breadcrumbs-event-output" style="margin-top: 8px; font-size: var(--spectrum-font-size-100);">
+                    Click a breadcrumb item to see the change event.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="config">
+        <div style="display: inline-flex"></div>
+        <div style="display: flex; flex-direction: column"></div>
+    </div>
+</div>

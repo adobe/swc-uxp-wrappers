@@ -1,0 +1,43 @@
+/*
+Copyright 2026 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/* [UXP] text-align: start/end not supported — only center/left/right are valid */
+.label,
+.percentage {
+    text-align: left;
+}
+
+:host([side-label]) .percentage {
+    text-align: right;
+}
+
+/* [UXP] --system-progress-bar-corner-radius and --system-progress-bar-fill-size-indeterminate
+   exist in theme-core-tokens but do not resolve at shadow DOM child level in UXP
+   (v1.12.2 token chain: --spectrum-progressbar-* → --system-progress-bar-* → concrete value).
+   Override both with values derived from reliably-available tokens set per size
+   in progress-bar-overrides.css.
+   corner-radius: thickness/2 = 4px (size m) — visual semicircle, same appearance as 12px
+   fill-size-indeterminate: hardcoded 70% matching --system-progress-bar-fill-size-indeterminate */
+:host {
+    --spectrum-progressbar-corner-radius: calc(
+        var(--mod-progressbar-corner-radius, calc(var(--spectrum-progressbar-thickness, 8px) / 2))
+    );
+    --spectrum-progressbar-fill-size-indeterminate: var(
+        --mod-progressbar-fill-size-indeterminate, 70%
+    );
+}
+
+/* [UXP] overflow:hidden on .track does not clip .fill to the track border-radius in UXP —
+   apply border-radius directly to .fill to round the progress endpoint */
+.fill {
+    border-radius: var(--spectrum-progressbar-corner-radius);
+}

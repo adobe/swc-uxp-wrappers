@@ -16,8 +16,7 @@ import swcPopoverStyles from '@swc-uxp-internal/popover/src/popover.css.js';
 import uxpPopoverStyles from './uxp-popover.css.js';
 
 const combinedPopoverStyles = unsafeCSS(
-    swcPopoverStyles.toString(),
-    uxpPopoverStyles.toString()
+    swcPopoverStyles.toString() + '\n' + uxpPopoverStyles.toString()
 );
 
 export default combinedPopoverStyles;

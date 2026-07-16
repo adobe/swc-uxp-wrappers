@@ -16,8 +16,7 @@ import swcToastStyles from '@swc-uxp-internal/toast/src/toast.css.js';
 import uxpToastStyles from './uxp-toast.css.js';
 
 const combinedToastStyles = unsafeCSS(
-    swcToastStyles.toString(),
-    uxpToastStyles.toString()
+    swcToastStyles.toString() + '\n' + uxpToastStyles.toString()
 );
 
 export default combinedToastStyles;

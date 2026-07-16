@@ -16,8 +16,7 @@ import swcMenuGroupStyles from '@swc-uxp-internal/menu/src/menu-group.css.js';
 import uxpMenuGroupStyles from './uxp-menu-group.css.js';
 
 const combinedMenuGroupStyles = unsafeCSS(
-    swcMenuGroupStyles.toString(),
-    uxpMenuGroupStyles.toString()
+    swcMenuGroupStyles.toString() + '\n' + uxpMenuGroupStyles.toString()
 );
 
 export default combinedMenuGroupStyles;

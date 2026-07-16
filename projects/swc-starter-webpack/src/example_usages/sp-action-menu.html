@@ -1,0 +1,330 @@
+<!--
+Copyright 2026 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+-->
+
+<style>
+    /* UXP: gap in flex/inline-flex is unreliable (UXP-21294); use margin instead */
+    #action-menu-demo-wrap .demo-row {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        margin-bottom: 32px;
+    }
+
+    #action-menu-demo-wrap .demo-row > * {
+        margin-right: 24px;
+        margin-bottom: 16px;
+    }
+</style>
+
+<h3>sp-action-menu</h3>
+
+<div id="action-menu-demo-wrap" style="display: flex; flex-direction: column;">
+
+    <!-- ═══════════════════════════════════════════════════════
+         States: default / quiet / disabled
+         ═══════════════════════════════════════════════════════ -->
+    <div id="subtitle">States</div>
+    <div class="demo-row">
+
+        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+            <sp-field-label>Default</sp-field-label>
+            <sp-action-menu label="More actions">
+                <sp-menu-item>Deselect</sp-menu-item>
+                <sp-menu-item>Select Inverse</sp-menu-item>
+                <sp-menu-item>Feather...</sp-menu-item>
+                <sp-menu-item>Select and Mask...</sp-menu-item>
+                <sp-menu-divider></sp-menu-divider>
+                <sp-menu-item>Save Selection</sp-menu-item>
+                <sp-menu-item disabled>Make Work Path</sp-menu-item>
+            </sp-action-menu>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+            <sp-field-label>Quiet</sp-field-label>
+            <sp-action-menu label="More actions" quiet>
+                <sp-menu-item>Deselect</sp-menu-item>
+                <sp-menu-item>Select Inverse</sp-menu-item>
+                <sp-menu-item>Feather...</sp-menu-item>
+            </sp-action-menu>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+            <sp-field-label>Disabled</sp-field-label>
+            <sp-action-menu label="More actions" disabled>
+                <sp-menu-item>Deselect</sp-menu-item>
+                <sp-menu-item>Select Inverse</sp-menu-item>
+                <sp-menu-item>Feather...</sp-menu-item>
+            </sp-action-menu>
+        </div>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         Sizes: s / m (default) / l / xl
+         ═══════════════════════════════════════════════════════ -->
+    <div id="subtitle">Sizes</div>
+    <div class="demo-row">
+
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <sp-field-label>Small (s)</sp-field-label>
+            <sp-action-menu size="s" label="Actions">
+                <sp-menu-item>Option 1</sp-menu-item>
+                <sp-menu-item>Option 2</sp-menu-item>
+            </sp-action-menu>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <sp-field-label>Medium (m)</sp-field-label>
+            <sp-action-menu size="m" label="Actions">
+                <sp-menu-item>Option 1</sp-menu-item>
+                <sp-menu-item>Option 2</sp-menu-item>
+            </sp-action-menu>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <sp-field-label>Large (l)</sp-field-label>
+            <sp-action-menu size="l" label="Actions">
+                <sp-menu-item>Option 1</sp-menu-item>
+                <sp-menu-item>Option 2</sp-menu-item>
+            </sp-action-menu>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: center;">
+            <sp-field-label>Extra Large (xl)</sp-field-label>
+            <sp-action-menu size="xl" label="Actions">
+                <sp-menu-item>Option 1</sp-menu-item>
+                <sp-menu-item>Option 2</sp-menu-item>
+            </sp-action-menu>
+        </div>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         Custom icon (slot="icon")
+         Default: "more" chevron — no slot="icon" needed.
+         Custom icon: replaces the chevron with any sp-icon-*.
+         ═══════════════════════════════════════════════════════ -->
+    <div id="subtitle">Custom icon</div>
+    <div class="demo-row">
+
+        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+            <sp-field-label>Settings icon</sp-field-label>
+            <sp-action-menu label="Settings">
+                <sp-icon-settings slot="icon"></sp-icon-settings>
+                <sp-menu-item>Preferences</sp-menu-item>
+                <sp-menu-item>Keyboard shortcuts</sp-menu-item>
+                <sp-menu-divider></sp-menu-divider>
+                <sp-menu-item>About</sp-menu-item>
+            </sp-action-menu>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+            <sp-field-label>Settings icon (quiet)</sp-field-label>
+            <sp-action-menu label="Settings" quiet>
+                <sp-icon-settings slot="icon"></sp-icon-settings>
+                <sp-menu-item>Preferences</sp-menu-item>
+                <sp-menu-item>Keyboard shortcuts</sp-menu-item>
+                <sp-menu-divider></sp-menu-divider>
+                <sp-menu-item>About</sp-menu-item>
+            </sp-action-menu>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+            <sp-field-label>Add icon (large)</sp-field-label>
+            <sp-action-menu size="l" label="Add">
+                <sp-icon-add slot="icon"></sp-icon-add>
+                <sp-menu-item>Add layer</sp-menu-item>
+                <sp-menu-item>Add mask</sp-menu-item>
+                <sp-menu-item>Add adjustment</sp-menu-item>
+            </sp-action-menu>
+        </div>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         With visible label text (slot="label")
+         ═══════════════════════════════════════════════════════ -->
+    <div id="subtitle">With label text (slot="label")</div>
+    <div class="demo-row">
+
+        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+            <sp-action-menu label="Edit">
+                <span slot="label">Edit</span>
+                <sp-menu-item>Cut</sp-menu-item>
+                <sp-menu-item>Copy</sp-menu-item>
+                <sp-menu-item>Paste</sp-menu-item>
+            </sp-action-menu>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+            <sp-action-menu label="Edit" quiet>
+                <span slot="label">Edit (quiet)</span>
+                <sp-menu-item>Cut</sp-menu-item>
+                <sp-menu-item>Copy</sp-menu-item>
+                <sp-menu-item>Paste</sp-menu-item>
+            </sp-action-menu>
+        </div>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         Label-only (slot="label-only")
+         Shows text with no icon space reserved — compare with
+         slot="label" which reserves space for the icon.
+         ═══════════════════════════════════════════════════════ -->
+    <div id="subtitle">Label-only (slot="label-only")</div>
+    <div class="demo-row">
+
+        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+            <sp-field-label>No icon space</sp-field-label>
+            <sp-action-menu label="View">
+                <span slot="label-only">View</span>
+                <sp-menu-item>Zoom In</sp-menu-item>
+                <sp-menu-item>Zoom Out</sp-menu-item>
+                <sp-menu-item>Fit to Screen</sp-menu-item>
+            </sp-action-menu>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+            <sp-field-label>No icon space (quiet)</sp-field-label>
+            <sp-action-menu label="View" quiet>
+                <span slot="label-only">View (quiet)</span>
+                <sp-menu-item>Zoom In</sp-menu-item>
+                <sp-menu-item>Zoom Out</sp-menu-item>
+                <sp-menu-item>Fit to Screen</sp-menu-item>
+            </sp-action-menu>
+        </div>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         With icons in menu items
+         ═══════════════════════════════════════════════════════ -->
+    <div id="subtitle">With icons in menu items</div>
+    <div class="demo-row">
+
+        <sp-action-menu label="Edit actions">
+            <sp-menu-item>
+                <sp-icon-edit slot="icon"></sp-icon-edit>
+                Edit
+            </sp-menu-item>
+            <sp-menu-item>
+                <sp-icon-delete slot="icon"></sp-icon-delete>
+                Delete
+            </sp-menu-item>
+            <sp-menu-item>
+                <sp-icon-save-floppy slot="icon"></sp-icon-save-floppy>
+                Save
+            </sp-menu-item>
+            <sp-menu-divider></sp-menu-divider>
+            <sp-menu-item disabled>
+                <sp-icon-settings slot="icon"></sp-icon-settings>
+                Settings
+            </sp-menu-item>
+        </sp-action-menu>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         With menu groups
+         ═══════════════════════════════════════════════════════ -->
+    <div id="subtitle">With menu groups</div>
+    <div class="demo-row">
+
+        <sp-action-menu label="Document actions">
+            <sp-menu-group>
+                <span slot="header">Edit</span>
+                <sp-menu-item>Cut</sp-menu-item>
+                <sp-menu-item>Copy</sp-menu-item>
+                <sp-menu-item>Paste</sp-menu-item>
+            </sp-menu-group>
+            <sp-menu-divider></sp-menu-divider>
+            <sp-menu-group>
+                <span slot="header">View</span>
+                <sp-menu-item>Zoom In</sp-menu-item>
+                <sp-menu-item>Zoom Out</sp-menu-item>
+                <sp-menu-item>Fit to Screen</sp-menu-item>
+            </sp-menu-group>
+        </sp-action-menu>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         Selection (selects="single")
+         ═══════════════════════════════════════════════════════ -->
+    <div id="subtitle">Selection (selects="single")</div>
+    <div class="demo-row">
+
+        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+            <sp-field-label>Selected: <span id="selection-value">(none)</span></sp-field-label>
+            <sp-action-menu
+                selects="single"
+                onchange="document.getElementById('selection-value').textContent = this.value"
+            >
+                <span slot="label">Available shapes</span>
+                <sp-menu-item value="shape-1-square">Square</sp-menu-item>
+                <sp-menu-item value="shape-2-triangle">Triangle</sp-menu-item>
+                <sp-menu-item value="shape-3-parallelogram">Parallelogram</sp-menu-item>
+                <sp-menu-item value="shape-4-star">Star</sp-menu-item>
+                <sp-menu-item value="shape-5-hexagon">Hexagon</sp-menu-item>
+                <sp-menu-item value="shape-6-circle" disabled>Circle</sp-menu-item>
+            </sp-action-menu>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+            <sp-field-label>Pre-selected (Triangle)</sp-field-label>
+            <sp-action-menu selects="single" value="shape-2-triangle">
+                <span slot="label">Available shapes</span>
+                <sp-menu-item value="shape-1-square">Square</sp-menu-item>
+                <sp-menu-item value="shape-2-triangle">Triangle</sp-menu-item>
+                <sp-menu-item value="shape-3-parallelogram">Parallelogram</sp-menu-item>
+                <sp-menu-item value="shape-4-star">Star</sp-menu-item>
+            </sp-action-menu>
+        </div>
+
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════════
+         Tooltip (slot="tooltip")
+         Requires self-managed attribute in UXP — see Known Issues.
+         ═══════════════════════════════════════════════════════ -->
+    <div id="subtitle">Tooltip</div>
+    <div class="demo-row">
+
+        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+            <sp-field-label>With tooltip (bottom)</sp-field-label>
+            <sp-action-menu label="More actions">
+                <sp-tooltip slot="tooltip" self-managed placement="bottom">
+                    More actions
+                </sp-tooltip>
+                <sp-menu-item>Deselect</sp-menu-item>
+                <sp-menu-item>Select Inverse</sp-menu-item>
+                <sp-menu-item>Feather...</sp-menu-item>
+            </sp-action-menu>
+        </div>
+
+        <div style="display: flex; flex-direction: column; align-items: flex-start;">
+            <sp-field-label>Quiet + tooltip (top)</sp-field-label>
+            <sp-action-menu label="More actions" quiet>
+                <sp-tooltip slot="tooltip" self-managed placement="top">
+                    More actions (quiet)
+                </sp-tooltip>
+                <sp-menu-item>Cut</sp-menu-item>
+                <sp-menu-item>Copy</sp-menu-item>
+                <sp-menu-item>Paste</sp-menu-item>
+            </sp-action-menu>
+        </div>
+
+    </div>
+
+</div>

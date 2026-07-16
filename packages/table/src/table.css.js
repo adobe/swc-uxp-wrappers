@@ -16,8 +16,7 @@ import swcTableStyles from '@swc-uxp-internal/table/src/table.css.js';
 import uxpTableStyles from './uxp-table.css.js';
 
 const combinedTableStyles = unsafeCSS(
-    swcTableStyles.toString(),
-    uxpTableStyles.toString()
+    swcTableStyles.toString() + '\n' + uxpTableStyles.toString()
 );
 
 export default combinedTableStyles;

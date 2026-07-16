@@ -1,0 +1,248 @@
+<!--
+Copyright 2026 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+-->
+
+<h3>sp-coachmark</h3>
+
+<div id="content">
+    <div id="playground">
+        <div id="left">
+            <div id="subtitle">sp-coachmark</div>
+
+            <!-- Basic: title + content + nav buttons -->
+            <div id="variantLabel">Basic (title + content + nav buttons)</div>
+            <div class="demo-example">
+                <div style="position: relative; width: 296px;">
+                    <sp-coachmark open primary-cta="Next" secondary-cta="Skip tour">
+                        <div slot="title">Coachmark title</div>
+                        <div slot="content">
+                            This is a coachmark message that explains a feature
+                            of the application to the user.
+                        </div>
+                    </sp-coachmark>
+                </div>
+            </div>
+
+            <!-- Step counter -->
+            <div id="variantLabel">With step counter (2 of 5)</div>
+            <div class="demo-example">
+                <div style="position: relative; width: 296px;">
+                    <sp-coachmark
+                        open
+                        primary-cta="Next"
+                        secondary-cta="Previous"
+                        current-step="2"
+                        total-steps="5"
+                    >
+                        <div slot="title">Step 2 of 5</div>
+                        <div slot="content">
+                            The step counter is shown on the left side of the
+                            footer. Navigation buttons appear on the right.
+                        </div>
+                    </sp-coachmark>
+                </div>
+            </div>
+
+            <!-- Action menu (three-dot) -->
+            <div id="variantLabel">With action menu (••• three-dot button)</div>
+            <div class="demo-example">
+                <div style="position: relative; width: 296px;">
+                    <sp-coachmark open primary-cta="Got it" secondary-cta="Skip">
+                        <div slot="title">Coachmark with actions</div>
+                        <div slot="content">
+                            Click the ••• button in the top-right corner to
+                            see the action dropdown menu.
+                        </div>
+                        <div slot="actions">
+                            <sp-menu-item>Restart tour</sp-menu-item>
+                            <sp-menu-item>Skip all tips</sp-menu-item>
+                            <sp-menu-item>Send feedback</sp-menu-item>
+                        </div>
+                    </sp-coachmark>
+                </div>
+            </div>
+
+            <!-- Actions + step counter combined -->
+            <div id="variantLabel">Actions + step counter combined</div>
+            <div class="demo-example">
+                <div style="position: relative; width: 296px;">
+                    <sp-coachmark
+                        open
+                        primary-cta="Next"
+                        secondary-cta="Back"
+                        current-step="1"
+                        total-steps="3"
+                    >
+                        <div slot="title">Step 1 of 3 — with actions</div>
+                        <div slot="content">
+                            Both step counter and action menu are active at the same time.
+                        </div>
+                        <div slot="actions">
+                            <sp-menu-item>Restart tour</sp-menu-item>
+                            <sp-menu-item>Skip all tips</sp-menu-item>
+                        </div>
+                    </sp-coachmark>
+                </div>
+            </div>
+
+            <!-- Primary CTA only -->
+            <div id="variantLabel">Primary CTA only (no secondary)</div>
+            <div class="demo-example">
+                <div style="position: relative; width: 296px;">
+                    <sp-coachmark open primary-cta="Got it">
+                        <div slot="title">Single button</div>
+                        <div slot="content">
+                            Only a primary CTA button is shown when secondary-cta is omitted.
+                        </div>
+                    </sp-coachmark>
+                </div>
+            </div>
+
+            <!-- Secondary CTA only (no primary) -->
+            <div id="variantLabel">Secondary CTA only (no primaryCTA)</div>
+            <div class="demo-example">
+                <div style="position: relative; width: 296px;">
+                    <sp-coachmark open secondary-cta="Skip tour">
+                        <div slot="title">Secondary only</div>
+                        <div slot="content">
+                            Only a secondary CTA is shown when primaryCTA is omitted.
+                        </div>
+                    </sp-coachmark>
+                </div>
+            </div>
+
+            <!-- Shortcut key -->
+            <div id="variantLabel">Shortcut key badge</div>
+            <div class="demo-example">
+                <div style="position: relative; width: 296px;">
+                    <sp-coachmark
+                        open
+                        primary-cta="Next"
+                        secondary-cta="Previous"
+                        shortcut-key="Z"
+                        current-step="2"
+                        total-steps="8"
+                    >
+                        <div slot="title">Shortcut key</div>
+                        <div slot="content">
+                            A keyboard shortcut badge appears next to the title
+                            when the shortcut-key attribute is set.
+                        </div>
+                    </sp-coachmark>
+                </div>
+            </div>
+
+        </div>
+
+        <div id="right">
+            <div id="subtitle">sp-coachmark (with asset)</div>
+
+            <!-- Asset image -->
+            <div id="variantLabel">With asset image (slot="asset")</div>
+            <div class="demo-example">
+                <div style="position: relative; width: 296px;">
+                    <sp-coachmark open primary-cta="Next" secondary-cta="Skip">
+                        <img
+                            slot="asset"
+                            src="https://picsum.photos/seed/coachmark/296/222"
+                            alt="Feature preview"
+                            style="width:100%;height:222px;object-fit:cover;display:block;"
+                        />
+                        <div slot="title">Media coachmark</div>
+                        <div slot="content">
+                            An image is shown above the content area using slot="asset".
+                            Note: external URLs (picsum.photos) do not load in the UXP
+                            sandbox due to network restrictions. Replace with a local
+                            asset path when testing inside UXP.
+                        </div>
+                    </sp-coachmark>
+                </div>
+            </div>
+
+            <!-- Full-featured -->
+            <div id="variantLabel">Full-featured (image + steps + actions)</div>
+            <div class="demo-example">
+                <div style="position: relative; width: 296px;">
+                    <sp-coachmark
+                        open
+                        primary-cta="Next"
+                        secondary-cta="Back"
+                        current-step="3"
+                        total-steps="5"
+                    >
+                        <img
+                            slot="asset"
+                            src="https://picsum.photos/seed/demo2/296/222"
+                            alt="Feature preview"
+                            style="width:100%;height:222px;object-fit:cover;display:block;"
+                        />
+                        <div slot="title">Full-featured coachmark</div>
+                        <div slot="content">
+                            Image, step counter and action menu all active simultaneously.
+                        </div>
+                        <div slot="actions">
+                            <sp-menu-item>Restart tour</sp-menu-item>
+                            <sp-menu-item>Skip all tips</sp-menu-item>
+                        </div>
+                    </sp-coachmark>
+                </div>
+            </div>
+
+            <!-- sp-coach-indicator -->
+            <div id="subtitle" style="margin-top: 32px;">sp-coach-indicator</div>
+
+            <!-- v1.12.0: static-color attribute (replaces old 'static' attribute) -->
+            <div id="variantLabel">
+                Default / static-color variants
+                <br><small style="color: gray; font-size: 11px;">
+                    v1.12.0: static-color="white|black" replaces deprecated static="white|black"
+                </small>
+            </div>
+            <div class="demo-example" style="display: flex; align-items: center;">
+                <div style="display: flex; flex-direction: column; align-items: center; margin-right: 32px;">
+                    <sp-field-label>Default</sp-field-label>
+                    <sp-coach-indicator></sp-coach-indicator>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; margin-right: 32px;">
+                    <sp-field-label>static-color="black"</sp-field-label>
+                    <sp-coach-indicator static-color="black"></sp-coach-indicator>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: center; background: #1a1a1a; padding: 12px; border-radius: 4px;">
+                    <sp-field-label style="color: white;">static-color="white"</sp-field-label>
+                    <sp-coach-indicator static-color="white"></sp-coach-indicator>
+                </div>
+            </div>
+
+            <!-- quiet variant -->
+            <div id="variantLabel">quiet variant</div>
+            <div class="demo-example" style="display: flex; align-items: center;">
+                <div style="display: flex; flex-direction: column; align-items: center;">
+                    <sp-field-label>quiet (default)</sp-field-label>
+                    <sp-coach-indicator quiet></sp-coach-indicator>
+                </div>
+            </div>
+
+            <!-- Anchored to a target element -->
+            <div id="variantLabel">Anchored to a target element</div>
+            <div class="demo-example">
+                <div style="position: relative; display: inline-flex; width: 200px; height: 80px; background: var(--spectrum-gray-100, #f5f5f5); border: 1px solid var(--spectrum-gray-300, #d0d0d0); border-radius: 4px; align-items: center; justify-content: center; font-size: 12px; color: var(--spectrum-gray-600, #888);">
+                    Target element
+                    <sp-coach-indicator style="position: absolute; top: -8px; right: -8px;"></sp-coach-indicator>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="config">
+        <div style="display: inline-flex"></div>
+        <div style="display: flex; flex-direction: column;"></div>
+    </div>
+</div>

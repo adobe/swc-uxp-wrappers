@@ -23,7 +23,7 @@ body {
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    background: var(--spectrum-global-color-gray-50);
+    background: var(--spectrum-gray-50);
     padding: 30px 20px 30px 30px;
 }
 
@@ -42,16 +42,16 @@ body {
 
 /* Change background color of buttons on hover */
 .tab button:hover {
-    outline: 2px solid var(--spectrum-global-color-gray-500);
+    outline: 2px solid var(--spectrum-gray-500);
     outline-offset: 1px;
     width: 115%; /* Adjust the width as needed */
     height: 115%; /* Adjust the height as needed */
-    background-color: var(--spectrum-global-color-gray-300);
+    background-color: var(--spectrum-gray-300);
 }
 
 /* Create an active/current "tab button" class */
 .tab button.active {
-    background-color: var(--spectrum-global-color-gray-200);
+    background-color: var(--spectrum-gray-200);
     border-radius: 6px;
     width: 120%; /* Adjust the width as needed */
     height: 120%; /* Adjust the height as needed */
@@ -62,11 +62,11 @@ body {
     position: absolute;
     top: 0;
     left: 285px;
-    background: var(--spectrum-global-color-gray-50);
+    background: var(--spectrum-gray-50);
     right: 0;
     padding: 20px;
     height: 70vh;
-    border-left: 2px solid var(--spectrum-global-color-gray-700);
+    border-left: 2px solid var(--spectrum-gray-700);
     overflow-y: auto;
 }
 
@@ -81,7 +81,7 @@ body {
     border-radius: 5px;
     max-width: 100%;
     padding: 20px;
-    background: var(--spectrum-global-color-gray-200);
+    background: var(--spectrum-gray-200);
 }
 
 sp-action-group {
@@ -104,15 +104,15 @@ sp-picker-button {
 }
 
 h3 {
-    color: var(--spectrum-global-color-gray-500);
+    color: var(--spectrum-gray-500);
     font-family: 'Lato', sans-serif;
     font-size: 54px;
     font-weight: 300;
 }
 
 #subtitle {
-    color: var(--spectrum-global-color-gray-100);
-    background: var(--spectrum-global-color-gray-400);
+    color: var(--spectrum-gray-100);
+    background: var(--spectrum-gray-400);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 18px;
     margin: 0px 0px 30px 0px;
@@ -121,8 +121,8 @@ h3 {
 }
 
 #variantLabel {
-    color: var(--spectrum-global-color-gray-500);
-    background: var(--spectrum-global-color-gray-300);
+    color: var(--spectrum-gray-500);
+    background: var(--spectrum-gray-300);
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 12px;
     margin: 20px 0px 20px 0px;
@@ -140,7 +140,7 @@ p {
 }
 
 .sub-heading {
-    color: var(--spectrum-global-color-gray-100);
+    color: var(--spectrum-gray-100);
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 13px;
     margin-top: 30px;
@@ -148,13 +148,38 @@ p {
 }
 
 .demo-example {
-    background: var(--spectrum-global-color-gray-100);
+    background: var(--spectrum-background-base-color);
     flex: 1 1 0%;
     max-width: 100%;
     padding: 10px 10px 10px 10px;
     margin: 10px 10px 0px 0px;
     position: relative;
     z-index: 1;
+}
+
+/* UXP: flex gap and --spectrum-spacing-* tokens are unreliable; use margins */
+.demo-flex-row {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+}
+
+.demo-flex-row > * {
+    margin: 8px;
+}
+
+#theme-control {
+    display: flex;
+    flex-direction: column;
+}
+
+#theme-control select {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+#theme-control select:last-child {
+    margin-bottom: 0;
 }
 
 .control-bar {
@@ -166,10 +191,24 @@ p {
     flex-direction: column;
 }
 
+#theme-control {
+    display: flex;
+    flex-direction: column;
+}
+
+#theme-control select {
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+#theme-control select:last-child {
+    margin-bottom: 0;
+}
+
 #global {
     overflow-y: auto;
     height: 100vh;
-    background: var(--spectrum-global-color-gray-50);
+    background: var(--spectrum-gray-50);
 }
 
 .size-div {
@@ -183,8 +222,8 @@ p {
     margin-left: 15px;
     padding: 20px;
     border-radius: 5px;
-    background-color: var(--spectrum-global-color-gray-700);
-    color: var(--spectrum-global-color-gray-100);
+    background-color: var(--spectrum-gray-700);
+    color: var(--spectrum-gray-100);
     font-size: small;
     height: 300px;
     width: 73%;
@@ -196,12 +235,12 @@ p {
 #loging {
     position: absolute;
     left: 285px;
-    background: var(--spectrum-global-color-gray-50);
+    background: var(--spectrum-gray-50);
     right: 0;
     bottom: 0;
     padding: 20px;
     height: 30vh;
-    border-left: 2px solid var(--spectrum-global-color-gray-700);
+    border-left: 2px solid var(--spectrum-gray-700);
     overflow-y: auto;
     display: flex;
 }
@@ -212,7 +251,7 @@ p {
     overflow: auto;
     margin-left: 20px;
     padding: 20px;
-    background: var(--spectrum-global-color-gray-200);
+    background: var(--spectrum-gray-200);
 }
 
 #playground {
@@ -222,7 +261,7 @@ p {
 }
 
 #panel {
-    border: 1px solid var(--spectrum-global-color-gray-700);
+    border: 1px solid var(--spectrum-gray-700);
     border-radius: 5px;
     padding: 10px 20px;
     height: 300px;
@@ -237,5 +276,5 @@ p {
 }
 
 #section {
-    border-left: 2px solid var(--spectrum-global-color-gray-700);
+    border-left: 2px solid var(--spectrum-gray-700);
 }

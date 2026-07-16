@@ -1,0 +1,89 @@
+/*
+Copyright 2026 Adobe. All rights reserved.
+This file is licensed to you under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License. You may obtain a copy
+of the License at http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under
+the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+OF ANY KIND, either express or implied. See the License for the specific language
+governing permissions and limitations under the License.
+*/
+
+/*
+ * UXP overrides for sp-badge (SWC v1.12.x).
+ *
+ * Upstream sizing, spacing, and color tokens all resolve correctly via the
+ * 1.12.0 token cascade in UXP — no physical-property overrides are needed
+ * for those concerns.
+ *
+ * What IS needed here is layout support for the adopt-pattern shadow DOM:
+ * UXP ShadyDOM renders light-DOM children AFTER all shadow-DOM content, so
+ * a slotted icon always appears to the right of the badge label.  Badge.js
+ * bypasses this by physically moving (adopting) icon and text nodes into
+ * shadow-DOM containers (.uxp-icon-host and .label).  The rules below
+ * provide the flex layout, visibility, and spacing for those containers.
+ */
+
+/* ── Icon-only: vertical and horizontal padding ─────────────────────────────
+ * Upstream applies these paddings to ::slotted([slot="icon"]), which does not
+ * fire after icon adoption into shadow DOM. We replicate as physical padding
+ * on :host([icon-only]) instead. */
+:host([icon-only]) {
+    box-sizing: border-box;
+    padding-top: var(
+        --mod-badge-icon-spacing-vertical-top,
+        var(--spectrum-badge-icon-spacing-vertical-top, 7px)
+    );
+    padding-bottom: var(
+        --mod-badge-icon-spacing-vertical-top,
+        var(--spectrum-badge-icon-spacing-vertical-top, 7px)
+    );
+    /* icon-only uses a wider horizontal token than icon+text */
+    padding-left: var(
+        --mod-badge-icon-only-spacing-horizontal,
+        var(--spectrum-badge-icon-only-spacing-horizontal, 7px)
+    );
+    padding-right: var(
+        --mod-badge-icon-only-spacing-horizontal,
+        var(--spectrum-badge-icon-only-spacing-horizontal, 7px)
+    );
+}
+
+/* ── .uxp-icon-host ─────────────────────────────────────────────────────────
+ * Shadow-DOM container into which the light-DOM icon is adopted.
+ * Must be flex so the icon aligns vertically with the label text. */
+.uxp-icon-host {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+.uxp-icon-host:empty {
+    display: none;
+}
+
+/* ── Icon-to-label gap (icon + text badges only) ────────────────────────────
+ * Upstream: padding-inline-start/end on ::slotted([slot="icon"]) does not
+ * fire after adoption. We apply equivalent physical margins instead. */
+:host(:not([icon-only])) .uxp-icon-host > * {
+    margin-left: var(
+        --mod-badge-icon-spacing-horizontal,
+        var(--spectrum-badge-icon-spacing-horizontal)
+    );
+    margin-right: var(
+        --mod-badge-icon-text-spacing,
+        var(--spectrum-badge-icon-text-spacing)
+    );
+}
+
+/* ── .label adjustments ─────────────────────────────────────────────────────
+ * Upstream: [name="icon"] + .label { padding-inline-start: 0 } — the
+ * [name] selector targets <slot name="icon">, which does not exist in our
+ * render(). We use .uxp-icon-host as the equivalent selector. */
+.uxp-icon-host:not(:empty) + .label {
+    padding-left: 0;
+}
+
+:host([icon-only]) .label {
+    display: none;
+}

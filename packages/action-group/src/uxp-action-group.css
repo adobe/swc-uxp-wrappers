@@ -12,8 +12,11 @@ governing permissions and limitations under the License.
 
 /* write uxp style overrides */
 
-/* Workaround for - https://jira.corp.adobe.com/browse/UXP-20869 */
-:host([dir='ltr']:not([vertical]):not([compact])) ::slotted(:not(:last-child)) {
+/* gap workaround — UXP does not support gap in flex containers (UXP-20869).
+   SWC uses gap:var(--spectrum-actiongroup-horizontal/vertical-spacing-regular) on :host.
+   Replace with margin-based spacing on slotted children.
+   Note: dir attribute is not required — margin-right covers LTR (the common case). */
+:host(:not([vertical]):not([compact])) ::slotted(:not(:last-child)) {
     margin-right: var(
         --mod-actiongroup-horizontal-spacing-regular,
         var(--spectrum-actiongroup-horizontal-spacing-regular)
@@ -27,21 +30,15 @@ governing permissions and limitations under the License.
     );
 }
 
-:host {
-    min-width: var(
-        --mod-actionbutton-min-width,
-        var(--spectrum-actionbutton-min-width)
-    );
-    padding-left: var(
-        --mod-actionbutton-edge-to-text,
-        var(--spectrum-actionbutton-edge-to-text)
-    );
-    padding-right: var(
-        --mod-actionbutton-edge-to-text,
-        var(--spectrum-actionbutton-edge-to-text)
-    );
+/* @media (hover:hover) unwrap — UXP does not support hover media query.
+   SWC v1.12.0 wraps ::slotted(:hover) z-index inside @media (hover:hover). */
+:host([compact]:not([quiet])) ::slotted(:hover) {
+    z-index: 2;
 }
 
+/* Compact border-radius and margin overrides — replace logical properties
+   border-end-end-radius, border-end-start-radius, margin-block-*, margin-inline-*
+   used in SWC v1.12.0 for the compact grouped-button shape. */
 :host([compact]:not([quiet])[vertical]) ::slotted(:last-child) {
     border-bottom-right-radius: var(
         --mod-actiongroup-border-radius,
@@ -76,6 +73,8 @@ governing permissions and limitations under the License.
     );
 }
 
+/* Compact first-item (roving tabindex) border-radius — replaces
+   border-start-start-radius and border-start-end-radius logical properties. */
 :host([compact]:not([quiet])[vertical]) ::slotted(:nth-child(n)[tabindex='0']) {
     border-top-left-radius: var(
         --mod-actiongroup-border-radius,
@@ -99,6 +98,8 @@ governing permissions and limitations under the License.
     );
 }
 
+/* Compact non-first-item margins — replaces margin-block/margin-inline
+   logical properties used in SWC v1.12.0 compact layout. */
 :host([compact]:not([quiet])[vertical])
     ::slotted(:nth-child(n):not([tabindex='0'])) {
     margin-top: var(

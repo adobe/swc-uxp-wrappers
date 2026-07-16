@@ -1,0 +1,37 @@
+{
+    "name": "@swc-uxp-wrappers/progress-circle",
+    "version": "3.0.0",
+    "publishConfig": {
+        "access": "public"
+    },
+    "description": "UXP wrapper of the @spectrum-web-components/progress-circle component",
+    "license": "Apache-2.0",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/adobe/swc-uxp-wrappers.git",
+        "directory": "packages/progress-circle"
+    },
+    "author": "Adobe Inc",
+    "main": "src/index.js",
+    "module": "src/index.js",
+    "type": "module",
+    "exports": {
+        ".": "./src/index.js",
+        "./package.json": "./package.json",
+        "./src/ProgressCircle.js": "./src/ProgressCircle.js",
+        "./sp-progress-circle.js": "./sp-progress-circle.js",
+        "./src/progress-circle-overrides.css.js": "./src/progress-circle-overrides.css.js"
+    },
+    "dependencies": {
+        "@swc-uxp-internal/progress-circle": "npm:@spectrum-web-components/progress-circle@1.12.2"
+    },
+    "files": [
+        "**/*.js",
+        "**/*.css"
+    ],
+    "keywords": [
+        "UXP",
+        "Spectrum Web Components",
+        "@spectrum-web-components/progress-circle"
+    ]
+}

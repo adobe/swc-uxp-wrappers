@@ -16,8 +16,7 @@ import swcPickerButtonStyles from '@swc-uxp-internal/picker-button/src/picker-bu
 import uxpPickerButtonStyles from './uxp-picker-button.css.js';
 
 const combinedPickerButtonStyles = unsafeCSS(
-    swcPickerButtonStyles.toString(),
-    uxpPickerButtonStyles.toString()
+    swcPickerButtonStyles.toString() + '\n' + uxpPickerButtonStyles.toString()
 );
 
 export default combinedPickerButtonStyles;

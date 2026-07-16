@@ -10,4 +10,27 @@ OF ANY KIND, either express or implied. See the License for the specific languag
 governing permissions and limitations under the License.
 */
 
-/* write uxp style overrides */
+/* border-block shorthand not supported in UXP; expand to border-top + border-bottom */
+/* border-inline shorthand not supported in UXP; expand to border-left + border-right */
+:host {
+    border-top: var(--mod-table-border-width, var(--spectrum-table-border-width)) solid
+        var(
+            --highcontrast-table-border-color,
+            var(--mod-table-border-color, var(--spectrum-table-border-color))
+        );
+    border-bottom: var(--mod-table-border-width, var(--spectrum-table-border-width)) solid
+        var(
+            --highcontrast-table-border-color,
+            var(--mod-table-border-color, var(--spectrum-table-border-color))
+        );
+    border-left: var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width)) solid
+        var(
+            --highcontrast-table-border-color,
+            var(--mod-table-border-color, var(--spectrum-table-border-color))
+        );
+    border-right: var(--mod-table-outer-border-inline-width, var(--spectrum-table-outer-border-inline-width)) solid
+        var(
+            --highcontrast-table-border-color,
+            var(--mod-table-border-color, var(--spectrum-table-border-color))
+        );
+}
